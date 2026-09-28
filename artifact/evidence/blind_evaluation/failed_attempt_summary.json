@@ -1,0 +1,49 @@
+{
+  "failed_evaluator_attempt_count": 262,
+  "failure_reason_categories": {
+    "broken_pipe": 2,
+    "cli_without_final_response_file": 255,
+    "incomplete_process_or_controller_finalization": 3,
+    "operator_interruption_before_completion": 2
+  },
+  "frozen_successful_review_count": 13,
+  "original_scheduled_job_count": 16,
+  "pass_distribution": {
+    "double_pass_submission_count": 5,
+    "single_pass_submission_count": 3
+  },
+  "preflight_failure_count": 7,
+  "primary_coverage": {
+    "covered_submissions": 8,
+    "submission_count": 8
+  },
+  "raw_attempt_workspaces_published": false,
+  "scheduled_jobs_without_frozen_successful_review": [
+    {
+      "failed_attempt_count_before_closeout": 4,
+      "job": "submission_A/pass_02",
+      "recorded_status": "stopped_by_user"
+    },
+    {
+      "failed_attempt_count_before_closeout": 0,
+      "job": "submission_B/pass_02",
+      "recorded_status": "not_run_by_design"
+    },
+    {
+      "failed_attempt_count_before_closeout": 0,
+      "job": "submission_C/pass_01",
+      "recorded_status": "not_run_by_design"
+    }
+  ],
+  "source_evidence": {
+    "attempt_metadata_digest_sha256": "b25e493397b6bb455018bbafb3f00c9f70cae74d8248854e53110ee5f202eabc",
+    "attempt_metadata_file_counts": {
+      "manifest.json": 269,
+      "process.json": 269,
+      "recovery_record.json": 3
+    },
+    "controller_script_sha256": "212a628ccc3a2d28dc62a89269737604641e0b44a2b3d232625644b64f99b173",
+    "run_progress_sha256": "f55a3ee9928d543ea8091f2541e90b41c7a461d2df2dad5d69c0f9b82715c351",
+    "session_schedule_sha256": "c74140cb216dea4a010a93d4272e8487af41d333528123c51834b588122d33fa"
+  }
+}

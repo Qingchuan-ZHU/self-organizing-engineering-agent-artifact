@@ -1,0 +1,24 @@
+{
+  "geometry_issues": [],
+  "scenario_violations": {
+    "INJ-LOW": [],
+    "INJ-MID": [],
+    "INJ-HIGH": [],
+    "WDR-HIGH": [],
+    "WDR-MID": [],
+    "WDR-LOW": []
+  },
+  "n_minus_one_issues": [],
+  "pipe_class_issues": [],
+  "compressor_pipe_capacity_issues": [],
+  "service_compatibility_issues": [],
+  "connection_cardinality_issues": [],
+  "metering": {
+    "GRID-TIE": {
+      "injection_meter": "MTR-INJ rated 120 kg/s",
+      "withdrawal_meter": "MTR-WDR rated 120 kg/s",
+      "min_active_capacity_fraction": 1.0,
+      "satisfied": true
+    }
+  }
+}

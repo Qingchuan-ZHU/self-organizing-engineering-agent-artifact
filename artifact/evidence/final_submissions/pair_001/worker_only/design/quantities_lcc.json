@@ -1,0 +1,175 @@
+{
+  "units": "MBCU, MWh, m, kg/s, MPa, degC",
+  "pvf": 9.818147,
+  "equipment_capex_mbcu": 30.05,
+  "piping_capex_mbcu": 1.767185,
+  "civil_access_capex_mbcu": 0.217416,
+  "civil_breakdown_mbcu": {
+    "road": 0.19605,
+    "foundation": 0.00328,
+    "maintenance_area": 0.001662,
+    "pipeline": 0.016424
+  },
+  "annual_energy_mwh": 40256.721486,
+  "energy_cost_annual_mbcu": 4.830807,
+  "energy_present_value_mbcu": 47.429571,
+  "annual_maintenance_mbcu": 1.102,
+  "maintenance_present_value_mbcu": 10.819598,
+  "LCC_mbcu": 90.283771,
+  "equipment_detail": {
+    "WH": {
+      "model": "HDR180",
+      "capex": 0.36,
+      "maint": 0.016
+    },
+    "WP": {
+      "model": "HDR180",
+      "capex": 0.36,
+      "maint": 0.016
+    },
+    "X": {
+      "model": "HDR180",
+      "capex": 0.36,
+      "maint": 0.016
+    },
+    "DH": {
+      "model": "HDR180",
+      "capex": 0.36,
+      "maint": 0.016
+    },
+    "CMP1": {
+      "model": "C60",
+      "capex": 6.5,
+      "maint": 0.16
+    },
+    "CMP2": {
+      "model": "C60",
+      "capex": 6.5,
+      "maint": 0.16
+    },
+    "CMP3": {
+      "model": "C40",
+      "capex": 4.6,
+      "maint": 0.12
+    },
+    "CLR1": {
+      "model": "COOL120",
+      "capex": 0.92,
+      "maint": 0.05
+    },
+    "CLR2": {
+      "model": "COOL70",
+      "capex": 0.66,
+      "maint": 0.035
+    },
+    "Y": {
+      "model": "HDR180",
+      "capex": 0.36,
+      "maint": 0.016
+    },
+    "SEP1": {
+      "model": "SEP70",
+      "capex": 0.78,
+      "maint": 0.05
+    },
+    "SEP2": {
+      "model": "SEP70",
+      "capex": 0.78,
+      "maint": 0.05
+    },
+    "SEP3": {
+      "model": "SEP70",
+      "capex": 0.78,
+      "maint": 0.05
+    },
+    "DHY1": {
+      "model": "DEHY70",
+      "capex": 1.85,
+      "maint": 0.095
+    },
+    "DHY2": {
+      "model": "DEHY70",
+      "capex": 1.85,
+      "maint": 0.095
+    },
+    "DHY3": {
+      "model": "DEHY70",
+      "capex": 1.85,
+      "maint": 0.095
+    },
+    "REG1": {
+      "model": "REG120",
+      "capex": 0.34,
+      "maint": 0.018
+    },
+    "MTR-INJ": {
+      "model": "MTR120",
+      "capex": 0.3,
+      "maint": 0.016
+    },
+    "MTR-WDR": {
+      "model": "MTR120",
+      "capex": 0.3,
+      "maint": 0.016
+    },
+    "DRN1": {
+      "model": "DRN-S",
+      "capex": 0.08,
+      "maint": 0.004
+    },
+    "DRN2": {
+      "model": "DRN-S",
+      "capex": 0.08,
+      "maint": 0.004
+    },
+    "DRN3": {
+      "model": "DRN-S",
+      "capex": 0.08,
+      "maint": 0.004
+    }
+  },
+  "energy_detail": {
+    "INJ-LOW": {
+      "comp_mw": 7.953844189289936,
+      "cool_mw": 0.0,
+      "dehy_mw": 0.0,
+      "hours": 900,
+      "mwh": 7158.4597703609425
+    },
+    "INJ-MID": {
+      "comp_mw": 12.62610173520685,
+      "cool_mw": 0.16698701830295007,
+      "dehy_mw": 0.0,
+      "hours": 1300,
+      "mwh": 16631.01537956274
+    },
+    "INJ-HIGH": {
+      "comp_mw": 13.281476548330904,
+      "cool_mw": 0.2533201120239186,
+      "dehy_mw": 0.0,
+      "hours": 600,
+      "mwh": 8120.877996212893
+    },
+    "WDR-HIGH": {
+      "comp_mw": 0.0,
+      "cool_mw": 0.0,
+      "dehy_mw": 2.1599999999999997,
+      "hours": 500,
+      "mwh": 1079.9999999999998
+    },
+    "WDR-MID": {
+      "comp_mw": 0.0,
+      "cool_mw": 0.0,
+      "dehy_mw": 1.7999999999999998,
+      "hours": 900,
+      "mwh": 1619.9999999999998
+    },
+    "WDR-LOW": {
+      "comp_mw": 5.797960424593139,
+      "cool_mw": 0.0,
+      "dehy_mw": 1.26,
+      "hours": 800,
+      "mwh": 5646.368339674511
+    }
+  }
+}

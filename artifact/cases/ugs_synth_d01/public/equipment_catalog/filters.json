@@ -1,0 +1,132 @@
+{
+  "models": [
+    {
+      "annual_maintenance_mbcu": 0.0192,
+      "capacity_kg_s": 60,
+      "capex_mbcu": 0.32,
+      "category": "filter",
+      "footprint_m": {
+        "length": 5,
+        "width": 3
+      },
+      "liquid_removal_efficiency": 0.9,
+      "maintenance": {
+        "clearance_m": 2.0,
+        "crane_access_required": false,
+        "heavy_maintenance": false,
+        "road_access_required": false
+      },
+      "maximum_feed_free_liquid_fraction": 0.02,
+      "maximum_liquid_rate_kg_s": 1.08,
+      "maximum_pressure_mpa": 16,
+      "model_id": "FIL60",
+      "orientation_options_deg": [
+        0,
+        90
+      ],
+      "ports": [
+        {
+          "id": "gas_in",
+          "offset_m": [
+            -2.5,
+            0
+          ],
+          "type": "gas_in"
+        },
+        {
+          "id": "gas_out",
+          "offset_m": [
+            2.5,
+            0
+          ],
+          "type": "gas_out"
+        },
+        {
+          "id": "liquid_out",
+          "offset_m": [
+            0,
+            -1.5
+          ],
+          "type": "liquid_out"
+        }
+      ],
+      "pressure_drop_mpa": 0.025,
+      "safety_category": "hydrocarbon_treatment"
+    },
+    {
+      "annual_maintenance_mbcu": 0.0288,
+      "capacity_kg_s": 120,
+      "capex_mbcu": 0.48,
+      "category": "filter",
+      "footprint_m": {
+        "length": 7,
+        "width": 4
+      },
+      "liquid_removal_efficiency": 0.9,
+      "maintenance": {
+        "clearance_m": 2.0,
+        "crane_access_required": false,
+        "heavy_maintenance": false,
+        "road_access_required": false
+      },
+      "maximum_feed_free_liquid_fraction": 0.02,
+      "maximum_liquid_rate_kg_s": 2.16,
+      "maximum_pressure_mpa": 16,
+      "model_id": "FIL120",
+      "orientation_options_deg": [
+        0,
+        90
+      ],
+      "ports": [
+        {
+          "id": "gas_in",
+          "offset_m": [
+            -3.5,
+            0
+          ],
+          "type": "gas_in"
+        },
+        {
+          "id": "gas_out",
+          "offset_m": [
+            3.5,
+            0
+          ],
+          "type": "gas_out"
+        },
+        {
+          "id": "liquid_out",
+          "offset_m": [
+            0,
+            -2.0
+          ],
+          "type": "liquid_out"
+        }
+      ],
+      "pressure_drop_mpa": 0.03,
+      "safety_category": "hydrocarbon_treatment"
+    }
+  ],
+  "provenance": {
+    "classification": "synthetic benchmark assumption",
+    "note": "Deterministic development-case data; not vendor data or production engineering criteria."
+  },
+  "units": {
+    "annual_maintenance": "MBCU/year",
+    "capacity": "kg/s gas, or kg/s liquid for closed drains",
+    "capex": "MBCU",
+    "clearance": "m",
+    "dimensionless_efficiency_and_fraction": "1",
+    "flow": "kg/s",
+    "footprint_and_port_offsets": "m",
+    "free_liquid_loading": "kg liquid/kg gas",
+    "length": "m",
+    "liquid_rate": "kg/s",
+    "orientation": "degree",
+    "power_and_duty": "MW",
+    "pressure": "MPa",
+    "pressure_ratio": "1",
+    "temperature": "degC",
+    "temperature_coefficient": "K/MPa"
+  }
+}

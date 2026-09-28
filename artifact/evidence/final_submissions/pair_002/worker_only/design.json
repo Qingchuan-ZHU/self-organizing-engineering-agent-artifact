@@ -1,0 +1,7476 @@
+{
+ "case": "UGS-SYNTH-D01 v1.1",
+ "units": {
+  "length": "m",
+  "pressure": "MPa",
+  "temperature": "degC",
+  "flow": "kg/s",
+  "power": "MW",
+  "energy": "MWh",
+  "cost": "MBCU",
+  "velocity": "m/s"
+ },
+ "coordinate_system": "site plan metres, x east, y north, all routes at level 'ground'",
+ "assumptions": [
+  "Synthetic benchmark data only; not production criteria.",
+  "Drain/liquid line hydraulic velocity uses an assumed liquid density of 700 kg/m3.",
+  "Inactive branches of the shared compressor headers are isolated by valves (not modelled).",
+  "Water removed by dehydration and its regeneration/disposal are outside the process model.",
+  "Metering is single-string per flow direction (no n-1 required by the brief)."
+ ],
+ "interfaces": {
+  "GRID-TIE": {
+   "id": "GRID-TIE",
+   "pos": [
+    700,
+    225
+   ],
+   "port_type": "gas_bidirectional",
+   "maximum_connections": 2,
+   "maximum_flow_kg_s": 160
+  },
+  "WG-01": {
+   "id": "WG-01",
+   "pos": [
+    12,
+    45
+   ],
+   "port_type": "gas_bidirectional",
+   "maximum_connections": 1,
+   "maximum_flow_kg_s": 25
+  },
+  "WG-02": {
+   "id": "WG-02",
+   "pos": [
+    12,
+    117
+   ],
+   "port_type": "gas_bidirectional",
+   "maximum_connections": 1,
+   "maximum_flow_kg_s": 25
+  },
+  "WG-03": {
+   "id": "WG-03",
+   "pos": [
+    12,
+    189
+   ],
+   "port_type": "gas_bidirectional",
+   "maximum_connections": 1,
+   "maximum_flow_kg_s": 25
+  },
+  "WG-04": {
+   "id": "WG-04",
+   "pos": [
+    12,
+    261
+   ],
+   "port_type": "gas_bidirectional",
+   "maximum_connections": 1,
+   "maximum_flow_kg_s": 25
+  },
+  "WG-05": {
+   "id": "WG-05",
+   "pos": [
+    12,
+    333
+   ],
+   "port_type": "gas_bidirectional",
+   "maximum_connections": 1,
+   "maximum_flow_kg_s": 25
+  },
+  "WG-06": {
+   "id": "WG-06",
+   "pos": [
+    12,
+    405
+   ],
+   "port_type": "gas_bidirectional",
+   "maximum_connections": 1,
+   "maximum_flow_kg_s": 25
+  },
+  "POWER-TIE": {
+   "id": "POWER-TIE",
+   "pos": [
+    660,
+    35
+   ],
+   "port_type": "utility_in",
+   "maximum_connections": 1,
+   "maximum_flow_kg_s": null
+  },
+  "FIREWATER-TIE": {
+   "id": "FIREWATER-TIE",
+   "pos": [
+    620,
+    35
+   ],
+   "port_type": "utility_in",
+   "maximum_connections": 1,
+   "maximum_flow_kg_s": null
+  },
+  "INSTRUMENT-AIR-TIE": {
+   "id": "INSTRUMENT-AIR-TIE",
+   "pos": [
+    580,
+    35
+   ],
+   "port_type": "utility_in",
+   "maximum_connections": 1,
+   "maximum_flow_kg_s": null
+  },
+  "ROAD-ENTRANCE": {
+   "id": "ROAD-ENTRANCE",
+   "pos": [
+    0,
+    225
+   ],
+   "port_type": "road_access",
+   "maximum_connections": 1,
+   "maximum_flow_kg_s": null
+  },
+  "LIQUID-DRAIN-OUTFALL": {
+   "id": "LIQUID-DRAIN-OUTFALL",
+   "pos": [
+    680,
+    120
+   ],
+   "port_type": "drain_in",
+   "maximum_connections": 8,
+   "maximum_flow_kg_s": 10.0
+  }
+ },
+ "equipment": {
+  "HDR-W": {
+   "model_id": "HDR120",
+   "category": "header",
+   "safety_category": "hydrocarbon_treatment",
+   "x": 150.0,
+   "y": 225.0,
+   "orientation_deg": 0,
+   "footprint_m": {
+    "length": 6,
+    "width": 3
+   },
+   "footprint_polygon_m": [
+    [
+     147.0,
+     223.5
+    ],
+    [
+     153.0,
+     223.5
+    ],
+    [
+     153.0,
+     226.5
+    ],
+    [
+     147.0,
+     226.5
+    ]
+   ],
+   "capacity_kg_s": 120,
+   "capex_mbcu": 0.25,
+   "annual_maintenance_mbcu": 0.012,
+   "ports": {
+    "branch_01": {
+     "type": "gas_bidirectional",
+     "offset_m": [
+      -2.0,
+      1.5
+     ],
+     "pos": [
+      148.0,
+      226.5
+     ]
+    },
+    "branch_02": {
+     "type": "gas_bidirectional",
+     "offset_m": [
+      3.0,
+      1.0
+     ],
+     "pos": [
+      153.0,
+      226.0
+     ]
+    },
+    "branch_03": {
+     "type": "gas_bidirectional",
+     "offset_m": [
+      1.5,
+      -1.5
+     ],
+     "pos": [
+      151.5,
+      223.5
+     ]
+    },
+    "branch_04": {
+     "type": "gas_bidirectional",
+     "offset_m": [
+      -3.0,
+      -0.75
+     ],
+     "pos": [
+      147.0,
+      224.25
+     ]
+    },
+    "branch_05": {
+     "type": "gas_bidirectional",
+     "offset_m": [
+      0.0,
+      1.5
+     ],
+     "pos": [
+      150.0,
+      226.5
+     ]
+    },
+    "branch_06": {
+     "type": "gas_bidirectional",
+     "offset_m": [
+      3.0,
+      0.0
+     ],
+     "pos": [
+      153.0,
+      225.0
+     ]
+    },
+    "branch_07": {
+     "type": "gas_bidirectional",
+     "offset_m": [
+      -1.5,
+      -1.5
+     ],
+     "pos": [
+      148.5,
+      223.5
+     ]
+    },
+    "branch_08": {
+     "type": "gas_bidirectional",
+     "offset_m": [
+      -3.0,
+      0.75
+     ],
+     "pos": [
+      147.0,
+      225.75
+     ]
+    },
+    "branch_09": {
+     "type": "gas_bidirectional",
+     "offset_m": [
+      2.0,
+      1.5
+     ],
+     "pos": [
+      152.0,
+      226.5
+     ]
+    },
+    "branch_10": {
+     "type": "gas_bidirectional",
+     "offset_m": [
+      3.0,
+      -1.0
+     ],
+     "pos": [
+      153.0,
+      224.0
+     ]
+    }
+   },
+   "maintenance": {
+    "clearance_m": 2.0,
+    "crane_access_required": false,
+    "heavy_maintenance": false,
+    "road_access_required": false
+   },
+   "maintenance_envelopes_m": {
+    "clearance": [
+     [
+      145.0,
+      221.5
+     ],
+     [
+      155.0,
+      221.5
+     ],
+     [
+      155.0,
+      228.5
+     ],
+     [
+      145.0,
+      228.5
+     ]
+    ]
+   },
+   "limits": {
+    "maximum_branch_connections": 10,
+    "maximum_pressure_mpa": 16,
+    "pressure_drop_at_capacity_mpa": 0.01
+   }
+  },
+  "REG-W": {
+   "model_id": "REG180",
+   "category": "regulator",
+   "safety_category": "pressure_control",
+   "x": 215.0,
+   "y": 225.0,
+   "orientation_deg": 0,
+   "footprint_m": {
+    "length": 5,
+    "width": 3
+   },
+   "footprint_polygon_m": [
+    [
+     212.5,
+     223.5
+    ],
+    [
+     217.5,
+     223.5
+    ],
+    [
+     217.5,
+     226.5
+    ],
+    [
+     212.5,
+     226.5
+    ]
+   ],
+   "capacity_kg_s": 180,
+   "capex_mbcu": 0.46,
+   "annual_maintenance_mbcu": 0.022,
+   "ports": {
+    "gas_in": {
+     "type": "gas_in",
+     "offset_m": [
+      -2.5,
+      0
+     ],
+     "pos": [
+      212.5,
+      225.0
+     ]
+    },
+    "gas_out": {
+     "type": "gas_out",
+     "offset_m": [
+      2.5,
+      0
+     ],
+     "pos": [
+      217.5,
+      225.0
+     ]
+    }
+   },
+   "maintenance": {
+    "clearance_m": 2.0,
+    "crane_access_required": false,
+    "heavy_maintenance": false,
+    "road_access_required": false
+   },
+   "maintenance_envelopes_m": {
+    "clearance": [
+     [
+      210.5,
+      221.5
+     ],
+     [
+      219.5,
+      221.5
+     ],
+     [
+      219.5,
+      228.5
+     ],
+     [
+      210.5,
+      228.5
+     ]
+    ]
+   },
+   "limits": {
+    "jt_temperature_coefficient_k_per_mpa": 1.2,
+    "maximum_pressure_mpa": 16
+   }
+  },
+  "HDR-R": {
+   "model_id": "HDR120",
+   "category": "header",
+   "safety_category": "hydrocarbon_treatment",
+   "x": 265.0,
+   "y": 225.0,
+   "orientation_deg": 0,
+   "footprint_m": {
+    "length": 6,
+    "width": 3
+   },
+   "footprint_polygon_m": [
+    [
+     262.0,
+     223.5
+    ],
+    [
+     268.0,
+     223.5
+    ],
+    [
+     268.0,
+     226.5
+    ],
+    [
+     262.0,
+     226.5
+    ]
+   ],
+   "capacity_kg_s": 120,
+   "capex_mbcu": 0.25,
+   "annual_maintenance_mbcu": 0.012,
+   "ports": {
+    "branch_01": {
+     "type": "gas_bidirectional",
+     "offset_m": [
+      -2.0,
+      1.5
+     ],
+     "pos": [
+      263.0,
+      226.5
+     ]
+    },
+    "branch_02": {
+     "type": "gas_bidirectional",
+     "offset_m": [
+      3.0,
+      1.0
+     ],
+     "pos": [
+      268.0,
+      226.0
+     ]
+    },
+    "branch_03": {
+     "type": "gas_bidirectional",
+     "offset_m": [
+      1.5,
+      -1.5
+     ],
+     "pos": [
+      266.5,
+      223.5
+     ]
+    },
+    "branch_04": {
+     "type": "gas_bidirectional",
+     "offset_m": [
+      -3.0,
+      -0.75
+     ],
+     "pos": [
+      262.0,
+      224.25
+     ]
+    },
+    "branch_05": {
+     "type": "gas_bidirectional",
+     "offset_m": [
+      0.0,
+      1.5
+     ],
+     "pos": [
+      265.0,
+      226.5
+     ]
+    },
+    "branch_06": {
+     "type": "gas_bidirectional",
+     "offset_m": [
+      3.0,
+      0.0
+     ],
+     "pos": [
+      268.0,
+      225.0
+     ]
+    },
+    "branch_07": {
+     "type": "gas_bidirectional",
+     "offset_m": [
+      -1.5,
+      -1.5
+     ],
+     "pos": [
+      263.5,
+      223.5
+     ]
+    },
+    "branch_08": {
+     "type": "gas_bidirectional",
+     "offset_m": [
+      -3.0,
+      0.75
+     ],
+     "pos": [
+      262.0,
+      225.75
+     ]
+    },
+    "branch_09": {
+     "type": "gas_bidirectional",
+     "offset_m": [
+      2.0,
+      1.5
+     ],
+     "pos": [
+      267.0,
+      226.5
+     ]
+    },
+    "branch_10": {
+     "type": "gas_bidirectional",
+     "offset_m": [
+      3.0,
+      -1.0
+     ],
+     "pos": [
+      268.0,
+      224.0
+     ]
+    }
+   },
+   "maintenance": {
+    "clearance_m": 2.0,
+    "crane_access_required": false,
+    "heavy_maintenance": false,
+    "road_access_required": false
+   },
+   "maintenance_envelopes_m": {
+    "clearance": [
+     [
+      260.0,
+      221.5
+     ],
+     [
+      270.0,
+      221.5
+     ],
+     [
+      270.0,
+      228.5
+     ],
+     [
+      260.0,
+      228.5
+     ]
+    ]
+   },
+   "limits": {
+    "maximum_branch_connections": 10,
+    "maximum_pressure_mpa": 16,
+    "pressure_drop_at_capacity_mpa": 0.01
+   }
+  },
+  "SEP-1": {
+   "model_id": "SEP120",
+   "category": "separator",
+   "safety_category": "hydrocarbon_treatment",
+   "x": 330.0,
+   "y": 170.0,
+   "orientation_deg": 0,
+   "footprint_m": {
+    "length": 10,
+    "width": 5
+   },
+   "footprint_polygon_m": [
+    [
+     325.0,
+     167.5
+    ],
+    [
+     335.0,
+     167.5
+    ],
+    [
+     335.0,
+     172.5
+    ],
+    [
+     325.0,
+     172.5
+    ]
+   ],
+   "capacity_kg_s": 120,
+   "capex_mbcu": 1.15,
+   "annual_maintenance_mbcu": 0.075,
+   "ports": {
+    "gas_in": {
+     "type": "gas_in",
+     "offset_m": [
+      -5.0,
+      0
+     ],
+     "pos": [
+      325.0,
+      170.0
+     ]
+    },
+    "gas_out": {
+     "type": "gas_out",
+     "offset_m": [
+      5.0,
+      0
+     ],
+     "pos": [
+      335.0,
+      170.0
+     ]
+    },
+    "liquid_out": {
+     "type": "liquid_out",
+     "offset_m": [
+      0,
+      -2.5
+     ],
+     "pos": [
+      330.0,
+      167.5
+     ]
+    }
+   },
+   "maintenance": {
+    "clearance_m": 2.0,
+    "crane_access_required": false,
+    "heavy_maintenance": false,
+    "road_access_required": true
+   },
+   "maintenance_envelopes_m": {
+    "clearance": [
+     [
+      323.0,
+      165.5
+     ],
+     [
+      337.0,
+      165.5
+     ],
+     [
+      337.0,
+      174.5
+     ],
+     [
+      323.0,
+      174.5
+     ]
+    ]
+   },
+   "limits": {
+    "liquid_removal_efficiency": 0.9995,
+    "maximum_feed_free_liquid_fraction": 0.05,
+    "maximum_liquid_rate_kg_s": 2.0,
+    "maximum_pressure_mpa": 10,
+    "pressure_drop_mpa": 0.035
+   }
+  },
+  "DEH-1": {
+   "model_id": "DEHY120",
+   "category": "dehydration",
+   "safety_category": "hydrocarbon_treatment",
+   "x": 425.0,
+   "y": 170.0,
+   "orientation_deg": 0,
+   "footprint_m": {
+    "length": 13,
+    "width": 6
+   },
+   "footprint_polygon_m": [
+    [
+     418.5,
+     167.0
+    ],
+    [
+     431.5,
+     167.0
+    ],
+    [
+     431.5,
+     173.0
+    ],
+    [
+     418.5,
+     173.0
+    ]
+   ],
+   "capacity_kg_s": 120,
+   "capex_mbcu": 2.7,
+   "annual_maintenance_mbcu": 0.135,
+   "ports": {
+    "gas_in": {
+     "type": "gas_in",
+     "offset_m": [
+      -6.5,
+      0
+     ],
+     "pos": [
+      418.5,
+      170.0
+     ]
+    },
+    "gas_out": {
+     "type": "gas_out",
+     "offset_m": [
+      6.5,
+      0
+     ],
+     "pos": [
+      431.5,
+      170.0
+     ]
+    }
+   },
+   "maintenance": {
+    "clearance_m": 2.1,
+    "crane_access_required": false,
+    "heavy_maintenance": false,
+    "road_access_required": false
+   },
+   "maintenance_envelopes_m": {
+    "clearance": [
+     [
+      416.4,
+      164.9
+     ],
+     [
+      433.6,
+      164.9
+     ],
+     [
+      433.6,
+      175.1
+     ],
+     [
+      416.4,
+      175.1
+     ]
+    ]
+   },
+   "limits": {
+    "energy_mw_per_kg_s": 0.018,
+    "maximum_feed_free_liquid_fraction": 0.0001,
+    "maximum_pressure_mpa": 10,
+    "normal_outlet_water_mg_sm3": 35.0,
+    "pressure_drop_mpa": 0.1
+   }
+  },
+  "SEP-2": {
+   "model_id": "SEP120",
+   "category": "separator",
+   "safety_category": "hydrocarbon_treatment",
+   "x": 330.0,
+   "y": 280.0,
+   "orientation_deg": 0,
+   "footprint_m": {
+    "length": 10,
+    "width": 5
+   },
+   "footprint_polygon_m": [
+    [
+     325.0,
+     277.5
+    ],
+    [
+     335.0,
+     277.5
+    ],
+    [
+     335.0,
+     282.5
+    ],
+    [
+     325.0,
+     282.5
+    ]
+   ],
+   "capacity_kg_s": 120,
+   "capex_mbcu": 1.15,
+   "annual_maintenance_mbcu": 0.075,
+   "ports": {
+    "gas_in": {
+     "type": "gas_in",
+     "offset_m": [
+      -5.0,
+      0
+     ],
+     "pos": [
+      325.0,
+      280.0
+     ]
+    },
+    "gas_out": {
+     "type": "gas_out",
+     "offset_m": [
+      5.0,
+      0
+     ],
+     "pos": [
+      335.0,
+      280.0
+     ]
+    },
+    "liquid_out": {
+     "type": "liquid_out",
+     "offset_m": [
+      0,
+      -2.5
+     ],
+     "pos": [
+      330.0,
+      277.5
+     ]
+    }
+   },
+   "maintenance": {
+    "clearance_m": 2.0,
+    "crane_access_required": false,
+    "heavy_maintenance": false,
+    "road_access_required": true
+   },
+   "maintenance_envelopes_m": {
+    "clearance": [
+     [
+      323.0,
+      275.5
+     ],
+     [
+      337.0,
+      275.5
+     ],
+     [
+      337.0,
+      284.5
+     ],
+     [
+      323.0,
+      284.5
+     ]
+    ]
+   },
+   "limits": {
+    "liquid_removal_efficiency": 0.9995,
+    "maximum_feed_free_liquid_fraction": 0.05,
+    "maximum_liquid_rate_kg_s": 2.0,
+    "maximum_pressure_mpa": 10,
+    "pressure_drop_mpa": 0.035
+   }
+  },
+  "DEH-2": {
+   "model_id": "DEHY120",
+   "category": "dehydration",
+   "safety_category": "hydrocarbon_treatment",
+   "x": 425.0,
+   "y": 280.0,
+   "orientation_deg": 0,
+   "footprint_m": {
+    "length": 13,
+    "width": 6
+   },
+   "footprint_polygon_m": [
+    [
+     418.5,
+     277.0
+    ],
+    [
+     431.5,
+     277.0
+    ],
+    [
+     431.5,
+     283.0
+    ],
+    [
+     418.5,
+     283.0
+    ]
+   ],
+   "capacity_kg_s": 120,
+   "capex_mbcu": 2.7,
+   "annual_maintenance_mbcu": 0.135,
+   "ports": {
+    "gas_in": {
+     "type": "gas_in",
+     "offset_m": [
+      -6.5,
+      0
+     ],
+     "pos": [
+      418.5,
+      280.0
+     ]
+    },
+    "gas_out": {
+     "type": "gas_out",
+     "offset_m": [
+      6.5,
+      0
+     ],
+     "pos": [
+      431.5,
+      280.0
+     ]
+    }
+   },
+   "maintenance": {
+    "clearance_m": 2.1,
+    "crane_access_required": false,
+    "heavy_maintenance": false,
+    "road_access_required": false
+   },
+   "maintenance_envelopes_m": {
+    "clearance": [
+     [
+      416.4,
+      274.9
+     ],
+     [
+      433.6,
+      274.9
+     ],
+     [
+      433.6,
+      285.1
+     ],
+     [
+      416.4,
+      285.1
+     ]
+    ]
+   },
+   "limits": {
+    "energy_mw_per_kg_s": 0.018,
+    "maximum_feed_free_liquid_fraction": 0.0001,
+    "maximum_pressure_mpa": 10,
+    "normal_outlet_water_mg_sm3": 35.0,
+    "pressure_drop_mpa": 0.1
+   }
+  },
+  "HDR-T": {
+   "model_id": "HDR120",
+   "category": "header",
+   "safety_category": "hydrocarbon_treatment",
+   "x": 490.0,
+   "y": 225.0,
+   "orientation_deg": 0,
+   "footprint_m": {
+    "length": 6,
+    "width": 3
+   },
+   "footprint_polygon_m": [
+    [
+     487.0,
+     223.5
+    ],
+    [
+     493.0,
+     223.5
+    ],
+    [
+     493.0,
+     226.5
+    ],
+    [
+     487.0,
+     226.5
+    ]
+   ],
+   "capacity_kg_s": 120,
+   "capex_mbcu": 0.25,
+   "annual_maintenance_mbcu": 0.012,
+   "ports": {
+    "branch_01": {
+     "type": "gas_bidirectional",
+     "offset_m": [
+      -2.0,
+      1.5
+     ],
+     "pos": [
+      488.0,
+      226.5
+     ]
+    },
+    "branch_02": {
+     "type": "gas_bidirectional",
+     "offset_m": [
+      3.0,
+      1.0
+     ],
+     "pos": [
+      493.0,
+      226.0
+     ]
+    },
+    "branch_03": {
+     "type": "gas_bidirectional",
+     "offset_m": [
+      1.5,
+      -1.5
+     ],
+     "pos": [
+      491.5,
+      223.5
+     ]
+    },
+    "branch_04": {
+     "type": "gas_bidirectional",
+     "offset_m": [
+      -3.0,
+      -0.75
+     ],
+     "pos": [
+      487.0,
+      224.25
+     ]
+    },
+    "branch_05": {
+     "type": "gas_bidirectional",
+     "offset_m": [
+      0.0,
+      1.5
+     ],
+     "pos": [
+      490.0,
+      226.5
+     ]
+    },
+    "branch_06": {
+     "type": "gas_bidirectional",
+     "offset_m": [
+      3.0,
+      0.0
+     ],
+     "pos": [
+      493.0,
+      225.0
+     ]
+    },
+    "branch_07": {
+     "type": "gas_bidirectional",
+     "offset_m": [
+      -1.5,
+      -1.5
+     ],
+     "pos": [
+      488.5,
+      223.5
+     ]
+    },
+    "branch_08": {
+     "type": "gas_bidirectional",
+     "offset_m": [
+      -3.0,
+      0.75
+     ],
+     "pos": [
+      487.0,
+      225.75
+     ]
+    },
+    "branch_09": {
+     "type": "gas_bidirectional",
+     "offset_m": [
+      2.0,
+      1.5
+     ],
+     "pos": [
+      492.0,
+      226.5
+     ]
+    },
+    "branch_10": {
+     "type": "gas_bidirectional",
+     "offset_m": [
+      3.0,
+      -1.0
+     ],
+     "pos": [
+      493.0,
+      224.0
+     ]
+    }
+   },
+   "maintenance": {
+    "clearance_m": 2.0,
+    "crane_access_required": false,
+    "heavy_maintenance": false,
+    "road_access_required": false
+   },
+   "maintenance_envelopes_m": {
+    "clearance": [
+     [
+      485.0,
+      221.5
+     ],
+     [
+      495.0,
+      221.5
+     ],
+     [
+      495.0,
+      228.5
+     ],
+     [
+      485.0,
+      228.5
+     ]
+    ]
+   },
+   "limits": {
+    "maximum_branch_connections": 10,
+    "maximum_pressure_mpa": 16,
+    "pressure_drop_at_capacity_mpa": 0.01
+   }
+  },
+  "HDR-M": {
+   "model_id": "HDR120",
+   "category": "header",
+   "safety_category": "hydrocarbon_treatment",
+   "x": 535.0,
+   "y": 225.0,
+   "orientation_deg": 0,
+   "footprint_m": {
+    "length": 6,
+    "width": 3
+   },
+   "footprint_polygon_m": [
+    [
+     532.0,
+     223.5
+    ],
+    [
+     538.0,
+     223.5
+    ],
+    [
+     538.0,
+     226.5
+    ],
+    [
+     532.0,
+     226.5
+    ]
+   ],
+   "capacity_kg_s": 120,
+   "capex_mbcu": 0.25,
+   "annual_maintenance_mbcu": 0.012,
+   "ports": {
+    "branch_01": {
+     "type": "gas_bidirectional",
+     "offset_m": [
+      -2.0,
+      1.5
+     ],
+     "pos": [
+      533.0,
+      226.5
+     ]
+    },
+    "branch_02": {
+     "type": "gas_bidirectional",
+     "offset_m": [
+      3.0,
+      1.0
+     ],
+     "pos": [
+      538.0,
+      226.0
+     ]
+    },
+    "branch_03": {
+     "type": "gas_bidirectional",
+     "offset_m": [
+      1.5,
+      -1.5
+     ],
+     "pos": [
+      536.5,
+      223.5
+     ]
+    },
+    "branch_04": {
+     "type": "gas_bidirectional",
+     "offset_m": [
+      -3.0,
+      -0.75
+     ],
+     "pos": [
+      532.0,
+      224.25
+     ]
+    },
+    "branch_05": {
+     "type": "gas_bidirectional",
+     "offset_m": [
+      0.0,
+      1.5
+     ],
+     "pos": [
+      535.0,
+      226.5
+     ]
+    },
+    "branch_06": {
+     "type": "gas_bidirectional",
+     "offset_m": [
+      3.0,
+      0.0
+     ],
+     "pos": [
+      538.0,
+      225.0
+     ]
+    },
+    "branch_07": {
+     "type": "gas_bidirectional",
+     "offset_m": [
+      -1.5,
+      -1.5
+     ],
+     "pos": [
+      533.5,
+      223.5
+     ]
+    },
+    "branch_08": {
+     "type": "gas_bidirectional",
+     "offset_m": [
+      -3.0,
+      0.75
+     ],
+     "pos": [
+      532.0,
+      225.75
+     ]
+    },
+    "branch_09": {
+     "type": "gas_bidirectional",
+     "offset_m": [
+      2.0,
+      1.5
+     ],
+     "pos": [
+      537.0,
+      226.5
+     ]
+    },
+    "branch_10": {
+     "type": "gas_bidirectional",
+     "offset_m": [
+      3.0,
+      -1.0
+     ],
+     "pos": [
+      538.0,
+      224.0
+     ]
+    }
+   },
+   "maintenance": {
+    "clearance_m": 2.0,
+    "crane_access_required": false,
+    "heavy_maintenance": false,
+    "road_access_required": false
+   },
+   "maintenance_envelopes_m": {
+    "clearance": [
+     [
+      530.0,
+      221.5
+     ],
+     [
+      540.0,
+      221.5
+     ],
+     [
+      540.0,
+      228.5
+     ],
+     [
+      530.0,
+      228.5
+     ]
+    ]
+   },
+   "limits": {
+    "maximum_branch_connections": 10,
+    "maximum_pressure_mpa": 16,
+    "pressure_drop_at_capacity_mpa": 0.01
+   }
+  },
+  "MTR-O": {
+   "model_id": "MTR160",
+   "category": "meter",
+   "safety_category": "metering",
+   "x": 620.0,
+   "y": 225.0,
+   "orientation_deg": 0,
+   "footprint_m": {
+    "length": 4,
+    "width": 2
+   },
+   "footprint_polygon_m": [
+    [
+     618.0,
+     224.0
+    ],
+    [
+     622.0,
+     224.0
+    ],
+    [
+     622.0,
+     226.0
+    ],
+    [
+     618.0,
+     226.0
+    ]
+   ],
+   "capacity_kg_s": 160,
+   "capex_mbcu": 0.38,
+   "annual_maintenance_mbcu": 0.02,
+   "ports": {
+    "gas_in": {
+     "type": "gas_in",
+     "offset_m": [
+      -2.0,
+      0
+     ],
+     "pos": [
+      618.0,
+      225.0
+     ]
+    },
+    "gas_out": {
+     "type": "gas_out",
+     "offset_m": [
+      2.0,
+      0
+     ],
+     "pos": [
+      622.0,
+      225.0
+     ]
+    }
+   },
+   "maintenance": {
+    "clearance_m": 2.0,
+    "crane_access_required": false,
+    "heavy_maintenance": false,
+    "road_access_required": false
+   },
+   "maintenance_envelopes_m": {
+    "clearance": [
+     [
+      616.0,
+      222.0
+     ],
+     [
+      624.0,
+      222.0
+     ],
+     [
+      624.0,
+      228.0
+     ],
+     [
+      616.0,
+      228.0
+     ]
+    ]
+   },
+   "limits": {
+    "maximum_pressure_mpa": 16,
+    "pressure_drop_mpa": 0.025
+   }
+  },
+  "MTR-I": {
+   "model_id": "MTR160",
+   "category": "meter",
+   "safety_category": "metering",
+   "x": 620.0,
+   "y": 300.0,
+   "orientation_deg": 0,
+   "footprint_m": {
+    "length": 4,
+    "width": 2
+   },
+   "footprint_polygon_m": [
+    [
+     618.0,
+     299.0
+    ],
+    [
+     622.0,
+     299.0
+    ],
+    [
+     622.0,
+     301.0
+    ],
+    [
+     618.0,
+     301.0
+    ]
+   ],
+   "capacity_kg_s": 160,
+   "capex_mbcu": 0.38,
+   "annual_maintenance_mbcu": 0.02,
+   "ports": {
+    "gas_in": {
+     "type": "gas_in",
+     "offset_m": [
+      -2.0,
+      0
+     ],
+     "pos": [
+      618.0,
+      300.0
+     ]
+    },
+    "gas_out": {
+     "type": "gas_out",
+     "offset_m": [
+      2.0,
+      0
+     ],
+     "pos": [
+      622.0,
+      300.0
+     ]
+    }
+   },
+   "maintenance": {
+    "clearance_m": 2.0,
+    "crane_access_required": false,
+    "heavy_maintenance": false,
+    "road_access_required": false
+   },
+   "maintenance_envelopes_m": {
+    "clearance": [
+     [
+      616.0,
+      297.0
+     ],
+     [
+      624.0,
+      297.0
+     ],
+     [
+      624.0,
+      303.0
+     ],
+     [
+      616.0,
+      303.0
+     ]
+    ]
+   },
+   "limits": {
+    "maximum_pressure_mpa": 16,
+    "pressure_drop_mpa": 0.025
+   }
+  },
+  "HDR-CS": {
+   "model_id": "HDR120",
+   "category": "header",
+   "safety_category": "hydrocarbon_treatment",
+   "x": 440.0,
+   "y": 320.0,
+   "orientation_deg": 0,
+   "footprint_m": {
+    "length": 6,
+    "width": 3
+   },
+   "footprint_polygon_m": [
+    [
+     437.0,
+     318.5
+    ],
+    [
+     443.0,
+     318.5
+    ],
+    [
+     443.0,
+     321.5
+    ],
+    [
+     437.0,
+     321.5
+    ]
+   ],
+   "capacity_kg_s": 120,
+   "capex_mbcu": 0.25,
+   "annual_maintenance_mbcu": 0.012,
+   "ports": {
+    "branch_01": {
+     "type": "gas_bidirectional",
+     "offset_m": [
+      -2.0,
+      1.5
+     ],
+     "pos": [
+      438.0,
+      321.5
+     ]
+    },
+    "branch_02": {
+     "type": "gas_bidirectional",
+     "offset_m": [
+      3.0,
+      1.0
+     ],
+     "pos": [
+      443.0,
+      321.0
+     ]
+    },
+    "branch_03": {
+     "type": "gas_bidirectional",
+     "offset_m": [
+      1.5,
+      -1.5
+     ],
+     "pos": [
+      441.5,
+      318.5
+     ]
+    },
+    "branch_04": {
+     "type": "gas_bidirectional",
+     "offset_m": [
+      -3.0,
+      -0.75
+     ],
+     "pos": [
+      437.0,
+      319.25
+     ]
+    },
+    "branch_05": {
+     "type": "gas_bidirectional",
+     "offset_m": [
+      0.0,
+      1.5
+     ],
+     "pos": [
+      440.0,
+      321.5
+     ]
+    },
+    "branch_06": {
+     "type": "gas_bidirectional",
+     "offset_m": [
+      3.0,
+      0.0
+     ],
+     "pos": [
+      443.0,
+      320.0
+     ]
+    },
+    "branch_07": {
+     "type": "gas_bidirectional",
+     "offset_m": [
+      -1.5,
+      -1.5
+     ],
+     "pos": [
+      438.5,
+      318.5
+     ]
+    },
+    "branch_08": {
+     "type": "gas_bidirectional",
+     "offset_m": [
+      -3.0,
+      0.75
+     ],
+     "pos": [
+      437.0,
+      320.75
+     ]
+    },
+    "branch_09": {
+     "type": "gas_bidirectional",
+     "offset_m": [
+      2.0,
+      1.5
+     ],
+     "pos": [
+      442.0,
+      321.5
+     ]
+    },
+    "branch_10": {
+     "type": "gas_bidirectional",
+     "offset_m": [
+      3.0,
+      -1.0
+     ],
+     "pos": [
+      443.0,
+      319.0
+     ]
+    }
+   },
+   "maintenance": {
+    "clearance_m": 2.0,
+    "crane_access_required": false,
+    "heavy_maintenance": false,
+    "road_access_required": false
+   },
+   "maintenance_envelopes_m": {
+    "clearance": [
+     [
+      435.0,
+      316.5
+     ],
+     [
+      445.0,
+      316.5
+     ],
+     [
+      445.0,
+      323.5
+     ],
+     [
+      435.0,
+      323.5
+     ]
+    ]
+   },
+   "limits": {
+    "maximum_branch_connections": 10,
+    "maximum_pressure_mpa": 16,
+    "pressure_drop_at_capacity_mpa": 0.01
+   }
+  },
+  "HDR-CD": {
+   "model_id": "HDR120",
+   "category": "header",
+   "safety_category": "hydrocarbon_treatment",
+   "x": 440.0,
+   "y": 430.0,
+   "orientation_deg": 0,
+   "footprint_m": {
+    "length": 6,
+    "width": 3
+   },
+   "footprint_polygon_m": [
+    [
+     437.0,
+     428.5
+    ],
+    [
+     443.0,
+     428.5
+    ],
+    [
+     443.0,
+     431.5
+    ],
+    [
+     437.0,
+     431.5
+    ]
+   ],
+   "capacity_kg_s": 120,
+   "capex_mbcu": 0.25,
+   "annual_maintenance_mbcu": 0.012,
+   "ports": {
+    "branch_01": {
+     "type": "gas_bidirectional",
+     "offset_m": [
+      -2.0,
+      1.5
+     ],
+     "pos": [
+      438.0,
+      431.5
+     ]
+    },
+    "branch_02": {
+     "type": "gas_bidirectional",
+     "offset_m": [
+      3.0,
+      1.0
+     ],
+     "pos": [
+      443.0,
+      431.0
+     ]
+    },
+    "branch_03": {
+     "type": "gas_bidirectional",
+     "offset_m": [
+      1.5,
+      -1.5
+     ],
+     "pos": [
+      441.5,
+      428.5
+     ]
+    },
+    "branch_04": {
+     "type": "gas_bidirectional",
+     "offset_m": [
+      -3.0,
+      -0.75
+     ],
+     "pos": [
+      437.0,
+      429.25
+     ]
+    },
+    "branch_05": {
+     "type": "gas_bidirectional",
+     "offset_m": [
+      0.0,
+      1.5
+     ],
+     "pos": [
+      440.0,
+      431.5
+     ]
+    },
+    "branch_06": {
+     "type": "gas_bidirectional",
+     "offset_m": [
+      3.0,
+      0.0
+     ],
+     "pos": [
+      443.0,
+      430.0
+     ]
+    },
+    "branch_07": {
+     "type": "gas_bidirectional",
+     "offset_m": [
+      -1.5,
+      -1.5
+     ],
+     "pos": [
+      438.5,
+      428.5
+     ]
+    },
+    "branch_08": {
+     "type": "gas_bidirectional",
+     "offset_m": [
+      -3.0,
+      0.75
+     ],
+     "pos": [
+      437.0,
+      430.75
+     ]
+    },
+    "branch_09": {
+     "type": "gas_bidirectional",
+     "offset_m": [
+      2.0,
+      1.5
+     ],
+     "pos": [
+      442.0,
+      431.5
+     ]
+    },
+    "branch_10": {
+     "type": "gas_bidirectional",
+     "offset_m": [
+      3.0,
+      -1.0
+     ],
+     "pos": [
+      443.0,
+      429.0
+     ]
+    }
+   },
+   "maintenance": {
+    "clearance_m": 2.0,
+    "crane_access_required": false,
+    "heavy_maintenance": false,
+    "road_access_required": false
+   },
+   "maintenance_envelopes_m": {
+    "clearance": [
+     [
+      435.0,
+      426.5
+     ],
+     [
+      445.0,
+      426.5
+     ],
+     [
+      445.0,
+      433.5
+     ],
+     [
+      435.0,
+      433.5
+     ]
+    ]
+   },
+   "limits": {
+    "maximum_branch_connections": 10,
+    "maximum_pressure_mpa": 16,
+    "pressure_drop_at_capacity_mpa": 0.01
+   }
+  },
+  "COOL": {
+   "model_id": "COOL120",
+   "category": "cooler",
+   "safety_category": "hydrocarbon_treatment",
+   "x": 300.0,
+   "y": 425.0,
+   "orientation_deg": 0,
+   "footprint_m": {
+    "length": 12,
+    "width": 6
+   },
+   "footprint_polygon_m": [
+    [
+     294.0,
+     422.0
+    ],
+    [
+     306.0,
+     422.0
+    ],
+    [
+     306.0,
+     428.0
+    ],
+    [
+     294.0,
+     428.0
+    ]
+   ],
+   "capacity_kg_s": 120,
+   "capex_mbcu": 0.92,
+   "annual_maintenance_mbcu": 0.05,
+   "ports": {
+    "gas_in": {
+     "type": "gas_in",
+     "offset_m": [
+      -6.0,
+      0
+     ],
+     "pos": [
+      294.0,
+      425.0
+     ]
+    },
+    "gas_out": {
+     "type": "gas_out",
+     "offset_m": [
+      6.0,
+      0
+     ],
+     "pos": [
+      306.0,
+      425.0
+     ]
+    }
+   },
+   "maintenance": {
+    "clearance_m": 2.1,
+    "crane_access_required": false,
+    "heavy_maintenance": false,
+    "road_access_required": false
+   },
+   "maintenance_envelopes_m": {
+    "clearance": [
+     [
+      291.9,
+      419.9
+     ],
+     [
+      308.1,
+      419.9
+     ],
+     [
+      308.1,
+      430.1
+     ],
+     [
+      291.9,
+      430.1
+     ]
+    ]
+   },
+   "limits": {
+    "electric_power_fraction_of_duty": 0.035,
+    "maximum_duty_mw": 32.0,
+    "maximum_pressure_mpa": 16,
+    "minimum_outlet_temperature_c": 35.0,
+    "pressure_drop_mpa": 0.035
+   }
+  },
+  "C-1": {
+   "model_id": "C60",
+   "category": "compressor",
+   "safety_category": "compressor",
+   "x": 350.0,
+   "y": 380.0,
+   "orientation_deg": 90,
+   "footprint_m": {
+    "length": 15,
+    "width": 8
+   },
+   "footprint_polygon_m": [
+    [
+     354.0,
+     372.5
+    ],
+    [
+     354.0,
+     387.5
+    ],
+    [
+     346.0,
+     387.5
+    ],
+    [
+     346.0,
+     372.5
+    ]
+   ],
+   "capacity_kg_s": 60,
+   "capex_mbcu": 6.5,
+   "annual_maintenance_mbcu": 0.16,
+   "ports": {
+    "suction": {
+     "type": "gas_in",
+     "offset_m": [
+      -7.5,
+      0
+     ],
+     "pos": [
+      350.0,
+      372.5
+     ]
+    },
+    "discharge": {
+     "type": "gas_out",
+     "offset_m": [
+      7.5,
+      0
+     ],
+     "pos": [
+      350.0,
+      387.5
+     ]
+    }
+   },
+   "maintenance": {
+    "clearance_m": 2.8,
+    "crane_access_required": true,
+    "heavy_maintenance": true,
+    "removal_envelope_m": [
+     12.0,
+     6.4
+    ],
+    "road_access_required": true,
+    "side": "east"
+   },
+   "maintenance_envelopes_m": {
+    "clearance": [
+     [
+      356.8,
+      369.7
+     ],
+     [
+      356.8,
+      390.3
+     ],
+     [
+      343.2,
+      390.3
+     ],
+     [
+      343.2,
+      369.7
+     ]
+    ],
+    "removal": [
+     [
+      353.2,
+      387.5
+     ],
+     [
+      353.2,
+      399.5
+     ],
+     [
+      346.8,
+      399.5
+     ],
+     [
+      346.8,
+      387.5
+     ]
+    ]
+   },
+   "limits": {
+    "driver_efficiency": 0.96,
+    "efficiency_proxy": 0.8,
+    "maximum_discharge_pressure_mpa": 16,
+    "maximum_discharge_temperature_c": 150.0,
+    "maximum_power_mw": 32.0,
+    "maximum_pressure_ratio": 2.4,
+    "maximum_suction_pressure_mpa": 14,
+    "maximum_suction_temperature_c": 65.0,
+    "minimum_stable_flow_kg_s": 15,
+    "pressure_drop_mpa": 0.0
+   }
+  },
+  "C-2": {
+   "model_id": "C60",
+   "category": "compressor",
+   "safety_category": "compressor",
+   "x": 440.0,
+   "y": 380.0,
+   "orientation_deg": 90,
+   "footprint_m": {
+    "length": 15,
+    "width": 8
+   },
+   "footprint_polygon_m": [
+    [
+     444.0,
+     372.5
+    ],
+    [
+     444.0,
+     387.5
+    ],
+    [
+     436.0,
+     387.5
+    ],
+    [
+     436.0,
+     372.5
+    ]
+   ],
+   "capacity_kg_s": 60,
+   "capex_mbcu": 6.5,
+   "annual_maintenance_mbcu": 0.16,
+   "ports": {
+    "suction": {
+     "type": "gas_in",
+     "offset_m": [
+      -7.5,
+      0
+     ],
+     "pos": [
+      440.0,
+      372.5
+     ]
+    },
+    "discharge": {
+     "type": "gas_out",
+     "offset_m": [
+      7.5,
+      0
+     ],
+     "pos": [
+      440.0,
+      387.5
+     ]
+    }
+   },
+   "maintenance": {
+    "clearance_m": 2.8,
+    "crane_access_required": true,
+    "heavy_maintenance": true,
+    "removal_envelope_m": [
+     12.0,
+     6.4
+    ],
+    "road_access_required": true,
+    "side": "east"
+   },
+   "maintenance_envelopes_m": {
+    "clearance": [
+     [
+      446.8,
+      369.7
+     ],
+     [
+      446.8,
+      390.3
+     ],
+     [
+      433.2,
+      390.3
+     ],
+     [
+      433.2,
+      369.7
+     ]
+    ],
+    "removal": [
+     [
+      443.2,
+      387.5
+     ],
+     [
+      443.2,
+      399.5
+     ],
+     [
+      436.8,
+      399.5
+     ],
+     [
+      436.8,
+      387.5
+     ]
+    ]
+   },
+   "limits": {
+    "driver_efficiency": 0.96,
+    "efficiency_proxy": 0.8,
+    "maximum_discharge_pressure_mpa": 16,
+    "maximum_discharge_temperature_c": 150.0,
+    "maximum_power_mw": 32.0,
+    "maximum_pressure_ratio": 2.4,
+    "maximum_suction_pressure_mpa": 14,
+    "maximum_suction_temperature_c": 65.0,
+    "minimum_stable_flow_kg_s": 15,
+    "pressure_drop_mpa": 0.0
+   }
+  },
+  "C-3": {
+   "model_id": "C40",
+   "category": "compressor",
+   "safety_category": "compressor",
+   "x": 525.0,
+   "y": 380.0,
+   "orientation_deg": 90,
+   "footprint_m": {
+    "length": 12,
+    "width": 7
+   },
+   "footprint_polygon_m": [
+    [
+     528.5,
+     374.0
+    ],
+    [
+     528.5,
+     386.0
+    ],
+    [
+     521.5,
+     386.0
+    ],
+    [
+     521.5,
+     374.0
+    ]
+   ],
+   "capacity_kg_s": 40,
+   "capex_mbcu": 4.6,
+   "annual_maintenance_mbcu": 0.12,
+   "ports": {
+    "suction": {
+     "type": "gas_in",
+     "offset_m": [
+      -6.0,
+      0
+     ],
+     "pos": [
+      525.0,
+      374.0
+     ]
+    },
+    "discharge": {
+     "type": "gas_out",
+     "offset_m": [
+      6.0,
+      0
+     ],
+     "pos": [
+      525.0,
+      386.0
+     ]
+    }
+   },
+   "maintenance": {
+    "clearance_m": 2.4,
+    "crane_access_required": true,
+    "heavy_maintenance": true,
+    "removal_envelope_m": [
+     9.6,
+     5.6
+    ],
+    "road_access_required": true,
+    "side": "east"
+   },
+   "maintenance_envelopes_m": {
+    "clearance": [
+     [
+      530.9,
+      371.6
+     ],
+     [
+      530.9,
+      388.4
+     ],
+     [
+      519.1,
+      388.4
+     ],
+     [
+      519.1,
+      371.6
+     ]
+    ],
+    "removal": [
+     [
+      527.8,
+      386.0
+     ],
+     [
+      527.8,
+      395.6
+     ],
+     [
+      522.2,
+      395.6
+     ],
+     [
+      522.2,
+      386.0
+     ]
+    ]
+   },
+   "limits": {
+    "driver_efficiency": 0.96,
+    "efficiency_proxy": 0.76,
+    "maximum_discharge_pressure_mpa": 16,
+    "maximum_discharge_temperature_c": 150.0,
+    "maximum_power_mw": 20.0,
+    "maximum_pressure_ratio": 2.4,
+    "maximum_suction_pressure_mpa": 12,
+    "maximum_suction_temperature_c": 65.0,
+    "minimum_stable_flow_kg_s": 10,
+    "pressure_drop_mpa": 0.0
+   }
+  },
+  "DRN-1": {
+   "model_id": "DRN-L",
+   "category": "closed_drain",
+   "safety_category": "drain",
+   "x": 330.0,
+   "y": 140.0,
+   "orientation_deg": 0,
+   "footprint_m": {
+    "length": 3,
+    "width": 2
+   },
+   "footprint_polygon_m": [
+    [
+     328.5,
+     139.0
+    ],
+    [
+     331.5,
+     139.0
+    ],
+    [
+     331.5,
+     141.0
+    ],
+    [
+     328.5,
+     141.0
+    ]
+   ],
+   "capacity_kg_s": 2.0,
+   "capex_mbcu": 0.14,
+   "annual_maintenance_mbcu": 0.007,
+   "ports": {
+    "drain_in": {
+     "type": "drain_in",
+     "offset_m": [
+      -1.5,
+      0
+     ],
+     "pos": [
+      328.5,
+      140.0
+     ]
+    },
+    "drain_out": {
+     "type": "drain_out",
+     "offset_m": [
+      1.5,
+      0
+     ],
+     "pos": [
+      331.5,
+      140.0
+     ]
+    }
+   },
+   "maintenance": {
+    "clearance_m": 2.0,
+    "crane_access_required": false,
+    "heavy_maintenance": false,
+    "road_access_required": false
+   },
+   "maintenance_envelopes_m": {
+    "clearance": [
+     [
+      326.5,
+      137.0
+     ],
+     [
+      333.5,
+      137.0
+     ],
+     [
+      333.5,
+      143.0
+     ],
+     [
+      326.5,
+      143.0
+     ]
+    ]
+   },
+   "limits": {
+    "maximum_pressure_mpa": 1.0,
+    "pressure_drop_mpa": 0.0
+   }
+  },
+  "DRN-2": {
+   "model_id": "DRN-L",
+   "category": "closed_drain",
+   "safety_category": "drain",
+   "x": 330.0,
+   "y": 305.0,
+   "orientation_deg": 0,
+   "footprint_m": {
+    "length": 3,
+    "width": 2
+   },
+   "footprint_polygon_m": [
+    [
+     328.5,
+     304.0
+    ],
+    [
+     331.5,
+     304.0
+    ],
+    [
+     331.5,
+     306.0
+    ],
+    [
+     328.5,
+     306.0
+    ]
+   ],
+   "capacity_kg_s": 2.0,
+   "capex_mbcu": 0.14,
+   "annual_maintenance_mbcu": 0.007,
+   "ports": {
+    "drain_in": {
+     "type": "drain_in",
+     "offset_m": [
+      -1.5,
+      0
+     ],
+     "pos": [
+      328.5,
+      305.0
+     ]
+    },
+    "drain_out": {
+     "type": "drain_out",
+     "offset_m": [
+      1.5,
+      0
+     ],
+     "pos": [
+      331.5,
+      305.0
+     ]
+    }
+   },
+   "maintenance": {
+    "clearance_m": 2.0,
+    "crane_access_required": false,
+    "heavy_maintenance": false,
+    "road_access_required": false
+   },
+   "maintenance_envelopes_m": {
+    "clearance": [
+     [
+      326.5,
+      302.0
+     ],
+     [
+      333.5,
+      302.0
+     ],
+     [
+      333.5,
+      308.0
+     ],
+     [
+      326.5,
+      308.0
+     ]
+    ]
+   },
+   "limits": {
+    "maximum_pressure_mpa": 1.0,
+    "pressure_drop_mpa": 0.0
+   }
+  }
+ },
+ "pipes": {
+  "G-TIE-IN": {
+   "a": "GRID-TIE.gas",
+   "b": "MTR-I.gas_in",
+   "a_port_type": "gas_bidirectional",
+   "b_port_type": "gas_in",
+   "medium": "gas",
+   "nominal_diameter": "DN700",
+   "internal_diameter_m": 0.658,
+   "pipe_class": "CS-WET-100",
+   "class_max_pressure_mpa": 10.0,
+   "class_temperature_limits_c": [
+    -20,
+    100
+   ],
+   "roughness_m": 4.5e-05,
+   "routing_level": "ground",
+   "corridor": null,
+   "route_m": [
+    [
+     700,
+     225
+    ],
+    [
+     660.0,
+     270.0
+    ],
+    [
+     600.0,
+     300.0
+    ],
+    [
+     615.0,
+     300.0
+    ],
+    [
+     618.0,
+     300.0
+    ]
+   ],
+   "length_m": 145.29,
+   "segments": [
+    {
+     "a": [
+      700,
+      225
+     ],
+     "b": [
+      660.0,
+      270.0
+     ],
+     "length_m": 60.208,
+     "level": "ground"
+    },
+    {
+     "a": [
+      660.0,
+      270.0
+     ],
+     "b": [
+      600.0,
+      300.0
+     ],
+     "length_m": 67.082,
+     "level": "ground"
+    },
+    {
+     "a": [
+      600.0,
+      300.0
+     ],
+     "b": [
+      615.0,
+      300.0
+     ],
+     "length_m": 15.0,
+     "level": "ground"
+    },
+    {
+     "a": [
+      615.0,
+      300.0
+     ],
+     "b": [
+      618.0,
+      300.0
+     ],
+     "length_m": 3.0,
+     "level": "ground"
+    }
+   ]
+  },
+  "G-IN-1": {
+   "a": "MTR-I.gas_out",
+   "b": "HDR-CS.branch_03",
+   "a_port_type": "gas_out",
+   "b_port_type": "gas_bidirectional",
+   "medium": "gas",
+   "nominal_diameter": "DN700",
+   "internal_diameter_m": 0.658,
+   "pipe_class": "CS-WET-100",
+   "class_max_pressure_mpa": 10.0,
+   "class_temperature_limits_c": [
+    -20,
+    100
+   ],
+   "roughness_m": 4.5e-05,
+   "routing_level": "ground",
+   "corridor": null,
+   "route_m": [
+    [
+     622.0,
+     300.0
+    ],
+    [
+     625.0,
+     300.0
+    ],
+    [
+     625.0,
+     315.0
+    ],
+    [
+     441.5,
+     315.0
+    ],
+    [
+     441.5,
+     315.5
+    ],
+    [
+     441.5,
+     318.5
+    ]
+   ],
+   "length_m": 205.0,
+   "segments": [
+    {
+     "a": [
+      622.0,
+      300.0
+     ],
+     "b": [
+      625.0,
+      300.0
+     ],
+     "length_m": 3.0,
+     "level": "ground"
+    },
+    {
+     "a": [
+      625.0,
+      300.0
+     ],
+     "b": [
+      625.0,
+      315.0
+     ],
+     "length_m": 15.0,
+     "level": "ground"
+    },
+    {
+     "a": [
+      625.0,
+      315.0
+     ],
+     "b": [
+      441.5,
+      315.0
+     ],
+     "length_m": 183.5,
+     "level": "ground"
+    },
+    {
+     "a": [
+      441.5,
+      315.0
+     ],
+     "b": [
+      441.5,
+      315.5
+     ],
+     "length_m": 0.5,
+     "level": "ground"
+    },
+    {
+     "a": [
+      441.5,
+      315.5
+     ],
+     "b": [
+      441.5,
+      318.5
+     ],
+     "length_m": 3.0,
+     "level": "ground"
+    }
+   ]
+  },
+  "G-C1S": {
+   "a": "HDR-CS.branch_04",
+   "b": "C-1.suction",
+   "a_port_type": "gas_bidirectional",
+   "b_port_type": "gas_in",
+   "medium": "gas",
+   "nominal_diameter": "DN600",
+   "internal_diameter_m": 0.564,
+   "pipe_class": "CS-WET-100",
+   "class_max_pressure_mpa": 10.0,
+   "class_temperature_limits_c": [
+    -20,
+    100
+   ],
+   "roughness_m": 4.5e-05,
+   "routing_level": "ground",
+   "corridor": null,
+   "route_m": [
+    [
+     437.0,
+     319.25
+    ],
+    [
+     434.0,
+     319.25
+    ],
+    [
+     330.0,
+     319.25
+    ],
+    [
+     330.0,
+     369.5
+    ],
+    [
+     350.0,
+     369.5
+    ],
+    [
+     350.0,
+     372.5
+    ]
+   ],
+   "length_m": 180.25,
+   "segments": [
+    {
+     "a": [
+      437.0,
+      319.25
+     ],
+     "b": [
+      434.0,
+      319.25
+     ],
+     "length_m": 3.0,
+     "level": "ground"
+    },
+    {
+     "a": [
+      434.0,
+      319.25
+     ],
+     "b": [
+      330.0,
+      319.25
+     ],
+     "length_m": 104.0,
+     "level": "ground"
+    },
+    {
+     "a": [
+      330.0,
+      319.25
+     ],
+     "b": [
+      330.0,
+      369.5
+     ],
+     "length_m": 50.25,
+     "level": "ground"
+    },
+    {
+     "a": [
+      330.0,
+      369.5
+     ],
+     "b": [
+      350.0,
+      369.5
+     ],
+     "length_m": 20.0,
+     "level": "ground"
+    },
+    {
+     "a": [
+      350.0,
+      369.5
+     ],
+     "b": [
+      350.0,
+      372.5
+     ],
+     "length_m": 3.0,
+     "level": "ground"
+    }
+   ]
+  },
+  "G-C2S": {
+   "a": "HDR-CS.branch_05",
+   "b": "C-2.suction",
+   "a_port_type": "gas_bidirectional",
+   "b_port_type": "gas_in",
+   "medium": "gas",
+   "nominal_diameter": "DN600",
+   "internal_diameter_m": 0.564,
+   "pipe_class": "CS-WET-100",
+   "class_max_pressure_mpa": 10.0,
+   "class_temperature_limits_c": [
+    -20,
+    100
+   ],
+   "roughness_m": 4.5e-05,
+   "routing_level": "ground",
+   "corridor": null,
+   "route_m": [
+    [
+     440.0,
+     321.5
+    ],
+    [
+     440.0,
+     324.5
+    ],
+    [
+     440.0,
+     369.5
+    ],
+    [
+     440.0,
+     372.5
+    ]
+   ],
+   "length_m": 51.0,
+   "segments": [
+    {
+     "a": [
+      440.0,
+      321.5
+     ],
+     "b": [
+      440.0,
+      324.5
+     ],
+     "length_m": 3.0,
+     "level": "ground"
+    },
+    {
+     "a": [
+      440.0,
+      324.5
+     ],
+     "b": [
+      440.0,
+      369.5
+     ],
+     "length_m": 45.0,
+     "level": "ground"
+    },
+    {
+     "a": [
+      440.0,
+      369.5
+     ],
+     "b": [
+      440.0,
+      372.5
+     ],
+     "length_m": 3.0,
+     "level": "ground"
+    }
+   ]
+  },
+  "G-C3S": {
+   "a": "HDR-CS.branch_02",
+   "b": "C-3.suction",
+   "a_port_type": "gas_bidirectional",
+   "b_port_type": "gas_in",
+   "medium": "gas",
+   "nominal_diameter": "DN250",
+   "internal_diameter_m": 0.235,
+   "pipe_class": "CS-WET-100",
+   "class_max_pressure_mpa": 10.0,
+   "class_temperature_limits_c": [
+    -20,
+    100
+   ],
+   "roughness_m": 4.5e-05,
+   "routing_level": "ground",
+   "corridor": null,
+   "route_m": [
+    [
+     443.0,
+     321.0
+    ],
+    [
+     446.0,
+     321.0
+    ],
+    [
+     545.0,
+     319.5
+    ],
+    [
+     545.0,
+     371.0
+    ],
+    [
+     525.0,
+     371.0
+    ],
+    [
+     525.0,
+     374.0
+    ]
+   ],
+   "length_m": 176.5114,
+   "segments": [
+    {
+     "a": [
+      443.0,
+      321.0
+     ],
+     "b": [
+      446.0,
+      321.0
+     ],
+     "length_m": 3.0,
+     "level": "ground"
+    },
+    {
+     "a": [
+      446.0,
+      321.0
+     ],
+     "b": [
+      545.0,
+      319.5
+     ],
+     "length_m": 99.0114,
+     "level": "ground"
+    },
+    {
+     "a": [
+      545.0,
+      319.5
+     ],
+     "b": [
+      545.0,
+      371.0
+     ],
+     "length_m": 51.5,
+     "level": "ground"
+    },
+    {
+     "a": [
+      545.0,
+      371.0
+     ],
+     "b": [
+      525.0,
+      371.0
+     ],
+     "length_m": 20.0,
+     "level": "ground"
+    },
+    {
+     "a": [
+      525.0,
+      371.0
+     ],
+     "b": [
+      525.0,
+      374.0
+     ],
+     "length_m": 3.0,
+     "level": "ground"
+    }
+   ]
+  },
+  "G-C1D": {
+   "a": "C-1.discharge",
+   "b": "HDR-CD.branch_08",
+   "a_port_type": "gas_out",
+   "b_port_type": "gas_bidirectional",
+   "medium": "gas",
+   "nominal_diameter": "DN450",
+   "internal_diameter_m": 0.423,
+   "pipe_class": "CS-WET-160",
+   "class_max_pressure_mpa": 16.0,
+   "class_temperature_limits_c": [
+    -20,
+    120
+   ],
+   "roughness_m": 4.5e-05,
+   "routing_level": "ground",
+   "corridor": null,
+   "route_m": [
+    [
+     350.0,
+     387.5
+    ],
+    [
+     350.0,
+     390.5
+    ],
+    [
+     330.0,
+     390.5
+    ],
+    [
+     330.0,
+     428.5
+    ],
+    [
+     434.0,
+     428.5
+    ],
+    [
+     434.0,
+     430.75
+    ],
+    [
+     437.0,
+     430.75
+    ]
+   ],
+   "length_m": 170.25,
+   "segments": [
+    {
+     "a": [
+      350.0,
+      387.5
+     ],
+     "b": [
+      350.0,
+      390.5
+     ],
+     "length_m": 3.0,
+     "level": "ground"
+    },
+    {
+     "a": [
+      350.0,
+      390.5
+     ],
+     "b": [
+      330.0,
+      390.5
+     ],
+     "length_m": 20.0,
+     "level": "ground"
+    },
+    {
+     "a": [
+      330.0,
+      390.5
+     ],
+     "b": [
+      330.0,
+      428.5
+     ],
+     "length_m": 38.0,
+     "level": "ground"
+    },
+    {
+     "a": [
+      330.0,
+      428.5
+     ],
+     "b": [
+      434.0,
+      428.5
+     ],
+     "length_m": 104.0,
+     "level": "ground"
+    },
+    {
+     "a": [
+      434.0,
+      428.5
+     ],
+     "b": [
+      434.0,
+      430.75
+     ],
+     "length_m": 2.25,
+     "level": "ground"
+    },
+    {
+     "a": [
+      434.0,
+      430.75
+     ],
+     "b": [
+      437.0,
+      430.75
+     ],
+     "length_m": 3.0,
+     "level": "ground"
+    }
+   ]
+  },
+  "G-C2D": {
+   "a": "C-2.discharge",
+   "b": "HDR-CD.branch_07",
+   "a_port_type": "gas_out",
+   "b_port_type": "gas_bidirectional",
+   "medium": "gas",
+   "nominal_diameter": "DN450",
+   "internal_diameter_m": 0.423,
+   "pipe_class": "CS-WET-160",
+   "class_max_pressure_mpa": 16.0,
+   "class_temperature_limits_c": [
+    -20,
+    120
+   ],
+   "roughness_m": 4.5e-05,
+   "routing_level": "ground",
+   "corridor": null,
+   "route_m": [
+    [
+     440.0,
+     387.5
+    ],
+    [
+     440.0,
+     390.5
+    ],
+    [
+     438.5,
+     425.5
+    ],
+    [
+     438.5,
+     428.5
+    ]
+   ],
+   "length_m": 41.0321,
+   "segments": [
+    {
+     "a": [
+      440.0,
+      387.5
+     ],
+     "b": [
+      440.0,
+      390.5
+     ],
+     "length_m": 3.0,
+     "level": "ground"
+    },
+    {
+     "a": [
+      440.0,
+      390.5
+     ],
+     "b": [
+      438.5,
+      425.5
+     ],
+     "length_m": 35.0321,
+     "level": "ground"
+    },
+    {
+     "a": [
+      438.5,
+      425.5
+     ],
+     "b": [
+      438.5,
+      428.5
+     ],
+     "length_m": 3.0,
+     "level": "ground"
+    }
+   ]
+  },
+  "G-C3D": {
+   "a": "C-3.discharge",
+   "b": "HDR-CD.branch_10",
+   "a_port_type": "gas_out",
+   "b_port_type": "gas_bidirectional",
+   "medium": "gas",
+   "nominal_diameter": "DN200",
+   "internal_diameter_m": 0.188,
+   "pipe_class": "CS-WET-160",
+   "class_max_pressure_mpa": 16.0,
+   "class_temperature_limits_c": [
+    -20,
+    120
+   ],
+   "roughness_m": 4.5e-05,
+   "routing_level": "ground",
+   "corridor": null,
+   "route_m": [
+    [
+     525.0,
+     386.0
+    ],
+    [
+     525.0,
+     389.0
+    ],
+    [
+     545.0,
+     389.0
+    ],
+    [
+     545.0,
+     427.0
+    ],
+    [
+     446.0,
+     427.0
+    ],
+    [
+     446.0,
+     429.0
+    ],
+    [
+     443.0,
+     429.0
+    ]
+   ],
+   "length_m": 165.0,
+   "segments": [
+    {
+     "a": [
+      525.0,
+      386.0
+     ],
+     "b": [
+      525.0,
+      389.0
+     ],
+     "length_m": 3.0,
+     "level": "ground"
+    },
+    {
+     "a": [
+      525.0,
+      389.0
+     ],
+     "b": [
+      545.0,
+      389.0
+     ],
+     "length_m": 20.0,
+     "level": "ground"
+    },
+    {
+     "a": [
+      545.0,
+      389.0
+     ],
+     "b": [
+      545.0,
+      427.0
+     ],
+     "length_m": 38.0,
+     "level": "ground"
+    },
+    {
+     "a": [
+      545.0,
+      427.0
+     ],
+     "b": [
+      446.0,
+      427.0
+     ],
+     "length_m": 99.0,
+     "level": "ground"
+    },
+    {
+     "a": [
+      446.0,
+      427.0
+     ],
+     "b": [
+      446.0,
+      429.0
+     ],
+     "length_m": 2.0,
+     "level": "ground"
+    },
+    {
+     "a": [
+      446.0,
+      429.0
+     ],
+     "b": [
+      443.0,
+      429.0
+     ],
+     "length_m": 3.0,
+     "level": "ground"
+    }
+   ]
+  },
+  "G-CD-CL": {
+   "a": "HDR-CD.branch_04",
+   "b": "COOL.gas_in",
+   "a_port_type": "gas_bidirectional",
+   "b_port_type": "gas_in",
+   "medium": "gas",
+   "nominal_diameter": "DN600",
+   "internal_diameter_m": 0.564,
+   "pipe_class": "CS-WET-160",
+   "class_max_pressure_mpa": 16.0,
+   "class_temperature_limits_c": [
+    -20,
+    120
+   ],
+   "roughness_m": 4.5e-05,
+   "routing_level": "ground",
+   "corridor": null,
+   "route_m": [
+    [
+     437.0,
+     429.25
+    ],
+    [
+     434.0,
+     429.25
+    ],
+    [
+     310.0,
+     412.0
+    ],
+    [
+     285.0,
+     412.0
+    ],
+    [
+     285.0,
+     425.0
+    ],
+    [
+     291.0,
+     425.0
+    ],
+    [
+     294.0,
+     425.0
+    ]
+   ],
+   "length_m": 175.1941,
+   "segments": [
+    {
+     "a": [
+      437.0,
+      429.25
+     ],
+     "b": [
+      434.0,
+      429.25
+     ],
+     "length_m": 3.0,
+     "level": "ground"
+    },
+    {
+     "a": [
+      434.0,
+      429.25
+     ],
+     "b": [
+      310.0,
+      412.0
+     ],
+     "length_m": 125.1941,
+     "level": "ground"
+    },
+    {
+     "a": [
+      310.0,
+      412.0
+     ],
+     "b": [
+      285.0,
+      412.0
+     ],
+     "length_m": 25.0,
+     "level": "ground"
+    },
+    {
+     "a": [
+      285.0,
+      412.0
+     ],
+     "b": [
+      285.0,
+      425.0
+     ],
+     "length_m": 13.0,
+     "level": "ground"
+    },
+    {
+     "a": [
+      285.0,
+      425.0
+     ],
+     "b": [
+      291.0,
+      425.0
+     ],
+     "length_m": 6.0,
+     "level": "ground"
+    },
+    {
+     "a": [
+      291.0,
+      425.0
+     ],
+     "b": [
+      294.0,
+      425.0
+     ],
+     "length_m": 3.0,
+     "level": "ground"
+    }
+   ]
+  },
+  "G-CL-W": {
+   "a": "COOL.gas_out",
+   "b": "HDR-W.branch_02",
+   "a_port_type": "gas_out",
+   "b_port_type": "gas_bidirectional",
+   "medium": "gas",
+   "nominal_diameter": "DN600",
+   "internal_diameter_m": 0.564,
+   "pipe_class": "CS-WET-160",
+   "class_max_pressure_mpa": 16.0,
+   "class_temperature_limits_c": [
+    -20,
+    120
+   ],
+   "roughness_m": 4.5e-05,
+   "routing_level": "ground",
+   "corridor": null,
+   "route_m": [
+    [
+     306.0,
+     425.0
+    ],
+    [
+     309.0,
+     425.0
+    ],
+    [
+     340.0,
+     445.0
+    ],
+    [
+     90.0,
+     445.0
+    ],
+    [
+     90.0,
+     240.0
+    ],
+    [
+     156.0,
+     240.0
+    ],
+    [
+     156.0,
+     226.0
+    ],
+    [
+     153.0,
+     226.0
+    ]
+   ],
+   "length_m": 577.8917,
+   "segments": [
+    {
+     "a": [
+      306.0,
+      425.0
+     ],
+     "b": [
+      309.0,
+      425.0
+     ],
+     "length_m": 3.0,
+     "level": "ground"
+    },
+    {
+     "a": [
+      309.0,
+      425.0
+     ],
+     "b": [
+      340.0,
+      445.0
+     ],
+     "length_m": 36.8917,
+     "level": "ground"
+    },
+    {
+     "a": [
+      340.0,
+      445.0
+     ],
+     "b": [
+      90.0,
+      445.0
+     ],
+     "length_m": 250.0,
+     "level": "ground"
+    },
+    {
+     "a": [
+      90.0,
+      445.0
+     ],
+     "b": [
+      90.0,
+      240.0
+     ],
+     "length_m": 205.0,
+     "level": "ground"
+    },
+    {
+     "a": [
+      90.0,
+      240.0
+     ],
+     "b": [
+      156.0,
+      240.0
+     ],
+     "length_m": 66.0,
+     "level": "ground"
+    },
+    {
+     "a": [
+      156.0,
+      240.0
+     ],
+     "b": [
+      156.0,
+      226.0
+     ],
+     "length_m": 14.0,
+     "level": "ground"
+    },
+    {
+     "a": [
+      156.0,
+      226.0
+     ],
+     "b": [
+      153.0,
+      226.0
+     ],
+     "length_m": 3.0,
+     "level": "ground"
+    }
+   ]
+  },
+  "G-W-1": {
+   "a": "HDR-W.branch_01",
+   "b": "WG-01.gas",
+   "a_port_type": "gas_bidirectional",
+   "b_port_type": "gas_bidirectional",
+   "medium": "gas",
+   "nominal_diameter": "DN250",
+   "internal_diameter_m": 0.235,
+   "pipe_class": "CS-WET-160",
+   "class_max_pressure_mpa": 16.0,
+   "class_temperature_limits_c": [
+    -20,
+    120
+   ],
+   "roughness_m": 4.5e-05,
+   "routing_level": "ground",
+   "corridor": null,
+   "route_m": [
+    [
+     148.0,
+     226.5
+    ],
+    [
+     148.0,
+     229.5
+    ],
+    [
+     12,
+     45
+    ]
+   ],
+   "length_m": 232.2079,
+   "segments": [
+    {
+     "a": [
+      148.0,
+      226.5
+     ],
+     "b": [
+      148.0,
+      229.5
+     ],
+     "length_m": 3.0,
+     "level": "ground"
+    },
+    {
+     "a": [
+      148.0,
+      229.5
+     ],
+     "b": [
+      12,
+      45
+     ],
+     "length_m": 229.2079,
+     "level": "ground"
+    }
+   ]
+  },
+  "G-W-2": {
+   "a": "HDR-W.branch_04",
+   "b": "WG-02.gas",
+   "a_port_type": "gas_bidirectional",
+   "b_port_type": "gas_bidirectional",
+   "medium": "gas",
+   "nominal_diameter": "DN250",
+   "internal_diameter_m": 0.235,
+   "pipe_class": "CS-WET-160",
+   "class_max_pressure_mpa": 16.0,
+   "class_temperature_limits_c": [
+    -20,
+    120
+   ],
+   "roughness_m": 4.5e-05,
+   "routing_level": "ground",
+   "corridor": null,
+   "route_m": [
+    [
+     147.0,
+     224.25
+    ],
+    [
+     144.0,
+     224.25
+    ],
+    [
+     12,
+     117
+    ]
+   ],
+   "length_m": 173.0781,
+   "segments": [
+    {
+     "a": [
+      147.0,
+      224.25
+     ],
+     "b": [
+      144.0,
+      224.25
+     ],
+     "length_m": 3.0,
+     "level": "ground"
+    },
+    {
+     "a": [
+      144.0,
+      224.25
+     ],
+     "b": [
+      12,
+      117
+     ],
+     "length_m": 170.0781,
+     "level": "ground"
+    }
+   ]
+  },
+  "G-W-3": {
+   "a": "HDR-W.branch_05",
+   "b": "WG-03.gas",
+   "a_port_type": "gas_bidirectional",
+   "b_port_type": "gas_bidirectional",
+   "medium": "gas",
+   "nominal_diameter": "DN250",
+   "internal_diameter_m": 0.235,
+   "pipe_class": "CS-WET-160",
+   "class_max_pressure_mpa": 16.0,
+   "class_temperature_limits_c": [
+    -20,
+    120
+   ],
+   "roughness_m": 4.5e-05,
+   "routing_level": "ground",
+   "corridor": null,
+   "route_m": [
+    [
+     150.0,
+     226.5
+    ],
+    [
+     150.0,
+     229.5
+    ],
+    [
+     135.0,
+     216.0
+    ],
+    [
+     12,
+     189
+    ]
+   ],
+   "length_m": 149.109,
+   "segments": [
+    {
+     "a": [
+      150.0,
+      226.5
+     ],
+     "b": [
+      150.0,
+      229.5
+     ],
+     "length_m": 3.0,
+     "level": "ground"
+    },
+    {
+     "a": [
+      150.0,
+      229.5
+     ],
+     "b": [
+      135.0,
+      216.0
+     ],
+     "length_m": 20.1804,
+     "level": "ground"
+    },
+    {
+     "a": [
+      135.0,
+      216.0
+     ],
+     "b": [
+      12,
+      189
+     ],
+     "length_m": 125.9286,
+     "level": "ground"
+    }
+   ]
+  },
+  "G-W-4": {
+   "a": "HDR-W.branch_07",
+   "b": "WG-04.gas",
+   "a_port_type": "gas_bidirectional",
+   "b_port_type": "gas_bidirectional",
+   "medium": "gas",
+   "nominal_diameter": "DN250",
+   "internal_diameter_m": 0.235,
+   "pipe_class": "CS-WET-160",
+   "class_max_pressure_mpa": 16.0,
+   "class_temperature_limits_c": [
+    -20,
+    120
+   ],
+   "roughness_m": 4.5e-05,
+   "routing_level": "ground",
+   "corridor": null,
+   "route_m": [
+    [
+     148.5,
+     223.5
+    ],
+    [
+     148.5,
+     220.5
+    ],
+    [
+     12,
+     261
+    ]
+   ],
+   "length_m": 145.3815,
+   "segments": [
+    {
+     "a": [
+      148.5,
+      223.5
+     ],
+     "b": [
+      148.5,
+      220.5
+     ],
+     "length_m": 3.0,
+     "level": "ground"
+    },
+    {
+     "a": [
+      148.5,
+      220.5
+     ],
+     "b": [
+      12,
+      261
+     ],
+     "length_m": 142.3815,
+     "level": "ground"
+    }
+   ]
+  },
+  "G-W-5": {
+   "a": "HDR-W.branch_03",
+   "b": "WG-05.gas",
+   "a_port_type": "gas_bidirectional",
+   "b_port_type": "gas_bidirectional",
+   "medium": "gas",
+   "nominal_diameter": "DN250",
+   "internal_diameter_m": 0.235,
+   "pipe_class": "CS-WET-160",
+   "class_max_pressure_mpa": 16.0,
+   "class_temperature_limits_c": [
+    -20,
+    120
+   ],
+   "roughness_m": 4.5e-05,
+   "routing_level": "ground",
+   "corridor": null,
+   "route_m": [
+    [
+     151.5,
+     223.5
+    ],
+    [
+     151.5,
+     220.5
+    ],
+    [
+     140.0,
+     213.0
+    ],
+    [
+     12,
+     333
+    ]
+   ],
+   "length_m": 192.1832,
+   "segments": [
+    {
+     "a": [
+      151.5,
+      223.5
+     ],
+     "b": [
+      151.5,
+      220.5
+     ],
+     "length_m": 3.0,
+     "level": "ground"
+    },
+    {
+     "a": [
+      151.5,
+      220.5
+     ],
+     "b": [
+      140.0,
+      213.0
+     ],
+     "length_m": 13.7295,
+     "level": "ground"
+    },
+    {
+     "a": [
+      140.0,
+      213.0
+     ],
+     "b": [
+      12,
+      333
+     ],
+     "length_m": 175.4537,
+     "level": "ground"
+    }
+   ]
+  },
+  "G-W-6": {
+   "a": "HDR-W.branch_08",
+   "b": "WG-06.gas",
+   "a_port_type": "gas_bidirectional",
+   "b_port_type": "gas_bidirectional",
+   "medium": "gas",
+   "nominal_diameter": "DN250",
+   "internal_diameter_m": 0.235,
+   "pipe_class": "CS-WET-160",
+   "class_max_pressure_mpa": 16.0,
+   "class_temperature_limits_c": [
+    -20,
+    120
+   ],
+   "roughness_m": 4.5e-05,
+   "routing_level": "ground",
+   "corridor": null,
+   "route_m": [
+    [
+     147.0,
+     225.75
+    ],
+    [
+     144.0,
+     225.75
+    ],
+    [
+     12,
+     405
+    ]
+   ],
+   "length_m": 225.6085,
+   "segments": [
+    {
+     "a": [
+      147.0,
+      225.75
+     ],
+     "b": [
+      144.0,
+      225.75
+     ],
+     "length_m": 3.0,
+     "level": "ground"
+    },
+    {
+     "a": [
+      144.0,
+      225.75
+     ],
+     "b": [
+      12,
+      405
+     ],
+     "length_m": 222.6085,
+     "level": "ground"
+    }
+   ]
+  },
+  "G-W-REG": {
+   "a": "HDR-W.branch_06",
+   "b": "REG-W.gas_in",
+   "a_port_type": "gas_bidirectional",
+   "b_port_type": "gas_in",
+   "medium": "gas",
+   "nominal_diameter": "DN600",
+   "internal_diameter_m": 0.564,
+   "pipe_class": "CS-WET-160",
+   "class_max_pressure_mpa": 16.0,
+   "class_temperature_limits_c": [
+    -20,
+    120
+   ],
+   "roughness_m": 4.5e-05,
+   "routing_level": "ground",
+   "corridor": null,
+   "route_m": [
+    [
+     153.0,
+     225.0
+    ],
+    [
+     156.0,
+     225.0
+    ],
+    [
+     209.5,
+     225.0
+    ],
+    [
+     212.5,
+     225.0
+    ]
+   ],
+   "length_m": 59.5,
+   "segments": [
+    {
+     "a": [
+      153.0,
+      225.0
+     ],
+     "b": [
+      156.0,
+      225.0
+     ],
+     "length_m": 3.0,
+     "level": "ground"
+    },
+    {
+     "a": [
+      156.0,
+      225.0
+     ],
+     "b": [
+      209.5,
+      225.0
+     ],
+     "length_m": 53.5,
+     "level": "ground"
+    },
+    {
+     "a": [
+      209.5,
+      225.0
+     ],
+     "b": [
+      212.5,
+      225.0
+     ],
+     "length_m": 3.0,
+     "level": "ground"
+    }
+   ]
+  },
+  "G-REG-R": {
+   "a": "REG-W.gas_out",
+   "b": "HDR-R.branch_01",
+   "a_port_type": "gas_out",
+   "b_port_type": "gas_bidirectional",
+   "medium": "gas",
+   "nominal_diameter": "DN600",
+   "internal_diameter_m": 0.564,
+   "pipe_class": "CS-WET-100",
+   "class_max_pressure_mpa": 10.0,
+   "class_temperature_limits_c": [
+    -20,
+    100
+   ],
+   "roughness_m": 4.5e-05,
+   "routing_level": "ground",
+   "corridor": null,
+   "route_m": [
+    [
+     217.5,
+     225.0
+    ],
+    [
+     220.5,
+     225.0
+    ],
+    [
+     263.0,
+     229.5
+    ],
+    [
+     263.0,
+     226.5
+    ]
+   ],
+   "length_m": 48.7376,
+   "segments": [
+    {
+     "a": [
+      217.5,
+      225.0
+     ],
+     "b": [
+      220.5,
+      225.0
+     ],
+     "length_m": 3.0,
+     "level": "ground"
+    },
+    {
+     "a": [
+      220.5,
+      225.0
+     ],
+     "b": [
+      263.0,
+      229.5
+     ],
+     "length_m": 42.7376,
+     "level": "ground"
+    },
+    {
+     "a": [
+      263.0,
+      229.5
+     ],
+     "b": [
+      263.0,
+      226.5
+     ],
+     "length_m": 3.0,
+     "level": "ground"
+    }
+   ]
+  },
+  "G-R-S1": {
+   "a": "HDR-R.branch_02",
+   "b": "SEP-1.gas_in",
+   "a_port_type": "gas_bidirectional",
+   "b_port_type": "gas_in",
+   "medium": "gas",
+   "nominal_diameter": "DN400",
+   "internal_diameter_m": 0.376,
+   "pipe_class": "CS-WET-100",
+   "class_max_pressure_mpa": 10.0,
+   "class_temperature_limits_c": [
+    -20,
+    100
+   ],
+   "roughness_m": 4.5e-05,
+   "routing_level": "ground",
+   "corridor": null,
+   "route_m": [
+    [
+     268.0,
+     226.0
+    ],
+    [
+     271.0,
+     226.0
+    ],
+    [
+     300.0,
+     210.0
+    ],
+    [
+     322.0,
+     170.0
+    ],
+    [
+     325.0,
+     170.0
+    ]
+   ],
+   "length_m": 84.7718,
+   "segments": [
+    {
+     "a": [
+      268.0,
+      226.0
+     ],
+     "b": [
+      271.0,
+      226.0
+     ],
+     "length_m": 3.0,
+     "level": "ground"
+    },
+    {
+     "a": [
+      271.0,
+      226.0
+     ],
+     "b": [
+      300.0,
+      210.0
+     ],
+     "length_m": 33.121,
+     "level": "ground"
+    },
+    {
+     "a": [
+      300.0,
+      210.0
+     ],
+     "b": [
+      322.0,
+      170.0
+     ],
+     "length_m": 45.6508,
+     "level": "ground"
+    },
+    {
+     "a": [
+      322.0,
+      170.0
+     ],
+     "b": [
+      325.0,
+      170.0
+     ],
+     "length_m": 3.0,
+     "level": "ground"
+    }
+   ]
+  },
+  "G-R-S2": {
+   "a": "HDR-R.branch_03",
+   "b": "SEP-2.gas_in",
+   "a_port_type": "gas_bidirectional",
+   "b_port_type": "gas_in",
+   "medium": "gas",
+   "nominal_diameter": "DN400",
+   "internal_diameter_m": 0.376,
+   "pipe_class": "CS-WET-100",
+   "class_max_pressure_mpa": 10.0,
+   "class_temperature_limits_c": [
+    -20,
+    100
+   ],
+   "roughness_m": 4.5e-05,
+   "routing_level": "ground",
+   "corridor": null,
+   "route_m": [
+    [
+     266.5,
+     223.5
+    ],
+    [
+     266.5,
+     220.5
+    ],
+    [
+     300.0,
+     240.0
+    ],
+    [
+     322.0,
+     280.0
+    ],
+    [
+     325.0,
+     280.0
+    ]
+   ],
+   "length_m": 90.4129,
+   "segments": [
+    {
+     "a": [
+      266.5,
+      223.5
+     ],
+     "b": [
+      266.5,
+      220.5
+     ],
+     "length_m": 3.0,
+     "level": "ground"
+    },
+    {
+     "a": [
+      266.5,
+      220.5
+     ],
+     "b": [
+      300.0,
+      240.0
+     ],
+     "length_m": 38.7621,
+     "level": "ground"
+    },
+    {
+     "a": [
+      300.0,
+      240.0
+     ],
+     "b": [
+      322.0,
+      280.0
+     ],
+     "length_m": 45.6508,
+     "level": "ground"
+    },
+    {
+     "a": [
+      322.0,
+      280.0
+     ],
+     "b": [
+      325.0,
+      280.0
+     ],
+     "length_m": 3.0,
+     "level": "ground"
+    }
+   ]
+  },
+  "G-S1-D1": {
+   "a": "SEP-1.gas_out",
+   "b": "DEH-1.gas_in",
+   "a_port_type": "gas_out",
+   "b_port_type": "gas_in",
+   "medium": "gas",
+   "nominal_diameter": "DN400",
+   "internal_diameter_m": 0.376,
+   "pipe_class": "CS-WET-100",
+   "class_max_pressure_mpa": 10.0,
+   "class_temperature_limits_c": [
+    -20,
+    100
+   ],
+   "roughness_m": 4.5e-05,
+   "routing_level": "ground",
+   "corridor": null,
+   "route_m": [
+    [
+     335.0,
+     170.0
+    ],
+    [
+     338.0,
+     170.0
+    ],
+    [
+     415.5,
+     170.0
+    ],
+    [
+     418.5,
+     170.0
+    ]
+   ],
+   "length_m": 83.5,
+   "segments": [
+    {
+     "a": [
+      335.0,
+      170.0
+     ],
+     "b": [
+      338.0,
+      170.0
+     ],
+     "length_m": 3.0,
+     "level": "ground"
+    },
+    {
+     "a": [
+      338.0,
+      170.0
+     ],
+     "b": [
+      415.5,
+      170.0
+     ],
+     "length_m": 77.5,
+     "level": "ground"
+    },
+    {
+     "a": [
+      415.5,
+      170.0
+     ],
+     "b": [
+      418.5,
+      170.0
+     ],
+     "length_m": 3.0,
+     "level": "ground"
+    }
+   ]
+  },
+  "G-S2-D2": {
+   "a": "SEP-2.gas_out",
+   "b": "DEH-2.gas_in",
+   "a_port_type": "gas_out",
+   "b_port_type": "gas_in",
+   "medium": "gas",
+   "nominal_diameter": "DN400",
+   "internal_diameter_m": 0.376,
+   "pipe_class": "CS-WET-100",
+   "class_max_pressure_mpa": 10.0,
+   "class_temperature_limits_c": [
+    -20,
+    100
+   ],
+   "roughness_m": 4.5e-05,
+   "routing_level": "ground",
+   "corridor": null,
+   "route_m": [
+    [
+     335.0,
+     280.0
+    ],
+    [
+     338.0,
+     280.0
+    ],
+    [
+     415.5,
+     280.0
+    ],
+    [
+     418.5,
+     280.0
+    ]
+   ],
+   "length_m": 83.5,
+   "segments": [
+    {
+     "a": [
+      335.0,
+      280.0
+     ],
+     "b": [
+      338.0,
+      280.0
+     ],
+     "length_m": 3.0,
+     "level": "ground"
+    },
+    {
+     "a": [
+      338.0,
+      280.0
+     ],
+     "b": [
+      415.5,
+      280.0
+     ],
+     "length_m": 77.5,
+     "level": "ground"
+    },
+    {
+     "a": [
+      415.5,
+      280.0
+     ],
+     "b": [
+      418.5,
+      280.0
+     ],
+     "length_m": 3.0,
+     "level": "ground"
+    }
+   ]
+  },
+  "G-D1-T": {
+   "a": "DEH-1.gas_out",
+   "b": "HDR-T.branch_01",
+   "a_port_type": "gas_out",
+   "b_port_type": "gas_bidirectional",
+   "medium": "gas",
+   "nominal_diameter": "DN400",
+   "internal_diameter_m": 0.376,
+   "pipe_class": "CS-WET-100",
+   "class_max_pressure_mpa": 10.0,
+   "class_temperature_limits_c": [
+    -20,
+    100
+   ],
+   "roughness_m": 4.5e-05,
+   "routing_level": "ground",
+   "corridor": null,
+   "route_m": [
+    [
+     431.5,
+     170.0
+    ],
+    [
+     434.5,
+     170.0
+    ],
+    [
+     455.0,
+     190.0
+    ],
+    [
+     488.0,
+     229.5
+    ],
+    [
+     488.0,
+     226.5
+    ]
+   ],
+   "length_m": 86.1109,
+   "segments": [
+    {
+     "a": [
+      431.5,
+      170.0
+     ],
+     "b": [
+      434.5,
+      170.0
+     ],
+     "length_m": 3.0,
+     "level": "ground"
+    },
+    {
+     "a": [
+      434.5,
+      170.0
+     ],
+     "b": [
+      455.0,
+      190.0
+     ],
+     "length_m": 28.64,
+     "level": "ground"
+    },
+    {
+     "a": [
+      455.0,
+      190.0
+     ],
+     "b": [
+      488.0,
+      229.5
+     ],
+     "length_m": 51.4709,
+     "level": "ground"
+    },
+    {
+     "a": [
+      488.0,
+      229.5
+     ],
+     "b": [
+      488.0,
+      226.5
+     ],
+     "length_m": 3.0,
+     "level": "ground"
+    }
+   ]
+  },
+  "G-D2-T": {
+   "a": "DEH-2.gas_out",
+   "b": "HDR-T.branch_02",
+   "a_port_type": "gas_out",
+   "b_port_type": "gas_bidirectional",
+   "medium": "gas",
+   "nominal_diameter": "DN400",
+   "internal_diameter_m": 0.376,
+   "pipe_class": "CS-WET-100",
+   "class_max_pressure_mpa": 10.0,
+   "class_temperature_limits_c": [
+    -20,
+    100
+   ],
+   "roughness_m": 4.5e-05,
+   "routing_level": "ground",
+   "corridor": null,
+   "route_m": [
+    [
+     431.5,
+     280.0
+    ],
+    [
+     434.5,
+     280.0
+    ],
+    [
+     460.0,
+     258.0
+    ],
+    [
+     496.0,
+     226.0
+    ],
+    [
+     493.0,
+     226.0
+    ]
+   ],
+   "length_m": 87.845,
+   "segments": [
+    {
+     "a": [
+      431.5,
+      280.0
+     ],
+     "b": [
+      434.5,
+      280.0
+     ],
+     "length_m": 3.0,
+     "level": "ground"
+    },
+    {
+     "a": [
+      434.5,
+      280.0
+     ],
+     "b": [
+      460.0,
+      258.0
+     ],
+     "length_m": 33.6786,
+     "level": "ground"
+    },
+    {
+     "a": [
+      460.0,
+      258.0
+     ],
+     "b": [
+      496.0,
+      226.0
+     ],
+     "length_m": 48.1664,
+     "level": "ground"
+    },
+    {
+     "a": [
+      496.0,
+      226.0
+     ],
+     "b": [
+      493.0,
+      226.0
+     ],
+     "length_m": 3.0,
+     "level": "ground"
+    }
+   ]
+  },
+  "G-T-M": {
+   "a": "HDR-T.branch_03",
+   "b": "HDR-M.branch_01",
+   "a_port_type": "gas_bidirectional",
+   "b_port_type": "gas_bidirectional",
+   "medium": "gas",
+   "nominal_diameter": "DN400",
+   "internal_diameter_m": 0.376,
+   "pipe_class": "CS-WET-100",
+   "class_max_pressure_mpa": 10.0,
+   "class_temperature_limits_c": [
+    -20,
+    100
+   ],
+   "roughness_m": 4.5e-05,
+   "routing_level": "ground",
+   "corridor": null,
+   "route_m": [
+    [
+     491.5,
+     223.5
+    ],
+    [
+     491.5,
+     220.5
+    ],
+    [
+     505.0,
+     215.0
+    ],
+    [
+     533.0,
+     229.5
+    ],
+    [
+     533.0,
+     226.5
+    ]
+   ],
+   "length_m": 52.1091,
+   "segments": [
+    {
+     "a": [
+      491.5,
+      223.5
+     ],
+     "b": [
+      491.5,
+      220.5
+     ],
+     "length_m": 3.0,
+     "level": "ground"
+    },
+    {
+     "a": [
+      491.5,
+      220.5
+     ],
+     "b": [
+      505.0,
+      215.0
+     ],
+     "length_m": 14.5774,
+     "level": "ground"
+    },
+    {
+     "a": [
+      505.0,
+      215.0
+     ],
+     "b": [
+      533.0,
+      229.5
+     ],
+     "length_m": 31.5317,
+     "level": "ground"
+    },
+    {
+     "a": [
+      533.0,
+      229.5
+     ],
+     "b": [
+      533.0,
+      226.5
+     ],
+     "length_m": 3.0,
+     "level": "ground"
+    }
+   ]
+  },
+  "G-M-TO": {
+   "a": "HDR-M.branch_03",
+   "b": "MTR-O.gas_in",
+   "a_port_type": "gas_bidirectional",
+   "b_port_type": "gas_in",
+   "medium": "gas",
+   "nominal_diameter": "DN500",
+   "internal_diameter_m": 0.47,
+   "pipe_class": "CS-WET-100",
+   "class_max_pressure_mpa": 10.0,
+   "class_temperature_limits_c": [
+    -20,
+    100
+   ],
+   "roughness_m": 4.5e-05,
+   "routing_level": "ground",
+   "corridor": null,
+   "route_m": [
+    [
+     536.5,
+     223.5
+    ],
+    [
+     536.5,
+     220.5
+    ],
+    [
+     590.0,
+     220.5
+    ],
+    [
+     615.0,
+     225.0
+    ],
+    [
+     618.0,
+     225.0
+    ]
+   ],
+   "length_m": 84.9018,
+   "segments": [
+    {
+     "a": [
+      536.5,
+      223.5
+     ],
+     "b": [
+      536.5,
+      220.5
+     ],
+     "length_m": 3.0,
+     "level": "ground"
+    },
+    {
+     "a": [
+      536.5,
+      220.5
+     ],
+     "b": [
+      590.0,
+      220.5
+     ],
+     "length_m": 53.5,
+     "level": "ground"
+    },
+    {
+     "a": [
+      590.0,
+      220.5
+     ],
+     "b": [
+      615.0,
+      225.0
+     ],
+     "length_m": 25.4018,
+     "level": "ground"
+    },
+    {
+     "a": [
+      615.0,
+      225.0
+     ],
+     "b": [
+      618.0,
+      225.0
+     ],
+     "length_m": 3.0,
+     "level": "ground"
+    }
+   ]
+  },
+  "G-TO-TIE": {
+   "a": "MTR-O.gas_out",
+   "b": "GRID-TIE.gas",
+   "a_port_type": "gas_out",
+   "b_port_type": "gas_bidirectional",
+   "medium": "gas",
+   "nominal_diameter": "DN500",
+   "internal_diameter_m": 0.47,
+   "pipe_class": "CS-WET-100",
+   "class_max_pressure_mpa": 10.0,
+   "class_temperature_limits_c": [
+    -20,
+    100
+   ],
+   "roughness_m": 4.5e-05,
+   "routing_level": "ground",
+   "corridor": null,
+   "route_m": [
+    [
+     622.0,
+     225.0
+    ],
+    [
+     625.0,
+     225.0
+    ],
+    [
+     700,
+     225
+    ]
+   ],
+   "length_m": 78.0,
+   "segments": [
+    {
+     "a": [
+      622.0,
+      225.0
+     ],
+     "b": [
+      625.0,
+      225.0
+     ],
+     "length_m": 3.0,
+     "level": "ground"
+    },
+    {
+     "a": [
+      625.0,
+      225.0
+     ],
+     "b": [
+      700,
+      225
+     ],
+     "length_m": 75.0,
+     "level": "ground"
+    }
+   ]
+  },
+  "G-T-CS": {
+   "a": "HDR-T.branch_04",
+   "b": "HDR-CS.branch_07",
+   "a_port_type": "gas_bidirectional",
+   "b_port_type": "gas_bidirectional",
+   "medium": "gas",
+   "nominal_diameter": "DN600",
+   "internal_diameter_m": 0.564,
+   "pipe_class": "CS-WET-100",
+   "class_max_pressure_mpa": 10.0,
+   "class_temperature_limits_c": [
+    -20,
+    100
+   ],
+   "roughness_m": 4.5e-05,
+   "routing_level": "ground",
+   "corridor": null,
+   "route_m": [
+    [
+     487.0,
+     224.25
+    ],
+    [
+     484.0,
+     224.25
+    ],
+    [
+     435.0,
+     290.0
+    ],
+    [
+     435.0,
+     315.0
+    ],
+    [
+     438.5,
+     315.0
+    ],
+    [
+     438.5,
+     315.5
+    ],
+    [
+     438.5,
+     318.5
+    ]
+   ],
+   "length_m": 117.0004,
+   "segments": [
+    {
+     "a": [
+      487.0,
+      224.25
+     ],
+     "b": [
+      484.0,
+      224.25
+     ],
+     "length_m": 3.0,
+     "level": "ground"
+    },
+    {
+     "a": [
+      484.0,
+      224.25
+     ],
+     "b": [
+      435.0,
+      290.0
+     ],
+     "length_m": 82.0004,
+     "level": "ground"
+    },
+    {
+     "a": [
+      435.0,
+      290.0
+     ],
+     "b": [
+      435.0,
+      315.0
+     ],
+     "length_m": 25.0,
+     "level": "ground"
+    },
+    {
+     "a": [
+      435.0,
+      315.0
+     ],
+     "b": [
+      438.5,
+      315.0
+     ],
+     "length_m": 3.5,
+     "level": "ground"
+    },
+    {
+     "a": [
+      438.5,
+      315.0
+     ],
+     "b": [
+      438.5,
+      315.5
+     ],
+     "length_m": 0.5,
+     "level": "ground"
+    },
+    {
+     "a": [
+      438.5,
+      315.5
+     ],
+     "b": [
+      438.5,
+      318.5
+     ],
+     "length_m": 3.0,
+     "level": "ground"
+    }
+   ]
+  },
+  "G-CD-M": {
+   "a": "HDR-CD.branch_01",
+   "b": "HDR-M.branch_02",
+   "a_port_type": "gas_bidirectional",
+   "b_port_type": "gas_bidirectional",
+   "medium": "gas",
+   "nominal_diameter": "DN500",
+   "internal_diameter_m": 0.47,
+   "pipe_class": "CS-WET-100",
+   "class_max_pressure_mpa": 10.0,
+   "class_temperature_limits_c": [
+    -20,
+    100
+   ],
+   "roughness_m": 4.5e-05,
+   "routing_level": "ground",
+   "corridor": null,
+   "route_m": [
+    [
+     438.0,
+     431.5
+    ],
+    [
+     438.0,
+     434.5
+    ],
+    [
+     541.0,
+     434.5
+    ],
+    [
+     541.0,
+     300.0
+    ],
+    [
+     541.0,
+     226.0
+    ],
+    [
+     538.0,
+     226.0
+    ]
+   ],
+   "length_m": 317.5,
+   "segments": [
+    {
+     "a": [
+      438.0,
+      431.5
+     ],
+     "b": [
+      438.0,
+      434.5
+     ],
+     "length_m": 3.0,
+     "level": "ground"
+    },
+    {
+     "a": [
+      438.0,
+      434.5
+     ],
+     "b": [
+      541.0,
+      434.5
+     ],
+     "length_m": 103.0,
+     "level": "ground"
+    },
+    {
+     "a": [
+      541.0,
+      434.5
+     ],
+     "b": [
+      541.0,
+      300.0
+     ],
+     "length_m": 134.5,
+     "level": "ground"
+    },
+    {
+     "a": [
+      541.0,
+      300.0
+     ],
+     "b": [
+      541.0,
+      226.0
+     ],
+     "length_m": 74.0,
+     "level": "ground"
+    },
+    {
+     "a": [
+      541.0,
+      226.0
+     ],
+     "b": [
+      538.0,
+      226.0
+     ],
+     "length_m": 3.0,
+     "level": "ground"
+    }
+   ]
+  },
+  "L-S1": {
+   "a": "SEP-1.liquid_out",
+   "b": "DRN-1.drain_in",
+   "a_port_type": "liquid_out",
+   "b_port_type": "drain_in",
+   "medium": "liquid",
+   "nominal_diameter": "DN150",
+   "internal_diameter_m": 0.141,
+   "pipe_class": "CS-WET-100",
+   "class_max_pressure_mpa": 10.0,
+   "class_temperature_limits_c": [
+    -20,
+    100
+   ],
+   "roughness_m": 4.5e-05,
+   "routing_level": "ground",
+   "corridor": null,
+   "route_m": [
+    [
+     330.0,
+     167.5
+    ],
+    [
+     330.0,
+     164.5
+    ],
+    [
+     325.5,
+     140.0
+    ],
+    [
+     328.5,
+     140.0
+    ]
+   ],
+   "length_m": 30.9098,
+   "segments": [
+    {
+     "a": [
+      330.0,
+      167.5
+     ],
+     "b": [
+      330.0,
+      164.5
+     ],
+     "length_m": 3.0,
+     "level": "ground"
+    },
+    {
+     "a": [
+      330.0,
+      164.5
+     ],
+     "b": [
+      325.5,
+      140.0
+     ],
+     "length_m": 24.9098,
+     "level": "ground"
+    },
+    {
+     "a": [
+      325.5,
+      140.0
+     ],
+     "b": [
+      328.5,
+      140.0
+     ],
+     "length_m": 3.0,
+     "level": "ground"
+    }
+   ]
+  },
+  "L-S2": {
+   "a": "SEP-2.liquid_out",
+   "b": "DRN-2.drain_in",
+   "a_port_type": "liquid_out",
+   "b_port_type": "drain_in",
+   "medium": "liquid",
+   "nominal_diameter": "DN150",
+   "internal_diameter_m": 0.141,
+   "pipe_class": "CS-WET-100",
+   "class_max_pressure_mpa": 10.0,
+   "class_temperature_limits_c": [
+    -20,
+    100
+   ],
+   "roughness_m": 4.5e-05,
+   "routing_level": "ground",
+   "corridor": null,
+   "route_m": [
+    [
+     330.0,
+     277.5
+    ],
+    [
+     330.0,
+     274.5
+    ],
+    [
+     320.0,
+     274.5
+    ],
+    [
+     320.0,
+     305.0
+    ],
+    [
+     325.5,
+     305.0
+    ],
+    [
+     328.5,
+     305.0
+    ]
+   ],
+   "length_m": 52.0,
+   "segments": [
+    {
+     "a": [
+      330.0,
+      277.5
+     ],
+     "b": [
+      330.0,
+      274.5
+     ],
+     "length_m": 3.0,
+     "level": "ground"
+    },
+    {
+     "a": [
+      330.0,
+      274.5
+     ],
+     "b": [
+      320.0,
+      274.5
+     ],
+     "length_m": 10.0,
+     "level": "ground"
+    },
+    {
+     "a": [
+      320.0,
+      274.5
+     ],
+     "b": [
+      320.0,
+      305.0
+     ],
+     "length_m": 30.5,
+     "level": "ground"
+    },
+    {
+     "a": [
+      320.0,
+      305.0
+     ],
+     "b": [
+      325.5,
+      305.0
+     ],
+     "length_m": 5.5,
+     "level": "ground"
+    },
+    {
+     "a": [
+      325.5,
+      305.0
+     ],
+     "b": [
+      328.5,
+      305.0
+     ],
+     "length_m": 3.0,
+     "level": "ground"
+    }
+   ]
+  },
+  "L-D1-O": {
+   "a": "DRN-1.drain_out",
+   "b": "LIQUID-DRAIN-OUTFALL.drain",
+   "a_port_type": "drain_out",
+   "b_port_type": "drain_in",
+   "medium": "liquid",
+   "nominal_diameter": "DN150",
+   "internal_diameter_m": 0.141,
+   "pipe_class": "CS-WET-100",
+   "class_max_pressure_mpa": 10.0,
+   "class_temperature_limits_c": [
+    -20,
+    100
+   ],
+   "roughness_m": 4.5e-05,
+   "routing_level": "ground",
+   "corridor": null,
+   "route_m": [
+    [
+     331.5,
+     140.0
+    ],
+    [
+     334.5,
+     140.0
+    ],
+    [
+     360.0,
+     120.0
+    ],
+    [
+     660.0,
+     120.0
+    ],
+    [
+     680,
+     120
+    ]
+   ],
+   "length_m": 355.4076,
+   "segments": [
+    {
+     "a": [
+      331.5,
+      140.0
+     ],
+     "b": [
+      334.5,
+      140.0
+     ],
+     "length_m": 3.0,
+     "level": "ground"
+    },
+    {
+     "a": [
+      334.5,
+      140.0
+     ],
+     "b": [
+      360.0,
+      120.0
+     ],
+     "length_m": 32.4076,
+     "level": "ground"
+    },
+    {
+     "a": [
+      360.0,
+      120.0
+     ],
+     "b": [
+      660.0,
+      120.0
+     ],
+     "length_m": 300.0,
+     "level": "ground"
+    },
+    {
+     "a": [
+      660.0,
+      120.0
+     ],
+     "b": [
+      680,
+      120
+     ],
+     "length_m": 20.0,
+     "level": "ground"
+    }
+   ]
+  },
+  "L-D2-O": {
+   "a": "DRN-2.drain_out",
+   "b": "LIQUID-DRAIN-OUTFALL.drain",
+   "a_port_type": "drain_out",
+   "b_port_type": "drain_in",
+   "medium": "liquid",
+   "nominal_diameter": "DN150",
+   "internal_diameter_m": 0.141,
+   "pipe_class": "CS-WET-100",
+   "class_max_pressure_mpa": 10.0,
+   "class_temperature_limits_c": [
+    -20,
+    100
+   ],
+   "roughness_m": 4.5e-05,
+   "routing_level": "ground",
+   "corridor": null,
+   "route_m": [
+    [
+     331.5,
+     305.0
+    ],
+    [
+     334.5,
+     305.0
+    ],
+    [
+     370.0,
+     310.0
+    ],
+    [
+     370.0,
+     150.0
+    ],
+    [
+     680,
+     120
+    ]
+   ],
+   "length_m": 510.2986,
+   "segments": [
+    {
+     "a": [
+      331.5,
+      305.0
+     ],
+     "b": [
+      334.5,
+      305.0
+     ],
+     "length_m": 3.0,
+     "level": "ground"
+    },
+    {
+     "a": [
+      334.5,
+      305.0
+     ],
+     "b": [
+      370.0,
+      310.0
+     ],
+     "length_m": 35.8504,
+     "level": "ground"
+    },
+    {
+     "a": [
+      370.0,
+      310.0
+     ],
+     "b": [
+      370.0,
+      150.0
+     ],
+     "length_m": 160.0,
+     "level": "ground"
+    },
+    {
+     "a": [
+      370.0,
+      150.0
+     ],
+     "b": [
+      680,
+      120
+     ],
+     "length_m": 311.4482,
+     "level": "ground"
+    }
+   ]
+  }
+ },
+ "roads": {
+  "R-A": {
+   "width_m": 6.0,
+   "centreline_m": [
+    [
+     0.0,
+     225.0
+    ],
+    [
+     100.0,
+     225.0
+    ]
+   ],
+   "length_m": 100.0
+  },
+  "R-B": {
+   "width_m": 6.0,
+   "centreline_m": [
+    [
+     100.0,
+     110.0
+    ],
+    [
+     100.0,
+     430.0
+    ]
+   ],
+   "length_m": 320.0
+  },
+  "R-C": {
+   "width_m": 6.0,
+   "centreline_m": [
+    [
+     100.0,
+     110.0
+    ],
+    [
+     620.0,
+     110.0
+    ]
+   ],
+   "length_m": 520.0
+  },
+  "R-D": {
+   "width_m": 6.0,
+   "centreline_m": [
+    [
+     100.0,
+     178.0
+    ],
+    [
+     620.0,
+     178.0
+    ]
+   ],
+   "length_m": 520.0
+  },
+  "R-E": {
+   "width_m": 6.0,
+   "centreline_m": [
+    [
+     100.0,
+     290.0
+    ],
+    [
+     545.0,
+     290.0
+    ]
+   ],
+   "length_m": 445.0
+  },
+  "R-F": {
+   "width_m": 6.0,
+   "centreline_m": [
+    [
+     100.0,
+     365.0
+    ],
+    [
+     545.0,
+     365.0
+    ]
+   ],
+   "length_m": 445.0
+  }
+ },
+ "scenarios": {
+  "INJ-LOW": {
+   "scenario_id": "INJ-LOW",
+   "service": "injection",
+   "annual_hours": 900,
+   "required_total_flow_kg_s": 120,
+   "source_interface": "GRID-TIE",
+   "sink_interfaces": [
+    "WG-01",
+    "WG-02",
+    "WG-03",
+    "WG-04",
+    "WG-05",
+    "WG-06"
+   ],
+   "source_pressure_mpa": 6.5,
+   "source_temperature_c": 25,
+   "source_water_mg_sm3": 40,
+   "source_free_liquid_mass_fraction": 0.0,
+   "required_sink_pressure_mpa": 8.5,
+   "pipe_operating_points": {
+    "G-TIE-IN": {
+     "P_out_mpa": 6.497,
+     "T_c": 25,
+     "flow_kg_s": 120,
+     "velocity_m_s": 6.8955,
+     "Re": 21573797.0,
+     "loss_mpa": null,
+     "kind": "pipe"
+    },
+    "MTR-I": {
+     "P_out_mpa": 6.472,
+     "T_c": 25,
+     "kind": "equipment"
+    },
+    "G-IN-1": {
+     "P_out_mpa": 6.4677,
+     "T_c": 25,
+     "flow_kg_s": 120,
+     "velocity_m_s": 6.9254,
+     "Re": 21575018.4,
+     "loss_mpa": null,
+     "kind": "pipe"
+    },
+    "HDR-CS": {
+     "P_out_mpa": 6.4577,
+     "T_c": 0,
+     "kind": "header",
+     "dP_mpa": 0.01,
+     "flow_kg_s": 120
+    },
+    "G-C1S": {
+     "P_out_mpa": 6.4555,
+     "T_c": 25,
+     "flow_kg_s": 60.0,
+     "velocity_m_s": 4.7226,
+     "Re": 12585755.8,
+     "loss_mpa": null,
+     "kind": "pipe"
+    },
+    "G-C1D": {
+     "P_out_mpa": 8.7064,
+     "T_c": 51.711,
+     "flow_kg_s": 60.0,
+     "velocity_m_s": 6.8529,
+     "Re": 15732818.3,
+     "loss_mpa": null,
+     "kind": "pipe"
+    },
+    "G-C2S": {
+     "P_out_mpa": 6.4571,
+     "T_c": 25,
+     "flow_kg_s": 60.0,
+     "velocity_m_s": 4.722,
+     "Re": 12585736.9,
+     "loss_mpa": null,
+     "kind": "pipe"
+    },
+    "G-C2D": {
+     "P_out_mpa": 8.7064,
+     "T_c": 51.631,
+     "flow_kg_s": 60.0,
+     "velocity_m_s": 6.8532,
+     "Re": 15735607.0,
+     "loss_mpa": null,
+     "kind": "pipe"
+    },
+    "HDR-CD": {
+     "P_out_mpa": 8.6964,
+     "T_c": 0,
+     "kind": "header",
+     "dP_mpa": 0.01,
+     "flow_kg_s": 120
+    },
+    "G-CD-CL": {
+     "P_out_mpa": 8.6897,
+     "T_c": 51.671,
+     "flow_kg_s": 120,
+     "velocity_m_s": 7.7232,
+     "Re": 23602041.9,
+     "loss_mpa": null,
+     "kind": "pipe"
+    },
+    "COOL": {
+     "P_out_mpa": 8.6547,
+     "T_c": 45.0,
+     "kind": "equipment"
+    },
+    "G-CL-W": {
+     "P_out_mpa": 8.633,
+     "T_c": 45.0,
+     "flow_kg_s": 120,
+     "velocity_m_s": 7.5987,
+     "Re": 23949683.5,
+     "loss_mpa": null,
+     "kind": "pipe"
+    },
+    "HDR-W": {
+     "P_out_mpa": 8.623,
+     "T_c": 0,
+     "kind": "header",
+     "dP_mpa": 0.01,
+     "flow_kg_s": 120
+    },
+    "G-W-1": {
+     "P_out_mpa": 8.6,
+     "T_c": 45.0,
+     "flow_kg_s": 20.0,
+     "velocity_m_s": 7.3215,
+     "Re": 9580482.4,
+     "loss_mpa": null,
+     "kind": "pipe"
+    },
+    "G-W-2": {
+     "P_out_mpa": 8.6059,
+     "T_c": 45.0,
+     "flow_kg_s": 20.0,
+     "velocity_m_s": 7.3191,
+     "Re": 9580427.3,
+     "loss_mpa": null,
+     "kind": "pipe"
+    },
+    "G-W-3": {
+     "P_out_mpa": 8.6082,
+     "T_c": 45.0,
+     "flow_kg_s": 20.0,
+     "velocity_m_s": 7.3181,
+     "Re": 9580405.0,
+     "loss_mpa": null,
+     "kind": "pipe"
+    },
+    "G-W-4": {
+     "P_out_mpa": 8.6086,
+     "T_c": 45.0,
+     "flow_kg_s": 20.0,
+     "velocity_m_s": 7.318,
+     "Re": 9580401.5,
+     "loss_mpa": null,
+     "kind": "pipe"
+    },
+    "G-W-5": {
+     "P_out_mpa": 8.604,
+     "T_c": 45.0,
+     "flow_kg_s": 20.0,
+     "velocity_m_s": 7.3199,
+     "Re": 9580445.1,
+     "loss_mpa": null,
+     "kind": "pipe"
+    },
+    "G-W-6": {
+     "P_out_mpa": 8.6007,
+     "T_c": 45.0,
+     "flow_kg_s": 20.0,
+     "velocity_m_s": 7.3213,
+     "Re": 9580476.3,
+     "loss_mpa": null,
+     "kind": "pipe"
+    }
+   },
+   "equipment_operating_points": {},
+   "well_group_flows_kg_s": {
+    "WG-01": 20.0,
+    "WG-02": 20.0,
+    "WG-03": 20.0,
+    "WG-04": 20.0,
+    "WG-05": 20.0,
+    "WG-06": 20.0
+   },
+   "compressor_bank": {
+    "units": [
+     {
+      "id": "C-1",
+      "Ps": 6.455531766144291,
+      "Ts": 25,
+      "Pd": 8.713582056857854,
+      "ratio": 1.3497853271446658,
+      "T_out": 51.710524060908995,
+      "power_mw": 4.090048996826686,
+      "flow": 60.0
+     },
+     {
+      "id": "C-2",
+      "Ps": 6.4570529685561535,
+      "Ts": 25,
+      "Pd": 8.70809749338648,
+      "ratio": 1.3486179431688443,
+      "T_out": 51.63078385496357,
+      "power_mw": 4.077838777791298,
+      "flow": 60.0
+     }
+    ],
+    "total_power_mw": 8.1679
+   },
+   "cooler": {
+    "outlet_T_c": 45.0,
+    "duty_mw": 1.9612,
+    "electric_power_mw": 0.0686
+   },
+   "delivered": {
+    "min_well_pressure_mpa": 8.6,
+    "temperature_c": 45.0,
+    "water_mg_sm3": 40,
+    "free_liquid_mass_fraction": 0.0
+   },
+   "operating_path": [
+    "GRID-TIE",
+    "G-TIE-IN",
+    "MTR-I",
+    "G-IN-1",
+    "HDR-CS",
+    "G-C1S",
+    "C-1",
+    "G-C1D",
+    "G-C2S",
+    "C-2",
+    "G-C2D",
+    "HDR-CD",
+    "G-CD-CL",
+    "COOL",
+    "G-CL-W",
+    "HDR-W",
+    "G-W-1",
+    "WG-01",
+    "G-W-2",
+    "WG-02",
+    "G-W-3",
+    "WG-03",
+    "G-W-4",
+    "WG-04",
+    "G-W-5",
+    "WG-05",
+    "G-W-6",
+    "WG-06"
+   ],
+   "active_pipes": [
+    "G-C1D",
+    "G-C1S",
+    "G-C2D",
+    "G-C2S",
+    "G-CD-CL",
+    "G-CL-W",
+    "G-IN-1",
+    "G-TIE-IN",
+    "G-W-1",
+    "G-W-2",
+    "G-W-3",
+    "G-W-4",
+    "G-W-5",
+    "G-W-6"
+   ],
+   "pipes_with_zero_flow": [
+    "G-C3D",
+    "G-C3S",
+    "G-CD-M",
+    "G-D1-T",
+    "G-D2-T",
+    "G-M-TO",
+    "G-R-S1",
+    "G-R-S2",
+    "G-REG-R",
+    "G-S1-D1",
+    "G-S2-D2",
+    "G-T-CS",
+    "G-T-M",
+    "G-TO-TIE",
+    "G-W-REG",
+    "L-D1-O",
+    "L-D2-O",
+    "L-S1",
+    "L-S2"
+   ]
+  },
+  "INJ-MID": {
+   "scenario_id": "INJ-MID",
+   "service": "injection",
+   "annual_hours": 1300,
+   "required_total_flow_kg_s": 100,
+   "source_interface": "GRID-TIE",
+   "sink_interfaces": [
+    "WG-01",
+    "WG-02",
+    "WG-03",
+    "WG-04",
+    "WG-05",
+    "WG-06"
+   ],
+   "source_pressure_mpa": 6.5,
+   "source_temperature_c": 25,
+   "source_water_mg_sm3": 40,
+   "source_free_liquid_mass_fraction": 0.0,
+   "required_sink_pressure_mpa": 11.0,
+   "pipe_operating_points": {
+    "G-TIE-IN": {
+     "P_out_mpa": 6.4979,
+     "T_c": 25,
+     "flow_kg_s": 100,
+     "velocity_m_s": 5.7458,
+     "Re": 17978147.8,
+     "loss_mpa": null,
+     "kind": "pipe"
+    },
+    "MTR-I": {
+     "P_out_mpa": 6.4729,
+     "T_c": 25,
+     "kind": "equipment"
+    },
+    "G-IN-1": {
+     "P_out_mpa": 6.4699,
+     "T_c": 25,
+     "flow_kg_s": 100,
+     "velocity_m_s": 5.7698,
+     "Re": 17979126.0,
+     "loss_mpa": null,
+     "kind": "pipe"
+    },
+    "HDR-CS": {
+     "P_out_mpa": 6.4629,
+     "T_c": 0,
+     "kind": "header",
+     "dP_mpa": 0.00694,
+     "flow_kg_s": 100
+    },
+    "G-C1S": {
+     "P_out_mpa": 6.4615,
+     "T_c": 25,
+     "flow_kg_s": 50.0,
+     "velocity_m_s": 3.9321,
+     "Re": 10488013.6,
+     "loss_mpa": null,
+     "kind": "pipe"
+    },
+    "G-C1D": {
+     "P_out_mpa": 11.1771,
+     "T_c": 75.278,
+     "flow_kg_s": 50.0,
+     "velocity_m_s": 4.8153,
+     "Re": 12423125.8,
+     "loss_mpa": null,
+     "kind": "pipe"
+    },
+    "G-C2S": {
+     "P_out_mpa": 6.4625,
+     "T_c": 25,
+     "flow_kg_s": 50.0,
+     "velocity_m_s": 3.9318,
+     "Re": 10488002.7,
+     "loss_mpa": null,
+     "kind": "pipe"
+    },
+    "G-C2D": {
+     "P_out_mpa": 11.1771,
+     "T_c": 75.234,
+     "flow_kg_s": 50.0,
+     "velocity_m_s": 4.8154,
+     "Re": 12424266.0,
+     "loss_mpa": null,
+     "kind": "pipe"
+    },
+    "HDR-CD": {
+     "P_out_mpa": 11.1701,
+     "T_c": 0,
+     "kind": "header",
+     "dP_mpa": 0.00694,
+     "flow_kg_s": 100
+    },
+    "G-CD-CL": {
+     "P_out_mpa": 11.1662,
+     "T_c": 75.256,
+     "flow_kg_s": 100,
+     "velocity_m_s": 5.4221,
+     "Re": 18635916.5,
+     "loss_mpa": null,
+     "kind": "pipe"
+    },
+    "COOL": {
+     "P_out_mpa": 11.1312,
+     "T_c": 45.0,
+     "kind": "equipment"
+    },
+    "G-CL-W": {
+     "P_out_mpa": 11.1194,
+     "T_c": 45.0,
+     "flow_kg_s": 100,
+     "velocity_m_s": 4.9462,
+     "Re": 19861174.2,
+     "loss_mpa": null,
+     "kind": "pipe"
+    },
+    "HDR-W": {
+     "P_out_mpa": 11.1125,
+     "T_c": 0,
+     "kind": "header",
+     "dP_mpa": 0.00694,
+     "flow_kg_s": 100
+    },
+    "G-W-1": {
+     "P_out_mpa": 11.1,
+     "T_c": 45.0,
+     "flow_kg_s": 16.666666666666668,
+     "velocity_m_s": 4.7563,
+     "Re": 7944766.1,
+     "loss_mpa": null,
+     "kind": "pipe"
+    },
+    "G-W-2": {
+     "P_out_mpa": 11.1032,
+     "T_c": 45.0,
+     "flow_kg_s": 16.666666666666668,
+     "velocity_m_s": 4.7557,
+     "Re": 7944741.5,
+     "loss_mpa": null,
+     "kind": "pipe"
+    },
+    "G-W-3": {
+     "P_out_mpa": 11.1045,
+     "T_c": 45.0,
+     "flow_kg_s": 16.666666666666668,
+     "velocity_m_s": 4.7554,
+     "Re": 7944731.5,
+     "loss_mpa": null,
+     "kind": "pipe"
+    },
+    "G-W-4": {
+     "P_out_mpa": 11.1047,
+     "T_c": 45.0,
+     "flow_kg_s": 16.666666666666668,
+     "velocity_m_s": 4.7554,
+     "Re": 7944729.9,
+     "loss_mpa": null,
+     "kind": "pipe"
+    },
+    "G-W-5": {
+     "P_out_mpa": 11.1021,
+     "T_c": 45.0,
+     "flow_kg_s": 16.666666666666668,
+     "velocity_m_s": 4.7559,
+     "Re": 7944749.4,
+     "loss_mpa": null,
+     "kind": "pipe"
+    },
+    "G-W-6": {
+     "P_out_mpa": 11.1004,
+     "T_c": 45.0,
+     "flow_kg_s": 16.666666666666668,
+     "velocity_m_s": 4.7563,
+     "Re": 7944763.3,
+     "loss_mpa": null,
+     "kind": "pipe"
+    }
+   },
+   "equipment_operating_points": {},
+   "well_group_flows_kg_s": {
+    "WG-01": 16.666666666666668,
+    "WG-02": 16.666666666666668,
+    "WG-03": 16.666666666666668,
+    "WG-04": 16.666666666666668,
+    "WG-05": 16.666666666666668,
+    "WG-06": 16.666666666666668
+   },
+   "compressor_bank": {
+    "units": [
+     {
+      "id": "C-1",
+      "Ps": 6.461465617913417,
+      "Ts": 25,
+      "Pd": 11.181308387491802,
+      "ratio": 1.730460091978722,
+      "T_out": 75.27824192419399,
+      "power_mw": 6.415713162201833,
+      "flow": 50.0
+     },
+     {
+      "id": "C-2",
+      "Ps": 6.462524535384318,
+      "Ts": 25,
+      "Pd": 11.178087721858466,
+      "ratio": 1.729678187008031,
+      "T_out": 75.23413051113096,
+      "power_mw": 6.4100843620974395,
+      "flow": 50.0
+     }
+    ],
+    "total_power_mw": 12.8258
+   },
+   "cooler": {
+    "outlet_T_c": 45.0,
+    "duty_mw": 7.4128,
+    "electric_power_mw": 0.2594
+   },
+   "delivered": {
+    "min_well_pressure_mpa": 11.1,
+    "temperature_c": 45.0,
+    "water_mg_sm3": 40,
+    "free_liquid_mass_fraction": 0.0
+   },
+   "operating_path": [
+    "GRID-TIE",
+    "G-TIE-IN",
+    "MTR-I",
+    "G-IN-1",
+    "HDR-CS",
+    "G-C1S",
+    "C-1",
+    "G-C1D",
+    "G-C2S",
+    "C-2",
+    "G-C2D",
+    "HDR-CD",
+    "G-CD-CL",
+    "COOL",
+    "G-CL-W",
+    "HDR-W",
+    "G-W-1",
+    "WG-01",
+    "G-W-2",
+    "WG-02",
+    "G-W-3",
+    "WG-03",
+    "G-W-4",
+    "WG-04",
+    "G-W-5",
+    "WG-05",
+    "G-W-6",
+    "WG-06"
+   ],
+   "active_pipes": [
+    "G-C1D",
+    "G-C1S",
+    "G-C2D",
+    "G-C2S",
+    "G-CD-CL",
+    "G-CL-W",
+    "G-IN-1",
+    "G-TIE-IN",
+    "G-W-1",
+    "G-W-2",
+    "G-W-3",
+    "G-W-4",
+    "G-W-5",
+    "G-W-6"
+   ],
+   "pipes_with_zero_flow": [
+    "G-C3D",
+    "G-C3S",
+    "G-CD-M",
+    "G-D1-T",
+    "G-D2-T",
+    "G-M-TO",
+    "G-R-S1",
+    "G-R-S2",
+    "G-REG-R",
+    "G-S1-D1",
+    "G-S2-D2",
+    "G-T-CS",
+    "G-T-M",
+    "G-TO-TIE",
+    "G-W-REG",
+    "L-D1-O",
+    "L-D2-O",
+    "L-S1",
+    "L-S2"
+   ]
+  },
+  "INJ-HIGH": {
+   "scenario_id": "INJ-HIGH",
+   "service": "injection",
+   "annual_hours": 600,
+   "required_total_flow_kg_s": 75,
+   "source_interface": "GRID-TIE",
+   "sink_interfaces": [
+    "WG-01",
+    "WG-02",
+    "WG-03",
+    "WG-04",
+    "WG-05",
+    "WG-06"
+   ],
+   "source_pressure_mpa": 6.5,
+   "source_temperature_c": 25,
+   "source_water_mg_sm3": 40,
+   "source_free_liquid_mass_fraction": 0.0,
+   "required_sink_pressure_mpa": 13.5,
+   "pipe_operating_points": {
+    "G-TIE-IN": {
+     "P_out_mpa": 6.4988,
+     "T_c": 25,
+     "flow_kg_s": 75,
+     "velocity_m_s": 4.3091,
+     "Re": 13483598.6,
+     "loss_mpa": null,
+     "kind": "pipe"
+    },
+    "MTR-I": {
+     "P_out_mpa": 6.4738,
+     "T_c": 25,
+     "kind": "equipment"
+    },
+    "G-IN-1": {
+     "P_out_mpa": 6.4721,
+     "T_c": 25,
+     "flow_kg_s": 75,
+     "velocity_m_s": 4.3263,
+     "Re": 13484302.6,
+     "loss_mpa": null,
+     "kind": "pipe"
+    },
+    "HDR-CS": {
+     "P_out_mpa": 6.4682,
+     "T_c": 0,
+     "kind": "header",
+     "dP_mpa": 0.00391,
+     "flow_kg_s": 75
+    },
+    "G-C1S": {
+     "P_out_mpa": 6.4674,
+     "T_c": 25,
+     "flow_kg_s": 37.5,
+     "velocity_m_s": 2.9466,
+     "Re": 7865923.5,
+     "loss_mpa": null,
+     "kind": "pipe"
+    },
+    "G-C1D": {
+     "P_out_mpa": 13.656,
+     "T_c": 95.173,
+     "flow_kg_s": 37.5,
+     "velocity_m_s": 3.1479,
+     "Re": 8918902.4,
+     "loss_mpa": null,
+     "kind": "pipe"
+    },
+    "G-C2S": {
+     "P_out_mpa": 6.468,
+     "T_c": 25,
+     "flow_kg_s": 37.5,
+     "velocity_m_s": 2.9465,
+     "Re": 7865918.9,
+     "loss_mpa": null,
+     "kind": "pipe"
+    },
+    "G-C2D": {
+     "P_out_mpa": 13.656,
+     "T_c": 95.151,
+     "flow_kg_s": 37.5,
+     "velocity_m_s": 3.1479,
+     "Re": 8919277.9,
+     "loss_mpa": null,
+     "kind": "pipe"
+    },
+    "HDR-CD": {
+     "P_out_mpa": 13.6521,
+     "T_c": 0,
+     "kind": "header",
+     "dP_mpa": 0.00391,
+     "flow_kg_s": 75
+    },
+    "G-CD-CL": {
+     "P_out_mpa": 13.6501,
+     "T_c": 95.162,
+     "flow_kg_s": 75,
+     "velocity_m_s": 3.5427,
+     "Re": 13378779.1,
+     "loss_mpa": null,
+     "kind": "pipe"
+    },
+    "COOL": {
+     "P_out_mpa": 13.6151,
+     "T_c": 45.0,
+     "kind": "equipment"
+    },
+    "G-CL-W": {
+     "P_out_mpa": 13.6097,
+     "T_c": 45.0,
+     "flow_kg_s": 75,
+     "velocity_m_s": 3.0446,
+     "Re": 14823749.1,
+     "loss_mpa": null,
+     "kind": "pipe"
+    },
+    "HDR-W": {
+     "P_out_mpa": 13.6058,
+     "T_c": 0,
+     "kind": "header",
+     "dP_mpa": 0.00391,
+     "flow_kg_s": 75
+    },
+    "G-W-1": {
+     "P_out_mpa": 13.6,
+     "T_c": 45.0,
+     "flow_kg_s": 12.5,
+     "velocity_m_s": 2.9249,
+     "Re": 5929609.6,
+     "loss_mpa": null,
+     "kind": "pipe"
+    },
+    "G-W-2": {
+     "P_out_mpa": 13.6015,
+     "T_c": 45.0,
+     "flow_kg_s": 12.5,
+     "velocity_m_s": 2.9247,
+     "Re": 5929601.1,
+     "loss_mpa": null,
+     "kind": "pipe"
+    },
+    "G-W-3": {
+     "P_out_mpa": 13.6021,
+     "T_c": 45.0,
+     "flow_kg_s": 12.5,
+     "velocity_m_s": 2.9246,
+     "Re": 5929597.7,
+     "loss_mpa": null,
+     "kind": "pipe"
+    },
+    "G-W-4": {
+     "P_out_mpa": 13.6022,
+     "T_c": 45.0,
+     "flow_kg_s": 12.5,
+     "velocity_m_s": 2.9246,
+     "Re": 5929597.2,
+     "loss_mpa": null,
+     "kind": "pipe"
+    },
+    "G-W-5": {
+     "P_out_mpa": 13.601,
+     "T_c": 45.0,
+     "flow_kg_s": 12.5,
+     "velocity_m_s": 2.9248,
+     "Re": 5929603.9,
+     "loss_mpa": null,
+     "kind": "pipe"
+    },
+    "G-W-6": {
+     "P_out_mpa": 13.6002,
+     "T_c": 45.0,
+     "flow_kg_s": 12.5,
+     "velocity_m_s": 2.9248,
+     "Re": 5929608.7,
+     "loss_mpa": null,
+     "kind": "pipe"
+    }
+   },
+   "equipment_operating_points": {},
+   "well_group_flows_kg_s": {
+    "WG-01": 12.5,
+    "WG-02": 12.5,
+    "WG-03": 12.5,
+    "WG-04": 12.5,
+    "WG-05": 12.5,
+    "WG-06": 12.5
+   },
+   "compressor_bank": {
+    "units": [
+     {
+      "id": "C-1",
+      "Ps": 6.4673698228018806,
+      "Ts": 25,
+      "Pd": 13.658068739736791,
+      "ratio": 2.1118428532697795,
+      "T_out": 95.17278376409689,
+      "power_mw": 6.715754696173338,
+      "flow": 37.5
+     },
+     {
+      "id": "C-2",
+      "Ps": 6.467968659895465,
+      "Ts": 25,
+      "Pd": 13.656481711727986,
+      "ratio": 2.1114019609285957,
+      "T_out": 95.15144592341807,
+      "power_mw": 6.7137125981396215,
+      "flow": 37.5
+     }
+    ],
+    "total_power_mw": 13.4295
+   },
+   "cooler": {
+    "outlet_T_c": 45.0,
+    "duty_mw": 9.2173,
+    "electric_power_mw": 0.3226
+   },
+   "delivered": {
+    "min_well_pressure_mpa": 13.6,
+    "temperature_c": 45.0,
+    "water_mg_sm3": 40,
+    "free_liquid_mass_fraction": 0.0
+   },
+   "operating_path": [
+    "GRID-TIE",
+    "G-TIE-IN",
+    "MTR-I",
+    "G-IN-1",
+    "HDR-CS",
+    "G-C1S",
+    "C-1",
+    "G-C1D",
+    "G-C2S",
+    "C-2",
+    "G-C2D",
+    "HDR-CD",
+    "G-CD-CL",
+    "COOL",
+    "G-CL-W",
+    "HDR-W",
+    "G-W-1",
+    "WG-01",
+    "G-W-2",
+    "WG-02",
+    "G-W-3",
+    "WG-03",
+    "G-W-4",
+    "WG-04",
+    "G-W-5",
+    "WG-05",
+    "G-W-6",
+    "WG-06"
+   ],
+   "active_pipes": [
+    "G-C1D",
+    "G-C1S",
+    "G-C2D",
+    "G-C2S",
+    "G-CD-CL",
+    "G-CL-W",
+    "G-IN-1",
+    "G-TIE-IN",
+    "G-W-1",
+    "G-W-2",
+    "G-W-3",
+    "G-W-4",
+    "G-W-5",
+    "G-W-6"
+   ],
+   "pipes_with_zero_flow": [
+    "G-C3D",
+    "G-C3S",
+    "G-CD-M",
+    "G-D1-T",
+    "G-D2-T",
+    "G-M-TO",
+    "G-R-S1",
+    "G-R-S2",
+    "G-REG-R",
+    "G-S1-D1",
+    "G-S2-D2",
+    "G-T-CS",
+    "G-T-M",
+    "G-TO-TIE",
+    "G-W-REG",
+    "L-D1-O",
+    "L-D2-O",
+    "L-S1",
+    "L-S2"
+   ]
+  },
+  "WDR-HIGH": {
+   "scenario_id": "WDR-HIGH",
+   "service": "withdrawal",
+   "annual_hours": 500,
+   "required_total_flow_kg_s": 120,
+   "source_interface": "well_groups",
+   "sink_interfaces": [
+    "GRID-TIE"
+   ],
+   "source_pressure_mpa": 12.0,
+   "source_temperature_c": 20,
+   "source_water_mg_sm3": 220,
+   "source_free_liquid_mass_fraction": 0.01,
+   "required_sink_pressure_mpa": 6.0,
+   "pipe_operating_points": {
+    "G-W-1": {
+     "P_out_mpa": 11.9848,
+     "T_c": 20,
+     "flow_kg_s": 20.0,
+     "velocity_m_s": 4.859,
+     "Re": 10078350.4,
+     "loss_mpa": null,
+     "kind": "pipe"
+    },
+    "G-W-2": {
+     "P_out_mpa": 11.9886,
+     "T_c": 20,
+     "flow_kg_s": 20.0,
+     "velocity_m_s": 4.8583,
+     "Re": 10078312.2,
+     "loss_mpa": null,
+     "kind": "pipe"
+    },
+    "G-W-3": {
+     "P_out_mpa": 11.9902,
+     "T_c": 20,
+     "flow_kg_s": 20.0,
+     "velocity_m_s": 4.858,
+     "Re": 10078296.7,
+     "loss_mpa": null,
+     "kind": "pipe"
+    },
+    "G-W-4": {
+     "P_out_mpa": 11.9905,
+     "T_c": 20,
+     "flow_kg_s": 20.0,
+     "velocity_m_s": 4.8579,
+     "Re": 10078294.3,
+     "loss_mpa": null,
+     "kind": "pipe"
+    },
+    "G-W-5": {
+     "P_out_mpa": 11.9874,
+     "T_c": 20,
+     "flow_kg_s": 20.0,
+     "velocity_m_s": 4.8585,
+     "Re": 10078324.5,
+     "loss_mpa": null,
+     "kind": "pipe"
+    },
+    "G-W-6": {
+     "P_out_mpa": 11.9852,
+     "T_c": 20,
+     "flow_kg_s": 20.0,
+     "velocity_m_s": 4.859,
+     "Re": 10078346.1,
+     "loss_mpa": null,
+     "kind": "pipe"
+    },
+    "HDR-W": {
+     "P_out_mpa": 11.9748,
+     "T_c": 0,
+     "kind": "header",
+     "dP_mpa": 0.01,
+     "flow_kg_s": 120
+    },
+    "G-W-REG": {
+     "P_out_mpa": 11.9733,
+     "T_c": 20,
+     "flow_kg_s": 120,
+     "velocity_m_s": 5.0691,
+     "Re": 25196779.7,
+     "loss_mpa": null,
+     "kind": "pipe"
+    },
+    "REG-W": {
+     "P_out_mpa": 6.5,
+     "T_c": 13.432,
+     "kind": "equipment"
+    },
+    "G-REG-R": {
+     "P_out_mpa": 6.4978,
+     "T_c": 13.432,
+     "flow_kg_s": 120,
+     "velocity_m_s": 9.0039,
+     "Re": 25876353.2,
+     "loss_mpa": null,
+     "kind": "pipe"
+    },
+    "HDR-R": {
+     "P_out_mpa": 6.4878,
+     "T_c": 0,
+     "kind": "header",
+     "dP_mpa": 0.01,
+     "flow_kg_s": 120
+    },
+    "G-R-S1": {
+     "P_out_mpa": 6.4801,
+     "T_c": 13.432,
+     "flow_kg_s": 60.0,
+     "velocity_m_s": 10.1523,
+     "Re": 19407837.8,
+     "loss_mpa": null,
+     "kind": "pipe"
+    },
+    "SEP-1": {
+     "P_out_mpa": 6.4451,
+     "T_c": 13.432,
+     "kind": "equipment"
+    },
+    "G-S1-D1": {
+     "P_out_mpa": 6.4374,
+     "T_c": 13.432,
+     "flow_kg_s": 60.0,
+     "velocity_m_s": 10.2182,
+     "Re": 19409474.4,
+     "loss_mpa": null,
+     "kind": "pipe"
+    },
+    "DEH-1": {
+     "P_out_mpa": 6.3374,
+     "T_c": 13.432,
+     "kind": "equipment"
+    },
+    "G-D1-T": {
+     "P_out_mpa": 6.3294,
+     "T_c": 13.432,
+     "flow_kg_s": 60.0,
+     "velocity_m_s": 10.3887,
+     "Re": 19413609.0,
+     "loss_mpa": null,
+     "kind": "pipe"
+    },
+    "G-R-S2": {
+     "P_out_mpa": 6.4796,
+     "T_c": 13.432,
+     "flow_kg_s": 60.0,
+     "velocity_m_s": 10.1527,
+     "Re": 19407847.6,
+     "loss_mpa": null,
+     "kind": "pipe"
+    },
+    "SEP-2": {
+     "P_out_mpa": 6.4446,
+     "T_c": 13.432,
+     "kind": "equipment"
+    },
+    "G-S2-D2": {
+     "P_out_mpa": 6.4369,
+     "T_c": 13.432,
+     "flow_kg_s": 60.0,
+     "velocity_m_s": 10.219,
+     "Re": 19409494.1,
+     "loss_mpa": null,
+     "kind": "pipe"
+    },
+    "DEH-2": {
+     "P_out_mpa": 6.3369,
+     "T_c": 13.432,
+     "kind": "equipment"
+    },
+    "G-D2-T": {
+     "P_out_mpa": 6.3287,
+     "T_c": 13.432,
+     "flow_kg_s": 60.0,
+     "velocity_m_s": 10.3896,
+     "Re": 19413631.9,
+     "loss_mpa": null,
+     "kind": "pipe"
+    },
+    "HDR-T": {
+     "P_out_mpa": 6.3187,
+     "T_c": 0,
+     "kind": "header",
+     "dP_mpa": 0.01,
+     "flow_kg_s": 120
+    },
+    "G-T-M": {
+     "P_out_mpa": 6.2992,
+     "T_c": 13.432,
+     "flow_kg_s": 120,
+     "velocity_m_s": 20.8562,
+     "Re": 38829091.8,
+     "loss_mpa": null,
+     "kind": "pipe"
+    },
+    "HDR-M": {
+     "P_out_mpa": 6.2892,
+     "T_c": 0,
+     "kind": "header",
+     "dP_mpa": 0.01,
+     "flow_kg_s": 120
+    },
+    "G-M-TO": {
+     "P_out_mpa": 6.2792,
+     "T_c": 13.432,
+     "flow_kg_s": 120,
+     "velocity_m_s": 13.3994,
+     "Re": 31064791.3,
+     "loss_mpa": null,
+     "kind": "pipe"
+    },
+    "MTR-O": {
+     "P_out_mpa": 6.2542,
+     "T_c": 13.432,
+     "kind": "equipment"
+    },
+    "G-TO-TIE": {
+     "P_out_mpa": 6.245,
+     "T_c": 13.432,
+     "flow_kg_s": 120,
+     "velocity_m_s": 13.4722,
+     "Re": 31066916.8,
+     "loss_mpa": null,
+     "kind": "pipe"
+    }
+   },
+   "equipment_operating_points": {},
+   "well_group_flows_kg_s": {
+    "WG-01": 20.0,
+    "WG-02": 20.0,
+    "WG-03": 20.0,
+    "WG-04": 20.0,
+    "WG-05": 20.0,
+    "WG-06": 20.0
+   },
+   "dehydration_energy_mw": 2.16,
+   "separator_liquid": {
+    "SEP-1": {
+     "removed_kg_s": 0.5997,
+     "outlet_free_liquid": 4.99999999999945e-06
+    },
+    "SEP-2": {
+     "removed_kg_s": 0.5997,
+     "outlet_free_liquid": 4.99999999999945e-06
+    }
+   },
+   "delivered": {
+    "grid_tie_pressure_mpa": 6.245,
+    "temperature_c": 13.432,
+    "water_mg_sm3": 35.0,
+    "free_liquid_mass_fraction": 5e-06
+   },
+   "operating_path": [
+    "WG-01",
+    "G-W-1",
+    "WG-02",
+    "G-W-2",
+    "WG-03",
+    "G-W-3",
+    "WG-04",
+    "G-W-4",
+    "WG-05",
+    "G-W-5",
+    "WG-06",
+    "G-W-6",
+    "HDR-W",
+    "G-W-REG",
+    "REG-W",
+    "G-REG-R",
+    "HDR-R",
+    "G-R-S1",
+    "SEP-1",
+    "G-S1-D1",
+    "DEH-1",
+    "G-D1-T",
+    "G-R-S2",
+    "SEP-2",
+    "G-S2-D2",
+    "DEH-2",
+    "G-D2-T",
+    "HDR-T",
+    "G-T-M",
+    "HDR-M",
+    "G-M-TO",
+    "MTR-O",
+    "G-TO-TIE",
+    "GRID-TIE"
+   ],
+   "active_pipes": [
+    "G-D1-T",
+    "G-D2-T",
+    "G-M-TO",
+    "G-R-S1",
+    "G-R-S2",
+    "G-REG-R",
+    "G-S1-D1",
+    "G-S2-D2",
+    "G-T-M",
+    "G-TO-TIE",
+    "G-W-1",
+    "G-W-2",
+    "G-W-3",
+    "G-W-4",
+    "G-W-5",
+    "G-W-6",
+    "G-W-REG"
+   ],
+   "pipes_with_zero_flow": [
+    "G-C1D",
+    "G-C1S",
+    "G-C2D",
+    "G-C2S",
+    "G-C3D",
+    "G-C3S",
+    "G-CD-CL",
+    "G-CD-M",
+    "G-CL-W",
+    "G-IN-1",
+    "G-T-CS",
+    "G-TIE-IN",
+    "L-D1-O",
+    "L-D2-O",
+    "L-S1",
+    "L-S2"
+   ]
+  },
+  "WDR-MID": {
+   "scenario_id": "WDR-MID",
+   "service": "withdrawal",
+   "annual_hours": 900,
+   "required_total_flow_kg_s": 100,
+   "source_interface": "well_groups",
+   "sink_interfaces": [
+    "GRID-TIE"
+   ],
+   "source_pressure_mpa": 8.0,
+   "source_temperature_c": 20,
+   "source_water_mg_sm3": 220,
+   "source_free_liquid_mass_fraction": 0.01,
+   "required_sink_pressure_mpa": 6.0,
+   "pipe_operating_points": {
+    "G-W-1": {
+     "P_out_mpa": 7.9842,
+     "T_c": 20,
+     "flow_kg_s": 16.666666666666668,
+     "velocity_m_s": 6.0239,
+     "Re": 8464761.7,
+     "loss_mpa": null,
+     "kind": "pipe"
+    },
+    "G-W-2": {
+     "P_out_mpa": 7.9883,
+     "T_c": 20,
+     "flow_kg_s": 16.666666666666668,
+     "velocity_m_s": 6.0224,
+     "Re": 8464728.2,
+     "loss_mpa": null,
+     "kind": "pipe"
+    },
+    "G-W-3": {
+     "P_out_mpa": 7.9899,
+     "T_c": 20,
+     "flow_kg_s": 16.666666666666668,
+     "velocity_m_s": 6.0218,
+     "Re": 8464714.6,
+     "loss_mpa": null,
+     "kind": "pipe"
+    },
+    "G-W-4": {
+     "P_out_mpa": 7.9901,
+     "T_c": 20,
+     "flow_kg_s": 16.666666666666668,
+     "velocity_m_s": 6.0217,
+     "Re": 8464712.5,
+     "loss_mpa": null,
+     "kind": "pipe"
+    },
+    "G-W-5": {
+     "P_out_mpa": 7.987,
+     "T_c": 20,
+     "flow_kg_s": 16.666666666666668,
+     "velocity_m_s": 6.0229,
+     "Re": 8464739.1,
+     "loss_mpa": null,
+     "kind": "pipe"
+    },
+    "G-W-6": {
+     "P_out_mpa": 7.9847,
+     "T_c": 20,
+     "flow_kg_s": 16.666666666666668,
+     "velocity_m_s": 6.0237,
+     "Re": 8464758.0,
+     "loss_mpa": null,
+     "kind": "pipe"
+    },
+    "HDR-W": {
+     "P_out_mpa": 7.9773,
+     "T_c": 0,
+     "kind": "header",
+     "dP_mpa": 0.00694,
+     "flow_kg_s": 100
+    },
+    "G-W-REG": {
+     "P_out_mpa": 7.9758,
+     "T_c": 20,
+     "flow_kg_s": 100,
+     "velocity_m_s": 6.2869,
+     "Re": 21162554.0,
+     "loss_mpa": null,
+     "kind": "pipe"
+    },
+    "REG-W": {
+     "P_out_mpa": 6.5,
+     "T_c": 18.229,
+     "kind": "equipment"
+    },
+    "G-REG-R": {
+     "P_out_mpa": 6.4985,
+     "T_c": 18.229,
+     "flow_kg_s": 100,
+     "velocity_m_s": 7.6344,
+     "Re": 21314491.6,
+     "loss_mpa": null,
+     "kind": "pipe"
+    },
+    "HDR-R": {
+     "P_out_mpa": 6.4915,
+     "T_c": 0,
+     "kind": "header",
+     "dP_mpa": 0.00694,
+     "flow_kg_s": 100
+    },
+    "G-R-S1": {
+     "P_out_mpa": 6.486,
+     "T_c": 18.229,
+     "flow_kg_s": 50.0,
+     "velocity_m_s": 8.6023,
+     "Re": 15986198.5,
+     "loss_mpa": null,
+     "kind": "pipe"
+    },
+    "SEP-1": {
+     "P_out_mpa": 6.451,
+     "T_c": 18.229,
+     "kind": "equipment"
+    },
+    "G-S1-D1": {
+     "P_out_mpa": 6.4456,
+     "T_c": 18.229,
+     "flow_kg_s": 50.0,
+     "velocity_m_s": 8.6551,
+     "Re": 15987475.3,
+     "loss_mpa": null,
+     "kind": "pipe"
+    },
+    "DEH-1": {
+     "P_out_mpa": 6.3456,
+     "T_c": 18.229,
+     "kind": "equipment"
+    },
+    "G-D1-T": {
+     "P_out_mpa": 6.3399,
+     "T_c": 18.229,
+     "flow_kg_s": 50.0,
+     "velocity_m_s": 8.7962,
+     "Re": 15990808.2,
+     "loss_mpa": null,
+     "kind": "pipe"
+    },
+    "G-R-S2": {
+     "P_out_mpa": 6.4857,
+     "T_c": 18.229,
+     "flow_kg_s": 50.0,
+     "velocity_m_s": 8.6025,
+     "Re": 15986204.2,
+     "loss_mpa": null,
+     "kind": "pipe"
+    },
+    "SEP-2": {
+     "P_out_mpa": 6.4507,
+     "T_c": 18.229,
+     "kind": "equipment"
+    },
+    "G-S2-D2": {
+     "P_out_mpa": 6.4453,
+     "T_c": 18.229,
+     "flow_kg_s": 50.0,
+     "velocity_m_s": 8.6556,
+     "Re": 15987486.8,
+     "loss_mpa": null,
+     "kind": "pipe"
+    },
+    "DEH-2": {
+     "P_out_mpa": 6.3453,
+     "T_c": 18.229,
+     "kind": "equipment"
+    },
+    "G-D2-T": {
+     "P_out_mpa": 6.3395,
+     "T_c": 18.229,
+     "flow_kg_s": 50.0,
+     "velocity_m_s": 8.7968,
+     "Re": 15990821.5,
+     "loss_mpa": null,
+     "kind": "pipe"
+    },
+    "HDR-T": {
+     "P_out_mpa": 6.3325,
+     "T_c": 0,
+     "kind": "header",
+     "dP_mpa": 0.00694,
+     "flow_kg_s": 100
+    },
+    "G-T-M": {
+     "P_out_mpa": 6.3188,
+     "T_c": 18.229,
+     "flow_kg_s": 100,
+     "velocity_m_s": 17.6391,
+     "Re": 31982698.6,
+     "loss_mpa": null,
+     "kind": "pipe"
+    },
+    "HDR-M": {
+     "P_out_mpa": 6.3118,
+     "T_c": 0,
+     "kind": "header",
+     "dP_mpa": 0.00694,
+     "flow_kg_s": 100
+    },
+    "G-M-TO": {
+     "P_out_mpa": 6.3048,
+     "T_c": 18.229,
+     "flow_kg_s": 100,
+     "velocity_m_s": 11.3194,
+     "Re": 25587035.1,
+     "loss_mpa": null,
+     "kind": "pipe"
+    },
+    "MTR-O": {
+     "P_out_mpa": 6.2798,
+     "T_c": 18.229,
+     "kind": "equipment"
+    },
+    "G-TO-TIE": {
+     "P_out_mpa": 6.2732,
+     "T_c": 18.229,
+     "flow_kg_s": 100,
+     "velocity_m_s": 11.3756,
+     "Re": 25588641.9,
+     "loss_mpa": null,
+     "kind": "pipe"
+    }
+   },
+   "equipment_operating_points": {},
+   "well_group_flows_kg_s": {
+    "WG-01": 16.666666666666668,
+    "WG-02": 16.666666666666668,
+    "WG-03": 16.666666666666668,
+    "WG-04": 16.666666666666668,
+    "WG-05": 16.666666666666668,
+    "WG-06": 16.666666666666668
+   },
+   "dehydration_energy_mw": 1.8,
+   "separator_liquid": {
+    "SEP-1": {
+     "removed_kg_s": 0.49975,
+     "outlet_free_liquid": 4.99999999999945e-06
+    },
+    "SEP-2": {
+     "removed_kg_s": 0.49975,
+     "outlet_free_liquid": 4.99999999999945e-06
+    }
+   },
+   "delivered": {
+    "grid_tie_pressure_mpa": 6.2732,
+    "temperature_c": 18.229,
+    "water_mg_sm3": 35.0,
+    "free_liquid_mass_fraction": 5e-06
+   },
+   "operating_path": [
+    "WG-01",
+    "G-W-1",
+    "WG-02",
+    "G-W-2",
+    "WG-03",
+    "G-W-3",
+    "WG-04",
+    "G-W-4",
+    "WG-05",
+    "G-W-5",
+    "WG-06",
+    "G-W-6",
+    "HDR-W",
+    "G-W-REG",
+    "REG-W",
+    "G-REG-R",
+    "HDR-R",
+    "G-R-S1",
+    "SEP-1",
+    "G-S1-D1",
+    "DEH-1",
+    "G-D1-T",
+    "G-R-S2",
+    "SEP-2",
+    "G-S2-D2",
+    "DEH-2",
+    "G-D2-T",
+    "HDR-T",
+    "G-T-M",
+    "HDR-M",
+    "G-M-TO",
+    "MTR-O",
+    "G-TO-TIE",
+    "GRID-TIE"
+   ],
+   "active_pipes": [
+    "G-D1-T",
+    "G-D2-T",
+    "G-M-TO",
+    "G-R-S1",
+    "G-R-S2",
+    "G-REG-R",
+    "G-S1-D1",
+    "G-S2-D2",
+    "G-T-M",
+    "G-TO-TIE",
+    "G-W-1",
+    "G-W-2",
+    "G-W-3",
+    "G-W-4",
+    "G-W-5",
+    "G-W-6",
+    "G-W-REG"
+   ],
+   "pipes_with_zero_flow": [
+    "G-C1D",
+    "G-C1S",
+    "G-C2D",
+    "G-C2S",
+    "G-C3D",
+    "G-C3S",
+    "G-CD-CL",
+    "G-CD-M",
+    "G-CL-W",
+    "G-IN-1",
+    "G-T-CS",
+    "G-TIE-IN",
+    "L-D1-O",
+    "L-D2-O",
+    "L-S1",
+    "L-S2"
+   ]
+  },
+  "WDR-LOW": {
+   "scenario_id": "WDR-LOW",
+   "service": "withdrawal",
+   "annual_hours": 800,
+   "required_total_flow_kg_s": 70,
+   "source_interface": "well_groups",
+   "sink_interfaces": [
+    "GRID-TIE"
+   ],
+   "source_pressure_mpa": 4.5,
+   "source_temperature_c": 20,
+   "source_water_mg_sm3": 220,
+   "source_free_liquid_mass_fraction": 0.01,
+   "required_sink_pressure_mpa": 6.0,
+   "pipe_operating_points": {
+    "G-W-1": {
+     "P_out_mpa": 4.4864,
+     "T_c": 20,
+     "flow_kg_s": 11.666666666666666,
+     "velocity_m_s": 7.4143,
+     "Re": 5966428.7,
+     "loss_mpa": null,
+     "kind": "pipe"
+    },
+    "G-W-2": {
+     "P_out_mpa": 4.4898,
+     "T_c": 20,
+     "flow_kg_s": 11.666666666666666,
+     "velocity_m_s": 7.4115,
+     "Re": 5966408.1,
+     "loss_mpa": null,
+     "kind": "pipe"
+    },
+    "G-W-3": {
+     "P_out_mpa": 4.4912,
+     "T_c": 20,
+     "flow_kg_s": 11.666666666666666,
+     "velocity_m_s": 7.4103,
+     "Re": 5966399.7,
+     "loss_mpa": null,
+     "kind": "pipe"
+    },
+    "G-W-4": {
+     "P_out_mpa": 4.4915,
+     "T_c": 20,
+     "flow_kg_s": 11.666666666666666,
+     "velocity_m_s": 7.4101,
+     "Re": 5966398.4,
+     "loss_mpa": null,
+     "kind": "pipe"
+    },
+    "G-W-5": {
+     "P_out_mpa": 4.4887,
+     "T_c": 20,
+     "flow_kg_s": 11.666666666666666,
+     "velocity_m_s": 7.4124,
+     "Re": 5966414.7,
+     "loss_mpa": null,
+     "kind": "pipe"
+    },
+    "G-W-6": {
+     "P_out_mpa": 4.4867,
+     "T_c": 20,
+     "flow_kg_s": 11.666666666666666,
+     "velocity_m_s": 7.414,
+     "Re": 5966426.4,
+     "loss_mpa": null,
+     "kind": "pipe"
+    },
+    "HDR-W": {
+     "P_out_mpa": 4.483,
+     "T_c": 0,
+     "kind": "header",
+     "dP_mpa": 0.0034,
+     "flow_kg_s": 70
+    },
+    "G-W-REG": {
+     "P_out_mpa": 4.4816,
+     "T_c": 20,
+     "flow_kg_s": 70,
+     "velocity_m_s": 7.7416,
+     "Re": 14916393.7,
+     "loss_mpa": null,
+     "kind": "pipe"
+    },
+    "REG-W": {
+     "P_out_mpa": 4.4816,
+     "T_c": 20.0,
+     "kind": "equipment"
+    },
+    "G-REG-R": {
+     "P_out_mpa": 4.4805,
+     "T_c": 20.0,
+     "flow_kg_s": 70,
+     "velocity_m_s": 7.7437,
+     "Re": 14916429.6,
+     "loss_mpa": null,
+     "kind": "pipe"
+    },
+    "HDR-R": {
+     "P_out_mpa": 4.4771,
+     "T_c": 0,
+     "kind": "header",
+     "dP_mpa": 0.0034,
+     "flow_kg_s": 70
+    },
+    "G-R-S1": {
+     "P_out_mpa": 4.4732,
+     "T_c": 20.0,
+     "flow_kg_s": 35.0,
+     "velocity_m_s": 8.7229,
+     "Re": 11187453.1,
+     "loss_mpa": null,
+     "kind": "pipe"
+    },
+    "SEP-1": {
+     "P_out_mpa": 4.4382,
+     "T_c": 20.0,
+     "kind": "equipment"
+    },
+    "G-S1-D1": {
+     "P_out_mpa": 4.4343,
+     "T_c": 20.0,
+     "flow_kg_s": 35.0,
+     "velocity_m_s": 8.798,
+     "Re": 11188315.5,
+     "loss_mpa": null,
+     "kind": "pipe"
+    },
+    "DEH-1": {
+     "P_out_mpa": 4.3343,
+     "T_c": 20.0,
+     "kind": "equipment"
+    },
+    "G-D1-T": {
+     "P_out_mpa": 4.3303,
+     "T_c": 20.0,
+     "flow_kg_s": 35.0,
+     "velocity_m_s": 9.0052,
+     "Re": 11190622.4,
+     "loss_mpa": null,
+     "kind": "pipe"
+    },
+    "G-R-S2": {
+     "P_out_mpa": 4.473,
+     "T_c": 20.0,
+     "flow_kg_s": 35.0,
+     "velocity_m_s": 8.7232,
+     "Re": 11187455.9,
+     "loss_mpa": null,
+     "kind": "pipe"
+    },
+    "SEP-2": {
+     "P_out_mpa": 4.438,
+     "T_c": 20.0,
+     "kind": "equipment"
+    },
+    "G-S2-D2": {
+     "P_out_mpa": 4.4341,
+     "T_c": 20.0,
+     "flow_kg_s": 35.0,
+     "velocity_m_s": 8.7985,
+     "Re": 11188321.3,
+     "loss_mpa": null,
+     "kind": "pipe"
+    },
+    "DEH-2": {
+     "P_out_mpa": 4.3341,
+     "T_c": 20.0,
+     "kind": "equipment"
+    },
+    "G-D2-T": {
+     "P_out_mpa": 4.3299,
+     "T_c": 20.0,
+     "flow_kg_s": 35.0,
+     "velocity_m_s": 9.0058,
+     "Re": 11190629.0,
+     "loss_mpa": null,
+     "kind": "pipe"
+    },
+    "HDR-T": {
+     "P_out_mpa": 4.3265,
+     "T_c": 0,
+     "kind": "header",
+     "dP_mpa": 0.0034,
+     "flow_kg_s": 70
+    },
+    "G-T-CS": {
+     "P_out_mpa": 4.3238,
+     "T_c": 20.0,
+     "flow_kg_s": 70,
+     "velocity_m_s": 8.0176,
+     "Re": 14921041.4,
+     "loss_mpa": null,
+     "kind": "pipe"
+    },
+    "HDR-CS": {
+     "P_out_mpa": 4.3204,
+     "T_c": 0,
+     "kind": "header",
+     "dP_mpa": 0.0034,
+     "flow_kg_s": 70
+    },
+    "G-C1S": {
+     "P_out_mpa": 4.3193,
+     "T_c": 20.0,
+     "flow_kg_s": 35.0,
+     "velocity_m_s": 4.0136,
+     "Re": 7460599.0,
+     "loss_mpa": null,
+     "kind": "pipe"
+    },
+    "G-C1D": {
+     "P_out_mpa": 6.2542,
+     "T_c": 52.727,
+     "flow_kg_s": 35.0,
+     "velocity_m_s": 5.5457,
+     "Re": 9201815.3,
+     "loss_mpa": null,
+     "kind": "pipe"
+    },
+    "G-C2S": {
+     "P_out_mpa": 4.3201,
+     "T_c": 20.0,
+     "flow_kg_s": 35.0,
+     "velocity_m_s": 4.0133,
+     "Re": 7460593.4,
+     "loss_mpa": null,
+     "kind": "pipe"
+    },
+    "G-C2D": {
+     "P_out_mpa": 6.2542,
+     "T_c": 52.673,
+     "flow_kg_s": 35.0,
+     "velocity_m_s": 5.5459,
+     "Re": 9202919.4,
+     "loss_mpa": null,
+     "kind": "pipe"
+    },
+    "HDR-CD": {
+     "P_out_mpa": 6.2508,
+     "T_c": 0,
+     "kind": "header",
+     "dP_mpa": 0.0034,
+     "flow_kg_s": 70
+    },
+    "G-CD-M": {
+     "P_out_mpa": 6.236,
+     "T_c": 52.7,
+     "flow_kg_s": 70,
+     "velocity_m_s": 9.0009,
+     "Re": 16564648.9,
+     "loss_mpa": null,
+     "kind": "pipe"
+    },
+    "HDR-M": {
+     "P_out_mpa": 6.2326,
+     "T_c": 0,
+     "kind": "header",
+     "dP_mpa": 0.0034,
+     "flow_kg_s": 70
+    },
+    "G-M-TO": {
+     "P_out_mpa": 6.2287,
+     "T_c": 52.7,
+     "flow_kg_s": 70,
+     "velocity_m_s": 9.019,
+     "Re": 16565066.5,
+     "loss_mpa": null,
+     "kind": "pipe"
+    },
+    "MTR-O": {
+     "P_out_mpa": 6.2037,
+     "T_c": 52.7,
+     "kind": "equipment"
+    },
+    "G-TO-TIE": {
+     "P_out_mpa": 6.2,
+     "T_c": 52.7,
+     "flow_kg_s": 70,
+     "velocity_m_s": 9.06,
+     "Re": 16566009.1,
+     "loss_mpa": null,
+     "kind": "pipe"
+    }
+   },
+   "equipment_operating_points": {},
+   "well_group_flows_kg_s": {
+    "WG-01": 11.666666666666666,
+    "WG-02": 11.666666666666666,
+    "WG-03": 11.666666666666666,
+    "WG-04": 11.666666666666666,
+    "WG-05": 11.666666666666666,
+    "WG-06": 11.666666666666666
+   },
+   "dehydration_energy_mw": 1.26,
+   "separator_liquid": {
+    "SEP-1": {
+     "removed_kg_s": 0.34983,
+     "outlet_free_liquid": 4.99999999999945e-06
+    },
+    "SEP-2": {
+     "removed_kg_s": 0.34983,
+     "outlet_free_liquid": 4.99999999999945e-06
+    }
+   },
+   "compressor_bank": {
+    "units": [
+     {
+      "ratio": 1.4487489999050152,
+      "T_out": 52.72724512792831,
+      "power_mw": 5.841704212817596,
+      "Ps": 4.319321677118156,
+      "Pd": 6.257612959992981
+     }
+    ],
+    "total_power_mw": 5.8417
+   },
+   "delivered": {
+    "grid_tie_pressure_mpa": 6.2,
+    "temperature_c": 52.7,
+    "water_mg_sm3": 35.0,
+    "free_liquid_mass_fraction": 5e-06
+   },
+   "operating_path": [
+    "WG-01",
+    "G-W-1",
+    "WG-02",
+    "G-W-2",
+    "WG-03",
+    "G-W-3",
+    "WG-04",
+    "G-W-4",
+    "WG-05",
+    "G-W-5",
+    "WG-06",
+    "G-W-6",
+    "HDR-W",
+    "G-W-REG",
+    "REG-W",
+    "G-REG-R",
+    "HDR-R",
+    "G-R-S1",
+    "SEP-1",
+    "G-S1-D1",
+    "DEH-1",
+    "G-D1-T",
+    "G-R-S2",
+    "SEP-2",
+    "G-S2-D2",
+    "DEH-2",
+    "G-D2-T",
+    "HDR-T",
+    "G-T-CS",
+    "HDR-CS",
+    "G-C1S",
+    "C-1",
+    "G-C1D",
+    "G-C2S",
+    "C-2",
+    "G-C2D",
+    "HDR-CD",
+    "G-CD-M",
+    "HDR-M",
+    "G-M-TO",
+    "MTR-O",
+    "G-TO-TIE",
+    "GRID-TIE"
+   ],
+   "active_pipes": [
+    "G-C1D",
+    "G-C1S",
+    "G-C2D",
+    "G-C2S",
+    "G-CD-M",
+    "G-D1-T",
+    "G-D2-T",
+    "G-M-TO",
+    "G-R-S1",
+    "G-R-S2",
+    "G-REG-R",
+    "G-S1-D1",
+    "G-S2-D2",
+    "G-T-CS",
+    "G-TO-TIE",
+    "G-W-1",
+    "G-W-2",
+    "G-W-3",
+    "G-W-4",
+    "G-W-5",
+    "G-W-6",
+    "G-W-REG"
+   ],
+   "pipes_with_zero_flow": [
+    "G-C3D",
+    "G-C3S",
+    "G-CD-CL",
+    "G-CL-W",
+    "G-IN-1",
+    "G-T-M",
+    "G-TIE-IN",
+    "L-D1-O",
+    "L-D2-O",
+    "L-S1",
+    "L-S2"
+   ]
+  }
+ },
+ "quantities": {
+  "equipment_count": 19,
+  "model_counts": {
+   "HDR120": 6,
+   "REG180": 1,
+   "SEP120": 2,
+   "DEHY120": 2,
+   "MTR160": 2,
+   "COOL120": 1,
+   "C60": 2,
+   "C40": 1,
+   "DRN-L": 2
+  },
+  "pipe_count": 33,
+  "pipeline_length_m": 5227.493,
+  "road_length_m": 2350.0,
+  "footprint_area_m2": 803,
+  "maintenance_area_m2": 1544.76,
+  "annual_energy_mwh": 41056.3,
+  "pipe_length_by_class": {
+   "CS-WET-100": 2921.06,
+   "CS-WET-160": 2306.44
+  }
+ },
+ "lcc_mbcu": {
+  "pvf": 9.818147407449294,
+  "equipment_capex": 29.22,
+  "piping_capex": 1.8104,
+  "civil_capex": 0.3573,
+  "energy_present_value": 48.3716,
+  "maintenance_present_value": 10.3876,
+  "total": 90.1469,
+  "annual_energy_mwh": 41056.3,
+  "annual_maintenance_mbcu": 1.058
+ }
+}

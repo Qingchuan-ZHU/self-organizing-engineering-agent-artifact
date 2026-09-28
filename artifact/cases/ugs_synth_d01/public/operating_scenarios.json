@@ -1,0 +1,120 @@
+{
+  "provenance": {
+    "classification": "synthetic benchmark assumption",
+    "note": "Deterministic development-case data; not vendor data or production engineering criteria."
+  },
+  "scenarios": [
+    {
+      "annual_hours": 900,
+      "required_sink_pressure_mpa": 8.5,
+      "required_total_flow_kg_s": 120,
+      "scenario_id": "INJ-LOW",
+      "service": "injection",
+      "sink_interfaces": [
+        "WG-01",
+        "WG-02",
+        "WG-03",
+        "WG-04",
+        "WG-05",
+        "WG-06"
+      ],
+      "source_free_liquid_mass_fraction": 0.0,
+      "source_interface": "GRID-TIE",
+      "source_pressure_mpa": 6.5,
+      "source_temperature_c": 25,
+      "source_water_mg_sm3": 40
+    },
+    {
+      "annual_hours": 1300,
+      "required_sink_pressure_mpa": 11.0,
+      "required_total_flow_kg_s": 100,
+      "scenario_id": "INJ-MID",
+      "service": "injection",
+      "sink_interfaces": [
+        "WG-01",
+        "WG-02",
+        "WG-03",
+        "WG-04",
+        "WG-05",
+        "WG-06"
+      ],
+      "source_free_liquid_mass_fraction": 0.0,
+      "source_interface": "GRID-TIE",
+      "source_pressure_mpa": 6.5,
+      "source_temperature_c": 25,
+      "source_water_mg_sm3": 40
+    },
+    {
+      "annual_hours": 600,
+      "required_sink_pressure_mpa": 13.5,
+      "required_total_flow_kg_s": 75,
+      "scenario_id": "INJ-HIGH",
+      "service": "injection",
+      "sink_interfaces": [
+        "WG-01",
+        "WG-02",
+        "WG-03",
+        "WG-04",
+        "WG-05",
+        "WG-06"
+      ],
+      "source_free_liquid_mass_fraction": 0.0,
+      "source_interface": "GRID-TIE",
+      "source_pressure_mpa": 6.5,
+      "source_temperature_c": 25,
+      "source_water_mg_sm3": 40
+    },
+    {
+      "annual_hours": 500,
+      "required_sink_pressure_mpa": 6.0,
+      "required_total_flow_kg_s": 120,
+      "scenario_id": "WDR-HIGH",
+      "service": "withdrawal",
+      "sink_interfaces": [
+        "GRID-TIE"
+      ],
+      "source_free_liquid_mass_fraction": 0.01,
+      "source_interface": "well_groups",
+      "source_pressure_mpa": 12.0,
+      "source_temperature_c": 20,
+      "source_water_mg_sm3": 220
+    },
+    {
+      "annual_hours": 900,
+      "required_sink_pressure_mpa": 6.0,
+      "required_total_flow_kg_s": 100,
+      "scenario_id": "WDR-MID",
+      "service": "withdrawal",
+      "sink_interfaces": [
+        "GRID-TIE"
+      ],
+      "source_free_liquid_mass_fraction": 0.01,
+      "source_interface": "well_groups",
+      "source_pressure_mpa": 8.0,
+      "source_temperature_c": 20,
+      "source_water_mg_sm3": 220
+    },
+    {
+      "annual_hours": 800,
+      "required_sink_pressure_mpa": 6.0,
+      "required_total_flow_kg_s": 70,
+      "scenario_id": "WDR-LOW",
+      "service": "withdrawal",
+      "sink_interfaces": [
+        "GRID-TIE"
+      ],
+      "source_free_liquid_mass_fraction": 0.01,
+      "source_interface": "well_groups",
+      "source_pressure_mpa": 4.5,
+      "source_temperature_c": 20,
+      "source_water_mg_sm3": 220
+    }
+  ],
+  "units": {
+    "annual_hours": "h/year",
+    "free_liquid_loading": "kg liquid/kg gas",
+    "mass_flow": "kg/s",
+    "pressure": "MPa",
+    "temperature": "degC"
+  }
+}

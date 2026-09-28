@@ -1,0 +1,79 @@
+{
+  "maximum_bidirectional_flow_kg_s": 25,
+  "provenance": {
+    "classification": "synthetic benchmark assumption",
+    "note": "Deterministic development-case data; not vendor data or production engineering criteria."
+  },
+  "units": {
+    "coordinates": "m",
+    "flow": "kg/s"
+  },
+  "well_groups": [
+    {
+      "interface_id": "WG-01",
+      "interface_type": "well_group",
+      "maximum_flow_kg_s": 25,
+      "point_m": [
+        12,
+        45
+      ],
+      "port_id": "gas",
+      "port_type": "gas_bidirectional"
+    },
+    {
+      "interface_id": "WG-02",
+      "interface_type": "well_group",
+      "maximum_flow_kg_s": 25,
+      "point_m": [
+        12,
+        117
+      ],
+      "port_id": "gas",
+      "port_type": "gas_bidirectional"
+    },
+    {
+      "interface_id": "WG-03",
+      "interface_type": "well_group",
+      "maximum_flow_kg_s": 25,
+      "point_m": [
+        12,
+        189
+      ],
+      "port_id": "gas",
+      "port_type": "gas_bidirectional"
+    },
+    {
+      "interface_id": "WG-04",
+      "interface_type": "well_group",
+      "maximum_flow_kg_s": 25,
+      "point_m": [
+        12,
+        261
+      ],
+      "port_id": "gas",
+      "port_type": "gas_bidirectional"
+    },
+    {
+      "interface_id": "WG-05",
+      "interface_type": "well_group",
+      "maximum_flow_kg_s": 25,
+      "point_m": [
+        12,
+        333
+      ],
+      "port_id": "gas",
+      "port_type": "gas_bidirectional"
+    },
+    {
+      "interface_id": "WG-06",
+      "interface_type": "well_group",
+      "maximum_flow_kg_s": 25,
+      "point_m": [
+        12,
+        405
+      ],
+      "port_id": "gas",
+      "port_type": "gas_bidirectional"
+    }
+  ]
+}

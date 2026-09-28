@@ -1,0 +1,170 @@
+[
+  {
+    "run_id": "ugs_synth_explicit_collaboration_replication_001",
+    "size_bytes": 812748,
+    "source_path": "runs/ugs_synth_interleaved_review/ugs_synth_explicit_collaboration_replication_001/reviewer/host_logs/tool_calls.jsonl",
+    "source_sha256": "c53cd53444e8ede9b36007aaf8d18c935d710a00e8434b681634315b4b539d03"
+  },
+  {
+    "run_id": "ugs_synth_explicit_collaboration_replication_001",
+    "size_bytes": 3707,
+    "source_path": "runs/ugs_synth_interleaved_review/ugs_synth_explicit_collaboration_replication_001/reviewer/host_logs/workspace_evolution.jsonl",
+    "source_sha256": "040efcc240fc352ab4b9729ea3b34000513fd889a4c86e2f69973620da644c27"
+  },
+  {
+    "run_id": "ugs_synth_explicit_collaboration_replication_001",
+    "size_bytes": 4040,
+    "source_path": "runs/ugs_synth_interleaved_review/ugs_synth_explicit_collaboration_replication_001/reviewer/snapshots.jsonl",
+    "source_sha256": "8f1a283e138359ca465a403461e4b4e58576c3e7c38ff94c907e2402ebaccfca"
+  },
+  {
+    "run_id": "ugs_synth_explicit_collaboration_replication_001",
+    "size_bytes": 370080,
+    "source_path": "runs/ugs_synth_interleaved_review/ugs_synth_explicit_collaboration_replication_001/worker/host_logs/tool_calls.jsonl",
+    "source_sha256": "6f40c8b219edbf10145fc764e5e52caa4c94fcb330102aa3a948277de2bbdcb9"
+  },
+  {
+    "run_id": "ugs_synth_explicit_collaboration_replication_001",
+    "size_bytes": 39099,
+    "source_path": "runs/ugs_synth_interleaved_review/ugs_synth_explicit_collaboration_replication_001/worker/host_logs/workspace_evolution.jsonl",
+    "source_sha256": "51ab77225f92a1fa3ffa3856dac6d239e52bcd24c4cfe7cad3dc242160f5ee3c"
+  },
+  {
+    "run_id": "ugs_synth_explicit_collaboration_replication_002",
+    "size_bytes": 699467,
+    "source_path": "runs/ugs_synth_interleaved_review/ugs_synth_explicit_collaboration_replication_002/reviewer/host_logs/tool_calls.jsonl",
+    "source_sha256": "65ebcb87d966f3ae232c855a21775904485124fa976a2c6c40e83477589eb54f"
+  },
+  {
+    "run_id": "ugs_synth_explicit_collaboration_replication_002",
+    "size_bytes": 8320,
+    "source_path": "runs/ugs_synth_interleaved_review/ugs_synth_explicit_collaboration_replication_002/reviewer/host_logs/workspace_evolution.jsonl",
+    "source_sha256": "657d02f9e3b99df9c1f759e5ae8b74a2442bfb085b09d6bce0498be56ef3d05b"
+  },
+  {
+    "run_id": "ugs_synth_explicit_collaboration_replication_002",
+    "size_bytes": 4426,
+    "source_path": "runs/ugs_synth_interleaved_review/ugs_synth_explicit_collaboration_replication_002/reviewer/snapshots.jsonl",
+    "source_sha256": "0dbaca7d0d44b7747426a975cc2e46037a98d4c3c8b7102fbe63b48e5358e0f6"
+  },
+  {
+    "run_id": "ugs_synth_explicit_collaboration_replication_002",
+    "size_bytes": 429691,
+    "source_path": "runs/ugs_synth_interleaved_review/ugs_synth_explicit_collaboration_replication_002/worker/host_logs/tool_calls.jsonl",
+    "source_sha256": "18d84a92197fd0220a0772f3c9b7430478bf9687f6c8f1989dd7154fdcf747b0"
+  },
+  {
+    "run_id": "ugs_synth_explicit_collaboration_replication_002",
+    "size_bytes": 57673,
+    "source_path": "runs/ugs_synth_interleaved_review/ugs_synth_explicit_collaboration_replication_002/worker/host_logs/workspace_evolution.jsonl",
+    "source_sha256": "8875abf62210a40cd7693953ec0fd59fc0b05577ede375ba554aa2d4b704c7d1"
+  },
+  {
+    "run_id": "ugs_synth_explicit_collaboration_replication_003",
+    "size_bytes": 633745,
+    "source_path": "runs/ugs_synth_interleaved_review/ugs_synth_explicit_collaboration_replication_003/reviewer/host_logs/tool_calls.jsonl",
+    "source_sha256": "fa2aa76c3c78c2a04e75aa6415e8cd3f8316dd6ad8bf6be58780a8628b973717"
+  },
+  {
+    "run_id": "ugs_synth_explicit_collaboration_replication_003",
+    "size_bytes": 45868,
+    "source_path": "runs/ugs_synth_interleaved_review/ugs_synth_explicit_collaboration_replication_003/reviewer/host_logs/workspace_evolution.jsonl",
+    "source_sha256": "80e11a656856e22baa87e681f0bb97303c0c9312379b948289374022cbb5b7e3"
+  },
+  {
+    "run_id": "ugs_synth_explicit_collaboration_replication_003",
+    "size_bytes": 7343,
+    "source_path": "runs/ugs_synth_interleaved_review/ugs_synth_explicit_collaboration_replication_003/reviewer/snapshots.jsonl",
+    "source_sha256": "6d61e1d1070d3c11e6e573a814cf607b4b3ede3c6d3d5011cd075de673a29ccc"
+  },
+  {
+    "run_id": "ugs_synth_explicit_collaboration_replication_003",
+    "size_bytes": 251173,
+    "source_path": "runs/ugs_synth_interleaved_review/ugs_synth_explicit_collaboration_replication_003/worker/host_logs/tool_calls.jsonl",
+    "source_sha256": "c42a6af4e13e26c3895bfd81750b9d04c2df88fd933332688cf68702ab049567"
+  },
+  {
+    "run_id": "ugs_synth_explicit_collaboration_replication_003",
+    "size_bytes": 30221,
+    "source_path": "runs/ugs_synth_interleaved_review/ugs_synth_explicit_collaboration_replication_003/worker/host_logs/workspace_evolution.jsonl",
+    "source_sha256": "5e3a3fa04d2999b6092b8af7af54f5b1226407b6c884dd9b9d4d46f506ae1316"
+  },
+  {
+    "run_id": "ugs_synth_explicit_collaboration_replication_004",
+    "size_bytes": 587212,
+    "source_path": "runs/ugs_synth_interleaved_review/ugs_synth_explicit_collaboration_replication_004/reviewer/host_logs/tool_calls.jsonl",
+    "source_sha256": "63a6cad8a70bf00e0bf4781eb50e3760fae85c7e11fe31ce8d0daf41f65ad393"
+  },
+  {
+    "run_id": "ugs_synth_explicit_collaboration_replication_004",
+    "size_bytes": 24128,
+    "source_path": "runs/ugs_synth_interleaved_review/ugs_synth_explicit_collaboration_replication_004/reviewer/host_logs/workspace_evolution.jsonl",
+    "source_sha256": "c0a65e7944c2464f127ee73bb6a5919c4462468a85a7589d912c87774af63e7c"
+  },
+  {
+    "run_id": "ugs_synth_explicit_collaboration_replication_004",
+    "size_bytes": 3161,
+    "source_path": "runs/ugs_synth_interleaved_review/ugs_synth_explicit_collaboration_replication_004/reviewer/snapshots.jsonl",
+    "source_sha256": "579ee83763a72b016379382c4194c5df2b8ff89c9577612c0a435f0132af1284"
+  },
+  {
+    "run_id": "ugs_synth_explicit_collaboration_replication_004",
+    "size_bytes": 316195,
+    "source_path": "runs/ugs_synth_interleaved_review/ugs_synth_explicit_collaboration_replication_004/worker/host_logs/tool_calls.jsonl",
+    "source_sha256": "6b1f52542253295297e8cd45b707481807cbb8b4d482253515f7a403bdbf6f11"
+  },
+  {
+    "run_id": "ugs_synth_explicit_collaboration_replication_004",
+    "size_bytes": 67493,
+    "source_path": "runs/ugs_synth_interleaved_review/ugs_synth_explicit_collaboration_replication_004/worker/host_logs/workspace_evolution.jsonl",
+    "source_sha256": "fb91c8ebb859409e66335a1bbc905b08c9a46fe9493ee87a6461a11e8c586c80"
+  },
+  {
+    "run_id": "ugs_synth_worker_only_replication_001",
+    "size_bytes": 215248,
+    "source_path": "runs/ugs_synth_interleaved_review/ugs_synth_worker_only_replication_001/worker/host_logs/tool_calls.jsonl",
+    "source_sha256": "d3e18099fbaca88def15867579c3627b692136a32097900c0284703009780800"
+  },
+  {
+    "run_id": "ugs_synth_worker_only_replication_001",
+    "size_bytes": 28519,
+    "source_path": "runs/ugs_synth_interleaved_review/ugs_synth_worker_only_replication_001/worker/host_logs/workspace_evolution.jsonl",
+    "source_sha256": "519dac28463e742c11713d104b100776b4f97cbcce36f38e0d3e4b02d28c01a0"
+  },
+  {
+    "run_id": "ugs_synth_worker_only_replication_002",
+    "size_bytes": 208063,
+    "source_path": "runs/ugs_synth_interleaved_review/ugs_synth_worker_only_replication_002/worker/host_logs/tool_calls.jsonl",
+    "source_sha256": "808c307b2db871169b95f7bfcb03d25cd55912dd3fc64c4feefe7bb570fcee20"
+  },
+  {
+    "run_id": "ugs_synth_worker_only_replication_002",
+    "size_bytes": 19148,
+    "source_path": "runs/ugs_synth_interleaved_review/ugs_synth_worker_only_replication_002/worker/host_logs/workspace_evolution.jsonl",
+    "source_sha256": "b112398f28eb2c9c70591daf74144c56224f6a01417e5e23c9649ed6d178869a"
+  },
+  {
+    "run_id": "ugs_synth_worker_only_replication_003",
+    "size_bytes": 309472,
+    "source_path": "runs/ugs_synth_interleaved_review/ugs_synth_worker_only_replication_003/worker/host_logs/tool_calls.jsonl",
+    "source_sha256": "ffa566ddfdf72ba4f49b97310b855e5eddf6ee1bc10a706dce761a5301a38ace"
+  },
+  {
+    "run_id": "ugs_synth_worker_only_replication_003",
+    "size_bytes": 29326,
+    "source_path": "runs/ugs_synth_interleaved_review/ugs_synth_worker_only_replication_003/worker/host_logs/workspace_evolution.jsonl",
+    "source_sha256": "d6be8a0e9e73ab0840c917f95b834891919d4fe54e9299cd69339ac48da6c68e"
+  },
+  {
+    "run_id": "ugs_synth_worker_only_replication_004",
+    "size_bytes": 193540,
+    "source_path": "runs/ugs_synth_interleaved_review/ugs_synth_worker_only_replication_004/worker/host_logs/tool_calls.jsonl",
+    "source_sha256": "ed0d72d814c812cc1526381ceacff8d1b40ecfe592b42ad386e417b0a8af2205"
+  },
+  {
+    "run_id": "ugs_synth_worker_only_replication_004",
+    "size_bytes": 13763,
+    "source_path": "runs/ugs_synth_interleaved_review/ugs_synth_worker_only_replication_004/worker/host_logs/workspace_evolution.jsonl",
+    "source_sha256": "46a9f9ade93e57fbeb0b0e55dc1a3b174925b9c18985777f422fbdf4ad580b5b"
+  }
+]

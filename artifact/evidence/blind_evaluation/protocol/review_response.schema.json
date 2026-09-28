@@ -1,0 +1,181 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "summary",
+    "areas_checked",
+    "independent_calculations",
+    "findings",
+    "limitations"
+  ],
+  "properties": {
+    "summary": {
+      "type": "string"
+    },
+    "areas_checked": {
+      "type": "array",
+      "minItems": 14,
+      "maxItems": 14,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "area",
+          "coverage",
+          "details"
+        ],
+        "properties": {
+          "area": {
+            "type": "string",
+            "enum": [
+              "deliverable_completeness_reconstructability",
+              "physical_topology_and_port_semantics",
+              "operating_scenarios",
+              "n_minus_1_reliability",
+              "equipment_limits",
+              "hydraulic_calculations",
+              "gas_quality_and_temperature",
+              "liquid_drain",
+              "geometry_layout_roads_maintenance",
+              "pipeline_geometry",
+              "lifecycle_cost_arithmetic",
+              "lcc_objective",
+              "unsupported_assumptions",
+              "internal_consistency"
+            ]
+          },
+          "coverage": {
+            "type": "string",
+            "enum": [
+              "full",
+              "sampled",
+              "not_checked"
+            ]
+          },
+          "details": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "independent_calculations": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "title",
+          "public_inputs",
+          "submission_inputs",
+          "method",
+          "result",
+          "scratch_files"
+        ],
+        "properties": {
+          "title": {
+            "type": "string"
+          },
+          "public_inputs": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "submission_inputs": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "method": {
+            "type": "string"
+          },
+          "result": {
+            "type": "string"
+          },
+          "scratch_files": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "findings": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "finding_id",
+          "status",
+          "severity",
+          "confidence",
+          "public_basis",
+          "claim_or_requirement",
+          "submission_evidence",
+          "independent_check",
+          "result",
+          "why_it_matters"
+        ],
+        "properties": {
+          "finding_id": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "confirmed_violation",
+              "unsupported_claim",
+              "suspected_risk",
+              "semantics_gap",
+              "observation"
+            ]
+          },
+          "severity": {
+            "type": "string",
+            "enum": [
+              "high",
+              "medium",
+              "low"
+            ]
+          },
+          "confidence": {
+            "type": "string",
+            "enum": [
+              "high",
+              "medium",
+              "low"
+            ]
+          },
+          "public_basis": {
+            "type": "string"
+          },
+          "claim_or_requirement": {
+            "type": "string"
+          },
+          "submission_evidence": {
+            "type": "string"
+          },
+          "independent_check": {
+            "type": "string"
+          },
+          "result": {
+            "type": "string"
+          },
+          "why_it_matters": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "limitations": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}

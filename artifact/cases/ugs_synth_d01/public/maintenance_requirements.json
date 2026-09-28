@@ -1,0 +1,9 @@
+{
+  "crane_access_buffer_m": 4.5,
+  "provenance": {
+    "classification": "synthetic benchmark assumption",
+    "note": "Deterministic development-case data; not vendor data or production engineering criteria."
+  },
+  "road_access_buffer_m": 7.0,
+  "units": "m"
+}

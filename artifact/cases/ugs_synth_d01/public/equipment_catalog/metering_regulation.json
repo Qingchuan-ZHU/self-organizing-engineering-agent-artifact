@@ -1,0 +1,278 @@
+{
+  "models": [
+    {
+      "annual_maintenance_mbcu": 0.012,
+      "capacity_kg_s": 60,
+      "capex_mbcu": 0.22,
+      "category": "meter",
+      "footprint_m": {
+        "length": 4,
+        "width": 2
+      },
+      "maintenance": {
+        "clearance_m": 2.0,
+        "crane_access_required": false,
+        "heavy_maintenance": false,
+        "road_access_required": false
+      },
+      "maximum_pressure_mpa": 16,
+      "model_id": "MTR60",
+      "orientation_options_deg": [
+        0,
+        90
+      ],
+      "ports": [
+        {
+          "id": "gas_in",
+          "offset_m": [
+            -2.0,
+            0
+          ],
+          "type": "gas_in"
+        },
+        {
+          "id": "gas_out",
+          "offset_m": [
+            2.0,
+            0
+          ],
+          "type": "gas_out"
+        }
+      ],
+      "pressure_drop_mpa": 0.015,
+      "safety_category": "metering"
+    },
+    {
+      "annual_maintenance_mbcu": 0.016,
+      "capacity_kg_s": 120,
+      "capex_mbcu": 0.3,
+      "category": "meter",
+      "footprint_m": {
+        "length": 4,
+        "width": 2
+      },
+      "maintenance": {
+        "clearance_m": 2.0,
+        "crane_access_required": false,
+        "heavy_maintenance": false,
+        "road_access_required": false
+      },
+      "maximum_pressure_mpa": 16,
+      "model_id": "MTR120",
+      "orientation_options_deg": [
+        0,
+        90
+      ],
+      "ports": [
+        {
+          "id": "gas_in",
+          "offset_m": [
+            -2.0,
+            0
+          ],
+          "type": "gas_in"
+        },
+        {
+          "id": "gas_out",
+          "offset_m": [
+            2.0,
+            0
+          ],
+          "type": "gas_out"
+        }
+      ],
+      "pressure_drop_mpa": 0.02,
+      "safety_category": "metering"
+    },
+    {
+      "annual_maintenance_mbcu": 0.02,
+      "capacity_kg_s": 160,
+      "capex_mbcu": 0.38,
+      "category": "meter",
+      "footprint_m": {
+        "length": 4,
+        "width": 2
+      },
+      "maintenance": {
+        "clearance_m": 2.0,
+        "crane_access_required": false,
+        "heavy_maintenance": false,
+        "road_access_required": false
+      },
+      "maximum_pressure_mpa": 16,
+      "model_id": "MTR160",
+      "orientation_options_deg": [
+        0,
+        90
+      ],
+      "ports": [
+        {
+          "id": "gas_in",
+          "offset_m": [
+            -2.0,
+            0
+          ],
+          "type": "gas_in"
+        },
+        {
+          "id": "gas_out",
+          "offset_m": [
+            2.0,
+            0
+          ],
+          "type": "gas_out"
+        }
+      ],
+      "pressure_drop_mpa": 0.025,
+      "safety_category": "metering"
+    },
+    {
+      "annual_maintenance_mbcu": 0.014,
+      "capacity_kg_s": 60,
+      "capex_mbcu": 0.24,
+      "category": "regulator",
+      "footprint_m": {
+        "length": 5,
+        "width": 3
+      },
+      "jt_temperature_coefficient_k_per_mpa": 1.2,
+      "maintenance": {
+        "clearance_m": 2.0,
+        "crane_access_required": false,
+        "heavy_maintenance": false,
+        "road_access_required": false
+      },
+      "maximum_pressure_mpa": 10,
+      "model_id": "REG60",
+      "orientation_options_deg": [
+        0,
+        90
+      ],
+      "ports": [
+        {
+          "id": "gas_in",
+          "offset_m": [
+            -2.5,
+            0
+          ],
+          "type": "gas_in"
+        },
+        {
+          "id": "gas_out",
+          "offset_m": [
+            2.5,
+            0
+          ],
+          "type": "gas_out"
+        }
+      ],
+      "safety_category": "pressure_control"
+    },
+    {
+      "annual_maintenance_mbcu": 0.018,
+      "capacity_kg_s": 120,
+      "capex_mbcu": 0.34,
+      "category": "regulator",
+      "footprint_m": {
+        "length": 5,
+        "width": 3
+      },
+      "jt_temperature_coefficient_k_per_mpa": 1.2,
+      "maintenance": {
+        "clearance_m": 2.0,
+        "crane_access_required": false,
+        "heavy_maintenance": false,
+        "road_access_required": false
+      },
+      "maximum_pressure_mpa": 16,
+      "model_id": "REG120",
+      "orientation_options_deg": [
+        0,
+        90
+      ],
+      "ports": [
+        {
+          "id": "gas_in",
+          "offset_m": [
+            -2.5,
+            0
+          ],
+          "type": "gas_in"
+        },
+        {
+          "id": "gas_out",
+          "offset_m": [
+            2.5,
+            0
+          ],
+          "type": "gas_out"
+        }
+      ],
+      "safety_category": "pressure_control"
+    },
+    {
+      "annual_maintenance_mbcu": 0.022,
+      "capacity_kg_s": 180,
+      "capex_mbcu": 0.46,
+      "category": "regulator",
+      "footprint_m": {
+        "length": 5,
+        "width": 3
+      },
+      "jt_temperature_coefficient_k_per_mpa": 1.2,
+      "maintenance": {
+        "clearance_m": 2.0,
+        "crane_access_required": false,
+        "heavy_maintenance": false,
+        "road_access_required": false
+      },
+      "maximum_pressure_mpa": 16,
+      "model_id": "REG180",
+      "orientation_options_deg": [
+        0,
+        90
+      ],
+      "ports": [
+        {
+          "id": "gas_in",
+          "offset_m": [
+            -2.5,
+            0
+          ],
+          "type": "gas_in"
+        },
+        {
+          "id": "gas_out",
+          "offset_m": [
+            2.5,
+            0
+          ],
+          "type": "gas_out"
+        }
+      ],
+      "safety_category": "pressure_control"
+    }
+  ],
+  "provenance": {
+    "classification": "synthetic benchmark assumption",
+    "note": "Deterministic development-case data; not vendor data or production engineering criteria."
+  },
+  "units": {
+    "annual_maintenance": "MBCU/year",
+    "capacity": "kg/s gas, or kg/s liquid for closed drains",
+    "capex": "MBCU",
+    "clearance": "m",
+    "dimensionless_efficiency_and_fraction": "1",
+    "flow": "kg/s",
+    "footprint_and_port_offsets": "m",
+    "free_liquid_loading": "kg liquid/kg gas",
+    "length": "m",
+    "liquid_rate": "kg/s",
+    "orientation": "degree",
+    "power_and_duty": "MW",
+    "pressure": "MPa",
+    "pressure_ratio": "1",
+    "temperature": "degC",
+    "temperature_coefficient": "K/MPa"
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "assumption_note": "Synthetic separation distances; not code compliance criteria.",
+  "categories": [
+    "compressor",
+    "hydrocarbon_treatment",
+    "pressure_control",
+    "metering",
+    "drain"
+  ],
+  "minimum_separation_m": {
+    "compressor": {
+      "compressor": 6,
+      "drain": 12,
+      "hydrocarbon_treatment": 10,
+      "metering": 6,
+      "pressure_control": 8
+    },
+    "drain": {
+      "compressor": 12,
+      "drain": 4,
+      "hydrocarbon_treatment": 8,
+      "metering": 6,
+      "pressure_control": 6
+    },
+    "hydrocarbon_treatment": {
+      "compressor": 10,
+      "drain": 8,
+      "hydrocarbon_treatment": 5,
+      "metering": 5,
+      "pressure_control": 6
+    },
+    "metering": {
+      "compressor": 6,
+      "drain": 6,
+      "hydrocarbon_treatment": 5,
+      "metering": 4,
+      "pressure_control": 4
+    },
+    "pressure_control": {
+      "compressor": 8,
+      "drain": 6,
+      "hydrocarbon_treatment": 6,
+      "metering": 4,
+      "pressure_control": 4
+    }
+  },
+  "provenance": {
+    "classification": "synthetic benchmark assumption",
+    "note": "Deterministic development-case data; not vendor data or production engineering criteria."
+  },
+  "units": "m"
+}

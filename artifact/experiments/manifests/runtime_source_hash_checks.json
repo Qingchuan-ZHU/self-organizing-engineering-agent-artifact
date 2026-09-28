@@ -1,0 +1,626 @@
+[
+  {
+    "expected_sha256": "ece22ce0130baa192122f6354f36c562d88ff61777830d04cfc7a19fbdbbd439",
+    "run_id": "ugs_synth_explicit_collaboration_replication_001",
+    "source_path": "docker/ugs_synth_minimal/Dockerfile",
+    "verified": true
+  },
+  {
+    "expected_sha256": "ab84b3945e5374d00bd8b1781cade04dd10c51d0a25931266f70522c4bdadb6a",
+    "run_id": "ugs_synth_explicit_collaboration_replication_001",
+    "source_path": "pyproject.toml",
+    "verified": true
+  },
+  {
+    "expected_sha256": "2d797ac4b4348aea754ed96b2d2a4ae6604b929b73ea16286ecf49fa37656dcb",
+    "run_id": "ugs_synth_explicit_collaboration_replication_001",
+    "source_path": "src/self_organizing_engineering_agent/experiments/pilot_1a/deepseek_provider.py",
+    "verified": true
+  },
+  {
+    "expected_sha256": "624abe89841afd80fbf19de996e97763a8d20d1d49d91bb616ef40a6cc3b381a",
+    "run_id": "ugs_synth_explicit_collaboration_replication_001",
+    "source_path": "src/self_organizing_engineering_agent/experiments/ugs_synth_interleaved_review/durable_replication.py",
+    "verified": true
+  },
+  {
+    "expected_sha256": "345be37ebe574d3b4a81a6991b1ce0bf327ef4995d1770b0348c379922b26d42",
+    "run_id": "ugs_synth_explicit_collaboration_replication_001",
+    "source_path": "src/self_organizing_engineering_agent/experiments/ugs_synth_interleaved_review/durable_resume.py",
+    "verified": true
+  },
+  {
+    "expected_sha256": "179c656d81d26e845d9ae52594f69d836466bd965afb32f04a84165b923d8529",
+    "run_id": "ugs_synth_explicit_collaboration_replication_001",
+    "source_path": "src/self_organizing_engineering_agent/experiments/ugs_synth_interleaved_review/durable_runtime.py",
+    "verified": true
+  },
+  {
+    "expected_sha256": "a5a67f772a6df23f771a625ecceffa564dfdb32c66f71c6206eebc906543f3d4",
+    "run_id": "ugs_synth_explicit_collaboration_replication_001",
+    "source_path": "src/self_organizing_engineering_agent/experiments/ugs_synth_interleaved_review/durable_store.py",
+    "verified": true
+  },
+  {
+    "expected_sha256": "8757378d26a3cc0cce875b7dff44e35a8048c971e39c964bf2dc343fc88aae34",
+    "run_id": "ugs_synth_explicit_collaboration_replication_001",
+    "source_path": "src/self_organizing_engineering_agent/experiments/ugs_synth_interleaved_review/provider_boundary.py",
+    "verified": true
+  },
+  {
+    "expected_sha256": "13008cc92e6e139a5503b00048b41f073bc555b96dab0c2d0ae7c0378cfc87ea",
+    "run_id": "ugs_synth_explicit_collaboration_replication_001",
+    "source_path": "src/self_organizing_engineering_agent/experiments/ugs_synth_interleaved_review/runner.py",
+    "verified": true
+  },
+  {
+    "expected_sha256": "1d44214a628e2d6ce3da996b56ac2de666bc5cb91e05d81ef2d7bd2f1eec0206",
+    "run_id": "ugs_synth_explicit_collaboration_replication_001",
+    "source_path": "src/self_organizing_engineering_agent/experiments/ugs_synth_interleaved_review/tools.py",
+    "verified": true
+  },
+  {
+    "expected_sha256": "efd67c00a8e00e0e09cbb56f59092ecbd7aa0c54060957cd9c698739f75cafa5",
+    "run_id": "ugs_synth_explicit_collaboration_replication_001",
+    "source_path": "src/self_organizing_engineering_agent/experiments/ugs_synth_minimal/runner.py",
+    "verified": true
+  },
+  {
+    "expected_sha256": "99b52a2836380e3ae9d8f497a88e2f15bb0066db9319f87d1cae0729ca4e11ab",
+    "run_id": "ugs_synth_explicit_collaboration_replication_001",
+    "source_path": "src/self_organizing_engineering_agent/experiments/ugs_synth_minimal/tools.py",
+    "verified": true
+  },
+  {
+    "expected_sha256": "0cc65662ef72b29c9fed4ab71e1f8c7f03ea23a895361abdcd3dae21943ab5d1",
+    "run_id": "ugs_synth_explicit_collaboration_replication_001",
+    "source_path": "uv.lock",
+    "verified": true
+  },
+  {
+    "expected_sha256": "ece22ce0130baa192122f6354f36c562d88ff61777830d04cfc7a19fbdbbd439",
+    "run_id": "ugs_synth_explicit_collaboration_replication_002",
+    "source_path": "docker/ugs_synth_minimal/Dockerfile",
+    "verified": true
+  },
+  {
+    "expected_sha256": "ab84b3945e5374d00bd8b1781cade04dd10c51d0a25931266f70522c4bdadb6a",
+    "run_id": "ugs_synth_explicit_collaboration_replication_002",
+    "source_path": "pyproject.toml",
+    "verified": true
+  },
+  {
+    "expected_sha256": "2d797ac4b4348aea754ed96b2d2a4ae6604b929b73ea16286ecf49fa37656dcb",
+    "run_id": "ugs_synth_explicit_collaboration_replication_002",
+    "source_path": "src/self_organizing_engineering_agent/experiments/pilot_1a/deepseek_provider.py",
+    "verified": true
+  },
+  {
+    "expected_sha256": "7dac491e82503def43b5c3ed5692015f3280f722d18831fb9cdafcee0ad271a5",
+    "run_id": "ugs_synth_explicit_collaboration_replication_002",
+    "source_path": "src/self_organizing_engineering_agent/experiments/ugs_synth_interleaved_review/durable_replication.py",
+    "verified": true
+  },
+  {
+    "expected_sha256": "345be37ebe574d3b4a81a6991b1ce0bf327ef4995d1770b0348c379922b26d42",
+    "run_id": "ugs_synth_explicit_collaboration_replication_002",
+    "source_path": "src/self_organizing_engineering_agent/experiments/ugs_synth_interleaved_review/durable_resume.py",
+    "verified": true
+  },
+  {
+    "expected_sha256": "179c656d81d26e845d9ae52594f69d836466bd965afb32f04a84165b923d8529",
+    "run_id": "ugs_synth_explicit_collaboration_replication_002",
+    "source_path": "src/self_organizing_engineering_agent/experiments/ugs_synth_interleaved_review/durable_runtime.py",
+    "verified": true
+  },
+  {
+    "expected_sha256": "860939a39e1a65b54b8669d5084ce1145d9fa0408a61846e4fb8453c0636388a",
+    "run_id": "ugs_synth_explicit_collaboration_replication_002",
+    "source_path": "src/self_organizing_engineering_agent/experiments/ugs_synth_interleaved_review/durable_store.py",
+    "verified": true
+  },
+  {
+    "expected_sha256": "8757378d26a3cc0cce875b7dff44e35a8048c971e39c964bf2dc343fc88aae34",
+    "run_id": "ugs_synth_explicit_collaboration_replication_002",
+    "source_path": "src/self_organizing_engineering_agent/experiments/ugs_synth_interleaved_review/provider_boundary.py",
+    "verified": true
+  },
+  {
+    "expected_sha256": "13008cc92e6e139a5503b00048b41f073bc555b96dab0c2d0ae7c0378cfc87ea",
+    "run_id": "ugs_synth_explicit_collaboration_replication_002",
+    "source_path": "src/self_organizing_engineering_agent/experiments/ugs_synth_interleaved_review/runner.py",
+    "verified": true
+  },
+  {
+    "expected_sha256": "1d44214a628e2d6ce3da996b56ac2de666bc5cb91e05d81ef2d7bd2f1eec0206",
+    "run_id": "ugs_synth_explicit_collaboration_replication_002",
+    "source_path": "src/self_organizing_engineering_agent/experiments/ugs_synth_interleaved_review/tools.py",
+    "verified": true
+  },
+  {
+    "expected_sha256": "efd67c00a8e00e0e09cbb56f59092ecbd7aa0c54060957cd9c698739f75cafa5",
+    "run_id": "ugs_synth_explicit_collaboration_replication_002",
+    "source_path": "src/self_organizing_engineering_agent/experiments/ugs_synth_minimal/runner.py",
+    "verified": true
+  },
+  {
+    "expected_sha256": "99b52a2836380e3ae9d8f497a88e2f15bb0066db9319f87d1cae0729ca4e11ab",
+    "run_id": "ugs_synth_explicit_collaboration_replication_002",
+    "source_path": "src/self_organizing_engineering_agent/experiments/ugs_synth_minimal/tools.py",
+    "verified": true
+  },
+  {
+    "expected_sha256": "0cc65662ef72b29c9fed4ab71e1f8c7f03ea23a895361abdcd3dae21943ab5d1",
+    "run_id": "ugs_synth_explicit_collaboration_replication_002",
+    "source_path": "uv.lock",
+    "verified": true
+  },
+  {
+    "expected_sha256": "ece22ce0130baa192122f6354f36c562d88ff61777830d04cfc7a19fbdbbd439",
+    "run_id": "ugs_synth_explicit_collaboration_replication_003",
+    "source_path": "docker/ugs_synth_minimal/Dockerfile",
+    "verified": true
+  },
+  {
+    "expected_sha256": "ab84b3945e5374d00bd8b1781cade04dd10c51d0a25931266f70522c4bdadb6a",
+    "run_id": "ugs_synth_explicit_collaboration_replication_003",
+    "source_path": "pyproject.toml",
+    "verified": true
+  },
+  {
+    "expected_sha256": "2d797ac4b4348aea754ed96b2d2a4ae6604b929b73ea16286ecf49fa37656dcb",
+    "run_id": "ugs_synth_explicit_collaboration_replication_003",
+    "source_path": "src/self_organizing_engineering_agent/experiments/pilot_1a/deepseek_provider.py",
+    "verified": true
+  },
+  {
+    "expected_sha256": "7dac491e82503def43b5c3ed5692015f3280f722d18831fb9cdafcee0ad271a5",
+    "run_id": "ugs_synth_explicit_collaboration_replication_003",
+    "source_path": "src/self_organizing_engineering_agent/experiments/ugs_synth_interleaved_review/durable_replication.py",
+    "verified": true
+  },
+  {
+    "expected_sha256": "345be37ebe574d3b4a81a6991b1ce0bf327ef4995d1770b0348c379922b26d42",
+    "run_id": "ugs_synth_explicit_collaboration_replication_003",
+    "source_path": "src/self_organizing_engineering_agent/experiments/ugs_synth_interleaved_review/durable_resume.py",
+    "verified": true
+  },
+  {
+    "expected_sha256": "179c656d81d26e845d9ae52594f69d836466bd965afb32f04a84165b923d8529",
+    "run_id": "ugs_synth_explicit_collaboration_replication_003",
+    "source_path": "src/self_organizing_engineering_agent/experiments/ugs_synth_interleaved_review/durable_runtime.py",
+    "verified": true
+  },
+  {
+    "expected_sha256": "860939a39e1a65b54b8669d5084ce1145d9fa0408a61846e4fb8453c0636388a",
+    "run_id": "ugs_synth_explicit_collaboration_replication_003",
+    "source_path": "src/self_organizing_engineering_agent/experiments/ugs_synth_interleaved_review/durable_store.py",
+    "verified": true
+  },
+  {
+    "expected_sha256": "8757378d26a3cc0cce875b7dff44e35a8048c971e39c964bf2dc343fc88aae34",
+    "run_id": "ugs_synth_explicit_collaboration_replication_003",
+    "source_path": "src/self_organizing_engineering_agent/experiments/ugs_synth_interleaved_review/provider_boundary.py",
+    "verified": true
+  },
+  {
+    "expected_sha256": "13008cc92e6e139a5503b00048b41f073bc555b96dab0c2d0ae7c0378cfc87ea",
+    "run_id": "ugs_synth_explicit_collaboration_replication_003",
+    "source_path": "src/self_organizing_engineering_agent/experiments/ugs_synth_interleaved_review/runner.py",
+    "verified": true
+  },
+  {
+    "expected_sha256": "1d44214a628e2d6ce3da996b56ac2de666bc5cb91e05d81ef2d7bd2f1eec0206",
+    "run_id": "ugs_synth_explicit_collaboration_replication_003",
+    "source_path": "src/self_organizing_engineering_agent/experiments/ugs_synth_interleaved_review/tools.py",
+    "verified": true
+  },
+  {
+    "expected_sha256": "efd67c00a8e00e0e09cbb56f59092ecbd7aa0c54060957cd9c698739f75cafa5",
+    "run_id": "ugs_synth_explicit_collaboration_replication_003",
+    "source_path": "src/self_organizing_engineering_agent/experiments/ugs_synth_minimal/runner.py",
+    "verified": true
+  },
+  {
+    "expected_sha256": "99b52a2836380e3ae9d8f497a88e2f15bb0066db9319f87d1cae0729ca4e11ab",
+    "run_id": "ugs_synth_explicit_collaboration_replication_003",
+    "source_path": "src/self_organizing_engineering_agent/experiments/ugs_synth_minimal/tools.py",
+    "verified": true
+  },
+  {
+    "expected_sha256": "0cc65662ef72b29c9fed4ab71e1f8c7f03ea23a895361abdcd3dae21943ab5d1",
+    "run_id": "ugs_synth_explicit_collaboration_replication_003",
+    "source_path": "uv.lock",
+    "verified": true
+  },
+  {
+    "expected_sha256": "ece22ce0130baa192122f6354f36c562d88ff61777830d04cfc7a19fbdbbd439",
+    "run_id": "ugs_synth_explicit_collaboration_replication_004",
+    "source_path": "docker/ugs_synth_minimal/Dockerfile",
+    "verified": true
+  },
+  {
+    "expected_sha256": "ab84b3945e5374d00bd8b1781cade04dd10c51d0a25931266f70522c4bdadb6a",
+    "run_id": "ugs_synth_explicit_collaboration_replication_004",
+    "source_path": "pyproject.toml",
+    "verified": true
+  },
+  {
+    "expected_sha256": "2d797ac4b4348aea754ed96b2d2a4ae6604b929b73ea16286ecf49fa37656dcb",
+    "run_id": "ugs_synth_explicit_collaboration_replication_004",
+    "source_path": "src/self_organizing_engineering_agent/experiments/pilot_1a/deepseek_provider.py",
+    "verified": true
+  },
+  {
+    "expected_sha256": "7dac491e82503def43b5c3ed5692015f3280f722d18831fb9cdafcee0ad271a5",
+    "run_id": "ugs_synth_explicit_collaboration_replication_004",
+    "source_path": "src/self_organizing_engineering_agent/experiments/ugs_synth_interleaved_review/durable_replication.py",
+    "verified": true
+  },
+  {
+    "expected_sha256": "345be37ebe574d3b4a81a6991b1ce0bf327ef4995d1770b0348c379922b26d42",
+    "run_id": "ugs_synth_explicit_collaboration_replication_004",
+    "source_path": "src/self_organizing_engineering_agent/experiments/ugs_synth_interleaved_review/durable_resume.py",
+    "verified": true
+  },
+  {
+    "expected_sha256": "179c656d81d26e845d9ae52594f69d836466bd965afb32f04a84165b923d8529",
+    "run_id": "ugs_synth_explicit_collaboration_replication_004",
+    "source_path": "src/self_organizing_engineering_agent/experiments/ugs_synth_interleaved_review/durable_runtime.py",
+    "verified": true
+  },
+  {
+    "expected_sha256": "860939a39e1a65b54b8669d5084ce1145d9fa0408a61846e4fb8453c0636388a",
+    "run_id": "ugs_synth_explicit_collaboration_replication_004",
+    "source_path": "src/self_organizing_engineering_agent/experiments/ugs_synth_interleaved_review/durable_store.py",
+    "verified": true
+  },
+  {
+    "expected_sha256": "8757378d26a3cc0cce875b7dff44e35a8048c971e39c964bf2dc343fc88aae34",
+    "run_id": "ugs_synth_explicit_collaboration_replication_004",
+    "source_path": "src/self_organizing_engineering_agent/experiments/ugs_synth_interleaved_review/provider_boundary.py",
+    "verified": true
+  },
+  {
+    "expected_sha256": "13008cc92e6e139a5503b00048b41f073bc555b96dab0c2d0ae7c0378cfc87ea",
+    "run_id": "ugs_synth_explicit_collaboration_replication_004",
+    "source_path": "src/self_organizing_engineering_agent/experiments/ugs_synth_interleaved_review/runner.py",
+    "verified": true
+  },
+  {
+    "expected_sha256": "1d44214a628e2d6ce3da996b56ac2de666bc5cb91e05d81ef2d7bd2f1eec0206",
+    "run_id": "ugs_synth_explicit_collaboration_replication_004",
+    "source_path": "src/self_organizing_engineering_agent/experiments/ugs_synth_interleaved_review/tools.py",
+    "verified": true
+  },
+  {
+    "expected_sha256": "efd67c00a8e00e0e09cbb56f59092ecbd7aa0c54060957cd9c698739f75cafa5",
+    "run_id": "ugs_synth_explicit_collaboration_replication_004",
+    "source_path": "src/self_organizing_engineering_agent/experiments/ugs_synth_minimal/runner.py",
+    "verified": true
+  },
+  {
+    "expected_sha256": "99b52a2836380e3ae9d8f497a88e2f15bb0066db9319f87d1cae0729ca4e11ab",
+    "run_id": "ugs_synth_explicit_collaboration_replication_004",
+    "source_path": "src/self_organizing_engineering_agent/experiments/ugs_synth_minimal/tools.py",
+    "verified": true
+  },
+  {
+    "expected_sha256": "0cc65662ef72b29c9fed4ab71e1f8c7f03ea23a895361abdcd3dae21943ab5d1",
+    "run_id": "ugs_synth_explicit_collaboration_replication_004",
+    "source_path": "uv.lock",
+    "verified": true
+  },
+  {
+    "expected_sha256": "ece22ce0130baa192122f6354f36c562d88ff61777830d04cfc7a19fbdbbd439",
+    "run_id": "ugs_synth_worker_only_replication_001",
+    "source_path": "docker/ugs_synth_minimal/Dockerfile",
+    "verified": true
+  },
+  {
+    "expected_sha256": "ab84b3945e5374d00bd8b1781cade04dd10c51d0a25931266f70522c4bdadb6a",
+    "run_id": "ugs_synth_worker_only_replication_001",
+    "source_path": "pyproject.toml",
+    "verified": true
+  },
+  {
+    "expected_sha256": "2d797ac4b4348aea754ed96b2d2a4ae6604b929b73ea16286ecf49fa37656dcb",
+    "run_id": "ugs_synth_worker_only_replication_001",
+    "source_path": "src/self_organizing_engineering_agent/experiments/pilot_1a/deepseek_provider.py",
+    "verified": true
+  },
+  {
+    "expected_sha256": "624abe89841afd80fbf19de996e97763a8d20d1d49d91bb616ef40a6cc3b381a",
+    "run_id": "ugs_synth_worker_only_replication_001",
+    "source_path": "src/self_organizing_engineering_agent/experiments/ugs_synth_interleaved_review/durable_replication.py",
+    "verified": true
+  },
+  {
+    "expected_sha256": "345be37ebe574d3b4a81a6991b1ce0bf327ef4995d1770b0348c379922b26d42",
+    "run_id": "ugs_synth_worker_only_replication_001",
+    "source_path": "src/self_organizing_engineering_agent/experiments/ugs_synth_interleaved_review/durable_resume.py",
+    "verified": true
+  },
+  {
+    "expected_sha256": "179c656d81d26e845d9ae52594f69d836466bd965afb32f04a84165b923d8529",
+    "run_id": "ugs_synth_worker_only_replication_001",
+    "source_path": "src/self_organizing_engineering_agent/experiments/ugs_synth_interleaved_review/durable_runtime.py",
+    "verified": true
+  },
+  {
+    "expected_sha256": "a5a67f772a6df23f771a625ecceffa564dfdb32c66f71c6206eebc906543f3d4",
+    "run_id": "ugs_synth_worker_only_replication_001",
+    "source_path": "src/self_organizing_engineering_agent/experiments/ugs_synth_interleaved_review/durable_store.py",
+    "verified": true
+  },
+  {
+    "expected_sha256": "8757378d26a3cc0cce875b7dff44e35a8048c971e39c964bf2dc343fc88aae34",
+    "run_id": "ugs_synth_worker_only_replication_001",
+    "source_path": "src/self_organizing_engineering_agent/experiments/ugs_synth_interleaved_review/provider_boundary.py",
+    "verified": true
+  },
+  {
+    "expected_sha256": "13008cc92e6e139a5503b00048b41f073bc555b96dab0c2d0ae7c0378cfc87ea",
+    "run_id": "ugs_synth_worker_only_replication_001",
+    "source_path": "src/self_organizing_engineering_agent/experiments/ugs_synth_interleaved_review/runner.py",
+    "verified": true
+  },
+  {
+    "expected_sha256": "1d44214a628e2d6ce3da996b56ac2de666bc5cb91e05d81ef2d7bd2f1eec0206",
+    "run_id": "ugs_synth_worker_only_replication_001",
+    "source_path": "src/self_organizing_engineering_agent/experiments/ugs_synth_interleaved_review/tools.py",
+    "verified": true
+  },
+  {
+    "expected_sha256": "efd67c00a8e00e0e09cbb56f59092ecbd7aa0c54060957cd9c698739f75cafa5",
+    "run_id": "ugs_synth_worker_only_replication_001",
+    "source_path": "src/self_organizing_engineering_agent/experiments/ugs_synth_minimal/runner.py",
+    "verified": true
+  },
+  {
+    "expected_sha256": "99b52a2836380e3ae9d8f497a88e2f15bb0066db9319f87d1cae0729ca4e11ab",
+    "run_id": "ugs_synth_worker_only_replication_001",
+    "source_path": "src/self_organizing_engineering_agent/experiments/ugs_synth_minimal/tools.py",
+    "verified": true
+  },
+  {
+    "expected_sha256": "0cc65662ef72b29c9fed4ab71e1f8c7f03ea23a895361abdcd3dae21943ab5d1",
+    "run_id": "ugs_synth_worker_only_replication_001",
+    "source_path": "uv.lock",
+    "verified": true
+  },
+  {
+    "expected_sha256": "ece22ce0130baa192122f6354f36c562d88ff61777830d04cfc7a19fbdbbd439",
+    "run_id": "ugs_synth_worker_only_replication_002",
+    "source_path": "docker/ugs_synth_minimal/Dockerfile",
+    "verified": true
+  },
+  {
+    "expected_sha256": "ab84b3945e5374d00bd8b1781cade04dd10c51d0a25931266f70522c4bdadb6a",
+    "run_id": "ugs_synth_worker_only_replication_002",
+    "source_path": "pyproject.toml",
+    "verified": true
+  },
+  {
+    "expected_sha256": "2d797ac4b4348aea754ed96b2d2a4ae6604b929b73ea16286ecf49fa37656dcb",
+    "run_id": "ugs_synth_worker_only_replication_002",
+    "source_path": "src/self_organizing_engineering_agent/experiments/pilot_1a/deepseek_provider.py",
+    "verified": true
+  },
+  {
+    "expected_sha256": "7dac491e82503def43b5c3ed5692015f3280f722d18831fb9cdafcee0ad271a5",
+    "run_id": "ugs_synth_worker_only_replication_002",
+    "source_path": "src/self_organizing_engineering_agent/experiments/ugs_synth_interleaved_review/durable_replication.py",
+    "verified": true
+  },
+  {
+    "expected_sha256": "345be37ebe574d3b4a81a6991b1ce0bf327ef4995d1770b0348c379922b26d42",
+    "run_id": "ugs_synth_worker_only_replication_002",
+    "source_path": "src/self_organizing_engineering_agent/experiments/ugs_synth_interleaved_review/durable_resume.py",
+    "verified": true
+  },
+  {
+    "expected_sha256": "179c656d81d26e845d9ae52594f69d836466bd965afb32f04a84165b923d8529",
+    "run_id": "ugs_synth_worker_only_replication_002",
+    "source_path": "src/self_organizing_engineering_agent/experiments/ugs_synth_interleaved_review/durable_runtime.py",
+    "verified": true
+  },
+  {
+    "expected_sha256": "860939a39e1a65b54b8669d5084ce1145d9fa0408a61846e4fb8453c0636388a",
+    "run_id": "ugs_synth_worker_only_replication_002",
+    "source_path": "src/self_organizing_engineering_agent/experiments/ugs_synth_interleaved_review/durable_store.py",
+    "verified": true
+  },
+  {
+    "expected_sha256": "8757378d26a3cc0cce875b7dff44e35a8048c971e39c964bf2dc343fc88aae34",
+    "run_id": "ugs_synth_worker_only_replication_002",
+    "source_path": "src/self_organizing_engineering_agent/experiments/ugs_synth_interleaved_review/provider_boundary.py",
+    "verified": true
+  },
+  {
+    "expected_sha256": "13008cc92e6e139a5503b00048b41f073bc555b96dab0c2d0ae7c0378cfc87ea",
+    "run_id": "ugs_synth_worker_only_replication_002",
+    "source_path": "src/self_organizing_engineering_agent/experiments/ugs_synth_interleaved_review/runner.py",
+    "verified": true
+  },
+  {
+    "expected_sha256": "1d44214a628e2d6ce3da996b56ac2de666bc5cb91e05d81ef2d7bd2f1eec0206",
+    "run_id": "ugs_synth_worker_only_replication_002",
+    "source_path": "src/self_organizing_engineering_agent/experiments/ugs_synth_interleaved_review/tools.py",
+    "verified": true
+  },
+  {
+    "expected_sha256": "efd67c00a8e00e0e09cbb56f59092ecbd7aa0c54060957cd9c698739f75cafa5",
+    "run_id": "ugs_synth_worker_only_replication_002",
+    "source_path": "src/self_organizing_engineering_agent/experiments/ugs_synth_minimal/runner.py",
+    "verified": true
+  },
+  {
+    "expected_sha256": "99b52a2836380e3ae9d8f497a88e2f15bb0066db9319f87d1cae0729ca4e11ab",
+    "run_id": "ugs_synth_worker_only_replication_002",
+    "source_path": "src/self_organizing_engineering_agent/experiments/ugs_synth_minimal/tools.py",
+    "verified": true
+  },
+  {
+    "expected_sha256": "0cc65662ef72b29c9fed4ab71e1f8c7f03ea23a895361abdcd3dae21943ab5d1",
+    "run_id": "ugs_synth_worker_only_replication_002",
+    "source_path": "uv.lock",
+    "verified": true
+  },
+  {
+    "expected_sha256": "ece22ce0130baa192122f6354f36c562d88ff61777830d04cfc7a19fbdbbd439",
+    "run_id": "ugs_synth_worker_only_replication_003",
+    "source_path": "docker/ugs_synth_minimal/Dockerfile",
+    "verified": true
+  },
+  {
+    "expected_sha256": "ab84b3945e5374d00bd8b1781cade04dd10c51d0a25931266f70522c4bdadb6a",
+    "run_id": "ugs_synth_worker_only_replication_003",
+    "source_path": "pyproject.toml",
+    "verified": true
+  },
+  {
+    "expected_sha256": "2d797ac4b4348aea754ed96b2d2a4ae6604b929b73ea16286ecf49fa37656dcb",
+    "run_id": "ugs_synth_worker_only_replication_003",
+    "source_path": "src/self_organizing_engineering_agent/experiments/pilot_1a/deepseek_provider.py",
+    "verified": true
+  },
+  {
+    "expected_sha256": "7dac491e82503def43b5c3ed5692015f3280f722d18831fb9cdafcee0ad271a5",
+    "run_id": "ugs_synth_worker_only_replication_003",
+    "source_path": "src/self_organizing_engineering_agent/experiments/ugs_synth_interleaved_review/durable_replication.py",
+    "verified": true
+  },
+  {
+    "expected_sha256": "345be37ebe574d3b4a81a6991b1ce0bf327ef4995d1770b0348c379922b26d42",
+    "run_id": "ugs_synth_worker_only_replication_003",
+    "source_path": "src/self_organizing_engineering_agent/experiments/ugs_synth_interleaved_review/durable_resume.py",
+    "verified": true
+  },
+  {
+    "expected_sha256": "179c656d81d26e845d9ae52594f69d836466bd965afb32f04a84165b923d8529",
+    "run_id": "ugs_synth_worker_only_replication_003",
+    "source_path": "src/self_organizing_engineering_agent/experiments/ugs_synth_interleaved_review/durable_runtime.py",
+    "verified": true
+  },
+  {
+    "expected_sha256": "860939a39e1a65b54b8669d5084ce1145d9fa0408a61846e4fb8453c0636388a",
+    "run_id": "ugs_synth_worker_only_replication_003",
+    "source_path": "src/self_organizing_engineering_agent/experiments/ugs_synth_interleaved_review/durable_store.py",
+    "verified": true
+  },
+  {
+    "expected_sha256": "8757378d26a3cc0cce875b7dff44e35a8048c971e39c964bf2dc343fc88aae34",
+    "run_id": "ugs_synth_worker_only_replication_003",
+    "source_path": "src/self_organizing_engineering_agent/experiments/ugs_synth_interleaved_review/provider_boundary.py",
+    "verified": true
+  },
+  {
+    "expected_sha256": "13008cc92e6e139a5503b00048b41f073bc555b96dab0c2d0ae7c0378cfc87ea",
+    "run_id": "ugs_synth_worker_only_replication_003",
+    "source_path": "src/self_organizing_engineering_agent/experiments/ugs_synth_interleaved_review/runner.py",
+    "verified": true
+  },
+  {
+    "expected_sha256": "1d44214a628e2d6ce3da996b56ac2de666bc5cb91e05d81ef2d7bd2f1eec0206",
+    "run_id": "ugs_synth_worker_only_replication_003",
+    "source_path": "src/self_organizing_engineering_agent/experiments/ugs_synth_interleaved_review/tools.py",
+    "verified": true
+  },
+  {
+    "expected_sha256": "efd67c00a8e00e0e09cbb56f59092ecbd7aa0c54060957cd9c698739f75cafa5",
+    "run_id": "ugs_synth_worker_only_replication_003",
+    "source_path": "src/self_organizing_engineering_agent/experiments/ugs_synth_minimal/runner.py",
+    "verified": true
+  },
+  {
+    "expected_sha256": "99b52a2836380e3ae9d8f497a88e2f15bb0066db9319f87d1cae0729ca4e11ab",
+    "run_id": "ugs_synth_worker_only_replication_003",
+    "source_path": "src/self_organizing_engineering_agent/experiments/ugs_synth_minimal/tools.py",
+    "verified": true
+  },
+  {
+    "expected_sha256": "0cc65662ef72b29c9fed4ab71e1f8c7f03ea23a895361abdcd3dae21943ab5d1",
+    "run_id": "ugs_synth_worker_only_replication_003",
+    "source_path": "uv.lock",
+    "verified": true
+  },
+  {
+    "expected_sha256": "ece22ce0130baa192122f6354f36c562d88ff61777830d04cfc7a19fbdbbd439",
+    "run_id": "ugs_synth_worker_only_replication_004",
+    "source_path": "docker/ugs_synth_minimal/Dockerfile",
+    "verified": true
+  },
+  {
+    "expected_sha256": "ab84b3945e5374d00bd8b1781cade04dd10c51d0a25931266f70522c4bdadb6a",
+    "run_id": "ugs_synth_worker_only_replication_004",
+    "source_path": "pyproject.toml",
+    "verified": true
+  },
+  {
+    "expected_sha256": "2d797ac4b4348aea754ed96b2d2a4ae6604b929b73ea16286ecf49fa37656dcb",
+    "run_id": "ugs_synth_worker_only_replication_004",
+    "source_path": "src/self_organizing_engineering_agent/experiments/pilot_1a/deepseek_provider.py",
+    "verified": true
+  },
+  {
+    "expected_sha256": "7dac491e82503def43b5c3ed5692015f3280f722d18831fb9cdafcee0ad271a5",
+    "run_id": "ugs_synth_worker_only_replication_004",
+    "source_path": "src/self_organizing_engineering_agent/experiments/ugs_synth_interleaved_review/durable_replication.py",
+    "verified": true
+  },
+  {
+    "expected_sha256": "345be37ebe574d3b4a81a6991b1ce0bf327ef4995d1770b0348c379922b26d42",
+    "run_id": "ugs_synth_worker_only_replication_004",
+    "source_path": "src/self_organizing_engineering_agent/experiments/ugs_synth_interleaved_review/durable_resume.py",
+    "verified": true
+  },
+  {
+    "expected_sha256": "179c656d81d26e845d9ae52594f69d836466bd965afb32f04a84165b923d8529",
+    "run_id": "ugs_synth_worker_only_replication_004",
+    "source_path": "src/self_organizing_engineering_agent/experiments/ugs_synth_interleaved_review/durable_runtime.py",
+    "verified": true
+  },
+  {
+    "expected_sha256": "860939a39e1a65b54b8669d5084ce1145d9fa0408a61846e4fb8453c0636388a",
+    "run_id": "ugs_synth_worker_only_replication_004",
+    "source_path": "src/self_organizing_engineering_agent/experiments/ugs_synth_interleaved_review/durable_store.py",
+    "verified": true
+  },
+  {
+    "expected_sha256": "8757378d26a3cc0cce875b7dff44e35a8048c971e39c964bf2dc343fc88aae34",
+    "run_id": "ugs_synth_worker_only_replication_004",
+    "source_path": "src/self_organizing_engineering_agent/experiments/ugs_synth_interleaved_review/provider_boundary.py",
+    "verified": true
+  },
+  {
+    "expected_sha256": "13008cc92e6e139a5503b00048b41f073bc555b96dab0c2d0ae7c0378cfc87ea",
+    "run_id": "ugs_synth_worker_only_replication_004",
+    "source_path": "src/self_organizing_engineering_agent/experiments/ugs_synth_interleaved_review/runner.py",
+    "verified": true
+  },
+  {
+    "expected_sha256": "1d44214a628e2d6ce3da996b56ac2de666bc5cb91e05d81ef2d7bd2f1eec0206",
+    "run_id": "ugs_synth_worker_only_replication_004",
+    "source_path": "src/self_organizing_engineering_agent/experiments/ugs_synth_interleaved_review/tools.py",
+    "verified": true
+  },
+  {
+    "expected_sha256": "efd67c00a8e00e0e09cbb56f59092ecbd7aa0c54060957cd9c698739f75cafa5",
+    "run_id": "ugs_synth_worker_only_replication_004",
+    "source_path": "src/self_organizing_engineering_agent/experiments/ugs_synth_minimal/runner.py",
+    "verified": true
+  },
+  {
+    "expected_sha256": "99b52a2836380e3ae9d8f497a88e2f15bb0066db9319f87d1cae0729ca4e11ab",
+    "run_id": "ugs_synth_worker_only_replication_004",
+    "source_path": "src/self_organizing_engineering_agent/experiments/ugs_synth_minimal/tools.py",
+    "verified": true
+  },
+  {
+    "expected_sha256": "0cc65662ef72b29c9fed4ab71e1f8c7f03ea23a895361abdcd3dae21943ab5d1",
+    "run_id": "ugs_synth_worker_only_replication_004",
+    "source_path": "uv.lock",
+    "verified": true
+  }
+]

@@ -1,0 +1,249 @@
+{
+  "models": [
+    {
+      "annual_maintenance_mbcu": 0.025,
+      "capacity_kg_s": 40,
+      "capex_mbcu": 0.48,
+      "category": "cooler",
+      "electric_power_fraction_of_duty": 0.035,
+      "footprint_m": {
+        "length": 7,
+        "width": 4
+      },
+      "maintenance": {
+        "clearance_m": 2.0,
+        "crane_access_required": false,
+        "heavy_maintenance": false,
+        "road_access_required": false
+      },
+      "maximum_duty_mw": 10.0,
+      "maximum_pressure_mpa": 16,
+      "minimum_outlet_temperature_c": 35.0,
+      "model_id": "COOL40",
+      "orientation_options_deg": [
+        0,
+        90
+      ],
+      "ports": [
+        {
+          "id": "gas_in",
+          "offset_m": [
+            -3.5,
+            0
+          ],
+          "type": "gas_in"
+        },
+        {
+          "id": "gas_out",
+          "offset_m": [
+            3.5,
+            0
+          ],
+          "type": "gas_out"
+        }
+      ],
+      "pressure_drop_mpa": 0.035,
+      "safety_category": "hydrocarbon_treatment"
+    },
+    {
+      "annual_maintenance_mbcu": 0.035,
+      "capacity_kg_s": 70,
+      "capex_mbcu": 0.66,
+      "category": "cooler",
+      "electric_power_fraction_of_duty": 0.035,
+      "footprint_m": {
+        "length": 9,
+        "width": 5
+      },
+      "maintenance": {
+        "clearance_m": 2.0,
+        "crane_access_required": false,
+        "heavy_maintenance": false,
+        "road_access_required": false
+      },
+      "maximum_duty_mw": 18.0,
+      "maximum_pressure_mpa": 16,
+      "minimum_outlet_temperature_c": 35.0,
+      "model_id": "COOL70",
+      "orientation_options_deg": [
+        0,
+        90
+      ],
+      "ports": [
+        {
+          "id": "gas_in",
+          "offset_m": [
+            -4.5,
+            0
+          ],
+          "type": "gas_in"
+        },
+        {
+          "id": "gas_out",
+          "offset_m": [
+            4.5,
+            0
+          ],
+          "type": "gas_out"
+        }
+      ],
+      "pressure_drop_mpa": 0.035,
+      "safety_category": "hydrocarbon_treatment"
+    },
+    {
+      "annual_maintenance_mbcu": 0.05,
+      "capacity_kg_s": 120,
+      "capex_mbcu": 0.92,
+      "category": "cooler",
+      "electric_power_fraction_of_duty": 0.035,
+      "footprint_m": {
+        "length": 12,
+        "width": 6
+      },
+      "maintenance": {
+        "clearance_m": 2.1,
+        "crane_access_required": false,
+        "heavy_maintenance": false,
+        "road_access_required": false
+      },
+      "maximum_duty_mw": 32.0,
+      "maximum_pressure_mpa": 16,
+      "minimum_outlet_temperature_c": 35.0,
+      "model_id": "COOL120",
+      "orientation_options_deg": [
+        0,
+        90
+      ],
+      "ports": [
+        {
+          "id": "gas_in",
+          "offset_m": [
+            -6.0,
+            0
+          ],
+          "type": "gas_in"
+        },
+        {
+          "id": "gas_out",
+          "offset_m": [
+            6.0,
+            0
+          ],
+          "type": "gas_out"
+        }
+      ],
+      "pressure_drop_mpa": 0.035,
+      "safety_category": "hydrocarbon_treatment"
+    },
+    {
+      "annual_maintenance_mbcu": 0.023,
+      "capacity_kg_s": 60,
+      "capex_mbcu": 0.42,
+      "category": "heater",
+      "footprint_m": {
+        "length": 6,
+        "width": 4
+      },
+      "maintenance": {
+        "clearance_m": 2.0,
+        "crane_access_required": false,
+        "heavy_maintenance": false,
+        "road_access_required": false
+      },
+      "maximum_duty_mw": 5.0,
+      "maximum_outlet_temperature_c": 60.0,
+      "maximum_pressure_mpa": 16,
+      "model_id": "HEAT60",
+      "orientation_options_deg": [
+        0,
+        90
+      ],
+      "ports": [
+        {
+          "id": "gas_in",
+          "offset_m": [
+            -3.0,
+            0
+          ],
+          "type": "gas_in"
+        },
+        {
+          "id": "gas_out",
+          "offset_m": [
+            3.0,
+            0
+          ],
+          "type": "gas_out"
+        }
+      ],
+      "pressure_drop_mpa": 0.025,
+      "safety_category": "hydrocarbon_treatment"
+    },
+    {
+      "annual_maintenance_mbcu": 0.04,
+      "capacity_kg_s": 120,
+      "capex_mbcu": 0.72,
+      "category": "heater",
+      "footprint_m": {
+        "length": 9,
+        "width": 5
+      },
+      "maintenance": {
+        "clearance_m": 2.0,
+        "crane_access_required": false,
+        "heavy_maintenance": false,
+        "road_access_required": false
+      },
+      "maximum_duty_mw": 10.0,
+      "maximum_outlet_temperature_c": 60.0,
+      "maximum_pressure_mpa": 16,
+      "model_id": "HEAT120",
+      "orientation_options_deg": [
+        0,
+        90
+      ],
+      "ports": [
+        {
+          "id": "gas_in",
+          "offset_m": [
+            -4.5,
+            0
+          ],
+          "type": "gas_in"
+        },
+        {
+          "id": "gas_out",
+          "offset_m": [
+            4.5,
+            0
+          ],
+          "type": "gas_out"
+        }
+      ],
+      "pressure_drop_mpa": 0.025,
+      "safety_category": "hydrocarbon_treatment"
+    }
+  ],
+  "provenance": {
+    "classification": "synthetic benchmark assumption",
+    "note": "Deterministic development-case data; not vendor data or production engineering criteria."
+  },
+  "units": {
+    "annual_maintenance": "MBCU/year",
+    "capacity": "kg/s gas, or kg/s liquid for closed drains",
+    "capex": "MBCU",
+    "clearance": "m",
+    "dimensionless_efficiency_and_fraction": "1",
+    "flow": "kg/s",
+    "footprint_and_port_offsets": "m",
+    "free_liquid_loading": "kg liquid/kg gas",
+    "length": "m",
+    "liquid_rate": "kg/s",
+    "orientation": "degree",
+    "power_and_duty": "MW",
+    "pressure": "MPa",
+    "pressure_ratio": "1",
+    "temperature": "degC",
+    "temperature_coefficient": "K/MPa"
+  }
+}

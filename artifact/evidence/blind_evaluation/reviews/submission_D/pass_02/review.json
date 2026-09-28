@@ -1,0 +1,238 @@
+{
+  "summary": "The submission is largely reconstructable and internally coherent, with all six mandatory normal scenarios and named outage cases represented in design.json. I did not find a confirmed mandatory-scenario or equipment-rating failure in the sampled independent checks. The main concerns are that active paths rely on unmodelled free isolation, liquid-drain velocity depends on an unpublished density assumption, and the design appears to retain cost-increasing header margin despite the LCC-minimization objective.",
+  "areas_checked": [
+    {
+      "area": "deliverable_completeness_reconstructability",
+      "coverage": "full",
+      "details": "Compared brief/final_delivery_contract.json with submission/README.md, submission/DESIGN_REPORT.md, submission/deliverables/design.json, diameters.json, verification.md, checks.csv, and layout.svg presence. The design defines equipment tags/model IDs, positions/orientations/ports, pipelines with endpoints/routes/DN/classes/levels, roads, all normal and outage scenario flows/setpoints/states, quantities, LCC, assumptions, and known limitations. Reconstructability is weakened by unmodelled isolation valves and liquid-density assumptions."
+    },
+    {
+      "area": "physical_topology_and_port_semantics",
+      "coverage": "sampled",
+      "details": "Inspected all connection/check rows in submission/deliverables/checks.csv and spot-checked the physical topology in design.json against brief/network_semantics.md. GRID-TIE has 2 of 2 process connections, well groups have one each, LIQUID-DRAIN-OUTFALL has 3 of 8 drain connections, headers are within branch counts, and separator liquid_out ports connect to closed drains. Scenario active paths, however, depend on unmodelled isolation of physically connected alternate branches."
+    },
+    {
+      "area": "operating_scenarios",
+      "coverage": "sampled",
+      "details": "Covered all six mandatory normal scenarios INJ-LOW, INJ-MID, INJ-HIGH, WDR-HIGH, WDR-MID, and WDR-LOW. Independently checked flow-allocation sums, key delivery pressures, temperatures, water/free-liquid limits, and metering capacity from design.json and the public limits. Hydraulic pressure-loss details were sampled rather than recomputed for every active pipe."
+    },
+    {
+      "area": "n_minus_1_reliability",
+      "coverage": "sampled",
+      "details": "Verified that design.json and verification.md enumerate compressor outages for injection scenarios and WDR-LOW, and separator/dehydration outages for all withdrawal scenarios. Sampled outage blocks show failed units removed from unit_flows and remaining units within apparent capacity. I did not independently recalculate every outage hydraulic path."
+    },
+    {
+      "area": "equipment_limits",
+      "coverage": "sampled",
+      "details": "Independently checked representative binding equipment limits: C60/C40 compressor capacity, minimum stable flow, ratio, discharge temperature and power; COOL120 flow/duty; SEP70 and DEHY70 pressure/capacity/feed quality; MTR120/REG120/Header capacities; DRN-S capacity. No sampled rating exceedance was found."
+    },
+    {
+      "area": "hydraulic_calculations",
+      "coverage": "sampled",
+      "details": "Recomputed gas properties, velocity, Reynolds number, friction factor, and pressure loss for selected pipes: high-velocity small-DN P-103, long P-113, and low-pressure delivery P-130. Results matched submitted values closely. I did not recompute all pipelines or independently verify every eight-update convergence record."
+    },
+    {
+      "area": "gas_quality_and_temperature",
+      "coverage": "sampled",
+      "details": "Checked all six normal scenario sink qualities and sampled outage qualities. Injection remains at 40 mg/Sm3 water and zero free liquid after cooling to 50 C; withdrawal separators reduce liquid to 5e-6 and dehydration sets water to 35 mg/Sm3; WDR-LOW delivered temperature remains below 60 C in sampled normal and outage cases. Pipe-class eligibility was sampled; wet pre-dehydration service uses CS-WET-160."
+    },
+    {
+      "area": "liquid_drain",
+      "coverage": "sampled",
+      "details": "Checked separator liquid removal formula, sampled maximum WDR-HIGH N-1 drain flow, DRN-S capacity, outfall total flow, drain connection count, and DN150 liquid velocity under the submission's 800 kg/m3 density assumption. The public brief does not publish liquid density, so velocity PASS is not uniquely decidable from public data alone."
+    },
+    {
+      "area": "geometry_layout_roads_maintenance",
+      "coverage": "sampled",
+      "details": "Sampled equipment containment/exclusion, closest reported separation, road widths/connectivity, road-exclusion avoidance, and access-road geometry against brief/site.json, safety_requirements.json, and maintenance_requirements.json. Example independent checks: HDR-INJ-SUC-01 to CMP-INJ-01 boundary gap is 13 m versus 10 m required; RD-01/RD-02/RD-03/RD-05 widths are at least 4 m and connect to the ROAD-ENTRANCE paved boundary. Full polygon overlap verification was not independently rerun."
+    },
+    {
+      "area": "pipeline_geometry",
+      "coverage": "sampled",
+      "details": "Sampled endpoint matching and route containment for P-113, P-123, P-143/P-144, and drain lines P-140/P-142. P-113 endpoints match COOL-INJ-01.gas_out and WH-01.branch_08 and the sampled buried route stays within the site and outside pipeline-exclusion zones. Full same-level overlap/self-overlap and all equipment-footprint crossings were not independently recomputed."
+    },
+    {
+      "area": "lifecycle_cost_arithmetic",
+      "coverage": "sampled",
+      "details": "Independently recomputed equipment CAPEX, annual maintenance PV, civil/access CAPEX components, energy PV from the six normal scenario MWh, and total LCC. Piping CAPEX was sampled for representative lines rather than fully resummed segment-by-segment. The recomputed top-level LCC matched 89.284594 MBCU using submitted quantities."
+    },
+    {
+      "area": "lcc_objective",
+      "coverage": "sampled",
+      "details": "Reviewed the design's cost rationale and checked for obvious dominated choices. A possible lower-LCC header substitution is identified as a suspected risk because the report itself states HDR120 replacement would reduce LCC, but I did not create a fully rerouted alternative with exact port remapping and full hydraulic rerun."
+    },
+    {
+      "area": "unsupported_assumptions",
+      "coverage": "sampled",
+      "details": "Identified explicit reliance on non-catalogued isolation valves in submission/DESIGN_REPORT.md section 11 and on assumed liquid density for drain velocity. These are distinguished from confirmed feasibility failures because the public brief does not fully define valve/isolation or liquid-density semantics."
+    },
+    {
+      "area": "internal_consistency",
+      "coverage": "sampled",
+      "details": "Cross-checked README, DESIGN_REPORT.md, verification.md, checks.csv, diameters.json, and design.json for scenario names, outage coverage, quantities, LCC, and stated assumptions. The main internal inconsistency is not numerical but evidentiary: PASS claims include assumptions outside the public data, especially liquid density and unmodelled isolation."
+    }
+  ],
+  "independent_calculations": [
+    {
+      "title": "Scenario allocations and delivery limits for six normal scenarios",
+      "public_inputs": [
+        "brief/operating_scenarios.json required flows, pressures, hours, source quality",
+        "brief/project_requirements.json delivery limits: water <= 50 mg/Sm3, free liquid <= 0.0001, temperature -10 to 60 C, GRID-TIE metering >= scenario flow",
+        "brief/project_requirements.json well-group maximum 25 kg/s and GRID-TIE maximum 160 kg/s"
+      ],
+      "submission_inputs": [
+        "submission/deliverables/design.json scenarios INJ-LOW, INJ-MID, INJ-HIGH, WDR-HIGH, WDR-MID, WDR-LOW",
+        "submission/deliverables/design.json well_group_flows, unit_states, pipe_flows, node_pressure_mpa, node_temperature_c"
+      ],
+      "method": "Summed well_group_flows for each normal scenario; compared sink pressure and delivered temperature/water/free-liquid values to public limits; checked peak metered flow against MTR120 capacity from brief/equipment_catalog/metering_regulation.json.",
+      "result": "INJ-LOW 6*20=120 kg/s with minimum well pressure 8.5000 MPa; INJ-MID 6*16.666667 approximately 100 kg/s with minimum 11.0000 MPa; INJ-HIGH 6*12.5=75 kg/s with minimum 13.5000 MPa. WDR-HIGH, WDR-MID, and WDR-LOW deliver 120, 100, and 70 kg/s respectively to GRID-TIE at 6.0000 MPa with water 35 mg/Sm3 and free liquid 5e-6. All sampled normal delivery values are within public limits; MTR120 capacity of 120 kg/s covers the maximum normal flow exactly.",
+      "scratch_files": []
+    },
+    {
+      "title": "High-velocity gas hydraulic sample P-103 in INJ-LOW compressor-outage service",
+      "public_inputs": [
+        "brief/engineering_calculation_basis.md gas-property and Darcy/Swamee-Jain pressure-loss formulas",
+        "brief/gas_properties.json MW 0.0182 kg/mol, cp data, Z/mu formulas and bounds",
+        "brief/piping_catalog.json DN200 internal diameter 0.188 m and CS-DRY-160 roughness 1.5e-5 m"
+      ],
+      "submission_inputs": [
+        "submission/deliverables/design.json P-103 length 111.25 m, DN200, CS-DRY-160",
+        "submission/deliverables/design.json INJ-LOW/N-1 CMP-INJ-01 out P-103 flow 27 kg/s, inlet/outlet pressures about 6.475818 to 6.411547 MPa, T 25 C"
+      ],
+      "method": "Used mean pressure about 6.4437 MPa and T=298.15 K to recompute Z, viscosity, density, area, velocity, Reynolds number, Swamee-Jain friction factor, and Darcy pressure loss.",
+      "result": "Z about 0.9321, viscosity about 1.08e-5 Pa*s, density about 50.8 kg/m3, velocity about 19.17 m/s, Re about 1.7e7, f about 0.0117, and deltaP about 0.0643 MPa. This matches the submitted pressure drop of about 0.06427 MPa and remains below the 25 m/s gas-velocity limit.",
+      "scratch_files": []
+    },
+    {
+      "title": "Long injection trunk hydraulic sample P-113 in INJ-LOW normal service",
+      "public_inputs": [
+        "brief/engineering_calculation_basis.md gas pipe pressure-loss formula and fixed-point convention",
+        "brief/piping_catalog.json DN600 internal diameter 0.564 m, CS-DRY-160 roughness 1.5e-5 m"
+      ],
+      "submission_inputs": [
+        "submission/deliverables/design.json P-113 length 620 m, DN600, CS-DRY-160",
+        "submission/deliverables/design.json INJ-LOW normal P-113 flow 120 kg/s and COOL-INJ-01 outlet/WH inlet pressures 8.532415 to 8.512304 MPa at 50 C"
+      ],
+      "method": "Recomputed gas properties at mean pressure about 8.522 MPa and 323.15 K, then Darcy pressure loss over the submitted straight-segment length.",
+      "result": "Computed density about 61.3 kg/m3, velocity about 7.83 m/s, turbulent friction factor about 0.0097, and pressure loss about 0.0201 MPa. This agrees with the submitted P-113 pressure drop and is below the gas-velocity limit.",
+      "scratch_files": []
+    },
+    {
+      "title": "Compressor and cooler sample for INJ-HIGH normal operation",
+      "public_inputs": [
+        "brief/engineering_calculation_basis.md compressor outlet temperature and driver-power formulas; cooler duty formula",
+        "brief/gas_properties.json cp 2450 J/kg/K and k 1.3",
+        "brief/equipment_catalog/compressors.json C60 efficiency 0.8, driver efficiency 0.96, ratio limit 2.4, max power 32 MW, max discharge temperature 150 C",
+        "brief/equipment_catalog/thermal_equipment.json COOL120 capacity 120 kg/s and max duty 32 MW"
+      ],
+      "submission_inputs": [
+        "submission/deliverables/design.json INJ-HIGH normal CMP-INJ-01 flow 37.5 kg/s, p_in 6.476521 MPa, p_out 13.546606 MPa, T_in 25 C",
+        "submission/deliverables/design.json INJ-HIGH normal COOL-INJ-01 flow 75 kg/s, T_in 94.19573 C, T_out 50 C"
+      ],
+      "method": "Calculated compressor ratio, polytropic proxy outlet temperature and driver power; calculated cooler duty as m*cp*deltaT/1e6 and electrical power as 3.5 percent of duty.",
+      "result": "CMP-INJ-01 ratio is about 2.09165, T_out about 94.2 C, and power about 6.62 MW, matching the submitted 94.1919 C and 6.6219 MW and below C60 limits. COOL-INJ-01 duty is about 8.12 MW and power about 0.284 MW, matching the submitted values and below COOL120 limits.",
+      "scratch_files": []
+    },
+    {
+      "title": "Liquid removal, drain capacity, and drain velocity under explicit density assumption",
+      "public_inputs": [
+        "brief/engineering_calculation_basis.md separator removed liquid formula",
+        "brief/equipment_catalog/separators.json SEP70 removal efficiency 0.9995 and max liquid rate 2.0 kg/s",
+        "brief/equipment_catalog/drains.json DRN-S capacity 0.8 kg/s",
+        "brief/site.json LIQUID-DRAIN-OUTFALL capacity 10 kg/s",
+        "brief/piping_catalog.json DN150 internal diameter 0.141 m and maximum liquid-drain velocity 3 m/s"
+      ],
+      "submission_inputs": [
+        "submission/deliverables/design.json WDR-HIGH/N-1 SEP-WDR-01 out remaining train flows 60 kg/s and drain flows 0.5997 kg/s each",
+        "submission/deliverables/checks.csv liquid velocity details using assumed density 800 kg/m3"
+      ],
+      "method": "Computed liquid removed as gas flow times inlet liquid loading times separator efficiency. For velocity, used the submission's explicit 800 kg/m3 assumption because the public brief provides no liquid density.",
+      "result": "For a 60 kg/s remaining train, removed liquid is 60*0.01*0.9995 = 0.5997 kg/s, below SEP70 and DRN-S limits; two remaining drains discharge 1.1994 kg/s total, below the 10 kg/s outfall limit. With density 800 kg/m3, DN150 velocity is 0.5997/(800*pi*0.141^2/4) = about 0.048 m/s. The capacity checks pass; the velocity check is conditional on an unpublished density assumption.",
+      "scratch_files": []
+    },
+    {
+      "title": "Lifecycle-cost arithmetic from public rates and submitted quantities",
+      "public_inputs": [
+        "brief/economic_assumptions.json discount rate 0.08, life 20 years, energy tariff 0.00012 MBCU/MWh, road/foundation/maintenance rates",
+        "brief/piping_catalog.json routing-level civil rates",
+        "brief/equipment_catalog/*.json capex and annual maintenance for installed model IDs"
+      ],
+      "submission_inputs": [
+        "submission/deliverables/design.json lifecycle_cost quantities and annual_energy_mwh",
+        "submission/DESIGN_REPORT.md section 9 LCC component values"
+      ],
+      "method": "Recomputed PVF, equipment CAPEX, annual maintenance PV, civil/access CAPEX from submitted quantities, energy annual cost/PV from submitted normal-scenario energy, and total LCC. Piping CAPEX was spot-checked rather than fully re-summed for every segment.",
+      "result": "PVF=(1-1.08^-20)/0.08=9.818147. Equipment CAPEX sums to 29.390 MBCU. Annual maintenance is 1.067 MBCU/a and PV is 10.475963 MBCU. Civil/access = roads 1189.5*0.00015 + foundations 775*4e-6 + maintenance 1589.88*1e-6 + pipeline civil 0.071006125 = 0.254121 MBCU. Energy 40121.586 MWh/a gives 4.814590 MBCU/a and 47.270358 MBCU PV. Total using submitted piping CAPEX 1.8941519 is 89.284594 MBCU, matching the submission.",
+      "scratch_files": []
+    },
+    {
+      "title": "Header downsize LCC-risk arithmetic",
+      "public_inputs": [
+        "brief/equipment_catalog/headers.json HDR180 capex 0.36, maintenance 0.016, capacity 180, branches 14; HDR120 capex 0.25, maintenance 0.012, capacity 120, branches 10, same footprint and 16 MPa rating",
+        "brief/economic_assumptions.json PVF inputs",
+        "brief/project_requirements.json LCC minimization objective and flow requirements"
+      ],
+      "submission_inputs": [
+        "submission/deliverables/design.json quantity HDR180: 5 and maximum submitted normal/outage header through-flow not exceeding 120 kg/s",
+        "submission/DESIGN_REPORT.md section 4.1 statement that replacing all five headers by HDR120 would lower LCC by about 0.59 MBCU but was rejected for robustness/spare-port reasons"
+      ],
+      "method": "Compared direct CAPEX and maintenance PV of five HDR180 versus five HDR120, and checked branch/capacity implications at a high level. Did not create a full remapped design with updated port endpoints and hydraulic rerun.",
+      "result": "Direct saving from five HDR120 substitutions is 5*(0.36-0.25)=0.55 MBCU CAPEX plus 5*(0.016-0.012)*9.818147=0.196 MBCU maintenance PV, before any energy penalty from higher header pressure drop. HDR120 capacity equals the maximum 120 kg/s submitted flow and equality is allowed by the public tolerance; WH-01 would use all 10 branches and other headers use fewer. Because exact port remapping and full rerun were not performed, this supports a suspected LCC-objective risk rather than a confirmed lower-cost feasible alternative.",
+      "scratch_files": []
+    }
+  ],
+  "findings": [
+    {
+      "finding_id": "F-001",
+      "status": "unsupported_claim",
+      "severity": "medium",
+      "confidence": "high",
+      "public_basis": "brief/final_delivery_contract.json requires reconstructable physical topology and scenario-specific paths/flows; brief/network_semantics.md defines finite catalogued ports/components and does not provide free process valves; the review protocol asks to identify dependence on unmodelled valves or free isolation.",
+      "claim_or_requirement": "The submission claims 6678 checks with 0 failures and scenario paths that selectively use or idle cross-connections in a cyclic physical network.",
+      "submission_evidence": "submission/DESIGN_REPORT.md section 11 states: Valve isolation is not modelled and scenario plans assume isolating valves outside the catalogued scope. design.json physically includes P-123 bypass, P-143 boost feed, and P-144 boost discharge, while scenario pipe_flows omit those branches in scenarios where they would need isolation.",
+      "independent_check": "Compared the physical network with scenario pipe_flows. In INJ-LOW, the compressor discharge header is physically connected to HDR-DLV-01 through P-144 and then to GRID-TIE through REG-WDR-01/MTR-WDR-01/P-130, but P-144/P-128/P-129/P-130 are absent from the active injection flow list. In WDR-HIGH/MID, P-123 is active while P-143/P-144 are inactive; in WDR-LOW, P-143/P-144 are active while P-123 is inactive.",
+      "result": "The PASS evidence is conditional on unmodelled, unpriced isolation behavior. The final equipment list contains no valve or equivalent catalogued component that reconstructs those active-path selections.",
+      "why_it_matters": "Without explicit isolation semantics, the delivered physical topology alone does not determine the scenario flow paths, and LCC omits any equipment/civil/maintenance cost needed for that isolation."
+    },
+    {
+      "finding_id": "F-002",
+      "status": "semantics_gap",
+      "severity": "low",
+      "confidence": "high",
+      "public_basis": "brief/piping_catalog.json publishes a maximum_liquid_drain_velocity_m_s of 3.0, and brief/engineering_calculation_basis.md defines liquid-drain velocity as a requirement, but the public brief does not publish liquid density or another conversion from kg/s to volumetric flow.",
+      "claim_or_requirement": "submission/deliverables/checks.csv reports liquid drain velocity checks as ok, using an assumed density of 800 kg/m3.",
+      "submission_evidence": "submission/deliverables/checks.csv rows for P-137 through P-142 state liquid drain velocity <= 3 m/s and include detail such as 0.0480 m/s at 0.5997 kg/s liquid (assumed density 800 kg/m3). submission/DESIGN_REPORT.md section 11 also notes that no liquid density is published and 800 kg/m3 is assumed.",
+      "independent_check": "For the worst sampled drain flow, 0.5997 kg/s in DN150 with D=0.141 m gives velocity 0.5997/(800*pi*0.141^2/4)=about 0.048 m/s under the submission's assumed density.",
+      "result": "The drain velocity appears comfortably below 3 m/s under the stated assumption, but the assumption is not available from the public brief, so a definitive public-rule PASS cannot be uniquely reproduced.",
+      "why_it_matters": "This is not a submission violation by itself, but it limits independent reproducibility of the liquid-drain velocity requirement."
+    },
+    {
+      "finding_id": "F-003",
+      "status": "suspected_risk",
+      "severity": "medium",
+      "confidence": "medium",
+      "public_basis": "brief/project_requirements.json states the primary objective is to minimize benchmark LCC among feasible designs; brief/equipment_catalog/headers.json provides lower-cost HDR120 headers with 120 kg/s capacity, 10 branches, 16 MPa pressure rating, and the same footprint size as HDR180.",
+      "claim_or_requirement": "The submitted design installs five HDR180 headers and states an LCC of 89.2846 MBCU as the proposed design under the LCC objective.",
+      "submission_evidence": "submission/deliverables/design.json quantities list HDR180: 5. submission/DESIGN_REPORT.md section 4.1 states that replacing all five by HDR120 would lower LCC by about 0.59 MBCU but was not adopted because the well manifold would have no spare port and headers would operate at full-flow extremes.",
+      "independent_check": "Direct cost arithmetic gives 0.55 MBCU CAPEX saving plus 0.196 MBCU maintenance-PV saving for five HDR120 substitutions before energy penalty. HDR120 capacity equals the maximum 120 kg/s submitted flow and equality is accepted by the published tolerance; WH-01 uses 10 physical connections, matching HDR120's branch count, while the other headers use fewer than 10.",
+      "result": "There is a plausible lower-cost header alternative that appears aligned with public capacity/branch limits, but I did not create an exact remapped design with all HDR120 port coordinates, adjusted pipeline endpoints, geometry checks, and full hydraulic rerun. Therefore this is a suspected LCC-objective risk, not a confirmed lower-cost feasible alternative.",
+      "why_it_matters": "The public objective does not award spare capacity or robustness margin. If the HDR120 substitution is fully feasible, the submitted LCC is materially non-minimal by roughly the magnitude the report itself identifies."
+    }
+  ],
+  "limitations": [
+    "The active filesystem sandbox was read-only and rejected an attempted write under scratch/, so no evaluator-authored scratch scripts or intermediate files could be created. Independent calculations above were done manually from public formulas and submitted values, with scratch_files left empty.",
+    "I did not run submission/tools/build.py or optimize.py because build/optimize would write into submission deliverables and scratch copying was impossible in the read-only sandbox. I also did not treat submission self-check PASS outputs as independent evidence.",
+    "Hydraulic recomputation was targeted to representative high-risk pipes and equipment; it was not a full independent rerun of every pipe in every normal and outage scenario.",
+    "Geometry, road, maintenance, and pipeline-overlap checks were sampled by artifact inspection and manual coordinate checks; full polygonal intersection/overlap verification was not independently executed.",
+    "The suspected HDR120 lower-cost alternative was not fully reconstructed with exact port remapping, updated routes, and all scenario recalculations, so it is intentionally not classified as a confirmed lower-cost feasible design."
+  ],
+  "submission_alias": "submission_D",
+  "pass_id": "pass_02",
+  "evaluation_start_time_utc": "2026-09-25T08:28:05Z",
+  "evaluation_end_time_utc": "2026-09-25T08:38:06Z",
+  "evaluator_model": "gpt-5.5",
+  "reasoning_effort": "xhigh",
+  "codex_cli_version": "codex-cli-exec 0.130.0",
+  "process_exit_code": 0,
+  "replacement_attempts": 71
+}

@@ -1,0 +1,38 @@
+{
+  "analysis_start_time_utc": "2026-09-28T02:40:59Z",
+  "git_head": "fe9f6985701c7946ee70e70f71b6637e967339ed",
+  "remote_head": {
+    "tracking_ref": "refs/remotes/origin/codex/ugs-synth-d01",
+    "last_known_sha": "fe9f6985701c7946ee70e70f71b6637e967339ed",
+    "live_verification": "unavailable",
+    "reason": "git ls-remote could not connect to github.com:443 before reveal"
+  },
+  "frozen_reviews": {
+    "expected": 13,
+    "verified": 13,
+    "all_manifest_hashes_match": true,
+    "all_successful_review_records_valid": true
+  },
+  "submission_coverage": {
+    "covered": 8,
+    "total": 8,
+    "double_pass": 5,
+    "single_pass": 3
+  },
+  "blind_packages": {
+    "count": 8,
+    "package_input_hashes_match_baseline": true,
+    "integrity_baseline_sha256": "1f4f3f992f04b4f2a7ffe8a5fac668c7551d5e4bbbc80878f3f3072b84d2ef21"
+  },
+  "public_briefs": {
+    "file_count": 22,
+    "unchanged": true,
+    "common_tree_sha256": "d371c5450fc18c25c773e3fcaf753079f0c6af186bf2238e4905c9c09de25067"
+  },
+  "source_final_submissions": {
+    "checked": 8,
+    "frozen_artifact_hashes_match": true,
+    "match_blind_package_submissions_as_unordered_set": true
+  },
+  "manifest_verification_result": "PASS"
+}

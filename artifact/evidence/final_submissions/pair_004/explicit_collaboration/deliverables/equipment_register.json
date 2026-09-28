@@ -1,0 +1,1002 @@
+[
+  {
+    "instance_id": "COOL",
+    "model_id": "COOL120",
+    "category": "cooler",
+    "safety_category": "hydrocarbon_treatment",
+    "centre_x_m": 530.0,
+    "centre_y_m": 380.0,
+    "orientation_deg": 0.0,
+    "footprint_length_m": 12,
+    "footprint_width_m": 6,
+    "rated_capacity_kg_s": 120,
+    "capex_mbcu": 0.92,
+    "annual_maintenance_mbcu": 0.05,
+    "maintenance_clearance_m": 2.1,
+    "heavy_maintenance": false,
+    "road_access_required": false,
+    "crane_access_required": false,
+    "required_maintenance_area_m2": 93.24,
+    "ports": {
+      "gas_in": {
+        "type": "gas_in",
+        "x_m": 524.0,
+        "y_m": 380.0
+      },
+      "gas_out": {
+        "type": "gas_out",
+        "x_m": 536.0,
+        "y_m": 380.0
+      }
+    },
+    "catalogue_limits": {
+      "electric_power_fraction_of_duty": 0.035,
+      "maximum_duty_mw": 32.0,
+      "maximum_pressure_mpa": 16,
+      "minimum_outlet_temperature_c": 35.0,
+      "pressure_drop_mpa": 0.035
+    }
+  },
+  {
+    "instance_id": "DEHY-1",
+    "model_id": "DEHY70",
+    "category": "dehydration",
+    "safety_category": "hydrocarbon_treatment",
+    "centre_x_m": 555.0,
+    "centre_y_m": 250.0,
+    "orientation_deg": 0.0,
+    "footprint_length_m": 10,
+    "footprint_width_m": 5,
+    "rated_capacity_kg_s": 70,
+    "capex_mbcu": 1.85,
+    "annual_maintenance_mbcu": 0.095,
+    "maintenance_clearance_m": 2.0,
+    "heavy_maintenance": false,
+    "road_access_required": false,
+    "crane_access_required": false,
+    "required_maintenance_area_m2": 76.0,
+    "ports": {
+      "gas_in": {
+        "type": "gas_in",
+        "x_m": 550.0,
+        "y_m": 250.0
+      },
+      "gas_out": {
+        "type": "gas_out",
+        "x_m": 560.0,
+        "y_m": 250.0
+      }
+    },
+    "catalogue_limits": {
+      "energy_mw_per_kg_s": 0.018,
+      "maximum_feed_free_liquid_fraction": 0.0001,
+      "maximum_pressure_mpa": 16,
+      "normal_outlet_water_mg_sm3": 35.0,
+      "pressure_drop_mpa": 0.08
+    }
+  },
+  {
+    "instance_id": "DEHY-2",
+    "model_id": "DEHY70",
+    "category": "dehydration",
+    "safety_category": "hydrocarbon_treatment",
+    "centre_x_m": 555.0,
+    "centre_y_m": 195.0,
+    "orientation_deg": 0.0,
+    "footprint_length_m": 10,
+    "footprint_width_m": 5,
+    "rated_capacity_kg_s": 70,
+    "capex_mbcu": 1.85,
+    "annual_maintenance_mbcu": 0.095,
+    "maintenance_clearance_m": 2.0,
+    "heavy_maintenance": false,
+    "road_access_required": false,
+    "crane_access_required": false,
+    "required_maintenance_area_m2": 76.0,
+    "ports": {
+      "gas_in": {
+        "type": "gas_in",
+        "x_m": 550.0,
+        "y_m": 195.0
+      },
+      "gas_out": {
+        "type": "gas_out",
+        "x_m": 560.0,
+        "y_m": 195.0
+      }
+    },
+    "catalogue_limits": {
+      "energy_mw_per_kg_s": 0.018,
+      "maximum_feed_free_liquid_fraction": 0.0001,
+      "maximum_pressure_mpa": 16,
+      "normal_outlet_water_mg_sm3": 35.0,
+      "pressure_drop_mpa": 0.08
+    }
+  },
+  {
+    "instance_id": "DEHY-3",
+    "model_id": "DEHY70",
+    "category": "dehydration",
+    "safety_category": "hydrocarbon_treatment",
+    "centre_x_m": 555.0,
+    "centre_y_m": 140.0,
+    "orientation_deg": 0.0,
+    "footprint_length_m": 10,
+    "footprint_width_m": 5,
+    "rated_capacity_kg_s": 70,
+    "capex_mbcu": 1.85,
+    "annual_maintenance_mbcu": 0.095,
+    "maintenance_clearance_m": 2.0,
+    "heavy_maintenance": false,
+    "road_access_required": false,
+    "crane_access_required": false,
+    "required_maintenance_area_m2": 76.0,
+    "ports": {
+      "gas_in": {
+        "type": "gas_in",
+        "x_m": 550.0,
+        "y_m": 140.0
+      },
+      "gas_out": {
+        "type": "gas_out",
+        "x_m": 560.0,
+        "y_m": 140.0
+      }
+    },
+    "catalogue_limits": {
+      "energy_mw_per_kg_s": 0.018,
+      "maximum_feed_free_liquid_fraction": 0.0001,
+      "maximum_pressure_mpa": 16,
+      "normal_outlet_water_mg_sm3": 35.0,
+      "pressure_drop_mpa": 0.08
+    }
+  },
+  {
+    "instance_id": "DRN-1",
+    "model_id": "DRN-S",
+    "category": "closed_drain",
+    "safety_category": "drain",
+    "centre_x_m": 540.0,
+    "centre_y_m": 115.0,
+    "orientation_deg": 0.0,
+    "footprint_length_m": 2,
+    "footprint_width_m": 2,
+    "rated_capacity_kg_s": 0.8,
+    "capex_mbcu": 0.08,
+    "annual_maintenance_mbcu": 0.004,
+    "maintenance_clearance_m": 2.0,
+    "heavy_maintenance": false,
+    "road_access_required": false,
+    "crane_access_required": false,
+    "required_maintenance_area_m2": 32.0,
+    "ports": {
+      "drain_in": {
+        "type": "drain_in",
+        "x_m": 539.0,
+        "y_m": 115.0
+      },
+      "drain_out": {
+        "type": "drain_out",
+        "x_m": 541.0,
+        "y_m": 115.0
+      }
+    },
+    "catalogue_limits": {
+      "maximum_pressure_mpa": 1.0,
+      "pressure_drop_mpa": 0.0
+    }
+  },
+  {
+    "instance_id": "DRN-2",
+    "model_id": "DRN-S",
+    "category": "closed_drain",
+    "safety_category": "drain",
+    "centre_x_m": 540.0,
+    "centre_y_m": 105.0,
+    "orientation_deg": 0.0,
+    "footprint_length_m": 2,
+    "footprint_width_m": 2,
+    "rated_capacity_kg_s": 0.8,
+    "capex_mbcu": 0.08,
+    "annual_maintenance_mbcu": 0.004,
+    "maintenance_clearance_m": 2.0,
+    "heavy_maintenance": false,
+    "road_access_required": false,
+    "crane_access_required": false,
+    "required_maintenance_area_m2": 32.0,
+    "ports": {
+      "drain_in": {
+        "type": "drain_in",
+        "x_m": 539.0,
+        "y_m": 105.0
+      },
+      "drain_out": {
+        "type": "drain_out",
+        "x_m": 541.0,
+        "y_m": 105.0
+      }
+    },
+    "catalogue_limits": {
+      "maximum_pressure_mpa": 1.0,
+      "pressure_drop_mpa": 0.0
+    }
+  },
+  {
+    "instance_id": "DRN-3",
+    "model_id": "DRN-S",
+    "category": "closed_drain",
+    "safety_category": "drain",
+    "centre_x_m": 540.0,
+    "centre_y_m": 95.0,
+    "orientation_deg": 0.0,
+    "footprint_length_m": 2,
+    "footprint_width_m": 2,
+    "rated_capacity_kg_s": 0.8,
+    "capex_mbcu": 0.08,
+    "annual_maintenance_mbcu": 0.004,
+    "maintenance_clearance_m": 2.0,
+    "heavy_maintenance": false,
+    "road_access_required": false,
+    "crane_access_required": false,
+    "required_maintenance_area_m2": 32.0,
+    "ports": {
+      "drain_in": {
+        "type": "drain_in",
+        "x_m": 539.0,
+        "y_m": 95.0
+      },
+      "drain_out": {
+        "type": "drain_out",
+        "x_m": 541.0,
+        "y_m": 95.0
+      }
+    },
+    "catalogue_limits": {
+      "maximum_pressure_mpa": 1.0,
+      "pressure_drop_mpa": 0.0
+    }
+  },
+  {
+    "instance_id": "HDR-A",
+    "model_id": "HDR120",
+    "category": "header",
+    "safety_category": "hydrocarbon_treatment",
+    "centre_x_m": 345.0,
+    "centre_y_m": 380.0,
+    "orientation_deg": 0.0,
+    "footprint_length_m": 6,
+    "footprint_width_m": 3,
+    "rated_capacity_kg_s": 120,
+    "capex_mbcu": 0.25,
+    "annual_maintenance_mbcu": 0.012,
+    "maintenance_clearance_m": 2.0,
+    "heavy_maintenance": false,
+    "road_access_required": false,
+    "crane_access_required": false,
+    "required_maintenance_area_m2": 52.0,
+    "ports": {
+      "branch_01": {
+        "type": "gas_bidirectional",
+        "x_m": 343.0,
+        "y_m": 381.5
+      },
+      "branch_02": {
+        "type": "gas_bidirectional",
+        "x_m": 348.0,
+        "y_m": 381.0
+      },
+      "branch_03": {
+        "type": "gas_bidirectional",
+        "x_m": 346.5,
+        "y_m": 378.5
+      },
+      "branch_04": {
+        "type": "gas_bidirectional",
+        "x_m": 342.0,
+        "y_m": 379.25
+      },
+      "branch_05": {
+        "type": "gas_bidirectional",
+        "x_m": 345.0,
+        "y_m": 381.5
+      },
+      "branch_06": {
+        "type": "gas_bidirectional",
+        "x_m": 348.0,
+        "y_m": 380.0
+      },
+      "branch_07": {
+        "type": "gas_bidirectional",
+        "x_m": 343.5,
+        "y_m": 378.5
+      },
+      "branch_08": {
+        "type": "gas_bidirectional",
+        "x_m": 342.0,
+        "y_m": 380.75
+      },
+      "branch_09": {
+        "type": "gas_bidirectional",
+        "x_m": 347.0,
+        "y_m": 381.5
+      },
+      "branch_10": {
+        "type": "gas_bidirectional",
+        "x_m": 348.0,
+        "y_m": 379.0
+      }
+    },
+    "catalogue_limits": {
+      "maximum_branch_connections": 10,
+      "maximum_pressure_mpa": 16,
+      "pressure_drop_at_capacity_mpa": 0.01
+    }
+  },
+  {
+    "instance_id": "HDR-B",
+    "model_id": "HDR120",
+    "category": "header",
+    "safety_category": "hydrocarbon_treatment",
+    "centre_x_m": 470.0,
+    "centre_y_m": 380.0,
+    "orientation_deg": 0.0,
+    "footprint_length_m": 6,
+    "footprint_width_m": 3,
+    "rated_capacity_kg_s": 120,
+    "capex_mbcu": 0.25,
+    "annual_maintenance_mbcu": 0.012,
+    "maintenance_clearance_m": 2.0,
+    "heavy_maintenance": false,
+    "road_access_required": false,
+    "crane_access_required": false,
+    "required_maintenance_area_m2": 52.0,
+    "ports": {
+      "branch_01": {
+        "type": "gas_bidirectional",
+        "x_m": 468.0,
+        "y_m": 381.5
+      },
+      "branch_02": {
+        "type": "gas_bidirectional",
+        "x_m": 473.0,
+        "y_m": 381.0
+      },
+      "branch_03": {
+        "type": "gas_bidirectional",
+        "x_m": 471.5,
+        "y_m": 378.5
+      },
+      "branch_04": {
+        "type": "gas_bidirectional",
+        "x_m": 467.0,
+        "y_m": 379.25
+      },
+      "branch_05": {
+        "type": "gas_bidirectional",
+        "x_m": 470.0,
+        "y_m": 381.5
+      },
+      "branch_06": {
+        "type": "gas_bidirectional",
+        "x_m": 473.0,
+        "y_m": 380.0
+      },
+      "branch_07": {
+        "type": "gas_bidirectional",
+        "x_m": 468.5,
+        "y_m": 378.5
+      },
+      "branch_08": {
+        "type": "gas_bidirectional",
+        "x_m": 467.0,
+        "y_m": 380.75
+      },
+      "branch_09": {
+        "type": "gas_bidirectional",
+        "x_m": 472.0,
+        "y_m": 381.5
+      },
+      "branch_10": {
+        "type": "gas_bidirectional",
+        "x_m": 473.0,
+        "y_m": 379.0
+      }
+    },
+    "catalogue_limits": {
+      "maximum_branch_connections": 10,
+      "maximum_pressure_mpa": 16,
+      "pressure_drop_at_capacity_mpa": 0.01
+    }
+  },
+  {
+    "instance_id": "HDR-C",
+    "model_id": "HDR120",
+    "category": "header",
+    "safety_category": "hydrocarbon_treatment",
+    "centre_x_m": 340.0,
+    "centre_y_m": 245.0,
+    "orientation_deg": 0.0,
+    "footprint_length_m": 6,
+    "footprint_width_m": 3,
+    "rated_capacity_kg_s": 120,
+    "capex_mbcu": 0.25,
+    "annual_maintenance_mbcu": 0.012,
+    "maintenance_clearance_m": 2.0,
+    "heavy_maintenance": false,
+    "road_access_required": false,
+    "crane_access_required": false,
+    "required_maintenance_area_m2": 52.0,
+    "ports": {
+      "branch_01": {
+        "type": "gas_bidirectional",
+        "x_m": 338.0,
+        "y_m": 246.5
+      },
+      "branch_02": {
+        "type": "gas_bidirectional",
+        "x_m": 343.0,
+        "y_m": 246.0
+      },
+      "branch_03": {
+        "type": "gas_bidirectional",
+        "x_m": 341.5,
+        "y_m": 243.5
+      },
+      "branch_04": {
+        "type": "gas_bidirectional",
+        "x_m": 337.0,
+        "y_m": 244.25
+      },
+      "branch_05": {
+        "type": "gas_bidirectional",
+        "x_m": 340.0,
+        "y_m": 246.5
+      },
+      "branch_06": {
+        "type": "gas_bidirectional",
+        "x_m": 343.0,
+        "y_m": 245.0
+      },
+      "branch_07": {
+        "type": "gas_bidirectional",
+        "x_m": 338.5,
+        "y_m": 243.5
+      },
+      "branch_08": {
+        "type": "gas_bidirectional",
+        "x_m": 337.0,
+        "y_m": 245.75
+      },
+      "branch_09": {
+        "type": "gas_bidirectional",
+        "x_m": 342.0,
+        "y_m": 246.5
+      },
+      "branch_10": {
+        "type": "gas_bidirectional",
+        "x_m": 343.0,
+        "y_m": 244.0
+      }
+    },
+    "catalogue_limits": {
+      "maximum_branch_connections": 10,
+      "maximum_pressure_mpa": 16,
+      "pressure_drop_at_capacity_mpa": 0.01
+    }
+  },
+  {
+    "instance_id": "HDR-E",
+    "model_id": "HDR120",
+    "category": "header",
+    "safety_category": "hydrocarbon_treatment",
+    "centre_x_m": 470.0,
+    "centre_y_m": 178.0,
+    "orientation_deg": 0.0,
+    "footprint_length_m": 6,
+    "footprint_width_m": 3,
+    "rated_capacity_kg_s": 120,
+    "capex_mbcu": 0.25,
+    "annual_maintenance_mbcu": 0.012,
+    "maintenance_clearance_m": 2.0,
+    "heavy_maintenance": false,
+    "road_access_required": false,
+    "crane_access_required": false,
+    "required_maintenance_area_m2": 52.0,
+    "ports": {
+      "branch_01": {
+        "type": "gas_bidirectional",
+        "x_m": 468.0,
+        "y_m": 179.5
+      },
+      "branch_02": {
+        "type": "gas_bidirectional",
+        "x_m": 473.0,
+        "y_m": 179.0
+      },
+      "branch_03": {
+        "type": "gas_bidirectional",
+        "x_m": 471.5,
+        "y_m": 176.5
+      },
+      "branch_04": {
+        "type": "gas_bidirectional",
+        "x_m": 467.0,
+        "y_m": 177.25
+      },
+      "branch_05": {
+        "type": "gas_bidirectional",
+        "x_m": 470.0,
+        "y_m": 179.5
+      },
+      "branch_06": {
+        "type": "gas_bidirectional",
+        "x_m": 473.0,
+        "y_m": 178.0
+      },
+      "branch_07": {
+        "type": "gas_bidirectional",
+        "x_m": 468.5,
+        "y_m": 176.5
+      },
+      "branch_08": {
+        "type": "gas_bidirectional",
+        "x_m": 467.0,
+        "y_m": 178.75
+      },
+      "branch_09": {
+        "type": "gas_bidirectional",
+        "x_m": 472.0,
+        "y_m": 179.5
+      },
+      "branch_10": {
+        "type": "gas_bidirectional",
+        "x_m": 473.0,
+        "y_m": 177.0
+      }
+    },
+    "catalogue_limits": {
+      "maximum_branch_connections": 10,
+      "maximum_pressure_mpa": 16,
+      "pressure_drop_at_capacity_mpa": 0.01
+    }
+  },
+  {
+    "instance_id": "HDR-F",
+    "model_id": "HDR120",
+    "category": "header",
+    "safety_category": "hydrocarbon_treatment",
+    "centre_x_m": 605.0,
+    "centre_y_m": 190.0,
+    "orientation_deg": 0.0,
+    "footprint_length_m": 6,
+    "footprint_width_m": 3,
+    "rated_capacity_kg_s": 120,
+    "capex_mbcu": 0.25,
+    "annual_maintenance_mbcu": 0.012,
+    "maintenance_clearance_m": 2.0,
+    "heavy_maintenance": false,
+    "road_access_required": false,
+    "crane_access_required": false,
+    "required_maintenance_area_m2": 52.0,
+    "ports": {
+      "branch_01": {
+        "type": "gas_bidirectional",
+        "x_m": 603.0,
+        "y_m": 191.5
+      },
+      "branch_02": {
+        "type": "gas_bidirectional",
+        "x_m": 608.0,
+        "y_m": 191.0
+      },
+      "branch_03": {
+        "type": "gas_bidirectional",
+        "x_m": 606.5,
+        "y_m": 188.5
+      },
+      "branch_04": {
+        "type": "gas_bidirectional",
+        "x_m": 602.0,
+        "y_m": 189.25
+      },
+      "branch_05": {
+        "type": "gas_bidirectional",
+        "x_m": 605.0,
+        "y_m": 191.5
+      },
+      "branch_06": {
+        "type": "gas_bidirectional",
+        "x_m": 608.0,
+        "y_m": 190.0
+      },
+      "branch_07": {
+        "type": "gas_bidirectional",
+        "x_m": 603.5,
+        "y_m": 188.5
+      },
+      "branch_08": {
+        "type": "gas_bidirectional",
+        "x_m": 602.0,
+        "y_m": 190.75
+      },
+      "branch_09": {
+        "type": "gas_bidirectional",
+        "x_m": 607.0,
+        "y_m": 191.5
+      },
+      "branch_10": {
+        "type": "gas_bidirectional",
+        "x_m": 608.0,
+        "y_m": 189.0
+      }
+    },
+    "catalogue_limits": {
+      "maximum_branch_connections": 10,
+      "maximum_pressure_mpa": 16,
+      "pressure_drop_at_capacity_mpa": 0.01
+    }
+  },
+  {
+    "instance_id": "INJ-C1",
+    "model_id": "C60",
+    "category": "compressor",
+    "safety_category": "compressor",
+    "centre_x_m": 398.0,
+    "centre_y_m": 400.0,
+    "orientation_deg": 0.0,
+    "footprint_length_m": 15,
+    "footprint_width_m": 8,
+    "rated_capacity_kg_s": 60,
+    "capex_mbcu": 6.5,
+    "annual_maintenance_mbcu": 0.16,
+    "maintenance_clearance_m": 2.8,
+    "heavy_maintenance": true,
+    "road_access_required": true,
+    "crane_access_required": true,
+    "required_maintenance_area_m2": 219.04,
+    "ports": {
+      "suction": {
+        "type": "gas_in",
+        "x_m": 390.5,
+        "y_m": 400.0
+      },
+      "discharge": {
+        "type": "gas_out",
+        "x_m": 405.5,
+        "y_m": 400.0
+      }
+    },
+    "catalogue_limits": {
+      "driver_efficiency": 0.96,
+      "efficiency_proxy": 0.8,
+      "maximum_discharge_pressure_mpa": 16,
+      "maximum_discharge_temperature_c": 150.0,
+      "maximum_power_mw": 32.0,
+      "maximum_pressure_ratio": 2.4,
+      "maximum_suction_pressure_mpa": 14,
+      "maximum_suction_temperature_c": 65.0,
+      "minimum_stable_flow_kg_s": 15,
+      "pressure_drop_mpa": 0.0
+    }
+  },
+  {
+    "instance_id": "INJ-C2",
+    "model_id": "C60",
+    "category": "compressor",
+    "safety_category": "compressor",
+    "centre_x_m": 398.0,
+    "centre_y_m": 355.0,
+    "orientation_deg": 0.0,
+    "footprint_length_m": 15,
+    "footprint_width_m": 8,
+    "rated_capacity_kg_s": 60,
+    "capex_mbcu": 6.5,
+    "annual_maintenance_mbcu": 0.16,
+    "maintenance_clearance_m": 2.8,
+    "heavy_maintenance": true,
+    "road_access_required": true,
+    "crane_access_required": true,
+    "required_maintenance_area_m2": 219.04,
+    "ports": {
+      "suction": {
+        "type": "gas_in",
+        "x_m": 390.5,
+        "y_m": 355.0
+      },
+      "discharge": {
+        "type": "gas_out",
+        "x_m": 405.5,
+        "y_m": 355.0
+      }
+    },
+    "catalogue_limits": {
+      "driver_efficiency": 0.96,
+      "efficiency_proxy": 0.8,
+      "maximum_discharge_pressure_mpa": 16,
+      "maximum_discharge_temperature_c": 150.0,
+      "maximum_power_mw": 32.0,
+      "maximum_pressure_ratio": 2.4,
+      "maximum_suction_pressure_mpa": 14,
+      "maximum_suction_temperature_c": 65.0,
+      "minimum_stable_flow_kg_s": 15,
+      "pressure_drop_mpa": 0.0
+    }
+  },
+  {
+    "instance_id": "INJ-C3",
+    "model_id": "C40",
+    "category": "compressor",
+    "safety_category": "compressor",
+    "centre_x_m": 400.0,
+    "centre_y_m": 315.0,
+    "orientation_deg": 0.0,
+    "footprint_length_m": 12,
+    "footprint_width_m": 7,
+    "rated_capacity_kg_s": 40,
+    "capex_mbcu": 4.6,
+    "annual_maintenance_mbcu": 0.12,
+    "maintenance_clearance_m": 2.4,
+    "heavy_maintenance": true,
+    "road_access_required": true,
+    "crane_access_required": true,
+    "required_maintenance_area_m2": 154.56,
+    "ports": {
+      "suction": {
+        "type": "gas_in",
+        "x_m": 394.0,
+        "y_m": 315.0
+      },
+      "discharge": {
+        "type": "gas_out",
+        "x_m": 406.0,
+        "y_m": 315.0
+      }
+    },
+    "catalogue_limits": {
+      "driver_efficiency": 0.96,
+      "efficiency_proxy": 0.76,
+      "maximum_discharge_pressure_mpa": 16,
+      "maximum_discharge_temperature_c": 150.0,
+      "maximum_power_mw": 20.0,
+      "maximum_pressure_ratio": 2.4,
+      "maximum_suction_pressure_mpa": 12,
+      "maximum_suction_temperature_c": 65.0,
+      "minimum_stable_flow_kg_s": 10,
+      "pressure_drop_mpa": 0.0
+    }
+  },
+  {
+    "instance_id": "MTR-INJ",
+    "model_id": "MTR120",
+    "category": "meter",
+    "safety_category": "metering",
+    "centre_x_m": 640.0,
+    "centre_y_m": 300.0,
+    "orientation_deg": 90.0,
+    "footprint_length_m": 4,
+    "footprint_width_m": 2,
+    "rated_capacity_kg_s": 120,
+    "capex_mbcu": 0.3,
+    "annual_maintenance_mbcu": 0.016,
+    "maintenance_clearance_m": 2.0,
+    "heavy_maintenance": false,
+    "road_access_required": false,
+    "crane_access_required": false,
+    "required_maintenance_area_m2": 40.0,
+    "ports": {
+      "gas_in": {
+        "type": "gas_in",
+        "x_m": 640.0,
+        "y_m": 298.0
+      },
+      "gas_out": {
+        "type": "gas_out",
+        "x_m": 640.0,
+        "y_m": 302.0
+      }
+    },
+    "catalogue_limits": {
+      "maximum_pressure_mpa": 16,
+      "pressure_drop_mpa": 0.02
+    }
+  },
+  {
+    "instance_id": "MTR-WDR",
+    "model_id": "MTR120",
+    "category": "meter",
+    "safety_category": "metering",
+    "centre_x_m": 640.0,
+    "centre_y_m": 245.0,
+    "orientation_deg": 90.0,
+    "footprint_length_m": 4,
+    "footprint_width_m": 2,
+    "rated_capacity_kg_s": 120,
+    "capex_mbcu": 0.3,
+    "annual_maintenance_mbcu": 0.016,
+    "maintenance_clearance_m": 2.0,
+    "heavy_maintenance": false,
+    "road_access_required": false,
+    "crane_access_required": false,
+    "required_maintenance_area_m2": 40.0,
+    "ports": {
+      "gas_in": {
+        "type": "gas_in",
+        "x_m": 640.0,
+        "y_m": 243.0
+      },
+      "gas_out": {
+        "type": "gas_out",
+        "x_m": 640.0,
+        "y_m": 247.0
+      }
+    },
+    "catalogue_limits": {
+      "maximum_pressure_mpa": 16,
+      "pressure_drop_mpa": 0.02
+    }
+  },
+  {
+    "instance_id": "REG-WDR",
+    "model_id": "REG120",
+    "category": "regulator",
+    "safety_category": "pressure_control",
+    "centre_x_m": 640.0,
+    "centre_y_m": 190.0,
+    "orientation_deg": 90.0,
+    "footprint_length_m": 5,
+    "footprint_width_m": 3,
+    "rated_capacity_kg_s": 120,
+    "capex_mbcu": 0.34,
+    "annual_maintenance_mbcu": 0.018,
+    "maintenance_clearance_m": 2.0,
+    "heavy_maintenance": false,
+    "road_access_required": false,
+    "crane_access_required": false,
+    "required_maintenance_area_m2": 48.0,
+    "ports": {
+      "gas_in": {
+        "type": "gas_in",
+        "x_m": 640.0,
+        "y_m": 187.5
+      },
+      "gas_out": {
+        "type": "gas_out",
+        "x_m": 640.0,
+        "y_m": 192.5
+      }
+    },
+    "catalogue_limits": {
+      "jt_temperature_coefficient_k_per_mpa": 1.2,
+      "maximum_pressure_mpa": 16
+    }
+  },
+  {
+    "instance_id": "SEP-1",
+    "model_id": "SEP70",
+    "category": "separator",
+    "safety_category": "hydrocarbon_treatment",
+    "centre_x_m": 490.0,
+    "centre_y_m": 250.0,
+    "orientation_deg": 0.0,
+    "footprint_length_m": 8,
+    "footprint_width_m": 4,
+    "rated_capacity_kg_s": 70,
+    "capex_mbcu": 0.78,
+    "annual_maintenance_mbcu": 0.05,
+    "maintenance_clearance_m": 2.0,
+    "heavy_maintenance": false,
+    "road_access_required": true,
+    "crane_access_required": false,
+    "required_maintenance_area_m2": 64.0,
+    "ports": {
+      "gas_in": {
+        "type": "gas_in",
+        "x_m": 486.0,
+        "y_m": 250.0
+      },
+      "gas_out": {
+        "type": "gas_out",
+        "x_m": 494.0,
+        "y_m": 250.0
+      },
+      "liquid_out": {
+        "type": "liquid_out",
+        "x_m": 490.0,
+        "y_m": 248.0
+      }
+    },
+    "catalogue_limits": {
+      "liquid_removal_efficiency": 0.9995,
+      "maximum_feed_free_liquid_fraction": 0.05,
+      "maximum_liquid_rate_kg_s": 2.0,
+      "maximum_pressure_mpa": 16,
+      "pressure_drop_mpa": 0.03
+    }
+  },
+  {
+    "instance_id": "SEP-2",
+    "model_id": "SEP70",
+    "category": "separator",
+    "safety_category": "hydrocarbon_treatment",
+    "centre_x_m": 490.0,
+    "centre_y_m": 195.0,
+    "orientation_deg": 0.0,
+    "footprint_length_m": 8,
+    "footprint_width_m": 4,
+    "rated_capacity_kg_s": 70,
+    "capex_mbcu": 0.78,
+    "annual_maintenance_mbcu": 0.05,
+    "maintenance_clearance_m": 2.0,
+    "heavy_maintenance": false,
+    "road_access_required": true,
+    "crane_access_required": false,
+    "required_maintenance_area_m2": 64.0,
+    "ports": {
+      "gas_in": {
+        "type": "gas_in",
+        "x_m": 486.0,
+        "y_m": 195.0
+      },
+      "gas_out": {
+        "type": "gas_out",
+        "x_m": 494.0,
+        "y_m": 195.0
+      },
+      "liquid_out": {
+        "type": "liquid_out",
+        "x_m": 490.0,
+        "y_m": 193.0
+      }
+    },
+    "catalogue_limits": {
+      "liquid_removal_efficiency": 0.9995,
+      "maximum_feed_free_liquid_fraction": 0.05,
+      "maximum_liquid_rate_kg_s": 2.0,
+      "maximum_pressure_mpa": 16,
+      "pressure_drop_mpa": 0.03
+    }
+  },
+  {
+    "instance_id": "SEP-3",
+    "model_id": "SEP70",
+    "category": "separator",
+    "safety_category": "hydrocarbon_treatment",
+    "centre_x_m": 490.0,
+    "centre_y_m": 140.0,
+    "orientation_deg": 0.0,
+    "footprint_length_m": 8,
+    "footprint_width_m": 4,
+    "rated_capacity_kg_s": 70,
+    "capex_mbcu": 0.78,
+    "annual_maintenance_mbcu": 0.05,
+    "maintenance_clearance_m": 2.0,
+    "heavy_maintenance": false,
+    "road_access_required": true,
+    "crane_access_required": false,
+    "required_maintenance_area_m2": 64.0,
+    "ports": {
+      "gas_in": {
+        "type": "gas_in",
+        "x_m": 486.0,
+        "y_m": 140.0
+      },
+      "gas_out": {
+        "type": "gas_out",
+        "x_m": 494.0,
+        "y_m": 140.0
+      },
+      "liquid_out": {
+        "type": "liquid_out",
+        "x_m": 490.0,
+        "y_m": 138.0
+      }
+    },
+    "catalogue_limits": {
+      "liquid_removal_efficiency": 0.9995,
+      "maximum_feed_free_liquid_fraction": 0.05,
+      "maximum_liquid_rate_kg_s": 2.0,
+      "maximum_pressure_mpa": 16,
+      "pressure_drop_mpa": 0.03
+    }
+  }
+]

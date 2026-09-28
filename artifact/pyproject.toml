@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "self-organizing-engineering-agent"
+version = "0.1.0"
+description = "Research scaffold for a self-organizing long-horizon engineering design agent."
+requires-python = ">=3.10"
+readme = "README.md"
+dependencies = [
+    "dbos>=3.0,<4",
+    "jsonschema>=4.23,<5",
+    "networkx>=3.0,<4",
+    "shapely>=2.0,<3",
+]
+
+[project.optional-dependencies]
+visualization = ["matplotlib>=3.7,<4"]
+
+[tool.setuptools.packages.find]
+where = ["src"]

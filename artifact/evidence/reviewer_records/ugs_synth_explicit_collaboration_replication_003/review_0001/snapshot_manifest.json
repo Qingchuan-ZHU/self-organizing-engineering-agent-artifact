@@ -1,0 +1,122 @@
+{
+  "snapshot": {
+    "file_count": 10,
+    "files": {
+      "deliverables/": {
+        "kind": "directory"
+      },
+      "deliverables/README.md": {
+        "kind": "file",
+        "sha256": "097a53951b2c19e1732b3cfeeee4c6287b136eb4ad4b37ad6458a1ca1a20f2ff",
+        "size_bytes": 2048
+      },
+      "deliverables/design.json": {
+        "kind": "file",
+        "sha256": "b5edfbbbd83ad77c7c7fce90f811d7d12a2e225ccc70228cdf25235e8b809fc1",
+        "size_bytes": 152714
+      },
+      "deliverables/design_report.md": {
+        "kind": "file",
+        "sha256": "15c956ef4c130ca0de36550b7cb1e22e2e83f96ca6626546dfb60dc5943bb24a",
+        "size_bytes": 27887
+      },
+      "deliverables/layout.svg": {
+        "kind": "file",
+        "sha256": "87fbec8d1e64154ba979ab48cdb9d82abfa29c09d9444ef2abf374b628521d69",
+        "size_bytes": 25728
+      },
+      "deliverables/validation_report.md": {
+        "kind": "file",
+        "sha256": "ceb66388e66b8653ab10295d24edc132f97bf3206cdeb6567e8916f586e418bc",
+        "size_bytes": 2695
+      },
+      "ugs_build.py": {
+        "kind": "file",
+        "sha256": "69eea29009f64eccd92c611a84f7063f0e6682041b48fd3369da372239e2979f",
+        "size_bytes": 50300
+      },
+      "ugs_design.py": {
+        "kind": "file",
+        "sha256": "eb28dbee6e5fec87cf058b1f8d7fee0a300044372cf426380df74ab7bc2f2c2a",
+        "size_bytes": 23603
+      },
+      "ugs_lib.py": {
+        "kind": "file",
+        "sha256": "cbc33331715e9f6e3679aa64f31f0604ab641983ab0dca423d8832172858fc20",
+        "size_bytes": 14448
+      },
+      "ugs_solve.py": {
+        "kind": "file",
+        "sha256": "b003fb3c44cc0c5574cb78c398a54b4fdfe8c8c409cb75e627bd67c68239d2ca",
+        "size_bytes": 17712
+      },
+      "ugs_validate.py": {
+        "kind": "file",
+        "sha256": "840686bb5f912796b308e42f9ad63f53bd3a58118768cd4b099224149e6be539",
+        "size_bytes": 20605
+      }
+    },
+    "total_file_bytes": 337740
+  },
+  "snapshot_sha256": "972ed033a82539f1bd542dfd0c09b248634d1ff60106e9f1066624d44e921046",
+  "source_project": {
+    "file_count": 10,
+    "files": {
+      "deliverables/": {
+        "kind": "directory"
+      },
+      "deliverables/README.md": {
+        "kind": "file",
+        "sha256": "097a53951b2c19e1732b3cfeeee4c6287b136eb4ad4b37ad6458a1ca1a20f2ff",
+        "size_bytes": 2048
+      },
+      "deliverables/design.json": {
+        "kind": "file",
+        "sha256": "b5edfbbbd83ad77c7c7fce90f811d7d12a2e225ccc70228cdf25235e8b809fc1",
+        "size_bytes": 152714
+      },
+      "deliverables/design_report.md": {
+        "kind": "file",
+        "sha256": "15c956ef4c130ca0de36550b7cb1e22e2e83f96ca6626546dfb60dc5943bb24a",
+        "size_bytes": 27887
+      },
+      "deliverables/layout.svg": {
+        "kind": "file",
+        "sha256": "87fbec8d1e64154ba979ab48cdb9d82abfa29c09d9444ef2abf374b628521d69",
+        "size_bytes": 25728
+      },
+      "deliverables/validation_report.md": {
+        "kind": "file",
+        "sha256": "ceb66388e66b8653ab10295d24edc132f97bf3206cdeb6567e8916f586e418bc",
+        "size_bytes": 2695
+      },
+      "ugs_build.py": {
+        "kind": "file",
+        "sha256": "69eea29009f64eccd92c611a84f7063f0e6682041b48fd3369da372239e2979f",
+        "size_bytes": 50300
+      },
+      "ugs_design.py": {
+        "kind": "file",
+        "sha256": "eb28dbee6e5fec87cf058b1f8d7fee0a300044372cf426380df74ab7bc2f2c2a",
+        "size_bytes": 23603
+      },
+      "ugs_lib.py": {
+        "kind": "file",
+        "sha256": "cbc33331715e9f6e3679aa64f31f0604ab641983ab0dca423d8832172858fc20",
+        "size_bytes": 14448
+      },
+      "ugs_solve.py": {
+        "kind": "file",
+        "sha256": "b003fb3c44cc0c5574cb78c398a54b4fdfe8c8c409cb75e627bd67c68239d2ca",
+        "size_bytes": 17712
+      },
+      "ugs_validate.py": {
+        "kind": "file",
+        "sha256": "840686bb5f912796b308e42f9ad63f53bd3a58118768cd4b099224149e6be539",
+        "size_bytes": 20605
+      }
+    },
+    "total_file_bytes": 337740
+  },
+  "symlink_policy": "internal symlinks materialized as read-only content; links leaving project/ rejected"
+}

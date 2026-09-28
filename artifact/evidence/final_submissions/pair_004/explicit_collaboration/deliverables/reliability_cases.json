@@ -1,0 +1,1130 @@
+{
+  "requirement": {
+    "compression_n_minus_one": {
+      "failed_equipment_category": "compressor",
+      "minimum_retained_flow_fraction": 0.7,
+      "one_unit_unavailable_at_a_time": true,
+      "scenario_selector": "required_sink_pressure_mpa > source_pressure_mpa"
+    },
+    "delivery_requirements_remain_applicable_after_outage": true,
+    "withdrawal_treatment_n_minus_one": {
+      "failed_equipment_categories": [
+        "separator",
+        "dehydration"
+      ],
+      "minimum_retained_flow_fraction": 0.7,
+      "one_unit_unavailable_at_a_time": true,
+      "scenario_service": "withdrawal"
+    }
+  },
+  "cases": [
+    {
+      "scenario": "INJ-LOW",
+      "failed": "INJ-C1",
+      "reason": "compressor outage - compressor N-1",
+      "c40_suction_mpa": 6.463177,
+      "required_retained_flow_kg_s": 84.0,
+      "retained_capacity_kg_s": 100,
+      "capacity_margin_kg_s": 16.0,
+      "retained_flow_kg_s": 84.0,
+      "retained_fraction": 0.7,
+      "violations": [],
+      "delivered": {
+        "WG-06": {
+          "P": 8.5000000000945,
+          "T": 50.32741196886731,
+          "w": 40.0,
+          "fl": 0.0
+        },
+        "WG-05": {
+          "P": 8.5000000000362,
+          "T": 50.32741196886732,
+          "w": 40.0,
+          "fl": 0.0
+        },
+        "WG-04": {
+          "P": 8.50000000000005,
+          "T": 50.32741196886731,
+          "w": 40.0,
+          "fl": 0.0
+        },
+        "WG-03": {
+          "P": 8.50000000001081,
+          "T": 50.32741196886731,
+          "w": 40.0,
+          "fl": 0.0
+        },
+        "WG-02": {
+          "P": 8.500000000072246,
+          "T": 50.32741196886731,
+          "w": 40.0,
+          "fl": 0.0
+        },
+        "WG-01": {
+          "P": 8.500000000143837,
+          "T": 50.32741196886731,
+          "w": 40.0,
+          "fl": 0.0
+        }
+      },
+      "grid": null,
+      "energy_mw": 5.429563940825933
+    },
+    {
+      "scenario": "INJ-LOW",
+      "failed": "INJ-C2",
+      "reason": "compressor outage - compressor N-1",
+      "c40_suction_mpa": 6.463177,
+      "required_retained_flow_kg_s": 84.0,
+      "retained_capacity_kg_s": 100,
+      "capacity_margin_kg_s": 16.0,
+      "retained_flow_kg_s": 84.0,
+      "retained_fraction": 0.7,
+      "violations": [],
+      "delivered": {
+        "WG-06": {
+          "P": 8.500000000094962,
+          "T": 50.32481931545931,
+          "w": 40.0,
+          "fl": 0.0
+        },
+        "WG-05": {
+          "P": 8.500000000035294,
+          "T": 50.32481931545931,
+          "w": 40.0,
+          "fl": 0.0
+        },
+        "WG-04": {
+          "P": 8.500000000000037,
+          "T": 50.32481931545931,
+          "w": 40.0,
+          "fl": 0.0
+        },
+        "WG-03": {
+          "P": 8.500000000010317,
+          "T": 50.3248193154593,
+          "w": 40.0,
+          "fl": 0.0
+        },
+        "WG-02": {
+          "P": 8.500000000069502,
+          "T": 50.32481931545931,
+          "w": 40.0,
+          "fl": 0.0
+        },
+        "WG-01": {
+          "P": 8.500000000140993,
+          "T": 50.32481931545931,
+          "w": 40.0,
+          "fl": 0.0
+        }
+      },
+      "grid": null,
+      "energy_mw": 5.429008140751596
+    },
+    {
+      "scenario": "INJ-LOW",
+      "failed": "INJ-C3",
+      "reason": "compressor outage - compressor N-1",
+      "c40_suction_mpa": null,
+      "required_retained_flow_kg_s": 84.0,
+      "retained_capacity_kg_s": 120,
+      "capacity_margin_kg_s": 36.0,
+      "retained_flow_kg_s": 84.0,
+      "retained_fraction": 0.7,
+      "violations": [],
+      "delivered": {
+        "WG-06": {
+          "P": 8.500000000093864,
+          "T": 49.847771434932696,
+          "w": 40.0,
+          "fl": 0.0
+        },
+        "WG-05": {
+          "P": 8.50000000003899,
+          "T": 49.847771434932696,
+          "w": 40.0,
+          "fl": 0.0
+        },
+        "WG-04": {
+          "P": 8.5000000000001,
+          "T": 49.847771434932696,
+          "w": 40.0,
+          "fl": 0.0
+        },
+        "WG-03": {
+          "P": 8.500000000015053,
+          "T": 49.847771434932696,
+          "w": 40.0,
+          "fl": 0.0
+        },
+        "WG-02": {
+          "P": 8.500000000072287,
+          "T": 49.847771434932696,
+          "w": 40.0,
+          "fl": 0.0
+        },
+        "WG-01": {
+          "P": 8.500000000141975,
+          "T": 49.847771434932696,
+          "w": 40.0,
+          "fl": 0.0
+        }
+      },
+      "grid": null,
+      "energy_mw": 5.326741001363695
+    },
+    {
+      "scenario": "INJ-MID",
+      "failed": "INJ-C1",
+      "reason": "compressor outage - compressor N-1",
+      "c40_suction_mpa": 6.472191,
+      "required_retained_flow_kg_s": 70.0,
+      "retained_capacity_kg_s": 100,
+      "capacity_margin_kg_s": 30.0,
+      "retained_flow_kg_s": 70.0,
+      "retained_fraction": 0.7,
+      "violations": [],
+      "delivered": {
+        "WG-06": {
+          "P": 11.000000000001721,
+          "T": 58.0,
+          "w": 40.0,
+          "fl": 0.0
+        },
+        "WG-05": {
+          "P": 11.000000000000329,
+          "T": 58.0,
+          "w": 40.0,
+          "fl": 0.0
+        },
+        "WG-04": {
+          "P": 11.000000000000231,
+          "T": 58.0,
+          "w": 40.0,
+          "fl": 0.0
+        },
+        "WG-03": {
+          "P": 11.000000000000101,
+          "T": 58.0,
+          "w": 40.0,
+          "fl": 0.0
+        },
+        "WG-02": {
+          "P": 11.000000000002487,
+          "T": 58.0,
+          "w": 40.0,
+          "fl": 0.0
+        },
+        "WG-01": {
+          "P": 11.00000000000399,
+          "T": 58.0,
+          "w": 40.0,
+          "fl": 0.0
+        }
+      },
+      "grid": null,
+      "energy_mw": 8.913443094060852
+    },
+    {
+      "scenario": "INJ-MID",
+      "failed": "INJ-C2",
+      "reason": "compressor outage - compressor N-1",
+      "c40_suction_mpa": 6.472191,
+      "required_retained_flow_kg_s": 70.0,
+      "retained_capacity_kg_s": 100,
+      "capacity_margin_kg_s": 30.0,
+      "retained_flow_kg_s": 70.0,
+      "retained_fraction": 0.7,
+      "violations": [],
+      "delivered": {
+        "WG-06": {
+          "P": 11.000000000001712,
+          "T": 58.0,
+          "w": 40.0,
+          "fl": 0.0
+        },
+        "WG-05": {
+          "P": 11.00000000000032,
+          "T": 58.0,
+          "w": 40.0,
+          "fl": 0.0
+        },
+        "WG-04": {
+          "P": 11.000000000000222,
+          "T": 58.0,
+          "w": 40.0,
+          "fl": 0.0
+        },
+        "WG-03": {
+          "P": 11.000000000000092,
+          "T": 58.0,
+          "w": 40.0,
+          "fl": 0.0
+        },
+        "WG-02": {
+          "P": 11.000000000002478,
+          "T": 58.0,
+          "w": 40.0,
+          "fl": 0.0
+        },
+        "WG-01": {
+          "P": 11.00000000000398,
+          "T": 58.0,
+          "w": 40.0,
+          "fl": 0.0
+        }
+      },
+      "grid": null,
+      "energy_mw": 8.912663126876618
+    },
+    {
+      "scenario": "INJ-MID",
+      "failed": "INJ-C3",
+      "reason": "compressor outage - compressor N-1",
+      "c40_suction_mpa": null,
+      "required_retained_flow_kg_s": 70.0,
+      "retained_capacity_kg_s": 120,
+      "capacity_margin_kg_s": 50.0,
+      "retained_flow_kg_s": 70.0,
+      "retained_fraction": 0.7,
+      "violations": [],
+      "delivered": {
+        "WG-06": {
+          "P": 11.000000000001691,
+          "T": 58.0,
+          "w": 40.0,
+          "fl": 0.0
+        },
+        "WG-05": {
+          "P": 11.000000000000298,
+          "T": 58.0,
+          "w": 40.0,
+          "fl": 0.0
+        },
+        "WG-04": {
+          "P": 11.0000000000002,
+          "T": 58.0,
+          "w": 40.0,
+          "fl": 0.0
+        },
+        "WG-03": {
+          "P": 11.000000000000071,
+          "T": 58.0,
+          "w": 40.0,
+          "fl": 0.0
+        },
+        "WG-02": {
+          "P": 11.000000000002457,
+          "T": 58.0,
+          "w": 40.0,
+          "fl": 0.0
+        },
+        "WG-01": {
+          "P": 11.00000000000396,
+          "T": 58.0,
+          "w": 40.0,
+          "fl": 0.0
+        }
+      },
+      "grid": null,
+      "energy_mw": 8.83987123836277
+    },
+    {
+      "scenario": "INJ-HIGH",
+      "failed": "INJ-C1",
+      "reason": "compressor outage - compressor N-1",
+      "c40_suction_mpa": 6.475006,
+      "required_retained_flow_kg_s": 52.5,
+      "retained_capacity_kg_s": 100,
+      "capacity_margin_kg_s": 47.5,
+      "retained_flow_kg_s": 52.5,
+      "retained_fraction": 0.7,
+      "violations": [],
+      "delivered": {
+        "WG-06": {
+          "P": 13.500000000002267,
+          "T": 58.0,
+          "w": 40.0,
+          "fl": 0.0
+        },
+        "WG-05": {
+          "P": 13.500000000001341,
+          "T": 58.0,
+          "w": 40.0,
+          "fl": 0.0
+        },
+        "WG-04": {
+          "P": 13.50000000000001,
+          "T": 58.0,
+          "w": 40.0,
+          "fl": 0.0
+        },
+        "WG-03": {
+          "P": 13.500000000000762,
+          "T": 58.0,
+          "w": 40.0,
+          "fl": 0.0
+        },
+        "WG-02": {
+          "P": 13.500000000000455,
+          "T": 58.0,
+          "w": 40.0,
+          "fl": 0.0
+        },
+        "WG-01": {
+          "P": 13.500000000002734,
+          "T": 58.0,
+          "w": 40.0,
+          "fl": 0.0
+        }
+      },
+      "grid": null,
+      "energy_mw": 9.528533275028474
+    },
+    {
+      "scenario": "INJ-HIGH",
+      "failed": "INJ-C2",
+      "reason": "compressor outage - compressor N-1",
+      "c40_suction_mpa": 6.475006,
+      "required_retained_flow_kg_s": 52.5,
+      "retained_capacity_kg_s": 100,
+      "capacity_margin_kg_s": 47.5,
+      "retained_flow_kg_s": 52.5,
+      "retained_fraction": 0.7,
+      "violations": [],
+      "delivered": {
+        "WG-06": {
+          "P": 13.500000000002299,
+          "T": 58.0,
+          "w": 40.0,
+          "fl": 0.0
+        },
+        "WG-05": {
+          "P": 13.500000000001373,
+          "T": 58.0,
+          "w": 40.0,
+          "fl": 0.0
+        },
+        "WG-04": {
+          "P": 13.500000000000043,
+          "T": 58.0,
+          "w": 40.0,
+          "fl": 0.0
+        },
+        "WG-03": {
+          "P": 13.500000000000794,
+          "T": 58.0,
+          "w": 40.0,
+          "fl": 0.0
+        },
+        "WG-02": {
+          "P": 13.500000000000487,
+          "T": 58.0,
+          "w": 40.0,
+          "fl": 0.0
+        },
+        "WG-01": {
+          "P": 13.500000000002766,
+          "T": 58.0,
+          "w": 40.0,
+          "fl": 0.0
+        }
+      },
+      "grid": null,
+      "energy_mw": 9.528305829830519
+    },
+    {
+      "scenario": "INJ-HIGH",
+      "failed": "INJ-C3",
+      "reason": "compressor outage - compressor N-1",
+      "c40_suction_mpa": null,
+      "required_retained_flow_kg_s": 52.5,
+      "retained_capacity_kg_s": 120,
+      "capacity_margin_kg_s": 67.5,
+      "retained_flow_kg_s": 52.5,
+      "retained_fraction": 0.7,
+      "violations": [],
+      "delivered": {
+        "WG-06": {
+          "P": 13.500000000002306,
+          "T": 58.0,
+          "w": 40.0,
+          "fl": 0.0
+        },
+        "WG-05": {
+          "P": 13.50000000000138,
+          "T": 58.0,
+          "w": 40.0,
+          "fl": 0.0
+        },
+        "WG-04": {
+          "P": 13.50000000000005,
+          "T": 58.0,
+          "w": 40.0,
+          "fl": 0.0
+        },
+        "WG-03": {
+          "P": 13.500000000000801,
+          "T": 58.0,
+          "w": 40.0,
+          "fl": 0.0
+        },
+        "WG-02": {
+          "P": 13.500000000000494,
+          "T": 58.0,
+          "w": 40.0,
+          "fl": 0.0
+        },
+        "WG-01": {
+          "P": 13.500000000002773,
+          "T": 58.0,
+          "w": 40.0,
+          "fl": 0.0
+        }
+      },
+      "grid": null,
+      "energy_mw": 9.430233981161248
+    },
+    {
+      "scenario": "WDR-LOW",
+      "failed": "INJ-C1",
+      "reason": "compressor outage - compressor N-1",
+      "c40_suction_mpa": 4.485885,
+      "required_retained_flow_kg_s": 49.0,
+      "retained_capacity_kg_s": 100,
+      "capacity_margin_kg_s": 51.0,
+      "retained_flow_kg_s": 49.0,
+      "retained_fraction": 0.7,
+      "violations": [],
+      "delivered": {
+        "LIQUID-DRAIN-OUTFALL": {
+          "P": 1.0,
+          "T": 50.93598074398493,
+          "w": 220.0,
+          "fl": 4.99999999999945e-06
+        },
+        "GRID-TIE": {
+          "P": 6.000000000000079,
+          "T": 50.695980743983085,
+          "w": 35.0,
+          "fl": 4.99999999999945e-06
+        }
+      },
+      "grid": {
+        "P": 6.000000000000079
+      },
+      "energy_mw": 4.750608841936526
+    },
+    {
+      "scenario": "WDR-LOW",
+      "failed": "INJ-C2",
+      "reason": "compressor outage - compressor N-1",
+      "c40_suction_mpa": 4.485885,
+      "required_retained_flow_kg_s": 49.0,
+      "retained_capacity_kg_s": 100,
+      "capacity_margin_kg_s": 51.0,
+      "retained_flow_kg_s": 49.0,
+      "retained_fraction": 0.7,
+      "violations": [],
+      "delivered": {
+        "LIQUID-DRAIN-OUTFALL": {
+          "P": 1.0,
+          "T": 50.933493622474785,
+          "w": 220.0,
+          "fl": 4.99999999999945e-06
+        },
+        "GRID-TIE": {
+          "P": 6.000000000000124,
+          "T": 50.69349362247294,
+          "w": 35.0,
+          "fl": 4.99999999999945e-06
+        }
+      },
+      "grid": {
+        "P": 6.000000000000124
+      },
+      "energy_mw": 4.750297821539627
+    },
+    {
+      "scenario": "WDR-LOW",
+      "failed": "INJ-C3",
+      "reason": "compressor outage - compressor N-1",
+      "c40_suction_mpa": null,
+      "required_retained_flow_kg_s": 49.0,
+      "retained_capacity_kg_s": 120,
+      "capacity_margin_kg_s": 71.0,
+      "retained_flow_kg_s": 49.0,
+      "retained_fraction": 0.7,
+      "violations": [],
+      "delivered": {
+        "LIQUID-DRAIN-OUTFALL": {
+          "P": 1.0,
+          "T": 50.570781326912595,
+          "w": 220.0,
+          "fl": 4.99999999999945e-06
+        },
+        "GRID-TIE": {
+          "P": 6.0000000000000435,
+          "T": 50.33078132691076,
+          "w": 35.0,
+          "fl": 4.99999999999945e-06
+        }
+      },
+      "grid": {
+        "P": 6.0000000000000435
+      },
+      "energy_mw": 4.704939893328959
+    },
+    {
+      "scenario": "WDR-HIGH",
+      "failed": "SEP-1",
+      "reason": "treatment outage - withdrawal N-1",
+      "c40_suction_mpa": null,
+      "required_retained_flow_kg_s": 84.0,
+      "retained_capacity_kg_s": 140,
+      "capacity_margin_kg_s": 56.0,
+      "retained_flow_kg_s": 84.0,
+      "retained_fraction": 0.7,
+      "violations": [],
+      "delivered": {
+        "LIQUID-DRAIN-OUTFALL": {
+          "P": 1.0,
+          "T": 20.0,
+          "w": 220.0,
+          "fl": 4.99999999999945e-06
+        },
+        "GRID-TIE": {
+          "P": 6.000000000000102,
+          "T": 13.037972891342744,
+          "w": 35.0,
+          "fl": 4.99999999999945e-06
+        }
+      },
+      "grid": {
+        "P": 6.000000000000102
+      },
+      "energy_mw": 1.5120000007376073
+    },
+    {
+      "scenario": "WDR-HIGH",
+      "failed": "SEP-2",
+      "reason": "treatment outage - withdrawal N-1",
+      "c40_suction_mpa": null,
+      "required_retained_flow_kg_s": 84.0,
+      "retained_capacity_kg_s": 140,
+      "capacity_margin_kg_s": 56.0,
+      "retained_flow_kg_s": 84.0,
+      "retained_fraction": 0.7,
+      "violations": [],
+      "delivered": {
+        "LIQUID-DRAIN-OUTFALL": {
+          "P": 1.0,
+          "T": 20.0,
+          "w": 220.0,
+          "fl": 4.99999999999945e-06
+        },
+        "GRID-TIE": {
+          "P": 6.000000000000126,
+          "T": 13.045732485597647,
+          "w": 35.0,
+          "fl": 4.99999999999945e-06
+        }
+      },
+      "grid": {
+        "P": 6.000000000000126
+      },
+      "energy_mw": 1.5120000002346932
+    },
+    {
+      "scenario": "WDR-HIGH",
+      "failed": "SEP-3",
+      "reason": "treatment outage - withdrawal N-1",
+      "c40_suction_mpa": null,
+      "required_retained_flow_kg_s": 84.0,
+      "retained_capacity_kg_s": 140,
+      "capacity_margin_kg_s": 56.0,
+      "retained_flow_kg_s": 84.0,
+      "retained_fraction": 0.7,
+      "violations": [],
+      "delivered": {
+        "LIQUID-DRAIN-OUTFALL": {
+          "P": 1.0,
+          "T": 20.0,
+          "w": 220.0,
+          "fl": 4.99999999999945e-06
+        },
+        "GRID-TIE": {
+          "P": 6.000000000000059,
+          "T": 13.039898459808004,
+          "w": 35.0,
+          "fl": 4.999999999999449e-06
+        }
+      },
+      "grid": {
+        "P": 6.000000000000059
+      },
+      "energy_mw": 1.5120000003185123
+    },
+    {
+      "scenario": "WDR-HIGH",
+      "failed": "DEHY-1",
+      "reason": "treatment outage - withdrawal N-1",
+      "c40_suction_mpa": null,
+      "required_retained_flow_kg_s": 84.0,
+      "retained_capacity_kg_s": 140,
+      "capacity_margin_kg_s": 56.0,
+      "retained_flow_kg_s": 84.0,
+      "retained_fraction": 0.7,
+      "violations": [],
+      "delivered": {
+        "LIQUID-DRAIN-OUTFALL": {
+          "P": 1.0,
+          "T": 20.0,
+          "w": 220.0,
+          "fl": 4.99999999999945e-06
+        },
+        "GRID-TIE": {
+          "P": 6.000000000000102,
+          "T": 13.037972891342744,
+          "w": 35.0,
+          "fl": 4.99999999999945e-06
+        }
+      },
+      "grid": {
+        "P": 6.000000000000102
+      },
+      "energy_mw": 1.5120000007376073
+    },
+    {
+      "scenario": "WDR-HIGH",
+      "failed": "DEHY-2",
+      "reason": "treatment outage - withdrawal N-1",
+      "c40_suction_mpa": null,
+      "required_retained_flow_kg_s": 84.0,
+      "retained_capacity_kg_s": 140,
+      "capacity_margin_kg_s": 56.0,
+      "retained_flow_kg_s": 84.0,
+      "retained_fraction": 0.7,
+      "violations": [],
+      "delivered": {
+        "LIQUID-DRAIN-OUTFALL": {
+          "P": 1.0,
+          "T": 20.0,
+          "w": 220.0,
+          "fl": 4.99999999999945e-06
+        },
+        "GRID-TIE": {
+          "P": 6.000000000000126,
+          "T": 13.045732485597647,
+          "w": 35.0,
+          "fl": 4.99999999999945e-06
+        }
+      },
+      "grid": {
+        "P": 6.000000000000126
+      },
+      "energy_mw": 1.5120000002346932
+    },
+    {
+      "scenario": "WDR-HIGH",
+      "failed": "DEHY-3",
+      "reason": "treatment outage - withdrawal N-1",
+      "c40_suction_mpa": null,
+      "required_retained_flow_kg_s": 84.0,
+      "retained_capacity_kg_s": 140,
+      "capacity_margin_kg_s": 56.0,
+      "retained_flow_kg_s": 84.0,
+      "retained_fraction": 0.7,
+      "violations": [],
+      "delivered": {
+        "LIQUID-DRAIN-OUTFALL": {
+          "P": 1.0,
+          "T": 20.0,
+          "w": 220.0,
+          "fl": 4.99999999999945e-06
+        },
+        "GRID-TIE": {
+          "P": 6.000000000000059,
+          "T": 13.039898459808004,
+          "w": 35.0,
+          "fl": 4.999999999999449e-06
+        }
+      },
+      "grid": {
+        "P": 6.000000000000059
+      },
+      "energy_mw": 1.5120000003185123
+    },
+    {
+      "scenario": "WDR-MID",
+      "failed": "SEP-1",
+      "reason": "treatment outage - withdrawal N-1",
+      "c40_suction_mpa": null,
+      "required_retained_flow_kg_s": 70.0,
+      "retained_capacity_kg_s": 140,
+      "capacity_margin_kg_s": 70.0,
+      "retained_flow_kg_s": 70.0,
+      "retained_fraction": 0.7,
+      "violations": [],
+      "delivered": {
+        "LIQUID-DRAIN-OUTFALL": {
+          "P": 1.0,
+          "T": 20.0,
+          "w": 220.0,
+          "fl": 4.99999999999945e-06
+        },
+        "GRID-TIE": {
+          "P": 6.000000000000039,
+          "T": 17.827768714822543,
+          "w": 35.0,
+          "fl": 4.99999999999945e-06
+        }
+      },
+      "grid": {
+        "P": 6.000000000000039
+      },
+      "energy_mw": 1.260000000419095
+    },
+    {
+      "scenario": "WDR-MID",
+      "failed": "SEP-2",
+      "reason": "treatment outage - withdrawal N-1",
+      "c40_suction_mpa": null,
+      "required_retained_flow_kg_s": 70.0,
+      "retained_capacity_kg_s": 140,
+      "capacity_margin_kg_s": 70.0,
+      "retained_flow_kg_s": 70.0,
+      "retained_fraction": 0.7,
+      "violations": [],
+      "delivered": {
+        "LIQUID-DRAIN-OUTFALL": {
+          "P": 1.0,
+          "T": 20.0,
+          "w": 220.00000000000003,
+          "fl": 4.99999999999945e-06
+        },
+        "GRID-TIE": {
+          "P": 6.000000000000044,
+          "T": 17.83582906758431,
+          "w": 35.0,
+          "fl": 4.99999999999945e-06
+        }
+      },
+      "grid": {
+        "P": 6.000000000000044
+      },
+      "energy_mw": 1.260000000251457
+    },
+    {
+      "scenario": "WDR-MID",
+      "failed": "SEP-3",
+      "reason": "treatment outage - withdrawal N-1",
+      "c40_suction_mpa": null,
+      "required_retained_flow_kg_s": 70.0,
+      "retained_capacity_kg_s": 140,
+      "capacity_margin_kg_s": 70.0,
+      "retained_flow_kg_s": 70.0,
+      "retained_fraction": 0.7,
+      "violations": [],
+      "delivered": {
+        "LIQUID-DRAIN-OUTFALL": {
+          "P": 1.0,
+          "T": 20.0,
+          "w": 220.00000000000003,
+          "fl": 4.99999999999945e-06
+        },
+        "GRID-TIE": {
+          "P": 6.0000000000001,
+          "T": 17.82976196316542,
+          "w": 35.0,
+          "fl": 4.99999999999945e-06
+        }
+      },
+      "grid": {
+        "P": 6.0000000000001
+      },
+      "energy_mw": 1.2599999995809048
+    },
+    {
+      "scenario": "WDR-MID",
+      "failed": "DEHY-1",
+      "reason": "treatment outage - withdrawal N-1",
+      "c40_suction_mpa": null,
+      "required_retained_flow_kg_s": 70.0,
+      "retained_capacity_kg_s": 140,
+      "capacity_margin_kg_s": 70.0,
+      "retained_flow_kg_s": 70.0,
+      "retained_fraction": 0.7,
+      "violations": [],
+      "delivered": {
+        "LIQUID-DRAIN-OUTFALL": {
+          "P": 1.0,
+          "T": 20.0,
+          "w": 220.0,
+          "fl": 4.99999999999945e-06
+        },
+        "GRID-TIE": {
+          "P": 6.000000000000039,
+          "T": 17.827768714822543,
+          "w": 35.0,
+          "fl": 4.99999999999945e-06
+        }
+      },
+      "grid": {
+        "P": 6.000000000000039
+      },
+      "energy_mw": 1.260000000419095
+    },
+    {
+      "scenario": "WDR-MID",
+      "failed": "DEHY-2",
+      "reason": "treatment outage - withdrawal N-1",
+      "c40_suction_mpa": null,
+      "required_retained_flow_kg_s": 70.0,
+      "retained_capacity_kg_s": 140,
+      "capacity_margin_kg_s": 70.0,
+      "retained_flow_kg_s": 70.0,
+      "retained_fraction": 0.7,
+      "violations": [],
+      "delivered": {
+        "LIQUID-DRAIN-OUTFALL": {
+          "P": 1.0,
+          "T": 20.0,
+          "w": 220.00000000000003,
+          "fl": 4.99999999999945e-06
+        },
+        "GRID-TIE": {
+          "P": 6.000000000000044,
+          "T": 17.83582906758431,
+          "w": 35.0,
+          "fl": 4.99999999999945e-06
+        }
+      },
+      "grid": {
+        "P": 6.000000000000044
+      },
+      "energy_mw": 1.260000000251457
+    },
+    {
+      "scenario": "WDR-MID",
+      "failed": "DEHY-3",
+      "reason": "treatment outage - withdrawal N-1",
+      "c40_suction_mpa": null,
+      "required_retained_flow_kg_s": 70.0,
+      "retained_capacity_kg_s": 140,
+      "capacity_margin_kg_s": 70.0,
+      "retained_flow_kg_s": 70.0,
+      "retained_fraction": 0.7,
+      "violations": [],
+      "delivered": {
+        "LIQUID-DRAIN-OUTFALL": {
+          "P": 1.0,
+          "T": 20.0,
+          "w": 220.00000000000003,
+          "fl": 4.99999999999945e-06
+        },
+        "GRID-TIE": {
+          "P": 6.0000000000001,
+          "T": 17.82976196316542,
+          "w": 35.0,
+          "fl": 4.99999999999945e-06
+        }
+      },
+      "grid": {
+        "P": 6.0000000000001
+      },
+      "energy_mw": 1.2599999995809048
+    },
+    {
+      "scenario": "WDR-LOW",
+      "failed": "SEP-1",
+      "reason": "treatment outage - withdrawal N-1",
+      "c40_suction_mpa": null,
+      "required_retained_flow_kg_s": 49.0,
+      "retained_capacity_kg_s": 140,
+      "capacity_margin_kg_s": 91.0,
+      "retained_flow_kg_s": 49.0,
+      "retained_fraction": 0.7,
+      "violations": [],
+      "delivered": {
+        "LIQUID-DRAIN-OUTFALL": {
+          "P": 1.0,
+          "T": 50.65687089551571,
+          "w": 220.0,
+          "fl": 4.99999999999945e-06
+        },
+        "GRID-TIE": {
+          "P": 6.000000000000119,
+          "T": 50.41687089551379,
+          "w": 35.0,
+          "fl": 4.999999999999449e-06
+        }
+      },
+      "grid": {
+        "P": 6.000000000000119
+      },
+      "energy_mw": 4.715705573864693
+    },
+    {
+      "scenario": "WDR-LOW",
+      "failed": "SEP-2",
+      "reason": "treatment outage - withdrawal N-1",
+      "c40_suction_mpa": null,
+      "required_retained_flow_kg_s": 49.0,
+      "retained_capacity_kg_s": 140,
+      "capacity_margin_kg_s": 91.0,
+      "retained_flow_kg_s": 49.0,
+      "retained_fraction": 0.7,
+      "violations": [],
+      "delivered": {
+        "LIQUID-DRAIN-OUTFALL": {
+          "P": 1.0,
+          "T": 50.72288739216695,
+          "w": 220.0,
+          "fl": 4.99999999999945e-06
+        },
+        "GRID-TIE": {
+          "P": 6.000000000000061,
+          "T": 50.482887392165054,
+          "w": 35.0,
+          "fl": 4.999999999999449e-06
+        }
+      },
+      "grid": {
+        "P": 6.000000000000061
+      },
+      "energy_mw": 4.723961074724396
+    },
+    {
+      "scenario": "WDR-LOW",
+      "failed": "SEP-3",
+      "reason": "treatment outage - withdrawal N-1",
+      "c40_suction_mpa": null,
+      "required_retained_flow_kg_s": 49.0,
+      "retained_capacity_kg_s": 140,
+      "capacity_margin_kg_s": 91.0,
+      "retained_flow_kg_s": 49.0,
+      "retained_fraction": 0.7,
+      "violations": [],
+      "delivered": {
+        "LIQUID-DRAIN-OUTFALL": {
+          "P": 1.0,
+          "T": 50.673163347190744,
+          "w": 220.0,
+          "fl": 4.99999999999945e-06
+        },
+        "GRID-TIE": {
+          "P": 6.000000000000009,
+          "T": 50.433163347188845,
+          "w": 35.0,
+          "fl": 4.99999999999945e-06
+        }
+      },
+      "grid": {
+        "P": 6.000000000000009
+      },
+      "energy_mw": 4.7177429788892615
+    },
+    {
+      "scenario": "WDR-LOW",
+      "failed": "DEHY-1",
+      "reason": "treatment outage - withdrawal N-1",
+      "c40_suction_mpa": null,
+      "required_retained_flow_kg_s": 49.0,
+      "retained_capacity_kg_s": 140,
+      "capacity_margin_kg_s": 91.0,
+      "retained_flow_kg_s": 49.0,
+      "retained_fraction": 0.7,
+      "violations": [],
+      "delivered": {
+        "LIQUID-DRAIN-OUTFALL": {
+          "P": 1.0,
+          "T": 50.65687089551571,
+          "w": 220.0,
+          "fl": 4.99999999999945e-06
+        },
+        "GRID-TIE": {
+          "P": 6.000000000000119,
+          "T": 50.41687089551379,
+          "w": 35.0,
+          "fl": 4.999999999999449e-06
+        }
+      },
+      "grid": {
+        "P": 6.000000000000119
+      },
+      "energy_mw": 4.715705573864693
+    },
+    {
+      "scenario": "WDR-LOW",
+      "failed": "DEHY-2",
+      "reason": "treatment outage - withdrawal N-1",
+      "c40_suction_mpa": null,
+      "required_retained_flow_kg_s": 49.0,
+      "retained_capacity_kg_s": 140,
+      "capacity_margin_kg_s": 91.0,
+      "retained_flow_kg_s": 49.0,
+      "retained_fraction": 0.7,
+      "violations": [],
+      "delivered": {
+        "LIQUID-DRAIN-OUTFALL": {
+          "P": 1.0,
+          "T": 50.72288739216695,
+          "w": 220.0,
+          "fl": 4.99999999999945e-06
+        },
+        "GRID-TIE": {
+          "P": 6.000000000000061,
+          "T": 50.482887392165054,
+          "w": 35.0,
+          "fl": 4.999999999999449e-06
+        }
+      },
+      "grid": {
+        "P": 6.000000000000061
+      },
+      "energy_mw": 4.723961074724396
+    },
+    {
+      "scenario": "WDR-LOW",
+      "failed": "DEHY-3",
+      "reason": "treatment outage - withdrawal N-1",
+      "c40_suction_mpa": null,
+      "required_retained_flow_kg_s": 49.0,
+      "retained_capacity_kg_s": 140,
+      "capacity_margin_kg_s": 91.0,
+      "retained_flow_kg_s": 49.0,
+      "retained_fraction": 0.7,
+      "violations": [],
+      "delivered": {
+        "LIQUID-DRAIN-OUTFALL": {
+          "P": 1.0,
+          "T": 50.673163347190744,
+          "w": 220.0,
+          "fl": 4.99999999999945e-06
+        },
+        "GRID-TIE": {
+          "P": 6.000000000000009,
+          "T": 50.433163347188845,
+          "w": 35.0,
+          "fl": 4.99999999999945e-06
+        }
+      },
+      "grid": {
+        "P": 6.000000000000009
+      },
+      "energy_mw": 4.7177429788892615
+    }
+  ],
+  "informative_contingencies": [
+    {
+      "description": "C40 in withdrawal service with one C60 unavailable in WDR-HIGH (no published N-1 requirement; informative)",
+      "c40_suction_mpa": 11.976222,
+      "c40_suction_limit_mpa": 12,
+      "retained_flow_kg_s": 84.0,
+      "grid_tie_pressure_mpa": 6.0,
+      "exceptions": []
+    }
+  ]
+}

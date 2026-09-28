@@ -1,0 +1,9 @@
+{
+  "benchmark_family": "UGS-SYNTH",
+  "case_id": "UGS-SYNTH-D01",
+  "case_version": "1.1.0-development",
+  "provenance": {
+    "classification": "synthetic benchmark assumption",
+    "note": "Deterministic development-case data; not vendor data or production engineering criteria."
+  }
+}

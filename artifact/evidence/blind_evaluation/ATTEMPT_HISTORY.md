@@ -1,0 +1,7 @@
+# Blind evaluation attempt history
+
+The original schedule specified two blind passes for each of eight submissions, for sixteen planned jobs. The frozen controller record reports 262 replacement attempts, 262 failed evaluator attempts, and seven preflight failures. The controller allowed at most three failed evaluator attempts in one job invocation. The counts and source-file hashes are also available in `attempt_history_facts.json`.
+
+After twelve successful reviews had been frozen, the researcher amended the protocol before reveal and stopped after one final review of `submission_A/pass_01`. That completed primary coverage: each of the eight submissions had at least one frozen successful review before the blind mapping was revealed. The final set contains thirteen successful reviews: five submissions have two passes and three have one. The frozen job statuses are thirteen `frozen`, two `not_run_by_design`, and one `stopped_by_user`. The remaining repeated-pass jobs were not run under the amendment; the package does not present them as completed sixteen-pass coverage.
+
+Each review used a fresh ephemeral CLI process and a fresh evaluation context. The fresh-context requirement and repeated-pass scope are documented in `evaluator_reproducibility.md`. The protocol amendment, reveal record, integrity records, and review index are included beside this file. `review_index.json` lists the published successful review files and their SHA-256 values. Failed-attempt workspaces and raw CLI output are excluded from the core package.

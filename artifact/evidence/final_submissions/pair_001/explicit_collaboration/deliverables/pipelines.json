@@ -1,0 +1,3874 @@
+[
+ {
+  "pipeline_id": "P01",
+  "service": "gas",
+  "from": {
+   "node": "GRID-TIE",
+   "port": "gas",
+   "point_m": [
+    700.0,
+    225.0
+   ]
+  },
+  "to": {
+   "node": "MTR-A",
+   "port": "gas_in",
+   "point_m": [
+    620.0,
+    223.0
+   ]
+  },
+  "route_m": [
+   [
+    700.0,
+    225.0
+   ],
+   [
+    690.0,
+    210.0
+   ],
+   [
+    620.0,
+    210.0
+   ],
+   [
+    620.0,
+    223.0
+   ]
+  ],
+  "route_length_m": 101.027756,
+  "segments": [
+   {
+    "from_m": [
+     700.0,
+     225.0
+    ],
+    "to_m": [
+     690.0,
+     210.0
+    ],
+    "length_m": 18.027756,
+    "installation_level": "ground"
+   },
+   {
+    "from_m": [
+     690.0,
+     210.0
+    ],
+    "to_m": [
+     620.0,
+     210.0
+    ],
+    "length_m": 70.0,
+    "installation_level": "ground"
+   },
+   {
+    "from_m": [
+     620.0,
+     210.0
+    ],
+    "to_m": [
+     620.0,
+     223.0
+    ],
+    "length_m": 13.0,
+    "installation_level": "ground"
+   }
+  ],
+  "nominal_diameter": "DN600",
+  "internal_diameter_m": 0.564,
+  "pipe_class": "CS-DRY-160",
+  "roughness_m": 1.5e-05,
+  "class_rating_mpa": 16.0,
+  "class_temperature_limits_c": [
+   -20,
+   120
+  ],
+  "wet_gas_compatible": false,
+  "dry_gas_compatible": true,
+  "liquid_drain_compatible": false,
+  "description": "injection feed from grid tie"
+ },
+ {
+  "pipeline_id": "P02",
+  "service": "gas",
+  "from": {
+   "node": "MTR-A",
+   "port": "gas_out",
+   "point_m": [
+    620.0,
+    227.0
+   ]
+  },
+  "to": {
+   "node": "H-SUC",
+   "port": "branch_05",
+   "point_m": [
+    430.0,
+    141.5
+   ]
+  },
+  "route_m": [
+   [
+    620.0,
+    227.0
+   ],
+   [
+    620.0,
+    240.0
+   ],
+   [
+    430.0,
+    240.0
+   ],
+   [
+    430.0,
+    141.5
+   ]
+  ],
+  "route_length_m": 301.5,
+  "segments": [
+   {
+    "from_m": [
+     620.0,
+     227.0
+    ],
+    "to_m": [
+     620.0,
+     240.0
+    ],
+    "length_m": 13.0,
+    "installation_level": "ground"
+   },
+   {
+    "from_m": [
+     620.0,
+     240.0
+    ],
+    "to_m": [
+     430.0,
+     240.0
+    ],
+    "length_m": 190.0,
+    "installation_level": "ground"
+   },
+   {
+    "from_m": [
+     430.0,
+     240.0
+    ],
+    "to_m": [
+     430.0,
+     229.0
+    ],
+    "length_m": 11.0,
+    "installation_level": "ground"
+   },
+   {
+    "from_m": [
+     430.0,
+     229.0
+    ],
+    "to_m": [
+     430.0,
+     221.0
+    ],
+    "length_m": 8.0,
+    "installation_level": "buried"
+   },
+   {
+    "from_m": [
+     430.0,
+     221.0
+    ],
+    "to_m": [
+     430.0,
+     141.5
+    ],
+    "length_m": 79.5,
+    "installation_level": "ground"
+   }
+  ],
+  "nominal_diameter": "DN600",
+  "internal_diameter_m": 0.564,
+  "pipe_class": "CS-DRY-160",
+  "roughness_m": 1.5e-05,
+  "class_rating_mpa": 16.0,
+  "class_temperature_limits_c": [
+   -20,
+   120
+  ],
+  "wet_gas_compatible": false,
+  "dry_gas_compatible": true,
+  "liquid_drain_compatible": false,
+  "description": "metered injection gas to station"
+ },
+ {
+  "pipeline_id": "P03",
+  "service": "gas",
+  "from": {
+   "node": "H-SUC",
+   "port": "branch_10",
+   "point_m": [
+    433.0,
+    139.0
+   ]
+  },
+  "to": {
+   "node": "CMP-A",
+   "port": "suction",
+   "point_m": [
+    472.5,
+    70.0
+   ]
+  },
+  "route_m": [
+   [
+    433.0,
+    139.0
+   ],
+   [
+    445.0,
+    139.0
+   ],
+   [
+    445.0,
+    70.0
+   ],
+   [
+    472.5,
+    70.0
+   ]
+  ],
+  "route_length_m": 108.5,
+  "segments": [
+   {
+    "from_m": [
+     433.0,
+     139.0
+    ],
+    "to_m": [
+     445.0,
+     139.0
+    ],
+    "length_m": 12.0,
+    "installation_level": "ground"
+   },
+   {
+    "from_m": [
+     445.0,
+     139.0
+    ],
+    "to_m": [
+     445.0,
+     70.0
+    ],
+    "length_m": 69.0,
+    "installation_level": "ground"
+   },
+   {
+    "from_m": [
+     445.0,
+     70.0
+    ],
+    "to_m": [
+     472.5,
+     70.0
+    ],
+    "length_m": 27.5,
+    "installation_level": "ground"
+   }
+  ],
+  "nominal_diameter": "DN400",
+  "internal_diameter_m": 0.376,
+  "pipe_class": "CS-DRY-160",
+  "roughness_m": 1.5e-05,
+  "class_rating_mpa": 16.0,
+  "class_temperature_limits_c": [
+   -20,
+   120
+  ],
+  "wet_gas_compatible": false,
+  "dry_gas_compatible": true,
+  "liquid_drain_compatible": false,
+  "description": "train A suction"
+ },
+ {
+  "pipeline_id": "P04",
+  "service": "gas",
+  "from": {
+   "node": "H-SUC",
+   "port": "branch_06",
+   "point_m": [
+    433.0,
+    140.0
+   ]
+  },
+  "to": {
+   "node": "CMP-B",
+   "port": "suction",
+   "point_m": [
+    472.5,
+    140.0
+   ]
+  },
+  "route_m": [
+   [
+    433.0,
+    140.0
+   ],
+   [
+    472.5,
+    140.0
+   ]
+  ],
+  "route_length_m": 39.5,
+  "segments": [
+   {
+    "from_m": [
+     433.0,
+     140.0
+    ],
+    "to_m": [
+     472.5,
+     140.0
+    ],
+    "length_m": 39.5,
+    "installation_level": "ground"
+   }
+  ],
+  "nominal_diameter": "DN400",
+  "internal_diameter_m": 0.376,
+  "pipe_class": "CS-DRY-160",
+  "roughness_m": 1.5e-05,
+  "class_rating_mpa": 16.0,
+  "class_temperature_limits_c": [
+   -20,
+   120
+  ],
+  "wet_gas_compatible": false,
+  "dry_gas_compatible": true,
+  "liquid_drain_compatible": false,
+  "description": "train B suction"
+ },
+ {
+  "pipeline_id": "P05",
+  "service": "gas",
+  "from": {
+   "node": "H-SUC",
+   "port": "branch_02",
+   "point_m": [
+    433.0,
+    141.0
+   ]
+  },
+  "to": {
+   "node": "CMP-C",
+   "port": "suction",
+   "point_m": [
+    472.5,
+    210.0
+   ]
+  },
+  "route_m": [
+   [
+    433.0,
+    141.0
+   ],
+   [
+    455.0,
+    141.0
+   ],
+   [
+    455.0,
+    210.0
+   ],
+   [
+    472.5,
+    210.0
+   ]
+  ],
+  "route_length_m": 108.5,
+  "segments": [
+   {
+    "from_m": [
+     433.0,
+     141.0
+    ],
+    "to_m": [
+     455.0,
+     141.0
+    ],
+    "length_m": 22.0,
+    "installation_level": "ground"
+   },
+   {
+    "from_m": [
+     455.0,
+     141.0
+    ],
+    "to_m": [
+     455.0,
+     210.0
+    ],
+    "length_m": 69.0,
+    "installation_level": "ground"
+   },
+   {
+    "from_m": [
+     455.0,
+     210.0
+    ],
+    "to_m": [
+     472.5,
+     210.0
+    ],
+    "length_m": 17.5,
+    "installation_level": "ground"
+   }
+  ],
+  "nominal_diameter": "DN400",
+  "internal_diameter_m": 0.376,
+  "pipe_class": "CS-DRY-160",
+  "roughness_m": 1.5e-05,
+  "class_rating_mpa": 16.0,
+  "class_temperature_limits_c": [
+   -20,
+   120
+  ],
+  "wet_gas_compatible": false,
+  "dry_gas_compatible": true,
+  "liquid_drain_compatible": false,
+  "description": "train C suction"
+ },
+ {
+  "pipeline_id": "P06",
+  "service": "gas",
+  "from": {
+   "node": "CMP-A",
+   "port": "discharge",
+   "point_m": [
+    487.5,
+    70.0
+   ]
+  },
+  "to": {
+   "node": "H-DIS",
+   "port": "branch_10",
+   "point_m": [
+    548.0,
+    139.0
+   ]
+  },
+  "route_m": [
+   [
+    487.5,
+    70.0
+   ],
+   [
+    565.0,
+    70.0
+   ],
+   [
+    565.0,
+    139.0
+   ],
+   [
+    548.0,
+    139.0
+   ]
+  ],
+  "route_length_m": 163.5,
+  "segments": [
+   {
+    "from_m": [
+     487.5,
+     70.0
+    ],
+    "to_m": [
+     502.0,
+     70.0
+    ],
+    "length_m": 14.5,
+    "installation_level": "ground"
+   },
+   {
+    "from_m": [
+     502.0,
+     70.0
+    ],
+    "to_m": [
+     508.0,
+     70.0
+    ],
+    "length_m": 6.0,
+    "installation_level": "buried"
+   },
+   {
+    "from_m": [
+     508.0,
+     70.0
+    ],
+    "to_m": [
+     565.0,
+     70.0
+    ],
+    "length_m": 57.0,
+    "installation_level": "ground"
+   },
+   {
+    "from_m": [
+     565.0,
+     70.0
+    ],
+    "to_m": [
+     565.0,
+     139.0
+    ],
+    "length_m": 69.0,
+    "installation_level": "ground"
+   },
+   {
+    "from_m": [
+     565.0,
+     139.0
+    ],
+    "to_m": [
+     548.0,
+     139.0
+    ],
+    "length_m": 17.0,
+    "installation_level": "ground"
+   }
+  ],
+  "nominal_diameter": "DN350",
+  "internal_diameter_m": 0.329,
+  "pipe_class": "CS-DRY-160",
+  "roughness_m": 1.5e-05,
+  "class_rating_mpa": 16.0,
+  "class_temperature_limits_c": [
+   -20,
+   120
+  ],
+  "wet_gas_compatible": false,
+  "dry_gas_compatible": true,
+  "liquid_drain_compatible": false,
+  "description": "train A discharge"
+ },
+ {
+  "pipeline_id": "P07",
+  "service": "gas",
+  "from": {
+   "node": "CMP-B",
+   "port": "discharge",
+   "point_m": [
+    487.5,
+    140.0
+   ]
+  },
+  "to": {
+   "node": "H-DIS",
+   "port": "branch_06",
+   "point_m": [
+    548.0,
+    140.0
+   ]
+  },
+  "route_m": [
+   [
+    487.5,
+    140.0
+   ],
+   [
+    530.0,
+    140.0
+   ],
+   [
+    530.0,
+    152.0
+   ],
+   [
+    575.0,
+    152.0
+   ],
+   [
+    575.0,
+    140.0
+   ],
+   [
+    548.0,
+    140.0
+   ]
+  ],
+  "route_length_m": 138.5,
+  "segments": [
+   {
+    "from_m": [
+     487.5,
+     140.0
+    ],
+    "to_m": [
+     502.0,
+     140.0
+    ],
+    "length_m": 14.5,
+    "installation_level": "ground"
+   },
+   {
+    "from_m": [
+     502.0,
+     140.0
+    ],
+    "to_m": [
+     508.0,
+     140.0
+    ],
+    "length_m": 6.0,
+    "installation_level": "buried"
+   },
+   {
+    "from_m": [
+     508.0,
+     140.0
+    ],
+    "to_m": [
+     530.0,
+     140.0
+    ],
+    "length_m": 22.0,
+    "installation_level": "ground"
+   },
+   {
+    "from_m": [
+     530.0,
+     140.0
+    ],
+    "to_m": [
+     530.0,
+     152.0
+    ],
+    "length_m": 12.0,
+    "installation_level": "ground"
+   },
+   {
+    "from_m": [
+     530.0,
+     152.0
+    ],
+    "to_m": [
+     575.0,
+     152.0
+    ],
+    "length_m": 45.0,
+    "installation_level": "ground"
+   },
+   {
+    "from_m": [
+     575.0,
+     152.0
+    ],
+    "to_m": [
+     575.0,
+     140.0
+    ],
+    "length_m": 12.0,
+    "installation_level": "ground"
+   },
+   {
+    "from_m": [
+     575.0,
+     140.0
+    ],
+    "to_m": [
+     548.0,
+     140.0
+    ],
+    "length_m": 27.0,
+    "installation_level": "ground"
+   }
+  ],
+  "nominal_diameter": "DN350",
+  "internal_diameter_m": 0.329,
+  "pipe_class": "CS-DRY-160",
+  "roughness_m": 1.5e-05,
+  "class_rating_mpa": 16.0,
+  "class_temperature_limits_c": [
+   -20,
+   120
+  ],
+  "wet_gas_compatible": false,
+  "dry_gas_compatible": true,
+  "liquid_drain_compatible": false,
+  "description": "train B discharge"
+ },
+ {
+  "pipeline_id": "P08",
+  "service": "gas",
+  "from": {
+   "node": "CMP-C",
+   "port": "discharge",
+   "point_m": [
+    487.5,
+    210.0
+   ]
+  },
+  "to": {
+   "node": "H-DIS",
+   "port": "branch_02",
+   "point_m": [
+    548.0,
+    141.0
+   ]
+  },
+  "route_m": [
+   [
+    487.5,
+    210.0
+   ],
+   [
+    585.0,
+    210.0
+   ],
+   [
+    585.0,
+    141.0
+   ],
+   [
+    548.0,
+    141.0
+   ]
+  ],
+  "route_length_m": 203.5,
+  "segments": [
+   {
+    "from_m": [
+     487.5,
+     210.0
+    ],
+    "to_m": [
+     502.0,
+     210.0
+    ],
+    "length_m": 14.5,
+    "installation_level": "ground"
+   },
+   {
+    "from_m": [
+     502.0,
+     210.0
+    ],
+    "to_m": [
+     508.0,
+     210.0
+    ],
+    "length_m": 6.0,
+    "installation_level": "buried"
+   },
+   {
+    "from_m": [
+     508.0,
+     210.0
+    ],
+    "to_m": [
+     585.0,
+     210.0
+    ],
+    "length_m": 77.0,
+    "installation_level": "ground"
+   },
+   {
+    "from_m": [
+     585.0,
+     210.0
+    ],
+    "to_m": [
+     585.0,
+     141.0
+    ],
+    "length_m": 69.0,
+    "installation_level": "ground"
+   },
+   {
+    "from_m": [
+     585.0,
+     141.0
+    ],
+    "to_m": [
+     548.0,
+     141.0
+    ],
+    "length_m": 37.0,
+    "installation_level": "ground"
+   }
+  ],
+  "nominal_diameter": "DN400",
+  "internal_diameter_m": 0.376,
+  "pipe_class": "CS-DRY-160",
+  "roughness_m": 1.5e-05,
+  "class_rating_mpa": 16.0,
+  "class_temperature_limits_c": [
+   -20,
+   120
+  ],
+  "wet_gas_compatible": false,
+  "dry_gas_compatible": true,
+  "liquid_drain_compatible": false,
+  "description": "train C discharge"
+ },
+ {
+  "pipeline_id": "P09",
+  "service": "gas",
+  "from": {
+   "node": "H-SUC",
+   "port": "branch_07",
+   "point_m": [
+    428.5,
+    138.5
+   ]
+  },
+  "to": {
+   "node": "H-DIS",
+   "port": "branch_07",
+   "point_m": [
+    543.5,
+    138.5
+   ]
+  },
+  "route_m": [
+   [
+    428.5,
+    138.5
+   ],
+   [
+    428.5,
+    118.0
+   ],
+   [
+    543.5,
+    118.0
+   ],
+   [
+    543.5,
+    138.5
+   ]
+  ],
+  "route_length_m": 156.0,
+  "segments": [
+   {
+    "from_m": [
+     428.5,
+     138.5
+    ],
+    "to_m": [
+     428.5,
+     118.0
+    ],
+    "length_m": 20.5,
+    "installation_level": "ground"
+   },
+   {
+    "from_m": [
+     428.5,
+     118.0
+    ],
+    "to_m": [
+     502.0,
+     118.0
+    ],
+    "length_m": 73.5,
+    "installation_level": "ground"
+   },
+   {
+    "from_m": [
+     502.0,
+     118.0
+    ],
+    "to_m": [
+     508.0,
+     118.0
+    ],
+    "length_m": 6.0,
+    "installation_level": "buried"
+   },
+   {
+    "from_m": [
+     508.0,
+     118.0
+    ],
+    "to_m": [
+     543.5,
+     118.0
+    ],
+    "length_m": 35.5,
+    "installation_level": "ground"
+   },
+   {
+    "from_m": [
+     543.5,
+     118.0
+    ],
+    "to_m": [
+     543.5,
+     138.5
+    ],
+    "length_m": 20.5,
+    "installation_level": "ground"
+   }
+  ],
+  "nominal_diameter": "DN350",
+  "internal_diameter_m": 0.329,
+  "pipe_class": "CS-DRY-160",
+  "roughness_m": 1.5e-05,
+  "class_rating_mpa": 16.0,
+  "class_temperature_limits_c": [
+   -20,
+   120
+  ],
+  "wet_gas_compatible": false,
+  "dry_gas_compatible": true,
+  "liquid_drain_compatible": false,
+  "description": "compressor bank bypass"
+ },
+ {
+  "pipeline_id": "P10",
+  "service": "gas",
+  "from": {
+   "node": "H-DIS",
+   "port": "branch_09",
+   "point_m": [
+    547.0,
+    141.5
+   ]
+  },
+  "to": {
+   "node": "COOL",
+   "port": "gas_in",
+   "point_m": [
+    560.0,
+    184.0
+   ]
+  },
+  "route_m": [
+   [
+    547.0,
+    141.5
+   ],
+   [
+    547.0,
+    160.0
+   ],
+   [
+    560.0,
+    160.0
+   ],
+   [
+    560.0,
+    184.0
+   ]
+  ],
+  "route_length_m": 55.5,
+  "segments": [
+   {
+    "from_m": [
+     547.0,
+     141.5
+    ],
+    "to_m": [
+     547.0,
+     160.0
+    ],
+    "length_m": 18.5,
+    "installation_level": "ground"
+   },
+   {
+    "from_m": [
+     547.0,
+     160.0
+    ],
+    "to_m": [
+     560.0,
+     160.0
+    ],
+    "length_m": 13.0,
+    "installation_level": "ground"
+   },
+   {
+    "from_m": [
+     560.0,
+     160.0
+    ],
+    "to_m": [
+     560.0,
+     184.0
+    ],
+    "length_m": 24.0,
+    "installation_level": "ground"
+   }
+  ],
+  "nominal_diameter": "DN600",
+  "internal_diameter_m": 0.564,
+  "pipe_class": "CS-DRY-160",
+  "roughness_m": 1.5e-05,
+  "class_rating_mpa": 16.0,
+  "class_temperature_limits_c": [
+   -20,
+   120
+  ],
+  "wet_gas_compatible": false,
+  "dry_gas_compatible": true,
+  "liquid_drain_compatible": false,
+  "description": "hot discharge gas to aftercooler"
+ },
+ {
+  "pipeline_id": "P11",
+  "service": "gas",
+  "from": {
+   "node": "COOL",
+   "port": "gas_out",
+   "point_m": [
+    560.0,
+    196.0
+   ]
+  },
+  "to": {
+   "node": "H-SITE",
+   "port": "branch_05",
+   "point_m": [
+    250.0,
+    141.5
+   ]
+  },
+  "route_m": [
+   [
+    560.0,
+    196.0
+   ],
+   [
+    560.0,
+    200.0
+   ],
+   [
+    250.0,
+    200.0
+   ],
+   [
+    250.0,
+    141.5
+   ]
+  ],
+  "route_length_m": 372.5,
+  "segments": [
+   {
+    "from_m": [
+     560.0,
+     196.0
+    ],
+    "to_m": [
+     560.0,
+     200.0
+    ],
+    "length_m": 4.0,
+    "installation_level": "ground"
+   },
+   {
+    "from_m": [
+     560.0,
+     200.0
+    ],
+    "to_m": [
+     508.0,
+     200.0
+    ],
+    "length_m": 52.0,
+    "installation_level": "ground"
+   },
+   {
+    "from_m": [
+     508.0,
+     200.0
+    ],
+    "to_m": [
+     502.0,
+     200.0
+    ],
+    "length_m": 6.0,
+    "installation_level": "buried"
+   },
+   {
+    "from_m": [
+     502.0,
+     200.0
+    ],
+    "to_m": [
+     305.0,
+     200.0
+    ],
+    "length_m": 197.0,
+    "installation_level": "ground"
+   },
+   {
+    "from_m": [
+     305.0,
+     200.0
+    ],
+    "to_m": [
+     299.0,
+     200.0
+    ],
+    "length_m": 6.0,
+    "installation_level": "buried"
+   },
+   {
+    "from_m": [
+     299.0,
+     200.0
+    ],
+    "to_m": [
+     250.0,
+     200.0
+    ],
+    "length_m": 49.0,
+    "installation_level": "ground"
+   },
+   {
+    "from_m": [
+     250.0,
+     200.0
+    ],
+    "to_m": [
+     250.0,
+     141.5
+    ],
+    "length_m": 58.5,
+    "installation_level": "ground"
+   }
+  ],
+  "nominal_diameter": "DN600",
+  "internal_diameter_m": 0.564,
+  "pipe_class": "CS-DRY-160",
+  "roughness_m": 1.5e-05,
+  "class_rating_mpa": 16.0,
+  "class_temperature_limits_c": [
+   -20,
+   120
+  ],
+  "wet_gas_compatible": false,
+  "dry_gas_compatible": true,
+  "liquid_drain_compatible": false,
+  "description": "cooled injection gas to station header"
+ },
+ {
+  "pipeline_id": "P12",
+  "service": "gas",
+  "from": {
+   "node": "H-SITE",
+   "port": "branch_04",
+   "point_m": [
+    247.0,
+    139.25
+   ]
+  },
+  "to": {
+   "node": "H-WELL",
+   "port": "branch_06",
+   "point_m": [
+    93.0,
+    180.0
+   ]
+  },
+  "route_m": [
+   [
+    247.0,
+    139.25
+   ],
+   [
+    230.0,
+    139.25
+   ],
+   [
+    230.0,
+    180.0
+   ],
+   [
+    93.0,
+    180.0
+   ]
+  ],
+  "route_length_m": 194.75,
+  "segments": [
+   {
+    "from_m": [
+     247.0,
+     139.25
+    ],
+    "to_m": [
+     230.0,
+     139.25
+    ],
+    "length_m": 17.0,
+    "installation_level": "ground"
+   },
+   {
+    "from_m": [
+     230.0,
+     139.25
+    ],
+    "to_m": [
+     230.0,
+     180.0
+    ],
+    "length_m": 40.75,
+    "installation_level": "ground"
+   },
+   {
+    "from_m": [
+     230.0,
+     180.0
+    ],
+    "to_m": [
+     93.0,
+     180.0
+    ],
+    "length_m": 137.0,
+    "installation_level": "ground"
+   }
+  ],
+  "nominal_diameter": "DN600",
+  "internal_diameter_m": 0.564,
+  "pipe_class": "CS-WET-160",
+  "roughness_m": 4.5e-05,
+  "class_rating_mpa": 16.0,
+  "class_temperature_limits_c": [
+   -20,
+   120
+  ],
+  "wet_gas_compatible": true,
+  "dry_gas_compatible": true,
+  "liquid_drain_compatible": true,
+  "description": "main trunk header to well manifold"
+ },
+ {
+  "pipeline_id": "P13",
+  "service": "gas",
+  "from": {
+   "node": "H-WELL",
+   "port": "branch_03",
+   "point_m": [
+    91.5,
+    178.5
+   ]
+  },
+  "to": {
+   "node": "WG-01",
+   "port": "gas",
+   "point_m": [
+    12.0,
+    45.0
+   ]
+  },
+  "route_m": [
+   [
+    91.5,
+    178.5
+   ],
+   [
+    91.5,
+    170.0
+   ],
+   [
+    40.0,
+    170.0
+   ],
+   [
+    40.0,
+    45.0
+   ],
+   [
+    12.0,
+    45.0
+   ]
+  ],
+  "route_length_m": 213.0,
+  "segments": [
+   {
+    "from_m": [
+     91.5,
+     178.5
+    ],
+    "to_m": [
+     91.5,
+     170.0
+    ],
+    "length_m": 8.5,
+    "installation_level": "ground"
+   },
+   {
+    "from_m": [
+     91.5,
+     170.0
+    ],
+    "to_m": [
+     40.0,
+     170.0
+    ],
+    "length_m": 51.5,
+    "installation_level": "ground"
+   },
+   {
+    "from_m": [
+     40.0,
+     170.0
+    ],
+    "to_m": [
+     40.0,
+     45.0
+    ],
+    "length_m": 125.0,
+    "installation_level": "ground"
+   },
+   {
+    "from_m": [
+     40.0,
+     45.0
+    ],
+    "to_m": [
+     12.0,
+     45.0
+    ],
+    "length_m": 28.0,
+    "installation_level": "ground"
+   }
+  ],
+  "nominal_diameter": "DN300",
+  "internal_diameter_m": 0.282,
+  "pipe_class": "CS-WET-160",
+  "roughness_m": 4.5e-05,
+  "class_rating_mpa": 16.0,
+  "class_temperature_limits_c": [
+   -20,
+   120
+  ],
+  "wet_gas_compatible": true,
+  "dry_gas_compatible": true,
+  "liquid_drain_compatible": true,
+  "description": "well group 01 branch"
+ },
+ {
+  "pipeline_id": "P14",
+  "service": "gas",
+  "from": {
+   "node": "H-WELL",
+   "port": "branch_07",
+   "point_m": [
+    88.5,
+    178.5
+   ]
+  },
+  "to": {
+   "node": "WG-02",
+   "port": "gas",
+   "point_m": [
+    12.0,
+    117.0
+   ]
+  },
+  "route_m": [
+   [
+    88.5,
+    178.5
+   ],
+   [
+    88.5,
+    168.0
+   ],
+   [
+    55.0,
+    168.0
+   ],
+   [
+    55.0,
+    117.0
+   ],
+   [
+    12.0,
+    117.0
+   ]
+  ],
+  "route_length_m": 138.0,
+  "segments": [
+   {
+    "from_m": [
+     88.5,
+     178.5
+    ],
+    "to_m": [
+     88.5,
+     168.0
+    ],
+    "length_m": 10.5,
+    "installation_level": "ground"
+   },
+   {
+    "from_m": [
+     88.5,
+     168.0
+    ],
+    "to_m": [
+     55.0,
+     168.0
+    ],
+    "length_m": 33.5,
+    "installation_level": "ground"
+   },
+   {
+    "from_m": [
+     55.0,
+     168.0
+    ],
+    "to_m": [
+     55.0,
+     117.0
+    ],
+    "length_m": 51.0,
+    "installation_level": "ground"
+   },
+   {
+    "from_m": [
+     55.0,
+     117.0
+    ],
+    "to_m": [
+     12.0,
+     117.0
+    ],
+    "length_m": 43.0,
+    "installation_level": "ground"
+   }
+  ],
+  "nominal_diameter": "DN300",
+  "internal_diameter_m": 0.282,
+  "pipe_class": "CS-WET-160",
+  "roughness_m": 4.5e-05,
+  "class_rating_mpa": 16.0,
+  "class_temperature_limits_c": [
+   -20,
+   120
+  ],
+  "wet_gas_compatible": true,
+  "dry_gas_compatible": true,
+  "liquid_drain_compatible": true,
+  "description": "well group 02 branch"
+ },
+ {
+  "pipeline_id": "P15",
+  "service": "gas",
+  "from": {
+   "node": "H-WELL",
+   "port": "branch_01",
+   "point_m": [
+    88.0,
+    181.5
+   ]
+  },
+  "to": {
+   "node": "WG-03",
+   "port": "gas",
+   "point_m": [
+    12.0,
+    189.0
+   ]
+  },
+  "route_m": [
+   [
+    88.0,
+    181.5
+   ],
+   [
+    88.0,
+    189.0
+   ],
+   [
+    12.0,
+    189.0
+   ]
+  ],
+  "route_length_m": 83.5,
+  "segments": [
+   {
+    "from_m": [
+     88.0,
+     181.5
+    ],
+    "to_m": [
+     88.0,
+     189.0
+    ],
+    "length_m": 7.5,
+    "installation_level": "ground"
+   },
+   {
+    "from_m": [
+     88.0,
+     189.0
+    ],
+    "to_m": [
+     12.0,
+     189.0
+    ],
+    "length_m": 76.0,
+    "installation_level": "ground"
+   }
+  ],
+  "nominal_diameter": "DN250",
+  "internal_diameter_m": 0.235,
+  "pipe_class": "CS-WET-160",
+  "roughness_m": 4.5e-05,
+  "class_rating_mpa": 16.0,
+  "class_temperature_limits_c": [
+   -20,
+   120
+  ],
+  "wet_gas_compatible": true,
+  "dry_gas_compatible": true,
+  "liquid_drain_compatible": true,
+  "description": "well group 03 branch"
+ },
+ {
+  "pipeline_id": "P16",
+  "service": "gas",
+  "from": {
+   "node": "H-WELL",
+   "port": "branch_05",
+   "point_m": [
+    90.0,
+    181.5
+   ]
+  },
+  "to": {
+   "node": "WG-04",
+   "port": "gas",
+   "point_m": [
+    12.0,
+    261.0
+   ]
+  },
+  "route_m": [
+   [
+    90.0,
+    181.5
+   ],
+   [
+    90.0,
+    200.0
+   ],
+   [
+    65.0,
+    200.0
+   ],
+   [
+    65.0,
+    261.0
+   ],
+   [
+    12.0,
+    261.0
+   ]
+  ],
+  "route_length_m": 157.5,
+  "segments": [
+   {
+    "from_m": [
+     90.0,
+     181.5
+    ],
+    "to_m": [
+     90.0,
+     200.0
+    ],
+    "length_m": 18.5,
+    "installation_level": "ground"
+   },
+   {
+    "from_m": [
+     90.0,
+     200.0
+    ],
+    "to_m": [
+     65.0,
+     200.0
+    ],
+    "length_m": 25.0,
+    "installation_level": "ground"
+   },
+   {
+    "from_m": [
+     65.0,
+     200.0
+    ],
+    "to_m": [
+     65.0,
+     221.0
+    ],
+    "length_m": 21.0,
+    "installation_level": "ground"
+   },
+   {
+    "from_m": [
+     65.0,
+     221.0
+    ],
+    "to_m": [
+     65.0,
+     229.0
+    ],
+    "length_m": 8.0,
+    "installation_level": "buried"
+   },
+   {
+    "from_m": [
+     65.0,
+     229.0
+    ],
+    "to_m": [
+     65.0,
+     261.0
+    ],
+    "length_m": 32.0,
+    "installation_level": "ground"
+   },
+   {
+    "from_m": [
+     65.0,
+     261.0
+    ],
+    "to_m": [
+     12.0,
+     261.0
+    ],
+    "length_m": 53.0,
+    "installation_level": "ground"
+   }
+  ],
+  "nominal_diameter": "DN300",
+  "internal_diameter_m": 0.282,
+  "pipe_class": "CS-WET-160",
+  "roughness_m": 4.5e-05,
+  "class_rating_mpa": 16.0,
+  "class_temperature_limits_c": [
+   -20,
+   120
+  ],
+  "wet_gas_compatible": true,
+  "dry_gas_compatible": true,
+  "liquid_drain_compatible": true,
+  "description": "well group 04 branch"
+ },
+ {
+  "pipeline_id": "P17",
+  "service": "gas",
+  "from": {
+   "node": "H-WELL",
+   "port": "branch_09",
+   "point_m": [
+    92.0,
+    181.5
+   ]
+  },
+  "to": {
+   "node": "WG-05",
+   "port": "gas",
+   "point_m": [
+    12.0,
+    333.0
+   ]
+  },
+  "route_m": [
+   [
+    92.0,
+    181.5
+   ],
+   [
+    92.0,
+    215.0
+   ],
+   [
+    80.0,
+    215.0
+   ],
+   [
+    80.0,
+    333.0
+   ],
+   [
+    12.0,
+    333.0
+   ]
+  ],
+  "route_length_m": 231.5,
+  "segments": [
+   {
+    "from_m": [
+     92.0,
+     181.5
+    ],
+    "to_m": [
+     92.0,
+     215.0
+    ],
+    "length_m": 33.5,
+    "installation_level": "ground"
+   },
+   {
+    "from_m": [
+     92.0,
+     215.0
+    ],
+    "to_m": [
+     80.0,
+     215.0
+    ],
+    "length_m": 12.0,
+    "installation_level": "ground"
+   },
+   {
+    "from_m": [
+     80.0,
+     215.0
+    ],
+    "to_m": [
+     80.0,
+     221.0
+    ],
+    "length_m": 6.0,
+    "installation_level": "ground"
+   },
+   {
+    "from_m": [
+     80.0,
+     221.0
+    ],
+    "to_m": [
+     80.0,
+     229.0
+    ],
+    "length_m": 8.0,
+    "installation_level": "buried"
+   },
+   {
+    "from_m": [
+     80.0,
+     229.0
+    ],
+    "to_m": [
+     80.0,
+     333.0
+    ],
+    "length_m": 104.0,
+    "installation_level": "ground"
+   },
+   {
+    "from_m": [
+     80.0,
+     333.0
+    ],
+    "to_m": [
+     12.0,
+     333.0
+    ],
+    "length_m": 68.0,
+    "installation_level": "ground"
+   }
+  ],
+  "nominal_diameter": "DN300",
+  "internal_diameter_m": 0.282,
+  "pipe_class": "CS-WET-160",
+  "roughness_m": 4.5e-05,
+  "class_rating_mpa": 16.0,
+  "class_temperature_limits_c": [
+   -20,
+   120
+  ],
+  "wet_gas_compatible": true,
+  "dry_gas_compatible": true,
+  "liquid_drain_compatible": true,
+  "description": "well group 05 branch"
+ },
+ {
+  "pipeline_id": "P18",
+  "service": "gas",
+  "from": {
+   "node": "H-WELL",
+   "port": "branch_04",
+   "point_m": [
+    87.0,
+    179.25
+   ]
+  },
+  "to": {
+   "node": "WG-06",
+   "port": "gas",
+   "point_m": [
+    12.0,
+    405.0
+   ]
+  },
+  "route_m": [
+   [
+    87.0,
+    179.25
+   ],
+   [
+    60.0,
+    179.25
+   ],
+   [
+    60.0,
+    405.0
+   ],
+   [
+    12.0,
+    405.0
+   ]
+  ],
+  "route_length_m": 300.75,
+  "segments": [
+   {
+    "from_m": [
+     87.0,
+     179.25
+    ],
+    "to_m": [
+     60.0,
+     179.25
+    ],
+    "length_m": 27.0,
+    "installation_level": "ground"
+   },
+   {
+    "from_m": [
+     60.0,
+     179.25
+    ],
+    "to_m": [
+     60.0,
+     221.0
+    ],
+    "length_m": 41.75,
+    "installation_level": "ground"
+   },
+   {
+    "from_m": [
+     60.0,
+     221.0
+    ],
+    "to_m": [
+     60.0,
+     229.0
+    ],
+    "length_m": 8.0,
+    "installation_level": "buried"
+   },
+   {
+    "from_m": [
+     60.0,
+     229.0
+    ],
+    "to_m": [
+     60.0,
+     405.0
+    ],
+    "length_m": 176.0,
+    "installation_level": "ground"
+   },
+   {
+    "from_m": [
+     60.0,
+     405.0
+    ],
+    "to_m": [
+     12.0,
+     405.0
+    ],
+    "length_m": 48.0,
+    "installation_level": "ground"
+   }
+  ],
+  "nominal_diameter": "DN350",
+  "internal_diameter_m": 0.329,
+  "pipe_class": "CS-WET-160",
+  "roughness_m": 4.5e-05,
+  "class_rating_mpa": 16.0,
+  "class_temperature_limits_c": [
+   -20,
+   120
+  ],
+  "wet_gas_compatible": true,
+  "dry_gas_compatible": true,
+  "liquid_drain_compatible": true,
+  "description": "well group 06 branch"
+ },
+ {
+  "pipeline_id": "P19",
+  "service": "gas",
+  "from": {
+   "node": "H-SITE",
+   "port": "branch_10",
+   "point_m": [
+    253.0,
+    139.0
+   ]
+  },
+  "to": {
+   "node": "SEP-A",
+   "port": "gas_in",
+   "point_m": [
+    286.0,
+    70.0
+   ]
+  },
+  "route_m": [
+   [
+    253.0,
+    139.0
+   ],
+   [
+    265.0,
+    139.0
+   ],
+   [
+    265.0,
+    70.0
+   ],
+   [
+    286.0,
+    70.0
+   ]
+  ],
+  "route_length_m": 102.0,
+  "segments": [
+   {
+    "from_m": [
+     253.0,
+     139.0
+    ],
+    "to_m": [
+     265.0,
+     139.0
+    ],
+    "length_m": 12.0,
+    "installation_level": "ground"
+   },
+   {
+    "from_m": [
+     265.0,
+     139.0
+    ],
+    "to_m": [
+     265.0,
+     70.0
+    ],
+    "length_m": 69.0,
+    "installation_level": "ground"
+   },
+   {
+    "from_m": [
+     265.0,
+     70.0
+    ],
+    "to_m": [
+     286.0,
+     70.0
+    ],
+    "length_m": 21.0,
+    "installation_level": "ground"
+   }
+  ],
+  "nominal_diameter": "DN300",
+  "internal_diameter_m": 0.282,
+  "pipe_class": "CS-WET-160",
+  "roughness_m": 4.5e-05,
+  "class_rating_mpa": 16.0,
+  "class_temperature_limits_c": [
+   -20,
+   120
+  ],
+  "wet_gas_compatible": true,
+  "dry_gas_compatible": true,
+  "liquid_drain_compatible": true,
+  "description": "train A feed"
+ },
+ {
+  "pipeline_id": "P20",
+  "service": "gas",
+  "from": {
+   "node": "H-SITE",
+   "port": "branch_06",
+   "point_m": [
+    253.0,
+    140.0
+   ]
+  },
+  "to": {
+   "node": "SEP-B",
+   "port": "gas_in",
+   "point_m": [
+    286.0,
+    140.0
+   ]
+  },
+  "route_m": [
+   [
+    253.0,
+    140.0
+   ],
+   [
+    286.0,
+    140.0
+   ]
+  ],
+  "route_length_m": 33.0,
+  "segments": [
+   {
+    "from_m": [
+     253.0,
+     140.0
+    ],
+    "to_m": [
+     286.0,
+     140.0
+    ],
+    "length_m": 33.0,
+    "installation_level": "ground"
+   }
+  ],
+  "nominal_diameter": "DN250",
+  "internal_diameter_m": 0.235,
+  "pipe_class": "CS-WET-160",
+  "roughness_m": 4.5e-05,
+  "class_rating_mpa": 16.0,
+  "class_temperature_limits_c": [
+   -20,
+   120
+  ],
+  "wet_gas_compatible": true,
+  "dry_gas_compatible": true,
+  "liquid_drain_compatible": true,
+  "description": "train B feed"
+ },
+ {
+  "pipeline_id": "P21",
+  "service": "gas",
+  "from": {
+   "node": "H-SITE",
+   "port": "branch_02",
+   "point_m": [
+    253.0,
+    141.0
+   ]
+  },
+  "to": {
+   "node": "SEP-C",
+   "port": "gas_in",
+   "point_m": [
+    286.0,
+    210.0
+   ]
+  },
+  "route_m": [
+   [
+    253.0,
+    141.0
+   ],
+   [
+    283.5,
+    141.0
+   ],
+   [
+    283.5,
+    210.0
+   ],
+   [
+    286.0,
+    210.0
+   ]
+  ],
+  "route_length_m": 102.0,
+  "segments": [
+   {
+    "from_m": [
+     253.0,
+     141.0
+    ],
+    "to_m": [
+     283.5,
+     141.0
+    ],
+    "length_m": 30.5,
+    "installation_level": "ground"
+   },
+   {
+    "from_m": [
+     283.5,
+     141.0
+    ],
+    "to_m": [
+     283.5,
+     210.0
+    ],
+    "length_m": 69.0,
+    "installation_level": "ground"
+   },
+   {
+    "from_m": [
+     283.5,
+     210.0
+    ],
+    "to_m": [
+     286.0,
+     210.0
+    ],
+    "length_m": 2.5,
+    "installation_level": "ground"
+   }
+  ],
+  "nominal_diameter": "DN300",
+  "internal_diameter_m": 0.282,
+  "pipe_class": "CS-WET-160",
+  "roughness_m": 4.5e-05,
+  "class_rating_mpa": 16.0,
+  "class_temperature_limits_c": [
+   -20,
+   120
+  ],
+  "wet_gas_compatible": true,
+  "dry_gas_compatible": true,
+  "liquid_drain_compatible": true,
+  "description": "train C feed"
+ },
+ {
+  "pipeline_id": "P22",
+  "service": "gas",
+  "from": {
+   "node": "SEP-A",
+   "port": "gas_out",
+   "point_m": [
+    294.0,
+    70.0
+   ]
+  },
+  "to": {
+   "node": "DEH-A",
+   "port": "gas_in",
+   "point_m": [
+    375.0,
+    70.0
+   ]
+  },
+  "route_m": [
+   [
+    294.0,
+    70.0
+   ],
+   [
+    296.0,
+    70.0
+   ],
+   [
+    296.0,
+    95.0
+   ],
+   [
+    350.0,
+    95.0
+   ],
+   [
+    350.0,
+    70.0
+   ],
+   [
+    375.0,
+    70.0
+   ]
+  ],
+  "route_length_m": 131.0,
+  "segments": [
+   {
+    "from_m": [
+     294.0,
+     70.0
+    ],
+    "to_m": [
+     296.0,
+     70.0
+    ],
+    "length_m": 2.0,
+    "installation_level": "ground"
+   },
+   {
+    "from_m": [
+     296.0,
+     70.0
+    ],
+    "to_m": [
+     296.0,
+     95.0
+    ],
+    "length_m": 25.0,
+    "installation_level": "ground"
+   },
+   {
+    "from_m": [
+     296.0,
+     95.0
+    ],
+    "to_m": [
+     299.0,
+     95.0
+    ],
+    "length_m": 3.0,
+    "installation_level": "ground"
+   },
+   {
+    "from_m": [
+     299.0,
+     95.0
+    ],
+    "to_m": [
+     305.0,
+     95.0
+    ],
+    "length_m": 6.0,
+    "installation_level": "buried"
+   },
+   {
+    "from_m": [
+     305.0,
+     95.0
+    ],
+    "to_m": [
+     350.0,
+     95.0
+    ],
+    "length_m": 45.0,
+    "installation_level": "ground"
+   },
+   {
+    "from_m": [
+     350.0,
+     95.0
+    ],
+    "to_m": [
+     350.0,
+     70.0
+    ],
+    "length_m": 25.0,
+    "installation_level": "ground"
+   },
+   {
+    "from_m": [
+     350.0,
+     70.0
+    ],
+    "to_m": [
+     375.0,
+     70.0
+    ],
+    "length_m": 25.0,
+    "installation_level": "ground"
+   }
+  ],
+  "nominal_diameter": "DN350",
+  "internal_diameter_m": 0.329,
+  "pipe_class": "CS-WET-160",
+  "roughness_m": 4.5e-05,
+  "class_rating_mpa": 16.0,
+  "class_temperature_limits_c": [
+   -20,
+   120
+  ],
+  "wet_gas_compatible": true,
+  "dry_gas_compatible": true,
+  "liquid_drain_compatible": true,
+  "description": "train A separated gas to dehydrator"
+ },
+ {
+  "pipeline_id": "P23",
+  "service": "gas",
+  "from": {
+   "node": "SEP-B",
+   "port": "gas_out",
+   "point_m": [
+    294.0,
+    140.0
+   ]
+  },
+  "to": {
+   "node": "DEH-B",
+   "port": "gas_in",
+   "point_m": [
+    375.0,
+    140.0
+   ]
+  },
+  "route_m": [
+   [
+    294.0,
+    140.0
+   ],
+   [
+    375.0,
+    140.0
+   ]
+  ],
+  "route_length_m": 81.0,
+  "segments": [
+   {
+    "from_m": [
+     294.0,
+     140.0
+    ],
+    "to_m": [
+     299.0,
+     140.0
+    ],
+    "length_m": 5.0,
+    "installation_level": "ground"
+   },
+   {
+    "from_m": [
+     299.0,
+     140.0
+    ],
+    "to_m": [
+     305.0,
+     140.0
+    ],
+    "length_m": 6.0,
+    "installation_level": "buried"
+   },
+   {
+    "from_m": [
+     305.0,
+     140.0
+    ],
+    "to_m": [
+     375.0,
+     140.0
+    ],
+    "length_m": 70.0,
+    "installation_level": "ground"
+   }
+  ],
+  "nominal_diameter": "DN300",
+  "internal_diameter_m": 0.282,
+  "pipe_class": "CS-WET-160",
+  "roughness_m": 4.5e-05,
+  "class_rating_mpa": 16.0,
+  "class_temperature_limits_c": [
+   -20,
+   120
+  ],
+  "wet_gas_compatible": true,
+  "dry_gas_compatible": true,
+  "liquid_drain_compatible": true,
+  "description": "train B separated gas to dehydrator"
+ },
+ {
+  "pipeline_id": "P24",
+  "service": "gas",
+  "from": {
+   "node": "SEP-C",
+   "port": "gas_out",
+   "point_m": [
+    294.0,
+    210.0
+   ]
+  },
+  "to": {
+   "node": "DEH-C",
+   "port": "gas_in",
+   "point_m": [
+    375.0,
+    210.0
+   ]
+  },
+  "route_m": [
+   [
+    294.0,
+    210.0
+   ],
+   [
+    375.0,
+    210.0
+   ]
+  ],
+  "route_length_m": 81.0,
+  "segments": [
+   {
+    "from_m": [
+     294.0,
+     210.0
+    ],
+    "to_m": [
+     299.0,
+     210.0
+    ],
+    "length_m": 5.0,
+    "installation_level": "ground"
+   },
+   {
+    "from_m": [
+     299.0,
+     210.0
+    ],
+    "to_m": [
+     305.0,
+     210.0
+    ],
+    "length_m": 6.0,
+    "installation_level": "buried"
+   },
+   {
+    "from_m": [
+     305.0,
+     210.0
+    ],
+    "to_m": [
+     375.0,
+     210.0
+    ],
+    "length_m": 70.0,
+    "installation_level": "ground"
+   }
+  ],
+  "nominal_diameter": "DN350",
+  "internal_diameter_m": 0.329,
+  "pipe_class": "CS-WET-160",
+  "roughness_m": 4.5e-05,
+  "class_rating_mpa": 16.0,
+  "class_temperature_limits_c": [
+   -20,
+   120
+  ],
+  "wet_gas_compatible": true,
+  "dry_gas_compatible": true,
+  "liquid_drain_compatible": true,
+  "description": "train C separated gas to dehydrator"
+ },
+ {
+  "pipeline_id": "P28",
+  "service": "gas",
+  "from": {
+   "node": "DEH-A",
+   "port": "gas_out",
+   "point_m": [
+    385.0,
+    70.0
+   ]
+  },
+  "to": {
+   "node": "H-SUC",
+   "port": "branch_04",
+   "point_m": [
+    427.0,
+    139.25
+   ]
+  },
+  "route_m": [
+   [
+    385.0,
+    70.0
+   ],
+   [
+    405.0,
+    70.0
+   ],
+   [
+    405.0,
+    139.25
+   ],
+   [
+    427.0,
+    139.25
+   ]
+  ],
+  "route_length_m": 111.25,
+  "segments": [
+   {
+    "from_m": [
+     385.0,
+     70.0
+    ],
+    "to_m": [
+     405.0,
+     70.0
+    ],
+    "length_m": 20.0,
+    "installation_level": "ground"
+   },
+   {
+    "from_m": [
+     405.0,
+     70.0
+    ],
+    "to_m": [
+     405.0,
+     139.25
+    ],
+    "length_m": 69.25,
+    "installation_level": "ground"
+   },
+   {
+    "from_m": [
+     405.0,
+     139.25
+    ],
+    "to_m": [
+     427.0,
+     139.25
+    ],
+    "length_m": 22.0,
+    "installation_level": "ground"
+   }
+  ],
+  "nominal_diameter": "DN350",
+  "internal_diameter_m": 0.329,
+  "pipe_class": "CS-DRY-160",
+  "roughness_m": 1.5e-05,
+  "class_rating_mpa": 16.0,
+  "class_temperature_limits_c": [
+   -20,
+   120
+  ],
+  "wet_gas_compatible": false,
+  "dry_gas_compatible": true,
+  "liquid_drain_compatible": false,
+  "description": "train A dry gas"
+ },
+ {
+  "pipeline_id": "P29",
+  "service": "gas",
+  "from": {
+   "node": "DEH-B",
+   "port": "gas_out",
+   "point_m": [
+    385.0,
+    140.0
+   ]
+  },
+  "to": {
+   "node": "H-SUC",
+   "port": "branch_08",
+   "point_m": [
+    427.0,
+    140.75
+   ]
+  },
+  "route_m": [
+   [
+    385.0,
+    140.0
+   ],
+   [
+    400.0,
+    140.0
+   ],
+   [
+    400.0,
+    140.75
+   ],
+   [
+    427.0,
+    140.75
+   ]
+  ],
+  "route_length_m": 42.75,
+  "segments": [
+   {
+    "from_m": [
+     385.0,
+     140.0
+    ],
+    "to_m": [
+     400.0,
+     140.0
+    ],
+    "length_m": 15.0,
+    "installation_level": "ground"
+   },
+   {
+    "from_m": [
+     400.0,
+     140.0
+    ],
+    "to_m": [
+     400.0,
+     140.75
+    ],
+    "length_m": 0.75,
+    "installation_level": "ground"
+   },
+   {
+    "from_m": [
+     400.0,
+     140.75
+    ],
+    "to_m": [
+     427.0,
+     140.75
+    ],
+    "length_m": 27.0,
+    "installation_level": "ground"
+   }
+  ],
+  "nominal_diameter": "DN300",
+  "internal_diameter_m": 0.282,
+  "pipe_class": "CS-DRY-160",
+  "roughness_m": 1.5e-05,
+  "class_rating_mpa": 16.0,
+  "class_temperature_limits_c": [
+   -20,
+   120
+  ],
+  "wet_gas_compatible": false,
+  "dry_gas_compatible": true,
+  "liquid_drain_compatible": false,
+  "description": "train B dry gas"
+ },
+ {
+  "pipeline_id": "P30",
+  "service": "gas",
+  "from": {
+   "node": "DEH-C",
+   "port": "gas_out",
+   "point_m": [
+    385.0,
+    210.0
+   ]
+  },
+  "to": {
+   "node": "H-SUC",
+   "port": "branch_09",
+   "point_m": [
+    432.0,
+    141.5
+   ]
+  },
+  "route_m": [
+   [
+    385.0,
+    210.0
+   ],
+   [
+    432.0,
+    210.0
+   ],
+   [
+    432.0,
+    141.5
+   ]
+  ],
+  "route_length_m": 115.5,
+  "segments": [
+   {
+    "from_m": [
+     385.0,
+     210.0
+    ],
+    "to_m": [
+     432.0,
+     210.0
+    ],
+    "length_m": 47.0,
+    "installation_level": "ground"
+   },
+   {
+    "from_m": [
+     432.0,
+     210.0
+    ],
+    "to_m": [
+     432.0,
+     141.5
+    ],
+    "length_m": 68.5,
+    "installation_level": "ground"
+   }
+  ],
+  "nominal_diameter": "DN350",
+  "internal_diameter_m": 0.329,
+  "pipe_class": "CS-DRY-160",
+  "roughness_m": 1.5e-05,
+  "class_rating_mpa": 16.0,
+  "class_temperature_limits_c": [
+   -20,
+   120
+  ],
+  "wet_gas_compatible": false,
+  "dry_gas_compatible": true,
+  "liquid_drain_compatible": false,
+  "description": "train C dry gas"
+ },
+ {
+  "pipeline_id": "P31",
+  "service": "gas",
+  "from": {
+   "node": "H-DIS",
+   "port": "branch_05",
+   "point_m": [
+    545.0,
+    141.5
+   ]
+  },
+  "to": {
+   "node": "REG",
+   "port": "gas_in",
+   "point_m": [
+    577.5,
+    205.0
+   ]
+  },
+  "route_m": [
+   [
+    545.0,
+    141.5
+   ],
+   [
+    545.0,
+    205.0
+   ],
+   [
+    577.5,
+    205.0
+   ]
+  ],
+  "route_length_m": 96.0,
+  "segments": [
+   {
+    "from_m": [
+     545.0,
+     141.5
+    ],
+    "to_m": [
+     545.0,
+     205.0
+    ],
+    "length_m": 63.5,
+    "installation_level": "ground"
+   },
+   {
+    "from_m": [
+     545.0,
+     205.0
+    ],
+    "to_m": [
+     577.5,
+     205.0
+    ],
+    "length_m": 32.5,
+    "installation_level": "ground"
+   }
+  ],
+  "nominal_diameter": "DN350",
+  "internal_diameter_m": 0.329,
+  "pipe_class": "CS-DRY-160",
+  "roughness_m": 1.5e-05,
+  "class_rating_mpa": 16.0,
+  "class_temperature_limits_c": [
+   -20,
+   120
+  ],
+  "wet_gas_compatible": false,
+  "dry_gas_compatible": true,
+  "liquid_drain_compatible": false,
+  "description": "to grid pressure control"
+ },
+ {
+  "pipeline_id": "P32",
+  "service": "gas",
+  "from": {
+   "node": "REG",
+   "port": "gas_out",
+   "point_m": [
+    582.5,
+    205.0
+   ]
+  },
+  "to": {
+   "node": "MTR-B",
+   "port": "gas_in",
+   "point_m": [
+    620.0,
+    268.0
+   ]
+  },
+  "route_m": [
+   [
+    582.5,
+    205.0
+   ],
+   [
+    600.0,
+    205.0
+   ],
+   [
+    600.0,
+    255.0
+   ],
+   [
+    620.0,
+    255.0
+   ],
+   [
+    620.0,
+    268.0
+   ]
+  ],
+  "route_length_m": 100.5,
+  "segments": [
+   {
+    "from_m": [
+     582.5,
+     205.0
+    ],
+    "to_m": [
+     600.0,
+     205.0
+    ],
+    "length_m": 17.5,
+    "installation_level": "ground"
+   },
+   {
+    "from_m": [
+     600.0,
+     205.0
+    ],
+    "to_m": [
+     600.0,
+     255.0
+    ],
+    "length_m": 50.0,
+    "installation_level": "ground"
+   },
+   {
+    "from_m": [
+     600.0,
+     255.0
+    ],
+    "to_m": [
+     620.0,
+     255.0
+    ],
+    "length_m": 20.0,
+    "installation_level": "ground"
+   },
+   {
+    "from_m": [
+     620.0,
+     255.0
+    ],
+    "to_m": [
+     620.0,
+     268.0
+    ],
+    "length_m": 13.0,
+    "installation_level": "ground"
+   }
+  ],
+  "nominal_diameter": "DN400",
+  "internal_diameter_m": 0.376,
+  "pipe_class": "CS-DRY-160",
+  "roughness_m": 1.5e-05,
+  "class_rating_mpa": 16.0,
+  "class_temperature_limits_c": [
+   -20,
+   120
+  ],
+  "wet_gas_compatible": false,
+  "dry_gas_compatible": true,
+  "liquid_drain_compatible": false,
+  "description": "controlled gas to grid meter"
+ },
+ {
+  "pipeline_id": "P33",
+  "service": "gas",
+  "from": {
+   "node": "MTR-B",
+   "port": "gas_out",
+   "point_m": [
+    620.0,
+    272.0
+   ]
+  },
+  "to": {
+   "node": "GRID-TIE",
+   "port": "gas",
+   "point_m": [
+    700.0,
+    225.0
+   ]
+  },
+  "route_m": [
+   [
+    620.0,
+    272.0
+   ],
+   [
+    620.0,
+    300.0
+   ],
+   [
+    690.0,
+    300.0
+   ],
+   [
+    690.0,
+    240.0
+   ],
+   [
+    700.0,
+    240.0
+   ],
+   [
+    700.0,
+    225.0
+   ]
+  ],
+  "route_length_m": 183.0,
+  "segments": [
+   {
+    "from_m": [
+     620.0,
+     272.0
+    ],
+    "to_m": [
+     620.0,
+     300.0
+    ],
+    "length_m": 28.0,
+    "installation_level": "ground"
+   },
+   {
+    "from_m": [
+     620.0,
+     300.0
+    ],
+    "to_m": [
+     690.0,
+     300.0
+    ],
+    "length_m": 70.0,
+    "installation_level": "ground"
+   },
+   {
+    "from_m": [
+     690.0,
+     300.0
+    ],
+    "to_m": [
+     690.0,
+     240.0
+    ],
+    "length_m": 60.0,
+    "installation_level": "ground"
+   },
+   {
+    "from_m": [
+     690.0,
+     240.0
+    ],
+    "to_m": [
+     700.0,
+     240.0
+    ],
+    "length_m": 10.0,
+    "installation_level": "ground"
+   },
+   {
+    "from_m": [
+     700.0,
+     240.0
+    ],
+    "to_m": [
+     700.0,
+     225.0
+    ],
+    "length_m": 15.0,
+    "installation_level": "ground"
+   }
+  ],
+  "nominal_diameter": "DN400",
+  "internal_diameter_m": 0.376,
+  "pipe_class": "CS-DRY-160",
+  "roughness_m": 1.5e-05,
+  "class_rating_mpa": 16.0,
+  "class_temperature_limits_c": [
+   -20,
+   120
+  ],
+  "wet_gas_compatible": false,
+  "dry_gas_compatible": true,
+  "liquid_drain_compatible": false,
+  "description": "withdrawal gas to grid tie"
+ },
+ {
+  "pipeline_id": "P34",
+  "service": "liquid",
+  "from": {
+   "node": "SEP-A",
+   "port": "liquid_out",
+   "point_m": [
+    290.0,
+    68.0
+   ]
+  },
+  "to": {
+   "node": "DRN-A",
+   "port": "drain_in",
+   "point_m": [
+    279.0,
+    55.0
+   ]
+  },
+  "route_m": [
+   [
+    290.0,
+    68.0
+   ],
+   [
+    290.0,
+    64.0
+   ],
+   [
+    275.0,
+    64.0
+   ],
+   [
+    275.0,
+    55.0
+   ],
+   [
+    279.0,
+    55.0
+   ]
+  ],
+  "route_length_m": 32.0,
+  "segments": [
+   {
+    "from_m": [
+     290.0,
+     68.0
+    ],
+    "to_m": [
+     290.0,
+     64.0
+    ],
+    "length_m": 4.0,
+    "installation_level": "buried"
+   },
+   {
+    "from_m": [
+     290.0,
+     64.0
+    ],
+    "to_m": [
+     275.0,
+     64.0
+    ],
+    "length_m": 15.0,
+    "installation_level": "buried"
+   },
+   {
+    "from_m": [
+     275.0,
+     64.0
+    ],
+    "to_m": [
+     275.0,
+     55.0
+    ],
+    "length_m": 9.0,
+    "installation_level": "buried"
+   },
+   {
+    "from_m": [
+     275.0,
+     55.0
+    ],
+    "to_m": [
+     279.0,
+     55.0
+    ],
+    "length_m": 4.0,
+    "installation_level": "buried"
+   }
+  ],
+  "nominal_diameter": "DN200",
+  "internal_diameter_m": 0.188,
+  "pipe_class": "CS-WET-100",
+  "roughness_m": 4.5e-05,
+  "class_rating_mpa": 10.0,
+  "class_temperature_limits_c": [
+   -20,
+   100
+  ],
+  "wet_gas_compatible": true,
+  "dry_gas_compatible": true,
+  "liquid_drain_compatible": true,
+  "description": "train A drain"
+ },
+ {
+  "pipeline_id": "P35",
+  "service": "liquid",
+  "from": {
+   "node": "SEP-B",
+   "port": "liquid_out",
+   "point_m": [
+    290.0,
+    138.0
+   ]
+  },
+  "to": {
+   "node": "DRN-B",
+   "port": "drain_in",
+   "point_m": [
+    279.0,
+    125.0
+   ]
+  },
+  "route_m": [
+   [
+    290.0,
+    138.0
+   ],
+   [
+    290.0,
+    134.0
+   ],
+   [
+    275.0,
+    134.0
+   ],
+   [
+    275.0,
+    125.0
+   ],
+   [
+    279.0,
+    125.0
+   ]
+  ],
+  "route_length_m": 32.0,
+  "segments": [
+   {
+    "from_m": [
+     290.0,
+     138.0
+    ],
+    "to_m": [
+     290.0,
+     134.0
+    ],
+    "length_m": 4.0,
+    "installation_level": "buried"
+   },
+   {
+    "from_m": [
+     290.0,
+     134.0
+    ],
+    "to_m": [
+     275.0,
+     134.0
+    ],
+    "length_m": 15.0,
+    "installation_level": "buried"
+   },
+   {
+    "from_m": [
+     275.0,
+     134.0
+    ],
+    "to_m": [
+     275.0,
+     125.0
+    ],
+    "length_m": 9.0,
+    "installation_level": "buried"
+   },
+   {
+    "from_m": [
+     275.0,
+     125.0
+    ],
+    "to_m": [
+     279.0,
+     125.0
+    ],
+    "length_m": 4.0,
+    "installation_level": "buried"
+   }
+  ],
+  "nominal_diameter": "DN200",
+  "internal_diameter_m": 0.188,
+  "pipe_class": "CS-WET-100",
+  "roughness_m": 4.5e-05,
+  "class_rating_mpa": 10.0,
+  "class_temperature_limits_c": [
+   -20,
+   100
+  ],
+  "wet_gas_compatible": true,
+  "dry_gas_compatible": true,
+  "liquid_drain_compatible": true,
+  "description": "train B drain"
+ },
+ {
+  "pipeline_id": "P36",
+  "service": "liquid",
+  "from": {
+   "node": "SEP-C",
+   "port": "liquid_out",
+   "point_m": [
+    290.0,
+    208.0
+   ]
+  },
+  "to": {
+   "node": "DRN-C",
+   "port": "drain_in",
+   "point_m": [
+    279.0,
+    195.0
+   ]
+  },
+  "route_m": [
+   [
+    290.0,
+    208.0
+   ],
+   [
+    290.0,
+    204.0
+   ],
+   [
+    275.0,
+    204.0
+   ],
+   [
+    275.0,
+    195.0
+   ],
+   [
+    279.0,
+    195.0
+   ]
+  ],
+  "route_length_m": 32.0,
+  "segments": [
+   {
+    "from_m": [
+     290.0,
+     208.0
+    ],
+    "to_m": [
+     290.0,
+     204.0
+    ],
+    "length_m": 4.0,
+    "installation_level": "buried"
+   },
+   {
+    "from_m": [
+     290.0,
+     204.0
+    ],
+    "to_m": [
+     275.0,
+     204.0
+    ],
+    "length_m": 15.0,
+    "installation_level": "buried"
+   },
+   {
+    "from_m": [
+     275.0,
+     204.0
+    ],
+    "to_m": [
+     275.0,
+     195.0
+    ],
+    "length_m": 9.0,
+    "installation_level": "buried"
+   },
+   {
+    "from_m": [
+     275.0,
+     195.0
+    ],
+    "to_m": [
+     279.0,
+     195.0
+    ],
+    "length_m": 4.0,
+    "installation_level": "buried"
+   }
+  ],
+  "nominal_diameter": "DN200",
+  "internal_diameter_m": 0.188,
+  "pipe_class": "CS-WET-100",
+  "roughness_m": 4.5e-05,
+  "class_rating_mpa": 10.0,
+  "class_temperature_limits_c": [
+   -20,
+   100
+  ],
+  "wet_gas_compatible": true,
+  "dry_gas_compatible": true,
+  "liquid_drain_compatible": true,
+  "description": "train C drain"
+ },
+ {
+  "pipeline_id": "P37",
+  "service": "liquid",
+  "from": {
+   "node": "DRN-A",
+   "port": "drain_out",
+   "point_m": [
+    281.0,
+    55.0
+   ]
+  },
+  "to": {
+   "node": "LIQUID-DRAIN-OUTFALL",
+   "port": "drain",
+   "point_m": [
+    680.0,
+    120.0
+   ]
+  },
+  "route_m": [
+   [
+    281.0,
+    55.0
+   ],
+   [
+    282.0,
+    55.0
+   ],
+   [
+    282.0,
+    105.0
+   ],
+   [
+    655.0,
+    105.0
+   ],
+   [
+    655.0,
+    120.0
+   ],
+   [
+    680.0,
+    120.0
+   ]
+  ],
+  "route_length_m": 464.0,
+  "segments": [
+   {
+    "from_m": [
+     281.0,
+     55.0
+    ],
+    "to_m": [
+     282.0,
+     55.0
+    ],
+    "length_m": 1.0,
+    "installation_level": "buried"
+   },
+   {
+    "from_m": [
+     282.0,
+     55.0
+    ],
+    "to_m": [
+     282.0,
+     105.0
+    ],
+    "length_m": 50.0,
+    "installation_level": "buried"
+   },
+   {
+    "from_m": [
+     282.0,
+     105.0
+    ],
+    "to_m": [
+     299.0,
+     105.0
+    ],
+    "length_m": 17.0,
+    "installation_level": "buried"
+   },
+   {
+    "from_m": [
+     299.0,
+     105.0
+    ],
+    "to_m": [
+     305.0,
+     105.0
+    ],
+    "length_m": 6.0,
+    "installation_level": "buried"
+   },
+   {
+    "from_m": [
+     305.0,
+     105.0
+    ],
+    "to_m": [
+     502.0,
+     105.0
+    ],
+    "length_m": 197.0,
+    "installation_level": "buried"
+   },
+   {
+    "from_m": [
+     502.0,
+     105.0
+    ],
+    "to_m": [
+     508.0,
+     105.0
+    ],
+    "length_m": 6.0,
+    "installation_level": "buried"
+   },
+   {
+    "from_m": [
+     508.0,
+     105.0
+    ],
+    "to_m": [
+     655.0,
+     105.0
+    ],
+    "length_m": 147.0,
+    "installation_level": "buried"
+   },
+   {
+    "from_m": [
+     655.0,
+     105.0
+    ],
+    "to_m": [
+     655.0,
+     120.0
+    ],
+    "length_m": 15.0,
+    "installation_level": "buried"
+   },
+   {
+    "from_m": [
+     655.0,
+     120.0
+    ],
+    "to_m": [
+     680.0,
+     120.0
+    ],
+    "length_m": 25.0,
+    "installation_level": "buried"
+   }
+  ],
+  "nominal_diameter": "DN200",
+  "internal_diameter_m": 0.188,
+  "pipe_class": "CS-WET-100",
+  "roughness_m": 4.5e-05,
+  "class_rating_mpa": 10.0,
+  "class_temperature_limits_c": [
+   -20,
+   100
+  ],
+  "wet_gas_compatible": true,
+  "dry_gas_compatible": true,
+  "liquid_drain_compatible": true,
+  "description": "drain discharge line A"
+ },
+ {
+  "pipeline_id": "P38",
+  "service": "liquid",
+  "from": {
+   "node": "DRN-B",
+   "port": "drain_out",
+   "point_m": [
+    281.0,
+    125.0
+   ]
+  },
+  "to": {
+   "node": "LIQUID-DRAIN-OUTFALL",
+   "port": "drain",
+   "point_m": [
+    680.0,
+    120.0
+   ]
+  },
+  "route_m": [
+   [
+    281.0,
+    125.0
+   ],
+   [
+    284.0,
+    125.0
+   ],
+   [
+    284.0,
+    110.0
+   ],
+   [
+    668.0,
+    110.0
+   ],
+   [
+    668.0,
+    150.0
+   ],
+   [
+    680.0,
+    150.0
+   ],
+   [
+    680.0,
+    120.0
+   ]
+  ],
+  "route_length_m": 484.0,
+  "segments": [
+   {
+    "from_m": [
+     281.0,
+     125.0
+    ],
+    "to_m": [
+     284.0,
+     125.0
+    ],
+    "length_m": 3.0,
+    "installation_level": "buried"
+   },
+   {
+    "from_m": [
+     284.0,
+     125.0
+    ],
+    "to_m": [
+     284.0,
+     110.0
+    ],
+    "length_m": 15.0,
+    "installation_level": "buried"
+   },
+   {
+    "from_m": [
+     284.0,
+     110.0
+    ],
+    "to_m": [
+     299.0,
+     110.0
+    ],
+    "length_m": 15.0,
+    "installation_level": "buried"
+   },
+   {
+    "from_m": [
+     299.0,
+     110.0
+    ],
+    "to_m": [
+     305.0,
+     110.0
+    ],
+    "length_m": 6.0,
+    "installation_level": "buried"
+   },
+   {
+    "from_m": [
+     305.0,
+     110.0
+    ],
+    "to_m": [
+     502.0,
+     110.0
+    ],
+    "length_m": 197.0,
+    "installation_level": "buried"
+   },
+   {
+    "from_m": [
+     502.0,
+     110.0
+    ],
+    "to_m": [
+     508.0,
+     110.0
+    ],
+    "length_m": 6.0,
+    "installation_level": "buried"
+   },
+   {
+    "from_m": [
+     508.0,
+     110.0
+    ],
+    "to_m": [
+     668.0,
+     110.0
+    ],
+    "length_m": 160.0,
+    "installation_level": "buried"
+   },
+   {
+    "from_m": [
+     668.0,
+     110.0
+    ],
+    "to_m": [
+     668.0,
+     150.0
+    ],
+    "length_m": 40.0,
+    "installation_level": "buried"
+   },
+   {
+    "from_m": [
+     668.0,
+     150.0
+    ],
+    "to_m": [
+     680.0,
+     150.0
+    ],
+    "length_m": 12.0,
+    "installation_level": "buried"
+   },
+   {
+    "from_m": [
+     680.0,
+     150.0
+    ],
+    "to_m": [
+     680.0,
+     120.0
+    ],
+    "length_m": 30.0,
+    "installation_level": "buried"
+   }
+  ],
+  "nominal_diameter": "DN200",
+  "internal_diameter_m": 0.188,
+  "pipe_class": "CS-WET-100",
+  "roughness_m": 4.5e-05,
+  "class_rating_mpa": 10.0,
+  "class_temperature_limits_c": [
+   -20,
+   100
+  ],
+  "wet_gas_compatible": true,
+  "dry_gas_compatible": true,
+  "liquid_drain_compatible": true,
+  "description": "drain discharge line B"
+ },
+ {
+  "pipeline_id": "P39",
+  "service": "liquid",
+  "from": {
+   "node": "DRN-C",
+   "port": "drain_out",
+   "point_m": [
+    281.0,
+    195.0
+   ]
+  },
+  "to": {
+   "node": "LIQUID-DRAIN-OUTFALL",
+   "port": "drain",
+   "point_m": [
+    680.0,
+    120.0
+   ]
+  },
+  "route_m": [
+   [
+    281.0,
+    195.0
+   ],
+   [
+    283.0,
+    195.0
+   ],
+   [
+    283.0,
+    115.0
+   ],
+   [
+    645.0,
+    115.0
+   ],
+   [
+    645.0,
+    80.0
+   ],
+   [
+    680.0,
+    80.0
+   ],
+   [
+    680.0,
+    120.0
+   ]
+  ],
+  "route_length_m": 554.0,
+  "segments": [
+   {
+    "from_m": [
+     281.0,
+     195.0
+    ],
+    "to_m": [
+     283.0,
+     195.0
+    ],
+    "length_m": 2.0,
+    "installation_level": "buried"
+   },
+   {
+    "from_m": [
+     283.0,
+     195.0
+    ],
+    "to_m": [
+     283.0,
+     115.0
+    ],
+    "length_m": 80.0,
+    "installation_level": "buried"
+   },
+   {
+    "from_m": [
+     283.0,
+     115.0
+    ],
+    "to_m": [
+     299.0,
+     115.0
+    ],
+    "length_m": 16.0,
+    "installation_level": "buried"
+   },
+   {
+    "from_m": [
+     299.0,
+     115.0
+    ],
+    "to_m": [
+     305.0,
+     115.0
+    ],
+    "length_m": 6.0,
+    "installation_level": "buried"
+   },
+   {
+    "from_m": [
+     305.0,
+     115.0
+    ],
+    "to_m": [
+     502.0,
+     115.0
+    ],
+    "length_m": 197.0,
+    "installation_level": "buried"
+   },
+   {
+    "from_m": [
+     502.0,
+     115.0
+    ],
+    "to_m": [
+     508.0,
+     115.0
+    ],
+    "length_m": 6.0,
+    "installation_level": "buried"
+   },
+   {
+    "from_m": [
+     508.0,
+     115.0
+    ],
+    "to_m": [
+     645.0,
+     115.0
+    ],
+    "length_m": 137.0,
+    "installation_level": "buried"
+   },
+   {
+    "from_m": [
+     645.0,
+     115.0
+    ],
+    "to_m": [
+     645.0,
+     80.0
+    ],
+    "length_m": 35.0,
+    "installation_level": "buried"
+   },
+   {
+    "from_m": [
+     645.0,
+     80.0
+    ],
+    "to_m": [
+     680.0,
+     80.0
+    ],
+    "length_m": 35.0,
+    "installation_level": "buried"
+   },
+   {
+    "from_m": [
+     680.0,
+     80.0
+    ],
+    "to_m": [
+     680.0,
+     120.0
+    ],
+    "length_m": 40.0,
+    "installation_level": "buried"
+   }
+  ],
+  "nominal_diameter": "DN200",
+  "internal_diameter_m": 0.188,
+  "pipe_class": "CS-WET-100",
+  "roughness_m": 4.5e-05,
+  "class_rating_mpa": 10.0,
+  "class_temperature_limits_c": [
+   -20,
+   100
+  ],
+  "wet_gas_compatible": true,
+  "dry_gas_compatible": true,
+  "liquid_drain_compatible": true,
+  "description": "drain discharge line C"
+ }
+]

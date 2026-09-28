@@ -1,0 +1,251 @@
+{
+ "cases_checked": [
+  "INJ-LOW",
+  "INJ-MID",
+  "INJ-HIGH",
+  "WDR-HIGH",
+  "WDR-MID",
+  "WDR-LOW",
+  "INJ-LOW-N1-CMP-A",
+  "INJ-LOW-N1-CMP-B",
+  "INJ-LOW-N1-CMP-C",
+  "INJ-MID-N1-CMP-A",
+  "INJ-MID-N1-CMP-B",
+  "INJ-MID-N1-CMP-C",
+  "INJ-HIGH-N1-CMP-A",
+  "INJ-HIGH-N1-CMP-B",
+  "INJ-HIGH-N1-CMP-C",
+  "WDR-HIGH-N1-SEP-A",
+  "WDR-HIGH-N1-SEP-B",
+  "WDR-HIGH-N1-SEP-C",
+  "WDR-HIGH-N1-DEH-A",
+  "WDR-HIGH-N1-DEH-B",
+  "WDR-HIGH-N1-DEH-C",
+  "WDR-MID-N1-SEP-A",
+  "WDR-MID-N1-SEP-B",
+  "WDR-MID-N1-SEP-C",
+  "WDR-MID-N1-DEH-A",
+  "WDR-MID-N1-DEH-B",
+  "WDR-MID-N1-DEH-C",
+  "WDR-LOW-N1-CMP-A",
+  "WDR-LOW-N1-CMP-B",
+  "WDR-LOW-N1-CMP-C",
+  "WDR-LOW-N1-SEP-A",
+  "WDR-LOW-N1-SEP-B",
+  "WDR-LOW-N1-SEP-C",
+  "WDR-LOW-N1-DEH-A",
+  "WDR-LOW-N1-DEH-B",
+  "WDR-LOW-N1-DEH-C"
+ ],
+ "geometry_and_layout_rules": [
+  {
+   "rule": "Equipment footprints inside the site boundary",
+   "checks_performed": 20,
+   "failures": 0,
+   "result": "PASS",
+   "failure_detail": []
+  },
+  {
+   "rule": "Equipment footprints clear of equipment-exclusion zones",
+   "checks_performed": 60,
+   "failures": 0,
+   "result": "PASS",
+   "failure_detail": []
+  },
+  {
+   "rule": "No positive-area overlap between equipment footprints",
+   "checks_performed": 190,
+   "failures": 0,
+   "result": "PASS",
+   "failure_detail": []
+  },
+  {
+   "rule": "Safety separation matrix for every category pair",
+   "checks_performed": 190,
+   "failures": 0,
+   "result": "PASS",
+   "failure_detail": []
+  },
+  {
+   "rule": "Maintenance envelopes inside site / zones / clear of footprints",
+   "checks_performed": 23,
+   "failures": 0,
+   "result": "PASS",
+   "failure_detail": []
+  },
+  {
+   "rule": "Road definition (width >= 4 m), paved geometry and connectivity",
+   "checks_performed": 6,
+   "failures": 0,
+   "result": "PASS",
+   "failure_detail": []
+  },
+  {
+   "rule": "Road-access and crane-access distances",
+   "checks_performed": 6,
+   "failures": 0,
+   "result": "PASS",
+   "failure_detail": []
+  },
+  {
+   "rule": "Pipeline segments: site, pipeline-exclusion zones, footprint interiors",
+   "checks_performed": 157,
+   "failures": 0,
+   "result": "PASS",
+   "failure_detail": []
+  },
+  {
+   "rule": "No positive-length same-level pipeline overlap",
+   "checks_performed": 6684,
+   "failures": 0,
+   "result": "PASS",
+   "failure_detail": []
+  },
+  {
+   "rule": "Port cardinality, interface limits and port-type compatibility",
+   "checks_performed": 105,
+   "failures": 0,
+   "result": "PASS",
+   "failure_detail": []
+  },
+  {
+   "rule": "Separator/filter liquid outlets connected to closed drains",
+   "checks_performed": 3,
+   "failures": 0,
+   "result": "PASS",
+   "failure_detail": []
+  }
+ ],
+ "operating_rules": [
+  {
+   "rule": "Equipment capacity limits (flow <= capacity)",
+   "checks_performed": 378,
+   "failures": 0,
+   "result": "PASS",
+   "failure_detail": []
+  },
+  {
+   "rule": "Equipment pressure limits",
+   "checks_performed": 378,
+   "failures": 0,
+   "result": "PASS",
+   "failure_detail": []
+  },
+  {
+   "rule": "Compressor ratio / discharge pressure / suction limits",
+   "checks_performed": 54,
+   "failures": 0,
+   "result": "PASS",
+   "failure_detail": []
+  },
+  {
+   "rule": "Compressor temperature and minimum stable flow",
+   "checks_performed": 54,
+   "failures": 0,
+   "result": "PASS",
+   "failure_detail": []
+  },
+  {
+   "rule": "Compressor driver power limits",
+   "checks_performed": 54,
+   "failures": 0,
+   "result": "PASS",
+   "failure_detail": []
+  },
+  {
+   "rule": "Cooler duty and outlet temperature limits",
+   "checks_performed": 12,
+   "failures": 0,
+   "result": "PASS",
+   "failure_detail": []
+  },
+  {
+   "rule": "Separator/filter liquid rate and feed loading limits",
+   "checks_performed": 54,
+   "failures": 0,
+   "result": "PASS",
+   "failure_detail": []
+  },
+  {
+   "rule": "Dehydrator feed loading limits",
+   "checks_performed": 54,
+   "failures": 0,
+   "result": "PASS",
+   "failure_detail": []
+  },
+  {
+   "rule": "Pipe class pressure rating in each operating case",
+   "checks_performed": 656,
+   "failures": 0,
+   "result": "PASS",
+   "failure_detail": []
+  },
+  {
+   "rule": "Pipe class temperature limits in each operating case",
+   "checks_performed": 656,
+   "failures": 0,
+   "result": "PASS",
+   "failure_detail": []
+  },
+  {
+   "rule": "Pipe class wet/dry eligibility in each operating case",
+   "checks_performed": 656,
+   "failures": 0,
+   "result": "PASS",
+   "failure_detail": []
+  },
+  {
+   "rule": "Gas velocity limit (25 m/s)",
+   "checks_performed": 656,
+   "failures": 0,
+   "result": "PASS",
+   "failure_detail": []
+  },
+  {
+   "rule": "Pressure-loss convergence (8 updates)",
+   "checks_performed": 656,
+   "failures": 0,
+   "result": "PASS",
+   "failure_detail": []
+  },
+  {
+   "rule": "Delivery quality limits (water, free liquid) at every sink",
+   "checks_performed": 96,
+   "failures": 0,
+   "result": "PASS",
+   "failure_detail": []
+  },
+  {
+   "rule": "Delivery temperature limits at every sink",
+   "checks_performed": 96,
+   "failures": 0,
+   "result": "PASS",
+   "failure_detail": []
+  },
+  {
+   "rule": "Required sink pressure at every sink",
+   "checks_performed": 96,
+   "failures": 0,
+   "result": "PASS",
+   "failure_detail": []
+  },
+  {
+   "rule": "Well-group boundary flow limits",
+   "checks_performed": 72,
+   "failures": 0,
+   "result": "PASS",
+   "failure_detail": []
+  },
+  {
+   "rule": "GRID-TIE metering capacity at full scenario flow",
+   "checks_performed": 36,
+   "failures": 0,
+   "result": "PASS",
+   "failure_detail": []
+  }
+ ],
+ "geometry_errors": [],
+ "operating_case_errors": [],
+ "total_checks_performed": 12158,
+ "total_failures": 0
+}

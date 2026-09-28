@@ -1,0 +1,38 @@
+{
+  "findings": [
+    {
+      "claim_challenged": "Review 3 findings F-08 (PL-PC-R2 missing from the operating paths), F-09 (console scenario power polluted by liquid rates), F-10 (DN150 drain lines over the velocity limit under the design's own proxy and uncovered by the checks).",
+      "confidence": "high",
+      "evidence": "PL-PC-R2 now appears in the WDR-HIGH and WDR-MID operating paths (setpoints 6.17398 and 6.14502 as predicted, delivered back to 6.0500 MPa) and in the WDR-LOW chain, where it correctly carries zero flow and is absent from that trace. The console now prints 2.160/1.800/6.609 MW, matching design.json, README and report. All six drain lines are DN200 with the proxy applied to each (1.750 m/s against 3.0 m/s); reverting PL-DA-1/DB-1/DC-1 to DN150 fails 3 liquid checks.",
+      "finding_id": "F-08-09-10-resolved",
+      "lifecycle_status": "RESOLVED",
+      "public_basis": "engineering_calculation_basis.md pressure-loss and liquid-drain velocity rules; final_delivery_contract.json consistency and reconstructability.",
+      "severity": "low",
+      "status": "observation",
+      "why_it_matters": "Declared operating paths now match the physical topology, the documented reproduction command agrees with the deliverables, and the liquid-drain limit is checked on every liquid line."
+    },
+    {
+      "claim_challenged": "Primary objective: minimize benchmark lifecycle cost among feasible designs; the revision asks whether any required headroom is left.",
+      "confidence": "medium",
+      "evidence": "Measured with the design's own validator, all with 0 failures: REG120 instead of REG180 gives LCC 105.9113 (-0.159 MBCU), because WDR-HIGH is exactly 120 kg/s and 120 >= 120 satisfies the published rule; single-pipe resizing (PL-IR to DN600, PL-IM-1o/PL-IS-1/PL-IS-2/PL-ID-1/PL-ID-2/PL-WM-1i one size up, PL-IS-3/PL-ID-3 one size down) gives 105.9310 (-0.140); together 105.7717 (-0.299). MTR120 instead of MTR160 gives 105.7537 but fails only the design's self-imposed boundary-limit check. Every other single size change raises LCC.",
+      "finding_id": "F-02-residual-lcc-headroom",
+      "lifecycle_status": "PERSISTS",
+      "public_basis": "project_requirements.json primary objective; engineering_calculation_basis.md tolerance convention.",
+      "severity": "low",
+      "status": "observation",
+      "why_it_matters": "About 0.3 MBCU (0.28 percent) of LCC remains available with no compliance cost; the regulator swap is the largest clean item."
+    },
+    {
+      "claim_challenged": "Tightest margins after the single-meter and DN400 changes, coverage of the new checks, and the residual README directory wording from review 1 finding F-04.",
+      "confidence": "high",
+      "evidence": "The DN400 meter-feed and regulator-outlet lines run at 21.467 m/s, 86 percent of the 25 m/s limit, the tightest velocity margin (upsizing them raises LCC to 106.088, so it is deliberate). The liquid velocity check uses normal-scenario maxima only; the 2-train n-1 rate (0.4198 kg/s) gives 1.838 m/s, compliant but unchecked. The new path-coverage check exempts services whose description contains liquid or drain; the six exempted here are genuine liquid services. README still says the modules live in project/ while the snapshot places them at the submission root beside deliverables/, although both documented commands work as delivered.",
+      "finding_id": "F-11-margins-coverage-wording",
+      "lifecycle_status": "OPEN",
+      "public_basis": "piping_catalog.json velocity limits; final_delivery_contract.json reconstructability requirements.",
+      "severity": "low",
+      "status": "observation",
+      "why_it_matters": "Robustness and documentation level only: the highest-velocity lines and the n-1 liquid rates should be stated, and the name-based coverage exemption could excuse a mislabelled gas line in a later revision."
+    }
+  ],
+  "summary": "Review 4, snapshot 977488b9. All review-3 defects are fixed and re-verified independently. (a) PL-PC-R2 is now in the pressure-control branch; an independent walk of all six chains finds no untraversed pipe hop, no connectivity error, no one-way pipe reversed and no gas pipeline missing from the operating paths, so the declared paths match the connections table. (b) All six drain lines are DN200 and the gas-density-proxy velocity check covers every one (1.750 m/s against 3.0 m/s); the check is load-bearing, since DN150 reversions fail 3 liquid checks. (c) Console, design.json, README and report agree: LCC 106.071, 670 checks, setpoints 6.174/6.145/6.111 MPa, powers 8.108/13.027/13.722/2.160/1.800/6.609 MW. (d) No regressions: geometry legal (minimum separation margin 2.0 m, no exclusion, footprint or overlap conflicts), hydraulics reproduced to 7.3e-9 MPa with all pipes converged, compressor power exact, delivery unchanged, all 29 n-1 outages pass, LCC components recompute to 106.07053 vs 106.07060, deliverables rebuild byte-identically. (e) Nothing required by the delivery contract is missing; remaining items are optional LCC tuning (about 0.30 MBCU, 0.28 percent) plus the notes below."
+}

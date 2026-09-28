@@ -1,0 +1,41 @@
+{
+  "all_submissions_covered_before_reveal": true,
+  "failed_evaluator_attempt_count": 262,
+  "job_status_counts": {
+    "frozen": 13,
+    "not_run_by_design": 2,
+    "stopped_by_user": 1
+  },
+  "max_failed_evaluator_attempts_per_job_invocation": 3,
+  "original_scheduled_job_count": 16,
+  "preflight_failure_count": 7,
+  "replacement_attempt_count": 262,
+  "source_hashes": [
+    {
+      "source_path": "evaluation/ugs_synth_blind_batch_001/controller/run_progress.json",
+      "source_sha256": "f55a3ee9928d543ea8091f2541e90b41c7a461d2df2dad5d69c0f9b82715c351"
+    },
+    {
+      "source_path": "evaluation/ugs_synth_blind_batch_001/controller/session_schedule.json",
+      "source_sha256": "c74140cb216dea4a010a93d4272e8487af41d333528123c51834b588122d33fa"
+    },
+    {
+      "source_path": "evaluation/ugs_synth_blind_batch_001/controller/run_blind_reviews.py",
+      "source_sha256": "212a628ccc3a2d28dc62a89269737604641e0b44a2b3d232625644b64f99b173"
+    }
+  ],
+  "successful_frozen_review_count": 13,
+  "successful_review_coverage": {
+    "decision_basis": "evaluator execution and token cost",
+    "decision_timing": "before_blind_mapping_reveal",
+    "double_pass_submission_count": 5,
+    "evaluator_execution_stopped_after": "submission_A/pass_01",
+    "frozen_successful_review_count": 13,
+    "primary_blind_coverage_status": "complete",
+    "protocol_amendment": "protocol_amendment_stop_after_full_submission_coverage.md",
+    "repeated_pass_subset_status": "incomplete_by_design_after_protocol_amendment",
+    "single_pass_submission_count": 3,
+    "submission_total": 8,
+    "submissions_with_at_least_one_frozen_review": 8
+  }
+}

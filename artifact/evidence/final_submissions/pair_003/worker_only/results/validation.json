@@ -1,0 +1,33 @@
+{
+ "geometry": [],
+ "roads": [],
+ "access": [],
+ "pipelines": [],
+ "port_cardinality": [],
+ "port_types": [],
+ "velocity": [],
+ "pipe_class": [],
+ "equipment_envelope": [],
+ "delivery": [],
+ "metering": [],
+ "boundary": [],
+ "completeness": [],
+ "n1_delivery": [],
+ "_summary": {
+  "geometry": 0,
+  "roads": 0,
+  "access": 0,
+  "pipelines": 0,
+  "port_cardinality": 0,
+  "port_types": 0,
+  "velocity": 0,
+  "pipe_class": 0,
+  "equipment_envelope": 0,
+  "delivery": 0,
+  "metering": 0,
+  "boundary": 0,
+  "completeness": 0,
+  "n1_delivery": 0
+ },
+ "_total": 0
+}

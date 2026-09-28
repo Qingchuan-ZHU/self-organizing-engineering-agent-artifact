@@ -1,0 +1,288 @@
+{
+  "boundary_polygon_m": [
+    [
+      0,
+      0
+    ],
+    [
+      700,
+      0
+    ],
+    [
+      700,
+      450
+    ],
+    [
+      0,
+      450
+    ]
+  ],
+  "external_interfaces": [
+    {
+      "interface_id": "GRID-TIE",
+      "interface_type": "process",
+      "maximum_connections": 2,
+      "maximum_flow_kg_s": 160,
+      "point_m": [
+        700,
+        225
+      ],
+      "port_id": "gas",
+      "port_type": "gas_bidirectional"
+    },
+    {
+      "interface_id": "WG-01",
+      "interface_type": "well_group",
+      "maximum_flow_kg_s": 25,
+      "point_m": [
+        12,
+        45
+      ],
+      "port_id": "gas",
+      "port_type": "gas_bidirectional"
+    },
+    {
+      "interface_id": "WG-02",
+      "interface_type": "well_group",
+      "maximum_flow_kg_s": 25,
+      "point_m": [
+        12,
+        117
+      ],
+      "port_id": "gas",
+      "port_type": "gas_bidirectional"
+    },
+    {
+      "interface_id": "WG-03",
+      "interface_type": "well_group",
+      "maximum_flow_kg_s": 25,
+      "point_m": [
+        12,
+        189
+      ],
+      "port_id": "gas",
+      "port_type": "gas_bidirectional"
+    },
+    {
+      "interface_id": "WG-04",
+      "interface_type": "well_group",
+      "maximum_flow_kg_s": 25,
+      "point_m": [
+        12,
+        261
+      ],
+      "port_id": "gas",
+      "port_type": "gas_bidirectional"
+    },
+    {
+      "interface_id": "WG-05",
+      "interface_type": "well_group",
+      "maximum_flow_kg_s": 25,
+      "point_m": [
+        12,
+        333
+      ],
+      "port_id": "gas",
+      "port_type": "gas_bidirectional"
+    },
+    {
+      "interface_id": "WG-06",
+      "interface_type": "well_group",
+      "maximum_flow_kg_s": 25,
+      "point_m": [
+        12,
+        405
+      ],
+      "port_id": "gas",
+      "port_type": "gas_bidirectional"
+    },
+    {
+      "interface_id": "POWER-TIE",
+      "interface_type": "utility",
+      "point_m": [
+        660,
+        35
+      ],
+      "port_id": "power",
+      "port_type": "utility_in"
+    },
+    {
+      "interface_id": "FIREWATER-TIE",
+      "interface_type": "utility",
+      "point_m": [
+        620,
+        35
+      ],
+      "port_id": "firewater",
+      "port_type": "utility_in"
+    },
+    {
+      "interface_id": "INSTRUMENT-AIR-TIE",
+      "interface_type": "utility",
+      "point_m": [
+        580,
+        35
+      ],
+      "port_id": "air",
+      "port_type": "utility_in"
+    },
+    {
+      "interface_id": "ROAD-ENTRANCE",
+      "interface_type": "road",
+      "point_m": [
+        0,
+        225
+      ],
+      "port_id": "access",
+      "port_type": "road_access"
+    },
+    {
+      "interface_id": "LIQUID-DRAIN-OUTFALL",
+      "interface_type": "drain",
+      "maximum_connections": 8,
+      "maximum_flow_kg_s": 10.0,
+      "point_m": [
+        680,
+        120
+      ],
+      "port_id": "drain",
+      "port_type": "drain_in"
+    }
+  ],
+  "no_build_zones": [
+    {
+      "equipment_exclusion": true,
+      "pipeline_exclusion": true,
+      "polygon_m": [
+        [
+          550,
+          320
+        ],
+        [
+          700,
+          320
+        ],
+        [
+          700,
+          450
+        ],
+        [
+          550,
+          450
+        ]
+      ],
+      "road_exclusion": true,
+      "zone_id": "FUTURE-EXPANSION"
+    },
+    {
+      "equipment_exclusion": true,
+      "pipeline_exclusion": true,
+      "polygon_m": [
+        [
+          300,
+          0
+        ],
+        [
+          320,
+          0
+        ],
+        [
+          320,
+          90
+        ],
+        [
+          300,
+          90
+        ]
+      ],
+      "road_exclusion": false,
+      "zone_id": "DRAINAGE-CHANNEL"
+    },
+    {
+      "equipment_exclusion": true,
+      "pipeline_exclusion": false,
+      "polygon_m": [
+        [
+          620,
+          0
+        ],
+        [
+          700,
+          0
+        ],
+        [
+          700,
+          75
+        ],
+        [
+          620,
+          75
+        ]
+      ],
+      "road_exclusion": true,
+      "zone_id": "GRID-FACILITY"
+    }
+  ],
+  "provenance": {
+    "classification": "synthetic benchmark assumption",
+    "note": "Deterministic development-case data; not vendor data or production engineering criteria."
+  },
+  "routing_corridors": [
+    {
+      "allowed_routing_levels": [
+        "rack_low",
+        "rack_high"
+      ],
+      "allows_co_routing": true,
+      "corridor_id": "RACK-EASEMENT-EAST",
+      "polygon_m": [
+        [
+          625,
+          80
+        ],
+        [
+          690,
+          80
+        ],
+        [
+          690,
+          370
+        ],
+        [
+          625,
+          370
+        ]
+      ]
+    },
+    {
+      "allowed_routing_levels": [
+        "buried"
+      ],
+      "allows_co_routing": true,
+      "corridor_id": "BURIED-EASEMENT-SOUTH",
+      "polygon_m": [
+        [
+          40,
+          15
+        ],
+        [
+          570,
+          15
+        ],
+        [
+          570,
+          28
+        ],
+        [
+          40,
+          28
+        ]
+      ]
+    }
+  ],
+  "terrain": {
+    "elevation_m": 0,
+    "model": "flat"
+  },
+  "units": "m"
+}

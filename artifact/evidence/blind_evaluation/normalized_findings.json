@@ -1,0 +1,2901 @@
+{
+  "schema_version": 1,
+  "analysis_generated_at_utc": "2026-09-28T02:51:06Z",
+  "primary_unit": "final submission",
+  "submission_count": 8,
+  "frozen_review_pass_count": 13,
+  "raw_frozen_finding_record_count": 54,
+  "normalized_submission_level_issue_group_count": 38,
+  "source_finding_reference_count_after_documented_compound_split": 55,
+  "normalization_rules": {
+    "single_pass": "Carry that pass finding into one submission-level issue group.",
+    "double_pass": "Merge only when public requirement, artifact/component, failure mechanism or numerical inconsistency clearly identifies the same underlying issue; otherwise keep separate.",
+    "labels": "Preserve every contributing pass status, severity and confidence. A mixed-label issue is counted in every status label represented; status-specific counts can therefore overlap.",
+    "severity_summary": "For confirmed issue counts by severity, assign each normalized issue the most severe severity among passes that labeled that issue confirmed_violation. Original per-pass severities remain in each issue record.",
+    "compound_source_finding": "submission_H/pass_02 finding F-005 contains both an equipment-capacity statement mismatch and separate scenario liquid-total mismatches. It is referenced in two issue groups so these distinct checks are not conflated; the source finding itself is unchanged."
+  },
+  "taxonomy": [
+    "confirmed_violation",
+    "unsupported_claim",
+    "suspected_risk",
+    "semantics_gap",
+    "observation"
+  ],
+  "primary_engineering_categories": {
+    "LCC objective / suboptimality": 6,
+    "N-1 reliability": 6,
+    "benchmark semantics": 14,
+    "deliverable / reconstructability": 2,
+    "geometry / layout / roads": 1,
+    "internal consistency": 5,
+    "operating scenarios": 2,
+    "pipeline geometry": 1,
+    "topology / ports": 1
+  },
+  "condition_summaries": {
+    "worker_only": {
+      "submission_count": 4,
+      "submissions_with_any_confirmed_violation": 3,
+      "normalized_confirmed_issue_count": 5,
+      "high_confirmed_issue_count": 0,
+      "medium_confirmed_issue_count": 3,
+      "low_confirmed_issue_count": 2,
+      "unsupported_claim_issue_count": 8,
+      "suspected_risk_issue_count": 0,
+      "semantics_gap_issue_count": 7,
+      "observation_issue_count": 2,
+      "normalized_issue_groups_by_primary_category": {
+        "LCC objective / suboptimality": 3,
+        "N-1 reliability": 5,
+        "benchmark semantics": 8,
+        "deliverable / reconstructability": 2,
+        "geometry / layout / roads": 1,
+        "internal consistency": 1,
+        "operating scenarios": 1,
+        "pipeline geometry": 1
+      }
+    },
+    "explicit_collaboration": {
+      "submission_count": 4,
+      "submissions_with_any_confirmed_violation": 4,
+      "normalized_confirmed_issue_count": 5,
+      "high_confirmed_issue_count": 1,
+      "medium_confirmed_issue_count": 3,
+      "low_confirmed_issue_count": 1,
+      "unsupported_claim_issue_count": 7,
+      "suspected_risk_issue_count": 2,
+      "semantics_gap_issue_count": 5,
+      "observation_issue_count": 0,
+      "normalized_issue_groups_by_primary_category": {
+        "LCC objective / suboptimality": 3,
+        "N-1 reliability": 1,
+        "benchmark semantics": 6,
+        "internal consistency": 4,
+        "operating scenarios": 1,
+        "topology / ports": 1
+      }
+    }
+  },
+  "possible_benchmark_level_ambiguities": [
+    {
+      "issue_key": "liquid_drain_velocity_density_basis",
+      "assessment": "possible benchmark-level ambiguity",
+      "affected_submission_aliases": [
+        "submission_A",
+        "submission_B",
+        "submission_C",
+        "submission_D",
+        "submission_E",
+        "submission_F",
+        "submission_G",
+        "submission_H"
+      ],
+      "submission_prevalence": "8/8",
+      "frozen_review_pass_prevalence": "13/13",
+      "note": "All passes classified the missing liquid-density basis as semantics_gap. Do not count it as an engineering defect."
+    },
+    {
+      "issue_key": "unmodelled_isolation_semantics",
+      "assessment": "possible benchmark-level ambiguity",
+      "affected_submission_aliases": [
+        "submission_B",
+        "submission_C",
+        "submission_D",
+        "submission_F",
+        "submission_G"
+      ],
+      "submission_prevalence": "5/8",
+      "frozen_review_pass_detections": 8,
+      "note": "The shared question is whether scenario-specific isolation can be assumed without catalogued, priced valve equipment. Source taxonomy varies across passes (observation, semantics_gap, suspected_risk, unsupported_claim); all labels are preserved."
+    },
+    {
+      "issue_key": "road_endpoint_cap_semantics",
+      "assessment": "interpretation-sensitive signal; not consolidated as a benchmark defect",
+      "affected_submission_aliases": [
+        "submission_B",
+        "submission_E"
+      ],
+      "submission_prevalence": "2/8",
+      "note": "Submission_B labels the end-cap convention a semantics_gap; submission_E labels its specific R-MAIN swept end as a confirmed site-boundary violation. The differing judgments remain separate."
+    },
+    {
+      "issue_key": "well_group_flow_rounding_exceeds_tolerance",
+      "assessment": "repeated submission-level issue in two conditions",
+      "affected_submission_aliases": [
+        "submission_C",
+        "submission_H"
+      ],
+      "submission_prevalence": "2/8",
+      "note": "Both single-pass reviews identify rounded final allocations exceeding the published tolerance; this is not an evaluator reproducibility comparison."
+    }
+  ],
+  "issues": [
+    {
+      "normalized_issue_id": "submission_A_A01",
+      "submission_alias": "submission_A",
+      "original_run_id": "ugs_synth_explicit_collaboration_replication_001",
+      "condition": "explicit_collaboration",
+      "pair_number": "001",
+      "passes_detected": [
+        "pass_01"
+      ],
+      "original_finding_ids": [
+        {
+          "pass_id": "pass_01",
+          "finding_id": "LCC-REG-001"
+        }
+      ],
+      "status_labels": [
+        "confirmed_violation"
+      ],
+      "severity_labels": [
+        "medium"
+      ],
+      "confidence_labels": [
+        "high"
+      ],
+      "per_pass_labels": [
+        {
+          "pass_id": "pass_01",
+          "finding_id": "LCC-REG-001",
+          "status": "confirmed_violation",
+          "severity": "medium",
+          "confidence": "high"
+        }
+      ],
+      "primary_category": "LCC objective / suboptimality",
+      "secondary_categories": [],
+      "benchmark_or_cross_submission_issue_key": null,
+      "issue_summary": "A non-required REG120 pressure-control item carries avoidable lifecycle cost.",
+      "matching_rationale": "Single pass; retained directly.",
+      "status_disagreement": false,
+      "severity_disagreement": false,
+      "summary_confirmed_severity_most_severe_across_confirming_passes": "medium",
+      "source_findings": [
+        {
+          "pass_id": "pass_01",
+          "source_review_path": "results/submission_A/pass_01/review.json",
+          "source_review_sha256": "455a50ab9eabd8cf97baa3a165e35f0c7b38af45b46f844a9ba1253e1f27f11b",
+          "finding_id": "LCC-REG-001",
+          "status": "confirmed_violation",
+          "severity": "medium",
+          "confidence": "high",
+          "public_basis": "brief/project_requirements.json states the primary objective is to minimize benchmark LCC among feasible designs. brief/economic_assumptions.json and brief/engineering_calculation_basis.md define the LCC arithmetic. Full pressure-control philosophy beyond published limits is not a scored requirement.",
+          "claim_or_requirement": "The final design should not retain non-required equipment that increases LCC while preserving all public feasibility requirements.",
+          "submission_evidence": "submission/deliverables/design_report.md says the REG120 is not needed for feasibility and is kept as a deliberate operating-philosophy choice. submission/deliverables/equipment.json installs REG; submission/deliverables/lifecycle_cost.json includes REG capex 0.34 MBCU and annual maintenance 0.018 MBCU/y.",
+          "independent_check": "A direct H-DIS.branch_05 to MTR-B.gas_in connection is port-compatible. Replacing REG plus P31/P32 with one DN350 CS-DRY-160 ground pipe about 201.5 m long preserves metering, dry gas quality, 16 MPa pressure rating, and WDR-LOW sink pressure margin by scaled pressure-loss check. Removing REG also removes its footprint and maintenance burden.",
+          "result": "Estimated LCC decreases by about 0.522 MBCU: 0.5167 MBCU from removed REG capex/maintenance PV plus about 0.0049 MBCU lower pipe capex. This is a specific lower-cost feasible alternative, so the submitted design is not LCC-minimal under the public objective.",
+          "why_it_matters": "The benchmark objective is LCC minimization among feasible designs; retaining a non-required pressure-control station materially inflates the reported objective value."
+        }
+      ]
+    },
+    {
+      "normalized_issue_id": "submission_A_A02",
+      "submission_alias": "submission_A",
+      "original_run_id": "ugs_synth_explicit_collaboration_replication_001",
+      "condition": "explicit_collaboration",
+      "pair_number": "001",
+      "passes_detected": [
+        "pass_01"
+      ],
+      "original_finding_ids": [
+        {
+          "pass_id": "pass_01",
+          "finding_id": "LIQ-DENS-001"
+        }
+      ],
+      "status_labels": [
+        "semantics_gap"
+      ],
+      "severity_labels": [
+        "low"
+      ],
+      "confidence_labels": [
+        "high"
+      ],
+      "per_pass_labels": [
+        {
+          "pass_id": "pass_01",
+          "finding_id": "LIQ-DENS-001",
+          "status": "semantics_gap",
+          "severity": "low",
+          "confidence": "high"
+        }
+      ],
+      "primary_category": "benchmark semantics",
+      "secondary_categories": [
+        "liquid drain"
+      ],
+      "benchmark_or_cross_submission_issue_key": "liquid_drain_velocity_density_basis",
+      "issue_summary": "The brief omits liquid density needed to convert drain mass flow to velocity.",
+      "matching_rationale": "Single pass; retained directly.",
+      "status_disagreement": false,
+      "severity_disagreement": false,
+      "summary_confirmed_severity_most_severe_across_confirming_passes": null,
+      "source_findings": [
+        {
+          "pass_id": "pass_01",
+          "source_review_path": "results/submission_A/pass_01/review.json",
+          "source_review_sha256": "455a50ab9eabd8cf97baa3a165e35f0c7b38af45b46f844a9ba1253e1f27f11b",
+          "finding_id": "LIQ-DENS-001",
+          "status": "semantics_gap",
+          "severity": "low",
+          "confidence": "high",
+          "public_basis": "brief/engineering_calculation_basis.md imposes a maximum liquid-drain velocity, but the public brief does not publish a liquid density or a liquid volumetric-flow convention for converting kg/s to m/s.",
+          "claim_or_requirement": "Liquid-drain pipelines must remain within the published liquid velocity limit.",
+          "submission_evidence": "submission/deliverables/design_report.md reports drain velocities over an assumed density band and notes the benchmark publishes no liquid density. submission/deliverables/operating_plan.json reports design_liquid_flow_kg_s 0.5997 for drain checks.",
+          "independent_check": "For DN200 ID 0.188 m, area is about 0.0278 m2. At 0.5997 kg/s, velocity is 0.5997/(rho*0.0278). It is about 0.0216 m/s at rho=1000 kg/m3 and about 2.63 m/s at rho=8.2 kg/m3; the 3 m/s threshold corresponds to rho about 7.2 kg/m3.",
+          "result": "Drain velocity compliance cannot be uniquely determined from public inputs. Capacity and outfall-flow checks pass, but velocity PASS depends on an assumed liquid density.",
+          "why_it_matters": "This prevents a definitive independent PASS/FAIL judgment for the liquid-drain velocity requirement and should not be treated as a submission violation."
+        }
+      ]
+    },
+    {
+      "normalized_issue_id": "submission_A_A03",
+      "submission_alias": "submission_A",
+      "original_run_id": "ugs_synth_explicit_collaboration_replication_001",
+      "condition": "explicit_collaboration",
+      "pair_number": "001",
+      "passes_detected": [
+        "pass_01"
+      ],
+      "original_finding_ids": [
+        {
+          "pass_id": "pass_01",
+          "finding_id": "DOC-PIPECLASS-001"
+        }
+      ],
+      "status_labels": [
+        "unsupported_claim"
+      ],
+      "severity_labels": [
+        "low"
+      ],
+      "confidence_labels": [
+        "high"
+      ],
+      "per_pass_labels": [
+        {
+          "pass_id": "pass_01",
+          "finding_id": "DOC-PIPECLASS-001",
+          "status": "unsupported_claim",
+          "severity": "low",
+          "confidence": "high"
+        }
+      ],
+      "primary_category": "internal consistency",
+      "secondary_categories": [
+        "deliverable / reconstructability"
+      ],
+      "benchmark_or_cross_submission_issue_key": null,
+      "issue_summary": "The report overstates wet and dry compatibility for CS-DRY-160 while machine-readable fields are more accurate.",
+      "matching_rationale": "Single pass; retained directly.",
+      "status_disagreement": false,
+      "severity_disagreement": false,
+      "summary_confirmed_severity_most_severe_across_confirming_passes": null,
+      "source_findings": [
+        {
+          "pass_id": "pass_01",
+          "source_review_path": "results/submission_A/pass_01/review.json",
+          "source_review_sha256": "455a50ab9eabd8cf97baa3a165e35f0c7b38af45b46f844a9ba1253e1f27f11b",
+          "finding_id": "DOC-PIPECLASS-001",
+          "status": "unsupported_claim",
+          "severity": "low",
+          "confidence": "high",
+          "public_basis": "brief/piping_catalog.json marks CS-DRY-160 as dry_gas_compatible true and wet_gas_compatible false.",
+          "claim_or_requirement": "Report statements about pipe-class compatibility should match the public catalogue and the delivered pipeline data.",
+          "submission_evidence": "submission/deliverables/design_report.md section 6 states that all gas classes are both wet- and dry-compatible, while submission/deliverables/pipelines.json correctly records CS-DRY-160 wet_gas_compatible=false on dry gas lines.",
+          "independent_check": "Compared the report text, pipelines.json class flags, and public piping catalog. The installed dry-gas lines appear to be used only after the stream is dry in sampled cases, so this is a documentation inconsistency rather than a confirmed feasibility defect.",
+          "result": "The broad report claim is unsupported by the catalogue; the machine-readable pipeline fields are more accurate.",
+          "why_it_matters": "It can mislead reconstruction of wet/dry pipe-class eligibility even though sampled operating cases did not show an actual class misuse."
+        }
+      ]
+    },
+    {
+      "normalized_issue_id": "submission_B_B01",
+      "submission_alias": "submission_B",
+      "original_run_id": "ugs_synth_worker_only_replication_002",
+      "condition": "worker_only",
+      "pair_number": "002",
+      "passes_detected": [
+        "pass_01"
+      ],
+      "original_finding_ids": [
+        {
+          "pass_id": "pass_01",
+          "finding_id": "F-N1-001"
+        }
+      ],
+      "status_labels": [
+        "unsupported_claim"
+      ],
+      "severity_labels": [
+        "medium"
+      ],
+      "confidence_labels": [
+        "high"
+      ],
+      "per_pass_labels": [
+        {
+          "pass_id": "pass_01",
+          "finding_id": "F-N1-001",
+          "status": "unsupported_claim",
+          "severity": "medium",
+          "confidence": "high"
+        }
+      ],
+      "primary_category": "N-1 reliability",
+      "secondary_categories": [],
+      "benchmark_or_cross_submission_issue_key": null,
+      "issue_summary": "The claimed N-1 PASS is supported by nameplate-capacity checks rather than outage-specific path and delivery evidence.",
+      "matching_rationale": "Single pass; retained directly.",
+      "status_disagreement": false,
+      "severity_disagreement": false,
+      "summary_confirmed_severity_most_severe_across_confirming_passes": null,
+      "source_findings": [
+        {
+          "pass_id": "pass_01",
+          "source_review_path": "results/submission_B/pass_01/review.json",
+          "source_review_sha256": "5479dd15c3d11c0cbb7404181214e391307fdc631612620537b9ce00b98c00b2",
+          "finding_id": "F-N1-001",
+          "status": "unsupported_claim",
+          "severity": "medium",
+          "confidence": "high",
+          "public_basis": "brief/project_requirements.json reliability_requirements and brief/engineering_calculation_basis.md require at least 70% retained deliverable flow after any one applicable compressor, separator, or dehydration unit is unavailable, with delivery limits still applicable.",
+          "claim_or_requirement": "The submission claims n-1 reliability and states delivery limits remain applicable after any outage.",
+          "submission_evidence": "submission/design_report.md:228-232 states compressor and withdrawal-treatment n-1 provisions. submission/verification.json:2769-2884 lists all outage checks. submission/verify.py:209-235 implements these checks only as remaining nameplate capacity comparisons.",
+          "independent_check": "Reviewed the checker source and searched final artifacts for per-outage operating states. The n-1 compressor checks compute sum(capacity of remaining compressors). The treatment checks compute min(capacity of surviving train). No outage-specific active paths, pressure losses, compressor setpoints, minimum stable flow dispatch, delivered pressure, delivered temperature, or quality calculations are represented.",
+          "result": "The n-1 PASS claim is not supported by simulated outage evidence. This does not prove the design is infeasible; spot reasoning suggests several outages may be feasible, but the artifacts do not demonstrate the public retained-deliverable-flow requirement.",
+          "why_it_matters": "Reliability depends on hydraulics, dispatch, active-path isolation, and delivery quality after the failure, not only on surviving catalog capacity."
+        }
+      ]
+    },
+    {
+      "normalized_issue_id": "submission_B_B02",
+      "submission_alias": "submission_B",
+      "original_run_id": "ugs_synth_worker_only_replication_002",
+      "condition": "worker_only",
+      "pair_number": "002",
+      "passes_detected": [
+        "pass_01"
+      ],
+      "original_finding_ids": [
+        {
+          "pass_id": "pass_01",
+          "finding_id": "F-LCC-001"
+        }
+      ],
+      "status_labels": [
+        "confirmed_violation"
+      ],
+      "severity_labels": [
+        "low"
+      ],
+      "confidence_labels": [
+        "high"
+      ],
+      "per_pass_labels": [
+        {
+          "pass_id": "pass_01",
+          "finding_id": "F-LCC-001",
+          "status": "confirmed_violation",
+          "severity": "low",
+          "confidence": "high"
+        }
+      ],
+      "primary_category": "LCC objective / suboptimality",
+      "secondary_categories": [
+        "equipment limits"
+      ],
+      "benchmark_or_cross_submission_issue_key": null,
+      "issue_summary": "Dry-only service is assigned the higher-cost CS-WET-160 class despite a feasible CS-DRY-160 alternative.",
+      "matching_rationale": "Single pass; retained directly.",
+      "status_disagreement": false,
+      "severity_disagreement": false,
+      "summary_confirmed_severity_most_severe_across_confirming_passes": "low",
+      "source_findings": [
+        {
+          "pass_id": "pass_01",
+          "source_review_path": "results/submission_B/pass_01/review.json",
+          "source_review_sha256": "5479dd15c3d11c0cbb7404181214e391307fdc631612620537b9ce00b98c00b2",
+          "finding_id": "F-LCC-001",
+          "status": "confirmed_violation",
+          "severity": "low",
+          "confidence": "high",
+          "public_basis": "brief/project_requirements.json states the primary objective is to minimize benchmark LCC. brief/piping_catalog.json provides CS-DRY-160 as a 16 MPa dry-gas-compatible class with multiplier 1.15 versus CS-WET-160 multiplier 1.18.",
+          "claim_or_requirement": "The submitted design should not contain an obvious dominated pipe-class choice under the benchmark LCC objective.",
+          "submission_evidence": "submission/design_report.md:158-162 uses CS-WET-160 on G-C1D, G-C2D, G-C3D, G-CD-CL, and G-CL-W. submission/design_report.md:224 states injection gas is dry and liquid-free; WDR-LOW boost gas is downstream of separator/dehydration in submission/design.json.",
+          "independent_check": "Changing only those five dry-only high-pressure gas pipes to CS-DRY-160 keeps 16 MPa rating, temperature limits, diameter, routing, and all wet-service well/withdrawal lines unchanged. CAPEX reduction from class multiplier is about 0.0153 MBCU; lower roughness is hydraulically no worse.",
+          "result": "A feasible same-layout alternative has total LCC at least about 0.0153 MBCU lower than the submitted 90.1469 MBCU before any energy retuning.",
+          "why_it_matters": "The objective is LCC minimization. The delta is small, but the submitted design appears to carry avoidable pipe-class cost."
+        }
+      ]
+    },
+    {
+      "normalized_issue_id": "submission_B_B03",
+      "submission_alias": "submission_B",
+      "original_run_id": "ugs_synth_worker_only_replication_002",
+      "condition": "worker_only",
+      "pair_number": "002",
+      "passes_detected": [
+        "pass_01"
+      ],
+      "original_finding_ids": [
+        {
+          "pass_id": "pass_01",
+          "finding_id": "F-LIQ-001"
+        }
+      ],
+      "status_labels": [
+        "semantics_gap"
+      ],
+      "severity_labels": [
+        "low"
+      ],
+      "confidence_labels": [
+        "high"
+      ],
+      "per_pass_labels": [
+        {
+          "pass_id": "pass_01",
+          "finding_id": "F-LIQ-001",
+          "status": "semantics_gap",
+          "severity": "low",
+          "confidence": "high"
+        }
+      ],
+      "primary_category": "benchmark semantics",
+      "secondary_categories": [
+        "liquid drain"
+      ],
+      "benchmark_or_cross_submission_issue_key": "liquid_drain_velocity_density_basis",
+      "issue_summary": "The brief omits liquid density needed to convert drain mass flow to velocity.",
+      "matching_rationale": "Single pass; retained directly.",
+      "status_disagreement": false,
+      "severity_disagreement": false,
+      "summary_confirmed_severity_most_severe_across_confirming_passes": null,
+      "source_findings": [
+        {
+          "pass_id": "pass_01",
+          "source_review_path": "results/submission_B/pass_01/review.json",
+          "source_review_sha256": "5479dd15c3d11c0cbb7404181214e391307fdc631612620537b9ce00b98c00b2",
+          "finding_id": "F-LIQ-001",
+          "status": "semantics_gap",
+          "severity": "low",
+          "confidence": "high",
+          "public_basis": "brief/piping_catalog.json sets a maximum liquid-drain velocity, and brief/engineering_calculation_basis.md defines liquid removal, but the public brief does not publish liquid density for converting kg/s to m/s.",
+          "claim_or_requirement": "Liquid drain velocity should be checked against 3.0 m/s.",
+          "submission_evidence": "submission/design_report.md:51 and submission/design.json:16 assume liquid density of 700 kg/m3 for drain velocity checks.",
+          "independent_check": "Using 700 kg/m3, WDR-HIGH DN150 drain velocities are about 0.055 m/s per separator line, or about 0.110 m/s under the submission's conservative total-flow-per-outfall-line check, both below 3.0 m/s.",
+          "result": "The drain velocity appears comfortably below the limit under the disclosed assumption, but there is no unique public-basis calculation without a published liquid density.",
+          "why_it_matters": "A definitive benchmark PASS/FAIL for liquid velocity requires an input the public brief omits. This is not a submission violation."
+        }
+      ]
+    },
+    {
+      "normalized_issue_id": "submission_B_B04",
+      "submission_alias": "submission_B",
+      "original_run_id": "ugs_synth_worker_only_replication_002",
+      "condition": "worker_only",
+      "pair_number": "002",
+      "passes_detected": [
+        "pass_01"
+      ],
+      "original_finding_ids": [
+        {
+          "pass_id": "pass_01",
+          "finding_id": "F-GEO-001"
+        }
+      ],
+      "status_labels": [
+        "semantics_gap"
+      ],
+      "severity_labels": [
+        "low"
+      ],
+      "confidence_labels": [
+        "medium"
+      ],
+      "per_pass_labels": [
+        {
+          "pass_id": "pass_01",
+          "finding_id": "F-GEO-001",
+          "status": "semantics_gap",
+          "severity": "low",
+          "confidence": "medium"
+        }
+      ],
+      "primary_category": "benchmark semantics",
+      "secondary_categories": [
+        "geometry / layout / roads"
+      ],
+      "benchmark_or_cross_submission_issue_key": "road_endpoint_cap_semantics",
+      "issue_summary": "The road entrance boundary result depends on an unpublished road end-cap convention.",
+      "matching_rationale": "Single pass; retained directly.",
+      "status_disagreement": false,
+      "severity_disagreement": false,
+      "summary_confirmed_severity_most_severe_across_confirming_passes": null,
+      "source_findings": [
+        {
+          "pass_id": "pass_01",
+          "source_review_path": "results/submission_B/pass_01/review.json",
+          "source_review_sha256": "5479dd15c3d11c0cbb7404181214e391307fdc631612620537b9ce00b98c00b2",
+          "finding_id": "F-GEO-001",
+          "status": "semantics_gap",
+          "severity": "low",
+          "confidence": "medium",
+          "public_basis": "brief/engineering_geometry_basis.md says a road is the centreline swept by half the width, including joins and ends, and paved geometry must remain within the site. It does not define end-cap style.",
+          "claim_or_requirement": "Road geometry, including ends, must remain inside the site boundary while connecting to ROAD-ENTRANCE.",
+          "submission_evidence": "submission/design.json:5420-5432 defines R-A from (0,225) to (100,225) with width 6 m. submission/design_report.md:57 states a butted-end convention. submission/solve.py:215-224 checks rectangular segment sweeps that do not project beyond endpoints.",
+          "independent_check": "With butted square ends, R-A occupies x>=0 and remains inside the site. With a rounded or projecting cap, the paved geometry would extend outside the west site boundary by up to 3 m at ROAD-ENTRANCE.",
+          "result": "Road containment depends on an unstated end-cap convention. The submission's convention is plausible, but not uniquely determined by the public brief.",
+          "why_it_matters": "The site-boundary PASS for the entrance road is sensitive to geometry semantics, not to an engineering calculation error."
+        }
+      ]
+    },
+    {
+      "normalized_issue_id": "submission_B_B05",
+      "submission_alias": "submission_B",
+      "original_run_id": "ugs_synth_worker_only_replication_002",
+      "condition": "worker_only",
+      "pair_number": "002",
+      "passes_detected": [
+        "pass_01"
+      ],
+      "original_finding_ids": [
+        {
+          "pass_id": "pass_01",
+          "finding_id": "F-ASSUMP-001"
+        }
+      ],
+      "status_labels": [
+        "observation"
+      ],
+      "severity_labels": [
+        "medium"
+      ],
+      "confidence_labels": [
+        "high"
+      ],
+      "per_pass_labels": [
+        {
+          "pass_id": "pass_01",
+          "finding_id": "F-ASSUMP-001",
+          "status": "observation",
+          "severity": "medium",
+          "confidence": "high"
+        }
+      ],
+      "primary_category": "benchmark semantics",
+      "secondary_categories": [
+        "unsupported assumptions",
+        "operating scenarios"
+      ],
+      "benchmark_or_cross_submission_issue_key": "unmodelled_isolation_semantics",
+      "issue_summary": "Scenario operation assumes unmodelled, unpriced isolation valves under an underspecified public model.",
+      "matching_rationale": "Single pass; retained directly.",
+      "status_disagreement": false,
+      "severity_disagreement": false,
+      "summary_confirmed_severity_most_severe_across_confirming_passes": null,
+      "source_findings": [
+        {
+          "pass_id": "pass_01",
+          "source_review_path": "results/submission_B/pass_01/review.json",
+          "source_review_sha256": "5479dd15c3d11c0cbb7404181214e391307fdc631612620537b9ce00b98c00b2",
+          "finding_id": "F-ASSUMP-001",
+          "status": "observation",
+          "severity": "medium",
+          "confidence": "high",
+          "public_basis": "brief/network_semantics.md defines ports, headers, boundaries, and no free junctions; it does not define catalogued isolation valves or valve pricing. brief/economic_assumptions.json includes no valve cost item.",
+          "claim_or_requirement": "Active scenario paths and LCC should be reconstructable without unpriced, unmodelled equipment unless treated as an explicit assumption or public semantic gap.",
+          "submission_evidence": "submission/design_report.md:52 and :326 state inactive shared-compressor-header branches are isolated by valves, not modelled. submission/design.json scenario records list many pipes_with_zero_flow in each scenario.",
+          "independent_check": "The shared compressor-bank topology requires inactive branches to remain inactive in normal scenarios and outages. No valve instances, valve ports, or valve costs are present in submission/design.json or the public equipment catalogs.",
+          "result": "The reliance on free isolation is explicit and material, but the public brief does not provide enough valve semantics to call this a violation by itself.",
+          "why_it_matters": "Active-path consistency, reverse-service operation, and any exact LCC comparison can change if isolation hardware must be modelled or priced."
+        }
+      ]
+    },
+    {
+      "normalized_issue_id": "submission_C_C01",
+      "submission_alias": "submission_C",
+      "original_run_id": "ugs_synth_worker_only_replication_004",
+      "condition": "worker_only",
+      "pair_number": "004",
+      "passes_detected": [
+        "pass_02"
+      ],
+      "original_finding_ids": [
+        {
+          "pass_id": "pass_02",
+          "finding_id": "F-N1-WDR-COMP-EVIDENCE"
+        }
+      ],
+      "status_labels": [
+        "unsupported_claim"
+      ],
+      "severity_labels": [
+        "medium"
+      ],
+      "confidence_labels": [
+        "high"
+      ],
+      "per_pass_labels": [
+        {
+          "pass_id": "pass_02",
+          "finding_id": "F-N1-WDR-COMP-EVIDENCE",
+          "status": "unsupported_claim",
+          "severity": "medium",
+          "confidence": "high"
+        }
+      ],
+      "primary_category": "N-1 reliability",
+      "secondary_categories": [],
+      "benchmark_or_cross_submission_issue_key": null,
+      "issue_summary": "WDR-LOW compressor N-1 evidence does not re-solve both distinct surviving booster paths.",
+      "matching_rationale": "Single pass; retained directly.",
+      "status_disagreement": false,
+      "severity_disagreement": false,
+      "summary_confirmed_severity_most_severe_across_confirming_passes": null,
+      "source_findings": [
+        {
+          "pass_id": "pass_02",
+          "source_review_path": "results/submission_C/pass_02/review.json",
+          "source_review_sha256": "a1a8306cebfeb2451f4f07cd016743c995c7f0595a60328a1e128ac5c0a327dd",
+          "finding_id": "F-N1-WDR-COMP-EVIDENCE",
+          "status": "unsupported_claim",
+          "severity": "medium",
+          "confidence": "high",
+          "public_basis": "brief/project_requirements.json compression_n_minus_one requires any one compressor unavailable when required_sink_pressure_mpa > source_pressure_mpa; brief/engineering_calculation_basis.md requires delivery limits remain applicable after outage.",
+          "claim_or_requirement": "WDR-LOW booster N-1 should be demonstrated for loss of either C-W1 or C-W2 with the failed unit out of the active path and retained deliverable flow at least 49 kg/s.",
+          "submission_evidence": "submission/design_output.json n_minus_one.withdrawal_compression contains only one WDR-LOW entry, lost='C-W2'. submission/nminus1.py run_all labels only lost='C-W2' and derives ratio from A.solve_withdrawal_boost(s,dg), the normal two-booster solution, rather than a single-booster hydraulic re-solve at retained flow.",
+          "independent_check": "The two booster paths are not identical in the final routes: N-TS-CW1 is 166.5 m and N-CW1-GS is 99.5 m, while N-TS-CW2 is 200.5 m and N-CW2-GS is 67.5 m. Capacity arithmetic supports plausibility because 49 kg/s is within C60 15-60 kg/s and the submitted normal ratio 1.389 is below 2.4, but that is not an any-one-outage simulation.",
+          "result": "The claim that all compressor N-1 cases pass is not fully supported for WDR-LOW. This is an evidence defect, not a confirmed infeasibility.",
+          "why_it_matters": "A booster outage is a mandatory reliability case. Without simulating both non-identical surviving paths and the failed unit removed, pressure, temperature, and delivery margins are not independently established."
+        }
+      ]
+    },
+    {
+      "normalized_issue_id": "submission_C_C02",
+      "submission_alias": "submission_C",
+      "original_run_id": "ugs_synth_worker_only_replication_004",
+      "condition": "worker_only",
+      "pair_number": "004",
+      "passes_detected": [
+        "pass_02"
+      ],
+      "original_finding_ids": [
+        {
+          "pass_id": "pass_02",
+          "finding_id": "F-N1-WDR-TREATMENT-EVIDENCE"
+        }
+      ],
+      "status_labels": [
+        "unsupported_claim"
+      ],
+      "severity_labels": [
+        "medium"
+      ],
+      "confidence_labels": [
+        "high"
+      ],
+      "per_pass_labels": [
+        {
+          "pass_id": "pass_02",
+          "finding_id": "F-N1-WDR-TREATMENT-EVIDENCE",
+          "status": "unsupported_claim",
+          "severity": "medium",
+          "confidence": "high"
+        }
+      ],
+      "primary_category": "N-1 reliability",
+      "secondary_categories": [],
+      "benchmark_or_cross_submission_issue_key": null,
+      "issue_summary": "Withdrawal separator and dehydration N-1 evidence is aggregate and does not cover the required individual outages.",
+      "matching_rationale": "Single pass; retained directly.",
+      "status_disagreement": false,
+      "severity_disagreement": false,
+      "summary_confirmed_severity_most_severe_across_confirming_passes": null,
+      "source_findings": [
+        {
+          "pass_id": "pass_02",
+          "source_review_path": "results/submission_C/pass_02/review.json",
+          "source_review_sha256": "a1a8306cebfeb2451f4f07cd016743c995c7f0595a60328a1e128ac5c0a327dd",
+          "finding_id": "F-N1-WDR-TREATMENT-EVIDENCE",
+          "status": "unsupported_claim",
+          "severity": "medium",
+          "confidence": "high",
+          "public_basis": "brief/project_requirements.json withdrawal_treatment_n_minus_one requires any one separator and dehydration unit unavailable for withdrawal scenarios, with retained flow fraction at least 0.7 and delivery requirements still applicable.",
+          "claim_or_requirement": "The submission must support separator and dehydration N-1 outages, not just state retained flow over two trains.",
+          "submission_evidence": "submission/design_output.json n_minus_one.withdrawal_treatment has one aggregate entry per withdrawal scenario with retained_flow, per_train_kg_s, and separator_liquid_kg_s, but no failed separator/dehydration identity and no delivered pressure/temperature/quality fields. submission/nminus1.py withdrawal_treatment_n1 hard-codes range(1,3), effectively checking trains 1 and 2 only.",
+          "independent_check": "The three treatment paths have different lengths: N-WS-SEP1/2/3 are 102.0/188.0/273.5 m and N-DEH1-TS/2/3 are 83.25/61.5/139.0 m. Independent capacity/quality arithmetic for WDR-HIGH retained flow is acceptable at 42 kg/s per train and about 0.4198 kg/s liquid per separator, but this does not test every failed-unit hydraulic path.",
+          "result": "The N-1 treatment PASS is not exhaustively supported by the final artifacts. It may be feasible by capacity, but the submitted evidence is representative/aggregate rather than any-one separator and dehydration outage simulation.",
+          "why_it_matters": "The public reliability requirement is outage-specific. Non-identical route pressure losses can change retained delivery pressure, especially for lower-pressure withdrawal service."
+        }
+      ]
+    },
+    {
+      "normalized_issue_id": "submission_C_C03",
+      "submission_alias": "submission_C",
+      "original_run_id": "ugs_synth_worker_only_replication_004",
+      "condition": "worker_only",
+      "pair_number": "004",
+      "passes_detected": [
+        "pass_02"
+      ],
+      "original_finding_ids": [
+        {
+          "pass_id": "pass_02",
+          "finding_id": "F-SCENARIO-ALLOCATION-ROUNDING"
+        }
+      ],
+      "status_labels": [
+        "confirmed_violation"
+      ],
+      "severity_labels": [
+        "low"
+      ],
+      "confidence_labels": [
+        "high"
+      ],
+      "per_pass_labels": [
+        {
+          "pass_id": "pass_02",
+          "finding_id": "F-SCENARIO-ALLOCATION-ROUNDING",
+          "status": "confirmed_violation",
+          "severity": "low",
+          "confidence": "high"
+        }
+      ],
+      "primary_category": "operating scenarios",
+      "secondary_categories": [
+        "internal consistency"
+      ],
+      "benchmark_or_cross_submission_issue_key": "well_group_flow_rounding_exceeds_tolerance",
+      "issue_summary": "Rounded scenario allocations exceed the published mass-flow tolerance.",
+      "matching_rationale": "Single pass; retained directly.",
+      "status_disagreement": false,
+      "severity_disagreement": false,
+      "summary_confirmed_severity_most_severe_across_confirming_passes": "low",
+      "source_findings": [
+        {
+          "pass_id": "pass_02",
+          "source_review_path": "results/submission_C/pass_02/review.json",
+          "source_review_sha256": "a1a8306cebfeb2451f4f07cd016743c995c7f0595a60328a1e128ac5c0a327dd",
+          "finding_id": "F-SCENARIO-ALLOCATION-ROUNDING",
+          "status": "confirmed_violation",
+          "severity": "low",
+          "confidence": "high",
+          "public_basis": "brief/engineering_calculation_basis.md states well-group allocations for a scenario sum to required_total_flow_kg_s and gives mass-flow tolerance 1e-5 kg/s.",
+          "claim_or_requirement": "Machine-readable scenario allocations should conserve flow within 1e-5 kg/s.",
+          "submission_evidence": "submission/design_output.json records 16.6667 kg/s to each well group for INJ-MID and WDR-MID, and 11.6667 kg/s to each well group for WDR-LOW.",
+          "independent_check": "Six times 16.6667 equals 100.0002 kg/s, not 100 kg/s; six times 11.6667 equals 70.0002 kg/s, not 70 kg/s. The deviations are about 2e-4 kg/s, greater than the public tolerance.",
+          "result": "The rounded allocation fields do not exactly conserve flow for three scenarios. The report text implies equal flow/6, so this appears to be a precision/reconstructability issue rather than a process-capacity failure.",
+          "why_it_matters": "The final delivery contract requires scenario flows precise enough for independent reconstruction; rounded operating data can fail strict benchmark checks even when the intended calculation is correct."
+        }
+      ]
+    },
+    {
+      "normalized_issue_id": "submission_C_C04",
+      "submission_alias": "submission_C",
+      "original_run_id": "ugs_synth_worker_only_replication_004",
+      "condition": "worker_only",
+      "pair_number": "004",
+      "passes_detected": [
+        "pass_02"
+      ],
+      "original_finding_ids": [
+        {
+          "pass_id": "pass_02",
+          "finding_id": "F-LIQUID-DENSITY-SEMANTICS"
+        }
+      ],
+      "status_labels": [
+        "semantics_gap"
+      ],
+      "severity_labels": [
+        "low"
+      ],
+      "confidence_labels": [
+        "high"
+      ],
+      "per_pass_labels": [
+        {
+          "pass_id": "pass_02",
+          "finding_id": "F-LIQUID-DENSITY-SEMANTICS",
+          "status": "semantics_gap",
+          "severity": "low",
+          "confidence": "high"
+        }
+      ],
+      "primary_category": "benchmark semantics",
+      "secondary_categories": [
+        "liquid drain"
+      ],
+      "benchmark_or_cross_submission_issue_key": "liquid_drain_velocity_density_basis",
+      "issue_summary": "The brief omits liquid density needed to convert drain mass flow to velocity.",
+      "matching_rationale": "Single pass; retained directly.",
+      "status_disagreement": false,
+      "severity_disagreement": false,
+      "summary_confirmed_severity_most_severe_across_confirming_passes": null,
+      "source_findings": [
+        {
+          "pass_id": "pass_02",
+          "source_review_path": "results/submission_C/pass_02/review.json",
+          "source_review_sha256": "a1a8306cebfeb2451f4f07cd016743c995c7f0595a60328a1e128ac5c0a327dd",
+          "finding_id": "F-LIQUID-DENSITY-SEMANTICS",
+          "status": "semantics_gap",
+          "severity": "low",
+          "confidence": "high",
+          "public_basis": "brief/engineering_calculation_basis.md imposes a liquid-drain velocity limit, but the public gas_properties.json provides only gas density/properties and no liquid density or liquid velocity formula.",
+          "claim_or_requirement": "Liquid-drain velocity compliance needs a density or other public basis for converting kg/s to m/s.",
+          "submission_evidence": "submission/design_output.json design_basis.liquid_density_assumption_kg_m3 is 1000.0, and assumptions_and_limitations states liquid-drain velocity uses that assumed density.",
+          "independent_check": "Using 1000 kg/m3, WDR-HIGH drain velocity for DN150 at about 0.4 kg/s is far below 3 m/s. Without that assumption, the public brief does not define a unique velocity result.",
+          "result": "Drain capacities and connections can be checked, but liquid velocity cannot be called a definitive public-basis PASS. This is a benchmark semantics gap, not a submission violation.",
+          "why_it_matters": "A different implicit liquid density would change velocity. The evaluator should not treat an unstated assumption as a published compliance basis."
+        }
+      ]
+    },
+    {
+      "normalized_issue_id": "submission_C_C05",
+      "submission_alias": "submission_C",
+      "original_run_id": "ugs_synth_worker_only_replication_004",
+      "condition": "worker_only",
+      "pair_number": "004",
+      "passes_detected": [
+        "pass_02"
+      ],
+      "original_finding_ids": [
+        {
+          "pass_id": "pass_02",
+          "finding_id": "F-VALVE-LINEUP-SEMANTICS"
+        }
+      ],
+      "status_labels": [
+        "semantics_gap"
+      ],
+      "severity_labels": [
+        "medium"
+      ],
+      "confidence_labels": [
+        "high"
+      ],
+      "per_pass_labels": [
+        {
+          "pass_id": "pass_02",
+          "finding_id": "F-VALVE-LINEUP-SEMANTICS",
+          "status": "semantics_gap",
+          "severity": "medium",
+          "confidence": "high"
+        }
+      ],
+      "primary_category": "benchmark semantics",
+      "secondary_categories": [
+        "operating scenarios",
+        "unsupported assumptions"
+      ],
+      "benchmark_or_cross_submission_issue_key": "unmodelled_isolation_semantics",
+      "issue_summary": "Scenario active paths depend on isolation valves that the brief neither models nor prices.",
+      "matching_rationale": "Single pass; retained directly.",
+      "status_disagreement": false,
+      "severity_disagreement": false,
+      "summary_confirmed_severity_most_severe_across_confirming_passes": null,
+      "source_findings": [
+        {
+          "pass_id": "pass_02",
+          "source_review_path": "results/submission_C/pass_02/review.json",
+          "source_review_sha256": "a1a8306cebfeb2451f4f07cd016743c995c7f0595a60328a1e128ac5c0a327dd",
+          "finding_id": "F-VALVE-LINEUP-SEMANTICS",
+          "status": "semantics_gap",
+          "severity": "medium",
+          "confidence": "high",
+          "public_basis": "brief/network_semantics.md defines ports, headers, and physical connections but does not define catalogued valves, valve costs, or isolation semantics for inactive branches.",
+          "claim_or_requirement": "The scenario active-path philosophy depends on isolating inactive branches in a physical network that contains shared headers and loops.",
+          "submission_evidence": "submission/REPORT.md and submission/design_output.json assumptions state that inactive branches are isolated by valves and only active branches carry flow. No valve equipment instances, valve ports, or valve costs appear in submission/design_output.json or the public catalogues.",
+          "independent_check": "The physical topology reuses H-GS and H-WS for injection and withdrawal and includes branches that must be inactive in a given scenario. The final artifacts define active paths, but the isolation hardware is not represented or priced because the public model does not supply valve components.",
+          "result": "There is no unique public-basis determination of whether free valve isolation is acceptable or should affect feasibility/LCC. This should be treated as an explicit unmodelled assumption.",
+          "why_it_matters": "If isolation valves were required as physical priced equipment, topology feasibility and lifecycle cost could change. If active-path semantics are allowed without modelling valves, the design remains interpretable."
+        }
+      ]
+    },
+    {
+      "normalized_issue_id": "submission_C_C06",
+      "submission_alias": "submission_C",
+      "original_run_id": "ugs_synth_worker_only_replication_004",
+      "condition": "worker_only",
+      "pair_number": "004",
+      "passes_detected": [
+        "pass_02"
+      ],
+      "original_finding_ids": [
+        {
+          "pass_id": "pass_02",
+          "finding_id": "F-REPRO-PACKAGE-PATHS"
+        }
+      ],
+      "status_labels": [
+        "unsupported_claim"
+      ],
+      "severity_labels": [
+        "low"
+      ],
+      "confidence_labels": [
+        "high"
+      ],
+      "per_pass_labels": [
+        {
+          "pass_id": "pass_02",
+          "finding_id": "F-REPRO-PACKAGE-PATHS",
+          "status": "unsupported_claim",
+          "severity": "low",
+          "confidence": "high"
+        }
+      ],
+      "primary_category": "deliverable / reconstructability",
+      "secondary_categories": [],
+      "benchmark_or_cross_submission_issue_key": null,
+      "issue_summary": "The documented reproduction command does not match the delivered package paths.",
+      "matching_rationale": "Single pass; retained directly.",
+      "status_disagreement": false,
+      "severity_disagreement": false,
+      "summary_confirmed_severity_most_severe_across_confirming_passes": null,
+      "source_findings": [
+        {
+          "pass_id": "pass_02",
+          "source_review_path": "results/submission_C/pass_02/review.json",
+          "source_review_sha256": "a1a8306cebfeb2451f4f07cd016743c995c7f0595a60328a1e128ac5c0a327dd",
+          "finding_id": "F-REPRO-PACKAGE-PATHS",
+          "status": "unsupported_claim",
+          "severity": "low",
+          "confidence": "high",
+          "public_basis": "brief/final_delivery_contract.json asks for clear project organization and calculations; submission/README.md provides reproduction commands as supporting evidence.",
+          "claim_or_requirement": "The submission claims deterministic reproduction via commands such as python project/build_routes.py and build_artifacts.py.",
+          "submission_evidence": "The frozen submission directory contains the scripts directly under submission/, not under a project/ directory. Several scripts, including submission/build_artifacts.py and submission/ugs_design.py, hard-code /workspace/project and /workspace/brief paths.",
+          "independent_check": "From the final package listing, no submission/project directory exists. The hard-coded paths do not match the supplied frozen layout of brief/ and submission/. I did not execute these scripts because external execution was blocked in this environment, but the path inconsistency is visible in the artifacts.",
+          "result": "The self-validation/reproduction claim is not supported by the packaged paths. The master design_output.json remains reviewable, but the scripts are not portable as delivered.",
+          "why_it_matters": "A submission-authored PASS is not independent evidence; when the reproduction wrapper is path-inconsistent, reviewers must rely on the final data and independent recalculation rather than the claimed validator run."
+        }
+      ]
+    },
+    {
+      "normalized_issue_id": "submission_D_D01",
+      "submission_alias": "submission_D",
+      "original_run_id": "ugs_synth_explicit_collaboration_replication_002",
+      "condition": "explicit_collaboration",
+      "pair_number": "002",
+      "passes_detected": [
+        "pass_01",
+        "pass_02"
+      ],
+      "original_finding_ids": [
+        {
+          "pass_id": "pass_01",
+          "finding_id": "F-001"
+        },
+        {
+          "pass_id": "pass_02",
+          "finding_id": "F-003"
+        }
+      ],
+      "status_labels": [
+        "confirmed_violation",
+        "suspected_risk"
+      ],
+      "severity_labels": [
+        "medium"
+      ],
+      "confidence_labels": [
+        "high",
+        "medium"
+      ],
+      "per_pass_labels": [
+        {
+          "pass_id": "pass_01",
+          "finding_id": "F-001",
+          "status": "confirmed_violation",
+          "severity": "medium",
+          "confidence": "high"
+        },
+        {
+          "pass_id": "pass_02",
+          "finding_id": "F-003",
+          "status": "suspected_risk",
+          "severity": "medium",
+          "confidence": "medium"
+        }
+      ],
+      "primary_category": "LCC objective / suboptimality",
+      "secondary_categories": [
+        "equipment limits"
+      ],
+      "benchmark_or_cross_submission_issue_key": "hdr180_hdr120_lcc",
+      "issue_summary": "HDR180 selection carries a possible avoidable LCC premium relative to HDR120.",
+      "matching_rationale": "Both passes identify the same HDR180 versus HDR120 sizing issue under the LCC objective. Pass 01 identifies one exact feasible substitution; pass 02 discusses a broader substitution as a suspected risk. The label and scope difference is preserved.",
+      "status_disagreement": true,
+      "severity_disagreement": false,
+      "summary_confirmed_severity_most_severe_across_confirming_passes": "medium",
+      "source_findings": [
+        {
+          "pass_id": "pass_01",
+          "source_review_path": "results/submission_D/pass_01/review.json",
+          "source_review_sha256": "291bd0b2aec8f4b7927bca27aee4ab1cf51d26dd3c4be1cb343a0231e3c92dbd",
+          "finding_id": "F-001",
+          "status": "confirmed_violation",
+          "severity": "medium",
+          "confidence": "high",
+          "public_basis": "brief/project_requirements.json states the primary objective is to minimize benchmark LCC among feasible designs. brief/equipment_catalog/headers.json defines HDR120 as 120 kg/s, 16 MPa, 10 branches, capex 0.25 MBCU, annual maintenance 0.012 MBCU/a; HDR180 is 180 kg/s, 16 MPa, 14 branches, capex 0.36 MBCU, annual maintenance 0.016 MBCU/a. brief/engineering_calculation_basis.md treats values at limits as acceptable within tolerance.",
+          "claim_or_requirement": "The submitted design installs five HDR180 headers and reports LCC 89.284594 MBCU, while also stating that smaller HDR120 headers were not adopted for spare-port/margin reasons.",
+          "submission_evidence": "submission/deliverables/design.json lists HDR-DLV-01 as model_id HDR180 and lifecycle_cost.quantities counts HDR180: 5. submission/DESIGN_REPORT.md section 4.1 states replacing all five headers by HDR120 would lower LCC by about 0.59 MBCU but is rejected because WH-01 would have no spare port and headers would carry full station flow at the scenario extreme.",
+          "independent_check": "A narrower exact alternative is to replace only HDR-DLV-01 with HDR120 at the same position/orientation. It has only three physical connections and max declared flow 120 kg/s, so HDR120's 10 branches and 120 kg/s capacity are sufficient; its pressure rating and footprint category are unchanged. Existing connected routes can be remapped to HDR120 gas_bidirectional ports with sub-metre endpoint adjustments and no new exclusion or separation issue. CAPEX saves 0.11 MBCU and maintenance PV saves (0.016-0.012)*9.818147=0.0393 MBCU. The worst additional header pressure drop is 0.00556 MPa at 120 kg/s upstream of a regulator in high/mid withdrawal, and about 0.0019 MPa at 70 kg/s in WDR-LOW, causing negligible compressor-energy penalty relative to the savings.",
+          "result": "The HDR-DLV-01 substitution remains feasible under the public capacity, pressure, branch-count, geometry, and delivery requirements and reduces LCC by roughly 0.14-0.15 MBCU. Therefore the submitted design is not minimized even by an obvious local catalog substitution; the larger header margin is not a published requirement or priced objective benefit.",
+          "why_it_matters": "The benchmark objective is LCC minimization, not robustness margin. Keeping a dominated higher-cost header materially invalidates an optimality claim even though it does not make the design infeasible."
+        },
+        {
+          "pass_id": "pass_02",
+          "source_review_path": "results/submission_D/pass_02/review.json",
+          "source_review_sha256": "c0f8b1137c4931b26a5ef165be25cd5d38fd2f929e77fe2fbfa1398a24e8dbae",
+          "finding_id": "F-003",
+          "status": "suspected_risk",
+          "severity": "medium",
+          "confidence": "medium",
+          "public_basis": "brief/project_requirements.json states the primary objective is to minimize benchmark LCC among feasible designs; brief/equipment_catalog/headers.json provides lower-cost HDR120 headers with 120 kg/s capacity, 10 branches, 16 MPa pressure rating, and the same footprint size as HDR180.",
+          "claim_or_requirement": "The submitted design installs five HDR180 headers and states an LCC of 89.2846 MBCU as the proposed design under the LCC objective.",
+          "submission_evidence": "submission/deliverables/design.json quantities list HDR180: 5. submission/DESIGN_REPORT.md section 4.1 states that replacing all five by HDR120 would lower LCC by about 0.59 MBCU but was not adopted because the well manifold would have no spare port and headers would operate at full-flow extremes.",
+          "independent_check": "Direct cost arithmetic gives 0.55 MBCU CAPEX saving plus 0.196 MBCU maintenance-PV saving for five HDR120 substitutions before energy penalty. HDR120 capacity equals the maximum 120 kg/s submitted flow and equality is accepted by the published tolerance; WH-01 uses 10 physical connections, matching HDR120's branch count, while the other headers use fewer than 10.",
+          "result": "There is a plausible lower-cost header alternative that appears aligned with public capacity/branch limits, but I did not create an exact remapped design with all HDR120 port coordinates, adjusted pipeline endpoints, geometry checks, and full hydraulic rerun. Therefore this is a suspected LCC-objective risk, not a confirmed lower-cost feasible alternative.",
+          "why_it_matters": "The public objective does not award spare capacity or robustness margin. If the HDR120 substitution is fully feasible, the submitted LCC is materially non-minimal by roughly the magnitude the report itself identifies."
+        }
+      ]
+    },
+    {
+      "normalized_issue_id": "submission_D_D02",
+      "submission_alias": "submission_D",
+      "original_run_id": "ugs_synth_explicit_collaboration_replication_002",
+      "condition": "explicit_collaboration",
+      "pair_number": "002",
+      "passes_detected": [
+        "pass_01",
+        "pass_02"
+      ],
+      "original_finding_ids": [
+        {
+          "pass_id": "pass_01",
+          "finding_id": "F-003"
+        },
+        {
+          "pass_id": "pass_02",
+          "finding_id": "F-001"
+        }
+      ],
+      "status_labels": [
+        "semantics_gap",
+        "unsupported_claim"
+      ],
+      "severity_labels": [
+        "medium"
+      ],
+      "confidence_labels": [
+        "high"
+      ],
+      "per_pass_labels": [
+        {
+          "pass_id": "pass_01",
+          "finding_id": "F-003",
+          "status": "semantics_gap",
+          "severity": "medium",
+          "confidence": "high"
+        },
+        {
+          "pass_id": "pass_02",
+          "finding_id": "F-001",
+          "status": "unsupported_claim",
+          "severity": "medium",
+          "confidence": "high"
+        }
+      ],
+      "primary_category": "benchmark semantics",
+      "secondary_categories": [
+        "operating scenarios",
+        "topology / ports",
+        "unsupported assumptions"
+      ],
+      "benchmark_or_cross_submission_issue_key": "unmodelled_isolation_semantics",
+      "issue_summary": "Scenario paths rely on unmodelled isolation that affects physical path reconstruction and LCC.",
+      "matching_rationale": "Both passes identify the same unmodelled valve/isolation assumption behind scenario path selection. The pass-specific taxonomy differs and is preserved.",
+      "status_disagreement": true,
+      "severity_disagreement": false,
+      "summary_confirmed_severity_most_severe_across_confirming_passes": null,
+      "source_findings": [
+        {
+          "pass_id": "pass_01",
+          "source_review_path": "results/submission_D/pass_01/review.json",
+          "source_review_sha256": "291bd0b2aec8f4b7927bca27aee4ab1cf51d26dd3c4be1cb343a0231e3c92dbd",
+          "finding_id": "F-003",
+          "status": "semantics_gap",
+          "severity": "medium",
+          "confidence": "high",
+          "public_basis": "brief/network_semantics.md allows cyclic physical networks and requires scenarios to satisfy port, mass-balance, pressure, capacity, temperature, and delivery rules, but the public catalog contains no valve models or valve costs. brief/project_requirements.json excludes the full control system but does not explicitly define whether process isolation/path selection is free.",
+          "claim_or_requirement": "The operating philosophy assumes inactive paths are isolated by valves that are outside the catalogued model.",
+          "submission_evidence": "submission/DESIGN_REPORT.md section 11 states valve isolation is not modelled and names valves needed to close the injection custody meter, P-143, P-144, compressor branches, and selected WH-01 manifold branches in different scenarios.",
+          "independent_check": "The active scenario paths sampled in design.json avoid reverse use of one-way ports and satisfy mass-flow logic when inactive branches are treated as isolated. However, no installed valve equipment, valve CAPEX, or valve pressure-loss model appears in design.json or the public catalog.",
+          "result": "If the public semantics allow free scenario path selection, the assumption is acceptable; if physical isolation must be represented or costed, the submitted topology and LCC omit required components. The brief is not decisive, so this is a semantics gap rather than a confirmed submission violation.",
+          "why_it_matters": "The design uses a shared cyclic network and shared compressor set; whether isolation is free directly affects reconstructability of active paths and potentially LCC."
+        },
+        {
+          "pass_id": "pass_02",
+          "source_review_path": "results/submission_D/pass_02/review.json",
+          "source_review_sha256": "c0f8b1137c4931b26a5ef165be25cd5d38fd2f929e77fe2fbfa1398a24e8dbae",
+          "finding_id": "F-001",
+          "status": "unsupported_claim",
+          "severity": "medium",
+          "confidence": "high",
+          "public_basis": "brief/final_delivery_contract.json requires reconstructable physical topology and scenario-specific paths/flows; brief/network_semantics.md defines finite catalogued ports/components and does not provide free process valves; the review protocol asks to identify dependence on unmodelled valves or free isolation.",
+          "claim_or_requirement": "The submission claims 6678 checks with 0 failures and scenario paths that selectively use or idle cross-connections in a cyclic physical network.",
+          "submission_evidence": "submission/DESIGN_REPORT.md section 11 states: Valve isolation is not modelled and scenario plans assume isolating valves outside the catalogued scope. design.json physically includes P-123 bypass, P-143 boost feed, and P-144 boost discharge, while scenario pipe_flows omit those branches in scenarios where they would need isolation.",
+          "independent_check": "Compared the physical network with scenario pipe_flows. In INJ-LOW, the compressor discharge header is physically connected to HDR-DLV-01 through P-144 and then to GRID-TIE through REG-WDR-01/MTR-WDR-01/P-130, but P-144/P-128/P-129/P-130 are absent from the active injection flow list. In WDR-HIGH/MID, P-123 is active while P-143/P-144 are inactive; in WDR-LOW, P-143/P-144 are active while P-123 is inactive.",
+          "result": "The PASS evidence is conditional on unmodelled, unpriced isolation behavior. The final equipment list contains no valve or equivalent catalogued component that reconstructs those active-path selections.",
+          "why_it_matters": "Without explicit isolation semantics, the delivered physical topology alone does not determine the scenario flow paths, and LCC omits any equipment/civil/maintenance cost needed for that isolation."
+        }
+      ]
+    },
+    {
+      "normalized_issue_id": "submission_D_D03",
+      "submission_alias": "submission_D",
+      "original_run_id": "ugs_synth_explicit_collaboration_replication_002",
+      "condition": "explicit_collaboration",
+      "pair_number": "002",
+      "passes_detected": [
+        "pass_01",
+        "pass_02"
+      ],
+      "original_finding_ids": [
+        {
+          "pass_id": "pass_01",
+          "finding_id": "F-002"
+        },
+        {
+          "pass_id": "pass_02",
+          "finding_id": "F-002"
+        }
+      ],
+      "status_labels": [
+        "semantics_gap"
+      ],
+      "severity_labels": [
+        "low"
+      ],
+      "confidence_labels": [
+        "high"
+      ],
+      "per_pass_labels": [
+        {
+          "pass_id": "pass_01",
+          "finding_id": "F-002",
+          "status": "semantics_gap",
+          "severity": "low",
+          "confidence": "high"
+        },
+        {
+          "pass_id": "pass_02",
+          "finding_id": "F-002",
+          "status": "semantics_gap",
+          "severity": "low",
+          "confidence": "high"
+        }
+      ],
+      "primary_category": "benchmark semantics",
+      "secondary_categories": [
+        "liquid drain"
+      ],
+      "benchmark_or_cross_submission_issue_key": "liquid_drain_velocity_density_basis",
+      "issue_summary": "The brief omits liquid density needed to convert drain mass flow to velocity.",
+      "matching_rationale": "Both passes independently identify the same missing public liquid-density basis.",
+      "status_disagreement": false,
+      "severity_disagreement": false,
+      "summary_confirmed_severity_most_severe_across_confirming_passes": null,
+      "source_findings": [
+        {
+          "pass_id": "pass_01",
+          "source_review_path": "results/submission_D/pass_01/review.json",
+          "source_review_sha256": "291bd0b2aec8f4b7927bca27aee4ab1cf51d26dd3c4be1cb343a0231e3c92dbd",
+          "finding_id": "F-002",
+          "status": "semantics_gap",
+          "severity": "low",
+          "confidence": "high",
+          "public_basis": "brief/engineering_calculation_basis.md requires liquid-drain pipelines to satisfy the published liquid velocity limit, and brief/piping_catalog.json gives the 3 m/s limit and DN150 internal diameter. The public brief does not publish a liquid density needed to convert kg/s to m/s.",
+          "claim_or_requirement": "The submission reports liquid-drain velocity compliance and states an assumed liquid density of 800 kg/m3.",
+          "submission_evidence": "submission/DESIGN_REPORT.md section 11 lists 'Liquid density. No liquid density is published; the drain-velocity check assumes 800 kg/m3.' submission/deliverables/checks.csv reports DN150 drain velocity about 0.0480 m/s at 0.5997 kg/s under that assumption.",
+          "independent_check": "Using the submission assumption, area=pi*0.141^2/4≈0.0156 m2 and v=0.5997/(800*area)≈0.048 m/s, well below 3 m/s. But without a public density, the benchmark has no unique mass-flow-to-velocity conversion.",
+          "result": "Drain capacity and liquid mass flow can be checked, but definitive liquid velocity PASS/FAIL is not uniquely determined from the public brief. Under the submission's explicit density assumption the drain velocity is comfortably below the limit.",
+          "why_it_matters": "This affects the evidentiary status of drain-velocity compliance, not the general reconstructability of the liquid-drain design."
+        },
+        {
+          "pass_id": "pass_02",
+          "source_review_path": "results/submission_D/pass_02/review.json",
+          "source_review_sha256": "c0f8b1137c4931b26a5ef165be25cd5d38fd2f929e77fe2fbfa1398a24e8dbae",
+          "finding_id": "F-002",
+          "status": "semantics_gap",
+          "severity": "low",
+          "confidence": "high",
+          "public_basis": "brief/piping_catalog.json publishes a maximum_liquid_drain_velocity_m_s of 3.0, and brief/engineering_calculation_basis.md defines liquid-drain velocity as a requirement, but the public brief does not publish liquid density or another conversion from kg/s to volumetric flow.",
+          "claim_or_requirement": "submission/deliverables/checks.csv reports liquid drain velocity checks as ok, using an assumed density of 800 kg/m3.",
+          "submission_evidence": "submission/deliverables/checks.csv rows for P-137 through P-142 state liquid drain velocity <= 3 m/s and include detail such as 0.0480 m/s at 0.5997 kg/s liquid (assumed density 800 kg/m3). submission/DESIGN_REPORT.md section 11 also notes that no liquid density is published and 800 kg/m3 is assumed.",
+          "independent_check": "For the worst sampled drain flow, 0.5997 kg/s in DN150 with D=0.141 m gives velocity 0.5997/(800*pi*0.141^2/4)=about 0.048 m/s under the submission's assumed density.",
+          "result": "The drain velocity appears comfortably below 3 m/s under the stated assumption, but the assumption is not available from the public brief, so a definitive public-rule PASS cannot be uniquely reproduced.",
+          "why_it_matters": "This is not a submission violation by itself, but it limits independent reproducibility of the liquid-drain velocity requirement."
+        }
+      ]
+    },
+    {
+      "normalized_issue_id": "submission_E_E01",
+      "submission_alias": "submission_E",
+      "original_run_id": "ugs_synth_worker_only_replication_001",
+      "condition": "worker_only",
+      "pair_number": "001",
+      "passes_detected": [
+        "pass_01",
+        "pass_02"
+      ],
+      "original_finding_ids": [
+        {
+          "pass_id": "pass_01",
+          "finding_id": "F-001"
+        },
+        {
+          "pass_id": "pass_02",
+          "finding_id": "F-003"
+        }
+      ],
+      "status_labels": [
+        "unsupported_claim"
+      ],
+      "severity_labels": [
+        "medium"
+      ],
+      "confidence_labels": [
+        "high"
+      ],
+      "per_pass_labels": [
+        {
+          "pass_id": "pass_01",
+          "finding_id": "F-001",
+          "status": "unsupported_claim",
+          "severity": "medium",
+          "confidence": "high"
+        },
+        {
+          "pass_id": "pass_02",
+          "finding_id": "F-003",
+          "status": "unsupported_claim",
+          "severity": "medium",
+          "confidence": "high"
+        }
+      ],
+      "primary_category": "N-1 reliability",
+      "secondary_categories": [],
+      "benchmark_or_cross_submission_issue_key": "n1_claim_exceeds_evidence",
+      "issue_summary": "The N-1 PASS is capacity-based and lacks outage-specific hydraulic and delivery evidence.",
+      "matching_rationale": "Both passes identify the same unsupported N-1 claim and capacity-only implementation.",
+      "status_disagreement": false,
+      "severity_disagreement": false,
+      "summary_confirmed_severity_most_severe_across_confirming_passes": null,
+      "source_findings": [
+        {
+          "pass_id": "pass_01",
+          "source_review_path": "results/submission_E/pass_01/review.json",
+          "source_review_sha256": "1ca8bfa32019a4ea82cca4facf459a965b50bd75159723edea89f1de92477e33",
+          "finding_id": "F-001",
+          "status": "unsupported_claim",
+          "severity": "medium",
+          "confidence": "high",
+          "public_basis": "brief/project_requirements.json requires retained deliverability after any one compressor outage for compression cases and after any one separator or dehydration-unit outage for withdrawal; brief/engineering_calculation_basis.md states delivery limits remain applicable after outage.",
+          "claim_or_requirement": "The report and check_summary claim N-1 reliability is checked with no N-1 issues.",
+          "submission_evidence": "submission/report/design_report.md states any-one compressor/separator/dehydration reliability; submission/design/check_summary.json has n_minus_one_issues = []; submission/src/ugssynth/engine.py check_n_minus_one computes only total capacity minus largest capacity; submission/design/scenarios_operating.json contains no outage cases; submission/design/pipelines.json gives PX-CMP3 and PCMP-DH3 max_velocity_m_s and max_pressure_mpa as 0.0.",
+          "independent_check": "I computed aggregate capacities and inspected the N-1 implementation and final scenario artifacts. Aggregate retained capacities pass thresholds, but there is no per-failed-unit hydraulic path, failed-unit removal from active path, minimum-stable-flow, delivery pressure/quality, or pipe/equipment limit simulation.",
+          "result": "The N-1 PASS is not supported by the submitted evidence. This does not by itself prove the physical design is infeasible, but it fails to substantiate a mandatory reliability claim.",
+          "why_it_matters": "N-1 reliability depends on the actual outage path and operating point, not just installed nameplate capacity; standby compressor and remaining treatment paths can introduce different pressure losses, velocities, and minimum-flow constraints."
+        },
+        {
+          "pass_id": "pass_02",
+          "source_review_path": "results/submission_E/pass_02/review.json",
+          "source_review_sha256": "c259b2672ea4913c23df38414ce462296a035dc42a21730b24617677d094ce40",
+          "finding_id": "F-003",
+          "status": "unsupported_claim",
+          "severity": "medium",
+          "confidence": "high",
+          "public_basis": "brief/project_requirements.json and brief/engineering_calculation_basis.md require retained deliverability after any one compressor outage for compression scenarios and after any one separator or dehydration outage for withdrawal scenarios, with delivery limits still applicable.",
+          "claim_or_requirement": "The report and check_summary claim N-1 reliability is satisfied with no N-1 issues.",
+          "submission_evidence": "submission/report/design_report.md states that with any one compressor, separator, or dehydration unit unavailable, at least 70% remains deliverable. submission/design/check_summary.json has n_minus_one_issues: []. submission/src/ugssynth/engine.py check_n_minus_one only subtracts the largest unit capacity from total installed capacity for compressors, separators, and dehydration units.",
+          "independent_check": "Capacity arithmetic supports only a necessary condition: compressor worst remaining capacity is 160 - 60 = 100 kg/s versus maximum retained-flow need 84 kg/s; treatment worst remaining capacity is 210 - 70 = 140 kg/s versus maximum retained-flow need 84 kg/s. No submitted outage scenario shows the failed unit removed from the active path, recomputed pipe hydraulics, compressor minimum stable flow, pressure delivery, temperature, water/free-liquid quality, or metering under each failed-unit case.",
+          "result": "The N-1 PASS is not supported by simulated outage evidence in the final artifacts; it is capacity-only evidence.",
+          "why_it_matters": "N-1 feasibility depends on active routing, pressure drops, compressor operating envelope, and delivery quality, not just nameplate capacity."
+        }
+      ]
+    },
+    {
+      "normalized_issue_id": "submission_E_E02",
+      "submission_alias": "submission_E",
+      "original_run_id": "ugs_synth_worker_only_replication_001",
+      "condition": "worker_only",
+      "pair_number": "001",
+      "passes_detected": [
+        "pass_01"
+      ],
+      "original_finding_ids": [
+        {
+          "pass_id": "pass_01",
+          "finding_id": "F-002"
+        }
+      ],
+      "status_labels": [
+        "confirmed_violation"
+      ],
+      "severity_labels": [
+        "medium"
+      ],
+      "confidence_labels": [
+        "high"
+      ],
+      "per_pass_labels": [
+        {
+          "pass_id": "pass_01",
+          "finding_id": "F-002",
+          "status": "confirmed_violation",
+          "severity": "medium",
+          "confidence": "high"
+        }
+      ],
+      "primary_category": "LCC objective / suboptimality",
+      "secondary_categories": [
+        "equipment limits"
+      ],
+      "benchmark_or_cross_submission_issue_key": null,
+      "issue_summary": "HDR180 at Y has an exact lower-LCC HDR120 substitution under the stated limits.",
+      "matching_rationale": "Single pass; retained directly.",
+      "status_disagreement": false,
+      "severity_disagreement": false,
+      "summary_confirmed_severity_most_severe_across_confirming_passes": "medium",
+      "source_findings": [
+        {
+          "pass_id": "pass_01",
+          "source_review_path": "results/submission_E/pass_01/review.json",
+          "source_review_sha256": "1ca8bfa32019a4ea82cca4facf459a965b50bd75159723edea89f1de92477e33",
+          "finding_id": "F-002",
+          "status": "confirmed_violation",
+          "severity": "medium",
+          "confidence": "high",
+          "public_basis": "brief/project_requirements.json states the primary objective is to minimize benchmark LCC among feasible designs; brief/engineering_calculation_basis.md defines LCC arithmetic.",
+          "claim_or_requirement": "The submitted design is presented as the LCC-minimized feasible design with LCC 90.283771 MBCU.",
+          "submission_evidence": "submission/design/equipment_instances.json installs Y as HDR180; submission/report/design_report.md lists Y HDR180 and states the design objective is minimized LCC.",
+          "independent_check": "Exact alternative: replace only Y with HDR120 at the same position/orientation, remap the three used Y ports to HDR120 branch_01 through branch_03, and adjust PX-Y, PCLR2-Y, and PY-REG endpoints. HDR120 capacity is 120 kg/s, branch limit 10, same footprint/safety category, and Y uses 3 branches with max normal flow 120 kg/s. Equipment plus maintenance PV saving is about 0.14927 MBCU; pipe endpoint length change costs about 0.00019 MBCU. Extra Y pressure drop is 0.00556 MPa at 120 kg/s and 0.00189 MPa at WDR-LOW 70 kg/s; WDR-LOW regulator margin remains positive at about 0.00328 MPa, and WDR-HIGH/MID margins remain much larger.",
+          "result": "A feasible lower-LCC alternative reduces LCC by about 0.149 MBCU, so the submitted design is not minimal under the public LCC objective.",
+          "why_it_matters": "The benchmark objective is cost minimization among feasible designs. A dominated installed header directly invalidates the claimed cost optimum, even though the delta is modest relative to total LCC."
+        }
+      ]
+    },
+    {
+      "normalized_issue_id": "submission_E_E03",
+      "submission_alias": "submission_E",
+      "original_run_id": "ugs_synth_worker_only_replication_001",
+      "condition": "worker_only",
+      "pair_number": "001",
+      "passes_detected": [
+        "pass_01",
+        "pass_02"
+      ],
+      "original_finding_ids": [
+        {
+          "pass_id": "pass_01",
+          "finding_id": "F-003"
+        },
+        {
+          "pass_id": "pass_02",
+          "finding_id": "F-004"
+        }
+      ],
+      "status_labels": [
+        "semantics_gap"
+      ],
+      "severity_labels": [
+        "low"
+      ],
+      "confidence_labels": [
+        "high"
+      ],
+      "per_pass_labels": [
+        {
+          "pass_id": "pass_01",
+          "finding_id": "F-003",
+          "status": "semantics_gap",
+          "severity": "low",
+          "confidence": "high"
+        },
+        {
+          "pass_id": "pass_02",
+          "finding_id": "F-004",
+          "status": "semantics_gap",
+          "severity": "low",
+          "confidence": "high"
+        }
+      ],
+      "primary_category": "benchmark semantics",
+      "secondary_categories": [
+        "liquid drain"
+      ],
+      "benchmark_or_cross_submission_issue_key": "liquid_drain_velocity_density_basis",
+      "issue_summary": "The brief omits liquid density needed to convert drain mass flow to velocity.",
+      "matching_rationale": "Both passes identify the same missing public liquid-density basis.",
+      "status_disagreement": false,
+      "severity_disagreement": false,
+      "summary_confirmed_severity_most_severe_across_confirming_passes": null,
+      "source_findings": [
+        {
+          "pass_id": "pass_01",
+          "source_review_path": "results/submission_E/pass_01/review.json",
+          "source_review_sha256": "1ca8bfa32019a4ea82cca4facf459a965b50bd75159723edea89f1de92477e33",
+          "finding_id": "F-003",
+          "status": "semantics_gap",
+          "severity": "low",
+          "confidence": "high",
+          "public_basis": "brief/piping_catalog.json provides a maximum liquid-drain velocity of 3 m/s, but the public brief does not provide liquid density; brief/engineering_calculation_basis.md gives separator liquid mass flow in kg/s.",
+          "claim_or_requirement": "The submission reports liquid drain velocities and assumes 1000 kg/m3 density.",
+          "submission_evidence": "submission/report/design_report.md lists liquid density 1000 kg/m3 as an unpublished assumption; submission/src/ugssynth/engine.py defines LIQUID_DENSITY = 1000.0; submission/design/pipelines.json reports drain velocities up to 0.0256 m/s.",
+          "independent_check": "Using public mass-flow rules, WDR-HIGH removed liquid is 120*0.01*0.9995 = 1.1994 kg/s, or 0.3998 kg/s per drain train. With the submission's assumed 1000 kg/m3 and DN150 ID 0.141 m, velocity is about 0.0256 m/s. Without density, kg/s cannot be uniquely converted to m/s.",
+          "result": "Drain mass capacities and outfall mass flow are checkable and pass, but the liquid-velocity judgment is not uniquely determined from the public brief.",
+          "why_it_matters": "This is not a submission violation; it is a missing public input that prevents a definitive independent PASS/FAIL on drain velocity."
+        },
+        {
+          "pass_id": "pass_02",
+          "source_review_path": "results/submission_E/pass_02/review.json",
+          "source_review_sha256": "c259b2672ea4913c23df38414ce462296a035dc42a21730b24617677d094ce40",
+          "finding_id": "F-004",
+          "status": "semantics_gap",
+          "severity": "low",
+          "confidence": "high",
+          "public_basis": "brief/engineering_calculation_basis.md sets a liquid-drain velocity limit and uses mass-flow units, but the public brief does not provide a liquid density for converting kg/s to m3/s.",
+          "claim_or_requirement": "Liquid drain velocity must be within the published limit.",
+          "submission_evidence": "submission/report/design_report.md states that liquid density is assumed 1000 kg/m3 because it is not published. submission/design/pipelines.json reports peak drain velocity 0.0256 m/s for the DN150 drain lines.",
+          "independent_check": "Using the submission's 1000 kg/m3 assumption, peak per-drain flow 0.3998 kg/s through DN150 ID 0.141 m gives about 0.0256 m/s, below 3 m/s. Without a public density, there is no unique public-basis velocity calculation.",
+          "result": "Drain velocity compliance cannot be definitively judged from the public brief alone; the submitted value is conditional on an unstated density assumption.",
+          "why_it_matters": "This affects whether liquid-drain velocity is a formally reproducible PASS, although capacity, class compatibility, and outfall flow are otherwise within limits."
+        }
+      ]
+    },
+    {
+      "normalized_issue_id": "submission_E_E04",
+      "submission_alias": "submission_E",
+      "original_run_id": "ugs_synth_worker_only_replication_001",
+      "condition": "worker_only",
+      "pair_number": "001",
+      "passes_detected": [
+        "pass_01",
+        "pass_02"
+      ],
+      "original_finding_ids": [
+        {
+          "pass_id": "pass_01",
+          "finding_id": "F-004"
+        },
+        {
+          "pass_id": "pass_02",
+          "finding_id": "F-005"
+        }
+      ],
+      "status_labels": [
+        "unsupported_claim"
+      ],
+      "severity_labels": [
+        "low"
+      ],
+      "confidence_labels": [
+        "high"
+      ],
+      "per_pass_labels": [
+        {
+          "pass_id": "pass_01",
+          "finding_id": "F-004",
+          "status": "unsupported_claim",
+          "severity": "low",
+          "confidence": "high"
+        },
+        {
+          "pass_id": "pass_02",
+          "finding_id": "F-005",
+          "status": "unsupported_claim",
+          "severity": "low",
+          "confidence": "high"
+        }
+      ],
+      "primary_category": "deliverable / reconstructability",
+      "secondary_categories": [],
+      "benchmark_or_cross_submission_issue_key": "reproduction_path_mismatch",
+      "issue_summary": "The documented project/run.py command and project/ layout do not match the delivered tree.",
+      "matching_rationale": "Both passes identify the same documented reproduction path mismatch.",
+      "status_disagreement": false,
+      "severity_disagreement": false,
+      "summary_confirmed_severity_most_severe_across_confirming_passes": null,
+      "source_findings": [
+        {
+          "pass_id": "pass_01",
+          "source_review_path": "results/submission_E/pass_01/review.json",
+          "source_review_sha256": "1ca8bfa32019a4ea82cca4facf459a965b50bd75159723edea89f1de92477e33",
+          "finding_id": "F-004",
+          "status": "unsupported_claim",
+          "severity": "low",
+          "confidence": "high",
+          "public_basis": "brief/final_delivery_contract.json requires final artifacts to be reconstructable and calculations identifiable from the delivered package.",
+          "claim_or_requirement": "README and report claim `python project/run.py` rebuilds the network, checks, and artifacts.",
+          "submission_evidence": "submission/README.md and submission/report/design_report.md give `python project/run.py`; the supplied submission tree contains submission/run.py and no project/run.py at the reviewed root. submission/src/ugssynth/data.py also defaults to /workspace/brief unless UGS_BRIEF_DIR is set.",
+          "independent_check": "I inspected the supplied file tree and source paths. I did not run the command because execution and writes were blocked, but the named path is not present in this frozen submission layout.",
+          "result": "The reproduction command as documented is not supported by the delivered file layout, although the static JSON artifacts are still reviewable.",
+          "why_it_matters": "A post-hoc reviewer should be able to reproduce checks without guessing path or environment variables; this is a documentation/reconstructability defect, not a process-design infeasibility."
+        },
+        {
+          "pass_id": "pass_02",
+          "source_review_path": "results/submission_E/pass_02/review.json",
+          "source_review_sha256": "c259b2672ea4913c23df38414ce462296a035dc42a21730b24617677d094ce40",
+          "finding_id": "F-005",
+          "status": "unsupported_claim",
+          "severity": "low",
+          "confidence": "high",
+          "public_basis": "brief/final_delivery_contract.json requires final artifacts to be reconstructable and identify calculations clearly.",
+          "claim_or_requirement": "README.md and report/design_report.md claim reproduction via python project/run.py and describe a project/ source layout.",
+          "submission_evidence": "submission/README.md says to run python project/run.py and lists project/run.py, project/src, project/design, and project/report. The actual delivered tree contains submission/run.py, submission/src, submission/design, and submission/report, with no submission/project directory.",
+          "independent_check": "rg --files submission lists submission/run.py and submission/src/... but no project/run.py path.",
+          "result": "The documented reproduction command and source layout do not match the final delivered artifact tree.",
+          "why_it_matters": "This is a low-impact reconstructability inconsistency; the JSON deliverables are still readable, but the advertised reproduction path is not directly executable as written."
+        }
+      ]
+    },
+    {
+      "normalized_issue_id": "submission_E_E05",
+      "submission_alias": "submission_E",
+      "original_run_id": "ugs_synth_worker_only_replication_001",
+      "condition": "worker_only",
+      "pair_number": "001",
+      "passes_detected": [
+        "pass_02"
+      ],
+      "original_finding_ids": [
+        {
+          "pass_id": "pass_02",
+          "finding_id": "F-001"
+        }
+      ],
+      "status_labels": [
+        "confirmed_violation"
+      ],
+      "severity_labels": [
+        "medium"
+      ],
+      "confidence_labels": [
+        "high"
+      ],
+      "per_pass_labels": [
+        {
+          "pass_id": "pass_02",
+          "finding_id": "F-001",
+          "status": "confirmed_violation",
+          "severity": "medium",
+          "confidence": "high"
+        }
+      ],
+      "primary_category": "pipeline geometry",
+      "secondary_categories": [],
+      "benchmark_or_cross_submission_issue_key": null,
+      "issue_summary": "PGRID-INJ crosses the MTR-INJ equipment footprint for a positive distance.",
+      "matching_rationale": "Single pass; retained directly.",
+      "status_disagreement": false,
+      "severity_disagreement": false,
+      "summary_confirmed_severity_most_severe_across_confirming_passes": "medium",
+      "source_findings": [
+        {
+          "pass_id": "pass_02",
+          "source_review_path": "results/submission_E/pass_02/review.json",
+          "source_review_sha256": "c259b2672ea4913c23df38414ce462296a035dc42a21730b24617677d094ce40",
+          "finding_id": "F-001",
+          "status": "confirmed_violation",
+          "severity": "medium",
+          "confidence": "high",
+          "public_basis": "brief/engineering_geometry_basis.md requires every physical pipeline segment to avoid equipment-footprint interiors; only boundary contact is permitted.",
+          "claim_or_requirement": "Pipeline routes must not cross an equipment-footprint interior.",
+          "submission_evidence": "submission/design/pipelines.json defines PGRID-INJ with waypoints (700,225), (690,292), (648,292) to MTR-INJ.gas_in. submission/design/equipment_instances.json defines MTR-INJ at (650,292), footprint 4 m x 2 m, gas_in at (648,292). submission/design/check_summary.json reports geometry_issues as empty.",
+          "independent_check": "With orientation 0, MTR-INJ footprint spans x=648..652 and y=291..293. The PGRID-INJ segment from (690,292) to (648,292) lies at y=292 and passes through x values 648 < x < 652 before ending at the gas_in boundary point.",
+          "result": "PGRID-INJ crosses the MTR-INJ equipment-footprint interior for a positive length of approximately 4 m.",
+          "why_it_matters": "The submitted pipeline geometry is not compliant with the public route-containment rule, and the bundled geometry checker missed it."
+        }
+      ]
+    },
+    {
+      "normalized_issue_id": "submission_E_E06",
+      "submission_alias": "submission_E",
+      "original_run_id": "ugs_synth_worker_only_replication_001",
+      "condition": "worker_only",
+      "pair_number": "001",
+      "passes_detected": [
+        "pass_02"
+      ],
+      "original_finding_ids": [
+        {
+          "pass_id": "pass_02",
+          "finding_id": "F-002"
+        }
+      ],
+      "status_labels": [
+        "confirmed_violation"
+      ],
+      "severity_labels": [
+        "medium"
+      ],
+      "confidence_labels": [
+        "high"
+      ],
+      "per_pass_labels": [
+        {
+          "pass_id": "pass_02",
+          "finding_id": "F-002",
+          "status": "confirmed_violation",
+          "severity": "medium",
+          "confidence": "high"
+        }
+      ],
+      "primary_category": "geometry / layout / roads",
+      "secondary_categories": [],
+      "benchmark_or_cross_submission_issue_key": null,
+      "issue_summary": "The R-MAIN road end sweep extends outside the site boundary.",
+      "matching_rationale": "Single pass; retained directly.",
+      "status_disagreement": false,
+      "severity_disagreement": false,
+      "summary_confirmed_severity_most_severe_across_confirming_passes": "medium",
+      "source_findings": [
+        {
+          "pass_id": "pass_02",
+          "source_review_path": "results/submission_E/pass_02/review.json",
+          "source_review_sha256": "c259b2672ea4913c23df38414ce462296a035dc42a21730b24617677d094ce40",
+          "finding_id": "F-002",
+          "status": "confirmed_violation",
+          "severity": "medium",
+          "confidence": "high",
+          "public_basis": "brief/engineering_geometry_basis.md states that road paved geometry is the centreline swept by half the width, including ends, and must remain within the site boundary. brief/site.json defines the site boundary starting at x=0.",
+          "claim_or_requirement": "Road paved geometry must remain within the site boundary.",
+          "submission_evidence": "submission/design/layout_roads.json defines R-MAIN with width_m 6.0 and centreline starting at (0,225). submission/design/check_summary.json reports geometry_issues as empty.",
+          "independent_check": "A 6 m road has a 3 m half-width. Sweeping the R-MAIN endpoint at (0,225) by 3 m includes points such as (-3,225), outside the site boundary x >= 0.",
+          "result": "R-MAIN paved end geometry extends outside the site by about 3 m at ROAD-ENTRANCE.",
+          "why_it_matters": "Road geometry is part of the mandatory layout/access deliverable; centerline-only containment is insufficient under the published road rule."
+        }
+      ]
+    },
+    {
+      "normalized_issue_id": "submission_F_F01",
+      "submission_alias": "submission_F",
+      "original_run_id": "ugs_synth_worker_only_replication_003",
+      "condition": "worker_only",
+      "pair_number": "003",
+      "passes_detected": [
+        "pass_01",
+        "pass_02"
+      ],
+      "original_finding_ids": [
+        {
+          "pass_id": "pass_01",
+          "finding_id": "F-001"
+        },
+        {
+          "pass_id": "pass_02",
+          "finding_id": "F-001"
+        }
+      ],
+      "status_labels": [
+        "unsupported_claim"
+      ],
+      "severity_labels": [
+        "medium"
+      ],
+      "confidence_labels": [
+        "high"
+      ],
+      "per_pass_labels": [
+        {
+          "pass_id": "pass_01",
+          "finding_id": "F-001",
+          "status": "unsupported_claim",
+          "severity": "medium",
+          "confidence": "high"
+        },
+        {
+          "pass_id": "pass_02",
+          "finding_id": "F-001",
+          "status": "unsupported_claim",
+          "severity": "medium",
+          "confidence": "high"
+        }
+      ],
+      "primary_category": "N-1 reliability",
+      "secondary_categories": [],
+      "benchmark_or_cross_submission_issue_key": "n1_claim_exceeds_evidence",
+      "issue_summary": "The claimed N-1 verification enumerates representative rather than all required unit-out cases.",
+      "matching_rationale": "Both passes identify the same gap between the any-one-outage claim and the enumerated cases.",
+      "status_disagreement": false,
+      "severity_disagreement": false,
+      "summary_confirmed_severity_most_severe_across_confirming_passes": null,
+      "source_findings": [
+        {
+          "pass_id": "pass_01",
+          "source_review_path": "results/submission_F/pass_01/review.json",
+          "source_review_sha256": "018a13c3c396d09fbe9ff9efe375678caad6444901bc07435a526c5af40db157",
+          "finding_id": "F-001",
+          "status": "unsupported_claim",
+          "severity": "medium",
+          "confidence": "high",
+          "public_basis": "brief/project_requirements.json reliability_requirements and brief/engineering_calculation_basis.md state that compression N-1 applies to each compression scenario and withdrawal treatment N-1 applies to each withdrawal scenario after any one separator or dehydration unit is unavailable, with delivery limits still applicable.",
+          "claim_or_requirement": "The submission claims all N-1 reliability cases are verified, including any-one compressor, separator, and dehydration-unit outages.",
+          "submission_evidence": "submission/design_report.md Section 7 and Section 12 claim N-1 verification and 0 findings. submission/calc/validate.py n1_results() enumerates only seven cases: three injection compressor cases, WDR-HIGH separator, WDR-HIGH dehydration, WDR-LOW compressor, and WDR-LOW combined separator+dehydration. submission/results/scenario_results.json has the same n1 keys.",
+          "independent_check": "Compared the enumerated outage cases with the public requirement matrix. Missing evidence includes separator-only and dehydration-only N-1 for WDR-MID, separate separator-only and dehydration-only WDR-LOW cases, and individual unit permutations for SEP1/SEP2/SEP3 and DH1/DH2/DH3. Compressor cases are represented by a worst/representative lineup rather than individual C1/C2/C3 outages.",
+          "result": "The design may still be feasible by capacity and symmetry, but the final artifacts do not actually simulate every required any-one outage case claimed by the report.",
+          "why_it_matters": "N-1 reliability is a mandatory requirement. Branch lengths and pressure losses are not perfectly symmetric, so representative evidence should not be described as exhaustive without either enumerating all cases or proving equivalence."
+        },
+        {
+          "pass_id": "pass_02",
+          "source_review_path": "results/submission_F/pass_02/review.json",
+          "source_review_sha256": "ce06ac06c47be7575136bb44fc58c67ca3988e2e2943c4d9a8713e1469d7e27d",
+          "finding_id": "F-001",
+          "status": "unsupported_claim",
+          "severity": "medium",
+          "confidence": "high",
+          "public_basis": "brief/project_requirements.json requires compression N-1 after any one compressor is unavailable for scenarios where required_sink_pressure_mpa > source_pressure_mpa, and withdrawal treatment N-1 after any one separator or dehydration unit is unavailable for withdrawal service. brief/engineering_calculation_basis.md requires retained flow >=0.7 and delivery limits after those outages.",
+          "claim_or_requirement": "submission/design_report.md Sections 7 and 12 claim N-1 reliability is verified with 0 findings and that every retained unit stays inside its envelope. The public requirement is any-one-unit outage evidence, not a single representative outage label.",
+          "submission_evidence": "submission/results/scenario_results.json contains only seven N-1 labels: compressor N-1 for INJ-LOW/MID/HIGH, separator N-1 WDR-HIGH, dehydration N-1 WDR-HIGH, compressor N-1 WDR-LOW, and separator+dehydration N-1 WDR-LOW. submission/calc/validate.py n1_results() hard-codes the same subset and N1_CASES uses only C2+C3 for injection compressor outages.",
+          "independent_check": "With three installed compressors, three separators, and three dehydration units, direct exhaustive evidence would cover individual failed-unit variants for 4 compressor-applicable scenarios and 3 withdrawal scenarios for separator and dehydration. The submitted cases omit WDR-MID treatment outages, omit separate WDR-LOW separator-only and dehydration-only cases, and do not identify/cover all individual failed compressor, separator, or dehydration units. The compressor bank is not fully symmetric because C3 is C40 while C1/C2 are C60 and branch piping differs; separator/dehydration branch lengths also differ.",
+          "result": "The available results are representative capacity/path checks, not exhaustive any-one-unit N-1 evidence. The sampled cases may pass, but the claim that the public N-1 requirement is fully verified is unsupported.",
+          "why_it_matters": "N-1 reliability is mandatory. Non-identical remaining lineups can change pressure losses, minimum stable flow, velocity, and delivery margins, so representative cases alone do not prove every allowed single outage remains feasible."
+        }
+      ]
+    },
+    {
+      "normalized_issue_id": "submission_F_F02",
+      "submission_alias": "submission_F",
+      "original_run_id": "ugs_synth_worker_only_replication_003",
+      "condition": "worker_only",
+      "pair_number": "003",
+      "passes_detected": [
+        "pass_01",
+        "pass_02"
+      ],
+      "original_finding_ids": [
+        {
+          "pass_id": "pass_01",
+          "finding_id": "F-002"
+        },
+        {
+          "pass_id": "pass_02",
+          "finding_id": "F-003"
+        }
+      ],
+      "status_labels": [
+        "semantics_gap"
+      ],
+      "severity_labels": [
+        "low"
+      ],
+      "confidence_labels": [
+        "high"
+      ],
+      "per_pass_labels": [
+        {
+          "pass_id": "pass_01",
+          "finding_id": "F-002",
+          "status": "semantics_gap",
+          "severity": "low",
+          "confidence": "high"
+        },
+        {
+          "pass_id": "pass_02",
+          "finding_id": "F-003",
+          "status": "semantics_gap",
+          "severity": "low",
+          "confidence": "high"
+        }
+      ],
+      "primary_category": "benchmark semantics",
+      "secondary_categories": [
+        "liquid drain"
+      ],
+      "benchmark_or_cross_submission_issue_key": "liquid_drain_velocity_density_basis",
+      "issue_summary": "The brief omits liquid density needed to convert drain mass flow to velocity.",
+      "matching_rationale": "Both passes identify the same missing public liquid-density basis.",
+      "status_disagreement": false,
+      "severity_disagreement": false,
+      "summary_confirmed_severity_most_severe_across_confirming_passes": null,
+      "source_findings": [
+        {
+          "pass_id": "pass_01",
+          "source_review_path": "results/submission_F/pass_01/review.json",
+          "source_review_sha256": "018a13c3c396d09fbe9ff9efe375678caad6444901bc07435a526c5af40db157",
+          "finding_id": "F-002",
+          "status": "semantics_gap",
+          "severity": "low",
+          "confidence": "high",
+          "public_basis": "brief/engineering_calculation_basis.md requires liquid-drain velocity to remain within the published limit, and brief/piping_catalog.json gives a 3.0 m/s maximum liquid-drain velocity, but the public basis provides no liquid density or liquid hydraulic property model.",
+          "claim_or_requirement": "Submission claims liquid-drain velocities pass and states a synthetic liquid density assumption of 1000 kg/m3.",
+          "submission_evidence": "submission/design_report.md assumptions A6 and limitations state the 1000 kg/m3 density assumption. submission/calc/ugslib.py defines LIQUID_DENSITY = 1000.0. submission/results/scenario_results.json reports WDR-HIGH DN150 drain velocity about 0.025604 m/s.",
+          "independent_check": "Using the submission's assumption, WDR-HIGH per-separator liquid flow 0.3998 kg/s in DN150 ID 0.141 m gives area about 0.0156 m2 and velocity about 0.0256 m/s, below 3.0 m/s. Without a public density, the velocity is not uniquely defined.",
+          "result": "Capacity and outfall-flow checks pass, but liquid-drain velocity cannot be definitively classified as a public-basis PASS or FAIL.",
+          "why_it_matters": "The omitted density is decisive for a velocity calculation. This is not a submission violation, but it limits independent verification of the liquid-drain velocity requirement."
+        },
+        {
+          "pass_id": "pass_02",
+          "source_review_path": "results/submission_F/pass_02/review.json",
+          "source_review_sha256": "ce06ac06c47be7575136bb44fc58c67ca3988e2e2943c4d9a8713e1469d7e27d",
+          "finding_id": "F-003",
+          "status": "semantics_gap",
+          "severity": "low",
+          "confidence": "high",
+          "public_basis": "brief/engineering_calculation_basis.md requires liquid-drain pipelines to remain within the published maximum liquid-drain velocity limit, and brief/piping_catalog.json sets that limit to 3 m/s. The public brief specifies gas properties but does not specify liquid density or a liquid velocity formula input.",
+          "claim_or_requirement": "submission/design_report.md limitation item 2 states drain velocity is checked with an assumed 1000 kg/m3 liquid density, and submission/results/scenario_results.json reports liquid pipe rho=1000.0.",
+          "submission_evidence": "For WDR-HIGH, submission/results/scenario_results.json reports PL-34 with m=0.3998000000000001 kg/s, DN150 internal diameter 0.141 m, rho=1000.0, and v=0.025604404707264137 m/s.",
+          "independent_check": "Using A=pi*0.141^2/4=0.01561 m2 and the submission's density, v=0.3998/(1000*A)=0.0256 m/s, below 3 m/s. Without a public liquid density, the unique benchmark velocity cannot be computed; the threshold density for this case to reach 3 m/s is about 8.5 kg/m3.",
+          "result": "Under the submission's stated density assumption the drain velocity passes, but the public basis lacks a decisive liquid-density input, so this is not a definitive public PASS.",
+          "why_it_matters": "The drain system is part of mandatory liquid handling. Velocity compliance should not depend on an unstated physical property unless the benchmark explicitly allows the assumption."
+        }
+      ]
+    },
+    {
+      "normalized_issue_id": "submission_F_F03",
+      "submission_alias": "submission_F",
+      "original_run_id": "ugs_synth_worker_only_replication_003",
+      "condition": "worker_only",
+      "pair_number": "003",
+      "passes_detected": [
+        "pass_01",
+        "pass_02"
+      ],
+      "original_finding_ids": [
+        {
+          "pass_id": "pass_01",
+          "finding_id": "F-003"
+        },
+        {
+          "pass_id": "pass_02",
+          "finding_id": "F-002"
+        }
+      ],
+      "status_labels": [
+        "semantics_gap"
+      ],
+      "severity_labels": [
+        "medium"
+      ],
+      "confidence_labels": [
+        "high"
+      ],
+      "per_pass_labels": [
+        {
+          "pass_id": "pass_01",
+          "finding_id": "F-003",
+          "status": "semantics_gap",
+          "severity": "medium",
+          "confidence": "high"
+        },
+        {
+          "pass_id": "pass_02",
+          "finding_id": "F-002",
+          "status": "semantics_gap",
+          "severity": "medium",
+          "confidence": "high"
+        }
+      ],
+      "primary_category": "benchmark semantics",
+      "secondary_categories": [
+        "operating scenarios",
+        "unsupported assumptions"
+      ],
+      "benchmark_or_cross_submission_issue_key": "unmodelled_isolation_semantics",
+      "issue_summary": "Scenario active paths rely on uncatalogued, unpriced isolation valves.",
+      "matching_rationale": "Both passes identify the same unmodelled valve/isolation assumption.",
+      "status_disagreement": false,
+      "severity_disagreement": false,
+      "summary_confirmed_severity_most_severe_across_confirming_passes": null,
+      "source_findings": [
+        {
+          "pass_id": "pass_01",
+          "source_review_path": "results/submission_F/pass_01/review.json",
+          "source_review_sha256": "018a13c3c396d09fbe9ff9efe375678caad6444901bc07435a526c5af40db157",
+          "finding_id": "F-003",
+          "status": "semantics_gap",
+          "severity": "medium",
+          "confidence": "high",
+          "public_basis": "brief/network_semantics.md allows scenario operating paths but does not provide catalogued isolation valves, valve pressure drops, valve costs, or explicit free-isolation semantics. It also prohibits arbitrary zero-cost process junctions.",
+          "claim_or_requirement": "The design relies on scenario-specific active paths and isolation valve line-ups to isolate the compressor bypass, treatment branch, cooler branch, and inactive compressor/treatment units.",
+          "submission_evidence": "submission/design_report.md assumption A4 states that scenario flow paths are selected by an isolation-valve line-up and that valves are not catalogued equipment. Section 13 lists 'Valve line-up is declared, not modelled' as a known limitation.",
+          "independent_check": "Reviewed the physical network and normal scenario paths. Injection uses MI, compressors, COOL, and HM while isolating treatment and bypass paths; WDR-HIGH/MID uses treatment and PL-26 bypass while isolating compressors and cooler; WDR-LOW closes the bypass and runs compressors. These active paths require isolation behavior not represented by priced/catalogued equipment.",
+          "result": "The assumption is explicit and may be intended by the benchmark's active-path abstraction, but the public brief does not uniquely determine whether such isolation is free and unmodelled.",
+          "why_it_matters": "If isolation valves had cost, pressure drop, footprint, or port constraints, both feasibility evidence and LCC would change. This should be treated as a public semantics gap, not a confirmed design violation."
+        },
+        {
+          "pass_id": "pass_02",
+          "source_review_path": "results/submission_F/pass_02/review.json",
+          "source_review_sha256": "ce06ac06c47be7575136bb44fc58c67ca3988e2e2943c4d9a8713e1469d7e27d",
+          "finding_id": "F-002",
+          "status": "semantics_gap",
+          "severity": "medium",
+          "confidence": "high",
+          "public_basis": "brief/final_delivery_contract.json requires physical topology and scenario-specific active paths. brief/network_semantics.md excludes arbitrary zero-cost process junctions, but the public brief provides no valve catalogue, valve costing rule, or explicit rule for free scenario isolation valves.",
+          "claim_or_requirement": "submission/design_report.md assumptions A4 and limitations item 1 state that scenario flow paths are selected by an isolation-valve line-up and that isolation valves are assumed available, correctly sized, uncatalogued, and unpriced.",
+          "submission_evidence": "The physical network includes parallel compressor branches, a bypass PL-26 between HCS and HCD, a cooler branch, and withdrawal treatment branches. Normal injection paths isolate PL-26 and treatment; WDR-HIGH/MID paths isolate compressors and cooler; WDR-LOW closes the bypass and opens compressor branches. No valve equipment appears in submission/data/design.json or the LCC.",
+          "independent_check": "Tracing the submitted active paths shows that the design depends on switching/isolating connected branches to prevent unintended flow through bypass, compressor, treatment, or cooler paths. Those isolation functions are neither catalogued nor costed in the public data, and the brief does not uniquely state whether they are free operating assumptions or missing physical equipment.",
+          "result": "This cannot be judged as a definitive pass or violation from the public brief alone. It is a semantics gap affecting active-path realizability and LCC completeness.",
+          "why_it_matters": "If isolation valves must be physical priced equipment, the topology, pressure losses, maintenance footprint, and LCC would change. If active-path switching is free by benchmark convention, the design can be interpreted as intended."
+        }
+      ]
+    },
+    {
+      "normalized_issue_id": "submission_F_F04",
+      "submission_alias": "submission_F",
+      "original_run_id": "ugs_synth_worker_only_replication_003",
+      "condition": "worker_only",
+      "pair_number": "003",
+      "passes_detected": [
+        "pass_01",
+        "pass_02"
+      ],
+      "original_finding_ids": [
+        {
+          "pass_id": "pass_01",
+          "finding_id": "F-004"
+        },
+        {
+          "pass_id": "pass_02",
+          "finding_id": "F-004"
+        }
+      ],
+      "status_labels": [
+        "unsupported_claim"
+      ],
+      "severity_labels": [
+        "low"
+      ],
+      "confidence_labels": [
+        "high"
+      ],
+      "per_pass_labels": [
+        {
+          "pass_id": "pass_01",
+          "finding_id": "F-004",
+          "status": "unsupported_claim",
+          "severity": "low",
+          "confidence": "high"
+        },
+        {
+          "pass_id": "pass_02",
+          "finding_id": "F-004",
+          "status": "unsupported_claim",
+          "severity": "low",
+          "confidence": "high"
+        }
+      ],
+      "primary_category": "internal consistency",
+      "secondary_categories": [
+        "geometry / layout / roads"
+      ],
+      "benchmark_or_cross_submission_issue_key": "road_quantity_report_mismatch",
+      "issue_summary": "The report states 870.5 m of road while machine-readable geometry supports 876.5 m.",
+      "matching_rationale": "Both passes identify the same inconsistency between reported road quantities and geometry/LCC.",
+      "status_disagreement": false,
+      "severity_disagreement": false,
+      "summary_confirmed_severity_most_severe_across_confirming_passes": null,
+      "source_findings": [
+        {
+          "pass_id": "pass_01",
+          "source_review_path": "results/submission_F/pass_01/review.json",
+          "source_review_sha256": "018a13c3c396d09fbe9ff9efe375678caad6444901bc07435a526c5af40db157",
+          "finding_id": "F-004",
+          "status": "unsupported_claim",
+          "severity": "low",
+          "confidence": "high",
+          "public_basis": "brief/final_delivery_contract.json requires quantities and lifecycle-cost basis to be reconstructable; brief/engineering_calculation_basis.md gives an LCC tolerance of 1e-8 MBCU.",
+          "claim_or_requirement": "The report and README state road quantities of 870.5 m and list R2 as 45 m, while also reporting an LCC consistent with a different road length.",
+          "submission_evidence": "submission/README.md headline design says roads are 870.5 m. submission/design_report.md Section 6.4 lists R2 from (470,225) to (470,270), length 45 m, and total 870.5 m; Section 11 repeats roads 870.5 m. submission/data/design.json defines R2 from (470,225) to (470,276). submission/results/quantities.json road_length_m is 876.5 and submission/results/lcc.json road_capex is 0.131475 MBCU.",
+          "independent_check": "Computed road lengths from design JSON: R1 687.5 m, R2 51 m, R3 108 m, R4 30 m, total 876.5 m. Road CAPEX = 876.5 * 0.00015 = 0.131475 MBCU, matching lcc.json.",
+          "result": "The machine-readable design and LCC are internally consistent with 876.5 m, but the narrative report/README contain stale or incorrect road-length quantities.",
+          "why_it_matters": "This does not materially affect feasibility because the LCC uses the machine-readable length, but it weakens reconstructability and could mislead a reviewer using the report tables."
+        },
+        {
+          "pass_id": "pass_02",
+          "source_review_path": "results/submission_F/pass_02/review.json",
+          "source_review_sha256": "ce06ac06c47be7575136bb44fc58c67ca3988e2e2943c4d9a8713e1469d7e27d",
+          "finding_id": "F-004",
+          "status": "unsupported_claim",
+          "severity": "low",
+          "confidence": "high",
+          "public_basis": "brief/engineering_calculation_basis.md and brief/economic_assumptions.json require road civil CAPEX to be road centreline length multiplied by 0.00015 MBCU/m. brief/final_delivery_contract.json requires reconstructable quantities and LCC basis.",
+          "claim_or_requirement": "submission/design_report.md Sections 6.4, 10, and 11 state total road centreline length is 870.5 m and civil road cost is 870.5 m * 0.00015 = 0.1306 MBCU.",
+          "submission_evidence": "submission/data/design.json defines R1 from (2.5,225) to (690,225), R2 from (470,225) to (470,276), R3 from (456,270) to (564,270), and R4 from (188,225) to (188,195). submission/results/lcc.json and submission/results/quantities.json use road_m/road_length_m=876.5 and road_capex=0.131475.",
+          "independent_check": "The JSON road coordinates give lengths 687.5 + 51 + 108 + 30 = 876.5 m. At 0.00015 MBCU/m, road CAPEX is 0.131475 MBCU. The report's 870.5 m is 6 m short and its road-cost text is lower by 0.0009 MBCU, although the machine-readable LCC uses the correct JSON road length.",
+          "result": "The report road quantity and civil-cost explanation are unsupported by the final road geometry. The LCC JSON itself reconciles to the geometry and is not materially affected beyond documentation inconsistency.",
+          "why_it_matters": "This is a small cost difference, but it weakens reconstructability because the human report and the machine-readable LCC basis disagree."
+        }
+      ]
+    },
+    {
+      "normalized_issue_id": "submission_F_F05",
+      "submission_alias": "submission_F",
+      "original_run_id": "ugs_synth_worker_only_replication_003",
+      "condition": "worker_only",
+      "pair_number": "003",
+      "passes_detected": [
+        "pass_01"
+      ],
+      "original_finding_ids": [
+        {
+          "pass_id": "pass_01",
+          "finding_id": "F-005"
+        }
+      ],
+      "status_labels": [
+        "observation"
+      ],
+      "severity_labels": [
+        "low"
+      ],
+      "confidence_labels": [
+        "medium"
+      ],
+      "per_pass_labels": [
+        {
+          "pass_id": "pass_01",
+          "finding_id": "F-005",
+          "status": "observation",
+          "severity": "low",
+          "confidence": "medium"
+        }
+      ],
+      "primary_category": "LCC objective / suboptimality",
+      "secondary_categories": [],
+      "benchmark_or_cross_submission_issue_key": null,
+      "issue_summary": "The reported LCC is not evidence of a global optimum over all feasible designs.",
+      "matching_rationale": "Single pass; retained directly.",
+      "status_disagreement": false,
+      "severity_disagreement": false,
+      "summary_confirmed_severity_most_severe_across_confirming_passes": null,
+      "source_findings": [
+        {
+          "pass_id": "pass_01",
+          "source_review_path": "results/submission_F/pass_01/review.json",
+          "source_review_sha256": "018a13c3c396d09fbe9ff9efe375678caad6444901bc07435a526c5af40db157",
+          "finding_id": "F-005",
+          "status": "observation",
+          "severity": "low",
+          "confidence": "medium",
+          "public_basis": "brief/project_requirements.json states the primary objective is to minimize benchmark LCC among feasible designs.",
+          "claim_or_requirement": "The report presents a selected low-LCC design and several alternatives, but does not prove a global optimum over all feasible topologies, equipment counts, layouts, route levels, and pipe sizes.",
+          "submission_evidence": "submission/design_report.md describes a local-search pipe optimizer and selected compressor/header alternatives; submission/README.md calls the package a final design with LCC 87.5201 MBCU.",
+          "independent_check": "Reviewed the alternative table and sampled LCC arithmetic. No obvious dominated installed equipment or confirmed lower-cost feasible alternative was established during this evaluation, but the evidence is not an exhaustive global optimization proof.",
+          "result": "Treat the LCC as a supported cost for this design, not as a proven global optimum.",
+          "why_it_matters": "The public objective is optimization, but post-hoc feasibility and cost verification should not overstate optimality without exhaustive or otherwise rigorous search evidence."
+        }
+      ]
+    },
+    {
+      "normalized_issue_id": "submission_G_G01",
+      "submission_alias": "submission_G",
+      "original_run_id": "ugs_synth_explicit_collaboration_replication_004",
+      "condition": "explicit_collaboration",
+      "pair_number": "004",
+      "passes_detected": [
+        "pass_01",
+        "pass_02"
+      ],
+      "original_finding_ids": [
+        {
+          "pass_id": "pass_01",
+          "finding_id": "F-001"
+        },
+        {
+          "pass_id": "pass_02",
+          "finding_id": "F-001"
+        }
+      ],
+      "status_labels": [
+        "confirmed_violation"
+      ],
+      "severity_labels": [
+        "high",
+        "medium"
+      ],
+      "confidence_labels": [
+        "high"
+      ],
+      "per_pass_labels": [
+        {
+          "pass_id": "pass_01",
+          "finding_id": "F-001",
+          "status": "confirmed_violation",
+          "severity": "high",
+          "confidence": "high"
+        },
+        {
+          "pass_id": "pass_02",
+          "finding_id": "F-001",
+          "status": "confirmed_violation",
+          "severity": "medium",
+          "confidence": "high"
+        }
+      ],
+      "primary_category": "topology / ports",
+      "secondary_categories": [
+        "liquid drain"
+      ],
+      "benchmark_or_cross_submission_issue_key": "drain_outfall_endpoint_reference",
+      "issue_summary": "P39-P41 reference an undeclared drain endpoint instead of a declared physical port.",
+      "matching_rationale": "Both passes identify the same undeclared outfall endpoint on P39-P41. Severity differs between passes and is preserved.",
+      "status_disagreement": false,
+      "severity_disagreement": true,
+      "summary_confirmed_severity_most_severe_across_confirming_passes": "high",
+      "source_findings": [
+        {
+          "pass_id": "pass_01",
+          "source_review_path": "results/submission_G/pass_01/review.json",
+          "source_review_sha256": "a85bed11daa349dbb2d461ef0c966096f5d38217d0cf19bf9a21a84ff73b3ba8",
+          "finding_id": "F-001",
+          "status": "confirmed_violation",
+          "severity": "high",
+          "confidence": "high",
+          "public_basis": "brief/site.json defines LIQUID-DRAIN-OUTFALL with port_id `drain` and port_type `drain_in`; brief/network_semantics.md allows `drain_out` to connect only to `drain_in` for drain discharge.",
+          "claim_or_requirement": "Every physical pipeline route must join published physical ports with compatible port types; separator/closed-drain liquid must be conveyed to the public outfall through compatible liquid-drain routes.",
+          "submission_evidence": "submission/deliverables/process_topology.json, submission/deliverables/pipeline_schedule.csv, and submission/deliverables/design_report.md list P39, P40, and P41 as `DRN-*.drain_out -> LIQUID-DRAIN-OUTFALL.gas`. validation_results.json nevertheless reports endpoint, cardinality, and port compatibility checks as pass.",
+          "independent_check": "Compared P39-P41 endpoint names against the public outfall interface. The outfall has no `gas` port; its only process-relevant port is `drain` of type `drain_in`.",
+          "result": "P39-P41 terminate on a nonexistent boundary port and therefore do not establish valid drain_out-to-drain_in connections as submitted.",
+          "why_it_matters": "All withdrawal scenarios produce separator liquid. If the endpoint is interpreted literally, the liquid-drain network is not physically connected to the required outfall, so mandatory liquid handling is not valid despite the submission's PASS claim."
+        },
+        {
+          "pass_id": "pass_02",
+          "source_review_path": "results/submission_G/pass_02/review.json",
+          "source_review_sha256": "6b6ecc35f6aaacf99fffb06f8b388fa79a6e05d5bda6d3bda02d1e6e32724da9",
+          "finding_id": "F-001",
+          "status": "confirmed_violation",
+          "severity": "medium",
+          "confidence": "high",
+          "public_basis": "brief/site.json declares LIQUID-DRAIN-OUTFALL with port_id drain and port_type drain_in. brief/network_semantics.md requires physical connections between compatible ports; drain_out is compatible with drain_in.",
+          "claim_or_requirement": "Liquid drain pipelines must terminate on the declared drain_in physical outfall port, and endpoint references must identify physical ports for reconstructability and port compatibility.",
+          "submission_evidence": "submission/deliverables/process_topology.json lists P39, P40, and P41 with to_port LIQUID-DRAIN-OUTFALL.gas. submission/deliverables/pipeline_schedule.csv and submission/deliverables/design_report.md repeat the same endpoint. The interface entry in process_topology.json itself lists port_id drain, not gas.",
+          "independent_check": "Compared the three outfall pipeline endpoint names with the public and submitted external-interface port_id fields. GRID-TIE and well groups use gas ports, but LIQUID-DRAIN-OUTFALL uses drain.",
+          "result": "P39-P41 reference an undeclared endpoint. The route geometry still ends at the outfall coordinates, so the likely intended endpoint is LIQUID-DRAIN-OUTFALL.drain, but strict port reconstruction and compatibility checking fail without that inference.",
+          "why_it_matters": "Closed-drain compliance depends on proving separator liquid reaches a compatible drain_in boundary port within connection limits. The submission's own validation reports port compatibility PASS despite this exact endpoint mismatch."
+        }
+      ]
+    },
+    {
+      "normalized_issue_id": "submission_G_G02",
+      "submission_alias": "submission_G",
+      "original_run_id": "ugs_synth_explicit_collaboration_replication_004",
+      "condition": "explicit_collaboration",
+      "pair_number": "004",
+      "passes_detected": [
+        "pass_01",
+        "pass_02"
+      ],
+      "original_finding_ids": [
+        {
+          "pass_id": "pass_01",
+          "finding_id": "F-002"
+        },
+        {
+          "pass_id": "pass_02",
+          "finding_id": "F-002"
+        }
+      ],
+      "status_labels": [
+        "suspected_risk",
+        "unsupported_claim"
+      ],
+      "severity_labels": [
+        "medium"
+      ],
+      "confidence_labels": [
+        "medium",
+        "high"
+      ],
+      "per_pass_labels": [
+        {
+          "pass_id": "pass_01",
+          "finding_id": "F-002",
+          "status": "suspected_risk",
+          "severity": "medium",
+          "confidence": "medium"
+        },
+        {
+          "pass_id": "pass_02",
+          "finding_id": "F-002",
+          "status": "unsupported_claim",
+          "severity": "medium",
+          "confidence": "high"
+        }
+      ],
+      "primary_category": "benchmark semantics",
+      "secondary_categories": [
+        "operating scenarios",
+        "topology / ports",
+        "unsupported assumptions"
+      ],
+      "benchmark_or_cross_submission_issue_key": "unmodelled_isolation_semantics",
+      "issue_summary": "The claimed scenario and outage paths depend on unmodelled isolation and bypass line-ups.",
+      "matching_rationale": "Both passes identify the same dependence on unmodelled/unpriced isolation. The pass-specific status labels differ and are preserved.",
+      "status_disagreement": true,
+      "severity_disagreement": false,
+      "summary_confirmed_severity_most_severe_across_confirming_passes": null,
+      "source_findings": [
+        {
+          "pass_id": "pass_01",
+          "source_review_path": "results/submission_G/pass_01/review.json",
+          "source_review_sha256": "a85bed11daa349dbb2d461ef0c966096f5d38217d0cf19bf9a21a84ff73b3ba8",
+          "finding_id": "F-002",
+          "status": "suspected_risk",
+          "severity": "medium",
+          "confidence": "medium",
+          "public_basis": "brief/network_semantics.md defines compatible physical ports and states arbitrary zero-cost process junctions are not part of the world; the public catalogs do not include valve, check-valve, or compressor-bypass components or costs.",
+          "claim_or_requirement": "The design should be reconstructable from catalogued equipment and declared physical topology without relying on unmodelled free isolation equipment where it affects active paths or N-1 outages.",
+          "submission_evidence": "submission/deliverables/design_report.md sections 5.3 and 11 state that non-active station sections are isolated by valves, each compressor has unit isolation and discharge check valves, and WDR-HIGH/WDR-MID flow through compressor casings via a bypass line-up. These valves/bypasses are not in equipment_register.json, process_topology.json, quantities.json, or lcc.json.",
+          "independent_check": "Checked the equipment register and public catalogs: installed equipment includes compressors, headers, meters, regulator, treatment units, cooler, and drains, but no valves/check valves/bypasses. The operating philosophy depends on those items to isolate inactive parallel paths and failed compressor units.",
+          "result": "Not a confirmed violation because the benchmark does not fully specify valve treatment and permits scenario active paths, but feasibility and LCC depend on unmodelled/unpriced isolation and bypass assumptions.",
+          "why_it_matters": "Seasonal reverse service and N-1 removal of failed units can require real isolation/check/bypass hardware. If those items must be explicit and costed, the topology and LCC would be incomplete."
+        },
+        {
+          "pass_id": "pass_02",
+          "source_review_path": "results/submission_G/pass_02/review.json",
+          "source_review_sha256": "6b6ecc35f6aaacf99fffb06f8b388fa79a6e05d5bda6d3bda02d1e6e32724da9",
+          "finding_id": "F-002",
+          "status": "unsupported_claim",
+          "severity": "medium",
+          "confidence": "high",
+          "public_basis": "brief/final_delivery_contract.json requires the physical system and operating scenarios to be reconstructable. brief/engineering_calculation_basis.md prices installed catalog equipment in LCC. brief/network_semantics.md defines physical components and ports; no valve or check-valve catalog component is published.",
+          "claim_or_requirement": "The submission claims inactive paths and failed units are isolated, including scenario valve line-ups, compressor unit valves, discharge checks, and bypass/pass-through line-ups.",
+          "submission_evidence": "submission/deliverables/design_report.md section 5.3 states that isolation and check valves are not catalogue components and provides a valve schedule V-01 through V-08 plus unit valves. Section 11 assumption 2 says valves are not modelled as physical items. reliability_cases.json states failed units have no exceptions, but does not include per-contingency valve states or pipeline flows. lcc.json equipment_lines contain no valves or bypass components.",
+          "independent_check": "Reviewed the physical topology and LCC artifacts for valve/check/bypass instances and costs; only catalog equipment and pipelines are installed. The operating and N-1 claims rely on active-path declarations that remove flow from connected inactive branches or failed units without a priced physical isolation element.",
+          "result": "The claimed isolation is an operating assumption, not a reconstructable or priced physical artifact. This does not prove infeasibility because the public catalog has no valve model, but the submission's N-1 and active-path evidence depends materially on free isolation/bypass semantics.",
+          "why_it_matters": "N-1 reliability and seasonal operation require the failed unit to leave the active path and inactive meter/cooler/treatment paths not to carry unintended flow. If isolation is in scope or must be costed, the reported topology and LCC are incomplete."
+        }
+      ]
+    },
+    {
+      "normalized_issue_id": "submission_G_G03",
+      "submission_alias": "submission_G",
+      "original_run_id": "ugs_synth_explicit_collaboration_replication_004",
+      "condition": "explicit_collaboration",
+      "pair_number": "004",
+      "passes_detected": [
+        "pass_01",
+        "pass_02"
+      ],
+      "original_finding_ids": [
+        {
+          "pass_id": "pass_01",
+          "finding_id": "F-003"
+        },
+        {
+          "pass_id": "pass_02",
+          "finding_id": "F-003"
+        }
+      ],
+      "status_labels": [
+        "semantics_gap"
+      ],
+      "severity_labels": [
+        "low"
+      ],
+      "confidence_labels": [
+        "high"
+      ],
+      "per_pass_labels": [
+        {
+          "pass_id": "pass_01",
+          "finding_id": "F-003",
+          "status": "semantics_gap",
+          "severity": "low",
+          "confidence": "high"
+        },
+        {
+          "pass_id": "pass_02",
+          "finding_id": "F-003",
+          "status": "semantics_gap",
+          "severity": "low",
+          "confidence": "high"
+        }
+      ],
+      "primary_category": "benchmark semantics",
+      "secondary_categories": [
+        "liquid drain"
+      ],
+      "benchmark_or_cross_submission_issue_key": "liquid_drain_velocity_density_basis",
+      "issue_summary": "The brief omits liquid density needed to convert drain mass flow to velocity.",
+      "matching_rationale": "Both passes independently identify the same missing public liquid-density basis.",
+      "status_disagreement": false,
+      "severity_disagreement": false,
+      "summary_confirmed_severity_most_severe_across_confirming_passes": null,
+      "source_findings": [
+        {
+          "pass_id": "pass_01",
+          "source_review_path": "results/submission_G/pass_01/review.json",
+          "source_review_sha256": "a85bed11daa349dbb2d461ef0c966096f5d38217d0cf19bf9a21a84ff73b3ba8",
+          "finding_id": "F-003",
+          "status": "semantics_gap",
+          "severity": "low",
+          "confidence": "high",
+          "public_basis": "brief/piping_catalog.json publishes a maximum liquid-drain velocity of 3 m/s, but the public brief does not provide a liquid density or a separate liquid velocity formula. brief/engineering_calculation_basis.md gives gas-property formulas and says liquid-drain pipelines must remain within the liquid-drain velocity limit.",
+          "claim_or_requirement": "Liquid-drain velocity must be checked against the published limit.",
+          "submission_evidence": "submission/deliverables/design_report.md assumption 6 states liquid drains are checked using the gas-property proxy at 1 MPa; validation_report.md says the validator uses the published gas-density formulation for drain velocity.",
+          "independent_check": "For WDR-HIGH P37/P40, using the submission's 1 MPa gas proxy gives about 2.06 m/s, below 3 m/s. A conventional 1000 kg/m3 liquid density gives about 0.017 m/s. The public brief does not uniquely select either density basis.",
+          "result": "The submitted DN200 drains pass under both checked assumptions, but the public semantics do not uniquely determine the liquid-drain velocity calculation or whether smaller drain lines would be feasible for LCC purposes.",
+          "why_it_matters": "This does not establish a design violation, but it limits definitive judgment of liquid-drain sizing and objective optimality."
+        },
+        {
+          "pass_id": "pass_02",
+          "source_review_path": "results/submission_G/pass_02/review.json",
+          "source_review_sha256": "6b6ecc35f6aaacf99fffb06f8b388fa79a6e05d5bda6d3bda02d1e6e32724da9",
+          "finding_id": "F-003",
+          "status": "semantics_gap",
+          "severity": "low",
+          "confidence": "high",
+          "public_basis": "brief/engineering_calculation_basis.md imposes a maximum_liquid_drain_velocity_m_s but does not publish a liquid density. The gas density formula is explicit for gas properties; the brief does not state a unique density for separated liquid.",
+          "claim_or_requirement": "The submission claims DN200 drain lines satisfy the liquid-drain velocity limit, using the gas-property density proxy at 1.0 MPa as a conservative assumption.",
+          "submission_evidence": "submission/deliverables/design_report.md assumption 6 says liquid-drain lines are checked with the gas property proxy in the 1.0 MPa drain domain. scenario_operations.json and design_report.md report WDR-HIGH P37 velocity about 2.064 m/s for the limiting normal drain line.",
+          "independent_check": "For WDR-HIGH P37, m_dot about 0.4716 kg/s and DN200 internal diameter 0.188 m give area about 0.02776 m2. Using the gas proxy at 1.0 MPa and 20 C gives rho about 8.23 kg/m3 and velocity about 2.06 m/s; using an assumed condensate density of 1000 kg/m3 would give about 0.017 m/s.",
+          "result": "Under the submission's gas-proxy assumption, the drain velocity is below the 3 m/s limit. Because the public brief does not define liquid density or explicitly mandate the gas proxy for liquid velocity, there is no unique public calculation for a definitive PASS/FAIL on liquid velocity.",
+          "why_it_matters": "The drain pipe size and cost are affected by the velocity basis. This is a public-semantics gap, not a confirmed submission violation."
+        }
+      ]
+    },
+    {
+      "normalized_issue_id": "submission_G_G04",
+      "submission_alias": "submission_G",
+      "original_run_id": "ugs_synth_explicit_collaboration_replication_004",
+      "condition": "explicit_collaboration",
+      "pair_number": "004",
+      "passes_detected": [
+        "pass_02"
+      ],
+      "original_finding_ids": [
+        {
+          "pass_id": "pass_02",
+          "finding_id": "F-004"
+        }
+      ],
+      "status_labels": [
+        "unsupported_claim"
+      ],
+      "severity_labels": [
+        "low"
+      ],
+      "confidence_labels": [
+        "high"
+      ],
+      "per_pass_labels": [
+        {
+          "pass_id": "pass_02",
+          "finding_id": "F-004",
+          "status": "unsupported_claim",
+          "severity": "low",
+          "confidence": "high"
+        }
+      ],
+      "primary_category": "internal consistency",
+      "secondary_categories": [
+        "equipment limits"
+      ],
+      "benchmark_or_cross_submission_issue_key": null,
+      "issue_summary": "The report's stated meter capacity does not match the selected model and published capacity.",
+      "matching_rationale": "Single pass; retained directly.",
+      "status_disagreement": false,
+      "severity_disagreement": false,
+      "summary_confirmed_severity_most_severe_across_confirming_passes": null,
+      "source_findings": [
+        {
+          "pass_id": "pass_02",
+          "source_review_path": "results/submission_G/pass_02/review.json",
+          "source_review_sha256": "6b6ecc35f6aaacf99fffb06f8b388fa79a6e05d5bda6d3bda02d1e6e32724da9",
+          "finding_id": "F-004",
+          "status": "unsupported_claim",
+          "severity": "low",
+          "confidence": "high",
+          "public_basis": "brief/project_requirements.json requires active GRID-TIE metering capacity at least 1.0 times scenario flow. brief/equipment_catalog/metering_regulation.json defines MTR120 with capacity_kg_s 120 and MTR160 with capacity_kg_s 160.",
+          "claim_or_requirement": "The design report claims the active meter rated capacity is 160 kg/s and larger than the largest scenario flow.",
+          "submission_evidence": "submission/deliverables/design_report.md states the inlet and outlet metering lines are MTR-INJ and MTR-WDR at 160 kg/s and later says active meter rated capacity (160 kg/s) is at least the scenario flow. submission/deliverables/equipment_register.json lists both meters as model_id MTR120 with rated_capacity_kg_s 120.",
+          "independent_check": "Compared the installed meter model IDs against the public metering catalog and maximum scenario flow. MTR120 is 120 kg/s; the maximum scenario flow is 120 kg/s.",
+          "result": "The design meets the public metering requirement at equality, but the report's 160 kg/s and 'larger than largest scenario flow' statements are unsupported and internally inconsistent with the register, LCC, and catalog model selection.",
+          "why_it_matters": "This does not invalidate metering compliance, but it is a documentation and internal-consistency defect in a mandatory boundary requirement."
+        }
+      ]
+    },
+    {
+      "normalized_issue_id": "submission_H_H01",
+      "submission_alias": "submission_H",
+      "original_run_id": "ugs_synth_explicit_collaboration_replication_003",
+      "condition": "explicit_collaboration",
+      "pair_number": "003",
+      "passes_detected": [
+        "pass_01",
+        "pass_02"
+      ],
+      "original_finding_ids": [
+        {
+          "pass_id": "pass_01",
+          "finding_id": "F-001"
+        },
+        {
+          "pass_id": "pass_02",
+          "finding_id": "F-003"
+        }
+      ],
+      "status_labels": [
+        "confirmed_violation"
+      ],
+      "severity_labels": [
+        "medium"
+      ],
+      "confidence_labels": [
+        "high"
+      ],
+      "per_pass_labels": [
+        {
+          "pass_id": "pass_01",
+          "finding_id": "F-001",
+          "status": "confirmed_violation",
+          "severity": "medium",
+          "confidence": "high"
+        },
+        {
+          "pass_id": "pass_02",
+          "finding_id": "F-003",
+          "status": "confirmed_violation",
+          "severity": "medium",
+          "confidence": "high"
+        }
+      ],
+      "primary_category": "LCC objective / suboptimality",
+      "secondary_categories": [
+        "equipment limits"
+      ],
+      "benchmark_or_cross_submission_issue_key": "reg_meter_oversizing_lcc",
+      "issue_summary": "REG180 and MTR160 selections have exact lower-cost catalog substitutions under the published requirements.",
+      "matching_rationale": "Both passes identify the same non-required equipment oversizing and exact lower-cost substitutions.",
+      "status_disagreement": false,
+      "severity_disagreement": false,
+      "summary_confirmed_severity_most_severe_across_confirming_passes": "medium",
+      "source_findings": [
+        {
+          "pass_id": "pass_01",
+          "source_review_path": "results/submission_H/pass_01/review.json",
+          "source_review_sha256": "5a9f7546675da7a3549cbfd4e0eb83eaf2bd0878f38818d4fb15ddefe332f64f",
+          "finding_id": "F-001",
+          "status": "confirmed_violation",
+          "severity": "medium",
+          "confidence": "high",
+          "public_basis": "brief/project_requirements.json states the primary objective is to minimize benchmark LCC among feasible designs. brief/network_semantics.md requires GRID-TIE active metering capacity at least equal to scenario required flow, and brief/equipment_catalog/metering_regulation.json publishes MTR120/MTR160 and REG120/REG180 capacities, ratings, ports, geometry, and costs.",
+          "claim_or_requirement": "The selected feasible design should not contain exact dominated catalog choices that increase LCC without satisfying any additional public requirement.",
+          "submission_evidence": "submission/deliverables/design.json installs REG-1 as REG180 and IMTR-1/WMTR-1 as MTR160. submission/deliverables/design_report.md explicitly states REG180 was retained over REG120 so the regulator is not exactly duty-matched; it also uses MTR160 meters rated 160 kg/s for maximum scenario flow 120 kg/s.",
+          "independent_check": "REG120 has 120 kg/s capacity, 16 MPa rating, same footprint, same port offsets, same JT coefficient, and lower CAPEX/maintenance than REG180. MTR120 has 120 kg/s capacity, 16 MPa rating, same footprint/ports, lower pressure drop, and lower CAPEX/maintenance than MTR160. The maximum mandatory scenario flow through either regulator or meter is 120 kg/s; N-1 retained flows are lower, and equality to a limit is allowed by the public numerical convention.",
+          "result": "Replacing REG180 with REG120 reduces LCC by 0.159273 MBCU. Replacing both MTR160 units with MTR120 reduces LCC by 0.238545 MBCU. The combined exact catalog substitution reduces LCC by about 0.397819 MBCU before any favorable meter pressure-drop energy effect, while preserving topology, geometry, ports, pressure rating, capacity against all mandatory scenarios, and metering compliance.",
+          "why_it_matters": "This is an exact lower-cost feasible alternative, so the submitted design is not minimal under the public LCC objective even without proving a global optimum."
+        },
+        {
+          "pass_id": "pass_02",
+          "source_review_path": "results/submission_H/pass_02/review.json",
+          "source_review_sha256": "e0538f46a18f8f1ce2d52be7206fcdb401ea3c09332aac9dde0a6e34b03243aa",
+          "finding_id": "F-003",
+          "status": "confirmed_violation",
+          "severity": "medium",
+          "confidence": "high",
+          "public_basis": "brief/project_requirements.json states the primary objective is to minimize benchmark LCC among feasible designs. The metering requirement requires active meter capacity at least 1.0 times scenario flow, not the GRID-TIE boundary maximum. brief/equipment_catalog/metering_regulation.json provides lower-cost MTR120 and REG120 models with the same pressure rating, footprints, and port layouts as the selected larger models for this service.",
+          "claim_or_requirement": "A feasible design should not retain higher-cost catalog equipment solely for non-public margin if exact lower-cost catalog substitutions satisfy all public requirements.",
+          "submission_evidence": "submission/deliverables/design.json installs two MTR160 meters and one REG180 regulator. submission/deliverables/design_report.md explicitly says REG180 was retained over REG120 despite a 0.16 MBCU LCC penalty so the regulator is not exactly duty-matched. validation_report.md also applies a non-public check that meter capacity covers the whole GRID-TIE boundary limit.",
+          "independent_check": "Replace REG180 with REG120: capacity 120 kg/s equals the maximum normal regulator flow and exceeds n-1 retained flows; pressure rating, JT coefficient, footprint, and ports remain compatible. Savings are 0.12 MBCU CAPEX plus 0.004*9.818147 = 0.0393 MBCU maintenance PV. Replace both MTR160 meters with MTR120 meters: capacity 120 kg/s equals the maximum published scenario flow, satisfying the public metering requirement; pressure rating, footprint, and ports remain compatible, and pressure drop is lower. Savings are 2*(0.08 + 0.004*9.818147) = 0.2385 MBCU. Combined conservative LCC reduction is at least 0.3978 MBCU, before any small energy benefit.",
+          "result": "An exact lower-cost feasible alternative exists with LCC at most about 105.6728 MBCU versus the submitted 106.0706 MBCU. The retained oversizing satisfies extra margin preferences but not the published LCC-minimization objective.",
+          "why_it_matters": "The benchmark objective is lifecycle-cost minimization among feasible designs; unnecessary catalog oversizing directly worsens the scored objective."
+        }
+      ]
+    },
+    {
+      "normalized_issue_id": "submission_H_H02",
+      "submission_alias": "submission_H",
+      "original_run_id": "ugs_synth_explicit_collaboration_replication_003",
+      "condition": "explicit_collaboration",
+      "pair_number": "003",
+      "passes_detected": [
+        "pass_01",
+        "pass_02"
+      ],
+      "original_finding_ids": [
+        {
+          "pass_id": "pass_01",
+          "finding_id": "F-002"
+        },
+        {
+          "pass_id": "pass_02",
+          "finding_id": "F-002"
+        }
+      ],
+      "status_labels": [
+        "unsupported_claim"
+      ],
+      "severity_labels": [
+        "medium"
+      ],
+      "confidence_labels": [
+        "high"
+      ],
+      "per_pass_labels": [
+        {
+          "pass_id": "pass_01",
+          "finding_id": "F-002",
+          "status": "unsupported_claim",
+          "severity": "medium",
+          "confidence": "high"
+        },
+        {
+          "pass_id": "pass_02",
+          "finding_id": "F-002",
+          "status": "unsupported_claim",
+          "severity": "medium",
+          "confidence": "high"
+        }
+      ],
+      "primary_category": "N-1 reliability",
+      "secondary_categories": [],
+      "benchmark_or_cross_submission_issue_key": "n1_claim_exceeds_evidence",
+      "issue_summary": "The N-1 evidence covers representative cases rather than every required individual outage.",
+      "matching_rationale": "Both passes identify the same unsupported exhaustive N-1 claim.",
+      "status_disagreement": false,
+      "severity_disagreement": false,
+      "summary_confirmed_severity_most_severe_across_confirming_passes": null,
+      "source_findings": [
+        {
+          "pass_id": "pass_01",
+          "source_review_path": "results/submission_H/pass_01/review.json",
+          "source_review_sha256": "5a9f7546675da7a3549cbfd4e0eb83eaf2bd0878f38818d4fb15ddefe332f64f",
+          "finding_id": "F-002",
+          "status": "unsupported_claim",
+          "severity": "medium",
+          "confidence": "high",
+          "public_basis": "brief/project_requirements.json requires compression n-minus-one for applicable pressure-boost scenarios and withdrawal treatment n-minus-one for separator and dehydration categories, with one unit unavailable at a time and at least 70 percent retained flow. Delivery requirements remain applicable after outage.",
+          "claim_or_requirement": "The submission claims each required N-1 case is re-solved with one unit out and presents the reliability demonstration as satisfying any-one-unit outage requirements.",
+          "submission_evidence": "submission/deliverables/validation_report.md says reliability checks re-solve each required N-1 case with one unit out. submission/deliverables/design.json lists 12 reliability rows. submission/ugs_design.py N1_CASES selects ICOMP-2 only for INJ-MID and INJ-HIGH, WCOMP-1 only for WDR-LOW, separator train A only for all withdrawal separator outages, and dehydration train B only for all withdrawal dehydration outages.",
+          "independent_check": "Compared installed relevant units with listed failed units. Injection compression has ICOMP-1, ICOMP-2, and ICOMP-3; withdrawal compression has WCOMP-1 and WCOMP-2; treatment has SEP-A/B/C and DEH-A/B/C. The N1 list is exhaustive only for INJ-LOW compression. It omits other individual failed units for INJ-MID, INJ-HIGH, WDR-LOW, separator outage scenarios, and dehydration outage scenarios.",
+          "result": "The artifacts support representative outage simulations, not exhaustive any-one compressor/separator/dehydration-unit simulations. This does not by itself prove those omitted outage cases fail, but it does not support the claimed complete N-1 evidence.",
+          "why_it_matters": "The omitted cases are not purely identical in routing: branch lengths and diameters differ between trains and compressor branches. N-1 feasibility can depend on the failed unit's remaining active path, pressure losses, and minimum stable flow."
+        },
+        {
+          "pass_id": "pass_02",
+          "source_review_path": "results/submission_H/pass_02/review.json",
+          "source_review_sha256": "e0538f46a18f8f1ce2d52be7206fcdb401ea3c09332aac9dde0a6e34b03243aa",
+          "finding_id": "F-002",
+          "status": "unsupported_claim",
+          "severity": "medium",
+          "confidence": "high",
+          "public_basis": "brief/project_requirements.json requires any-one compressor outage for scenarios with required_sink_pressure_mpa > source_pressure_mpa and any-one separator or dehydration-unit outage for withdrawal scenarios, with delivery requirements still applicable.",
+          "claim_or_requirement": "The submission claims n-1 reliability PASS and validation_report.md says each required n-1 case is re-solved at 70% of scenario flow with one unit out.",
+          "submission_evidence": "submission/deliverables/design.json lists only 12 reliability records. submission/ugs_design.py N1_CASES includes all three injection compressors only for INJ-LOW, only ICOMP-2 for INJ-MID and INJ-HIGH, only WCOMP-1 for WDR-LOW, only separator train A for each withdrawal scenario, and only dehydration train B for each withdrawal scenario. submission/ugs_validate.py check_reliability iterates only D.N1_CASES.",
+          "independent_check": "The installed relevant units imply at least 29 individual outage checks for exhaustive evidence: 3 injection compressors across INJ-LOW/MID/HIGH, 2 withdrawal compressors for WDR-LOW, 3 separators across WDR-HIGH/MID/LOW, and 3 dehydration units across WDR-HIGH/MID/LOW. The submitted evidence covers 12 selected cases.",
+          "result": "The submission demonstrates representative n-1 cases but does not provide exhaustive evidence for any-one compressor, separator, and dehydration-unit outage. The design may be feasible, but the claimed n-1 PASS is not fully supported by the final artifacts.",
+          "why_it_matters": "N-1 reliability is a mandatory requirement, and asymmetric route lengths/pressure drops mean representative identical-unit testing is not equivalent to proving every individual outage."
+        }
+      ]
+    },
+    {
+      "normalized_issue_id": "submission_H_H03",
+      "submission_alias": "submission_H",
+      "original_run_id": "ugs_synth_explicit_collaboration_replication_003",
+      "condition": "explicit_collaboration",
+      "pair_number": "003",
+      "passes_detected": [
+        "pass_01",
+        "pass_02"
+      ],
+      "original_finding_ids": [
+        {
+          "pass_id": "pass_01",
+          "finding_id": "F-003"
+        },
+        {
+          "pass_id": "pass_02",
+          "finding_id": "F-004"
+        }
+      ],
+      "status_labels": [
+        "semantics_gap"
+      ],
+      "severity_labels": [
+        "low"
+      ],
+      "confidence_labels": [
+        "high"
+      ],
+      "per_pass_labels": [
+        {
+          "pass_id": "pass_01",
+          "finding_id": "F-003",
+          "status": "semantics_gap",
+          "severity": "low",
+          "confidence": "high"
+        },
+        {
+          "pass_id": "pass_02",
+          "finding_id": "F-004",
+          "status": "semantics_gap",
+          "severity": "low",
+          "confidence": "high"
+        }
+      ],
+      "primary_category": "benchmark semantics",
+      "secondary_categories": [
+        "liquid drain"
+      ],
+      "benchmark_or_cross_submission_issue_key": "liquid_drain_velocity_density_basis",
+      "issue_summary": "The brief omits liquid density needed to convert drain mass flow to velocity.",
+      "matching_rationale": "Both passes identify the same missing public liquid-density basis.",
+      "status_disagreement": false,
+      "severity_disagreement": false,
+      "summary_confirmed_severity_most_severe_across_confirming_passes": null,
+      "source_findings": [
+        {
+          "pass_id": "pass_01",
+          "source_review_path": "results/submission_H/pass_01/review.json",
+          "source_review_sha256": "5a9f7546675da7a3549cbfd4e0eb83eaf2bd0878f38818d4fb15ddefe332f64f",
+          "finding_id": "F-003",
+          "status": "semantics_gap",
+          "severity": "low",
+          "confidence": "high",
+          "public_basis": "brief/piping_catalog.json gives maximum_liquid_drain_velocity_m_s = 3.0 and brief/engineering_calculation_basis.md requires liquid-drain pipelines to remain within the velocity limit, but the public brief does not publish a liquid density or volumetric conversion basis for separated liquid.",
+          "claim_or_requirement": "Liquid-drain velocity compliance should be determined from public inputs.",
+          "submission_evidence": "submission/deliverables/validation_report.md and design_report.md state that no liquid density is published and use a gas-density proxy at the 1 MPa drain-domain limit. design.json validation checks report DN200 drain velocity 1.837 m/s at 0.4198 kg/s under that proxy.",
+          "independent_check": "Under the submission's explicit proxy, 0.4198 kg/s in DN200 with density about 8.27 kg/m3 gives about 1.83 m/s, consistent with the submitted 1.837 m/s and below 3.0 m/s. Separator mass rates, drain drum capacities, outfall capacity, and drain connectivity are independently checkable and pass in sampled checks.",
+          "result": "Drain velocity is unresolvable as a definitive public-basis PASS because the decisive liquid density input is absent. The proxy calculation is internally conservative-looking, but it is still an assumption rather than a published rule.",
+          "why_it_matters": "The benchmark asks for liquid drain velocity compliance; without density or an explicit proxy rule, independent evaluators cannot uniquely reproduce that part of the pass/fail decision."
+        },
+        {
+          "pass_id": "pass_02",
+          "source_review_path": "results/submission_H/pass_02/review.json",
+          "source_review_sha256": "e0538f46a18f8f1ce2d52be7206fcdb401ea3c09332aac9dde0a6e34b03243aa",
+          "finding_id": "F-004",
+          "status": "semantics_gap",
+          "severity": "low",
+          "confidence": "high",
+          "public_basis": "brief/piping_catalog.json gives a maximum_liquid_drain_velocity_m_s of 3.0, but the public brief provides gas density formulas only and no liquid density or liquid velocity calculation basis. brief/network_semantics.md defines the drain pressure domain but not liquid density.",
+          "claim_or_requirement": "Liquid-drain velocity compliance should be judged against the public basis; the submission claims drain velocities pass using a gas-density proxy at 1 MPa.",
+          "submission_evidence": "submission/deliverables/validation_report.md says drain-line liquid velocities are checked using the published gas-density proxy at the 1 MPa drain-domain limit, and submission/deliverables/design.json validation entries report about 1.837 m/s for DN200 drain lines at 0.4198 kg/s.",
+          "independent_check": "The worst n-1 separator liquid rate is 0.7*120/2*0.01*0.9995 = 0.4198 kg/s. DN200 area is about 0.0278 m2. Using the gas-density proxy at 1 MPa and 20 C gives velocity about 1.84 m/s; using an actual liquid density would give a much lower value. The public brief does not specify which density is authoritative for liquid service.",
+          "result": "Separator liquid rates, drain drum capacities, and outfall capacity are checkable and pass in sampled cases, but liquid-drain velocity cannot be definitively passed or failed from public inputs alone.",
+          "why_it_matters": "This is not a submission violation, but it prevents a unique independent judgment for one required liquid-drain check."
+        }
+      ]
+    },
+    {
+      "normalized_issue_id": "submission_H_H04",
+      "submission_alias": "submission_H",
+      "original_run_id": "ugs_synth_explicit_collaboration_replication_003",
+      "condition": "explicit_collaboration",
+      "pair_number": "003",
+      "passes_detected": [
+        "pass_01",
+        "pass_02"
+      ],
+      "original_finding_ids": [
+        {
+          "pass_id": "pass_01",
+          "finding_id": "F-004"
+        },
+        {
+          "pass_id": "pass_02",
+          "finding_id": "F-005"
+        }
+      ],
+      "status_labels": [
+        "unsupported_claim"
+      ],
+      "severity_labels": [
+        "low"
+      ],
+      "confidence_labels": [
+        "high"
+      ],
+      "per_pass_labels": [
+        {
+          "pass_id": "pass_01",
+          "finding_id": "F-004",
+          "status": "unsupported_claim",
+          "severity": "low",
+          "confidence": "high"
+        },
+        {
+          "pass_id": "pass_02",
+          "finding_id": "F-005",
+          "status": "unsupported_claim",
+          "severity": "low",
+          "confidence": "high"
+        }
+      ],
+      "primary_category": "internal consistency",
+      "secondary_categories": [
+        "liquid drain",
+        "equipment limits"
+      ],
+      "benchmark_or_cross_submission_issue_key": "drn_s_capacity_report_mismatch",
+      "issue_summary": "The report overstates DRN-S capacity as 2.0 kg/s when the catalog and design state 0.8 kg/s.",
+      "matching_rationale": "Both passes identify the same DRN-S capacity mismatch. Pass 02 also reports separate scenario liquid-total mismatches; those are recorded as a separate issue group.",
+      "status_disagreement": false,
+      "severity_disagreement": false,
+      "summary_confirmed_severity_most_severe_across_confirming_passes": null,
+      "source_findings": [
+        {
+          "pass_id": "pass_01",
+          "source_review_path": "results/submission_H/pass_01/review.json",
+          "source_review_sha256": "5a9f7546675da7a3549cbfd4e0eb83eaf2bd0878f38818d4fb15ddefe332f64f",
+          "finding_id": "F-004",
+          "status": "unsupported_claim",
+          "severity": "low",
+          "confidence": "high",
+          "public_basis": "brief/equipment_catalog/drains.json defines DRN-S capacity_kg_s = 0.8, and brief/engineering_calculation_basis.md states closed-drain capacity_kg_s is rated liquid flow.",
+          "claim_or_requirement": "Stated equipment capacities in the report should match the public catalog and machine-readable design.",
+          "submission_evidence": "submission/deliverables/design_report.md equipment table states DRN-A, DRN-B, and DRN-C are DRN-S closed drain drums with 2.0 kg/s capacity. submission/deliverables/design.json lists the same DRN-S instances with capacity_kg_s = 0.8.",
+          "independent_check": "Compared the report table with the public drains catalog and design.json. The 2.0 kg/s value corresponds to SEP70 maximum_liquid_rate_kg_s, not DRN-S capacity. The sampled maximum per-train separated liquid flow is about 0.3998 kg/s, so the correct 0.8 kg/s drain capacity is still adequate.",
+          "result": "The report's stated DRN-S capacity is unsupported and internally inconsistent with both the public catalog and design.json. This is a documentation consistency issue, not a demonstrated feasibility failure.",
+          "why_it_matters": "Closed-drain capacity is a required equipment limit; overstating it in the human-readable report can mislead reconstruction even though the machine-readable design and sampled calculation remain within the true limit."
+        },
+        {
+          "pass_id": "pass_02",
+          "source_review_path": "results/submission_H/pass_02/review.json",
+          "source_review_sha256": "e0538f46a18f8f1ce2d52be7206fcdb401ea3c09332aac9dde0a6e34b03243aa",
+          "finding_id": "F-005",
+          "status": "unsupported_claim",
+          "severity": "low",
+          "confidence": "high",
+          "public_basis": "brief/engineering_calculation_basis.md defines separator removed liquid as m_dot*f_in*eta_L. brief/equipment_catalog/drains.json gives DRN-S capacity as 0.8 kg/s.",
+          "claim_or_requirement": "Liquid totals and equipment stated capacities in the final reports should match the public formulas and catalog values.",
+          "submission_evidence": "submission/deliverables/design.json validation entries state WDR-MID total separated liquid 1.1994 kg/s and WDR-LOW total separated liquid 1.1994 kg/s. submission/deliverables/design_report.md section 4 states DRN-S closed drain drum capacity as 2.0 kg/s, while design.json equipment entries list DRN-S capacity_kg_s as 0.8.",
+          "independent_check": "WDR-MID removed liquid should be 100*0.01*0.9995 = 0.9995 kg/s total. WDR-LOW should be 70*0.01*0.9995 = 0.69965 kg/s total. DRN-S catalog capacity is 0.8 kg/s, not 2.0 kg/s.",
+          "result": "The submitted liquid validation text and report table contain unsupported values. The corrected values still satisfy outfall and DRN-S capacity limits, so this is an auditability/internal-consistency issue rather than an infeasibility finding.",
+          "why_it_matters": "Incorrect reported totals and capacities make it harder to independently audit liquid handling, even though the underlying sampled capacity margins remain adequate."
+        }
+      ]
+    },
+    {
+      "normalized_issue_id": "submission_H_H05",
+      "submission_alias": "submission_H",
+      "original_run_id": "ugs_synth_explicit_collaboration_replication_003",
+      "condition": "explicit_collaboration",
+      "pair_number": "003",
+      "passes_detected": [
+        "pass_02"
+      ],
+      "original_finding_ids": [
+        {
+          "pass_id": "pass_02",
+          "finding_id": "F-005"
+        }
+      ],
+      "status_labels": [
+        "unsupported_claim"
+      ],
+      "severity_labels": [
+        "low"
+      ],
+      "confidence_labels": [
+        "high"
+      ],
+      "per_pass_labels": [
+        {
+          "pass_id": "pass_02",
+          "finding_id": "F-005",
+          "status": "unsupported_claim",
+          "severity": "low",
+          "confidence": "high"
+        }
+      ],
+      "primary_category": "internal consistency",
+      "secondary_categories": [
+        "liquid drain"
+      ],
+      "benchmark_or_cross_submission_issue_key": null,
+      "issue_summary": "Reported WDR-MID and WDR-LOW total separated-liquid rates do not match the published removal formula.",
+      "matching_rationale": "Pass 02 finding F-005 includes this distinct formula/result mismatch as well as the DRN-S capacity mismatch; it is split into a separate issue to avoid conflating two engineering checks.",
+      "status_disagreement": false,
+      "severity_disagreement": false,
+      "summary_confirmed_severity_most_severe_across_confirming_passes": null,
+      "source_findings": [
+        {
+          "pass_id": "pass_02",
+          "source_review_path": "results/submission_H/pass_02/review.json",
+          "source_review_sha256": "e0538f46a18f8f1ce2d52be7206fcdb401ea3c09332aac9dde0a6e34b03243aa",
+          "finding_id": "F-005",
+          "status": "unsupported_claim",
+          "severity": "low",
+          "confidence": "high",
+          "public_basis": "brief/engineering_calculation_basis.md defines separator removed liquid as m_dot*f_in*eta_L. brief/equipment_catalog/drains.json gives DRN-S capacity as 0.8 kg/s.",
+          "claim_or_requirement": "Liquid totals and equipment stated capacities in the final reports should match the public formulas and catalog values.",
+          "submission_evidence": "submission/deliverables/design.json validation entries state WDR-MID total separated liquid 1.1994 kg/s and WDR-LOW total separated liquid 1.1994 kg/s. submission/deliverables/design_report.md section 4 states DRN-S closed drain drum capacity as 2.0 kg/s, while design.json equipment entries list DRN-S capacity_kg_s as 0.8.",
+          "independent_check": "WDR-MID removed liquid should be 100*0.01*0.9995 = 0.9995 kg/s total. WDR-LOW should be 70*0.01*0.9995 = 0.69965 kg/s total. DRN-S catalog capacity is 0.8 kg/s, not 2.0 kg/s.",
+          "result": "The submitted liquid validation text and report table contain unsupported values. The corrected values still satisfy outfall and DRN-S capacity limits, so this is an auditability/internal-consistency issue rather than an infeasibility finding.",
+          "why_it_matters": "Incorrect reported totals and capacities make it harder to independently audit liquid handling, even though the underlying sampled capacity margins remain adequate."
+        }
+      ]
+    },
+    {
+      "normalized_issue_id": "submission_H_H06",
+      "submission_alias": "submission_H",
+      "original_run_id": "ugs_synth_explicit_collaboration_replication_003",
+      "condition": "explicit_collaboration",
+      "pair_number": "003",
+      "passes_detected": [
+        "pass_02"
+      ],
+      "original_finding_ids": [
+        {
+          "pass_id": "pass_02",
+          "finding_id": "F-001"
+        }
+      ],
+      "status_labels": [
+        "confirmed_violation"
+      ],
+      "severity_labels": [
+        "low"
+      ],
+      "confidence_labels": [
+        "high"
+      ],
+      "per_pass_labels": [
+        {
+          "pass_id": "pass_02",
+          "finding_id": "F-001",
+          "status": "confirmed_violation",
+          "severity": "low",
+          "confidence": "high"
+        }
+      ],
+      "primary_category": "operating scenarios",
+      "secondary_categories": [
+        "internal consistency"
+      ],
+      "benchmark_or_cross_submission_issue_key": "well_group_flow_rounding_exceeds_tolerance",
+      "issue_summary": "Rounded well-group and treatment allocations exceed the published mass-flow tolerance.",
+      "matching_rationale": "Single pass; retained directly.",
+      "status_disagreement": false,
+      "severity_disagreement": false,
+      "summary_confirmed_severity_most_severe_across_confirming_passes": "low",
+      "source_findings": [
+        {
+          "pass_id": "pass_02",
+          "source_review_path": "results/submission_H/pass_02/review.json",
+          "source_review_sha256": "e0538f46a18f8f1ce2d52be7206fcdb401ea3c09332aac9dde0a6e34b03243aa",
+          "finding_id": "F-001",
+          "status": "confirmed_violation",
+          "severity": "low",
+          "confidence": "high",
+          "public_basis": "brief/engineering_calculation_basis.md states that well-group allocations for a scenario sum to required_total_flow_kg_s and gives a mass-flow comparison tolerance of 1e-5 kg/s.",
+          "claim_or_requirement": "Scenario-specific operating flows in the final deliverable must conserve the required scenario flow within the published tolerance.",
+          "submission_evidence": "submission/deliverables/design.json records INJ-MID and WDR-MID well_group_flows_kg_s as 16.6667 kg/s for each of six well groups, and WDR-LOW as 11.6667 kg/s for each of six well groups. The operating_path also contains rounded treatment splits such as 33.3333 and 23.3333 kg/s.",
+          "independent_check": "6*16.6667 = 100.0002 kg/s, which differs from the 100 kg/s requirement by 2e-4 kg/s. 6*11.6667 = 70.0002 kg/s, which differs from the 70 kg/s requirement by 2e-4 kg/s. Treatment splits 3*33.3333 and 3*23.3333 differ by about 1e-4 kg/s.",
+          "result": "The final artifact values do not satisfy the public 1e-5 kg/s mass-flow tolerance. This appears to be an export precision problem, but the final design.json is the reconstructable deliverable.",
+          "why_it_matters": "An independent reviewer reconstructing from the final JSON cannot verify flow conservation to the benchmark tolerance for several mandatory scenarios."
+        }
+      ]
+    }
+  ]
+}

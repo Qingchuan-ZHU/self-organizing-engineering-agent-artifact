@@ -1,0 +1,2838 @@
+{
+  "analysis_source_commit": "fe9f6985701c7946ee70e70f71b6637e967339ed",
+  "blind_batch_id": "ugs_synth_blind_batch_001",
+  "excluded_frozen_run_manifests": [
+    {
+      "excluded_from_core_package_reason": "The frozen manifest embeds provider outcome assistant_message values; the public summary retains counts and metadata while raw messages remain supplementary evidence.",
+      "run_id": "ugs_synth_explicit_collaboration_replication_001",
+      "source_path": "runs/ugs_synth_interleaved_review/ugs_synth_explicit_collaboration_replication_001/run_manifest.json",
+      "source_sha256": "0233e1ed77c1f66f8cecbca166d964523ffb74a04d8c11b3978819a3da66f442"
+    },
+    {
+      "excluded_from_core_package_reason": "The frozen manifest embeds provider outcome assistant_message values; the public summary retains counts and metadata while raw messages remain supplementary evidence.",
+      "run_id": "ugs_synth_explicit_collaboration_replication_002",
+      "source_path": "runs/ugs_synth_interleaved_review/ugs_synth_explicit_collaboration_replication_002/run_manifest.json",
+      "source_sha256": "790b679fe2a7a055ce4d0c80759dbef2662062c4c99167b22288bea314f404c8"
+    },
+    {
+      "excluded_from_core_package_reason": "The frozen manifest embeds provider outcome assistant_message values; the public summary retains counts and metadata while raw messages remain supplementary evidence.",
+      "run_id": "ugs_synth_explicit_collaboration_replication_003",
+      "source_path": "runs/ugs_synth_interleaved_review/ugs_synth_explicit_collaboration_replication_003/run_manifest.json",
+      "source_sha256": "71bf601340dd17ad4ac94d98ffec4cd82efcf68f7bbb0e949cd068fe5ade6d1d"
+    },
+    {
+      "excluded_from_core_package_reason": "The frozen manifest embeds provider outcome assistant_message values; the public summary retains counts and metadata while raw messages remain supplementary evidence.",
+      "run_id": "ugs_synth_explicit_collaboration_replication_004",
+      "source_path": "runs/ugs_synth_interleaved_review/ugs_synth_explicit_collaboration_replication_004/run_manifest.json",
+      "source_sha256": "c4bd942c2c81e7b1793914d4dccc71360b12f4a0ea257f8be8181700e4f88ee3"
+    },
+    {
+      "excluded_from_core_package_reason": "The frozen manifest embeds provider outcome assistant_message values; the public summary retains counts and metadata while raw messages remain supplementary evidence.",
+      "run_id": "ugs_synth_worker_only_replication_001",
+      "source_path": "runs/ugs_synth_interleaved_review/ugs_synth_worker_only_replication_001/run_manifest.json",
+      "source_sha256": "0d8b9bdaf1f4dcca549213609c9f47c14f711de84cb5638d6a548dd290fab5d7"
+    },
+    {
+      "excluded_from_core_package_reason": "The frozen manifest embeds provider outcome assistant_message values; the public summary retains counts and metadata while raw messages remain supplementary evidence.",
+      "run_id": "ugs_synth_worker_only_replication_002",
+      "source_path": "runs/ugs_synth_interleaved_review/ugs_synth_worker_only_replication_002/run_manifest.json",
+      "source_sha256": "121b16e33db2785a3b727aad0fc5b57a4f103217e354e1ed2e04901e11025032"
+    },
+    {
+      "excluded_from_core_package_reason": "The frozen manifest embeds provider outcome assistant_message values; the public summary retains counts and metadata while raw messages remain supplementary evidence.",
+      "run_id": "ugs_synth_worker_only_replication_003",
+      "source_path": "runs/ugs_synth_interleaved_review/ugs_synth_worker_only_replication_003/run_manifest.json",
+      "source_sha256": "00ffc367b84b0400c9a53c04321cccfd0636459f4154fdfd07142eab91f11c51"
+    },
+    {
+      "excluded_from_core_package_reason": "The frozen manifest embeds provider outcome assistant_message values; the public summary retains counts and metadata while raw messages remain supplementary evidence.",
+      "run_id": "ugs_synth_worker_only_replication_004",
+      "source_path": "runs/ugs_synth_interleaved_review/ugs_synth_worker_only_replication_004/run_manifest.json",
+      "source_sha256": "6f3218fc15fc27c51b9ebe66eefa761c8ed28e2c1de86816afa4692b553cca07"
+    }
+  ],
+  "experiment_run_ids": [
+    "ugs_synth_explicit_collaboration_replication_001",
+    "ugs_synth_explicit_collaboration_replication_002",
+    "ugs_synth_explicit_collaboration_replication_003",
+    "ugs_synth_explicit_collaboration_replication_004",
+    "ugs_synth_worker_only_replication_001",
+    "ugs_synth_worker_only_replication_002",
+    "ugs_synth_worker_only_replication_003",
+    "ugs_synth_worker_only_replication_004"
+  ],
+  "public_world_sha256": "af4260bc8e15bb44364038b6eeea9a6a6942677ae8e5e610971689415fd0880e",
+  "release_generation_time_utc": "2026-09-28T05:07:17Z",
+  "runtime_source_hash_checks": [
+    {
+      "expected_sha256": "ece22ce0130baa192122f6354f36c562d88ff61777830d04cfc7a19fbdbbd439",
+      "run_id": "ugs_synth_explicit_collaboration_replication_001",
+      "source_path": "docker/ugs_synth_minimal/Dockerfile",
+      "verified": true
+    },
+    {
+      "expected_sha256": "ab84b3945e5374d00bd8b1781cade04dd10c51d0a25931266f70522c4bdadb6a",
+      "run_id": "ugs_synth_explicit_collaboration_replication_001",
+      "source_path": "pyproject.toml",
+      "verified": true
+    },
+    {
+      "expected_sha256": "2d797ac4b4348aea754ed96b2d2a4ae6604b929b73ea16286ecf49fa37656dcb",
+      "run_id": "ugs_synth_explicit_collaboration_replication_001",
+      "source_path": "src/self_organizing_engineering_agent/experiments/pilot_1a/deepseek_provider.py",
+      "verified": true
+    },
+    {
+      "expected_sha256": "624abe89841afd80fbf19de996e97763a8d20d1d49d91bb616ef40a6cc3b381a",
+      "run_id": "ugs_synth_explicit_collaboration_replication_001",
+      "source_path": "src/self_organizing_engineering_agent/experiments/ugs_synth_interleaved_review/durable_replication.py",
+      "verified": true
+    },
+    {
+      "expected_sha256": "345be37ebe574d3b4a81a6991b1ce0bf327ef4995d1770b0348c379922b26d42",
+      "run_id": "ugs_synth_explicit_collaboration_replication_001",
+      "source_path": "src/self_organizing_engineering_agent/experiments/ugs_synth_interleaved_review/durable_resume.py",
+      "verified": true
+    },
+    {
+      "expected_sha256": "179c656d81d26e845d9ae52594f69d836466bd965afb32f04a84165b923d8529",
+      "run_id": "ugs_synth_explicit_collaboration_replication_001",
+      "source_path": "src/self_organizing_engineering_agent/experiments/ugs_synth_interleaved_review/durable_runtime.py",
+      "verified": true
+    },
+    {
+      "expected_sha256": "a5a67f772a6df23f771a625ecceffa564dfdb32c66f71c6206eebc906543f3d4",
+      "run_id": "ugs_synth_explicit_collaboration_replication_001",
+      "source_path": "src/self_organizing_engineering_agent/experiments/ugs_synth_interleaved_review/durable_store.py",
+      "verified": true
+    },
+    {
+      "expected_sha256": "8757378d26a3cc0cce875b7dff44e35a8048c971e39c964bf2dc343fc88aae34",
+      "run_id": "ugs_synth_explicit_collaboration_replication_001",
+      "source_path": "src/self_organizing_engineering_agent/experiments/ugs_synth_interleaved_review/provider_boundary.py",
+      "verified": true
+    },
+    {
+      "expected_sha256": "13008cc92e6e139a5503b00048b41f073bc555b96dab0c2d0ae7c0378cfc87ea",
+      "run_id": "ugs_synth_explicit_collaboration_replication_001",
+      "source_path": "src/self_organizing_engineering_agent/experiments/ugs_synth_interleaved_review/runner.py",
+      "verified": true
+    },
+    {
+      "expected_sha256": "1d44214a628e2d6ce3da996b56ac2de666bc5cb91e05d81ef2d7bd2f1eec0206",
+      "run_id": "ugs_synth_explicit_collaboration_replication_001",
+      "source_path": "src/self_organizing_engineering_agent/experiments/ugs_synth_interleaved_review/tools.py",
+      "verified": true
+    },
+    {
+      "expected_sha256": "efd67c00a8e00e0e09cbb56f59092ecbd7aa0c54060957cd9c698739f75cafa5",
+      "run_id": "ugs_synth_explicit_collaboration_replication_001",
+      "source_path": "src/self_organizing_engineering_agent/experiments/ugs_synth_minimal/runner.py",
+      "verified": true
+    },
+    {
+      "expected_sha256": "99b52a2836380e3ae9d8f497a88e2f15bb0066db9319f87d1cae0729ca4e11ab",
+      "run_id": "ugs_synth_explicit_collaboration_replication_001",
+      "source_path": "src/self_organizing_engineering_agent/experiments/ugs_synth_minimal/tools.py",
+      "verified": true
+    },
+    {
+      "expected_sha256": "0cc65662ef72b29c9fed4ab71e1f8c7f03ea23a895361abdcd3dae21943ab5d1",
+      "run_id": "ugs_synth_explicit_collaboration_replication_001",
+      "source_path": "uv.lock",
+      "verified": true
+    },
+    {
+      "expected_sha256": "ece22ce0130baa192122f6354f36c562d88ff61777830d04cfc7a19fbdbbd439",
+      "run_id": "ugs_synth_explicit_collaboration_replication_002",
+      "source_path": "docker/ugs_synth_minimal/Dockerfile",
+      "verified": true
+    },
+    {
+      "expected_sha256": "ab84b3945e5374d00bd8b1781cade04dd10c51d0a25931266f70522c4bdadb6a",
+      "run_id": "ugs_synth_explicit_collaboration_replication_002",
+      "source_path": "pyproject.toml",
+      "verified": true
+    },
+    {
+      "expected_sha256": "2d797ac4b4348aea754ed96b2d2a4ae6604b929b73ea16286ecf49fa37656dcb",
+      "run_id": "ugs_synth_explicit_collaboration_replication_002",
+      "source_path": "src/self_organizing_engineering_agent/experiments/pilot_1a/deepseek_provider.py",
+      "verified": true
+    },
+    {
+      "expected_sha256": "7dac491e82503def43b5c3ed5692015f3280f722d18831fb9cdafcee0ad271a5",
+      "run_id": "ugs_synth_explicit_collaboration_replication_002",
+      "source_path": "src/self_organizing_engineering_agent/experiments/ugs_synth_interleaved_review/durable_replication.py",
+      "verified": true
+    },
+    {
+      "expected_sha256": "345be37ebe574d3b4a81a6991b1ce0bf327ef4995d1770b0348c379922b26d42",
+      "run_id": "ugs_synth_explicit_collaboration_replication_002",
+      "source_path": "src/self_organizing_engineering_agent/experiments/ugs_synth_interleaved_review/durable_resume.py",
+      "verified": true
+    },
+    {
+      "expected_sha256": "179c656d81d26e845d9ae52594f69d836466bd965afb32f04a84165b923d8529",
+      "run_id": "ugs_synth_explicit_collaboration_replication_002",
+      "source_path": "src/self_organizing_engineering_agent/experiments/ugs_synth_interleaved_review/durable_runtime.py",
+      "verified": true
+    },
+    {
+      "expected_sha256": "860939a39e1a65b54b8669d5084ce1145d9fa0408a61846e4fb8453c0636388a",
+      "run_id": "ugs_synth_explicit_collaboration_replication_002",
+      "source_path": "src/self_organizing_engineering_agent/experiments/ugs_synth_interleaved_review/durable_store.py",
+      "verified": true
+    },
+    {
+      "expected_sha256": "8757378d26a3cc0cce875b7dff44e35a8048c971e39c964bf2dc343fc88aae34",
+      "run_id": "ugs_synth_explicit_collaboration_replication_002",
+      "source_path": "src/self_organizing_engineering_agent/experiments/ugs_synth_interleaved_review/provider_boundary.py",
+      "verified": true
+    },
+    {
+      "expected_sha256": "13008cc92e6e139a5503b00048b41f073bc555b96dab0c2d0ae7c0378cfc87ea",
+      "run_id": "ugs_synth_explicit_collaboration_replication_002",
+      "source_path": "src/self_organizing_engineering_agent/experiments/ugs_synth_interleaved_review/runner.py",
+      "verified": true
+    },
+    {
+      "expected_sha256": "1d44214a628e2d6ce3da996b56ac2de666bc5cb91e05d81ef2d7bd2f1eec0206",
+      "run_id": "ugs_synth_explicit_collaboration_replication_002",
+      "source_path": "src/self_organizing_engineering_agent/experiments/ugs_synth_interleaved_review/tools.py",
+      "verified": true
+    },
+    {
+      "expected_sha256": "efd67c00a8e00e0e09cbb56f59092ecbd7aa0c54060957cd9c698739f75cafa5",
+      "run_id": "ugs_synth_explicit_collaboration_replication_002",
+      "source_path": "src/self_organizing_engineering_agent/experiments/ugs_synth_minimal/runner.py",
+      "verified": true
+    },
+    {
+      "expected_sha256": "99b52a2836380e3ae9d8f497a88e2f15bb0066db9319f87d1cae0729ca4e11ab",
+      "run_id": "ugs_synth_explicit_collaboration_replication_002",
+      "source_path": "src/self_organizing_engineering_agent/experiments/ugs_synth_minimal/tools.py",
+      "verified": true
+    },
+    {
+      "expected_sha256": "0cc65662ef72b29c9fed4ab71e1f8c7f03ea23a895361abdcd3dae21943ab5d1",
+      "run_id": "ugs_synth_explicit_collaboration_replication_002",
+      "source_path": "uv.lock",
+      "verified": true
+    },
+    {
+      "expected_sha256": "ece22ce0130baa192122f6354f36c562d88ff61777830d04cfc7a19fbdbbd439",
+      "run_id": "ugs_synth_explicit_collaboration_replication_003",
+      "source_path": "docker/ugs_synth_minimal/Dockerfile",
+      "verified": true
+    },
+    {
+      "expected_sha256": "ab84b3945e5374d00bd8b1781cade04dd10c51d0a25931266f70522c4bdadb6a",
+      "run_id": "ugs_synth_explicit_collaboration_replication_003",
+      "source_path": "pyproject.toml",
+      "verified": true
+    },
+    {
+      "expected_sha256": "2d797ac4b4348aea754ed96b2d2a4ae6604b929b73ea16286ecf49fa37656dcb",
+      "run_id": "ugs_synth_explicit_collaboration_replication_003",
+      "source_path": "src/self_organizing_engineering_agent/experiments/pilot_1a/deepseek_provider.py",
+      "verified": true
+    },
+    {
+      "expected_sha256": "7dac491e82503def43b5c3ed5692015f3280f722d18831fb9cdafcee0ad271a5",
+      "run_id": "ugs_synth_explicit_collaboration_replication_003",
+      "source_path": "src/self_organizing_engineering_agent/experiments/ugs_synth_interleaved_review/durable_replication.py",
+      "verified": true
+    },
+    {
+      "expected_sha256": "345be37ebe574d3b4a81a6991b1ce0bf327ef4995d1770b0348c379922b26d42",
+      "run_id": "ugs_synth_explicit_collaboration_replication_003",
+      "source_path": "src/self_organizing_engineering_agent/experiments/ugs_synth_interleaved_review/durable_resume.py",
+      "verified": true
+    },
+    {
+      "expected_sha256": "179c656d81d26e845d9ae52594f69d836466bd965afb32f04a84165b923d8529",
+      "run_id": "ugs_synth_explicit_collaboration_replication_003",
+      "source_path": "src/self_organizing_engineering_agent/experiments/ugs_synth_interleaved_review/durable_runtime.py",
+      "verified": true
+    },
+    {
+      "expected_sha256": "860939a39e1a65b54b8669d5084ce1145d9fa0408a61846e4fb8453c0636388a",
+      "run_id": "ugs_synth_explicit_collaboration_replication_003",
+      "source_path": "src/self_organizing_engineering_agent/experiments/ugs_synth_interleaved_review/durable_store.py",
+      "verified": true
+    },
+    {
+      "expected_sha256": "8757378d26a3cc0cce875b7dff44e35a8048c971e39c964bf2dc343fc88aae34",
+      "run_id": "ugs_synth_explicit_collaboration_replication_003",
+      "source_path": "src/self_organizing_engineering_agent/experiments/ugs_synth_interleaved_review/provider_boundary.py",
+      "verified": true
+    },
+    {
+      "expected_sha256": "13008cc92e6e139a5503b00048b41f073bc555b96dab0c2d0ae7c0378cfc87ea",
+      "run_id": "ugs_synth_explicit_collaboration_replication_003",
+      "source_path": "src/self_organizing_engineering_agent/experiments/ugs_synth_interleaved_review/runner.py",
+      "verified": true
+    },
+    {
+      "expected_sha256": "1d44214a628e2d6ce3da996b56ac2de666bc5cb91e05d81ef2d7bd2f1eec0206",
+      "run_id": "ugs_synth_explicit_collaboration_replication_003",
+      "source_path": "src/self_organizing_engineering_agent/experiments/ugs_synth_interleaved_review/tools.py",
+      "verified": true
+    },
+    {
+      "expected_sha256": "efd67c00a8e00e0e09cbb56f59092ecbd7aa0c54060957cd9c698739f75cafa5",
+      "run_id": "ugs_synth_explicit_collaboration_replication_003",
+      "source_path": "src/self_organizing_engineering_agent/experiments/ugs_synth_minimal/runner.py",
+      "verified": true
+    },
+    {
+      "expected_sha256": "99b52a2836380e3ae9d8f497a88e2f15bb0066db9319f87d1cae0729ca4e11ab",
+      "run_id": "ugs_synth_explicit_collaboration_replication_003",
+      "source_path": "src/self_organizing_engineering_agent/experiments/ugs_synth_minimal/tools.py",
+      "verified": true
+    },
+    {
+      "expected_sha256": "0cc65662ef72b29c9fed4ab71e1f8c7f03ea23a895361abdcd3dae21943ab5d1",
+      "run_id": "ugs_synth_explicit_collaboration_replication_003",
+      "source_path": "uv.lock",
+      "verified": true
+    },
+    {
+      "expected_sha256": "ece22ce0130baa192122f6354f36c562d88ff61777830d04cfc7a19fbdbbd439",
+      "run_id": "ugs_synth_explicit_collaboration_replication_004",
+      "source_path": "docker/ugs_synth_minimal/Dockerfile",
+      "verified": true
+    },
+    {
+      "expected_sha256": "ab84b3945e5374d00bd8b1781cade04dd10c51d0a25931266f70522c4bdadb6a",
+      "run_id": "ugs_synth_explicit_collaboration_replication_004",
+      "source_path": "pyproject.toml",
+      "verified": true
+    },
+    {
+      "expected_sha256": "2d797ac4b4348aea754ed96b2d2a4ae6604b929b73ea16286ecf49fa37656dcb",
+      "run_id": "ugs_synth_explicit_collaboration_replication_004",
+      "source_path": "src/self_organizing_engineering_agent/experiments/pilot_1a/deepseek_provider.py",
+      "verified": true
+    },
+    {
+      "expected_sha256": "7dac491e82503def43b5c3ed5692015f3280f722d18831fb9cdafcee0ad271a5",
+      "run_id": "ugs_synth_explicit_collaboration_replication_004",
+      "source_path": "src/self_organizing_engineering_agent/experiments/ugs_synth_interleaved_review/durable_replication.py",
+      "verified": true
+    },
+    {
+      "expected_sha256": "345be37ebe574d3b4a81a6991b1ce0bf327ef4995d1770b0348c379922b26d42",
+      "run_id": "ugs_synth_explicit_collaboration_replication_004",
+      "source_path": "src/self_organizing_engineering_agent/experiments/ugs_synth_interleaved_review/durable_resume.py",
+      "verified": true
+    },
+    {
+      "expected_sha256": "179c656d81d26e845d9ae52594f69d836466bd965afb32f04a84165b923d8529",
+      "run_id": "ugs_synth_explicit_collaboration_replication_004",
+      "source_path": "src/self_organizing_engineering_agent/experiments/ugs_synth_interleaved_review/durable_runtime.py",
+      "verified": true
+    },
+    {
+      "expected_sha256": "860939a39e1a65b54b8669d5084ce1145d9fa0408a61846e4fb8453c0636388a",
+      "run_id": "ugs_synth_explicit_collaboration_replication_004",
+      "source_path": "src/self_organizing_engineering_agent/experiments/ugs_synth_interleaved_review/durable_store.py",
+      "verified": true
+    },
+    {
+      "expected_sha256": "8757378d26a3cc0cce875b7dff44e35a8048c971e39c964bf2dc343fc88aae34",
+      "run_id": "ugs_synth_explicit_collaboration_replication_004",
+      "source_path": "src/self_organizing_engineering_agent/experiments/ugs_synth_interleaved_review/provider_boundary.py",
+      "verified": true
+    },
+    {
+      "expected_sha256": "13008cc92e6e139a5503b00048b41f073bc555b96dab0c2d0ae7c0378cfc87ea",
+      "run_id": "ugs_synth_explicit_collaboration_replication_004",
+      "source_path": "src/self_organizing_engineering_agent/experiments/ugs_synth_interleaved_review/runner.py",
+      "verified": true
+    },
+    {
+      "expected_sha256": "1d44214a628e2d6ce3da996b56ac2de666bc5cb91e05d81ef2d7bd2f1eec0206",
+      "run_id": "ugs_synth_explicit_collaboration_replication_004",
+      "source_path": "src/self_organizing_engineering_agent/experiments/ugs_synth_interleaved_review/tools.py",
+      "verified": true
+    },
+    {
+      "expected_sha256": "efd67c00a8e00e0e09cbb56f59092ecbd7aa0c54060957cd9c698739f75cafa5",
+      "run_id": "ugs_synth_explicit_collaboration_replication_004",
+      "source_path": "src/self_organizing_engineering_agent/experiments/ugs_synth_minimal/runner.py",
+      "verified": true
+    },
+    {
+      "expected_sha256": "99b52a2836380e3ae9d8f497a88e2f15bb0066db9319f87d1cae0729ca4e11ab",
+      "run_id": "ugs_synth_explicit_collaboration_replication_004",
+      "source_path": "src/self_organizing_engineering_agent/experiments/ugs_synth_minimal/tools.py",
+      "verified": true
+    },
+    {
+      "expected_sha256": "0cc65662ef72b29c9fed4ab71e1f8c7f03ea23a895361abdcd3dae21943ab5d1",
+      "run_id": "ugs_synth_explicit_collaboration_replication_004",
+      "source_path": "uv.lock",
+      "verified": true
+    },
+    {
+      "expected_sha256": "ece22ce0130baa192122f6354f36c562d88ff61777830d04cfc7a19fbdbbd439",
+      "run_id": "ugs_synth_worker_only_replication_001",
+      "source_path": "docker/ugs_synth_minimal/Dockerfile",
+      "verified": true
+    },
+    {
+      "expected_sha256": "ab84b3945e5374d00bd8b1781cade04dd10c51d0a25931266f70522c4bdadb6a",
+      "run_id": "ugs_synth_worker_only_replication_001",
+      "source_path": "pyproject.toml",
+      "verified": true
+    },
+    {
+      "expected_sha256": "2d797ac4b4348aea754ed96b2d2a4ae6604b929b73ea16286ecf49fa37656dcb",
+      "run_id": "ugs_synth_worker_only_replication_001",
+      "source_path": "src/self_organizing_engineering_agent/experiments/pilot_1a/deepseek_provider.py",
+      "verified": true
+    },
+    {
+      "expected_sha256": "624abe89841afd80fbf19de996e97763a8d20d1d49d91bb616ef40a6cc3b381a",
+      "run_id": "ugs_synth_worker_only_replication_001",
+      "source_path": "src/self_organizing_engineering_agent/experiments/ugs_synth_interleaved_review/durable_replication.py",
+      "verified": true
+    },
+    {
+      "expected_sha256": "345be37ebe574d3b4a81a6991b1ce0bf327ef4995d1770b0348c379922b26d42",
+      "run_id": "ugs_synth_worker_only_replication_001",
+      "source_path": "src/self_organizing_engineering_agent/experiments/ugs_synth_interleaved_review/durable_resume.py",
+      "verified": true
+    },
+    {
+      "expected_sha256": "179c656d81d26e845d9ae52594f69d836466bd965afb32f04a84165b923d8529",
+      "run_id": "ugs_synth_worker_only_replication_001",
+      "source_path": "src/self_organizing_engineering_agent/experiments/ugs_synth_interleaved_review/durable_runtime.py",
+      "verified": true
+    },
+    {
+      "expected_sha256": "a5a67f772a6df23f771a625ecceffa564dfdb32c66f71c6206eebc906543f3d4",
+      "run_id": "ugs_synth_worker_only_replication_001",
+      "source_path": "src/self_organizing_engineering_agent/experiments/ugs_synth_interleaved_review/durable_store.py",
+      "verified": true
+    },
+    {
+      "expected_sha256": "8757378d26a3cc0cce875b7dff44e35a8048c971e39c964bf2dc343fc88aae34",
+      "run_id": "ugs_synth_worker_only_replication_001",
+      "source_path": "src/self_organizing_engineering_agent/experiments/ugs_synth_interleaved_review/provider_boundary.py",
+      "verified": true
+    },
+    {
+      "expected_sha256": "13008cc92e6e139a5503b00048b41f073bc555b96dab0c2d0ae7c0378cfc87ea",
+      "run_id": "ugs_synth_worker_only_replication_001",
+      "source_path": "src/self_organizing_engineering_agent/experiments/ugs_synth_interleaved_review/runner.py",
+      "verified": true
+    },
+    {
+      "expected_sha256": "1d44214a628e2d6ce3da996b56ac2de666bc5cb91e05d81ef2d7bd2f1eec0206",
+      "run_id": "ugs_synth_worker_only_replication_001",
+      "source_path": "src/self_organizing_engineering_agent/experiments/ugs_synth_interleaved_review/tools.py",
+      "verified": true
+    },
+    {
+      "expected_sha256": "efd67c00a8e00e0e09cbb56f59092ecbd7aa0c54060957cd9c698739f75cafa5",
+      "run_id": "ugs_synth_worker_only_replication_001",
+      "source_path": "src/self_organizing_engineering_agent/experiments/ugs_synth_minimal/runner.py",
+      "verified": true
+    },
+    {
+      "expected_sha256": "99b52a2836380e3ae9d8f497a88e2f15bb0066db9319f87d1cae0729ca4e11ab",
+      "run_id": "ugs_synth_worker_only_replication_001",
+      "source_path": "src/self_organizing_engineering_agent/experiments/ugs_synth_minimal/tools.py",
+      "verified": true
+    },
+    {
+      "expected_sha256": "0cc65662ef72b29c9fed4ab71e1f8c7f03ea23a895361abdcd3dae21943ab5d1",
+      "run_id": "ugs_synth_worker_only_replication_001",
+      "source_path": "uv.lock",
+      "verified": true
+    },
+    {
+      "expected_sha256": "ece22ce0130baa192122f6354f36c562d88ff61777830d04cfc7a19fbdbbd439",
+      "run_id": "ugs_synth_worker_only_replication_002",
+      "source_path": "docker/ugs_synth_minimal/Dockerfile",
+      "verified": true
+    },
+    {
+      "expected_sha256": "ab84b3945e5374d00bd8b1781cade04dd10c51d0a25931266f70522c4bdadb6a",
+      "run_id": "ugs_synth_worker_only_replication_002",
+      "source_path": "pyproject.toml",
+      "verified": true
+    },
+    {
+      "expected_sha256": "2d797ac4b4348aea754ed96b2d2a4ae6604b929b73ea16286ecf49fa37656dcb",
+      "run_id": "ugs_synth_worker_only_replication_002",
+      "source_path": "src/self_organizing_engineering_agent/experiments/pilot_1a/deepseek_provider.py",
+      "verified": true
+    },
+    {
+      "expected_sha256": "7dac491e82503def43b5c3ed5692015f3280f722d18831fb9cdafcee0ad271a5",
+      "run_id": "ugs_synth_worker_only_replication_002",
+      "source_path": "src/self_organizing_engineering_agent/experiments/ugs_synth_interleaved_review/durable_replication.py",
+      "verified": true
+    },
+    {
+      "expected_sha256": "345be37ebe574d3b4a81a6991b1ce0bf327ef4995d1770b0348c379922b26d42",
+      "run_id": "ugs_synth_worker_only_replication_002",
+      "source_path": "src/self_organizing_engineering_agent/experiments/ugs_synth_interleaved_review/durable_resume.py",
+      "verified": true
+    },
+    {
+      "expected_sha256": "179c656d81d26e845d9ae52594f69d836466bd965afb32f04a84165b923d8529",
+      "run_id": "ugs_synth_worker_only_replication_002",
+      "source_path": "src/self_organizing_engineering_agent/experiments/ugs_synth_interleaved_review/durable_runtime.py",
+      "verified": true
+    },
+    {
+      "expected_sha256": "860939a39e1a65b54b8669d5084ce1145d9fa0408a61846e4fb8453c0636388a",
+      "run_id": "ugs_synth_worker_only_replication_002",
+      "source_path": "src/self_organizing_engineering_agent/experiments/ugs_synth_interleaved_review/durable_store.py",
+      "verified": true
+    },
+    {
+      "expected_sha256": "8757378d26a3cc0cce875b7dff44e35a8048c971e39c964bf2dc343fc88aae34",
+      "run_id": "ugs_synth_worker_only_replication_002",
+      "source_path": "src/self_organizing_engineering_agent/experiments/ugs_synth_interleaved_review/provider_boundary.py",
+      "verified": true
+    },
+    {
+      "expected_sha256": "13008cc92e6e139a5503b00048b41f073bc555b96dab0c2d0ae7c0378cfc87ea",
+      "run_id": "ugs_synth_worker_only_replication_002",
+      "source_path": "src/self_organizing_engineering_agent/experiments/ugs_synth_interleaved_review/runner.py",
+      "verified": true
+    },
+    {
+      "expected_sha256": "1d44214a628e2d6ce3da996b56ac2de666bc5cb91e05d81ef2d7bd2f1eec0206",
+      "run_id": "ugs_synth_worker_only_replication_002",
+      "source_path": "src/self_organizing_engineering_agent/experiments/ugs_synth_interleaved_review/tools.py",
+      "verified": true
+    },
+    {
+      "expected_sha256": "efd67c00a8e00e0e09cbb56f59092ecbd7aa0c54060957cd9c698739f75cafa5",
+      "run_id": "ugs_synth_worker_only_replication_002",
+      "source_path": "src/self_organizing_engineering_agent/experiments/ugs_synth_minimal/runner.py",
+      "verified": true
+    },
+    {
+      "expected_sha256": "99b52a2836380e3ae9d8f497a88e2f15bb0066db9319f87d1cae0729ca4e11ab",
+      "run_id": "ugs_synth_worker_only_replication_002",
+      "source_path": "src/self_organizing_engineering_agent/experiments/ugs_synth_minimal/tools.py",
+      "verified": true
+    },
+    {
+      "expected_sha256": "0cc65662ef72b29c9fed4ab71e1f8c7f03ea23a895361abdcd3dae21943ab5d1",
+      "run_id": "ugs_synth_worker_only_replication_002",
+      "source_path": "uv.lock",
+      "verified": true
+    },
+    {
+      "expected_sha256": "ece22ce0130baa192122f6354f36c562d88ff61777830d04cfc7a19fbdbbd439",
+      "run_id": "ugs_synth_worker_only_replication_003",
+      "source_path": "docker/ugs_synth_minimal/Dockerfile",
+      "verified": true
+    },
+    {
+      "expected_sha256": "ab84b3945e5374d00bd8b1781cade04dd10c51d0a25931266f70522c4bdadb6a",
+      "run_id": "ugs_synth_worker_only_replication_003",
+      "source_path": "pyproject.toml",
+      "verified": true
+    },
+    {
+      "expected_sha256": "2d797ac4b4348aea754ed96b2d2a4ae6604b929b73ea16286ecf49fa37656dcb",
+      "run_id": "ugs_synth_worker_only_replication_003",
+      "source_path": "src/self_organizing_engineering_agent/experiments/pilot_1a/deepseek_provider.py",
+      "verified": true
+    },
+    {
+      "expected_sha256": "7dac491e82503def43b5c3ed5692015f3280f722d18831fb9cdafcee0ad271a5",
+      "run_id": "ugs_synth_worker_only_replication_003",
+      "source_path": "src/self_organizing_engineering_agent/experiments/ugs_synth_interleaved_review/durable_replication.py",
+      "verified": true
+    },
+    {
+      "expected_sha256": "345be37ebe574d3b4a81a6991b1ce0bf327ef4995d1770b0348c379922b26d42",
+      "run_id": "ugs_synth_worker_only_replication_003",
+      "source_path": "src/self_organizing_engineering_agent/experiments/ugs_synth_interleaved_review/durable_resume.py",
+      "verified": true
+    },
+    {
+      "expected_sha256": "179c656d81d26e845d9ae52594f69d836466bd965afb32f04a84165b923d8529",
+      "run_id": "ugs_synth_worker_only_replication_003",
+      "source_path": "src/self_organizing_engineering_agent/experiments/ugs_synth_interleaved_review/durable_runtime.py",
+      "verified": true
+    },
+    {
+      "expected_sha256": "860939a39e1a65b54b8669d5084ce1145d9fa0408a61846e4fb8453c0636388a",
+      "run_id": "ugs_synth_worker_only_replication_003",
+      "source_path": "src/self_organizing_engineering_agent/experiments/ugs_synth_interleaved_review/durable_store.py",
+      "verified": true
+    },
+    {
+      "expected_sha256": "8757378d26a3cc0cce875b7dff44e35a8048c971e39c964bf2dc343fc88aae34",
+      "run_id": "ugs_synth_worker_only_replication_003",
+      "source_path": "src/self_organizing_engineering_agent/experiments/ugs_synth_interleaved_review/provider_boundary.py",
+      "verified": true
+    },
+    {
+      "expected_sha256": "13008cc92e6e139a5503b00048b41f073bc555b96dab0c2d0ae7c0378cfc87ea",
+      "run_id": "ugs_synth_worker_only_replication_003",
+      "source_path": "src/self_organizing_engineering_agent/experiments/ugs_synth_interleaved_review/runner.py",
+      "verified": true
+    },
+    {
+      "expected_sha256": "1d44214a628e2d6ce3da996b56ac2de666bc5cb91e05d81ef2d7bd2f1eec0206",
+      "run_id": "ugs_synth_worker_only_replication_003",
+      "source_path": "src/self_organizing_engineering_agent/experiments/ugs_synth_interleaved_review/tools.py",
+      "verified": true
+    },
+    {
+      "expected_sha256": "efd67c00a8e00e0e09cbb56f59092ecbd7aa0c54060957cd9c698739f75cafa5",
+      "run_id": "ugs_synth_worker_only_replication_003",
+      "source_path": "src/self_organizing_engineering_agent/experiments/ugs_synth_minimal/runner.py",
+      "verified": true
+    },
+    {
+      "expected_sha256": "99b52a2836380e3ae9d8f497a88e2f15bb0066db9319f87d1cae0729ca4e11ab",
+      "run_id": "ugs_synth_worker_only_replication_003",
+      "source_path": "src/self_organizing_engineering_agent/experiments/ugs_synth_minimal/tools.py",
+      "verified": true
+    },
+    {
+      "expected_sha256": "0cc65662ef72b29c9fed4ab71e1f8c7f03ea23a895361abdcd3dae21943ab5d1",
+      "run_id": "ugs_synth_worker_only_replication_003",
+      "source_path": "uv.lock",
+      "verified": true
+    },
+    {
+      "expected_sha256": "ece22ce0130baa192122f6354f36c562d88ff61777830d04cfc7a19fbdbbd439",
+      "run_id": "ugs_synth_worker_only_replication_004",
+      "source_path": "docker/ugs_synth_minimal/Dockerfile",
+      "verified": true
+    },
+    {
+      "expected_sha256": "ab84b3945e5374d00bd8b1781cade04dd10c51d0a25931266f70522c4bdadb6a",
+      "run_id": "ugs_synth_worker_only_replication_004",
+      "source_path": "pyproject.toml",
+      "verified": true
+    },
+    {
+      "expected_sha256": "2d797ac4b4348aea754ed96b2d2a4ae6604b929b73ea16286ecf49fa37656dcb",
+      "run_id": "ugs_synth_worker_only_replication_004",
+      "source_path": "src/self_organizing_engineering_agent/experiments/pilot_1a/deepseek_provider.py",
+      "verified": true
+    },
+    {
+      "expected_sha256": "7dac491e82503def43b5c3ed5692015f3280f722d18831fb9cdafcee0ad271a5",
+      "run_id": "ugs_synth_worker_only_replication_004",
+      "source_path": "src/self_organizing_engineering_agent/experiments/ugs_synth_interleaved_review/durable_replication.py",
+      "verified": true
+    },
+    {
+      "expected_sha256": "345be37ebe574d3b4a81a6991b1ce0bf327ef4995d1770b0348c379922b26d42",
+      "run_id": "ugs_synth_worker_only_replication_004",
+      "source_path": "src/self_organizing_engineering_agent/experiments/ugs_synth_interleaved_review/durable_resume.py",
+      "verified": true
+    },
+    {
+      "expected_sha256": "179c656d81d26e845d9ae52594f69d836466bd965afb32f04a84165b923d8529",
+      "run_id": "ugs_synth_worker_only_replication_004",
+      "source_path": "src/self_organizing_engineering_agent/experiments/ugs_synth_interleaved_review/durable_runtime.py",
+      "verified": true
+    },
+    {
+      "expected_sha256": "860939a39e1a65b54b8669d5084ce1145d9fa0408a61846e4fb8453c0636388a",
+      "run_id": "ugs_synth_worker_only_replication_004",
+      "source_path": "src/self_organizing_engineering_agent/experiments/ugs_synth_interleaved_review/durable_store.py",
+      "verified": true
+    },
+    {
+      "expected_sha256": "8757378d26a3cc0cce875b7dff44e35a8048c971e39c964bf2dc343fc88aae34",
+      "run_id": "ugs_synth_worker_only_replication_004",
+      "source_path": "src/self_organizing_engineering_agent/experiments/ugs_synth_interleaved_review/provider_boundary.py",
+      "verified": true
+    },
+    {
+      "expected_sha256": "13008cc92e6e139a5503b00048b41f073bc555b96dab0c2d0ae7c0378cfc87ea",
+      "run_id": "ugs_synth_worker_only_replication_004",
+      "source_path": "src/self_organizing_engineering_agent/experiments/ugs_synth_interleaved_review/runner.py",
+      "verified": true
+    },
+    {
+      "expected_sha256": "1d44214a628e2d6ce3da996b56ac2de666bc5cb91e05d81ef2d7bd2f1eec0206",
+      "run_id": "ugs_synth_worker_only_replication_004",
+      "source_path": "src/self_organizing_engineering_agent/experiments/ugs_synth_interleaved_review/tools.py",
+      "verified": true
+    },
+    {
+      "expected_sha256": "efd67c00a8e00e0e09cbb56f59092ecbd7aa0c54060957cd9c698739f75cafa5",
+      "run_id": "ugs_synth_worker_only_replication_004",
+      "source_path": "src/self_organizing_engineering_agent/experiments/ugs_synth_minimal/runner.py",
+      "verified": true
+    },
+    {
+      "expected_sha256": "99b52a2836380e3ae9d8f497a88e2f15bb0066db9319f87d1cae0729ca4e11ab",
+      "run_id": "ugs_synth_worker_only_replication_004",
+      "source_path": "src/self_organizing_engineering_agent/experiments/ugs_synth_minimal/tools.py",
+      "verified": true
+    },
+    {
+      "expected_sha256": "0cc65662ef72b29c9fed4ab71e1f8c7f03ea23a895361abdcd3dae21943ab5d1",
+      "run_id": "ugs_synth_worker_only_replication_004",
+      "source_path": "uv.lock",
+      "verified": true
+    }
+  ],
+  "source_branch": "codex/ugs-synth-d01",
+  "source_commit": "fa834d2836da8c4fabf9c767bc86d85e1f068a09",
+  "source_files": [
+    {
+      "category": "public benchmark world",
+      "frozen_or_generated": "source_copy",
+      "relative_path": "cases/ugs_synth_d01/public/case.json",
+      "source_path": "cases/ugs_synth_d01/public/case.json",
+      "source_sha256": "080cc44e86dedf19ec5a42aefe1d0bcbba946ecaef3a0051260b48de6e2650e8"
+    },
+    {
+      "category": "public benchmark world",
+      "frozen_or_generated": "source_copy",
+      "relative_path": "cases/ugs_synth_d01/public/economic_assumptions.json",
+      "source_path": "cases/ugs_synth_d01/public/economic_assumptions.json",
+      "source_sha256": "ae71c8c5b0a86c0096493c028d75ae0ad594f5dfb955a8d6e63631fcc15d0896"
+    },
+    {
+      "category": "public benchmark world",
+      "frozen_or_generated": "source_copy",
+      "relative_path": "cases/ugs_synth_d01/public/engineering_calculation_basis.md",
+      "source_path": "cases/ugs_synth_d01/public/engineering_calculation_basis.md",
+      "source_sha256": "e9c1f4a53cb2a801dd9e092c15c6462c777ef02fadfb74ff6eb9fe3f1b4162bb"
+    },
+    {
+      "category": "public benchmark world",
+      "frozen_or_generated": "source_copy",
+      "relative_path": "cases/ugs_synth_d01/public/engineering_geometry_basis.md",
+      "source_path": "cases/ugs_synth_d01/public/engineering_geometry_basis.md",
+      "source_sha256": "0531c067bb22d60a9b3cdf8d3308721bd0104e0d6feec87daac2d5ba966c8315"
+    },
+    {
+      "category": "public benchmark world",
+      "frozen_or_generated": "source_copy",
+      "relative_path": "cases/ugs_synth_d01/public/equipment_catalog/compressors.json",
+      "source_path": "cases/ugs_synth_d01/public/equipment_catalog/compressors.json",
+      "source_sha256": "c88919e864f551815a50dc706f41fd01b8337fa86bea56aeef412d20e54a1da7"
+    },
+    {
+      "category": "public benchmark world",
+      "frozen_or_generated": "source_copy",
+      "relative_path": "cases/ugs_synth_d01/public/equipment_catalog/dehydration.json",
+      "source_path": "cases/ugs_synth_d01/public/equipment_catalog/dehydration.json",
+      "source_sha256": "550fe7a96dbceff1488661ba05d34c3cb464b0d0fb96be9c03ae89eb6e5bc459"
+    },
+    {
+      "category": "public benchmark world",
+      "frozen_or_generated": "source_copy",
+      "relative_path": "cases/ugs_synth_d01/public/equipment_catalog/drains.json",
+      "source_path": "cases/ugs_synth_d01/public/equipment_catalog/drains.json",
+      "source_sha256": "3d85d43734c5832b596c0595417b1c4b81ff7f5229c96e2ff28121d5f1a9e9c6"
+    },
+    {
+      "category": "public benchmark world",
+      "frozen_or_generated": "source_copy",
+      "relative_path": "cases/ugs_synth_d01/public/equipment_catalog/filters.json",
+      "source_path": "cases/ugs_synth_d01/public/equipment_catalog/filters.json",
+      "source_sha256": "d314cc23755294773a08eedf0a2de98868f236462fa6615d00b3e82d67761b0c"
+    },
+    {
+      "category": "public benchmark world",
+      "frozen_or_generated": "source_copy",
+      "relative_path": "cases/ugs_synth_d01/public/equipment_catalog/headers.json",
+      "source_path": "cases/ugs_synth_d01/public/equipment_catalog/headers.json",
+      "source_sha256": "f4f3081b23033bd450980e79bca85d31f722f42b078620c60af760453d9fb80f"
+    },
+    {
+      "category": "public benchmark world",
+      "frozen_or_generated": "source_copy",
+      "relative_path": "cases/ugs_synth_d01/public/equipment_catalog/metering_regulation.json",
+      "source_path": "cases/ugs_synth_d01/public/equipment_catalog/metering_regulation.json",
+      "source_sha256": "745a9427e4cbfa889e64f27ab5d42a2d096a28411016639392212cb45bfc4c64"
+    },
+    {
+      "category": "public benchmark world",
+      "frozen_or_generated": "source_copy",
+      "relative_path": "cases/ugs_synth_d01/public/equipment_catalog/separators.json",
+      "source_path": "cases/ugs_synth_d01/public/equipment_catalog/separators.json",
+      "source_sha256": "35f7276b402f6845fd01bd14955fab542a596706c6aac7f025396f67b077e2b6"
+    },
+    {
+      "category": "public benchmark world",
+      "frozen_or_generated": "source_copy",
+      "relative_path": "cases/ugs_synth_d01/public/equipment_catalog/thermal_equipment.json",
+      "source_path": "cases/ugs_synth_d01/public/equipment_catalog/thermal_equipment.json",
+      "source_sha256": "ffa7f31e907ddbf4672328920666505160bd34f6a1144931736ec3657fd7e033"
+    },
+    {
+      "category": "public benchmark world",
+      "frozen_or_generated": "source_copy",
+      "relative_path": "cases/ugs_synth_d01/public/final_delivery_contract.json",
+      "source_path": "cases/ugs_synth_d01/public/final_delivery_contract.json",
+      "source_sha256": "dde8dbdfe2dfd1bf086289358fa4a2f2b002fe535a0ca9ca0d0c6e55e15023f5"
+    },
+    {
+      "category": "public benchmark world",
+      "frozen_or_generated": "source_copy",
+      "relative_path": "cases/ugs_synth_d01/public/gas_properties.json",
+      "source_path": "cases/ugs_synth_d01/public/gas_properties.json",
+      "source_sha256": "ff8a1650fbee84f3c2e472dc5318021ae1f1838400a24cb4c95b3371289aacf8"
+    },
+    {
+      "category": "public benchmark world",
+      "frozen_or_generated": "source_copy",
+      "relative_path": "cases/ugs_synth_d01/public/maintenance_requirements.json",
+      "source_path": "cases/ugs_synth_d01/public/maintenance_requirements.json",
+      "source_sha256": "471332a4bf079bcb51590882f55383fac5b677f8be7edbea45d605acd9a08b55"
+    },
+    {
+      "category": "public benchmark world",
+      "frozen_or_generated": "source_copy",
+      "relative_path": "cases/ugs_synth_d01/public/network_semantics.md",
+      "source_path": "cases/ugs_synth_d01/public/network_semantics.md",
+      "source_sha256": "05ac3d8184b34531004a574dc329ae6a4d3a5eb1e62ed3d50d826c43a7af25d4"
+    },
+    {
+      "category": "public benchmark world",
+      "frozen_or_generated": "source_copy",
+      "relative_path": "cases/ugs_synth_d01/public/operating_scenarios.json",
+      "source_path": "cases/ugs_synth_d01/public/operating_scenarios.json",
+      "source_sha256": "b402120a59660383697ed3f468218c027f5a6a9b09975ace325d74969771f649"
+    },
+    {
+      "category": "public benchmark world",
+      "frozen_or_generated": "source_copy",
+      "relative_path": "cases/ugs_synth_d01/public/piping_catalog.json",
+      "source_path": "cases/ugs_synth_d01/public/piping_catalog.json",
+      "source_sha256": "cee8ee256712bb5b5731b11e3ddb153419c216869e2b9f495f12001418d485eb"
+    },
+    {
+      "category": "public benchmark world",
+      "frozen_or_generated": "source_copy",
+      "relative_path": "cases/ugs_synth_d01/public/project_requirements.json",
+      "source_path": "cases/ugs_synth_d01/public/project_requirements.json",
+      "source_sha256": "8024ba75f46589508d52a2691172aad4532808f0ebf65528e00da06d61d2905e"
+    },
+    {
+      "category": "public benchmark world",
+      "frozen_or_generated": "source_copy",
+      "relative_path": "cases/ugs_synth_d01/public/safety_requirements.json",
+      "source_path": "cases/ugs_synth_d01/public/safety_requirements.json",
+      "source_sha256": "5fb5d18e8253ff8e133bd539eca63a49582c97a3b25ce4bb01b7d6c7a22edf23"
+    },
+    {
+      "category": "public benchmark world",
+      "frozen_or_generated": "source_copy",
+      "relative_path": "cases/ugs_synth_d01/public/site.json",
+      "source_path": "cases/ugs_synth_d01/public/site.json",
+      "source_sha256": "402848a71612030e92fa0315b4b2df1d533d61e5fcfa4bfe4b40fb2b47ba870a"
+    },
+    {
+      "category": "public benchmark world",
+      "frozen_or_generated": "source_copy",
+      "relative_path": "cases/ugs_synth_d01/public/well_group_interfaces.json",
+      "source_path": "cases/ugs_synth_d01/public/well_group_interfaces.json",
+      "source_sha256": "54f913e24305318ec01bba1ab05172d05c02a98bc237fcc119574b92a23a5202"
+    },
+    {
+      "category": "runtime container definition",
+      "frozen_or_generated": "source_copy",
+      "relative_path": "docker/ugs_synth_minimal/Dockerfile",
+      "source_path": "docker/ugs_synth_minimal/Dockerfile",
+      "source_sha256": "ece22ce0130baa192122f6354f36c562d88ff61777830d04cfc7a19fbdbbd439"
+    },
+    {
+      "category": "frozen blind-evaluation analysis",
+      "frozen_or_generated": "frozen_copy",
+      "relative_path": "evidence/blind_evaluation/blind_evaluation_summary.md",
+      "source_path": "evaluation/ugs_synth_blind_batch_001/analysis/blind_evaluation_summary.md",
+      "source_sha256": "201d269207d3ea9c3be953891a9aa33ce072aee0d7b752374552f8f2fd1486a8"
+    },
+    {
+      "category": "blind-evaluation readiness report",
+      "frozen_or_generated": "source_copy",
+      "relative_path": "evidence/blind_evaluation/controller_report.md",
+      "source_path": "evaluation/ugs_synth_blind_batch_001/controller/controller_report.md",
+      "source_sha256": "ee3ce7fef000f6878e5c46b4651b9b328e152e41478085d32359d9ed324cc059"
+    },
+    {
+      "category": "frozen blind-evaluation analysis",
+      "frozen_or_generated": "frozen_copy",
+      "relative_path": "evidence/blind_evaluation/evaluator_reproducibility.md",
+      "source_path": "evaluation/ugs_synth_blind_batch_001/analysis/evaluator_reproducibility.md",
+      "source_sha256": "94a07df19b48c8de6ba6b9d169c011b6af18ee314a8b584497afc78da571d3bc"
+    },
+    {
+      "category": "frozen blind-evaluation analysis",
+      "frozen_or_generated": "frozen_copy",
+      "relative_path": "evidence/blind_evaluation/normalized_findings.json",
+      "source_path": "evaluation/ugs_synth_blind_batch_001/analysis/normalized_findings.json",
+      "source_sha256": "f44ab2b1ebf7ef49cb901c90247ea8b7035810be0cd3498502cf7aec21049297"
+    },
+    {
+      "category": "frozen blind-evaluation analysis",
+      "frozen_or_generated": "frozen_copy",
+      "relative_path": "evidence/blind_evaluation/pair_level_comparison.csv",
+      "source_path": "evaluation/ugs_synth_blind_batch_001/analysis/pair_level_comparison.csv",
+      "source_sha256": "9f5733c4bac98f03be563b9a50557a1721b68615bdb6ffaef638d4033282596c"
+    },
+    {
+      "category": "frozen blind-evaluation analysis",
+      "frozen_or_generated": "frozen_copy",
+      "relative_path": "evidence/blind_evaluation/post_analysis_integrity.json",
+      "source_path": "evaluation/ugs_synth_blind_batch_001/analysis/post_analysis_integrity.json",
+      "source_sha256": "57185724365912fc38ff31018300477e45932e02a339fcfdcb86ff11cd65a0e1"
+    },
+    {
+      "category": "frozen blind-evaluation analysis",
+      "frozen_or_generated": "frozen_copy",
+      "relative_path": "evidence/blind_evaluation/pre_reveal_integrity.json",
+      "source_path": "evaluation/ugs_synth_blind_batch_001/analysis/pre_reveal_integrity.json",
+      "source_sha256": "7fdcb748fb422e804e902608b52d2edceec7dcf54483fcc1144a5112413a452a"
+    },
+    {
+      "category": "exact blind-evaluator protocol source",
+      "frozen_or_generated": "frozen_copy",
+      "relative_path": "evidence/blind_evaluation/protocol/evaluator_prompt.md",
+      "source_path": "evaluation/ugs_synth_blind_batch_001/controller/evaluator_prompt.md",
+      "source_sha256": "9bb4394484b3504552d9634a58d501dfd087568cd30f00f98bdb2218d1055f5c"
+    },
+    {
+      "category": "exact blind-evaluator protocol source",
+      "frozen_or_generated": "frozen_copy",
+      "relative_path": "evidence/blind_evaluation/protocol/review_response.schema.json",
+      "source_path": "evaluation/ugs_synth_blind_batch_001/controller/review_response.schema.json",
+      "source_sha256": "174f64c77f5594dcec758e042f011bd4831c5cfcbd8ea1c9ea101f52709e4092"
+    },
+    {
+      "category": "frozen blind-evaluation protocol amendment",
+      "frozen_or_generated": "frozen_copy",
+      "relative_path": "evidence/blind_evaluation/protocol_amendment_stop_after_full_submission_coverage.md",
+      "source_path": "evaluation/ugs_synth_blind_batch_001/controller/protocol_amendment_stop_after_full_submission_coverage.md",
+      "source_sha256": "92f6ad1a05fc8cd8e29bc3789592f1f26ca24cf6d69462053714867d4fde1662"
+    },
+    {
+      "category": "frozen blind-evaluation analysis",
+      "frozen_or_generated": "frozen_copy",
+      "relative_path": "evidence/blind_evaluation/reveal_record.md",
+      "source_path": "evaluation/ugs_synth_blind_batch_001/analysis/reveal_record.md",
+      "source_sha256": "8be6fdbb5c562f582ed1e5bc6958b27d822026712266c730473291a7929a0f30"
+    },
+    {
+      "category": "frozen blind-evaluation analysis",
+      "frozen_or_generated": "frozen_copy",
+      "relative_path": "evidence/blind_evaluation/revealed_mapping.json",
+      "source_path": "evaluation/ugs_synth_blind_batch_001/analysis/revealed_mapping.json",
+      "source_sha256": "92930c870365082aea167040755166d0cceb39f6e938ce7f90313803ebba852a"
+    },
+    {
+      "category": "frozen successful blind review",
+      "frozen_or_generated": "frozen_copy",
+      "relative_path": "evidence/blind_evaluation/reviews/submission_A/pass_01/review.json",
+      "source_path": "evaluation/ugs_synth_blind_batch_001/results/submission_A/pass_01/review.json",
+      "source_sha256": "455a50ab9eabd8cf97baa3a165e35f0c7b38af45b46f844a9ba1253e1f27f11b"
+    },
+    {
+      "category": "frozen successful blind review rendering",
+      "frozen_or_generated": "frozen_copy",
+      "relative_path": "evidence/blind_evaluation/reviews/submission_A/pass_01/review.md",
+      "source_path": "evaluation/ugs_synth_blind_batch_001/results/submission_A/pass_01/review.md",
+      "source_sha256": "e670cad097c1acf2710453962447002f552172ce7d74f5d76db0758c5cb1438b"
+    },
+    {
+      "category": "frozen successful blind review",
+      "frozen_or_generated": "frozen_copy",
+      "relative_path": "evidence/blind_evaluation/reviews/submission_B/pass_01/review.json",
+      "source_path": "evaluation/ugs_synth_blind_batch_001/results/submission_B/pass_01/review.json",
+      "source_sha256": "5479dd15c3d11c0cbb7404181214e391307fdc631612620537b9ce00b98c00b2"
+    },
+    {
+      "category": "frozen successful blind review rendering",
+      "frozen_or_generated": "frozen_copy",
+      "relative_path": "evidence/blind_evaluation/reviews/submission_B/pass_01/review.md",
+      "source_path": "evaluation/ugs_synth_blind_batch_001/results/submission_B/pass_01/review.md",
+      "source_sha256": "efc904ff7cde0c6b6869f026a131011de0c91aed82c734ab00a62bc2e89a1260"
+    },
+    {
+      "category": "frozen successful blind review",
+      "frozen_or_generated": "frozen_copy",
+      "relative_path": "evidence/blind_evaluation/reviews/submission_C/pass_02/review.json",
+      "source_path": "evaluation/ugs_synth_blind_batch_001/results/submission_C/pass_02/review.json",
+      "source_sha256": "a1a8306cebfeb2451f4f07cd016743c995c7f0595a60328a1e128ac5c0a327dd"
+    },
+    {
+      "category": "frozen successful blind review rendering",
+      "frozen_or_generated": "frozen_copy",
+      "relative_path": "evidence/blind_evaluation/reviews/submission_C/pass_02/review.md",
+      "source_path": "evaluation/ugs_synth_blind_batch_001/results/submission_C/pass_02/review.md",
+      "source_sha256": "92c3bf38f0b001466e607f0cb991bab2d8ec832ed67190c01af755346c03636d"
+    },
+    {
+      "category": "frozen successful blind review",
+      "frozen_or_generated": "frozen_copy",
+      "relative_path": "evidence/blind_evaluation/reviews/submission_D/pass_01/review.json",
+      "source_path": "evaluation/ugs_synth_blind_batch_001/results/submission_D/pass_01/review.json",
+      "source_sha256": "291bd0b2aec8f4b7927bca27aee4ab1cf51d26dd3c4be1cb343a0231e3c92dbd"
+    },
+    {
+      "category": "frozen successful blind review rendering",
+      "frozen_or_generated": "frozen_copy",
+      "relative_path": "evidence/blind_evaluation/reviews/submission_D/pass_01/review.md",
+      "source_path": "evaluation/ugs_synth_blind_batch_001/results/submission_D/pass_01/review.md",
+      "source_sha256": "12aed3d4440b36b3e71ce3d3946e4248e9c5ca9efc07fa1d85d0a4de13b1139c"
+    },
+    {
+      "category": "frozen successful blind review",
+      "frozen_or_generated": "frozen_copy",
+      "relative_path": "evidence/blind_evaluation/reviews/submission_D/pass_02/review.json",
+      "source_path": "evaluation/ugs_synth_blind_batch_001/results/submission_D/pass_02/review.json",
+      "source_sha256": "c0f8b1137c4931b26a5ef165be25cd5d38fd2f929e77fe2fbfa1398a24e8dbae"
+    },
+    {
+      "category": "frozen successful blind review rendering",
+      "frozen_or_generated": "frozen_copy",
+      "relative_path": "evidence/blind_evaluation/reviews/submission_D/pass_02/review.md",
+      "source_path": "evaluation/ugs_synth_blind_batch_001/results/submission_D/pass_02/review.md",
+      "source_sha256": "c68c298db9d5522336cd31ae744f074627a7d8e6aa091b126a8162781d7432c4"
+    },
+    {
+      "category": "frozen successful blind review",
+      "frozen_or_generated": "frozen_copy",
+      "relative_path": "evidence/blind_evaluation/reviews/submission_E/pass_01/review.json",
+      "source_path": "evaluation/ugs_synth_blind_batch_001/results/submission_E/pass_01/review.json",
+      "source_sha256": "1ca8bfa32019a4ea82cca4facf459a965b50bd75159723edea89f1de92477e33"
+    },
+    {
+      "category": "frozen successful blind review rendering",
+      "frozen_or_generated": "frozen_copy",
+      "relative_path": "evidence/blind_evaluation/reviews/submission_E/pass_01/review.md",
+      "source_path": "evaluation/ugs_synth_blind_batch_001/results/submission_E/pass_01/review.md",
+      "source_sha256": "26bcfcc7bfa911b515228f5d805bce140def20e21be8c24596eb199edd490e43"
+    },
+    {
+      "category": "frozen successful blind review",
+      "frozen_or_generated": "frozen_copy",
+      "relative_path": "evidence/blind_evaluation/reviews/submission_E/pass_02/review.json",
+      "source_path": "evaluation/ugs_synth_blind_batch_001/results/submission_E/pass_02/review.json",
+      "source_sha256": "c259b2672ea4913c23df38414ce462296a035dc42a21730b24617677d094ce40"
+    },
+    {
+      "category": "frozen successful blind review rendering",
+      "frozen_or_generated": "frozen_copy",
+      "relative_path": "evidence/blind_evaluation/reviews/submission_E/pass_02/review.md",
+      "source_path": "evaluation/ugs_synth_blind_batch_001/results/submission_E/pass_02/review.md",
+      "source_sha256": "788d33659c5dd7eddf2e579af09d4cf0e3ffab1d2da13eaa6ac6d62f9bbc3daa"
+    },
+    {
+      "category": "frozen successful blind review",
+      "frozen_or_generated": "frozen_copy",
+      "relative_path": "evidence/blind_evaluation/reviews/submission_F/pass_01/review.json",
+      "source_path": "evaluation/ugs_synth_blind_batch_001/results/submission_F/pass_01/review.json",
+      "source_sha256": "018a13c3c396d09fbe9ff9efe375678caad6444901bc07435a526c5af40db157"
+    },
+    {
+      "category": "frozen successful blind review rendering",
+      "frozen_or_generated": "frozen_copy",
+      "relative_path": "evidence/blind_evaluation/reviews/submission_F/pass_01/review.md",
+      "source_path": "evaluation/ugs_synth_blind_batch_001/results/submission_F/pass_01/review.md",
+      "source_sha256": "4d3a8f295c13e495f99e77da2fe682f39dc6d02f64c4603053f8fb16142f4513"
+    },
+    {
+      "category": "frozen successful blind review",
+      "frozen_or_generated": "frozen_copy",
+      "relative_path": "evidence/blind_evaluation/reviews/submission_F/pass_02/review.json",
+      "source_path": "evaluation/ugs_synth_blind_batch_001/results/submission_F/pass_02/review.json",
+      "source_sha256": "ce06ac06c47be7575136bb44fc58c67ca3988e2e2943c4d9a8713e1469d7e27d"
+    },
+    {
+      "category": "frozen successful blind review rendering",
+      "frozen_or_generated": "frozen_copy",
+      "relative_path": "evidence/blind_evaluation/reviews/submission_F/pass_02/review.md",
+      "source_path": "evaluation/ugs_synth_blind_batch_001/results/submission_F/pass_02/review.md",
+      "source_sha256": "710b7472d15b638668164b1f652a0ac7d1b8465e9ef8a0f4065f826926ad2d0f"
+    },
+    {
+      "category": "frozen successful blind review",
+      "frozen_or_generated": "frozen_copy",
+      "relative_path": "evidence/blind_evaluation/reviews/submission_G/pass_01/review.json",
+      "source_path": "evaluation/ugs_synth_blind_batch_001/results/submission_G/pass_01/review.json",
+      "source_sha256": "a85bed11daa349dbb2d461ef0c966096f5d38217d0cf19bf9a21a84ff73b3ba8"
+    },
+    {
+      "category": "frozen successful blind review rendering",
+      "frozen_or_generated": "frozen_copy",
+      "relative_path": "evidence/blind_evaluation/reviews/submission_G/pass_01/review.md",
+      "source_path": "evaluation/ugs_synth_blind_batch_001/results/submission_G/pass_01/review.md",
+      "source_sha256": "21fea59c28bf47a99f31fb12ac267953e84679ec603c8a53132b70c3a234977d"
+    },
+    {
+      "category": "frozen successful blind review",
+      "frozen_or_generated": "frozen_copy",
+      "relative_path": "evidence/blind_evaluation/reviews/submission_G/pass_02/review.json",
+      "source_path": "evaluation/ugs_synth_blind_batch_001/results/submission_G/pass_02/review.json",
+      "source_sha256": "6b6ecc35f6aaacf99fffb06f8b388fa79a6e05d5bda6d3bda02d1e6e32724da9"
+    },
+    {
+      "category": "frozen successful blind review rendering",
+      "frozen_or_generated": "frozen_copy",
+      "relative_path": "evidence/blind_evaluation/reviews/submission_G/pass_02/review.md",
+      "source_path": "evaluation/ugs_synth_blind_batch_001/results/submission_G/pass_02/review.md",
+      "source_sha256": "59c328a46ec6d33135563d272844d6ea550fbc09d490263f71c47d0f92157dfe"
+    },
+    {
+      "category": "frozen successful blind review",
+      "frozen_or_generated": "frozen_copy",
+      "relative_path": "evidence/blind_evaluation/reviews/submission_H/pass_01/review.json",
+      "source_path": "evaluation/ugs_synth_blind_batch_001/results/submission_H/pass_01/review.json",
+      "source_sha256": "5a9f7546675da7a3549cbfd4e0eb83eaf2bd0878f38818d4fb15ddefe332f64f"
+    },
+    {
+      "category": "frozen successful blind review rendering",
+      "frozen_or_generated": "frozen_copy",
+      "relative_path": "evidence/blind_evaluation/reviews/submission_H/pass_01/review.md",
+      "source_path": "evaluation/ugs_synth_blind_batch_001/results/submission_H/pass_01/review.md",
+      "source_sha256": "59f5f6f0d93f3f889bc412589361ff2ff9f9e202614b0acf95ef86e003f7610e"
+    },
+    {
+      "category": "frozen successful blind review",
+      "frozen_or_generated": "frozen_copy",
+      "relative_path": "evidence/blind_evaluation/reviews/submission_H/pass_02/review.json",
+      "source_path": "evaluation/ugs_synth_blind_batch_001/results/submission_H/pass_02/review.json",
+      "source_sha256": "e0538f46a18f8f1ce2d52be7206fcdb401ea3c09332aac9dde0a6e34b03243aa"
+    },
+    {
+      "category": "frozen successful blind review rendering",
+      "frozen_or_generated": "frozen_copy",
+      "relative_path": "evidence/blind_evaluation/reviews/submission_H/pass_02/review.md",
+      "source_path": "evaluation/ugs_synth_blind_batch_001/results/submission_H/pass_02/review.md",
+      "source_sha256": "5b82d5cd22e2111c80595498b1306aa15bf9ae10f59daed4a6bcad12df3b36fd"
+    },
+    {
+      "category": "frozen blind-evaluation analysis",
+      "frozen_or_generated": "frozen_copy",
+      "relative_path": "evidence/blind_evaluation/submission_level_summary.csv",
+      "source_path": "evaluation/ugs_synth_blind_batch_001/analysis/submission_level_summary.csv",
+      "source_sha256": "1719904ce597072c4228697719e5647cd50682a3141b0aca7cb3d9aed837f4b0"
+    },
+    {
+      "category": "frozen final Worker submission",
+      "frozen_or_generated": "source_copy",
+      "relative_path": "evidence/final_submissions/pair_001/explicit_collaboration/README.md",
+      "source_path": "evaluation/ugs_synth_blind_batch_001/blind_packages/submission_A/submission/README.md",
+      "source_sha256": "c4200439ce84f30f51d7a7ecb41f5f74e6b472c269c58bd4161e1c7ceb8bebad"
+    },
+    {
+      "category": "frozen final Worker submission",
+      "frozen_or_generated": "source_copy",
+      "relative_path": "evidence/final_submissions/pair_001/explicit_collaboration/deliverables/case_summary.json",
+      "source_path": "evaluation/ugs_synth_blind_batch_001/blind_packages/submission_A/submission/deliverables/case_summary.json",
+      "source_sha256": "9cfffb405c1d0cb52d1e0dc55319e34fdcfedb69442648059604877f9373b580"
+    },
+    {
+      "category": "frozen final Worker submission",
+      "frozen_or_generated": "source_copy",
+      "relative_path": "evidence/final_submissions/pair_001/explicit_collaboration/deliverables/design_report.md",
+      "source_path": "evaluation/ugs_synth_blind_batch_001/blind_packages/submission_A/submission/deliverables/design_report.md",
+      "source_sha256": "81d8efc14d8b2247c0d5dad93bbdf8b6eb59e7b8bc7a15bf4bc3b08fd42906e6"
+    },
+    {
+      "category": "frozen final Worker submission",
+      "frozen_or_generated": "source_copy",
+      "relative_path": "evidence/final_submissions/pair_001/explicit_collaboration/deliverables/equipment.json",
+      "source_path": "evaluation/ugs_synth_blind_batch_001/blind_packages/submission_A/submission/deliverables/equipment.json",
+      "source_sha256": "4e61564f251f8925416b3f3036fbf51c4758e4b365e2b12114086f4a8ed6f6f7"
+    },
+    {
+      "category": "frozen final Worker submission",
+      "frozen_or_generated": "source_copy",
+      "relative_path": "evidence/final_submissions/pair_001/explicit_collaboration/deliverables/lifecycle_cost.json",
+      "source_path": "evaluation/ugs_synth_blind_batch_001/blind_packages/submission_A/submission/deliverables/lifecycle_cost.json",
+      "source_sha256": "0000f8cc41b0971b03e50c13cd045cacda4b17186322ddb9054e35e241a2278a"
+    },
+    {
+      "category": "frozen final Worker submission",
+      "frozen_or_generated": "source_copy",
+      "relative_path": "evidence/final_submissions/pair_001/explicit_collaboration/deliverables/operating_plan.json",
+      "source_path": "evaluation/ugs_synth_blind_batch_001/blind_packages/submission_A/submission/deliverables/operating_plan.json",
+      "source_sha256": "ef7d792c70f4990b8b4bb61413df729d7c691eb26fcc4c0c9eebde7b6348045f"
+    },
+    {
+      "category": "frozen final Worker submission",
+      "frozen_or_generated": "source_copy",
+      "relative_path": "evidence/final_submissions/pair_001/explicit_collaboration/deliverables/pipelines.json",
+      "source_path": "evaluation/ugs_synth_blind_batch_001/blind_packages/submission_A/submission/deliverables/pipelines.json",
+      "source_sha256": "176245dadf873040bb7ac405bff7b0365d6b0a1da4f748e193accb2fe4ec769a"
+    },
+    {
+      "category": "frozen final Worker submission",
+      "frozen_or_generated": "source_copy",
+      "relative_path": "evidence/final_submissions/pair_001/explicit_collaboration/deliverables/quantities.json",
+      "source_path": "evaluation/ugs_synth_blind_batch_001/blind_packages/submission_A/submission/deliverables/quantities.json",
+      "source_sha256": "dc4eaa0ed8a623596e799b0c17341d0e57468db6777b1534c761c2151b8cea69"
+    },
+    {
+      "category": "frozen final Worker submission",
+      "frozen_or_generated": "source_copy",
+      "relative_path": "evidence/final_submissions/pair_001/explicit_collaboration/deliverables/site_and_roads.json",
+      "source_path": "evaluation/ugs_synth_blind_batch_001/blind_packages/submission_A/submission/deliverables/site_and_roads.json",
+      "source_sha256": "788d4c5fd086c1b0745692f8608dfd517a5dcef9cdb9dfcbe9cf34c8d7ec13cf"
+    },
+    {
+      "category": "frozen final Worker submission",
+      "frozen_or_generated": "source_copy",
+      "relative_path": "evidence/final_submissions/pair_001/explicit_collaboration/deliverables/topology.json",
+      "source_path": "evaluation/ugs_synth_blind_batch_001/blind_packages/submission_A/submission/deliverables/topology.json",
+      "source_sha256": "bb23a616e6f6c6b65a18a782bab8b43102324bcbd0e4b1c271dd194a93e3548e"
+    },
+    {
+      "category": "frozen final Worker submission",
+      "frozen_or_generated": "source_copy",
+      "relative_path": "evidence/final_submissions/pair_001/explicit_collaboration/deliverables/verification.json",
+      "source_path": "evaluation/ugs_synth_blind_batch_001/blind_packages/submission_A/submission/deliverables/verification.json",
+      "source_sha256": "f0ee5dbdcb565e6f99f173afa1030e028e832e37680f78f30dbc236c7c2d319c"
+    },
+    {
+      "category": "frozen final Worker submission",
+      "frozen_or_generated": "source_copy",
+      "relative_path": "evidence/final_submissions/pair_001/explicit_collaboration/model/analysis.py",
+      "source_path": "evaluation/ugs_synth_blind_batch_001/blind_packages/submission_A/submission/model/analysis.py",
+      "source_sha256": "a2b4ac9d554eb3935e2b2a4fd83e44a01f685c583c10f859e49a7a2403baede4"
+    },
+    {
+      "category": "frozen final Worker submission",
+      "frozen_or_generated": "source_copy",
+      "relative_path": "evidence/final_submissions/pair_001/explicit_collaboration/model/build_deliverables.py",
+      "source_path": "evaluation/ugs_synth_blind_batch_001/blind_packages/submission_A/submission/model/build_deliverables.py",
+      "source_sha256": "57438c02dad77a5945b74ce6167b8d6079064d20f9e43de408ba8dc26bd53bf1"
+    },
+    {
+      "category": "frozen final Worker submission",
+      "frozen_or_generated": "source_copy",
+      "relative_path": "evidence/final_submissions/pair_001/explicit_collaboration/model/build_report.py",
+      "source_path": "evaluation/ugs_synth_blind_batch_001/blind_packages/submission_A/submission/model/build_report.py",
+      "source_sha256": "cb64a657f26eb614214cfc9027d79f49b2bfaa6a0f01d010f11c067f875c71f2"
+    },
+    {
+      "category": "frozen final Worker submission",
+      "frozen_or_generated": "source_copy",
+      "relative_path": "evidence/final_submissions/pair_001/explicit_collaboration/model/catalog.py",
+      "source_path": "evaluation/ugs_synth_blind_batch_001/blind_packages/submission_A/submission/model/catalog.py",
+      "source_sha256": "525ec44cbdeacbc9f8f9369ec2dbfa8f4d9677190333a2c2c272006d8f6172ae"
+    },
+    {
+      "category": "frozen final Worker submission",
+      "frozen_or_generated": "source_copy",
+      "relative_path": "evidence/final_submissions/pair_001/explicit_collaboration/model/checks.py",
+      "source_path": "evaluation/ugs_synth_blind_batch_001/blind_packages/submission_A/submission/model/checks.py",
+      "source_sha256": "10e545f66c6e12e7ea94dc73496eb4a7b59814192f51f9b8b13b4ce5ed00b4ab"
+    },
+    {
+      "category": "frozen final Worker submission",
+      "frozen_or_generated": "source_copy",
+      "relative_path": "evidence/final_submissions/pair_001/explicit_collaboration/model/design.py",
+      "source_path": "evaluation/ugs_synth_blind_batch_001/blind_packages/submission_A/submission/model/design.py",
+      "source_sha256": "5e3a22fba1b083055e3a94f1ba6cfdb6354333c9e041095281407bdd6190fc6e"
+    },
+    {
+      "category": "frozen final Worker submission",
+      "frozen_or_generated": "source_copy",
+      "relative_path": "evidence/final_submissions/pair_001/explicit_collaboration/model/geometry.py",
+      "source_path": "evaluation/ugs_synth_blind_batch_001/blind_packages/submission_A/submission/model/geometry.py",
+      "source_sha256": "92d7ba55cf9e95d0081e4f5d4b720021cbe351c926923ae65b5d9fea912f214f"
+    },
+    {
+      "category": "frozen final Worker submission",
+      "frozen_or_generated": "source_copy",
+      "relative_path": "evidence/final_submissions/pair_001/explicit_collaboration/model/process.py",
+      "source_path": "evaluation/ugs_synth_blind_batch_001/blind_packages/submission_A/submission/model/process.py",
+      "source_sha256": "c3c265660adfa154c4b31a0eff5b10616fd0cd1e5f44b59f5dd4b3f7e6beabd4"
+    },
+    {
+      "category": "frozen final Worker submission",
+      "frozen_or_generated": "source_copy",
+      "relative_path": "evidence/final_submissions/pair_001/explicit_collaboration/model/quantities.py",
+      "source_path": "evaluation/ugs_synth_blind_batch_001/blind_packages/submission_A/submission/model/quantities.py",
+      "source_sha256": "70db2db1b8e1d24d4e739e0c01935bc99fb001cb1c275df6246be125e50e5a0f"
+    },
+    {
+      "category": "frozen final Worker submission",
+      "frozen_or_generated": "source_copy",
+      "relative_path": "evidence/final_submissions/pair_001/explicit_collaboration/model/run_case.py",
+      "source_path": "evaluation/ugs_synth_blind_batch_001/blind_packages/submission_A/submission/model/run_case.py",
+      "source_sha256": "7a19ae6b7d4080bbd9f2e41b03e1a51dcdd652a2a5fa93ec9abed06cf225dfbf"
+    },
+    {
+      "category": "frozen final Worker submission",
+      "frozen_or_generated": "source_copy",
+      "relative_path": "evidence/final_submissions/pair_001/explicit_collaboration/model/scenarios.py",
+      "source_path": "evaluation/ugs_synth_blind_batch_001/blind_packages/submission_A/submission/model/scenarios.py",
+      "source_sha256": "03302de9c476a391fa824b655fa01d497d65554a6242925028ab9ce7aace5425"
+    },
+    {
+      "category": "frozen final Worker submission",
+      "frozen_or_generated": "source_copy",
+      "relative_path": "evidence/final_submissions/pair_001/explicit_collaboration/model/sweep.py",
+      "source_path": "evaluation/ugs_synth_blind_batch_001/blind_packages/submission_A/submission/model/sweep.py",
+      "source_sha256": "745388a578abac043aa074eb36617645f106e1d7a911543f43b30812d250a6a0"
+    },
+    {
+      "category": "frozen final Worker submission",
+      "frozen_or_generated": "source_copy",
+      "relative_path": "evidence/final_submissions/pair_001/worker_only/README.md",
+      "source_path": "evaluation/ugs_synth_blind_batch_001/blind_packages/submission_E/submission/README.md",
+      "source_sha256": "3f30df29c950be73b8e744610330e2cf70d4fecb17152864e61c99194ff458c1"
+    },
+    {
+      "category": "frozen final Worker submission",
+      "frozen_or_generated": "source_copy",
+      "relative_path": "evidence/final_submissions/pair_001/worker_only/design/check_summary.json",
+      "source_path": "evaluation/ugs_synth_blind_batch_001/blind_packages/submission_E/submission/design/check_summary.json",
+      "source_sha256": "e94bbda2032bed31ec5466bdde0ee2daecfa1b358f6877db420375bdee89ded8"
+    },
+    {
+      "category": "frozen final Worker submission",
+      "frozen_or_generated": "source_copy",
+      "relative_path": "evidence/final_submissions/pair_001/worker_only/design/equipment_instances.json",
+      "source_path": "evaluation/ugs_synth_blind_batch_001/blind_packages/submission_E/submission/design/equipment_instances.json",
+      "source_sha256": "60b44b8ce345d324019636a5a09c0638bac925e743db4540c7d109396a73f5a3"
+    },
+    {
+      "category": "frozen final Worker submission",
+      "frozen_or_generated": "source_copy",
+      "relative_path": "evidence/final_submissions/pair_001/worker_only/design/layout_roads.json",
+      "source_path": "evaluation/ugs_synth_blind_batch_001/blind_packages/submission_E/submission/design/layout_roads.json",
+      "source_sha256": "d17ed33be99a7499aec3de55690219c2cb3ca3d6911c14d217731cc35be6e5f6"
+    },
+    {
+      "category": "frozen final Worker submission",
+      "frozen_or_generated": "source_copy",
+      "relative_path": "evidence/final_submissions/pair_001/worker_only/design/pipelines.json",
+      "source_path": "evaluation/ugs_synth_blind_batch_001/blind_packages/submission_E/submission/design/pipelines.json",
+      "source_sha256": "7df252d21350c1cda2397f0e3550fa37eb8e73d914e1b5f1197750655aec8691"
+    },
+    {
+      "category": "frozen final Worker submission",
+      "frozen_or_generated": "source_copy",
+      "relative_path": "evidence/final_submissions/pair_001/worker_only/design/quantities_lcc.json",
+      "source_path": "evaluation/ugs_synth_blind_batch_001/blind_packages/submission_E/submission/design/quantities_lcc.json",
+      "source_sha256": "093266200fcc0c177b15bfb001f37c3ab33d75cfcc3b5b99c325bf33474b43c1"
+    },
+    {
+      "category": "frozen final Worker submission",
+      "frozen_or_generated": "source_copy",
+      "relative_path": "evidence/final_submissions/pair_001/worker_only/design/scenarios_operating.json",
+      "source_path": "evaluation/ugs_synth_blind_batch_001/blind_packages/submission_E/submission/design/scenarios_operating.json",
+      "source_sha256": "e1ab38894fb44c7301bbfb62c5c364e5730c9cea1abe997b040086b5f5245271"
+    },
+    {
+      "category": "frozen final Worker submission",
+      "frozen_or_generated": "source_copy",
+      "relative_path": "evidence/final_submissions/pair_001/worker_only/report/design_report.md",
+      "source_path": "evaluation/ugs_synth_blind_batch_001/blind_packages/submission_E/submission/report/design_report.md",
+      "source_sha256": "11908b9f92f2487ca668364570215677a2b13607c8ad14e6590a23c61d447ec9"
+    },
+    {
+      "category": "frozen final Worker submission",
+      "frozen_or_generated": "source_copy",
+      "relative_path": "evidence/final_submissions/pair_001/worker_only/run.py",
+      "source_path": "evaluation/ugs_synth_blind_batch_001/blind_packages/submission_E/submission/run.py",
+      "source_sha256": "ffa67bc14d97c0c403001f416dd7b82c4f21e2cecf19737f53291af2c70fd566"
+    },
+    {
+      "category": "frozen final Worker submission",
+      "frozen_or_generated": "source_copy",
+      "relative_path": "evidence/final_submissions/pair_001/worker_only/src/build_outputs.py",
+      "source_path": "evaluation/ugs_synth_blind_batch_001/blind_packages/submission_E/submission/src/build_outputs.py",
+      "source_sha256": "f68dccbf165822ed81f9be5ac3f6d0b20aca39d5ab2ad2b2fdad2dff3b6c32bb"
+    },
+    {
+      "category": "frozen final Worker submission",
+      "frozen_or_generated": "source_copy",
+      "relative_path": "evidence/final_submissions/pair_001/worker_only/src/ugssynth/__init__.py",
+      "source_path": "evaluation/ugs_synth_blind_batch_001/blind_packages/submission_E/submission/src/ugssynth/__init__.py",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "category": "frozen final Worker submission",
+      "frozen_or_generated": "source_copy",
+      "relative_path": "evidence/final_submissions/pair_001/worker_only/src/ugssynth/data.py",
+      "source_path": "evaluation/ugs_synth_blind_batch_001/blind_packages/submission_E/submission/src/ugssynth/data.py",
+      "source_sha256": "c59ddbd19cea0a28243827a06c6f94ffe7c6f63fc3503b94912c6190e96bb1ac"
+    },
+    {
+      "category": "frozen final Worker submission",
+      "frozen_or_generated": "source_copy",
+      "relative_path": "evidence/final_submissions/pair_001/worker_only/src/ugssynth/engine.py",
+      "source_path": "evaluation/ugs_synth_blind_batch_001/blind_packages/submission_E/submission/src/ugssynth/engine.py",
+      "source_sha256": "b95acea26fbcf228863fbdedaae15431fe97ffa20d9acf127972b41a7aeb29c2"
+    },
+    {
+      "category": "frozen final Worker submission",
+      "frozen_or_generated": "source_copy",
+      "relative_path": "evidence/final_submissions/pair_001/worker_only/src/ugssynth/geometry.py",
+      "source_path": "evaluation/ugs_synth_blind_batch_001/blind_packages/submission_E/submission/src/ugssynth/geometry.py",
+      "source_sha256": "803b8cc9bacb2aab2a52b773f3b6abcd8783c34f378e1426b15e19a2328ff9e4"
+    },
+    {
+      "category": "frozen final Worker submission",
+      "frozen_or_generated": "source_copy",
+      "relative_path": "evidence/final_submissions/pair_001/worker_only/src/ugssynth/model.py",
+      "source_path": "evaluation/ugs_synth_blind_batch_001/blind_packages/submission_E/submission/src/ugssynth/model.py",
+      "source_sha256": "f3e150eced1209c8c35bceb4162ffb96c7cf18cc5fe8c334dfcd9519fd06963c"
+    },
+    {
+      "category": "frozen final Worker submission",
+      "frozen_or_generated": "source_copy",
+      "relative_path": "evidence/final_submissions/pair_001/worker_only/src/ugssynth/physics.py",
+      "source_path": "evaluation/ugs_synth_blind_batch_001/blind_packages/submission_E/submission/src/ugssynth/physics.py",
+      "source_sha256": "634cb69fb5b87de1356da24557a6b1d7f784fc07393cbf1b4747cd30b609afeb"
+    },
+    {
+      "category": "frozen final Worker submission",
+      "frozen_or_generated": "source_copy",
+      "relative_path": "evidence/final_submissions/pair_002/explicit_collaboration/DESIGN_REPORT.md",
+      "source_path": "evaluation/ugs_synth_blind_batch_001/blind_packages/submission_D/submission/DESIGN_REPORT.md",
+      "source_sha256": "a6ca5a07f0ae95f5cc7a2a9551edfaaf02e401f9ed676b579ac43094b57e3c45"
+    },
+    {
+      "category": "frozen final Worker submission",
+      "frozen_or_generated": "source_copy",
+      "relative_path": "evidence/final_submissions/pair_002/explicit_collaboration/README.md",
+      "source_path": "evaluation/ugs_synth_blind_batch_001/blind_packages/submission_D/submission/README.md",
+      "source_sha256": "4d5d7c824d2e8ffb41953ef836dc4ddaf2d988f408897b93e1c9961f828af130"
+    },
+    {
+      "category": "frozen final Worker submission",
+      "frozen_or_generated": "source_copy",
+      "relative_path": "evidence/final_submissions/pair_002/explicit_collaboration/deliverables/checks.csv",
+      "source_path": "evaluation/ugs_synth_blind_batch_001/blind_packages/submission_D/submission/deliverables/checks.csv",
+      "source_sha256": "abf52f26aad81a44d19e81bced35f4f7618d36b57b8e545e139ea032e0fa3162"
+    },
+    {
+      "category": "frozen final Worker submission",
+      "frozen_or_generated": "source_copy",
+      "relative_path": "evidence/final_submissions/pair_002/explicit_collaboration/deliverables/design.json",
+      "source_path": "evaluation/ugs_synth_blind_batch_001/blind_packages/submission_D/submission/deliverables/design.json",
+      "source_sha256": "eb27fcee6b9dd46bc8856ee4ce98d3da45dd8fc2563c7f0d4ccbb7783db5eb89"
+    },
+    {
+      "category": "frozen final Worker submission",
+      "frozen_or_generated": "source_copy",
+      "relative_path": "evidence/final_submissions/pair_002/explicit_collaboration/deliverables/diameters.json",
+      "source_path": "evaluation/ugs_synth_blind_batch_001/blind_packages/submission_D/submission/deliverables/diameters.json",
+      "source_sha256": "64348a4a81c8d6031eee9987d6e8284dc525222e68c8c58a5d54386bca776004"
+    },
+    {
+      "category": "frozen final Worker submission",
+      "frozen_or_generated": "source_copy",
+      "relative_path": "evidence/final_submissions/pair_002/explicit_collaboration/deliverables/layout.svg",
+      "source_path": "evaluation/ugs_synth_blind_batch_001/blind_packages/submission_D/submission/deliverables/layout.svg",
+      "source_sha256": "ca006a04df9ccfc256da0a00a306f9a03edb0249579a3e38342d7eb3f062594b"
+    },
+    {
+      "category": "frozen final Worker submission",
+      "frozen_or_generated": "source_copy",
+      "relative_path": "evidence/final_submissions/pair_002/explicit_collaboration/deliverables/verification.md",
+      "source_path": "evaluation/ugs_synth_blind_batch_001/blind_packages/submission_D/submission/deliverables/verification.md",
+      "source_sha256": "c0a7decc9a0f7a18ab29ced469d90e742f4028828e5ae53f89d2fa1c3b0a2d56"
+    },
+    {
+      "category": "frozen final Worker submission",
+      "frozen_or_generated": "source_copy",
+      "relative_path": "evidence/final_submissions/pair_002/explicit_collaboration/tools/build.py",
+      "source_path": "evaluation/ugs_synth_blind_batch_001/blind_packages/submission_D/submission/tools/build.py",
+      "source_sha256": "644fbf70784e4709861b7664b086264856ae276dc116883c1b00c392f77c5235"
+    },
+    {
+      "category": "frozen final Worker submission",
+      "frozen_or_generated": "source_copy",
+      "relative_path": "evidence/final_submissions/pair_002/explicit_collaboration/tools/crosscheck.py",
+      "source_path": "evaluation/ugs_synth_blind_batch_001/blind_packages/submission_D/submission/tools/crosscheck.py",
+      "source_sha256": "84def78b8eafecdaead70b559a97695869ccc350071ecc44410435aea31df067"
+    },
+    {
+      "category": "frozen final Worker submission",
+      "frozen_or_generated": "source_copy",
+      "relative_path": "evidence/final_submissions/pair_002/explicit_collaboration/tools/make_report.py",
+      "source_path": "evaluation/ugs_synth_blind_batch_001/blind_packages/submission_D/submission/tools/make_report.py",
+      "source_sha256": "3fd1bf8069a1cbe1d3d1dca26ff3a619a0f17e40d0087ad9fecddc18aa4a376a"
+    },
+    {
+      "category": "frozen final Worker submission",
+      "frozen_or_generated": "source_copy",
+      "relative_path": "evidence/final_submissions/pair_002/explicit_collaboration/tools/optimize.py",
+      "source_path": "evaluation/ugs_synth_blind_batch_001/blind_packages/submission_D/submission/tools/optimize.py",
+      "source_sha256": "db34f6bed09fcab612fa185017097b8ed8e5da6850029879c4eee3769706a01d"
+    },
+    {
+      "category": "frozen final Worker submission",
+      "frozen_or_generated": "source_copy",
+      "relative_path": "evidence/final_submissions/pair_002/explicit_collaboration/tools/ugs_basis.py",
+      "source_path": "evaluation/ugs_synth_blind_batch_001/blind_packages/submission_D/submission/tools/ugs_basis.py",
+      "source_sha256": "7f74a69b7cb48b22d880ce98b7e9e5a8deb5d2f414b8ffc6a428e7c98a42aa7d"
+    },
+    {
+      "category": "frozen final Worker submission",
+      "frozen_or_generated": "source_copy",
+      "relative_path": "evidence/final_submissions/pair_002/explicit_collaboration/tools/ugs_check.py",
+      "source_path": "evaluation/ugs_synth_blind_batch_001/blind_packages/submission_D/submission/tools/ugs_check.py",
+      "source_sha256": "fcbaca8cab8c29528baed050e1ebeff812ce1f59e2791f181df41d2309546ee3"
+    },
+    {
+      "category": "frozen final Worker submission",
+      "frozen_or_generated": "source_copy",
+      "relative_path": "evidence/final_submissions/pair_002/explicit_collaboration/tools/ugs_cost.py",
+      "source_path": "evaluation/ugs_synth_blind_batch_001/blind_packages/submission_D/submission/tools/ugs_cost.py",
+      "source_sha256": "fca00a52530e82d1c5c7a1ef1c87085657707610e15b3d874d5d25995a2fff6a"
+    },
+    {
+      "category": "frozen final Worker submission",
+      "frozen_or_generated": "source_copy",
+      "relative_path": "evidence/final_submissions/pair_002/explicit_collaboration/tools/ugs_design.py",
+      "source_path": "evaluation/ugs_synth_blind_batch_001/blind_packages/submission_D/submission/tools/ugs_design.py",
+      "source_sha256": "7c471b1e62a27c222691f284e3f13aefb648361094b1366609c7043b607f8ba9"
+    },
+    {
+      "category": "frozen final Worker submission",
+      "frozen_or_generated": "source_copy",
+      "relative_path": "evidence/final_submissions/pair_002/explicit_collaboration/tools/ugs_operate.py",
+      "source_path": "evaluation/ugs_synth_blind_batch_001/blind_packages/submission_D/submission/tools/ugs_operate.py",
+      "source_sha256": "340bdb8856b3cec7ac893635cb343903be9c7efad775689e2e136f6a292db9f3"
+    },
+    {
+      "category": "frozen final Worker submission",
+      "frozen_or_generated": "source_copy",
+      "relative_path": "evidence/final_submissions/pair_002/worker_only/README.md",
+      "source_path": "evaluation/ugs_synth_blind_batch_001/blind_packages/submission_B/submission/README.md",
+      "source_sha256": "8923997e3a9ec0e3be6c32cf92144a497dc7c4dcd99ebfc3ebefda9b7ebaa470"
+    },
+    {
+      "category": "frozen final Worker submission",
+      "frozen_or_generated": "source_copy",
+      "relative_path": "evidence/final_submissions/pair_002/worker_only/design.json",
+      "source_path": "evaluation/ugs_synth_blind_batch_001/blind_packages/submission_B/submission/design.json",
+      "source_sha256": "08270635c0f105bfd5e1b0b3d78619c4228d1d33e10b56dff349fa47cda5fefd"
+    },
+    {
+      "category": "frozen final Worker submission",
+      "frozen_or_generated": "source_copy",
+      "relative_path": "evidence/final_submissions/pair_002/worker_only/design.py",
+      "source_path": "evaluation/ugs_synth_blind_batch_001/blind_packages/submission_B/submission/design.py",
+      "source_sha256": "f6b0fd996b6da607352932a028f8c9ac9394cb3753e3358df4995e1dd2ed2a97"
+    },
+    {
+      "category": "frozen final Worker submission",
+      "frozen_or_generated": "source_copy",
+      "relative_path": "evidence/final_submissions/pair_002/worker_only/design_report.md",
+      "source_path": "evaluation/ugs_synth_blind_batch_001/blind_packages/submission_B/submission/design_report.md",
+      "source_sha256": "53a611bd00f6e9ce46a5ffbfa7cd864e42c96f2252780add7b367ed5f7142915"
+    },
+    {
+      "category": "frozen final Worker submission",
+      "frozen_or_generated": "source_copy",
+      "relative_path": "evidence/final_submissions/pair_002/worker_only/draw.py",
+      "source_path": "evaluation/ugs_synth_blind_batch_001/blind_packages/submission_B/submission/draw.py",
+      "source_sha256": "19f83943d92d2b0d5b33f56e2284ba580efdf0ec838291e13ec6a395b0b36516"
+    },
+    {
+      "category": "frozen final Worker submission",
+      "frozen_or_generated": "source_copy",
+      "relative_path": "evidence/final_submissions/pair_002/worker_only/export.py",
+      "source_path": "evaluation/ugs_synth_blind_batch_001/blind_packages/submission_B/submission/export.py",
+      "source_sha256": "f6c125d3913451a86aefd3729034b2c178a5315de9423a358d876d36550fc37b"
+    },
+    {
+      "category": "frozen final Worker submission",
+      "frozen_or_generated": "source_copy",
+      "relative_path": "evidence/final_submissions/pair_002/worker_only/layout.svg",
+      "source_path": "evaluation/ugs_synth_blind_batch_001/blind_packages/submission_B/submission/layout.svg",
+      "source_sha256": "4250f6c228ed4c871ff801463634f30e9a1ba91e06d5b628624f30e6c4b89de7"
+    },
+    {
+      "category": "frozen final Worker submission",
+      "frozen_or_generated": "source_copy",
+      "relative_path": "evidence/final_submissions/pair_002/worker_only/lib_geom.py",
+      "source_path": "evaluation/ugs_synth_blind_batch_001/blind_packages/submission_B/submission/lib_geom.py",
+      "source_sha256": "c2876cc0b6153889353dc69bc703fa34270947ab8fb072c9f1ab604b5ab07f61"
+    },
+    {
+      "category": "frozen final Worker submission",
+      "frozen_or_generated": "source_copy",
+      "relative_path": "evidence/final_submissions/pair_002/worker_only/main.py",
+      "source_path": "evaluation/ugs_synth_blind_batch_001/blind_packages/submission_B/submission/main.py",
+      "source_sha256": "6ec8449cef2c2c015cfc081d7913fe4fea8c589e1d22e6b5a8afdadaadb2879a"
+    },
+    {
+      "category": "frozen final Worker submission",
+      "frozen_or_generated": "source_copy",
+      "relative_path": "evidence/final_submissions/pair_002/worker_only/opt_diameters.json",
+      "source_path": "evaluation/ugs_synth_blind_batch_001/blind_packages/submission_B/submission/opt_diameters.json",
+      "source_sha256": "9ffcd14a0e446944e8fe67edd24e870fe923a72b2b7374a0f03df4dc6fee6b59"
+    },
+    {
+      "category": "frozen final Worker submission",
+      "frozen_or_generated": "source_copy",
+      "relative_path": "evidence/final_submissions/pair_002/worker_only/optimize.py",
+      "source_path": "evaluation/ugs_synth_blind_batch_001/blind_packages/submission_B/submission/optimize.py",
+      "source_sha256": "17a5e5fe857b195ba11ffc9d9f2d1089817d150b4f4657d269a4993d4c3458bb"
+    },
+    {
+      "category": "frozen final Worker submission",
+      "frozen_or_generated": "source_copy",
+      "relative_path": "evidence/final_submissions/pair_002/worker_only/report.py",
+      "source_path": "evaluation/ugs_synth_blind_batch_001/blind_packages/submission_B/submission/report.py",
+      "source_sha256": "d6d25d3a2c5353643ddd80c96cf0ae6ed2991c58dde95ce62d9313451e005188"
+    },
+    {
+      "category": "frozen final Worker submission",
+      "frozen_or_generated": "source_copy",
+      "relative_path": "evidence/final_submissions/pair_002/worker_only/sim.py",
+      "source_path": "evaluation/ugs_synth_blind_batch_001/blind_packages/submission_B/submission/sim.py",
+      "source_sha256": "266f868fadecd0fd58545c1becdc253acc3488eed054a67f9c78d1fff08abd96"
+    },
+    {
+      "category": "frozen final Worker submission",
+      "frozen_or_generated": "source_copy",
+      "relative_path": "evidence/final_submissions/pair_002/worker_only/solve.py",
+      "source_path": "evaluation/ugs_synth_blind_batch_001/blind_packages/submission_B/submission/solve.py",
+      "source_sha256": "1553656f8eda590d7cd06232de1a4bf46db384c89c2864ac2290786614cf48ae"
+    },
+    {
+      "category": "frozen final Worker submission",
+      "frozen_or_generated": "source_copy",
+      "relative_path": "evidence/final_submissions/pair_002/worker_only/ugscat.py",
+      "source_path": "evaluation/ugs_synth_blind_batch_001/blind_packages/submission_B/submission/ugscat.py",
+      "source_sha256": "55c20d4c1f76aa956988c75f7b2c079079923fb1edcfd0d086e3191ca3a5c53c"
+    },
+    {
+      "category": "frozen final Worker submission",
+      "frozen_or_generated": "source_copy",
+      "relative_path": "evidence/final_submissions/pair_002/worker_only/verification.json",
+      "source_path": "evaluation/ugs_synth_blind_batch_001/blind_packages/submission_B/submission/verification.json",
+      "source_sha256": "679228f11d95579a58b1c3de6d47dcbf3124c386b8ee6cfa6bf668e7a1595bf7"
+    },
+    {
+      "category": "frozen final Worker submission",
+      "frozen_or_generated": "source_copy",
+      "relative_path": "evidence/final_submissions/pair_002/worker_only/verify.py",
+      "source_path": "evaluation/ugs_synth_blind_batch_001/blind_packages/submission_B/submission/verify.py",
+      "source_sha256": "81ebb7070f86be0604c25483c6a3226748cfea4764a3d8ce464a1d0a36b44dec"
+    },
+    {
+      "category": "frozen final Worker submission",
+      "frozen_or_generated": "source_copy",
+      "relative_path": "evidence/final_submissions/pair_003/explicit_collaboration/deliverables/README.md",
+      "source_path": "evaluation/ugs_synth_blind_batch_001/blind_packages/submission_H/submission/deliverables/README.md",
+      "source_sha256": "f56d20760a157c8efea15e80958ba463c7e205168969806f9f7208fe8925b036"
+    },
+    {
+      "category": "frozen final Worker submission",
+      "frozen_or_generated": "source_copy",
+      "relative_path": "evidence/final_submissions/pair_003/explicit_collaboration/deliverables/design.json",
+      "source_path": "evaluation/ugs_synth_blind_batch_001/blind_packages/submission_H/submission/deliverables/design.json",
+      "source_sha256": "a3d272ffc530fe2009e308721afeac4c6c5785b6ca475a05252d7dc039c01c7b"
+    },
+    {
+      "category": "frozen final Worker submission",
+      "frozen_or_generated": "source_copy",
+      "relative_path": "evidence/final_submissions/pair_003/explicit_collaboration/deliverables/design_report.md",
+      "source_path": "evaluation/ugs_synth_blind_batch_001/blind_packages/submission_H/submission/deliverables/design_report.md",
+      "source_sha256": "819122b0eb08e63686cbd46e87c1debe71bb326871e4d9375f01547af89ead1a"
+    },
+    {
+      "category": "frozen final Worker submission",
+      "frozen_or_generated": "source_copy",
+      "relative_path": "evidence/final_submissions/pair_003/explicit_collaboration/deliverables/layout.svg",
+      "source_path": "evaluation/ugs_synth_blind_batch_001/blind_packages/submission_H/submission/deliverables/layout.svg",
+      "source_sha256": "e6153244c39824065b53495abafec04b817f2ea0c50aee4a04d4997a1dc4b7d7"
+    },
+    {
+      "category": "frozen final Worker submission",
+      "frozen_or_generated": "source_copy",
+      "relative_path": "evidence/final_submissions/pair_003/explicit_collaboration/deliverables/validation_report.md",
+      "source_path": "evaluation/ugs_synth_blind_batch_001/blind_packages/submission_H/submission/deliverables/validation_report.md",
+      "source_sha256": "2e93e47cc22465e429fe58cd36f75de418b215633b975d360099f3f32881fb35"
+    },
+    {
+      "category": "frozen final Worker submission",
+      "frozen_or_generated": "source_copy",
+      "relative_path": "evidence/final_submissions/pair_003/explicit_collaboration/ugs_build.py",
+      "source_path": "evaluation/ugs_synth_blind_batch_001/blind_packages/submission_H/submission/ugs_build.py",
+      "source_sha256": "ed7e32c05ed3cf25cfeff01d720f1751a5d1c1c0e7d5d2146ac0eb6fd25bf57c"
+    },
+    {
+      "category": "frozen final Worker submission",
+      "frozen_or_generated": "source_copy",
+      "relative_path": "evidence/final_submissions/pair_003/explicit_collaboration/ugs_design.py",
+      "source_path": "evaluation/ugs_synth_blind_batch_001/blind_packages/submission_H/submission/ugs_design.py",
+      "source_sha256": "18f74dd3831fcd4126294c51c8a57b0c0721d39c9ca9738bba8c5961ca433189"
+    },
+    {
+      "category": "frozen final Worker submission",
+      "frozen_or_generated": "source_copy",
+      "relative_path": "evidence/final_submissions/pair_003/explicit_collaboration/ugs_lib.py",
+      "source_path": "evaluation/ugs_synth_blind_batch_001/blind_packages/submission_H/submission/ugs_lib.py",
+      "source_sha256": "0f00e71998f59be1a99f3a92b62a47cebca8110ab6652fa21ea77c14aedd2977"
+    },
+    {
+      "category": "frozen final Worker submission",
+      "frozen_or_generated": "source_copy",
+      "relative_path": "evidence/final_submissions/pair_003/explicit_collaboration/ugs_solve.py",
+      "source_path": "evaluation/ugs_synth_blind_batch_001/blind_packages/submission_H/submission/ugs_solve.py",
+      "source_sha256": "48b785b014c16d4a9ff0f13725ade8ca8e36302c3ef15b5f93dc83983b23b1c5"
+    },
+    {
+      "category": "frozen final Worker submission",
+      "frozen_or_generated": "source_copy",
+      "relative_path": "evidence/final_submissions/pair_003/explicit_collaboration/ugs_validate.py",
+      "source_path": "evaluation/ugs_synth_blind_batch_001/blind_packages/submission_H/submission/ugs_validate.py",
+      "source_sha256": "f24bd063157be4103362f5bbf8dd3ad4a4e72a25f2b0d535a4f1d9cde66acc45"
+    },
+    {
+      "category": "frozen final Worker submission",
+      "frozen_or_generated": "source_copy",
+      "relative_path": "evidence/final_submissions/pair_003/worker_only/README.md",
+      "source_path": "evaluation/ugs_synth_blind_batch_001/blind_packages/submission_F/submission/README.md",
+      "source_sha256": "4b704977c1e36157594d2d62577a3390634359a2bd7cbb99b51acf132e244d5d"
+    },
+    {
+      "category": "frozen final Worker submission",
+      "frozen_or_generated": "source_copy",
+      "relative_path": "evidence/final_submissions/pair_003/worker_only/calc/checks.py",
+      "source_path": "evaluation/ugs_synth_blind_batch_001/blind_packages/submission_F/submission/calc/checks.py",
+      "source_sha256": "359f125a7a7c914aef66a7856064d912ce2404dec7cf4df589679534f593d3ae"
+    },
+    {
+      "category": "frozen final Worker submission",
+      "frozen_or_generated": "source_copy",
+      "relative_path": "evidence/final_submissions/pair_003/worker_only/calc/design.py",
+      "source_path": "evaluation/ugs_synth_blind_batch_001/blind_packages/submission_F/submission/calc/design.py",
+      "source_sha256": "c52b4f319ae48844c880fef1cc0d3951fdbf4806659191fcef0ed725292cdf92"
+    },
+    {
+      "category": "frozen final Worker submission",
+      "frozen_or_generated": "source_copy",
+      "relative_path": "evidence/final_submissions/pair_003/worker_only/calc/export.py",
+      "source_path": "evaluation/ugs_synth_blind_batch_001/blind_packages/submission_F/submission/calc/export.py",
+      "source_sha256": "3254fb19917fa3018798a3884a840534c241e4b9955a83c37c73706acefc3c1c"
+    },
+    {
+      "category": "frozen final Worker submission",
+      "frozen_or_generated": "source_copy",
+      "relative_path": "evidence/final_submissions/pair_003/worker_only/calc/lcc.py",
+      "source_path": "evaluation/ugs_synth_blind_batch_001/blind_packages/submission_F/submission/calc/lcc.py",
+      "source_sha256": "a48be6c676c1a7865a77f67b994b39b7dd45220b89c23dd2eb887406a34faa12"
+    },
+    {
+      "category": "frozen final Worker submission",
+      "frozen_or_generated": "source_copy",
+      "relative_path": "evidence/final_submissions/pair_003/worker_only/calc/model.py",
+      "source_path": "evaluation/ugs_synth_blind_batch_001/blind_packages/submission_F/submission/calc/model.py",
+      "source_sha256": "82e63d78999df647c83d68b628a37273615b5ab709bb2416ce3705fd8d167f2f"
+    },
+    {
+      "category": "frozen final Worker submission",
+      "frozen_or_generated": "source_copy",
+      "relative_path": "evidence/final_submissions/pair_003/worker_only/calc/optimize.py",
+      "source_path": "evaluation/ugs_synth_blind_batch_001/blind_packages/submission_F/submission/calc/optimize.py",
+      "source_sha256": "c06b90f1e4c691a254361ac4832cab01a775df8697bcb13dc112b0b03213a54d"
+    },
+    {
+      "category": "frozen final Worker submission",
+      "frozen_or_generated": "source_copy",
+      "relative_path": "evidence/final_submissions/pair_003/worker_only/calc/ugslib.py",
+      "source_path": "evaluation/ugs_synth_blind_batch_001/blind_packages/submission_F/submission/calc/ugslib.py",
+      "source_sha256": "05c4d480f3bc4f95b702e7572ca90cbb3f68013a18db203d63c9507bce025ec6"
+    },
+    {
+      "category": "frozen final Worker submission",
+      "frozen_or_generated": "source_copy",
+      "relative_path": "evidence/final_submissions/pair_003/worker_only/calc/validate.py",
+      "source_path": "evaluation/ugs_synth_blind_batch_001/blind_packages/submission_F/submission/calc/validate.py",
+      "source_sha256": "86241713c94e8a5ab23eee413d3cd0380c097511e316a049a9a7866d5d2139bd"
+    },
+    {
+      "category": "frozen final Worker submission",
+      "frozen_or_generated": "source_copy",
+      "relative_path": "evidence/final_submissions/pair_003/worker_only/data/design.json",
+      "source_path": "evaluation/ugs_synth_blind_batch_001/blind_packages/submission_F/submission/data/design.json",
+      "source_sha256": "39fc3858dbbf1ebb4144c570c1df77b15e72f607279d10ffa0a81247855df440"
+    },
+    {
+      "category": "frozen final Worker submission",
+      "frozen_or_generated": "source_copy",
+      "relative_path": "evidence/final_submissions/pair_003/worker_only/data/pipe_sizes.json",
+      "source_path": "evaluation/ugs_synth_blind_batch_001/blind_packages/submission_F/submission/data/pipe_sizes.json",
+      "source_sha256": "c1ac54a1d247f0f25904cd827913afe444e3a12c0495f10dd3186b54fadd7cd2"
+    },
+    {
+      "category": "frozen final Worker submission",
+      "frozen_or_generated": "source_copy",
+      "relative_path": "evidence/final_submissions/pair_003/worker_only/design_report.md",
+      "source_path": "evaluation/ugs_synth_blind_batch_001/blind_packages/submission_F/submission/design_report.md",
+      "source_sha256": "3dbfb7c05d84c8820ffda5d81ea874bffa7cdea49de283516354736822f1d4bc"
+    },
+    {
+      "category": "frozen final Worker submission",
+      "frozen_or_generated": "source_copy",
+      "relative_path": "evidence/final_submissions/pair_003/worker_only/results/lcc.json",
+      "source_path": "evaluation/ugs_synth_blind_batch_001/blind_packages/submission_F/submission/results/lcc.json",
+      "source_sha256": "8b79cbf4bb9ce691c75314a44fb47189b2acc1825fb8041e33dfffbb17029370"
+    },
+    {
+      "category": "frozen final Worker submission",
+      "frozen_or_generated": "source_copy",
+      "relative_path": "evidence/final_submissions/pair_003/worker_only/results/quantities.json",
+      "source_path": "evaluation/ugs_synth_blind_batch_001/blind_packages/submission_F/submission/results/quantities.json",
+      "source_sha256": "5e4729f6fb8cc31d18d2deb27596ef3776b00fcd1df2db0a54cbfa5f1ef1ff86"
+    },
+    {
+      "category": "frozen final Worker submission",
+      "frozen_or_generated": "source_copy",
+      "relative_path": "evidence/final_submissions/pair_003/worker_only/results/scenario_results.json",
+      "source_path": "evaluation/ugs_synth_blind_batch_001/blind_packages/submission_F/submission/results/scenario_results.json",
+      "source_sha256": "451e6528b4657bf2a22cfb3024bfbbad4a2e6ce42907bd2215bbced02a9cc206"
+    },
+    {
+      "category": "frozen final Worker submission",
+      "frozen_or_generated": "source_copy",
+      "relative_path": "evidence/final_submissions/pair_003/worker_only/results/validation.json",
+      "source_path": "evaluation/ugs_synth_blind_batch_001/blind_packages/submission_F/submission/results/validation.json",
+      "source_sha256": "6ac6681185267a1ce5e764c7527b7715a309b24db7250c2295a543ad79f3fba4"
+    },
+    {
+      "category": "frozen final Worker submission",
+      "frozen_or_generated": "source_copy",
+      "relative_path": "evidence/final_submissions/pair_004/explicit_collaboration/README.md",
+      "source_path": "evaluation/ugs_synth_blind_batch_001/blind_packages/submission_G/submission/README.md",
+      "source_sha256": "ec6dff902197f2f67ae9bd9210ade950f2806735510ec45265f92cef7d2d1b61"
+    },
+    {
+      "category": "frozen final Worker submission",
+      "frozen_or_generated": "source_copy",
+      "relative_path": "evidence/final_submissions/pair_004/explicit_collaboration/deliverables/design_report.md",
+      "source_path": "evaluation/ugs_synth_blind_batch_001/blind_packages/submission_G/submission/deliverables/design_report.md",
+      "source_sha256": "c20cc22f5eed447f405cb71ee54dfbdd11bfd20b67675631687f05e5dce03b2d"
+    },
+    {
+      "category": "frozen final Worker submission",
+      "frozen_or_generated": "source_copy",
+      "relative_path": "evidence/final_submissions/pair_004/explicit_collaboration/deliverables/equipment_register.csv",
+      "source_path": "evaluation/ugs_synth_blind_batch_001/blind_packages/submission_G/submission/deliverables/equipment_register.csv",
+      "source_sha256": "6c97967dd17c88b2564bc3c6050eb510cff182aa00eca57e2909036d3c33da25"
+    },
+    {
+      "category": "frozen final Worker submission",
+      "frozen_or_generated": "source_copy",
+      "relative_path": "evidence/final_submissions/pair_004/explicit_collaboration/deliverables/equipment_register.json",
+      "source_path": "evaluation/ugs_synth_blind_batch_001/blind_packages/submission_G/submission/deliverables/equipment_register.json",
+      "source_sha256": "27b2c765aaa8e31e4965dbc3a00c26a2e7f3ac860bc79a0253fa9b3aa8dafd63"
+    },
+    {
+      "category": "frozen final Worker submission",
+      "frozen_or_generated": "source_copy",
+      "relative_path": "evidence/final_submissions/pair_004/explicit_collaboration/deliverables/layout.svg",
+      "source_path": "evaluation/ugs_synth_blind_batch_001/blind_packages/submission_G/submission/deliverables/layout.svg",
+      "source_sha256": "8313eb44d31d942fe1386466d132f2c2f61f22b673e2c255bc6760f7306bc4b4"
+    },
+    {
+      "category": "frozen final Worker submission",
+      "frozen_or_generated": "source_copy",
+      "relative_path": "evidence/final_submissions/pair_004/explicit_collaboration/deliverables/lcc.json",
+      "source_path": "evaluation/ugs_synth_blind_batch_001/blind_packages/submission_G/submission/deliverables/lcc.json",
+      "source_sha256": "2483268117c0e8d3522d3b06dc1032620f1c866914bb7c551cc2c9e98002510d"
+    },
+    {
+      "category": "frozen final Worker submission",
+      "frozen_or_generated": "source_copy",
+      "relative_path": "evidence/final_submissions/pair_004/explicit_collaboration/deliverables/pipeline_schedule.csv",
+      "source_path": "evaluation/ugs_synth_blind_batch_001/blind_packages/submission_G/submission/deliverables/pipeline_schedule.csv",
+      "source_sha256": "c54638072b583b1e88839cda518eca8cea5977d2713b44746ab8b7163b70427c"
+    },
+    {
+      "category": "frozen final Worker submission",
+      "frozen_or_generated": "source_copy",
+      "relative_path": "evidence/final_submissions/pair_004/explicit_collaboration/deliverables/process_topology.json",
+      "source_path": "evaluation/ugs_synth_blind_batch_001/blind_packages/submission_G/submission/deliverables/process_topology.json",
+      "source_sha256": "645bc697aea666dad707e5e3b329f46f8e2ebabb8f183a220d5ba698bde8ba7b"
+    },
+    {
+      "category": "frozen final Worker submission",
+      "frozen_or_generated": "source_copy",
+      "relative_path": "evidence/final_submissions/pair_004/explicit_collaboration/deliverables/quantities.json",
+      "source_path": "evaluation/ugs_synth_blind_batch_001/blind_packages/submission_G/submission/deliverables/quantities.json",
+      "source_sha256": "a09c07d87657575b0051d3865867a2c15d9a0d39700b2f06a83738fb55801c44"
+    },
+    {
+      "category": "frozen final Worker submission",
+      "frozen_or_generated": "source_copy",
+      "relative_path": "evidence/final_submissions/pair_004/explicit_collaboration/deliverables/reliability_cases.json",
+      "source_path": "evaluation/ugs_synth_blind_batch_001/blind_packages/submission_G/submission/deliverables/reliability_cases.json",
+      "source_sha256": "6bd547c7e975e6d48d7ed508be630f93ca45bd0384a66fa9d786f34315657553"
+    },
+    {
+      "category": "frozen final Worker submission",
+      "frozen_or_generated": "source_copy",
+      "relative_path": "evidence/final_submissions/pair_004/explicit_collaboration/deliverables/scenario_operations.json",
+      "source_path": "evaluation/ugs_synth_blind_batch_001/blind_packages/submission_G/submission/deliverables/scenario_operations.json",
+      "source_sha256": "57a6c2dd4ac28e7907b494a423740df79aff4443fc0f77a1278b4add4a29449a"
+    },
+    {
+      "category": "frozen final Worker submission",
+      "frozen_or_generated": "source_copy",
+      "relative_path": "evidence/final_submissions/pair_004/explicit_collaboration/deliverables/validation_report.md",
+      "source_path": "evaluation/ugs_synth_blind_batch_001/blind_packages/submission_G/submission/deliverables/validation_report.md",
+      "source_sha256": "f860e496ab0d0314e418f8246b9a4a35ad9bd515423708b2d1d87da9a0e2cbd4"
+    },
+    {
+      "category": "frozen final Worker submission",
+      "frozen_or_generated": "source_copy",
+      "relative_path": "evidence/final_submissions/pair_004/explicit_collaboration/deliverables/validation_results.json",
+      "source_path": "evaluation/ugs_synth_blind_batch_001/blind_packages/submission_G/submission/deliverables/validation_results.json",
+      "source_sha256": "f553ffb600e61346c5c527a140616c02bcc59c4ca8c956aed8f0c9690077d718"
+    },
+    {
+      "category": "frozen final Worker submission",
+      "frozen_or_generated": "source_copy",
+      "relative_path": "evidence/final_submissions/pair_004/explicit_collaboration/deliverables/well_group_allocations.csv",
+      "source_path": "evaluation/ugs_synth_blind_batch_001/blind_packages/submission_G/submission/deliverables/well_group_allocations.csv",
+      "source_sha256": "66a2d94bebf54f3bbded5ed8b2b23189564fea695e2f4e69ea7a78f28cfeaf24"
+    },
+    {
+      "category": "frozen final Worker submission",
+      "frozen_or_generated": "source_copy",
+      "relative_path": "evidence/final_submissions/pair_004/explicit_collaboration/tools/build.py",
+      "source_path": "evaluation/ugs_synth_blind_batch_001/blind_packages/submission_G/submission/tools/build.py",
+      "source_sha256": "d59adee5a4ed48e1ae051aedb6bfe087ba85eb6d8fecef44cd0f98ff4b6fa25a"
+    },
+    {
+      "category": "frozen final Worker submission",
+      "frozen_or_generated": "source_copy",
+      "relative_path": "evidence/final_submissions/pair_004/explicit_collaboration/tools/checks_geom.py",
+      "source_path": "evaluation/ugs_synth_blind_batch_001/blind_packages/submission_G/submission/tools/checks_geom.py",
+      "source_sha256": "775bf9f0ef1996b94d07780cfda34ebdd939aa89fbaf996b66e2484e39484785"
+    },
+    {
+      "category": "frozen final Worker submission",
+      "frozen_or_generated": "source_copy",
+      "relative_path": "evidence/final_submissions/pair_004/explicit_collaboration/tools/costing.py",
+      "source_path": "evaluation/ugs_synth_blind_batch_001/blind_packages/submission_G/submission/tools/costing.py",
+      "source_sha256": "742c1afed20d511895bda53bf0422a31c93614d1f8e3193f52c0b0c6e146a070"
+    },
+    {
+      "category": "frozen final Worker submission",
+      "frozen_or_generated": "source_copy",
+      "relative_path": "evidence/final_submissions/pair_004/explicit_collaboration/tools/design.py",
+      "source_path": "evaluation/ugs_synth_blind_batch_001/blind_packages/submission_G/submission/tools/design.py",
+      "source_sha256": "1d374f0a65cdcc31326b42bbc80fcdc6476e6d5f489ce95a4d7ce3e5a4e8e088"
+    },
+    {
+      "category": "frozen final Worker submission",
+      "frozen_or_generated": "source_copy",
+      "relative_path": "evidence/final_submissions/pair_004/explicit_collaboration/tools/engine.py",
+      "source_path": "evaluation/ugs_synth_blind_batch_001/blind_packages/submission_G/submission/tools/engine.py",
+      "source_sha256": "8309281ba69a2860d6282bce5fee77e271a2b1248841a5810afd4859026bb1f7"
+    },
+    {
+      "category": "frozen final Worker submission",
+      "frozen_or_generated": "source_copy",
+      "relative_path": "evidence/final_submissions/pair_004/explicit_collaboration/tools/process.py",
+      "source_path": "evaluation/ugs_synth_blind_batch_001/blind_packages/submission_G/submission/tools/process.py",
+      "source_sha256": "1fd81342baeda8ac4a940ec267e1b45315f17ae414a7cf0494227405b12c61f6"
+    },
+    {
+      "category": "frozen final Worker submission",
+      "frozen_or_generated": "source_copy",
+      "relative_path": "evidence/final_submissions/pair_004/explicit_collaboration/tools/report.py",
+      "source_path": "evaluation/ugs_synth_blind_batch_001/blind_packages/submission_G/submission/tools/report.py",
+      "source_sha256": "18a885d7496f650b86834c313623adef00a91c1286c7e7537c3631ec8a20ca47"
+    },
+    {
+      "category": "frozen final Worker submission",
+      "frozen_or_generated": "source_copy",
+      "relative_path": "evidence/final_submissions/pair_004/explicit_collaboration/tools/report_template.py",
+      "source_path": "evaluation/ugs_synth_blind_batch_001/blind_packages/submission_G/submission/tools/report_template.py",
+      "source_sha256": "311d3bb7db1319108a0b555aa8f85a14e99e2a55ef3b965bdaa01c70086572b8"
+    },
+    {
+      "category": "frozen final Worker submission",
+      "frozen_or_generated": "source_copy",
+      "relative_path": "evidence/final_submissions/pair_004/explicit_collaboration/tools/selftest.py",
+      "source_path": "evaluation/ugs_synth_blind_batch_001/blind_packages/submission_G/submission/tools/selftest.py",
+      "source_sha256": "da60451e937a4fecb3371b1be758cb67a7697079e1fda4083521c8756dfda2af"
+    },
+    {
+      "category": "frozen final Worker submission",
+      "frozen_or_generated": "source_copy",
+      "relative_path": "evidence/final_submissions/pair_004/worker_only/README.md",
+      "source_path": "evaluation/ugs_synth_blind_batch_001/blind_packages/submission_C/submission/README.md",
+      "source_sha256": "a847c83756ec93fd3e895c02fd856ebea50f326ac3b84aa92d450efda326d235"
+    },
+    {
+      "category": "frozen final Worker submission",
+      "frozen_or_generated": "source_copy",
+      "relative_path": "evidence/final_submissions/pair_004/worker_only/REPORT.md",
+      "source_path": "evaluation/ugs_synth_blind_batch_001/blind_packages/submission_C/submission/REPORT.md",
+      "source_sha256": "7aed573b87308f0309875b900718ccb7f7a884d401fa563479bb350140e96b2d"
+    },
+    {
+      "category": "frozen final Worker submission",
+      "frozen_or_generated": "source_copy",
+      "relative_path": "evidence/final_submissions/pair_004/worker_only/build_artifacts.py",
+      "source_path": "evaluation/ugs_synth_blind_batch_001/blind_packages/submission_C/submission/build_artifacts.py",
+      "source_sha256": "c605d98545069e833edb900958f2c29a717beeb3e368d61c3cc4506f6c5d5ac3"
+    },
+    {
+      "category": "frozen final Worker submission",
+      "frozen_or_generated": "source_copy",
+      "relative_path": "evidence/final_submissions/pair_004/worker_only/build_routes.py",
+      "source_path": "evaluation/ugs_synth_blind_batch_001/blind_packages/submission_C/submission/build_routes.py",
+      "source_sha256": "4a598d4d609819288200040d5c19b5e57f3d6fcceab9d0f6daba1b755a49c061"
+    },
+    {
+      "category": "frozen final Worker submission",
+      "frozen_or_generated": "source_copy",
+      "relative_path": "evidence/final_submissions/pair_004/worker_only/core.py",
+      "source_path": "evaluation/ugs_synth_blind_batch_001/blind_packages/submission_C/submission/core.py",
+      "source_sha256": "5c5712bb762b4e7b40e550c2841062d04579cc4adff33d04b3509d69b3ececc7"
+    },
+    {
+      "category": "frozen final Worker submission",
+      "frozen_or_generated": "source_copy",
+      "relative_path": "evidence/final_submissions/pair_004/worker_only/design_output.json",
+      "source_path": "evaluation/ugs_synth_blind_batch_001/blind_packages/submission_C/submission/design_output.json",
+      "source_sha256": "ede3618e5c52a0b04ea6308e712db1377eced8ebd4538b808b860c95554b3de7"
+    },
+    {
+      "category": "frozen final Worker submission",
+      "frozen_or_generated": "source_copy",
+      "relative_path": "evidence/final_submissions/pair_004/worker_only/diam_opt.json",
+      "source_path": "evaluation/ugs_synth_blind_batch_001/blind_packages/submission_C/submission/diam_opt.json",
+      "source_sha256": "8b27df7b493e75fdf565cde9a537238e2ada9dc47282c57e7360304849c77fe8"
+    },
+    {
+      "category": "frozen final Worker submission",
+      "frozen_or_generated": "source_copy",
+      "relative_path": "evidence/final_submissions/pair_004/worker_only/hello.py",
+      "source_path": "evaluation/ugs_synth_blind_batch_001/blind_packages/submission_C/submission/hello.py",
+      "source_sha256": "6a0c064d910335ba684cadf62c27707e9e0426fa4c77147eb9eec509a13832e7"
+    },
+    {
+      "category": "frozen final Worker submission",
+      "frozen_or_generated": "source_copy",
+      "relative_path": "evidence/final_submissions/pair_004/worker_only/make_report.py",
+      "source_path": "evaluation/ugs_synth_blind_batch_001/blind_packages/submission_C/submission/make_report.py",
+      "source_sha256": "c6bfc6f9056ada1eb4c4800a1e4c153d8a855d92d82eb1e143615fea058e7252"
+    },
+    {
+      "category": "frozen final Worker submission",
+      "frozen_or_generated": "source_copy",
+      "relative_path": "evidence/final_submissions/pair_004/worker_only/nets.py",
+      "source_path": "evaluation/ugs_synth_blind_batch_001/blind_packages/submission_C/submission/nets.py",
+      "source_sha256": "481b8961fc87e440dbd6cc3a1e205c90fc42434629b42570863fa757fd88ae33"
+    },
+    {
+      "category": "frozen final Worker submission",
+      "frozen_or_generated": "source_copy",
+      "relative_path": "evidence/final_submissions/pair_004/worker_only/nminus1.py",
+      "source_path": "evaluation/ugs_synth_blind_batch_001/blind_packages/submission_C/submission/nminus1.py",
+      "source_sha256": "3ab33e712de81e6327bc7138061b5d6ce3b1a8942567a6cf247f690434244fdd"
+    },
+    {
+      "category": "frozen final Worker submission",
+      "frozen_or_generated": "source_copy",
+      "relative_path": "evidence/final_submissions/pair_004/worker_only/optimize_diams.py",
+      "source_path": "evaluation/ugs_synth_blind_batch_001/blind_packages/submission_C/submission/optimize_diams.py",
+      "source_sha256": "ed3a97ad25c3bbd27ea6d998a8762fc4ae66966043d6f1ba7d396d8202a6c8a7"
+    },
+    {
+      "category": "frozen final Worker submission",
+      "frozen_or_generated": "source_copy",
+      "relative_path": "evidence/final_submissions/pair_004/worker_only/router.py",
+      "source_path": "evaluation/ugs_synth_blind_batch_001/blind_packages/submission_C/submission/router.py",
+      "source_sha256": "91e11a2616ae111e46a5fe4b4c27f58e4b8e334b8e32a3441c1a51cefa97d107"
+    },
+    {
+      "category": "frozen final Worker submission",
+      "frozen_or_generated": "source_copy",
+      "relative_path": "evidence/final_submissions/pair_004/worker_only/routes.json",
+      "source_path": "evaluation/ugs_synth_blind_batch_001/blind_packages/submission_C/submission/routes.json",
+      "source_sha256": "0b01a8eff806b4ca8c7a4d5e629c5d0d5d4af0c588bd82282d77c75c7e456bb0"
+    },
+    {
+      "category": "frozen final Worker submission",
+      "frozen_or_generated": "source_copy",
+      "relative_path": "evidence/final_submissions/pair_004/worker_only/run.py",
+      "source_path": "evaluation/ugs_synth_blind_batch_001/blind_packages/submission_C/submission/run.py",
+      "source_sha256": "1125403dc1679d2554019d95a33f7afed86245d7987a6bb6099966342ce0fb35"
+    },
+    {
+      "category": "frozen final Worker submission",
+      "frozen_or_generated": "source_copy",
+      "relative_path": "evidence/final_submissions/pair_004/worker_only/ugs_analysis.py",
+      "source_path": "evaluation/ugs_synth_blind_batch_001/blind_packages/submission_C/submission/ugs_analysis.py",
+      "source_sha256": "0e38aab70f05589337d75cd74e09c604c3ba2a0e625ac9a90190916e0813b9b3"
+    },
+    {
+      "category": "frozen final Worker submission",
+      "frozen_or_generated": "source_copy",
+      "relative_path": "evidence/final_submissions/pair_004/worker_only/ugs_core.py",
+      "source_path": "evaluation/ugs_synth_blind_batch_001/blind_packages/submission_C/submission/ugs_core.py",
+      "source_sha256": "43c08a57dd1850ae3b0c1bfb5636b398f4efedf903c25f1d395741543b375eba"
+    },
+    {
+      "category": "frozen final Worker submission",
+      "frozen_or_generated": "source_copy",
+      "relative_path": "evidence/final_submissions/pair_004/worker_only/ugs_design.py",
+      "source_path": "evaluation/ugs_synth_blind_batch_001/blind_packages/submission_C/submission/ugs_design.py",
+      "source_sha256": "3d0c108f439b31f9f1d763c9a2d6571e71d2c597865f8b2307ff381814df9a8b"
+    },
+    {
+      "category": "frozen final Worker submission",
+      "frozen_or_generated": "source_copy",
+      "relative_path": "evidence/final_submissions/pair_004/worker_only/ugs_lcc.py",
+      "source_path": "evaluation/ugs_synth_blind_batch_001/blind_packages/submission_C/submission/ugs_lcc.py",
+      "source_sha256": "2868be5a9e3a38cb47b3e7b96bd0e1919d84b9233b25863fb3afcfbc97d3a99e"
+    },
+    {
+      "category": "frozen final Worker submission",
+      "frozen_or_generated": "source_copy",
+      "relative_path": "evidence/final_submissions/pair_004/worker_only/validate_geom.py",
+      "source_path": "evaluation/ugs_synth_blind_batch_001/blind_packages/submission_C/submission/validate_geom.py",
+      "source_sha256": "81b0896de1275e4028b80ac59bbf32f4b7231089307c4684f1ee3424dd454cc6"
+    },
+    {
+      "category": "frozen final Worker submission",
+      "frozen_or_generated": "source_copy",
+      "relative_path": "evidence/final_submissions/pair_004/worker_only/validate_ports.py",
+      "source_path": "evaluation/ugs_synth_blind_batch_001/blind_packages/submission_C/submission/validate_ports.py",
+      "source_sha256": "89e3c6f75bff7890b004d07db01c4dc82ed808aaaf1b8fafb9e2a2bc6378a00a"
+    },
+    {
+      "category": "frozen final Worker submission",
+      "frozen_or_generated": "source_copy",
+      "relative_path": "evidence/final_submissions/pair_004/worker_only/validate_routes.py",
+      "source_path": "evaluation/ugs_synth_blind_batch_001/blind_packages/submission_C/submission/validate_routes.py",
+      "source_sha256": "6a3bf6bd27819d8c53281bd02189316e4801ba4030d60d3c32a47fdabf3655a2"
+    },
+    {
+      "category": "public frozen Reviewer record",
+      "frozen_or_generated": "frozen_copy",
+      "relative_path": "evidence/reviewer_records/ugs_synth_explicit_collaboration_replication_001/review_0001/formal_review.json",
+      "source_path": "runs/ugs_synth_interleaved_review/ugs_synth_explicit_collaboration_replication_001/reviewer/reviews/review_0001/formal_review.json",
+      "source_sha256": "aa00a89cb1eff5f03f58b8f0d990f60d0f2a6752026d6e4c49d10b382c0aa5b2"
+    },
+    {
+      "category": "public frozen submission snapshot manifest",
+      "frozen_or_generated": "frozen_copy",
+      "relative_path": "evidence/reviewer_records/ugs_synth_explicit_collaboration_replication_001/review_0001/snapshot_manifest.json",
+      "source_path": "runs/ugs_synth_interleaved_review/ugs_synth_explicit_collaboration_replication_001/reviewer/submission_snapshots/review_0001_manifest.json",
+      "source_sha256": "04f0e15db2100bec3e1c83511e006edcf3f6b9b67d780fdbf73f207f30e245c0"
+    },
+    {
+      "category": "public frozen Reviewer record",
+      "frozen_or_generated": "frozen_copy",
+      "relative_path": "evidence/reviewer_records/ugs_synth_explicit_collaboration_replication_001/review_0002/formal_review.json",
+      "source_path": "runs/ugs_synth_interleaved_review/ugs_synth_explicit_collaboration_replication_001/reviewer/reviews/review_0002/formal_review.json",
+      "source_sha256": "f8f7d350dbde60d2da45864ed420417d13bbf045bb4a3057fc6d0d9d925d7372"
+    },
+    {
+      "category": "public frozen submission snapshot manifest",
+      "frozen_or_generated": "frozen_copy",
+      "relative_path": "evidence/reviewer_records/ugs_synth_explicit_collaboration_replication_001/review_0002/snapshot_manifest.json",
+      "source_path": "runs/ugs_synth_interleaved_review/ugs_synth_explicit_collaboration_replication_001/reviewer/submission_snapshots/review_0002_manifest.json",
+      "source_sha256": "724d99b7cf36538705d77904c3e55a7b1f400ba19f91250c8cc66cfc4724d4b8"
+    },
+    {
+      "category": "public frozen Reviewer record",
+      "frozen_or_generated": "frozen_copy",
+      "relative_path": "evidence/reviewer_records/ugs_synth_explicit_collaboration_replication_002/review_0001/formal_review.json",
+      "source_path": "runs/ugs_synth_interleaved_review/ugs_synth_explicit_collaboration_replication_002/reviewer/reviews/review_0001/formal_review.json",
+      "source_sha256": "8c86b3328f0dfe90db76642eae6aabc7aa6ee431f3317f22d65fa0d1c8af06da"
+    },
+    {
+      "category": "public frozen submission snapshot manifest",
+      "frozen_or_generated": "frozen_copy",
+      "relative_path": "evidence/reviewer_records/ugs_synth_explicit_collaboration_replication_002/review_0001/snapshot_manifest.json",
+      "source_path": "runs/ugs_synth_interleaved_review/ugs_synth_explicit_collaboration_replication_002/reviewer/submission_snapshots/review_0001_manifest.json",
+      "source_sha256": "ad104d1aa3ff0837d24a98e5084191be183dbb87e6add08d2bb8d3a3d31ce908"
+    },
+    {
+      "category": "public frozen Reviewer record",
+      "frozen_or_generated": "frozen_copy",
+      "relative_path": "evidence/reviewer_records/ugs_synth_explicit_collaboration_replication_002/review_0002/formal_review.json",
+      "source_path": "runs/ugs_synth_interleaved_review/ugs_synth_explicit_collaboration_replication_002/reviewer/reviews/review_0002/formal_review.json",
+      "source_sha256": "b542041450301db07793fd59e82da4910a2da96d8987291bbc7e47072a998b76"
+    },
+    {
+      "category": "public frozen submission snapshot manifest",
+      "frozen_or_generated": "frozen_copy",
+      "relative_path": "evidence/reviewer_records/ugs_synth_explicit_collaboration_replication_002/review_0002/snapshot_manifest.json",
+      "source_path": "runs/ugs_synth_interleaved_review/ugs_synth_explicit_collaboration_replication_002/reviewer/submission_snapshots/review_0002_manifest.json",
+      "source_sha256": "bc8895d939b82cb6c93926e1336c1af32344a43a41564ef16f663dd4723cc35a"
+    },
+    {
+      "category": "public frozen Reviewer record",
+      "frozen_or_generated": "frozen_copy",
+      "relative_path": "evidence/reviewer_records/ugs_synth_explicit_collaboration_replication_003/review_0001/formal_review.json",
+      "source_path": "runs/ugs_synth_interleaved_review/ugs_synth_explicit_collaboration_replication_003/reviewer/reviews/review_0001/formal_review.json",
+      "source_sha256": "bdc6575078d3bc45091e38972ff0cb5a61aa0f1f7598c4a8b1528171ece8ee82"
+    },
+    {
+      "category": "public frozen submission snapshot manifest",
+      "frozen_or_generated": "frozen_copy",
+      "relative_path": "evidence/reviewer_records/ugs_synth_explicit_collaboration_replication_003/review_0001/snapshot_manifest.json",
+      "source_path": "runs/ugs_synth_interleaved_review/ugs_synth_explicit_collaboration_replication_003/reviewer/submission_snapshots/review_0001_manifest.json",
+      "source_sha256": "aac712efce7b70cc51478d5013c83596d0dadb2e56ce3cbe76a673bf9dba059a"
+    },
+    {
+      "category": "public frozen Reviewer record",
+      "frozen_or_generated": "frozen_copy",
+      "relative_path": "evidence/reviewer_records/ugs_synth_explicit_collaboration_replication_003/review_0002/formal_review.json",
+      "source_path": "runs/ugs_synth_interleaved_review/ugs_synth_explicit_collaboration_replication_003/reviewer/reviews/review_0002/formal_review.json",
+      "source_sha256": "0d823d26caf6c8557536be8f62e22ad93ca30e198582d611a88e9d42fc832250"
+    },
+    {
+      "category": "public frozen submission snapshot manifest",
+      "frozen_or_generated": "frozen_copy",
+      "relative_path": "evidence/reviewer_records/ugs_synth_explicit_collaboration_replication_003/review_0002/snapshot_manifest.json",
+      "source_path": "runs/ugs_synth_interleaved_review/ugs_synth_explicit_collaboration_replication_003/reviewer/submission_snapshots/review_0002_manifest.json",
+      "source_sha256": "6d5ee2b9fe72c6ae5fdcb9774fe35bce368b4ff26490915278680d0be90c8b7e"
+    },
+    {
+      "category": "public frozen Reviewer record",
+      "frozen_or_generated": "frozen_copy",
+      "relative_path": "evidence/reviewer_records/ugs_synth_explicit_collaboration_replication_003/review_0003/formal_review.json",
+      "source_path": "runs/ugs_synth_interleaved_review/ugs_synth_explicit_collaboration_replication_003/reviewer/reviews/review_0003/formal_review.json",
+      "source_sha256": "42f60bbf41a31f45c11f72382ba310466cd1beaf94d94813dd3e9d476d860c9e"
+    },
+    {
+      "category": "public frozen submission snapshot manifest",
+      "frozen_or_generated": "frozen_copy",
+      "relative_path": "evidence/reviewer_records/ugs_synth_explicit_collaboration_replication_003/review_0003/snapshot_manifest.json",
+      "source_path": "runs/ugs_synth_interleaved_review/ugs_synth_explicit_collaboration_replication_003/reviewer/submission_snapshots/review_0003_manifest.json",
+      "source_sha256": "6d5ee2b9fe72c6ae5fdcb9774fe35bce368b4ff26490915278680d0be90c8b7e"
+    },
+    {
+      "category": "public frozen Reviewer record",
+      "frozen_or_generated": "frozen_copy",
+      "relative_path": "evidence/reviewer_records/ugs_synth_explicit_collaboration_replication_003/review_0004/formal_review.json",
+      "source_path": "runs/ugs_synth_interleaved_review/ugs_synth_explicit_collaboration_replication_003/reviewer/reviews/review_0004/formal_review.json",
+      "source_sha256": "c0821cf6009a3aaca93bc2362ec6574400d900fd047ccb59981b4ca575247a48"
+    },
+    {
+      "category": "public frozen submission snapshot manifest",
+      "frozen_or_generated": "frozen_copy",
+      "relative_path": "evidence/reviewer_records/ugs_synth_explicit_collaboration_replication_003/review_0004/snapshot_manifest.json",
+      "source_path": "runs/ugs_synth_interleaved_review/ugs_synth_explicit_collaboration_replication_003/reviewer/submission_snapshots/review_0004_manifest.json",
+      "source_sha256": "60671cf9356e0fa8791ebdad6feb74e7286ca0998a0a126549d31d5725397376"
+    },
+    {
+      "category": "public frozen Reviewer record",
+      "frozen_or_generated": "frozen_copy",
+      "relative_path": "evidence/reviewer_records/ugs_synth_explicit_collaboration_replication_004/review_0001/formal_review.json",
+      "source_path": "runs/ugs_synth_interleaved_review/ugs_synth_explicit_collaboration_replication_004/reviewer/reviews/review_0001/formal_review.json",
+      "source_sha256": "d66d0af45172936f0cd178f1ffbf1f55c606c71a809e2ca09da53ec5c78834e8"
+    },
+    {
+      "category": "public frozen submission snapshot manifest",
+      "frozen_or_generated": "frozen_copy",
+      "relative_path": "evidence/reviewer_records/ugs_synth_explicit_collaboration_replication_004/review_0001/snapshot_manifest.json",
+      "source_path": "runs/ugs_synth_interleaved_review/ugs_synth_explicit_collaboration_replication_004/reviewer/submission_snapshots/review_0001_manifest.json",
+      "source_sha256": "7544bcd72dbda48d9eac8ae8f6a2d8ea3a956581e960f2885363c1be01bbd386"
+    },
+    {
+      "category": "public frozen Reviewer record",
+      "frozen_or_generated": "frozen_copy",
+      "relative_path": "evidence/reviewer_records/ugs_synth_explicit_collaboration_replication_004/review_0002/formal_review.json",
+      "source_path": "runs/ugs_synth_interleaved_review/ugs_synth_explicit_collaboration_replication_004/reviewer/reviews/review_0002/formal_review.json",
+      "source_sha256": "ce8214b5cb7fef25327f4f14727aebcd678c6f2bfa4c7901ab6ba4d8190531cc"
+    },
+    {
+      "category": "public frozen submission snapshot manifest",
+      "frozen_or_generated": "frozen_copy",
+      "relative_path": "evidence/reviewer_records/ugs_synth_explicit_collaboration_replication_004/review_0002/snapshot_manifest.json",
+      "source_path": "runs/ugs_synth_interleaved_review/ugs_synth_explicit_collaboration_replication_004/reviewer/submission_snapshots/review_0002_manifest.json",
+      "source_sha256": "7479ec7a7deedeec596fc45467c692a934cd4001899b6660fd6a7c680ba411ac"
+    },
+    {
+      "category": "selected Reviewer workspace case-study source",
+      "frozen_or_generated": "source_copy",
+      "relative_path": "evidence/reviewer_workspace_case_study/cross_check.py",
+      "source_path": "runs/ugs_synth_interleaved_review/ugs_synth_explicit_collaboration_replication_001/reviewer/sandbox/agent_view/review/cross_check.py",
+      "source_sha256": "ce07e6c4b9a2138c23610a09494fbe4e8ee4a0c6ec513a939b503b7db7ac71cd"
+    },
+    {
+      "category": "selected Reviewer workspace case-study source",
+      "frozen_or_generated": "source_copy",
+      "relative_path": "evidence/reviewer_workspace_case_study/energy_delta.py",
+      "source_path": "runs/ugs_synth_interleaved_review/ugs_synth_explicit_collaboration_replication_001/reviewer/sandbox/agent_view/review/energy_delta.py",
+      "source_sha256": "38adb072c7b23410a7eabef7423d598a525e01191c30c05a7b4bde78ad52e6b7"
+    },
+    {
+      "category": "selected Reviewer workspace case-study source",
+      "frozen_or_generated": "source_copy",
+      "relative_path": "evidence/reviewer_workspace_case_study/n1_check.py",
+      "source_path": "runs/ugs_synth_interleaved_review/ugs_synth_explicit_collaboration_replication_001/reviewer/sandbox/agent_view/review/n1_check.py",
+      "source_sha256": "4583947b83d679a701be53f0a809dc15431d40aa6cb028d06fa161b8f4194759"
+    },
+    {
+      "category": "frozen run configuration or integrity manifest",
+      "frozen_or_generated": "frozen_copy",
+      "relative_path": "experiments/configurations/ugs_synth_explicit_collaboration_replication_001/artifact_hashes.json",
+      "source_path": "runs/ugs_synth_interleaved_review/ugs_synth_explicit_collaboration_replication_001/artifact_hashes.json",
+      "source_sha256": "5eff7086991487813f10c5cef72b0c596c9d7509d378ffc00ada92e8e81a9b7d"
+    },
+    {
+      "category": "frozen run configuration or integrity manifest",
+      "frozen_or_generated": "frozen_copy",
+      "relative_path": "experiments/configurations/ugs_synth_explicit_collaboration_replication_001/freeze.json",
+      "source_path": "runs/ugs_synth_interleaved_review/ugs_synth_explicit_collaboration_replication_001/freeze.json",
+      "source_sha256": "e3276f43b95666e4007682e5b8e140ddfb1f42b1278b39b21293af854123ab8d"
+    },
+    {
+      "category": "frozen run configuration or integrity manifest",
+      "frozen_or_generated": "frozen_copy",
+      "relative_path": "experiments/configurations/ugs_synth_explicit_collaboration_replication_001/pre_run_checks.json",
+      "source_path": "runs/ugs_synth_interleaved_review/ugs_synth_explicit_collaboration_replication_001/pre_run_checks.json",
+      "source_sha256": "70257867a746b6cf45d8727481a5fc5781e1b2b976e17839cc0e5053689218ca"
+    },
+    {
+      "category": "frozen run configuration or integrity manifest",
+      "frozen_or_generated": "frozen_copy",
+      "relative_path": "experiments/configurations/ugs_synth_explicit_collaboration_replication_002/artifact_hashes.json",
+      "source_path": "runs/ugs_synth_interleaved_review/ugs_synth_explicit_collaboration_replication_002/artifact_hashes.json",
+      "source_sha256": "495950d7b996367b45ca563e85cff3a589b4a7e33e0bd3930210ec9e92e068ec"
+    },
+    {
+      "category": "frozen run configuration or integrity manifest",
+      "frozen_or_generated": "frozen_copy",
+      "relative_path": "experiments/configurations/ugs_synth_explicit_collaboration_replication_002/freeze.json",
+      "source_path": "runs/ugs_synth_interleaved_review/ugs_synth_explicit_collaboration_replication_002/freeze.json",
+      "source_sha256": "0436ae16f08ab4cb8cc1a5055d7f6b858e456a9402c9ab19000fb4ad4f5bac57"
+    },
+    {
+      "category": "frozen run configuration or integrity manifest",
+      "frozen_or_generated": "frozen_copy",
+      "relative_path": "experiments/configurations/ugs_synth_explicit_collaboration_replication_002/pre_run_checks.json",
+      "source_path": "runs/ugs_synth_interleaved_review/ugs_synth_explicit_collaboration_replication_002/pre_run_checks.json",
+      "source_sha256": "ebf9b57317195eefb4743aa0c9e4eb5c3207bb38b1668ce3ec8c491e19680f93"
+    },
+    {
+      "category": "frozen run configuration or integrity manifest",
+      "frozen_or_generated": "frozen_copy",
+      "relative_path": "experiments/configurations/ugs_synth_explicit_collaboration_replication_003/artifact_hashes.json",
+      "source_path": "runs/ugs_synth_interleaved_review/ugs_synth_explicit_collaboration_replication_003/artifact_hashes.json",
+      "source_sha256": "aa985141227ddb47c7799fb68570af89f48b3caf2cda8af2200d5364fae5fa0f"
+    },
+    {
+      "category": "frozen run configuration or integrity manifest",
+      "frozen_or_generated": "frozen_copy",
+      "relative_path": "experiments/configurations/ugs_synth_explicit_collaboration_replication_003/freeze.json",
+      "source_path": "runs/ugs_synth_interleaved_review/ugs_synth_explicit_collaboration_replication_003/freeze.json",
+      "source_sha256": "6da1cbe853594633fea68c67e89efee3579746dae3f44b097505fb633611b63d"
+    },
+    {
+      "category": "frozen run configuration or integrity manifest",
+      "frozen_or_generated": "frozen_copy",
+      "relative_path": "experiments/configurations/ugs_synth_explicit_collaboration_replication_003/pre_run_checks.json",
+      "source_path": "runs/ugs_synth_interleaved_review/ugs_synth_explicit_collaboration_replication_003/pre_run_checks.json",
+      "source_sha256": "1a165a8572828850f207e4d449c78fd0c2c363ca2729cd10eb161f49faa31aff"
+    },
+    {
+      "category": "frozen run configuration or integrity manifest",
+      "frozen_or_generated": "frozen_copy",
+      "relative_path": "experiments/configurations/ugs_synth_explicit_collaboration_replication_004/artifact_hashes.json",
+      "source_path": "runs/ugs_synth_interleaved_review/ugs_synth_explicit_collaboration_replication_004/artifact_hashes.json",
+      "source_sha256": "582cef9e003bbf4288f43e79700beabe1f87910ac95051fa592eca5556f3b91b"
+    },
+    {
+      "category": "frozen run configuration or integrity manifest",
+      "frozen_or_generated": "frozen_copy",
+      "relative_path": "experiments/configurations/ugs_synth_explicit_collaboration_replication_004/freeze.json",
+      "source_path": "runs/ugs_synth_interleaved_review/ugs_synth_explicit_collaboration_replication_004/freeze.json",
+      "source_sha256": "17e1701e4c054d8b633fc473291dd8b196d21eb1ae388e06a2c27e07bf51247d"
+    },
+    {
+      "category": "frozen run configuration or integrity manifest",
+      "frozen_or_generated": "frozen_copy",
+      "relative_path": "experiments/configurations/ugs_synth_explicit_collaboration_replication_004/pre_run_checks.json",
+      "source_path": "runs/ugs_synth_interleaved_review/ugs_synth_explicit_collaboration_replication_004/pre_run_checks.json",
+      "source_sha256": "c6848df1849dcdf89ababa5bceb5a7837b8533e8618b2c8722e05e0dc6a89ab3"
+    },
+    {
+      "category": "frozen run configuration or integrity manifest",
+      "frozen_or_generated": "frozen_copy",
+      "relative_path": "experiments/configurations/ugs_synth_worker_only_replication_001/artifact_hashes.json",
+      "source_path": "runs/ugs_synth_interleaved_review/ugs_synth_worker_only_replication_001/artifact_hashes.json",
+      "source_sha256": "0b5de9c3f8f3a50b8e85909c2bccb55cfc6f08da9774e59ba8059ba887b94e45"
+    },
+    {
+      "category": "frozen run configuration or integrity manifest",
+      "frozen_or_generated": "frozen_copy",
+      "relative_path": "experiments/configurations/ugs_synth_worker_only_replication_001/freeze.json",
+      "source_path": "runs/ugs_synth_interleaved_review/ugs_synth_worker_only_replication_001/freeze.json",
+      "source_sha256": "eee841af73e38eaaf8d458a8e03c26b10f6202ed4d1a48ace1f3a30750753408"
+    },
+    {
+      "category": "frozen run configuration or integrity manifest",
+      "frozen_or_generated": "frozen_copy",
+      "relative_path": "experiments/configurations/ugs_synth_worker_only_replication_001/pre_run_checks.json",
+      "source_path": "runs/ugs_synth_interleaved_review/ugs_synth_worker_only_replication_001/pre_run_checks.json",
+      "source_sha256": "ef2f20b75e9119cc54fa0af78187336c0c5580a250e2a6eefdc47e125b7e4569"
+    },
+    {
+      "category": "frozen run configuration or integrity manifest",
+      "frozen_or_generated": "frozen_copy",
+      "relative_path": "experiments/configurations/ugs_synth_worker_only_replication_002/artifact_hashes.json",
+      "source_path": "runs/ugs_synth_interleaved_review/ugs_synth_worker_only_replication_002/artifact_hashes.json",
+      "source_sha256": "876d6042947e7a78ae12d460b27fc0538520acda639a11d0a5a83ca449e9d893"
+    },
+    {
+      "category": "frozen run configuration or integrity manifest",
+      "frozen_or_generated": "frozen_copy",
+      "relative_path": "experiments/configurations/ugs_synth_worker_only_replication_002/freeze.json",
+      "source_path": "runs/ugs_synth_interleaved_review/ugs_synth_worker_only_replication_002/freeze.json",
+      "source_sha256": "d16ad269f26fc0448c2cae154314081049d756780b55d73ae53a18b1357183c4"
+    },
+    {
+      "category": "frozen run configuration or integrity manifest",
+      "frozen_or_generated": "frozen_copy",
+      "relative_path": "experiments/configurations/ugs_synth_worker_only_replication_002/pre_run_checks.json",
+      "source_path": "runs/ugs_synth_interleaved_review/ugs_synth_worker_only_replication_002/pre_run_checks.json",
+      "source_sha256": "75a6ff9cad3e8028d80ef0705c6600008a7c1c6a0ad50abb4e68981d0e8d7d61"
+    },
+    {
+      "category": "frozen run configuration or integrity manifest",
+      "frozen_or_generated": "frozen_copy",
+      "relative_path": "experiments/configurations/ugs_synth_worker_only_replication_003/artifact_hashes.json",
+      "source_path": "runs/ugs_synth_interleaved_review/ugs_synth_worker_only_replication_003/artifact_hashes.json",
+      "source_sha256": "474707ada14f6f20c47864518383cd144b66ee29416cf317c0dc89bfe92bd5d9"
+    },
+    {
+      "category": "frozen run configuration or integrity manifest",
+      "frozen_or_generated": "frozen_copy",
+      "relative_path": "experiments/configurations/ugs_synth_worker_only_replication_003/freeze.json",
+      "source_path": "runs/ugs_synth_interleaved_review/ugs_synth_worker_only_replication_003/freeze.json",
+      "source_sha256": "cd67b485d7de40f1a916ac6d659d97954b70ff4f118705c360a41702be366a09"
+    },
+    {
+      "category": "frozen run configuration or integrity manifest",
+      "frozen_or_generated": "frozen_copy",
+      "relative_path": "experiments/configurations/ugs_synth_worker_only_replication_003/pre_run_checks.json",
+      "source_path": "runs/ugs_synth_interleaved_review/ugs_synth_worker_only_replication_003/pre_run_checks.json",
+      "source_sha256": "be67ef26ddc8e878fe43a0f9423efade6bd572962c3b4084d31c0246f90d67be"
+    },
+    {
+      "category": "frozen run configuration or integrity manifest",
+      "frozen_or_generated": "frozen_copy",
+      "relative_path": "experiments/configurations/ugs_synth_worker_only_replication_004/artifact_hashes.json",
+      "source_path": "runs/ugs_synth_interleaved_review/ugs_synth_worker_only_replication_004/artifact_hashes.json",
+      "source_sha256": "c7646caad5c481e0fb0ea49ea0c3e25a714828aa9862abaf5b0b495148e6c6bb"
+    },
+    {
+      "category": "frozen run configuration or integrity manifest",
+      "frozen_or_generated": "frozen_copy",
+      "relative_path": "experiments/configurations/ugs_synth_worker_only_replication_004/freeze.json",
+      "source_path": "runs/ugs_synth_interleaved_review/ugs_synth_worker_only_replication_004/freeze.json",
+      "source_sha256": "2fdc4474df581f86ec51caff08f5ba658f41a1b0e39acb99968ce01469eb7019"
+    },
+    {
+      "category": "frozen run configuration or integrity manifest",
+      "frozen_or_generated": "frozen_copy",
+      "relative_path": "experiments/configurations/ugs_synth_worker_only_replication_004/pre_run_checks.json",
+      "source_path": "runs/ugs_synth_interleaved_review/ugs_synth_worker_only_replication_004/pre_run_checks.json",
+      "source_sha256": "ff5108ddd8e26e9dc9e02739765cd42cdddb979214158bfe9e785a9f06384db2"
+    },
+    {
+      "category": "pair 001 frozen runtime source variant",
+      "frozen_or_generated": "frozen_copy",
+      "relative_path": "experiments/runtime_variants/pair_001/durable_replication.py",
+      "source_path": "git:73877e3f29b0baa77453cc216c8b953402c6767d:src/self_organizing_engineering_agent/experiments/ugs_synth_interleaved_review/durable_replication.py",
+      "source_sha256": "624abe89841afd80fbf19de996e97763a8d20d1d49d91bb616ef40a6cc3b381a"
+    },
+    {
+      "category": "pair 001 frozen runtime source variant",
+      "frozen_or_generated": "frozen_copy",
+      "relative_path": "experiments/runtime_variants/pair_001/durable_store.py",
+      "source_path": "git:f4d877cf69c7dca1071b45cf19e8a8d373947087:src/self_organizing_engineering_agent/experiments/ugs_synth_interleaved_review/durable_store.py",
+      "source_sha256": "a5a67f772a6df23f771a625ecceffa564dfdb32c66f71c6206eebc906543f3d4"
+    },
+    {
+      "category": "experiment dependency configuration",
+      "frozen_or_generated": "source_copy",
+      "relative_path": "pyproject.toml",
+      "source_path": "pyproject.toml",
+      "source_sha256": "ab84b3945e5374d00bd8b1781cade04dd10c51d0a25931266f70522c4bdadb6a"
+    },
+    {
+      "category": "runtime entry point",
+      "frozen_or_generated": "source_copy",
+      "relative_path": "scripts/run_ugs_synth_durable_replication.py",
+      "source_path": "scripts/run_ugs_synth_durable_replication.py",
+      "source_sha256": "2a1b8b218d25a4eda66e8969a5801bc40d11e5650716a53e23bf73b01ff6bd0b"
+    },
+    {
+      "category": "runtime source",
+      "frozen_or_generated": "source_copy",
+      "relative_path": "src/self_organizing_engineering_agent/__init__.py",
+      "source_path": "src/self_organizing_engineering_agent/__init__.py",
+      "source_sha256": "5068d47f61cff0a0988a567f9b0a66900dc8700a40195218a8f5926065031488"
+    },
+    {
+      "category": "runtime source",
+      "frozen_or_generated": "source_copy",
+      "relative_path": "src/self_organizing_engineering_agent/experiments/__init__.py",
+      "source_path": "src/self_organizing_engineering_agent/experiments/__init__.py",
+      "source_sha256": "c7c490ceb2b0af5f739db05907bdfd5308132520e01826c7123525b13b0f9408"
+    },
+    {
+      "category": "runtime source dependency",
+      "frozen_or_generated": "source_copy",
+      "relative_path": "src/self_organizing_engineering_agent/experiments/pilot_1a/__init__.py",
+      "source_path": "src/self_organizing_engineering_agent/experiments/pilot_1a/__init__.py",
+      "source_sha256": "d3f747045080832fad51b6dced5865e0d0cdb5bda341d8ea251c18ed5cbad029"
+    },
+    {
+      "category": "runtime source dependency",
+      "frozen_or_generated": "source_copy",
+      "relative_path": "src/self_organizing_engineering_agent/experiments/pilot_1a/deepseek_provider.py",
+      "source_path": "src/self_organizing_engineering_agent/experiments/pilot_1a/deepseek_provider.py",
+      "source_sha256": "2d797ac4b4348aea754ed96b2d2a4ae6604b929b73ea16286ecf49fa37656dcb"
+    },
+    {
+      "category": "runtime source dependency",
+      "frozen_or_generated": "source_copy",
+      "relative_path": "src/self_organizing_engineering_agent/experiments/pilot_1a/docker_executor.py",
+      "source_path": "src/self_organizing_engineering_agent/experiments/pilot_1a/docker_executor.py",
+      "source_sha256": "fe838b4dca530e2dd9797e6298db8696438cf34c165fd5ab07466896879c6980"
+    },
+    {
+      "category": "runtime source dependency",
+      "frozen_or_generated": "source_copy",
+      "relative_path": "src/self_organizing_engineering_agent/experiments/pilot_1a/isolation.py",
+      "source_path": "src/self_organizing_engineering_agent/experiments/pilot_1a/isolation.py",
+      "source_sha256": "2a2d69935641f99e656bc8b1fccfdaa7198d89e1e2d73db9b0b3ffe1f96d681c"
+    },
+    {
+      "category": "runtime source dependency",
+      "frozen_or_generated": "source_copy",
+      "relative_path": "src/self_organizing_engineering_agent/experiments/pilot_1a/provider.py",
+      "source_path": "src/self_organizing_engineering_agent/experiments/pilot_1a/provider.py",
+      "source_sha256": "69516a8bc9f028cfc6872d73627509a7748d6db171ac8d1df1c7222711afce6a"
+    },
+    {
+      "category": "runtime source",
+      "frozen_or_generated": "source_copy",
+      "relative_path": "src/self_organizing_engineering_agent/experiments/ugs_synth_interleaved_review/__init__.py",
+      "source_path": "src/self_organizing_engineering_agent/experiments/ugs_synth_interleaved_review/__init__.py",
+      "source_sha256": "2dd4482d537e62843f1a1d533565a6a45dee26df9264158cc204ec73d7005824"
+    },
+    {
+      "category": "runtime source",
+      "frozen_or_generated": "source_copy",
+      "relative_path": "src/self_organizing_engineering_agent/experiments/ugs_synth_interleaved_review/durable_replication.py",
+      "source_path": "src/self_organizing_engineering_agent/experiments/ugs_synth_interleaved_review/durable_replication.py",
+      "source_sha256": "7dac491e82503def43b5c3ed5692015f3280f722d18831fb9cdafcee0ad271a5"
+    },
+    {
+      "category": "runtime source",
+      "frozen_or_generated": "source_copy",
+      "relative_path": "src/self_organizing_engineering_agent/experiments/ugs_synth_interleaved_review/durable_resume.py",
+      "source_path": "src/self_organizing_engineering_agent/experiments/ugs_synth_interleaved_review/durable_resume.py",
+      "source_sha256": "345be37ebe574d3b4a81a6991b1ce0bf327ef4995d1770b0348c379922b26d42"
+    },
+    {
+      "category": "runtime source",
+      "frozen_or_generated": "source_copy",
+      "relative_path": "src/self_organizing_engineering_agent/experiments/ugs_synth_interleaved_review/durable_runtime.py",
+      "source_path": "src/self_organizing_engineering_agent/experiments/ugs_synth_interleaved_review/durable_runtime.py",
+      "source_sha256": "179c656d81d26e845d9ae52594f69d836466bd965afb32f04a84165b923d8529"
+    },
+    {
+      "category": "runtime source",
+      "frozen_or_generated": "source_copy",
+      "relative_path": "src/self_organizing_engineering_agent/experiments/ugs_synth_interleaved_review/durable_store.py",
+      "source_path": "src/self_organizing_engineering_agent/experiments/ugs_synth_interleaved_review/durable_store.py",
+      "source_sha256": "860939a39e1a65b54b8669d5084ce1145d9fa0408a61846e4fb8453c0636388a"
+    },
+    {
+      "category": "runtime source",
+      "frozen_or_generated": "source_copy",
+      "relative_path": "src/self_organizing_engineering_agent/experiments/ugs_synth_interleaved_review/provider_boundary.py",
+      "source_path": "src/self_organizing_engineering_agent/experiments/ugs_synth_interleaved_review/provider_boundary.py",
+      "source_sha256": "8757378d26a3cc0cce875b7dff44e35a8048c971e39c964bf2dc343fc88aae34"
+    },
+    {
+      "category": "runtime source",
+      "frozen_or_generated": "source_copy",
+      "relative_path": "src/self_organizing_engineering_agent/experiments/ugs_synth_interleaved_review/runner.py",
+      "source_path": "src/self_organizing_engineering_agent/experiments/ugs_synth_interleaved_review/runner.py",
+      "source_sha256": "13008cc92e6e139a5503b00048b41f073bc555b96dab0c2d0ae7c0378cfc87ea"
+    },
+    {
+      "category": "runtime source",
+      "frozen_or_generated": "source_copy",
+      "relative_path": "src/self_organizing_engineering_agent/experiments/ugs_synth_interleaved_review/tools.py",
+      "source_path": "src/self_organizing_engineering_agent/experiments/ugs_synth_interleaved_review/tools.py",
+      "source_sha256": "1d44214a628e2d6ce3da996b56ac2de666bc5cb91e05d81ef2d7bd2f1eec0206"
+    },
+    {
+      "category": "runtime source",
+      "frozen_or_generated": "source_copy",
+      "relative_path": "src/self_organizing_engineering_agent/experiments/ugs_synth_minimal/__init__.py",
+      "source_path": "src/self_organizing_engineering_agent/experiments/ugs_synth_minimal/__init__.py",
+      "source_sha256": "67b5180fd1b393f543bc5ac23a8d7f70843cbd8ded22435b2332a54f60339105"
+    },
+    {
+      "category": "runtime source",
+      "frozen_or_generated": "source_copy",
+      "relative_path": "src/self_organizing_engineering_agent/experiments/ugs_synth_minimal/isolation.py",
+      "source_path": "src/self_organizing_engineering_agent/experiments/ugs_synth_minimal/isolation.py",
+      "source_sha256": "c875121b822d7455ffe74f9a7ee9e069c5d39285a98fbfd8c1971595188c37ef"
+    },
+    {
+      "category": "runtime source",
+      "frozen_or_generated": "source_copy",
+      "relative_path": "src/self_organizing_engineering_agent/experiments/ugs_synth_minimal/runner.py",
+      "source_path": "src/self_organizing_engineering_agent/experiments/ugs_synth_minimal/runner.py",
+      "source_sha256": "efd67c00a8e00e0e09cbb56f59092ecbd7aa0c54060957cd9c698739f75cafa5"
+    },
+    {
+      "category": "runtime source",
+      "frozen_or_generated": "source_copy",
+      "relative_path": "src/self_organizing_engineering_agent/experiments/ugs_synth_minimal/runtime.py",
+      "source_path": "src/self_organizing_engineering_agent/experiments/ugs_synth_minimal/runtime.py",
+      "source_sha256": "accbe94e6da9f889b7742d4cc23d6d4509ff3a3f37e30ddd429c044f7098843f"
+    },
+    {
+      "category": "runtime source",
+      "frozen_or_generated": "source_copy",
+      "relative_path": "src/self_organizing_engineering_agent/experiments/ugs_synth_minimal/tools.py",
+      "source_path": "src/self_organizing_engineering_agent/experiments/ugs_synth_minimal/tools.py",
+      "source_sha256": "99b52a2836380e3ae9d8f497a88e2f15bb0066db9319f87d1cae0729ca4e11ab"
+    },
+    {
+      "category": "runtime test",
+      "frozen_or_generated": "source_copy",
+      "relative_path": "tests/ugs_synth_interleaved_review/durable_process_harness.py",
+      "source_path": "tests/ugs_synth_interleaved_review/durable_process_harness.py",
+      "source_sha256": "e24099b0769160157d0444dea8543840940f27e80fccc3357bdfc418d4996ec6"
+    },
+    {
+      "category": "runtime test",
+      "frozen_or_generated": "source_copy",
+      "relative_path": "tests/ugs_synth_interleaved_review/test_durable_replication.py",
+      "source_path": "tests/ugs_synth_interleaved_review/test_durable_replication.py",
+      "source_sha256": "a0b8bbb360b91ad759c0f1f442603f1b8ef90cf94c65ac506cfb998747cb3c13"
+    },
+    {
+      "category": "runtime test",
+      "frozen_or_generated": "source_copy",
+      "relative_path": "tests/ugs_synth_interleaved_review/test_durable_runtime.py",
+      "source_path": "tests/ugs_synth_interleaved_review/test_durable_runtime.py",
+      "source_sha256": "2581694dcc314450357c4364d4d228780fb51caccdc6c2292ca9783ad29f0aba"
+    },
+    {
+      "category": "runtime test",
+      "frozen_or_generated": "source_copy",
+      "relative_path": "tests/ugs_synth_interleaved_review/test_provider_boundary.py",
+      "source_path": "tests/ugs_synth_interleaved_review/test_provider_boundary.py",
+      "source_sha256": "500207735665da3928802bf848815fe8b017038e9d8552c63ead8a6f247d2a9b"
+    },
+    {
+      "category": "runtime test",
+      "frozen_or_generated": "source_copy",
+      "relative_path": "tests/ugs_synth_interleaved_review/test_runtime.py",
+      "source_path": "tests/ugs_synth_interleaved_review/test_runtime.py",
+      "source_sha256": "29e3de8c169b90c5e1fcfeaa4237518a6e2e06da50817bfa923904737cfef030"
+    },
+    {
+      "category": "runtime test",
+      "frozen_or_generated": "source_copy",
+      "relative_path": "tests/ugs_synth_minimal/test_runtime.py",
+      "source_path": "tests/ugs_synth_minimal/test_runtime.py",
+      "source_sha256": "2c00107322a7821412e2e001a4bbbdb1ccaa3eb541f2357ddd1e8000cf35aa68"
+    },
+    {
+      "category": "experiment dependency lock",
+      "frozen_or_generated": "source_copy",
+      "relative_path": "uv.lock",
+      "source_path": "uv.lock",
+      "source_sha256": "0cc65662ef72b29c9fed4ab71e1f8c7f03ea23a895361abdcd3dae21943ab5d1"
+    }
+  ],
+  "source_repository": "self-organizing-engineering-agent",
+  "layered_licensing": {
+    "decision_date_utc": "2026-09-28",
+    "scope_document": "LICENSE.md",
+    "software_spdx": "Apache-2.0",
+    "benchmark_and_authored_documentation_spdx": "CC-BY-4.0",
+    "frozen_evidence_license": "CC-BY-4.0 to the extent applicable rights exist and are held by the repository owner",
+    "individual_ai_output_copyrightability_or_authorship_determined": false,
+    "rights_created_where_none_exist": false,
+    "third_party_rights_overridden": false,
+    "factual_provider_tool_attribution_accepted_for_staged_artifact": true,
+    "historical_provider_terms_or_authentication_uncertainties_are_publication_blockers": false,
+    "accepted_historical_path_disclosures": 12,
+    "historical_path_disclosure_blockers": 0
+  },
+  "release_governance_file_index": [
+    {
+      "path": "LICENSE.md",
+      "role": "layered path-level license scope",
+      "license": "CC-BY-4.0",
+      "sha256": "8a51ffd9453dd6e770aface6d2a9ca6e916ae87c2ca3528fd48de62dbf777e69"
+    },
+    {
+      "path": "LICENSES/Apache-2.0.txt",
+      "role": "unmodified official standard license text",
+      "license": "Apache-2.0",
+      "source_url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    {
+      "path": "LICENSES/CC-BY-4.0.txt",
+      "role": "unmodified official standard legal code",
+      "license": "CC-BY-4.0",
+      "source_url": "https://creativecommons.org/licenses/by/4.0/legalcode.txt",
+      "sha256": "9ba9550ad48438d0836ddab3da480b3b69ffa0aac7b7878b5a0039e7ab429411"
+    },
+    {
+      "path": "ATTRIBUTION.md",
+      "role": "creator attribution",
+      "license": "CC-BY-4.0",
+      "sha256": "40ff159d3299dc10973a7591e3304751d7bc3f725d8892d606ceb0218a369a25"
+    },
+    {
+      "path": "NOTICE.md",
+      "role": "factual project and trademark notice",
+      "license": "CC-BY-4.0",
+      "sha256": "8073b0f6086296e679d976a3d0f56ffa1c329d825862fb7ed7b38a0def6951df"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES.md",
+      "role": "third-party material and dependency notice",
+      "license": "CC-BY-4.0",
+      "sha256": "a78470f68b376e89c6a2c29fab9e022bf622eca9d665536111bfbd79090e8e9b"
+    },
+    {
+      "path": "../RELEASE_READINESS_REPORT.md",
+      "role": "repository-level release readiness report",
+      "license": "CC-BY-4.0",
+      "sha256": "9ee18ced844beb12b04cddbfe8040487801b81a93549de0b8c02de92c407aa33"
+    }
+  ],
+  "removed_release_governance_files": [
+    {
+      "path": "LICENSE_DECISION_REQUIRED.md",
+      "replacement": "LICENSE.md"
+    }
+  ],
+  "benchmark_provenance_review": {
+    "review_date_utc": "2026-09-28",
+    "reviewed_against_commit": "60c78c3ecabe76e09099203df9c1417e4c4e531a",
+    "document_path": "BENCHMARK_PROVENANCE.md",
+    "document_sha256": "dfd6956e2b084e20187bceec1b32f506005dab3a9f56112e435ca945127a2abc",
+    "public_world_sha256": "af4260bc8e15bb44364038b6eeea9a6a6942677ae8e5e610971689415fd0880e",
+    "public_world_file_count": 22,
+    "public_world_json_file_count": 19,
+    "public_world_markdown_file_count": 3,
+    "history_commits_reviewed": [
+      "6961bc83b39f67e294241704d07b6caba326a195",
+      "dc783bf9e6bf56dceb4966ff1e7c77c8ae358356",
+      "b2c673c6ae2784d29a8b826811e140db16ad50f1"
+    ],
+    "vendor_or_proprietary_project_source_identified": false,
+    "copied_vendor_or_regulatory_table_identified": false,
+    "method_references_added": [
+      {
+        "name": "Swamee-Jain approximation",
+        "doi": "10.1061/JYCEAJ.0004542",
+        "document_path": "BENCHMARK_PROVENANCE.md#references"
+      }
+    ],
+    "redistribution_status": "provenance reviewed; owner-directed path-level licenses recorded in LICENSE.md; no specific third-party copied-content blocker identified; no legal-clearance claim",
+    "vendor_or_product_identifiers_found": false,
+    "regulatory_standard_reference_identified": false
+  },
+  "ai_generated_content_review": {
+    "review_date_utc": "2026-09-28",
+    "reviewed_against_commit": "1726679dae4c8e6851eb94b2417e787f1886035f",
+    "worker": {
+      "provider": "DeepSeek Open Platform API",
+      "model": "deepseek-flash",
+      "frozen_runs": 8,
+      "submission_snapshots": 8,
+      "submission_files": 143
+    },
+    "interactive_reviewer": {
+      "provider": "DeepSeek Open Platform API",
+      "model": "deepseek-flash",
+      "explicit_runs": 4,
+      "formal_review_records": 10,
+      "selected_workspace_scripts": 3
+    },
+    "blind_evaluator": {
+      "tool": "OpenAI Codex CLI",
+      "model_requested_or_reported": "gpt-5.5",
+      "successful_frozen_reviews": 13,
+      "exact_underlying_model_identity_established": false,
+      "authentication_route_preserved": false
+    },
+    "content_classification": {
+      "normalized_findings": "post-hoc analyst thematic matching and coding",
+      "rebuilt_tables": [
+        "submission_summary.csv",
+        "pair_comparison.csv",
+        "review_session_summary.csv",
+        "summary_counts.json"
+      ],
+      "table_generation": "deterministic; no model call or relabeling"
+    },
+    "release_preparation": "The disclosure, inventory, terms review, and listed documentation updates for this review used automated coding-assistant assistance; earlier documentation authorship is not inferred.",
+    "provider_terms_assessment": {
+      "general_academic_publication_prohibition_identified": false,
+      "deepseek_mark_clause_recorded_as_historical_caveat": true,
+      "factual_nonpromotional_attribution_accepted_for_release": true,
+      "openai_codex_authentication_route_preserved": false,
+      "openai_authentication_route_uncertainty_is_publication_blocker": false,
+      "legal_clearance": false
+    },
+    "historical_paths": {
+      "reviewed_reference_count": 12,
+      "accepted_as_historical_metadata_disclosure": true,
+      "publication_blocker": false,
+      "frozen_files_changed": false
+    },
+    "bounded_output_screen": {
+      "text_files": 192,
+      "email_pattern_matches": 0,
+      "common_vendor_name_matches": 0,
+      "long_quote_candidates": 0,
+      "url_matches": 4,
+      "url_match_details": "All four are W3C SVG namespace declarations in generated diagrams; screening is not exhaustive."
+    },
+    "release_preparation_llm_api_calls": 0,
+    "new_research_trajectories": 0,
+    "frozen_evidence_changes": 0,
+    "public_world_sha256": "af4260bc8e15bb44364038b6eeea9a6a6942677ae8e5e610971689415fd0880e",
+    "documentation_sha256": {
+      "AI_GENERATED_CONTENT.md": "05047205e463c85f0a0caa8c56b421135ac4677ebae33f430700475aa2fddc12",
+      "AI_CONTENT_INVENTORY.csv": "1d65262a3b9b129386a7810ab6f1afa6131539cc53c73e6657f1d832357d0309",
+      "PROVIDER_TERMS_REVIEW.md": "ae0510b08693129177d6edeaf2e0dfc05a07d63eb812bbe52eed6742ebef8046"
+    }
+  }
+}

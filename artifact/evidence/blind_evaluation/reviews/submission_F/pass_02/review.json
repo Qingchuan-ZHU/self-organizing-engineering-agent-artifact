@@ -1,0 +1,218 @@
+{
+  "summary": "The submission is broadly reconstructable and the normal operating scenarios/LCC arithmetic mostly reconcile to the public basis. I found no confirmed feasibility violation from the sampled hydraulics, equipment limits, gas quality, or layout checks. The material issue is evidentiary: the claimed N-1 verification is not exhaustive for the public any-one-unit outage requirement. I also found two semantics gaps around unmodelled isolation valves and liquid-drain density, plus a low-impact report/JSON road-length inconsistency.",
+  "areas_checked": [
+    {
+      "area": "deliverable_completeness_reconstructability",
+      "coverage": "full",
+      "details": "Compared brief/final_delivery_contract.json with submission/design_report.md, submission/data/design.json, and submission/results/*.json. Equipment instances/model IDs, port coordinates, topology, pipeline routes/classes/diameters/levels, six scenario paths, quantities, LCC breakdown, and assumptions/limitations are present. The machine-readable JSON is reconstructable; the report has a minor road-length inconsistency captured as a finding."
+    },
+    {
+      "area": "physical_topology_and_port_semantics",
+      "coverage": "sampled",
+      "details": "Reviewed all 39 pipeline endpoint declarations in submission/data/design.json and the public port rules in brief/network_semantics.md. Sampled endpoint-port coordinate matches and port compatibility for grid meters, compressor suction/discharge, separator/dehydrator gas ports, header branches, well branches, and liquid drains. Connection counts appear within GRID-TIE=2 and outfall=3/8; no sampled one-way port reverse-use was found. I did not run an exhaustive independent graph checker."
+    },
+    {
+      "area": "operating_scenarios",
+      "coverage": "full",
+      "details": "Covered INJ-LOW, INJ-MID, INJ-HIGH, WDR-HIGH, WDR-MID, and WDR-LOW using submission/results/scenario_results.json and submission/data/design.json. Independently checked flow allocations sum to required scenario flow and each well allocation is <=25 kg/s. Delivery pressure/temperature/water/free-liquid values were checked against public limits for all six scenarios; hydraulic pressure-loss arithmetic was independently recomputed only for selected pipes."
+    },
+    {
+      "area": "n_minus_1_reliability",
+      "coverage": "full",
+      "details": "Inventoried the N-1 cases in submission/results/scenario_results.json and submission/calc/validate.py against the public any-one compressor, separator, and dehydration outage requirements. Provided N-1 cases were inspected for retained flow and delivery quality, but the delivered evidence is not exhaustive and omits several individual outage/scenario combinations."
+    },
+    {
+      "area": "equipment_limits",
+      "coverage": "sampled",
+      "details": "Checked catalogue capacities/ratings from brief/equipment_catalog/*.json against governing normal and N-1 cases: C60/C40 compressor flow, pressure ratio, discharge temperature and power; separator liquid/feed/capacity; DEHY70 feed quality/capacity/power; COOL120 duty/outlet temperature; MTR120 and REG120 capacities; HDR120/HDR180 capacities; DRN-S liquid rates. No sampled limit exceedance found."
+    },
+    {
+      "area": "hydraulic_calculations",
+      "coverage": "sampled",
+      "details": "Independently recomputed gas properties and pressure loss for highest-flow import line PL-32 in INJ-LOW, highest-velocity bypass PL-26 in WDR-MID, small-DN trim-compressor suction PL-22 in compressor N-1 INJ-LOW, and long injection line PL-28 in INJ-HIGH. Results matched the submission to engineering rounding and remained below the 25 m/s gas velocity limit. Not all pipes or all scenarios were recomputed."
+    },
+    {
+      "area": "gas_quality_and_temperature",
+      "coverage": "sampled",
+      "details": "Checked all scenario sink delivery values against water <=50 mg/Sm3, free-liquid <=0.0001, and -10 to 60 degC. Recomputed separator outlet free-liquid loading as 0.01*(1-0.9995)=5e-6 and dehydration outlet water as 35 mg/Sm3. Sampled regulator JT cooling and cooler duty/setpoints; no sampled discrepancy found."
+    },
+    {
+      "area": "liquid_drain",
+      "coverage": "sampled",
+      "details": "Checked WDR-HIGH normal and retained-flow cases for separator removed liquid, drain capacity, outfall total flow, liquid pipe class compatibility, and drain-route connectivity. Under the submission's 1000 kg/m3 liquid-density assumption, DN150 drain velocity is far below 3 m/s. Public liquid density is not specified, so definitive velocity validation is a semantics gap."
+    },
+    {
+      "area": "geometry_layout_roads_maintenance",
+      "coverage": "sampled",
+      "details": "Sampled site containment, no-build-zone avoidance, equipment footprint bboxes, selected safety separations, road width/connectivity, road entrance connection, and selected maintenance/crane access distances. The sampled geometry is plausible and within public limits. I did not perform exhaustive polygon intersection or distance calculations for every footprint/envelope pair."
+    },
+    {
+      "area": "pipeline_geometry",
+      "coverage": "sampled",
+      "details": "Sampled pipeline endpoint matching for PL-28, PL-31, PL-32, PL-33, well lines, and liquid-drain lines; checked route containment against the rectangular site and obvious public exclusion zones for sampled routes. Segment lengths are positive in sampled routes. I did not independently exhaustively test all same-level overlaps/self-overlaps or all footprint crossings."
+    },
+    {
+      "area": "lifecycle_cost_arithmetic",
+      "coverage": "sampled",
+      "details": "Independently recomputed PVF, equipment CAPEX, annual maintenance, energy PV, road/foundation civil arithmetic, and sampled piping CAPEX. The numeric LCC in submission/results/lcc.json reconciles to 87.520147077 MBCU. Maintenance-envelope area and every individual pipe line item were not exhaustively recomputed."
+    },
+    {
+      "area": "lcc_objective",
+      "coverage": "sampled",
+      "details": "Reviewed the stated objective and the submission's alternatives discussion. I did not establish a global optimum and did not find a confirmed lower-cost feasible alternative from the sampled checks. The submission's optimiser claims were not accepted as independent proof of global optimality."
+    },
+    {
+      "area": "unsupported_assumptions",
+      "coverage": "full",
+      "details": "Reviewed stated assumptions and limitations in submission/design_report.md. The main unsupported/ambiguous dependencies are free unmodelled isolation valves for scenario active paths and an assumed liquid density for drain velocity. Both are classified as semantics gaps rather than confirmed submission violations because the public brief does not provide decisive modelling/cost rules."
+    },
+    {
+      "area": "internal_consistency",
+      "coverage": "sampled",
+      "details": "Cross-checked report, design JSON, scenario results, validation summary, quantities, and LCC. The main inconsistency found is report road length/civil arithmetic versus design/results JSON. The report also lists a drain-line typical velocity inconsistent with the result traces, but this is noncritical and overlaps the liquid-density semantics gap."
+    }
+  ],
+  "independent_calculations": [
+    {
+      "title": "Lifecycle-cost arithmetic reconciliation",
+      "public_inputs": [
+        "brief/economic_assumptions.json: discount_rate=0.08, project_life_years=20, energy_tariff=0.00012, road rate=0.00015, foundation rate=4e-6, maintenance-area rate=1e-6",
+        "brief/engineering_calculation_basis.md: LCC and PVF formulas",
+        "brief/piping_catalog.json: pipe installed costs, class multipliers, ground civil cost=0"
+      ],
+      "submission_inputs": [
+        "submission/results/lcc.json: equipment_capex=28.95, piping_capex=1.554927625, road_m=876.5, annual_energy_mwh=39518.81119978057, annual_maintenance=1.051",
+        "submission/data/design.json: equipment model counts and road centreline coordinates"
+      ],
+      "method": "Manual recomputation from public formulae: PVF=(1-(1.08)^-20)/0.08=9.818147407; equipment CAPEX summed from installed catalog models; annual energy=sum(power*scenario hours); energy PV=annual MWh*0.00012*PVF; maintenance PV=1.051*PVF; sampled pipe costs as length*diameter cost*class multiplier*level multiplier; civil=road+foundation+maintenance-area+ground pipeline civil.",
+      "result": "Recomputed equipment CAPEX 28.95, energy PV 46.560181647, maintenance PV 10.318872925, civil 0.13616488 using 876.5 m of road, and total LCC 87.520147077 MBCU. PL-01 piping sample: 259.5*0.00026*1.18=0.0796146 MBCU; PL-28 sample: 521.75*0.000545*1.18=0.335537425 MBCU. These match submission/results/lcc.json.",
+      "scratch_files": []
+    },
+    {
+      "title": "Hydraulic spot checks for selected gas pipelines",
+      "public_inputs": [
+        "brief/engineering_calculation_basis.md: Z, viscosity, density, Reynolds number, Swamee-Jain friction, and fixed-point pressure-loss formulae",
+        "brief/gas_properties.json: MW=0.0182 kg/mol, gas-property clamps",
+        "brief/piping_catalog.json: DN internal diameters and roughness=4.5e-5 m for CS-WET classes"
+      ],
+      "submission_inputs": [
+        "submission/results/scenario_results.json: INJ-LOW PL-32, WDR-MID PL-26, compressor N-1 INJ-LOW PL-22, INJ-HIGH PL-28 traces",
+        "submission/data/design.json: pipe lengths, diameters, and classes"
+      ],
+      "method": "Selected the highest-flow line, highest-velocity line, a small-DN line, and a long line. Recomputed representative mean pressure, gas properties, area, velocity, Reynolds number, friction factor, and pressure loss by the public formulae; checked against reported fixed-point outlet pressure/loss and velocity limits.",
+      "result": "PL-32 INJ-LOW at 120 kg/s gives Z≈0.9323, rho≈51.2 kg/m3, v≈6.89 m/s, Re≈2.16e7, dP≈0.0014 MPa versus reported 0.0014015. PL-26 WDR-MID at 100 kg/s gives Z≈0.9349, rho≈61.7, v≈19.1 m/s, Re≈3.63e7, dP≈0.0745 MPa versus reported 0.0745223. PL-22 N-1 INJ-LOW at 24 kg/s DN200 gives v≈17.0 m/s and dP≈0.0356 MPa versus reported 0.0355959. PL-28 INJ-HIGH long line gives dP≈0.0052 MPa versus reported 0.0051898. Sampled velocities are below 25 m/s.",
+      "scratch_files": []
+    },
+    {
+      "title": "Scenario flow, delivery quality, and liquid-removal checks",
+      "public_inputs": [
+        "brief/operating_scenarios.json: six required flows, hours, source conditions, and sink pressure requirements",
+        "brief/project_requirements.json: well-group max flow 25 kg/s, GRID-TIE max flow 160 kg/s, water/free-liquid/temperature delivery limits",
+        "brief/equipment_catalog/separators.json and dehydration.json: separator efficiency 0.9995, SEP70 max liquid rate 2.0 kg/s, DEHY70 water outlet 35 mg/Sm3"
+      ],
+      "submission_inputs": [
+        "submission/results/scenario_results.json: normal scenario well_flows, delivery values, liquid_total_kg_s, liquid_per_separator_kg_s",
+        "submission/data/design.json: scenario operating paths and deliveries"
+      ],
+      "method": "Checked all six required scenario flow totals and equal well allocations against boundary limits. Recomputed separator outlet free-liquid loading and removed-liquid rates for WDR-HIGH, WDR-MID, and WDR-LOW. Compared sink pressure, water, free-liquid, and temperature values to public limits.",
+      "result": "Normal allocations sum to 120, 100, 75, 120, 100, and 70 kg/s and each well group is <=20 kg/s, below the 25 kg/s limit. WDR-HIGH liquid removal per separator is 40*0.01*0.9995=0.3998 kg/s, total 1.1994 kg/s, matching results and below SEP70/outfall limits; separator outlet loading is 5e-6 and DEHY outlet water is 35 mg/Sm3. All six reported normal deliveries meet required pressure, water <=50, free-liquid <=0.0001, and temperature -10 to 60 degC.",
+      "scratch_files": []
+    },
+    {
+      "title": "N-1 evidence inventory",
+      "public_inputs": [
+        "brief/project_requirements.json: compression_n_minus_one one compressor unavailable at a time for scenarios with sink pressure greater than source pressure; withdrawal_treatment_n_minus_one after any one separator or dehydration unit unavailable for withdrawal scenarios",
+        "brief/engineering_calculation_basis.md: retained flow fraction >=0.7 and delivery limits remain applicable"
+      ],
+      "submission_inputs": [
+        "submission/results/scenario_results.json: N-1 result labels and traces",
+        "submission/calc/validate.py: N1_CASES and n1_results() definitions",
+        "submission/design_report.md: Section 7 and Section 12 N-1 verification claims"
+      ],
+      "method": "Enumerated the public outage combinations implied by installed equipment and compared them with the delivered N-1 cases. Also inspected representative traces to see whether an unavailable unit is omitted from the active path in the cases that are present.",
+      "result": "A direct any-one-unit simulation set would include 4 applicable compressor scenarios * 3 compressor outages plus 3 withdrawal scenarios * 3 separator outages plus 3 withdrawal scenarios * 3 dehydration outages. The submission provides seven labelled cases: three injection compressor cases, WDR-LOW compressor, WDR-HIGH separator, WDR-HIGH dehydration, and one combined separator+dehydration WDR-LOW case. Representative cases show failed units omitted from the active path, but the delivered set is not exhaustive and does not cover WDR-MID treatment outages or individual failed-unit variants.",
+      "scratch_files": []
+    },
+    {
+      "title": "Geometry and road-cost spot checks",
+      "public_inputs": [
+        "brief/site.json: site rectangle, public exclusion zones, road entrance, external interfaces",
+        "brief/engineering_geometry_basis.md: road width/connectivity and route endpoint rules",
+        "brief/economic_assumptions.json: road cost rate 0.00015 MBCU/m"
+      ],
+      "submission_inputs": [
+        "submission/data/design.json: equipment bboxes, roads, selected pipeline routes",
+        "submission/design_report.md: road table and total road length claim",
+        "submission/results/quantities.json and lcc.json: road length and road capex"
+      ],
+      "method": "Manually computed road centreline lengths from JSON coordinates and sampled equipment/route positions against the rectangular site and obvious exclusion zones. Checked selected pipeline endpoints against equipment/boundary port coordinates.",
+      "result": "Road lengths from JSON are R1 687.5 m, R2 51 m, R3 108 m, R4 30 m, total 876.5 m; lcc.json uses 876.5*0.00015=0.131475 MBCU. Sampled endpoints PL-32/PL-33 and PL-28 match GRID-TIE/MI/HCS and COOL/HM port coordinates. Sampled equipment bboxes and roads lie within the 0..700 by 0..450 site and outside sampled exclusion interiors.",
+      "scratch_files": []
+    }
+  ],
+  "findings": [
+    {
+      "finding_id": "F-001",
+      "status": "unsupported_claim",
+      "severity": "medium",
+      "confidence": "high",
+      "public_basis": "brief/project_requirements.json requires compression N-1 after any one compressor is unavailable for scenarios where required_sink_pressure_mpa > source_pressure_mpa, and withdrawal treatment N-1 after any one separator or dehydration unit is unavailable for withdrawal service. brief/engineering_calculation_basis.md requires retained flow >=0.7 and delivery limits after those outages.",
+      "claim_or_requirement": "submission/design_report.md Sections 7 and 12 claim N-1 reliability is verified with 0 findings and that every retained unit stays inside its envelope. The public requirement is any-one-unit outage evidence, not a single representative outage label.",
+      "submission_evidence": "submission/results/scenario_results.json contains only seven N-1 labels: compressor N-1 for INJ-LOW/MID/HIGH, separator N-1 WDR-HIGH, dehydration N-1 WDR-HIGH, compressor N-1 WDR-LOW, and separator+dehydration N-1 WDR-LOW. submission/calc/validate.py n1_results() hard-codes the same subset and N1_CASES uses only C2+C3 for injection compressor outages.",
+      "independent_check": "With three installed compressors, three separators, and three dehydration units, direct exhaustive evidence would cover individual failed-unit variants for 4 compressor-applicable scenarios and 3 withdrawal scenarios for separator and dehydration. The submitted cases omit WDR-MID treatment outages, omit separate WDR-LOW separator-only and dehydration-only cases, and do not identify/cover all individual failed compressor, separator, or dehydration units. The compressor bank is not fully symmetric because C3 is C40 while C1/C2 are C60 and branch piping differs; separator/dehydration branch lengths also differ.",
+      "result": "The available results are representative capacity/path checks, not exhaustive any-one-unit N-1 evidence. The sampled cases may pass, but the claim that the public N-1 requirement is fully verified is unsupported.",
+      "why_it_matters": "N-1 reliability is mandatory. Non-identical remaining lineups can change pressure losses, minimum stable flow, velocity, and delivery margins, so representative cases alone do not prove every allowed single outage remains feasible."
+    },
+    {
+      "finding_id": "F-002",
+      "status": "semantics_gap",
+      "severity": "medium",
+      "confidence": "high",
+      "public_basis": "brief/final_delivery_contract.json requires physical topology and scenario-specific active paths. brief/network_semantics.md excludes arbitrary zero-cost process junctions, but the public brief provides no valve catalogue, valve costing rule, or explicit rule for free scenario isolation valves.",
+      "claim_or_requirement": "submission/design_report.md assumptions A4 and limitations item 1 state that scenario flow paths are selected by an isolation-valve line-up and that isolation valves are assumed available, correctly sized, uncatalogued, and unpriced.",
+      "submission_evidence": "The physical network includes parallel compressor branches, a bypass PL-26 between HCS and HCD, a cooler branch, and withdrawal treatment branches. Normal injection paths isolate PL-26 and treatment; WDR-HIGH/MID paths isolate compressors and cooler; WDR-LOW closes the bypass and opens compressor branches. No valve equipment appears in submission/data/design.json or the LCC.",
+      "independent_check": "Tracing the submitted active paths shows that the design depends on switching/isolating connected branches to prevent unintended flow through bypass, compressor, treatment, or cooler paths. Those isolation functions are neither catalogued nor costed in the public data, and the brief does not uniquely state whether they are free operating assumptions or missing physical equipment.",
+      "result": "This cannot be judged as a definitive pass or violation from the public brief alone. It is a semantics gap affecting active-path realizability and LCC completeness.",
+      "why_it_matters": "If isolation valves must be physical priced equipment, the topology, pressure losses, maintenance footprint, and LCC would change. If active-path switching is free by benchmark convention, the design can be interpreted as intended."
+    },
+    {
+      "finding_id": "F-003",
+      "status": "semantics_gap",
+      "severity": "low",
+      "confidence": "high",
+      "public_basis": "brief/engineering_calculation_basis.md requires liquid-drain pipelines to remain within the published maximum liquid-drain velocity limit, and brief/piping_catalog.json sets that limit to 3 m/s. The public brief specifies gas properties but does not specify liquid density or a liquid velocity formula input.",
+      "claim_or_requirement": "submission/design_report.md limitation item 2 states drain velocity is checked with an assumed 1000 kg/m3 liquid density, and submission/results/scenario_results.json reports liquid pipe rho=1000.0.",
+      "submission_evidence": "For WDR-HIGH, submission/results/scenario_results.json reports PL-34 with m=0.3998000000000001 kg/s, DN150 internal diameter 0.141 m, rho=1000.0, and v=0.025604404707264137 m/s.",
+      "independent_check": "Using A=pi*0.141^2/4=0.01561 m2 and the submission's density, v=0.3998/(1000*A)=0.0256 m/s, below 3 m/s. Without a public liquid density, the unique benchmark velocity cannot be computed; the threshold density for this case to reach 3 m/s is about 8.5 kg/m3.",
+      "result": "Under the submission's stated density assumption the drain velocity passes, but the public basis lacks a decisive liquid-density input, so this is not a definitive public PASS.",
+      "why_it_matters": "The drain system is part of mandatory liquid handling. Velocity compliance should not depend on an unstated physical property unless the benchmark explicitly allows the assumption."
+    },
+    {
+      "finding_id": "F-004",
+      "status": "unsupported_claim",
+      "severity": "low",
+      "confidence": "high",
+      "public_basis": "brief/engineering_calculation_basis.md and brief/economic_assumptions.json require road civil CAPEX to be road centreline length multiplied by 0.00015 MBCU/m. brief/final_delivery_contract.json requires reconstructable quantities and LCC basis.",
+      "claim_or_requirement": "submission/design_report.md Sections 6.4, 10, and 11 state total road centreline length is 870.5 m and civil road cost is 870.5 m * 0.00015 = 0.1306 MBCU.",
+      "submission_evidence": "submission/data/design.json defines R1 from (2.5,225) to (690,225), R2 from (470,225) to (470,276), R3 from (456,270) to (564,270), and R4 from (188,225) to (188,195). submission/results/lcc.json and submission/results/quantities.json use road_m/road_length_m=876.5 and road_capex=0.131475.",
+      "independent_check": "The JSON road coordinates give lengths 687.5 + 51 + 108 + 30 = 876.5 m. At 0.00015 MBCU/m, road CAPEX is 0.131475 MBCU. The report's 870.5 m is 6 m short and its road-cost text is lower by 0.0009 MBCU, although the machine-readable LCC uses the correct JSON road length.",
+      "result": "The report road quantity and civil-cost explanation are unsupported by the final road geometry. The LCC JSON itself reconciles to the geometry and is not materially affected beyond documentation inconsistency.",
+      "why_it_matters": "This is a small cost difference, but it weakens reconstructability because the human report and the machine-readable LCC basis disagree."
+    }
+  ],
+  "limitations": [
+    "The execution environment was read-only and rejected writes to scratch/, so no evaluator-authored scratch scripts or output files could be persisted. All independent calculations were performed from file inspection and manual formula recomputation, with scratch_files left empty.",
+    "Python execution was blocked by command policy, so I did not run submission/calc/validate.py or any copied self-validation sandbox. Submission validator PASS results were not treated as independent evidence.",
+    "Hydraulic, geometry, port-cardinality, equipment-envelope, and LCC checks were sampled rather than exhaustively recomputed with an independent parser. Findings are limited to issues supported by the inspected artifacts and manual calculations.",
+    "No global LCC optimum was proven or disproven. I did not perform an independent optimisation search over alternative layouts, equipment banks, or pipe sizes."
+  ],
+  "submission_alias": "submission_F",
+  "pass_id": "pass_02",
+  "evaluation_start_time_utc": "2026-09-27T13:34:16Z",
+  "evaluation_end_time_utc": "2026-09-27T13:45:39Z",
+  "evaluator_model": "gpt-5.5",
+  "reasoning_effort": "xhigh",
+  "codex_cli_version": "codex-cli-exec 0.130.0",
+  "process_exit_code": 0,
+  "replacement_attempts": 182
+}

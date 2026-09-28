@@ -1,0 +1,90 @@
+[
+  {
+    "completion_status": "agent_completed_without_evaluation",
+    "condition": "explicit_collaboration",
+    "finish_requested": true,
+    "pair_number": "001",
+    "project_file_count": 23,
+    "published_path": "evidence/final_submissions/pair_001/explicit_collaboration",
+    "run_id": "ugs_synth_explicit_collaboration_replication_001",
+    "source_project_sha256": "fd9df8d87380b527323f7b2a1cc878d1b10143e9cdb04e35c262883b72a0ede2",
+    "submission_alias": "submission_A"
+  },
+  {
+    "completion_status": "agent_completed_without_evaluation",
+    "condition": "worker_only",
+    "finish_requested": true,
+    "pair_number": "002",
+    "project_file_count": 17,
+    "published_path": "evidence/final_submissions/pair_002/worker_only",
+    "run_id": "ugs_synth_worker_only_replication_002",
+    "source_project_sha256": "f96bf0a65379e87733a32956c2ae061af3a4728d46ece19255f36b7b03b2586e",
+    "submission_alias": "submission_B"
+  },
+  {
+    "completion_status": "agent_completed_without_evaluation",
+    "condition": "worker_only",
+    "finish_requested": true,
+    "pair_number": "004",
+    "project_file_count": 22,
+    "published_path": "evidence/final_submissions/pair_004/worker_only",
+    "run_id": "ugs_synth_worker_only_replication_004",
+    "source_project_sha256": "461cf1a2b79a2b8ee08738b663fb4bb9a3f3e683e3d4142fb167df17aad45dca",
+    "submission_alias": "submission_C"
+  },
+  {
+    "completion_status": "agent_completed_without_evaluation",
+    "condition": "explicit_collaboration",
+    "finish_requested": true,
+    "pair_number": "002",
+    "project_file_count": 16,
+    "published_path": "evidence/final_submissions/pair_002/explicit_collaboration",
+    "run_id": "ugs_synth_explicit_collaboration_replication_002",
+    "source_project_sha256": "36e50b47aa1493df985e2e07d02398aabe394d3468b7c766f12438f222a0c9fa",
+    "submission_alias": "submission_D"
+  },
+  {
+    "completion_status": "agent_completed_without_evaluation",
+    "condition": "worker_only",
+    "finish_requested": true,
+    "pair_number": "001",
+    "project_file_count": 16,
+    "published_path": "evidence/final_submissions/pair_001/worker_only",
+    "run_id": "ugs_synth_worker_only_replication_001",
+    "source_project_sha256": "05d3872786f70421b6803d53351347882f522b5e5cddc47f3ea5f7ccda186fab",
+    "submission_alias": "submission_E"
+  },
+  {
+    "completion_status": "terminated_without_finish_project",
+    "condition": "worker_only",
+    "finish_requested": false,
+    "pair_number": "003",
+    "project_file_count": 16,
+    "published_path": "evidence/final_submissions/pair_003/worker_only",
+    "run_id": "ugs_synth_worker_only_replication_003",
+    "source_project_sha256": "e5cabe1f209ed6f614cc45b540547d76fe11c67145d2dba11e5316eefde19cc3",
+    "submission_alias": "submission_F"
+  },
+  {
+    "completion_status": "agent_completed_without_evaluation",
+    "condition": "explicit_collaboration",
+    "finish_requested": true,
+    "pair_number": "004",
+    "project_file_count": 23,
+    "published_path": "evidence/final_submissions/pair_004/explicit_collaboration",
+    "run_id": "ugs_synth_explicit_collaboration_replication_004",
+    "source_project_sha256": "54e981f3b8c768c43d7ebddc91db46f3a85f5f9b9136e809c82d375cc52b7495",
+    "submission_alias": "submission_G"
+  },
+  {
+    "completion_status": "agent_completed_without_evaluation",
+    "condition": "explicit_collaboration",
+    "finish_requested": true,
+    "pair_number": "003",
+    "project_file_count": 10,
+    "published_path": "evidence/final_submissions/pair_003/explicit_collaboration",
+    "run_id": "ugs_synth_explicit_collaboration_replication_003",
+    "source_project_sha256": "68c395699f0d8b3d376fbea0a6532500efb2ef11ac4c550aa28821adec2b1bd0",
+    "submission_alias": "submission_H"
+  }
+]

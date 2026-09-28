@@ -1,0 +1,33 @@
+{
+  "equipment_count": 21,
+  "equipment_by_category": {
+    "compressor": 3,
+    "header": 5,
+    "cooler": 1,
+    "meter": 2,
+    "regulator": 1,
+    "separator": 3,
+    "dehydration": 3,
+    "closed_drain": 3
+  },
+  "pipe_length_total_m": 5423.837362334221,
+  "pipe_length_by_dn": {
+    "DN700": 503.0,
+    "DN500": 843.0014204086917,
+    "DN300": 2875.82577953381,
+    "DN600": 309.01016239171906,
+    "DN200": 893.0
+  },
+  "pipe_length_by_class": {
+    "CS-DRY-160": 812.0101623917191,
+    "CS-WET-160": 3718.827199942502,
+    "CS-WET-100": 893.0
+  },
+  "pipe_length_by_level": {
+    "ground": 5423.837362334221
+  },
+  "pipe_count": 36,
+  "road_length_m": 1406.0,
+  "footprint_area_m2": 775,
+  "maintenance_area_m2": 1589.88
+}

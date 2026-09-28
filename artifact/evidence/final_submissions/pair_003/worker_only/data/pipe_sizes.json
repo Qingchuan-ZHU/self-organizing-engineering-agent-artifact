@@ -1,0 +1,158 @@
+{
+ "PL-01": {
+  "cls": "CS-WET-160",
+  "dn": "DN350"
+ },
+ "PL-02": {
+  "cls": "CS-WET-160",
+  "dn": "DN300"
+ },
+ "PL-03": {
+  "cls": "CS-WET-160",
+  "dn": "DN300"
+ },
+ "PL-04": {
+  "cls": "CS-WET-160",
+  "dn": "DN250"
+ },
+ "PL-05": {
+  "cls": "CS-WET-160",
+  "dn": "DN300"
+ },
+ "PL-06": {
+  "cls": "CS-WET-160",
+  "dn": "DN300"
+ },
+ "PL-07": {
+  "cls": "CS-WET-160",
+  "dn": "DN600"
+ },
+ "PL-08": {
+  "cls": "CS-WET-160",
+  "dn": "DN250"
+ },
+ "PL-09": {
+  "cls": "CS-WET-160",
+  "dn": "DN250"
+ },
+ "PL-10": {
+  "cls": "CS-WET-160",
+  "dn": "DN250"
+ },
+ "PL-11": {
+  "cls": "CS-WET-160",
+  "dn": "DN300"
+ },
+ "PL-12": {
+  "cls": "CS-WET-160",
+  "dn": "DN300"
+ },
+ "PL-13": {
+  "cls": "CS-WET-160",
+  "dn": "DN300"
+ },
+ "PL-14": {
+  "cls": "CS-WET-160",
+  "dn": "DN250"
+ },
+ "PL-15": {
+  "cls": "CS-WET-160",
+  "dn": "DN250"
+ },
+ "PL-16": {
+  "cls": "CS-WET-160",
+  "dn": "DN250"
+ },
+ "PL-17": {
+  "cls": "CS-WET-160",
+  "dn": "DN250"
+ },
+ "PL-18": {
+  "cls": "CS-WET-160",
+  "dn": "DN250"
+ },
+ "PL-19": {
+  "cls": "CS-WET-160",
+  "dn": "DN300"
+ },
+ "PL-20": {
+  "cls": "CS-WET-100",
+  "dn": "DN600"
+ },
+ "PL-21": {
+  "cls": "CS-WET-100",
+  "dn": "DN600"
+ },
+ "PL-22": {
+  "cls": "CS-WET-100",
+  "dn": "DN200"
+ },
+ "PL-23": {
+  "cls": "CS-WET-160",
+  "dn": "DN500"
+ },
+ "PL-24": {
+  "cls": "CS-WET-160",
+  "dn": "DN450"
+ },
+ "PL-25": {
+  "cls": "CS-WET-160",
+  "dn": "DN200"
+ },
+ "PL-26": {
+  "cls": "CS-WET-160",
+  "dn": "DN350"
+ },
+ "PL-27": {
+  "cls": "CS-WET-160",
+  "dn": "DN600"
+ },
+ "PL-28": {
+  "cls": "CS-WET-160",
+  "dn": "DN600"
+ },
+ "PL-29": {
+  "cls": "CS-WET-160",
+  "dn": "DN500"
+ },
+ "PL-30": {
+  "cls": "CS-WET-100",
+  "dn": "DN500"
+ },
+ "PL-31": {
+  "cls": "CS-WET-100",
+  "dn": "DN500"
+ },
+ "PL-32": {
+  "cls": "CS-WET-100",
+  "dn": "DN700"
+ },
+ "PL-33": {
+  "cls": "CS-WET-100",
+  "dn": "DN700"
+ },
+ "PL-34": {
+  "cls": "CS-WET-100",
+  "dn": "DN150"
+ },
+ "PL-35": {
+  "cls": "CS-WET-100",
+  "dn": "DN150"
+ },
+ "PL-36": {
+  "cls": "CS-WET-100",
+  "dn": "DN150"
+ },
+ "PL-37": {
+  "cls": "CS-WET-100",
+  "dn": "DN150"
+ },
+ "PL-38": {
+  "cls": "CS-WET-100",
+  "dn": "DN150"
+ },
+ "PL-39": {
+  "cls": "CS-WET-100",
+  "dn": "DN150"
+ }
+}

@@ -1,0 +1,461 @@
+{
+  "equipment_capex_mbcu": 28.840000000000007,
+  "piping_capex_mbcu": 1.8373900849236806,
+  "civil_access_capex_mbcu": 0.21558987999999996,
+  "civil_components": {
+    "roads_mbcu": 0.21089999999999998,
+    "foundations_mbcu": 0.0031,
+    "maintenance_area_mbcu": 0.0015898800000000001,
+    "pipeline_civil_mbcu": 0.0
+  },
+  "annual_energy_mwh": 39713.37141898659,
+  "energy_cost_per_year_mbcu": 4.765604570278391,
+  "energy_present_value_mbcu": 46.789408156607294,
+  "annual_maintenance_mbcu": 1.047,
+  "maintenance_present_value_mbcu": 10.27960033559941,
+  "pvf": 9.818147407449294,
+  "discount_rate": 0.08,
+  "project_life_years": 20,
+  "energy_tariff_mbcu_per_mwh": 0.00012,
+  "operating_hours_per_year": 5000,
+  "lcc_mbcu": 87.96198845713039,
+  "equipment_lines": [
+    {
+      "id": "COOL",
+      "model": "COOL120",
+      "category": "cooler",
+      "capex_mbcu": 0.92,
+      "annual_maintenance_mbcu": 0.05
+    },
+    {
+      "id": "DEHY-1",
+      "model": "DEHY70",
+      "category": "dehydration",
+      "capex_mbcu": 1.85,
+      "annual_maintenance_mbcu": 0.095
+    },
+    {
+      "id": "DEHY-2",
+      "model": "DEHY70",
+      "category": "dehydration",
+      "capex_mbcu": 1.85,
+      "annual_maintenance_mbcu": 0.095
+    },
+    {
+      "id": "DEHY-3",
+      "model": "DEHY70",
+      "category": "dehydration",
+      "capex_mbcu": 1.85,
+      "annual_maintenance_mbcu": 0.095
+    },
+    {
+      "id": "DRN-1",
+      "model": "DRN-S",
+      "category": "closed_drain",
+      "capex_mbcu": 0.08,
+      "annual_maintenance_mbcu": 0.004
+    },
+    {
+      "id": "DRN-2",
+      "model": "DRN-S",
+      "category": "closed_drain",
+      "capex_mbcu": 0.08,
+      "annual_maintenance_mbcu": 0.004
+    },
+    {
+      "id": "DRN-3",
+      "model": "DRN-S",
+      "category": "closed_drain",
+      "capex_mbcu": 0.08,
+      "annual_maintenance_mbcu": 0.004
+    },
+    {
+      "id": "HDR-A",
+      "model": "HDR120",
+      "category": "header",
+      "capex_mbcu": 0.25,
+      "annual_maintenance_mbcu": 0.012
+    },
+    {
+      "id": "HDR-B",
+      "model": "HDR120",
+      "category": "header",
+      "capex_mbcu": 0.25,
+      "annual_maintenance_mbcu": 0.012
+    },
+    {
+      "id": "HDR-C",
+      "model": "HDR120",
+      "category": "header",
+      "capex_mbcu": 0.25,
+      "annual_maintenance_mbcu": 0.012
+    },
+    {
+      "id": "HDR-E",
+      "model": "HDR120",
+      "category": "header",
+      "capex_mbcu": 0.25,
+      "annual_maintenance_mbcu": 0.012
+    },
+    {
+      "id": "HDR-F",
+      "model": "HDR120",
+      "category": "header",
+      "capex_mbcu": 0.25,
+      "annual_maintenance_mbcu": 0.012
+    },
+    {
+      "id": "INJ-C1",
+      "model": "C60",
+      "category": "compressor",
+      "capex_mbcu": 6.5,
+      "annual_maintenance_mbcu": 0.16
+    },
+    {
+      "id": "INJ-C2",
+      "model": "C60",
+      "category": "compressor",
+      "capex_mbcu": 6.5,
+      "annual_maintenance_mbcu": 0.16
+    },
+    {
+      "id": "INJ-C3",
+      "model": "C40",
+      "category": "compressor",
+      "capex_mbcu": 4.6,
+      "annual_maintenance_mbcu": 0.12
+    },
+    {
+      "id": "MTR-INJ",
+      "model": "MTR120",
+      "category": "meter",
+      "capex_mbcu": 0.3,
+      "annual_maintenance_mbcu": 0.016
+    },
+    {
+      "id": "MTR-WDR",
+      "model": "MTR120",
+      "category": "meter",
+      "capex_mbcu": 0.3,
+      "annual_maintenance_mbcu": 0.016
+    },
+    {
+      "id": "REG-WDR",
+      "model": "REG120",
+      "category": "regulator",
+      "capex_mbcu": 0.34,
+      "annual_maintenance_mbcu": 0.018
+    },
+    {
+      "id": "SEP-1",
+      "model": "SEP70",
+      "category": "separator",
+      "capex_mbcu": 0.78,
+      "annual_maintenance_mbcu": 0.05
+    },
+    {
+      "id": "SEP-2",
+      "model": "SEP70",
+      "category": "separator",
+      "capex_mbcu": 0.78,
+      "annual_maintenance_mbcu": 0.05
+    },
+    {
+      "id": "SEP-3",
+      "model": "SEP70",
+      "category": "separator",
+      "capex_mbcu": 0.78,
+      "annual_maintenance_mbcu": 0.05
+    }
+  ],
+  "pipeline_lines": [
+    {
+      "id": "L1",
+      "dn": "DN500",
+      "cls": "CS-WET-160",
+      "length_m": 176.50142040869179,
+      "capex_mbcu": 0.09163953747619277,
+      "civil_mbcu": 0.0
+    },
+    {
+      "id": "L2",
+      "dn": "DN500",
+      "cls": "CS-WET-160",
+      "length_m": 200.5,
+      "capex_mbcu": 0.1040996,
+      "civil_mbcu": 0.0
+    },
+    {
+      "id": "P01",
+      "dn": "DN700",
+      "cls": "CS-DRY-160",
+      "length_m": 133.0,
+      "capex_mbcu": 0.100947,
+      "civil_mbcu": 0.0
+    },
+    {
+      "id": "P02",
+      "dn": "DN700",
+      "cls": "CS-DRY-160",
+      "length_m": 370.0,
+      "capex_mbcu": 0.28082999999999997,
+      "civil_mbcu": 0.0
+    },
+    {
+      "id": "P03",
+      "dn": "DN500",
+      "cls": "CS-WET-160",
+      "length_m": 62.0,
+      "capex_mbcu": 0.0321904,
+      "civil_mbcu": 0.0
+    },
+    {
+      "id": "P04",
+      "dn": "DN500",
+      "cls": "CS-WET-160",
+      "length_m": 70.5,
+      "capex_mbcu": 0.0366036,
+      "civil_mbcu": 0.0
+    },
+    {
+      "id": "P05",
+      "dn": "DN300",
+      "cls": "CS-WET-160",
+      "length_m": 110.0,
+      "capex_mbcu": 0.027258,
+      "civil_mbcu": 0.0
+    },
+    {
+      "id": "P06",
+      "dn": "DN500",
+      "cls": "CS-WET-160",
+      "length_m": 80.75,
+      "capex_mbcu": 0.0419254,
+      "civil_mbcu": 0.0
+    },
+    {
+      "id": "P07",
+      "dn": "DN500",
+      "cls": "CS-WET-160",
+      "length_m": 85.75,
+      "capex_mbcu": 0.0445214,
+      "civil_mbcu": 0.0
+    },
+    {
+      "id": "P08",
+      "dn": "DN300",
+      "cls": "CS-WET-160",
+      "length_m": 126.0,
+      "capex_mbcu": 0.0312228,
+      "civil_mbcu": 0.0
+    },
+    {
+      "id": "P09",
+      "dn": "DN600",
+      "cls": "CS-DRY-160",
+      "length_m": 51.0,
+      "capex_mbcu": 0.03196425,
+      "civil_mbcu": 0.0
+    },
+    {
+      "id": "P10",
+      "dn": "DN600",
+      "cls": "CS-DRY-160",
+      "length_m": 258.01016239171906,
+      "capex_mbcu": 0.16170786927900993,
+      "civil_mbcu": 0.0
+    },
+    {
+      "id": "P11",
+      "dn": "DN300",
+      "cls": "CS-WET-160",
+      "length_m": 382.105351964612,
+      "capex_mbcu": 0.09468570621683085,
+      "civil_mbcu": 0.0
+    },
+    {
+      "id": "P12",
+      "dn": "DN300",
+      "cls": "CS-WET-160",
+      "length_m": 352.94829649680986,
+      "capex_mbcu": 0.08746058787190948,
+      "civil_mbcu": 0.0
+    },
+    {
+      "id": "P13",
+      "dn": "DN300",
+      "cls": "CS-WET-160",
+      "length_m": 329.6628012075369,
+      "capex_mbcu": 0.08169044213922765,
+      "civil_mbcu": 0.0
+    },
+    {
+      "id": "P14",
+      "dn": "DN300",
+      "cls": "CS-WET-160",
+      "length_m": 325.3575917356163,
+      "capex_mbcu": 0.08062361123208572,
+      "civil_mbcu": 0.0
+    },
+    {
+      "id": "P15",
+      "dn": "DN300",
+      "cls": "CS-WET-160",
+      "length_m": 339.2141653881807,
+      "capex_mbcu": 0.08405727018319117,
+      "civil_mbcu": 0.0
+    },
+    {
+      "id": "P16",
+      "dn": "DN300",
+      "cls": "CS-WET-160",
+      "length_m": 362.4889653492917,
+      "capex_mbcu": 0.08982476561355447,
+      "civil_mbcu": 0.0
+    },
+    {
+      "id": "P21",
+      "dn": "DN300",
+      "cls": "CS-WET-160",
+      "length_m": 72.18032973047436,
+      "capex_mbcu": 0.017886285707211545,
+      "civil_mbcu": 0.0
+    },
+    {
+      "id": "P22",
+      "dn": "DN300",
+      "cls": "CS-WET-160",
+      "length_m": 21.400934559032695,
+      "capex_mbcu": 0.005303151583728302,
+      "civil_mbcu": 0.0
+    },
+    {
+      "id": "P23",
+      "dn": "DN300",
+      "cls": "CS-WET-160",
+      "length_m": 39.21734310225516,
+      "capex_mbcu": 0.009718057620738829,
+      "civil_mbcu": 0.0
+    },
+    {
+      "id": "P24",
+      "dn": "DN300",
+      "cls": "CS-WET-160",
+      "length_m": 56.0,
+      "capex_mbcu": 0.013876799999999998,
+      "civil_mbcu": 0.0
+    },
+    {
+      "id": "P25",
+      "dn": "DN300",
+      "cls": "CS-WET-160",
+      "length_m": 56.0,
+      "capex_mbcu": 0.013876799999999998,
+      "civil_mbcu": 0.0
+    },
+    {
+      "id": "P26",
+      "dn": "DN300",
+      "cls": "CS-WET-160",
+      "length_m": 56.0,
+      "capex_mbcu": 0.013876799999999998,
+      "civil_mbcu": 0.0
+    },
+    {
+      "id": "P27",
+      "dn": "DN300",
+      "cls": "CS-WET-160",
+      "length_m": 105.0,
+      "capex_mbcu": 0.026019,
+      "civil_mbcu": 0.0
+    },
+    {
+      "id": "P28",
+      "dn": "DN300",
+      "cls": "CS-WET-160",
+      "length_m": 47.75,
+      "capex_mbcu": 0.011832450000000001,
+      "civil_mbcu": 0.0
+    },
+    {
+      "id": "P29",
+      "dn": "DN300",
+      "cls": "CS-WET-160",
+      "length_m": 94.5,
+      "capex_mbcu": 0.0234171,
+      "civil_mbcu": 0.0
+    },
+    {
+      "id": "P30",
+      "dn": "DN500",
+      "cls": "CS-WET-160",
+      "length_m": 34.5,
+      "capex_mbcu": 0.017912400000000002,
+      "civil_mbcu": 0.0
+    },
+    {
+      "id": "P31",
+      "dn": "DN500",
+      "cls": "CS-WET-160",
+      "length_m": 50.5,
+      "capex_mbcu": 0.0262196,
+      "civil_mbcu": 0.0
+    },
+    {
+      "id": "P32",
+      "dn": "DN500",
+      "cls": "CS-WET-160",
+      "length_m": 82.0,
+      "capex_mbcu": 0.0425744,
+      "civil_mbcu": 0.0
+    },
+    {
+      "id": "P36",
+      "dn": "DN200",
+      "cls": "CS-WET-100",
+      "length_m": 182.0,
+      "capex_mbcu": 0.02275,
+      "civil_mbcu": 0.0
+    },
+    {
+      "id": "P37",
+      "dn": "DN200",
+      "cls": "CS-WET-100",
+      "length_m": 137.0,
+      "capex_mbcu": 0.017124999999999998,
+      "civil_mbcu": 0.0
+    },
+    {
+      "id": "P38",
+      "dn": "DN200",
+      "cls": "CS-WET-100",
+      "length_m": 92.0,
+      "capex_mbcu": 0.011500000000000002,
+      "civil_mbcu": 0.0
+    },
+    {
+      "id": "P39",
+      "dn": "DN200",
+      "cls": "CS-WET-100",
+      "length_m": 144.0,
+      "capex_mbcu": 0.018000000000000002,
+      "civil_mbcu": 0.0
+    },
+    {
+      "id": "P40",
+      "dn": "DN200",
+      "cls": "CS-WET-100",
+      "length_m": 154.0,
+      "capex_mbcu": 0.019250000000000003,
+      "civil_mbcu": 0.0
+    },
+    {
+      "id": "P41",
+      "dn": "DN200",
+      "cls": "CS-WET-100",
+      "length_m": 184.0,
+      "capex_mbcu": 0.023000000000000003,
+      "civil_mbcu": 0.0
+    }
+  ]
+}

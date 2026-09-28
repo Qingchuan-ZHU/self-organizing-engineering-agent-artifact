@@ -1,0 +1,223 @@
+{
+  "summary": "The submission is broadly reconstructable and its main normal-scenario sizing and LCC arithmetic are internally coherent. I did not find a confirmed major infeasibility in the normal operating cases, but the N-1 evidence is materially incomplete for some withdrawal outages, and two public-semantics gaps affect definitive judgments on valve isolation and liquid-drain velocity.",
+  "areas_checked": [
+    {
+      "area": "deliverable_completeness_reconstructability",
+      "coverage": "full",
+      "details": "Compared brief/final_delivery_contract.json with submission/README.md, submission/REPORT.md, and submission/design_output.json. Equipment IDs/models, positions/orientations, ports, external interfaces, roads, routes, diameters/classes/levels, scenarios, quantities, LCC, assumptions, and limitations are present. Some scenario allocations are rounded too coarsely, noted as a finding."
+    },
+    {
+      "area": "physical_topology_and_port_semantics",
+      "coverage": "full",
+      "details": "Reviewed all 39 connections from submission/nets.py and the corresponding design_output pipelines/header assignments. Port pairings, ordinary port cardinality, header branch counts, GRID-TIE two-connection limit, well-group one-connection use, and drain outfall connection count were checked from the final artifacts; no illegal free junction was found. Directional use of one-way meter/compressor/separator/dehydrator/regulator ports is compatible with the stated active paths."
+    },
+    {
+      "area": "operating_scenarios",
+      "coverage": "sampled",
+      "details": "All six mandatory scenario result blocks were inspected. I independently summed well allocations, checked delivered pressure/temperature/quality fields against limits, and recalculated representative equipment/flow values. Full hydraulic balances for every active path were not independently re-solved."
+    },
+    {
+      "area": "n_minus_1_reliability",
+      "coverage": "sampled",
+      "details": "Reviewed the N-1 JSON and submission/nminus1.py. Injection compressor outages are listed for C-I1, C-I2, and C-I3 across all injection scenarios. Withdrawal treatment and WDR-LOW booster N-1 evidence is aggregate or one-sided rather than all any-one unit outages; this is a finding."
+    },
+    {
+      "area": "equipment_limits",
+      "coverage": "sampled",
+      "details": "Checked catalogue limits for the selected compressors, separator/dehydration trains, cooler, meter/regulator, headers, and drains against submitted flows, pressure ratios, pressures, temperatures, duties, and capacities. Normal cases sampled were within limits; N-1 evidence limitations are handled separately."
+    },
+    {
+      "area": "hydraulic_calculations",
+      "coverage": "sampled",
+      "details": "Recomputed gas properties, velocity, Reynolds/friction behavior, and pressure loss for representative highest-flow, long-pipe, critical-pressure, and small-DN cases. Samples were consistent with the submission and below velocity limits; I did not recompute all 39 pipelines."
+    },
+    {
+      "area": "gas_quality_and_temperature",
+      "coverage": "sampled",
+      "details": "Checked source and delivered water/free-liquid/temperature values for all six scenario summaries. Dehydration outlet water 35 mg/Sm3 and separator outlet free-liquid 5e-6 kg/kg satisfy delivery limits in withdrawal scenarios; injection source quality already satisfies limits. Pipe-class eligibility was sampled."
+    },
+    {
+      "area": "liquid_drain",
+      "coverage": "sampled",
+      "details": "Checked separator liquid production, per-drain and outfall capacities, drain connections, and liquid pipe class. Liquid velocity can only be evaluated under the submission's 1000 kg/m3 density assumption because the public brief does not provide a liquid density; this is recorded as a semantics gap."
+    },
+    {
+      "area": "geometry_layout_roads_maintenance",
+      "coverage": "sampled",
+      "details": "Reviewed site boundaries, exclusions, equipment extents, roads, and validator logic. Sampled equipment and road geometry appeared within site and outside exclusions, with connected roads and adequate widths. I did not independently recompute every footprint separation and maintenance envelope overlap."
+    },
+    {
+      "area": "pipeline_geometry",
+      "coverage": "sampled",
+      "details": "Inspected route endpoints, levels, lengths, and representative routes near headers, well lines, treatment trains, and drains. Endpoints match published interfaces or equipment ports in sampled cases, and routes use positive-length orthogonal segments. Full pairwise overlap and exclusion checks were not independently executed."
+    },
+    {
+      "area": "lifecycle_cost_arithmetic",
+      "coverage": "sampled",
+      "details": "Independently recomputed equipment CAPEX, annual maintenance, PV factor, energy PV, maintenance PV, and total LCC from catalogue/economic inputs. Sampled piping CAPEX entries matched the published cost formula; I did not manually sum every pipeline entry."
+    },
+    {
+      "area": "lcc_objective",
+      "coverage": "sampled",
+      "details": "Reviewed obvious equipment dominance: meter/header sizes, compressor counts, treatment train count, and pressure ratings are plausibly justified. I did not prove a global optimum and did not identify a fully specified lower-cost feasible alternative."
+    },
+    {
+      "area": "unsupported_assumptions",
+      "coverage": "sampled",
+      "details": "Identified dependence on unmodelled valve isolation for active lineups and an assumed liquid density for drain velocity. These are not treated as confirmed design violations because the public semantics are incomplete or ambiguous on those points."
+    },
+    {
+      "area": "internal_consistency",
+      "coverage": "sampled",
+      "details": "Cross-checked report claims, design_output fields, and source files. LCC/report values agree. The reproduction instructions and source hard-coded paths are inconsistent with the frozen package layout, and some PASS messages contain misleading text despite ok=true."
+    }
+  ],
+  "independent_calculations": [
+    {
+      "title": "Equipment, maintenance, energy, and total LCC arithmetic",
+      "public_inputs": [
+        "brief/equipment_catalog/*.json capex and annual maintenance values",
+        "brief/economic_assumptions.json discount_rate=0.08, project_life_years=20, energy_tariff=0.00012 MBCU/MWh"
+      ],
+      "submission_inputs": [
+        "submission/design_output.json lcc.equipment, lcc.energy, lcc.maintenance, lcc.breakdown"
+      ],
+      "method": "Manually summed installed equipment CAPEX and annual maintenance from catalogue values; recomputed PVF=(1-(1+0.08)^-20)/0.08; multiplied submitted annual energy by tariff and PVF; summed LCC components.",
+      "result": "Equipment CAPEX = 41.59 MBCU; annual maintenance = 1.355 MBCU/y; PVF = 9.818147407; energy PV = 46.393724916 MBCU; maintenance PV = 13.303589737 MBCU; total LCC = 103.491454088 MBCU. These match submission/design_output.json within rounding.",
+      "scratch_files": []
+    },
+    {
+      "title": "Scenario well-allocation sums",
+      "public_inputs": [
+        "brief/engineering_calculation_basis.md scenario flow conservation and mass-flow tolerance 1e-5 kg/s",
+        "brief/operating_scenarios.json required_total_flow_kg_s"
+      ],
+      "submission_inputs": [
+        "submission/design_output.json scenario_results[*].well_group_allocation_kg_s"
+      ],
+      "method": "Summed the six submitted well-group allocations for each mandatory scenario and compared to required_total_flow_kg_s.",
+      "result": "INJ-LOW 120.0 and INJ-HIGH 75.0 match. INJ-MID and WDR-MID sum to 100.0002 kg/s, and WDR-LOW sums to 70.0002 kg/s, exceeding the 1e-5 kg/s tolerance by about 2e-4 kg/s. WDR-HIGH sums to 120.0.",
+      "scratch_files": []
+    },
+    {
+      "title": "Representative hydraulic samples",
+      "public_inputs": [
+        "brief/engineering_calculation_basis.md gas-property and Darcy/Swamee-Jain pressure-loss formulas",
+        "brief/gas_properties.json MW=0.0182 kg/mol, cp=2450 J/kg/K, viscosity and Z bounds",
+        "brief/piping_catalog.json DN internal diameters, roughness, 25 m/s gas velocity limit"
+      ],
+      "submission_inputs": [
+        "submission/design_output.json selected pipeline lengths/DN/classes and scenario flows/pressures"
+      ],
+      "method": "Hand recomputed Z, density, velocity, Reynolds/friction behavior, and approximate fixed-point pressure loss for selected cases: N-MTRINJ-GRID at INJ-LOW 120 kg/s, N-WS-WG6 as a long line, N-MTRWDR-GRID near WDR-HIGH grid pressure, and N-CI3-CH as a small-DN N-1 sample.",
+      "result": "Samples were below 25 m/s and had small pressure-loss updates: N-MTRINJ-GRID v≈6.9 m/s and dP≈0.002 MPa; N-WS-WG6 v≈5.23 m/s and dP≈0.022 MPa; N-MTRWDR-GRID v≈13.9 m/s and dP≈0.012 MPa; N-CI3-CH N-1 small-DN sample v≈16.5 m/s and dP≈0.085 MPa. These samples are consistent with submitted pressures/velocities at engineering precision.",
+      "scratch_files": []
+    },
+    {
+      "title": "Withdrawal treatment and drain capacity arithmetic",
+      "public_inputs": [
+        "brief/equipment_catalog/separators.json SEP70 capacity 70 kg/s, liquid removal 0.9995, max liquid 2.0 kg/s",
+        "brief/equipment_catalog/dehydration.json DEHY70 capacity 70 kg/s, max feed free liquid 0.0001, outlet water 35 mg/Sm3",
+        "brief/equipment_catalog/drains.json DRN-S capacity 0.8 kg/s",
+        "brief/site.json LIQUID-DRAIN-OUTFALL max flow 10 kg/s"
+      ],
+      "submission_inputs": [
+        "submission/design_output.json scenario_results and n_minus_one.withdrawal_treatment",
+        "submission/design_output.json design_basis.liquid_density_assumption_kg_m3"
+      ],
+      "method": "For WDR-HIGH normal and retained N-1 flows, computed per-train gas and separator liquid rates and checked capacities/quality. For liquid velocity, used the submission's explicit 1000 kg/m3 assumption, not a public density.",
+      "result": "Normal WDR-HIGH per separator liquid is 40*0.01*0.9995≈0.3998 kg/s < 0.8 kg/s drain capacity and total outfall ≈1.1994 kg/s < 10 kg/s. N-1 retained WDR-HIGH per active train is 84/2=42 kg/s < 70 and liquid ≈0.4198 kg/s < 2.0; separator outlet free liquid is 5e-6 and dehy water is 35 mg/Sm3, both within delivery limits. Velocity is indeterminate without an official liquid density, though under 1000 kg/m3 it is far below 3 m/s for DN150.",
+      "scratch_files": []
+    }
+  ],
+  "findings": [
+    {
+      "finding_id": "F-N1-WDR-COMP-EVIDENCE",
+      "status": "unsupported_claim",
+      "severity": "medium",
+      "confidence": "high",
+      "public_basis": "brief/project_requirements.json compression_n_minus_one requires any one compressor unavailable when required_sink_pressure_mpa > source_pressure_mpa; brief/engineering_calculation_basis.md requires delivery limits remain applicable after outage.",
+      "claim_or_requirement": "WDR-LOW booster N-1 should be demonstrated for loss of either C-W1 or C-W2 with the failed unit out of the active path and retained deliverable flow at least 49 kg/s.",
+      "submission_evidence": "submission/design_output.json n_minus_one.withdrawal_compression contains only one WDR-LOW entry, lost='C-W2'. submission/nminus1.py run_all labels only lost='C-W2' and derives ratio from A.solve_withdrawal_boost(s,dg), the normal two-booster solution, rather than a single-booster hydraulic re-solve at retained flow.",
+      "independent_check": "The two booster paths are not identical in the final routes: N-TS-CW1 is 166.5 m and N-CW1-GS is 99.5 m, while N-TS-CW2 is 200.5 m and N-CW2-GS is 67.5 m. Capacity arithmetic supports plausibility because 49 kg/s is within C60 15-60 kg/s and the submitted normal ratio 1.389 is below 2.4, but that is not an any-one-outage simulation.",
+      "result": "The claim that all compressor N-1 cases pass is not fully supported for WDR-LOW. This is an evidence defect, not a confirmed infeasibility.",
+      "why_it_matters": "A booster outage is a mandatory reliability case. Without simulating both non-identical surviving paths and the failed unit removed, pressure, temperature, and delivery margins are not independently established."
+    },
+    {
+      "finding_id": "F-N1-WDR-TREATMENT-EVIDENCE",
+      "status": "unsupported_claim",
+      "severity": "medium",
+      "confidence": "high",
+      "public_basis": "brief/project_requirements.json withdrawal_treatment_n_minus_one requires any one separator and dehydration unit unavailable for withdrawal scenarios, with retained flow fraction at least 0.7 and delivery requirements still applicable.",
+      "claim_or_requirement": "The submission must support separator and dehydration N-1 outages, not just state retained flow over two trains.",
+      "submission_evidence": "submission/design_output.json n_minus_one.withdrawal_treatment has one aggregate entry per withdrawal scenario with retained_flow, per_train_kg_s, and separator_liquid_kg_s, but no failed separator/dehydration identity and no delivered pressure/temperature/quality fields. submission/nminus1.py withdrawal_treatment_n1 hard-codes range(1,3), effectively checking trains 1 and 2 only.",
+      "independent_check": "The three treatment paths have different lengths: N-WS-SEP1/2/3 are 102.0/188.0/273.5 m and N-DEH1-TS/2/3 are 83.25/61.5/139.0 m. Independent capacity/quality arithmetic for WDR-HIGH retained flow is acceptable at 42 kg/s per train and about 0.4198 kg/s liquid per separator, but this does not test every failed-unit hydraulic path.",
+      "result": "The N-1 treatment PASS is not exhaustively supported by the final artifacts. It may be feasible by capacity, but the submitted evidence is representative/aggregate rather than any-one separator and dehydration outage simulation.",
+      "why_it_matters": "The public reliability requirement is outage-specific. Non-identical route pressure losses can change retained delivery pressure, especially for lower-pressure withdrawal service."
+    },
+    {
+      "finding_id": "F-SCENARIO-ALLOCATION-ROUNDING",
+      "status": "confirmed_violation",
+      "severity": "low",
+      "confidence": "high",
+      "public_basis": "brief/engineering_calculation_basis.md states well-group allocations for a scenario sum to required_total_flow_kg_s and gives mass-flow tolerance 1e-5 kg/s.",
+      "claim_or_requirement": "Machine-readable scenario allocations should conserve flow within 1e-5 kg/s.",
+      "submission_evidence": "submission/design_output.json records 16.6667 kg/s to each well group for INJ-MID and WDR-MID, and 11.6667 kg/s to each well group for WDR-LOW.",
+      "independent_check": "Six times 16.6667 equals 100.0002 kg/s, not 100 kg/s; six times 11.6667 equals 70.0002 kg/s, not 70 kg/s. The deviations are about 2e-4 kg/s, greater than the public tolerance.",
+      "result": "The rounded allocation fields do not exactly conserve flow for three scenarios. The report text implies equal flow/6, so this appears to be a precision/reconstructability issue rather than a process-capacity failure.",
+      "why_it_matters": "The final delivery contract requires scenario flows precise enough for independent reconstruction; rounded operating data can fail strict benchmark checks even when the intended calculation is correct."
+    },
+    {
+      "finding_id": "F-LIQUID-DENSITY-SEMANTICS",
+      "status": "semantics_gap",
+      "severity": "low",
+      "confidence": "high",
+      "public_basis": "brief/engineering_calculation_basis.md imposes a liquid-drain velocity limit, but the public gas_properties.json provides only gas density/properties and no liquid density or liquid velocity formula.",
+      "claim_or_requirement": "Liquid-drain velocity compliance needs a density or other public basis for converting kg/s to m/s.",
+      "submission_evidence": "submission/design_output.json design_basis.liquid_density_assumption_kg_m3 is 1000.0, and assumptions_and_limitations states liquid-drain velocity uses that assumed density.",
+      "independent_check": "Using 1000 kg/m3, WDR-HIGH drain velocity for DN150 at about 0.4 kg/s is far below 3 m/s. Without that assumption, the public brief does not define a unique velocity result.",
+      "result": "Drain capacities and connections can be checked, but liquid velocity cannot be called a definitive public-basis PASS. This is a benchmark semantics gap, not a submission violation.",
+      "why_it_matters": "A different implicit liquid density would change velocity. The evaluator should not treat an unstated assumption as a published compliance basis."
+    },
+    {
+      "finding_id": "F-VALVE-LINEUP-SEMANTICS",
+      "status": "semantics_gap",
+      "severity": "medium",
+      "confidence": "high",
+      "public_basis": "brief/network_semantics.md defines ports, headers, and physical connections but does not define catalogued valves, valve costs, or isolation semantics for inactive branches.",
+      "claim_or_requirement": "The scenario active-path philosophy depends on isolating inactive branches in a physical network that contains shared headers and loops.",
+      "submission_evidence": "submission/REPORT.md and submission/design_output.json assumptions state that inactive branches are isolated by valves and only active branches carry flow. No valve equipment instances, valve ports, or valve costs appear in submission/design_output.json or the public catalogues.",
+      "independent_check": "The physical topology reuses H-GS and H-WS for injection and withdrawal and includes branches that must be inactive in a given scenario. The final artifacts define active paths, but the isolation hardware is not represented or priced because the public model does not supply valve components.",
+      "result": "There is no unique public-basis determination of whether free valve isolation is acceptable or should affect feasibility/LCC. This should be treated as an explicit unmodelled assumption.",
+      "why_it_matters": "If isolation valves were required as physical priced equipment, topology feasibility and lifecycle cost could change. If active-path semantics are allowed without modelling valves, the design remains interpretable."
+    },
+    {
+      "finding_id": "F-REPRO-PACKAGE-PATHS",
+      "status": "unsupported_claim",
+      "severity": "low",
+      "confidence": "high",
+      "public_basis": "brief/final_delivery_contract.json asks for clear project organization and calculations; submission/README.md provides reproduction commands as supporting evidence.",
+      "claim_or_requirement": "The submission claims deterministic reproduction via commands such as python project/build_routes.py and build_artifacts.py.",
+      "submission_evidence": "The frozen submission directory contains the scripts directly under submission/, not under a project/ directory. Several scripts, including submission/build_artifacts.py and submission/ugs_design.py, hard-code /workspace/project and /workspace/brief paths.",
+      "independent_check": "From the final package listing, no submission/project directory exists. The hard-coded paths do not match the supplied frozen layout of brief/ and submission/. I did not execute these scripts because external execution was blocked in this environment, but the path inconsistency is visible in the artifacts.",
+      "result": "The self-validation/reproduction claim is not supported by the packaged paths. The master design_output.json remains reviewable, but the scripts are not portable as delivered.",
+      "why_it_matters": "A submission-authored PASS is not independent evidence; when the reproduction wrapper is path-inconsistent, reviewers must rely on the final data and independent recalculation rather than the claimed validator run."
+    }
+  ],
+  "limitations": [
+    "The filesystem sandbox rejected writes, including an attempted scratch file, so no evaluator-authored scratch scripts or intermediate files were created. Independent calculations are recorded in this JSON with empty scratch_files arrays.",
+    "Python/external execution was blocked in this environment, and the submission scripts also contain hard-coded /workspace paths; I therefore did not run submission self-validation commands.",
+    "Hydraulic review was sampled, not a full independent re-solve of every pipe and every scenario path.",
+    "Geometry and pipeline overlap review was sampled from the final route data and validator source; I did not independently recompute every pairwise exclusion, safety, maintenance, and route-overlap case.",
+    "No global lifecycle-cost optimum is claimed; the LCC objective review only checked arithmetic and obvious dominated equipment alternatives."
+  ],
+  "submission_alias": "submission_C",
+  "pass_id": "pass_02",
+  "evaluation_start_time_utc": "2026-09-25T06:54:41Z",
+  "evaluation_end_time_utc": "2026-09-25T07:04:12Z",
+  "evaluator_model": "gpt-5.5",
+  "reasoning_effort": "xhigh",
+  "codex_cli_version": "codex-cli-exec 0.130.0",
+  "process_exit_code": 0,
+  "replacement_attempts": 0
+}

@@ -1,0 +1,258 @@
+{
+ "site_boundary_polygon_m": [
+  [
+   0,
+   0
+  ],
+  [
+   700,
+   0
+  ],
+  [
+   700,
+   450
+  ],
+  [
+   0,
+   450
+  ]
+ ],
+ "no_build_zones": [
+  {
+   "equipment_exclusion": true,
+   "pipeline_exclusion": true,
+   "polygon_m": [
+    [
+     550,
+     320
+    ],
+    [
+     700,
+     320
+    ],
+    [
+     700,
+     450
+    ],
+    [
+     550,
+     450
+    ]
+   ],
+   "road_exclusion": true,
+   "zone_id": "FUTURE-EXPANSION"
+  },
+  {
+   "equipment_exclusion": true,
+   "pipeline_exclusion": true,
+   "polygon_m": [
+    [
+     300,
+     0
+    ],
+    [
+     320,
+     0
+    ],
+    [
+     320,
+     90
+    ],
+    [
+     300,
+     90
+    ]
+   ],
+   "road_exclusion": false,
+   "zone_id": "DRAINAGE-CHANNEL"
+  },
+  {
+   "equipment_exclusion": true,
+   "pipeline_exclusion": false,
+   "polygon_m": [
+    [
+     620,
+     0
+    ],
+    [
+     700,
+     0
+    ],
+    [
+     700,
+     75
+    ],
+    [
+     620,
+     75
+    ]
+   ],
+   "road_exclusion": true,
+   "zone_id": "GRID-FACILITY"
+  }
+ ],
+ "routing_corridors": [
+  {
+   "allowed_routing_levels": [
+    "rack_low",
+    "rack_high"
+   ],
+   "allows_co_routing": true,
+   "corridor_id": "RACK-EASEMENT-EAST",
+   "polygon_m": [
+    [
+     625,
+     80
+    ],
+    [
+     690,
+     80
+    ],
+    [
+     690,
+     370
+    ],
+    [
+     625,
+     370
+    ]
+   ]
+  },
+  {
+   "allowed_routing_levels": [
+    "buried"
+   ],
+   "allows_co_routing": true,
+   "corridor_id": "BURIED-EASEMENT-SOUTH",
+   "polygon_m": [
+    [
+     40,
+     15
+    ],
+    [
+     570,
+     15
+    ],
+    [
+     570,
+     28
+    ],
+    [
+     40,
+     28
+    ]
+   ]
+  }
+ ],
+ "terrain": {
+  "elevation_m": 0,
+  "model": "flat"
+ },
+ "roads": [
+  {
+   "road_id": "RD-CRANE",
+   "width_m": 6.0,
+   "centreline_m": [
+    [
+     505.0,
+     225.0
+    ],
+    [
+     505.0,
+     50.0
+    ]
+   ],
+   "centreline_length_m": 175.0,
+   "paved_polygons_m": [
+    [
+     [
+      508.0,
+      228.0
+     ],
+     [
+      508.0,
+      47.0
+     ],
+     [
+      502.0,
+      47.0
+     ],
+     [
+      502.0,
+      228.0
+     ]
+    ]
+   ]
+  },
+  {
+   "road_id": "RD-MAIN",
+   "width_m": 8.0,
+   "centreline_m": [
+    [
+     4.0,
+     225.0
+    ],
+    [
+     560.0,
+     225.0
+    ]
+   ],
+   "centreline_length_m": 556.0,
+   "paved_polygons_m": [
+    [
+     [
+      0.0,
+      229.0
+     ],
+     [
+      564.0,
+      229.0
+     ],
+     [
+      564.0,
+      221.0
+     ],
+     [
+      0.0,
+      221.0
+     ]
+    ]
+   ]
+  },
+  {
+   "road_id": "RD-SEP",
+   "width_m": 6.0,
+   "centreline_m": [
+    [
+     302.0,
+     225.0
+    ],
+    [
+     302.0,
+     50.0
+    ]
+   ],
+   "centreline_length_m": 175.0,
+   "paved_polygons_m": [
+    [
+     [
+      305.0,
+      228.0
+     ],
+     [
+      305.0,
+      47.0
+     ],
+     [
+      299.0,
+      47.0
+     ],
+     [
+      299.0,
+      228.0
+     ]
+    ]
+   ]
+  }
+ ]
+}

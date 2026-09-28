@@ -1,0 +1,59 @@
+{
+ "equipment_capex": 28.95,
+ "piping_capex": 1.554927625,
+ "civil": {
+  "road_m": 876.5,
+  "road_capex": 0.13147499999999998,
+  "foundation_m2": 775.0,
+  "foundation_capex": 0.0031,
+  "maintenance_area_m2": 1589.88,
+  "maintenance_capex": 0.0015898800000000001,
+  "pipeline_civil": 0.0
+ },
+ "civil_capex_total": 0.13616487999999996,
+ "annual_energy_mwh": 39518.81119978057,
+ "annual_energy_cost_mbcu": 4.742257343973669,
+ "energy_pv": 46.56018164719245,
+ "energy_rows": [
+  {
+   "scenario": "INJ-LOW",
+   "hours": 900,
+   "power_mw": 7.708755954237802,
+   "energy_mwh_per_year": 6937.880358814022
+  },
+  {
+   "scenario": "INJ-MID",
+   "hours": 1300,
+   "power_mw": 12.674270315302438,
+   "energy_mwh_per_year": 16476.55140989317
+  },
+  {
+   "scenario": "INJ-HIGH",
+   "hours": 600,
+   "power_mw": 13.487885468816343,
+   "energy_mwh_per_year": 8092.731281289805
+  },
+  {
+   "scenario": "WDR-HIGH",
+   "hours": 500,
+   "power_mw": 2.16,
+   "energy_mwh_per_year": 1080.0
+  },
+  {
+   "scenario": "WDR-MID",
+   "hours": 900,
+   "power_mw": 1.7999999999999998,
+   "energy_mwh_per_year": 1619.9999999999998
+  },
+  {
+   "scenario": "WDR-LOW",
+   "hours": 800,
+   "power_mw": 6.639560187229467,
+   "energy_mwh_per_year": 5311.648149783574
+  }
+ ],
+ "annual_maintenance_mbcu": 1.051,
+ "maintenance_pv": 10.318872925229208,
+ "pvf": 9.818147407449294,
+ "lcc": 87.52014707742165
+}

@@ -1,0 +1,282 @@
+{
+  "apparatus_id": "UGS-SYNTH interleaved-review apparatus",
+  "apparatus_version": "0.3.0-development",
+  "automatic_summarization": false,
+  "base_apparatus_version": "0.2.1-development",
+  "capabilities": {
+    "engineering_evaluator": false,
+    "engineering_helper": false,
+    "optimizer": false,
+    "planner": false,
+    "predefined_workflow": false,
+    "python": "generic offline Python in resource-limited Docker container",
+    "reviewer_available": true,
+    "worker_tools": [
+      "list_files",
+      "read_file",
+      "write_file",
+      "execute_python",
+      "finish_project",
+      "submit_for_review"
+    ]
+  },
+  "condition": "explicit_collaboration",
+  "context_reset": false,
+  "created_at": "2026-09-24T22:58:26.504535Z",
+  "dbos": {
+    "recovery_ledger_path": "runtime/recovery_ledger.sqlite",
+    "reviewer_workflow_id_pattern": "ugs_synth_explicit_collaboration_replication_002:reviewer:NNNN",
+    "runtime": "DBOS",
+    "system_database_path": "runtime/dbos.sqlite",
+    "version": "3.0.0",
+    "workflow_id": "ugs_synth_explicit_collaboration_replication_002:worker"
+  },
+  "docker_image": {
+    "available": true,
+    "image": "self-organizing-engineering-agent/ugs-synth-minimal:python312",
+    "image_id": "sha256:76bec263dd9df042b47da57ac1e147655aad6ca27f0aaacf364534ea467e95ed",
+    "repo_digests": [
+      "self-organizing-engineering-agent/ugs-synth-minimal@sha256:76bec263dd9df042b47da57ac1e147655aad6ca27f0aaacf364534ea467e95ed"
+    ]
+  },
+  "durable_retry_policy": {
+    "long_backoff_repeats_last_interval_until_provider_recovers": true,
+    "long_backoff_seconds": [
+      60,
+      120,
+      300,
+      600,
+      600
+    ],
+    "possible_duplicate_provider_execution": true,
+    "short_attempts": 6,
+    "short_retry_delays_sec": [
+      2,
+      5,
+      10,
+      20,
+      30
+    ]
+  },
+  "environment": {
+    "credential_name": "DEEPSEEK_API_KEY",
+    "credential_value_persisted": false,
+    "environment_file_copied_to_run": false,
+    "provider_environment_file_present": true,
+    "repository_dotenv_ignored_by_git": true,
+    "repository_dotenv_tracked_by_git": false,
+    "selection": "explicit_path"
+  },
+  "formal_state": "UGS_FORMAL_STATE=NOT READY",
+  "git_head": "66e29012f7d01468a2dad81c196c4bf5d6d95eca",
+  "hidden_evaluator_connected": false,
+  "logging_schema_version": "1",
+  "memory_manager": false,
+  "model_response_safety_limits": {
+    "max_output_tokens_per_response": 16384,
+    "reviewer_max_responses_per_review": 160,
+    "reviewer_max_total_responses": 2400,
+    "worker_max_responses": 600
+  },
+  "paired_group_id": "ugs_synth_paired_replication_001",
+  "paired_with": "ugs_synth_worker_only_replication_001",
+  "pre_run_checks": {
+    "explicit_review_tool_added_only": true,
+    "formal_evaluator_connected": false,
+    "formal_state": "UGS_FORMAL_STATE=NOT READY",
+    "provider_environment": {
+      "credential_name": "DEEPSEEK_API_KEY",
+      "credential_value_persisted": false,
+      "environment_file_copied_to_run": false,
+      "provider_environment_file_present": true,
+      "repository_dotenv_ignored_by_git": true,
+      "repository_dotenv_tracked_by_git": false,
+      "selection": "explicit_path"
+    },
+    "provider_instances_independent": true,
+    "public_world_copied_from_frozen_source": true,
+    "public_world_sha256": "af4260bc8e15bb44364038b6eeea9a6a6942677ae8e5e610971689415fd0880e",
+    "review_workspace_empty_before_first_request": true,
+    "reviewer_container_isolation_probe": {
+      "docker_policy": {
+        "all_capabilities_dropped": true,
+        "cpu_limited": true,
+        "memory_limited": true,
+        "network_disabled": true,
+        "no_new_privileges": true,
+        "non_root_user": true,
+        "process_limited": true,
+        "root_read_only": true
+      },
+      "exit_code": 0,
+      "passed": true,
+      "review_mount_layout": true,
+      "status": "completed",
+      "stderr": "",
+      "stdout": "{\"brief_read_only\": true, \"brief_visible\": true, \"generic_python_only\": true, \"no_provider_key_in_container\": true, \"review_visible\": true, \"review_writable\": true, \"submission_read_only\": true, \"submission_visible\": true}\n",
+      "timeout": false
+    },
+    "reviewer_context_enabled": true,
+    "reviewer_provider_profile_valid": true,
+    "worker_container_isolation_probe": {
+      "docker_policy": {
+        "all_capabilities_dropped": true,
+        "cpu_limited": true,
+        "memory_limited": true,
+        "network_disabled": true,
+        "no_new_privileges": true,
+        "non_root_user": true,
+        "process_limited": true,
+        "root_read_only": true
+      },
+      "exit_code": 0,
+      "passed": true,
+      "review_mount_layout": false,
+      "status": "completed",
+      "stderr": "",
+      "stdout": "{\"brief_read_only\": true, \"brief_visible\": true, \"generic_python_only\": true, \"no_provider_key_in_container\": true, \"project_visible\": true, \"project_writable\": true}\n",
+      "timeout": false
+    },
+    "worker_only_baseline_tool_surface": null,
+    "worker_project_empty_before_first_request": true,
+    "worker_provider_profile_valid": true,
+    "worker_tool_names": [
+      "list_files",
+      "read_file",
+      "write_file",
+      "execute_python",
+      "finish_project",
+      "submit_for_review"
+    ]
+  },
+  "pricing_snapshot": {
+    "captured_date": "2026-09-24",
+    "currency": "USD",
+    "estimate_method": "per-response API usage timestamp; provider invoice unavailable",
+    "model_alias": "deepseek-flash",
+    "peak_window_utc": "Monday-Friday 01:00-04:00 and 06:00-10:00 UTC",
+    "rates_per_million_tokens": {
+      "off_peak": {
+        "cache_hit_input": 0.022,
+        "cache_miss_input": 0.66,
+        "output": 1.98
+      },
+      "peak": {
+        "cache_hit_input": 0.044,
+        "cache_miss_input": 1.32,
+        "output": 3.96
+      }
+    },
+    "source": "https://api-docs.deepseek.com/quick_start/pricing/"
+  },
+  "provider_boundary_logging": "enabled",
+  "provider_credential_present": true,
+  "provider_instances_independent": true,
+  "public_world_files": {
+    "case.json": "080cc44e86dedf19ec5a42aefe1d0bcbba946ecaef3a0051260b48de6e2650e8",
+    "economic_assumptions.json": "ae71c8c5b0a86c0096493c028d75ae0ad594f5dfb955a8d6e63631fcc15d0896",
+    "engineering_calculation_basis.md": "e9c1f4a53cb2a801dd9e092c15c6462c777ef02fadfb74ff6eb9fe3f1b4162bb",
+    "engineering_geometry_basis.md": "0531c067bb22d60a9b3cdf8d3308721bd0104e0d6feec87daac2d5ba966c8315",
+    "equipment_catalog/compressors.json": "c88919e864f551815a50dc706f41fd01b8337fa86bea56aeef412d20e54a1da7",
+    "equipment_catalog/dehydration.json": "550fe7a96dbceff1488661ba05d34c3cb464b0d0fb96be9c03ae89eb6e5bc459",
+    "equipment_catalog/drains.json": "3d85d43734c5832b596c0595417b1c4b81ff7f5229c96e2ff28121d5f1a9e9c6",
+    "equipment_catalog/filters.json": "d314cc23755294773a08eedf0a2de98868f236462fa6615d00b3e82d67761b0c",
+    "equipment_catalog/headers.json": "f4f3081b23033bd450980e79bca85d31f722f42b078620c60af760453d9fb80f",
+    "equipment_catalog/metering_regulation.json": "745a9427e4cbfa889e64f27ab5d42a2d096a28411016639392212cb45bfc4c64",
+    "equipment_catalog/separators.json": "35f7276b402f6845fd01bd14955fab542a596706c6aac7f025396f67b077e2b6",
+    "equipment_catalog/thermal_equipment.json": "ffa7f31e907ddbf4672328920666505160bd34f6a1144931736ec3657fd7e033",
+    "final_delivery_contract.json": "dde8dbdfe2dfd1bf086289358fa4a2f2b002fe535a0ca9ca0d0c6e55e15023f5",
+    "gas_properties.json": "ff8a1650fbee84f3c2e472dc5318021ae1f1838400a24cb4c95b3371289aacf8",
+    "maintenance_requirements.json": "471332a4bf079bcb51590882f55383fac5b677f8be7edbea45d605acd9a08b55",
+    "network_semantics.md": "05ac3d8184b34531004a574dc329ae6a4d3a5eb1e62ed3d50d826c43a7af25d4",
+    "operating_scenarios.json": "b402120a59660383697ed3f468218c027f5a6a9b09975ace325d74969771f649",
+    "piping_catalog.json": "cee8ee256712bb5b5731b11e3ddb153419c216869e2b9f495f12001418d485eb",
+    "project_requirements.json": "8024ba75f46589508d52a2691172aad4532808f0ebf65528e00da06d61d2905e",
+    "safety_requirements.json": "5fb5d18e8253ff8e133bd539eca63a49582c97a3b25ce4bb01b7d6c7a22edf23",
+    "site.json": "402848a71612030e92fa0315b4b2df1d533d61e5fcfa4bfe4b40fb2b47ba870a",
+    "well_group_interfaces.json": "54f913e24305318ec01bba1ab05172d05c02a98bc237fcc119574b92a23a5202"
+  },
+  "public_world_sha256": "af4260bc8e15bb44364038b6eeea9a6a6942677ae8e5e610971689415fd0880e",
+  "raw_response_capture_level": "http_raw_body_pre_parser_redacted",
+  "redaction_policy_version": "1",
+  "reviewer_initial_user_prompt_sha256": "baf887e60de09cba2b606735503e5e2d9d1b687b04b92d13ff656e04d693a677",
+  "reviewer_provider": {
+    "configured_model": "deepseek-flash",
+    "credential_source": {
+      "kind": "env_file",
+      "path": "D:\\self-organizing-engineering-agent\\.env"
+    },
+    "credential_value_persisted": false,
+    "effective_model": "deepseek-flash",
+    "endpoint_host": "api.deepseek.com",
+    "fallback_models": [],
+    "max_output_tokens": 16384,
+    "native_tool_calling": "auto",
+    "provider_class": "self_organizing_engineering_agent.experiments.pilot_1a.deepseek_provider.DeepSeekProvider",
+    "provider_name": "DeepSeek direct API / OpenAI-compatible",
+    "provider_source": "src/self_organizing_engineering_agent/experiments/pilot_1a/deepseek_provider.py",
+    "provider_source_sha256": "2d797ac4b4348aea754ed96b2d2a4ae6604b929b73ea16286ecf49fa37656dcb",
+    "reasoning_effort": "high",
+    "retry_policy": "none",
+    "temperature_control": "not_used",
+    "thinking": {
+      "type": "enabled"
+    },
+    "timeout_sec": 180.0
+  },
+  "reviewer_system_prompt_sha256": "a9053ab3cbc1dcff4eafc417ed7df0a940cbaa868014409aae1ffcd647d61c31",
+  "reviewer_tool_definitions_sha256": "e5782628fef7a1eb4f5887bb1024c9b83ab6ff313edd2e3390237a56d14ee497",
+  "run_id": "ugs_synth_explicit_collaboration_replication_002",
+  "runtime_source_sha256": {
+    "docker/ugs_synth_minimal/Dockerfile": "ece22ce0130baa192122f6354f36c562d88ff61777830d04cfc7a19fbdbbd439",
+    "pyproject.toml": "ab84b3945e5374d00bd8b1781cade04dd10c51d0a25931266f70522c4bdadb6a",
+    "src/self_organizing_engineering_agent/experiments/pilot_1a/deepseek_provider.py": "2d797ac4b4348aea754ed96b2d2a4ae6604b929b73ea16286ecf49fa37656dcb",
+    "src/self_organizing_engineering_agent/experiments/ugs_synth_interleaved_review/durable_replication.py": "7dac491e82503def43b5c3ed5692015f3280f722d18831fb9cdafcee0ad271a5",
+    "src/self_organizing_engineering_agent/experiments/ugs_synth_interleaved_review/durable_resume.py": "345be37ebe574d3b4a81a6991b1ce0bf327ef4995d1770b0348c379922b26d42",
+    "src/self_organizing_engineering_agent/experiments/ugs_synth_interleaved_review/durable_runtime.py": "179c656d81d26e845d9ae52594f69d836466bd965afb32f04a84165b923d8529",
+    "src/self_organizing_engineering_agent/experiments/ugs_synth_interleaved_review/durable_store.py": "860939a39e1a65b54b8669d5084ce1145d9fa0408a61846e4fb8453c0636388a",
+    "src/self_organizing_engineering_agent/experiments/ugs_synth_interleaved_review/provider_boundary.py": "8757378d26a3cc0cce875b7dff44e35a8048c971e39c964bf2dc343fc88aae34",
+    "src/self_organizing_engineering_agent/experiments/ugs_synth_interleaved_review/runner.py": "13008cc92e6e139a5503b00048b41f073bc555b96dab0c2d0ae7c0378cfc87ea",
+    "src/self_organizing_engineering_agent/experiments/ugs_synth_interleaved_review/tools.py": "1d44214a628e2d6ce3da996b56ac2de666bc5cb91e05d81ef2d7bd2f1eec0206",
+    "src/self_organizing_engineering_agent/experiments/ugs_synth_minimal/runner.py": "efd67c00a8e00e0e09cbb56f59092ecbd7aa0c54060957cd9c698739f75cafa5",
+    "src/self_organizing_engineering_agent/experiments/ugs_synth_minimal/tools.py": "99b52a2836380e3ae9d8f497a88e2f15bb0066db9319f87d1cae0729ca4e11ab",
+    "uv.lock": "0cc65662ef72b29c9fed4ab71e1f8c7f03ea23a895361abdcd3dae21943ab5d1"
+  },
+  "tool_execution_semantics": {
+    "local_tool_ledger_durable": true,
+    "possible_duplicate_provider_execution_recorded": true,
+    "provider_exactly_once_guaranteed": false,
+    "reviewer_history_durable": true,
+    "uncertain_execute_python_side_effect_stops_for_reconciliation": true,
+    "workspace_state_durable": true
+  },
+  "trajectory_relationship": "independent_replication",
+  "worker_initial_user_prompt_sha256": "93af745fa3f83615686d2efdb68c04a487769f2f023d802a0b70c2b62668adf1",
+  "worker_provider": {
+    "configured_model": "deepseek-flash",
+    "credential_source": {
+      "kind": "env_file",
+      "path": "D:\\self-organizing-engineering-agent\\.env"
+    },
+    "credential_value_persisted": false,
+    "effective_model": "deepseek-flash",
+    "endpoint_host": "api.deepseek.com",
+    "fallback_models": [],
+    "max_output_tokens": 16384,
+    "native_tool_calling": "auto",
+    "provider_class": "self_organizing_engineering_agent.experiments.pilot_1a.deepseek_provider.DeepSeekProvider",
+    "provider_name": "DeepSeek direct API / OpenAI-compatible",
+    "provider_source": "src/self_organizing_engineering_agent/experiments/pilot_1a/deepseek_provider.py",
+    "provider_source_sha256": "2d797ac4b4348aea754ed96b2d2a4ae6604b929b73ea16286ecf49fa37656dcb",
+    "reasoning_effort": "high",
+    "retry_policy": "none",
+    "temperature_control": "not_used",
+    "thinking": {
+      "type": "enabled"
+    },
+    "timeout_sec": 180.0
+  },
+  "worker_reviewer_capability_statement": "You have access to an independent Reviewer through `submit_for_review`.\n\nThe Reviewer can examine the current project state and provide independent critical feedback. You may request a review whenever you judge it useful.\n\nYou decide whether to use the Reviewer, when to request review, what to ask it to focus on, and how to respond to its findings.",
+  "worker_system_prompt_sha256": "746bfc7dd86d92c3c00b28e900e1dd6eebaf76756e3a6274edbc4e7710e30ac4",
+  "worker_tool_definitions_sha256": "d04cc070254fed3b94d900d45dcef7a4219142eaf17f10b64111e328ff2efc83"
+}

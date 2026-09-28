@@ -1,0 +1,167 @@
+# Anonymous engineering review: submission_B / pass_01
+
+**Evaluation window:** 2026-09-27T14:50:17Z to 2026-09-27T15:01:59Z
+**Evaluator process exit:** 0
+
+The submission is mostly reconstructable and sampled normal-case calculations are internally plausible. Main issues: n-1 reliability evidence is capacity-only rather than outage simulation, a small lower-cost pipe-class substitution appears feasible, and two public-semantics gaps affect liquid-drain velocity and road-end containment judgments.
+
+## Finding counts
+
+- confirmed_violation: 1 (high 0, medium 0, low 1)
+- unsupported_claim: 1
+- suspected_risk: 0
+- semantics_gap: 2
+- observation: 1
+
+## Areas checked
+
+| Area | Coverage | Details |
+|---|---|---|
+| deliverable_completeness_reconstructability | full | Compared brief/final_delivery_contract.json with submission/README.md, submission/design_report.md, and structured fields in submission/design.json. Equipment instances, model IDs, ports, positions, routes, pipe classes/diameters, six scenario operating data, quantities, LCC, assumptions, and limitations are present. Minor reconstruction wrinkle: WDR-LOW compressor_bank in design.json is aggregated while report/path data identify C-1 and C-2. |
+| physical_topology_and_port_semantics | sampled | Reviewed the 33-pipeline endpoint table and sampled detailed endpoint records in submission/design.json. Gas one-way ports are not used in reverse in sampled active paths; GRID-TIE has two gas connections, each well group one, and drain outfall two. Branching is through headers, not free junctions. Full port graph was not independently enumerated outside the submission checker. |
+| operating_scenarios | sampled | All six mandatory scenarios were reviewed for required flow, per-well allocation, active path, delivered pressure/temperature/water/free-liquid, and active meter path. Detailed hydraulic recomputation was sampled on representative pipes rather than every active pipe in every scenario. |
+| n_minus_1_reliability | full | Inspected all n-1 claims and verification implementation for compressor, separator, and dehydration outages. All outage names are present, but the final evidence is capacity arithmetic only; no separate outage operating states were found. |
+| equipment_limits | sampled | Checked catalog capacities and limits for compressors, cooler, regulator, separators, dehydration, meters, headers, and drains against key high-load cases. Sampled compressor ratios, discharge temperatures, cooler duty, separator/dehydrator pressure/liquid limits, and header/meter/drain capacity. Did not recompute every equipment point. |
+| hydraulic_calculations | sampled | Independently recomputed gas properties, velocity, Reynolds number, friction factor, and pressure loss for highest-velocity G-T-M in WDR-HIGH, high-flow/long G-CL-W in INJ-LOW, and small-DN/critical-margin G-W-1 in INJ-LOW. Results agreed closely with submission values. Did not check all pipes. |
+| gas_quality_and_temperature | sampled | Reviewed all six delivered quality summaries. Injection source gas is already within water/free-liquid delivery limits; withdrawal paths use separator plus dehydration, with delivered water 35 mg/Sm3 and free liquid 5e-6. Sampled temperatures are within -10..60 degC. |
+| liquid_drain | sampled | Checked separator liquid removal formula and WDR-HIGH drain rates. DRN-L and outfall capacities are adequate under the submitted 700 kg/m3 liquid-density assumption, but the public brief does not publish a liquid density for velocity calculations. |
+| geometry_layout_roads_maintenance | sampled | Reviewed site boundary, exclusion zones, equipment rows, roads, and selected maintenance/crane access distances. Sampled compressor and separator access distances satisfy buffers if the submission's butt-ended road geometry is accepted. Did not independently run exact polygon checks for all equipment pairs. |
+| pipeline_geometry | sampled | Sampled route endpoints and segments for G-TIE-IN, G-CL-W, G-T-M, G-T-CS, G-CD-M, and L-D2-O. Checked containment/exclusion plausibility and positive segment lengths on sampled routes. Did not perform an exact all-segment overlap computation. |
+| lifecycle_cost_arithmetic | full | Recomputed equipment CAPEX, annual maintenance, PV factor, energy PV, civil/access CAPEX, piping CAPEX from the reported pipe table, and total LCC. Values match the submission within rounding. |
+| lcc_objective | sampled | No global optimum was attempted. Checked for obvious dominated choices and found a small feasible pipe-class cost reduction for dry-only high-pressure pipes. |
+| unsupported_assumptions | sampled | Identified explicit reliance on unmodelled isolation valves and an assumed liquid density. These are disclosed by the submission; valve pricing/isolation semantics and liquid density are not decisive from the public brief alone. |
+| internal_consistency | sampled | Cross-checked report, design.json, verification.json, and source snippets. LCC and normal scenario summaries are broadly consistent. Noted WDR-LOW compressor dispatch aggregation in design.json and n-1 report claims exceeding the actual checker evidence. |
+
+## Independent calculations
+
+### LCC arithmetic recomputation
+
+**Method:** Summed catalog equipment CAPEX and maintenance from submitted model counts; computed PVF=(1-1.08^-20)/0.08; recomputed civil/access, energy PV, maintenance PV, and total LCC.
+
+**Result:** Equipment CAPEX = 29.22 MBCU; annual maintenance = 1.058 MBCU/y; PVF = 9.818147; maintenance PV = 10.3876 MBCU; energy PV = 41056.3*0.00012*9.818147 = 48.3716 MBCU; civil/access = 2350*0.00015 + 803*4e-6 + 1544.76e-6 = 0.35725676 MBCU. Total = 90.1469 MBCU, matching submission within rounding.
+
+**Public inputs:** brief/economic_assumptions.json: discount_rate 0.08, project_life_years 20, energy tariff 0.00012 MBCU/MWh, road 0.00015 MBCU/m, foundation 4e-6 MBCU/m2, maintenance area 1e-6 MBCU/m2, brief/engineering_calculation_basis.md: PVF and LCC formulas
+**Submission inputs:** submission/design_report.md and submission/design.json: equipment counts, annual_energy_mwh 41056.3, road_length_m 2350, footprint_area_m2 803, maintenance_area_m2 1544.76, reported LCC 90.1469 MBCU
+**Scratch files:** None listed
+
+### Piping CAPEX recomputation from final pipe table
+
+**Method:** For each pipeline, computed length * diameter_cost * class_multiplier * routing_multiplier, using reported rounded lengths.
+
+**Result:** Summed piping CAPEX = about 1.8103 MBCU from the rounded report table, consistent with submission/design.json value 1.8104 MBCU and verification.json value 1.8104194481879357.
+
+**Public inputs:** brief/piping_catalog.json: diameter installed costs and class multipliers; ground routing multiplier 1.0
+**Submission inputs:** submission/design_report.md pipe table lengths, diameters, and classes for all 33 pipelines, submission/design.json lcc_mbcu.piping_capex = 1.8104
+**Scratch files:** None listed
+
+### Gas hydraulic spot checks
+
+**Method:** Recomputed Z, viscosity, density at representative mean pressure, then velocity, Reynolds number, friction factor, and pressure loss. Compared resulting outlet pressures to submitted operating points.
+
+**Result:** G-T-M WDR-HIGH: Z≈0.92995, mu≈1.046e-5 Pa*s, rho≈51.82 kg/m3, v≈20.86 m/s, Re≈3.89e7, f≈0.01246, dP≈0.0195 MPa, matching P_out 6.2992 MPa. G-CL-W INJ-LOW: v≈7.60 m/s, Re≈2.40e7, dP≈0.0217 MPa, matching P_out 8.633 MPa. G-W-1 INJ-LOW: v≈7.32 m/s, Re≈9.58e6, dP≈0.0229 MPa, matching the critical delivered well pressure 8.600 MPa >= 8.5 MPa.
+
+**Public inputs:** brief/engineering_calculation_basis.md gas Z, viscosity, density, Swamee-Jain friction, Darcy-Weisbach pressure loss, and eight-update fixed-point convention, brief/gas_properties.json MW=0.0182 kg/mol, cp=2450 J/kg/K, k=1.3, brief/piping_catalog.json diameters and roughness
+**Submission inputs:** submission/design.json: G-T-M WDR-HIGH flow 120 kg/s, D 0.376 m, L 52.1091 m, T 13.432 C, P 6.3187 to 6.2992 MPa, submission/design.json: G-CL-W INJ-LOW flow 120 kg/s, D 0.564 m, L 577.8917 m, T 45 C, P 8.6547 to 8.633 MPa, submission/design.json/report: G-W-1 INJ-LOW flow 20 kg/s, D 0.235 m, L about 232.2 m, T 45 C, P 8.623 to 8.600 MPa
+**Scratch files:** None listed
+
+### Liquid drain rate and velocity under submitted density assumption
+
+**Method:** Computed separator liquid rates and DN150 liquid velocity using area pi*D^2/4 and the submission's explicit density assumption.
+
+**Result:** Each separator removes 60*0.01*0.9995 = 0.5997 kg/s. DN150 area is about 0.01561 m2. Per separator/drain line velocity is about 0.0549 m/s at 700 kg/m3; even the submission check's conservative 1.1994 kg/s per outfall line gives about 0.110 m/s, below 3.0 m/s. Definitive velocity PASS is limited by missing public liquid density.
+
+**Public inputs:** brief/engineering_calculation_basis.md separator removal formula m_liquid = m_gas * f_in * efficiency, brief/piping_catalog.json DN150 internal diameter 0.141 m and maximum liquid drain velocity 3.0 m/s
+**Submission inputs:** submission/design_report.md assumption of liquid density 700 kg/m3, submission/design.json WDR-HIGH separator gas flow 60 kg/s per train, source free-liquid loading 0.01, SEP120 efficiency 0.9995, reported removed_kg_s 0.5997
+**Scratch files:** None listed
+
+### Dry-only high-pressure pipe class alternative
+
+**Method:** Changed only the five dry-only 16 MPa gas pipes from CS-WET-160 to CS-DRY-160 and held routes, diameters, equipment, and operating setpoints constant.
+
+**Result:** Piping CAPEX reduction is approximately (1.18-1.15)*[(211.2*0.000375)+(165.0*0.000125)+(753.1*0.000545)] = 0.0153 MBCU. Ratings and temperature limits remain unchanged, roughness improves, and wet withdrawal well/treatment lines remain CS-WET. This gives a lower feasible LCC before any energy retuning.
+
+**Public inputs:** brief/piping_catalog.json: CS-WET-160 multiplier 1.18, CS-DRY-160 multiplier 1.15, both rated 16 MPa and -20..120 C; CS-DRY-160 is dry-gas-compatible, brief/engineering_calculation_basis.md: gas is dry when water and free liquid are at or below delivery limits
+**Submission inputs:** submission/design_report.md: G-C1D 170.2 m DN450, G-C2D 41.0 m DN450, G-C3D 165.0 m DN200, G-CD-CL 175.2 m DN600, G-CL-W 577.9 m DN600 all use CS-WET-160, submission/design_report.md: injection gas is 40 mg/Sm3 water and no free liquid; WDR-LOW boost gas is after dehydration/separation
+**Scratch files:** None listed
+
+## Findings
+
+### F-N1-001 — unsupported_claim / medium / confidence high
+
+**Public basis:** brief/project_requirements.json reliability_requirements and brief/engineering_calculation_basis.md require at least 70% retained deliverable flow after any one applicable compressor, separator, or dehydration unit is unavailable, with delivery limits still applicable.
+
+**Claim or requirement:** The submission claims n-1 reliability and states delivery limits remain applicable after any outage.
+
+**Submission evidence:** submission/design_report.md:228-232 states compressor and withdrawal-treatment n-1 provisions. submission/verification.json:2769-2884 lists all outage checks. submission/verify.py:209-235 implements these checks only as remaining nameplate capacity comparisons.
+
+**Independent check:** Reviewed the checker source and searched final artifacts for per-outage operating states. The n-1 compressor checks compute sum(capacity of remaining compressors). The treatment checks compute min(capacity of surviving train). No outage-specific active paths, pressure losses, compressor setpoints, minimum stable flow dispatch, delivered pressure, delivered temperature, or quality calculations are represented.
+
+**Result:** The n-1 PASS claim is not supported by simulated outage evidence. This does not prove the design is infeasible; spot reasoning suggests several outages may be feasible, but the artifacts do not demonstrate the public retained-deliverable-flow requirement.
+
+**Why it matters:** Reliability depends on hydraulics, dispatch, active-path isolation, and delivery quality after the failure, not only on surviving catalog capacity.
+
+### F-LCC-001 — confirmed_violation / low / confidence high
+
+**Public basis:** brief/project_requirements.json states the primary objective is to minimize benchmark LCC. brief/piping_catalog.json provides CS-DRY-160 as a 16 MPa dry-gas-compatible class with multiplier 1.15 versus CS-WET-160 multiplier 1.18.
+
+**Claim or requirement:** The submitted design should not contain an obvious dominated pipe-class choice under the benchmark LCC objective.
+
+**Submission evidence:** submission/design_report.md:158-162 uses CS-WET-160 on G-C1D, G-C2D, G-C3D, G-CD-CL, and G-CL-W. submission/design_report.md:224 states injection gas is dry and liquid-free; WDR-LOW boost gas is downstream of separator/dehydration in submission/design.json.
+
+**Independent check:** Changing only those five dry-only high-pressure gas pipes to CS-DRY-160 keeps 16 MPa rating, temperature limits, diameter, routing, and all wet-service well/withdrawal lines unchanged. CAPEX reduction from class multiplier is about 0.0153 MBCU; lower roughness is hydraulically no worse.
+
+**Result:** A feasible same-layout alternative has total LCC at least about 0.0153 MBCU lower than the submitted 90.1469 MBCU before any energy retuning.
+
+**Why it matters:** The objective is LCC minimization. The delta is small, but the submitted design appears to carry avoidable pipe-class cost.
+
+### F-LIQ-001 — semantics_gap / low / confidence high
+
+**Public basis:** brief/piping_catalog.json sets a maximum liquid-drain velocity, and brief/engineering_calculation_basis.md defines liquid removal, but the public brief does not publish liquid density for converting kg/s to m/s.
+
+**Claim or requirement:** Liquid drain velocity should be checked against 3.0 m/s.
+
+**Submission evidence:** submission/design_report.md:51 and submission/design.json:16 assume liquid density of 700 kg/m3 for drain velocity checks.
+
+**Independent check:** Using 700 kg/m3, WDR-HIGH DN150 drain velocities are about 0.055 m/s per separator line, or about 0.110 m/s under the submission's conservative total-flow-per-outfall-line check, both below 3.0 m/s.
+
+**Result:** The drain velocity appears comfortably below the limit under the disclosed assumption, but there is no unique public-basis calculation without a published liquid density.
+
+**Why it matters:** A definitive benchmark PASS/FAIL for liquid velocity requires an input the public brief omits. This is not a submission violation.
+
+### F-GEO-001 — semantics_gap / low / confidence medium
+
+**Public basis:** brief/engineering_geometry_basis.md says a road is the centreline swept by half the width, including joins and ends, and paved geometry must remain within the site. It does not define end-cap style.
+
+**Claim or requirement:** Road geometry, including ends, must remain inside the site boundary while connecting to ROAD-ENTRANCE.
+
+**Submission evidence:** submission/design.json:5420-5432 defines R-A from (0,225) to (100,225) with width 6 m. submission/design_report.md:57 states a butted-end convention. submission/solve.py:215-224 checks rectangular segment sweeps that do not project beyond endpoints.
+
+**Independent check:** With butted square ends, R-A occupies x>=0 and remains inside the site. With a rounded or projecting cap, the paved geometry would extend outside the west site boundary by up to 3 m at ROAD-ENTRANCE.
+
+**Result:** Road containment depends on an unstated end-cap convention. The submission's convention is plausible, but not uniquely determined by the public brief.
+
+**Why it matters:** The site-boundary PASS for the entrance road is sensitive to geometry semantics, not to an engineering calculation error.
+
+### F-ASSUMP-001 — observation / medium / confidence high
+
+**Public basis:** brief/network_semantics.md defines ports, headers, boundaries, and no free junctions; it does not define catalogued isolation valves or valve pricing. brief/economic_assumptions.json includes no valve cost item.
+
+**Claim or requirement:** Active scenario paths and LCC should be reconstructable without unpriced, unmodelled equipment unless treated as an explicit assumption or public semantic gap.
+
+**Submission evidence:** submission/design_report.md:52 and :326 state inactive shared-compressor-header branches are isolated by valves, not modelled. submission/design.json scenario records list many pipes_with_zero_flow in each scenario.
+
+**Independent check:** The shared compressor-bank topology requires inactive branches to remain inactive in normal scenarios and outages. No valve instances, valve ports, or valve costs are present in submission/design.json or the public equipment catalogs.
+
+**Result:** The reliance on free isolation is explicit and material, but the public brief does not provide enough valve semantics to call this a violation by itself.
+
+**Why it matters:** Active-path consistency, reverse-service operation, and any exact LCC comparison can change if isolation hardware must be modelled or priced.
+
+## Limitations
+
+- The filesystem sandbox was read-only, including scratch/. Attempting to create scratch/evaluator_notes.txt was rejected, so no evaluator-authored scratch files could be produced.
+- I did not execute submission scripts because available command execution was restricted and because submission self-checks are not independent evidence.
+- Hydraulic checks were independent manual spot checks using final artifact values; not every pipeline/scenario was recalculated.
+- Geometry was sampled manually and source logic was inspected; no full independent computational polygon/overlap sweep was run.
+- No global LCC optimization was attempted; the LCC objective finding is limited to one explicit lower-cost pipe-class alternative.
+
+Codex post-hoc findings are independent model-based engineering review findings, not formal ground truth.

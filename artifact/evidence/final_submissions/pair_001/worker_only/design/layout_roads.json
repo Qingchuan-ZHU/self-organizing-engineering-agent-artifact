@@ -1,0 +1,218 @@
+{
+  "site_boundary_m": [
+    [
+      0,
+      0
+    ],
+    [
+      700,
+      0
+    ],
+    [
+      700,
+      450
+    ],
+    [
+      0,
+      450
+    ]
+  ],
+  "road_entrance_m": [
+    0.0,
+    225.0
+  ],
+  "roads": [
+    {
+      "id": "R-MAIN",
+      "width_m": 6.0,
+      "centreline_m": [
+        [
+          0.0,
+          225.0
+        ],
+        [
+          140.0,
+          225.0
+        ],
+        [
+          140.0,
+          205.0
+        ],
+        [
+          640.0,
+          205.0
+        ]
+      ],
+      "length_m": 660.0
+    },
+    {
+      "id": "R-CMP",
+      "width_m": 6.0,
+      "centreline_m": [
+        [
+          250.0,
+          205.0
+        ],
+        [
+          250.0,
+          355.0
+        ],
+        [
+          500.0,
+          355.0
+        ]
+      ],
+      "length_m": 400.0
+    },
+    {
+      "id": "R-SEP",
+      "width_m": 6.0,
+      "centreline_m": [
+        [
+          420.0,
+          205.0
+        ],
+        [
+          420.0,
+          98.0
+        ],
+        [
+          560.0,
+          98.0
+        ]
+      ],
+      "length_m": 247.0
+    }
+  ],
+  "routing_corridors": [
+    {
+      "allowed_routing_levels": [
+        "rack_low",
+        "rack_high"
+      ],
+      "allows_co_routing": true,
+      "corridor_id": "RACK-EASEMENT-EAST",
+      "polygon_m": [
+        [
+          625,
+          80
+        ],
+        [
+          690,
+          80
+        ],
+        [
+          690,
+          370
+        ],
+        [
+          625,
+          370
+        ]
+      ]
+    },
+    {
+      "allowed_routing_levels": [
+        "buried"
+      ],
+      "allows_co_routing": true,
+      "corridor_id": "BURIED-EASEMENT-SOUTH",
+      "polygon_m": [
+        [
+          40,
+          15
+        ],
+        [
+          570,
+          15
+        ],
+        [
+          570,
+          28
+        ],
+        [
+          40,
+          28
+        ]
+      ]
+    }
+  ],
+  "no_build_zones": [
+    {
+      "equipment_exclusion": true,
+      "pipeline_exclusion": true,
+      "polygon_m": [
+        [
+          550,
+          320
+        ],
+        [
+          700,
+          320
+        ],
+        [
+          700,
+          450
+        ],
+        [
+          550,
+          450
+        ]
+      ],
+      "road_exclusion": true,
+      "zone_id": "FUTURE-EXPANSION"
+    },
+    {
+      "equipment_exclusion": true,
+      "pipeline_exclusion": true,
+      "polygon_m": [
+        [
+          300,
+          0
+        ],
+        [
+          320,
+          0
+        ],
+        [
+          320,
+          90
+        ],
+        [
+          300,
+          90
+        ]
+      ],
+      "road_exclusion": false,
+      "zone_id": "DRAINAGE-CHANNEL"
+    },
+    {
+      "equipment_exclusion": true,
+      "pipeline_exclusion": false,
+      "polygon_m": [
+        [
+          620,
+          0
+        ],
+        [
+          700,
+          0
+        ],
+        [
+          700,
+          75
+        ],
+        [
+          620,
+          75
+        ]
+      ],
+      "road_exclusion": true,
+      "zone_id": "GRID-FACILITY"
+    }
+  ],
+  "liquid_outfall_m": [
+    680.0,
+    120.0
+  ]
+}

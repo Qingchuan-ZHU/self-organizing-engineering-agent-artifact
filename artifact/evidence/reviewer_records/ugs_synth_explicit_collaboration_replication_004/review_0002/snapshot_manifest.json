@@ -1,0 +1,258 @@
+{
+  "snapshot": {
+    "file_count": 23,
+    "files": {
+      "README.md": {
+        "kind": "file",
+        "sha256": "4be062fb2ce9cfd7299840f7be68545b8f66b2a7f6759726e23147b6606fb524",
+        "size_bytes": 5655
+      },
+      "deliverables/": {
+        "kind": "directory"
+      },
+      "deliverables/design_report.md": {
+        "kind": "file",
+        "sha256": "7a112b587e1673e0df1342b1b37e1cdac43b3249781b25a7236daccc7ca085a3",
+        "size_bytes": 57641
+      },
+      "deliverables/equipment_register.csv": {
+        "kind": "file",
+        "sha256": "1cb78385117d93934b6d3428b140be39f2a6320d998bb16ac4e643b4d448d728",
+        "size_bytes": 2523
+      },
+      "deliverables/equipment_register.json": {
+        "kind": "file",
+        "sha256": "a9abb025ba0b49d2e45f0e070d92703d81815e6a78d022c9d709f4e4adc49448",
+        "size_bytes": 25872
+      },
+      "deliverables/layout.svg": {
+        "kind": "file",
+        "sha256": "bd53055b729eba7b7f08bf938ef0d1590e80ce88dd48f8bd699b60336120e55e",
+        "size_bytes": 15856
+      },
+      "deliverables/lcc.json": {
+        "kind": "file",
+        "sha256": "65b7d403230c3537799f89a0299c53067e6c3695ad36d97d7ba6af2626afec2c",
+        "size_bytes": 10488
+      },
+      "deliverables/pipeline_schedule.csv": {
+        "kind": "file",
+        "sha256": "1c22f4b93648fb6f43cdbfd34ba6c5af1034373d3a65e2d14a6d2e8a3f797a33",
+        "size_bytes": 11531
+      },
+      "deliverables/process_topology.json": {
+        "kind": "file",
+        "sha256": "2e0ecba333caa9b71fc21c0c115d5a6a2653049425b349000488ef5286a1bc63",
+        "size_bytes": 38817
+      },
+      "deliverables/quantities.json": {
+        "kind": "file",
+        "sha256": "e161a9165eaafce3be9c8f66900d40cc767611b78c9990009047054b6fe248df",
+        "size_bytes": 773
+      },
+      "deliverables/reliability_cases.json": {
+        "kind": "file",
+        "sha256": "c2fa4872b723ae0fbecfba395f6bbecf55b017740000e815965a74fa375c0443",
+        "size_bytes": 27524
+      },
+      "deliverables/scenario_operations.json": {
+        "kind": "file",
+        "sha256": "483fa47973f306af63055b1a4a4f6ca9225691b5f63533cbbee0bf35015ebd4f",
+        "size_bytes": 74492
+      },
+      "deliverables/validation_report.md": {
+        "kind": "file",
+        "sha256": "4f605cfa664ede53d14ae1cda971984726660b834a0031ab96705ef2fb40e0a4",
+        "size_bytes": 7774
+      },
+      "deliverables/validation_results.json": {
+        "kind": "file",
+        "sha256": "ad6c925bf2821d28c36f61dfc13c8d067a1f8c5b796aeffa318465b20a3c41f1",
+        "size_bytes": 4227
+      },
+      "deliverables/well_group_allocations.csv": {
+        "kind": "file",
+        "sha256": "69b16e2fbf2e9d672c69d00d75f2f39e8681c5ff87b4e257ba73c7de6404423c",
+        "size_bytes": 532
+      },
+      "tools/": {
+        "kind": "directory"
+      },
+      "tools/build.py": {
+        "kind": "file",
+        "sha256": "de6cdb2502d94c30ce641c370bad5e0bc2c837952ad25ec87099fbdf783ff0cb",
+        "size_bytes": 17174
+      },
+      "tools/checks_geom.py": {
+        "kind": "file",
+        "sha256": "615a8c0460ed5d75a2acf906f28fc6261b7916ce4ae5cd7fa14fa0731feacb8f",
+        "size_bytes": 14929
+      },
+      "tools/costing.py": {
+        "kind": "file",
+        "sha256": "742c1afed20d511895bda53bf0422a31c93614d1f8e3193f52c0b0c6e146a070",
+        "size_bytes": 4488
+      },
+      "tools/design.py": {
+        "kind": "file",
+        "sha256": "715f88344b10215781b59ca3238680aba121b07e41356a12e8b27c19fe0c56ca",
+        "size_bytes": 9146
+      },
+      "tools/engine.py": {
+        "kind": "file",
+        "sha256": "8309281ba69a2860d6282bce5fee77e271a2b1248841a5810afd4859026bb1f7",
+        "size_bytes": 19774
+      },
+      "tools/process.py": {
+        "kind": "file",
+        "sha256": "ee369f59818ff781c76e429347ebb6530bc17e5c991b8949bad12d622088d8ae",
+        "size_bytes": 31124
+      },
+      "tools/report.py": {
+        "kind": "file",
+        "sha256": "ed43433d185759415835ff91fe4d0df47adcbd39c47215103bf4cafaf246dfc3",
+        "size_bytes": 17446
+      },
+      "tools/report_template.py": {
+        "kind": "file",
+        "sha256": "5e4565a3bc7ee8b9d340c905bdc4c3f5bf0f53859e29d71f7c329b7c62748263",
+        "size_bytes": 25826
+      },
+      "tools/selftest.py": {
+        "kind": "file",
+        "sha256": "da60451e937a4fecb3371b1be758cb67a7697079e1fda4083521c8756dfda2af",
+        "size_bytes": 5284
+      }
+    },
+    "total_file_bytes": 428896
+  },
+  "snapshot_sha256": "1ac672d749aa42c7516239eb45d567b9cfc60eb44d5cc84f800b861c83fc9b80",
+  "source_project": {
+    "file_count": 23,
+    "files": {
+      "README.md": {
+        "kind": "file",
+        "sha256": "4be062fb2ce9cfd7299840f7be68545b8f66b2a7f6759726e23147b6606fb524",
+        "size_bytes": 5655
+      },
+      "deliverables/": {
+        "kind": "directory"
+      },
+      "deliverables/design_report.md": {
+        "kind": "file",
+        "sha256": "7a112b587e1673e0df1342b1b37e1cdac43b3249781b25a7236daccc7ca085a3",
+        "size_bytes": 57641
+      },
+      "deliverables/equipment_register.csv": {
+        "kind": "file",
+        "sha256": "1cb78385117d93934b6d3428b140be39f2a6320d998bb16ac4e643b4d448d728",
+        "size_bytes": 2523
+      },
+      "deliverables/equipment_register.json": {
+        "kind": "file",
+        "sha256": "a9abb025ba0b49d2e45f0e070d92703d81815e6a78d022c9d709f4e4adc49448",
+        "size_bytes": 25872
+      },
+      "deliverables/layout.svg": {
+        "kind": "file",
+        "sha256": "bd53055b729eba7b7f08bf938ef0d1590e80ce88dd48f8bd699b60336120e55e",
+        "size_bytes": 15856
+      },
+      "deliverables/lcc.json": {
+        "kind": "file",
+        "sha256": "65b7d403230c3537799f89a0299c53067e6c3695ad36d97d7ba6af2626afec2c",
+        "size_bytes": 10488
+      },
+      "deliverables/pipeline_schedule.csv": {
+        "kind": "file",
+        "sha256": "1c22f4b93648fb6f43cdbfd34ba6c5af1034373d3a65e2d14a6d2e8a3f797a33",
+        "size_bytes": 11531
+      },
+      "deliverables/process_topology.json": {
+        "kind": "file",
+        "sha256": "2e0ecba333caa9b71fc21c0c115d5a6a2653049425b349000488ef5286a1bc63",
+        "size_bytes": 38817
+      },
+      "deliverables/quantities.json": {
+        "kind": "file",
+        "sha256": "e161a9165eaafce3be9c8f66900d40cc767611b78c9990009047054b6fe248df",
+        "size_bytes": 773
+      },
+      "deliverables/reliability_cases.json": {
+        "kind": "file",
+        "sha256": "c2fa4872b723ae0fbecfba395f6bbecf55b017740000e815965a74fa375c0443",
+        "size_bytes": 27524
+      },
+      "deliverables/scenario_operations.json": {
+        "kind": "file",
+        "sha256": "483fa47973f306af63055b1a4a4f6ca9225691b5f63533cbbee0bf35015ebd4f",
+        "size_bytes": 74492
+      },
+      "deliverables/validation_report.md": {
+        "kind": "file",
+        "sha256": "4f605cfa664ede53d14ae1cda971984726660b834a0031ab96705ef2fb40e0a4",
+        "size_bytes": 7774
+      },
+      "deliverables/validation_results.json": {
+        "kind": "file",
+        "sha256": "ad6c925bf2821d28c36f61dfc13c8d067a1f8c5b796aeffa318465b20a3c41f1",
+        "size_bytes": 4227
+      },
+      "deliverables/well_group_allocations.csv": {
+        "kind": "file",
+        "sha256": "69b16e2fbf2e9d672c69d00d75f2f39e8681c5ff87b4e257ba73c7de6404423c",
+        "size_bytes": 532
+      },
+      "tools/": {
+        "kind": "directory"
+      },
+      "tools/build.py": {
+        "kind": "file",
+        "sha256": "de6cdb2502d94c30ce641c370bad5e0bc2c837952ad25ec87099fbdf783ff0cb",
+        "size_bytes": 17174
+      },
+      "tools/checks_geom.py": {
+        "kind": "file",
+        "sha256": "615a8c0460ed5d75a2acf906f28fc6261b7916ce4ae5cd7fa14fa0731feacb8f",
+        "size_bytes": 14929
+      },
+      "tools/costing.py": {
+        "kind": "file",
+        "sha256": "742c1afed20d511895bda53bf0422a31c93614d1f8e3193f52c0b0c6e146a070",
+        "size_bytes": 4488
+      },
+      "tools/design.py": {
+        "kind": "file",
+        "sha256": "715f88344b10215781b59ca3238680aba121b07e41356a12e8b27c19fe0c56ca",
+        "size_bytes": 9146
+      },
+      "tools/engine.py": {
+        "kind": "file",
+        "sha256": "8309281ba69a2860d6282bce5fee77e271a2b1248841a5810afd4859026bb1f7",
+        "size_bytes": 19774
+      },
+      "tools/process.py": {
+        "kind": "file",
+        "sha256": "ee369f59818ff781c76e429347ebb6530bc17e5c991b8949bad12d622088d8ae",
+        "size_bytes": 31124
+      },
+      "tools/report.py": {
+        "kind": "file",
+        "sha256": "ed43433d185759415835ff91fe4d0df47adcbd39c47215103bf4cafaf246dfc3",
+        "size_bytes": 17446
+      },
+      "tools/report_template.py": {
+        "kind": "file",
+        "sha256": "5e4565a3bc7ee8b9d340c905bdc4c3f5bf0f53859e29d71f7c329b7c62748263",
+        "size_bytes": 25826
+      },
+      "tools/selftest.py": {
+        "kind": "file",
+        "sha256": "da60451e937a4fecb3371b1be758cb67a7697079e1fda4083521c8756dfda2af",
+        "size_bytes": 5284
+      }
+    },
+    "total_file_bytes": 428896
+  },
+  "symlink_policy": "internal symlinks materialized as read-only content; links leaving project/ rejected"
+}

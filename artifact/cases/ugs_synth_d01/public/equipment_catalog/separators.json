@@ -1,0 +1,185 @@
+{
+  "models": [
+    {
+      "annual_maintenance_mbcu": 0.035,
+      "capacity_kg_s": 40,
+      "capex_mbcu": 0.55,
+      "category": "separator",
+      "footprint_m": {
+        "length": 6,
+        "width": 3
+      },
+      "liquid_removal_efficiency": 0.9995,
+      "maintenance": {
+        "clearance_m": 2.0,
+        "crane_access_required": false,
+        "heavy_maintenance": false,
+        "road_access_required": true
+      },
+      "maximum_feed_free_liquid_fraction": 0.05,
+      "maximum_liquid_rate_kg_s": 0.8,
+      "maximum_pressure_mpa": 10,
+      "model_id": "SEP40",
+      "orientation_options_deg": [
+        0,
+        90
+      ],
+      "ports": [
+        {
+          "id": "gas_in",
+          "offset_m": [
+            -3.0,
+            0
+          ],
+          "type": "gas_in"
+        },
+        {
+          "id": "gas_out",
+          "offset_m": [
+            3.0,
+            0
+          ],
+          "type": "gas_out"
+        },
+        {
+          "id": "liquid_out",
+          "offset_m": [
+            0,
+            -1.5
+          ],
+          "type": "liquid_out"
+        }
+      ],
+      "pressure_drop_mpa": 0.025,
+      "safety_category": "hydrocarbon_treatment"
+    },
+    {
+      "annual_maintenance_mbcu": 0.05,
+      "capacity_kg_s": 70,
+      "capex_mbcu": 0.78,
+      "category": "separator",
+      "footprint_m": {
+        "length": 8,
+        "width": 4
+      },
+      "liquid_removal_efficiency": 0.9995,
+      "maintenance": {
+        "clearance_m": 2.0,
+        "crane_access_required": false,
+        "heavy_maintenance": false,
+        "road_access_required": true
+      },
+      "maximum_feed_free_liquid_fraction": 0.05,
+      "maximum_liquid_rate_kg_s": 2.0,
+      "maximum_pressure_mpa": 16,
+      "model_id": "SEP70",
+      "orientation_options_deg": [
+        0,
+        90
+      ],
+      "ports": [
+        {
+          "id": "gas_in",
+          "offset_m": [
+            -4.0,
+            0
+          ],
+          "type": "gas_in"
+        },
+        {
+          "id": "gas_out",
+          "offset_m": [
+            4.0,
+            0
+          ],
+          "type": "gas_out"
+        },
+        {
+          "id": "liquid_out",
+          "offset_m": [
+            0,
+            -2.0
+          ],
+          "type": "liquid_out"
+        }
+      ],
+      "pressure_drop_mpa": 0.03,
+      "safety_category": "hydrocarbon_treatment"
+    },
+    {
+      "annual_maintenance_mbcu": 0.075,
+      "capacity_kg_s": 120,
+      "capex_mbcu": 1.15,
+      "category": "separator",
+      "footprint_m": {
+        "length": 10,
+        "width": 5
+      },
+      "liquid_removal_efficiency": 0.9995,
+      "maintenance": {
+        "clearance_m": 2.0,
+        "crane_access_required": false,
+        "heavy_maintenance": false,
+        "road_access_required": true
+      },
+      "maximum_feed_free_liquid_fraction": 0.05,
+      "maximum_liquid_rate_kg_s": 2.0,
+      "maximum_pressure_mpa": 10,
+      "model_id": "SEP120",
+      "orientation_options_deg": [
+        0,
+        90
+      ],
+      "ports": [
+        {
+          "id": "gas_in",
+          "offset_m": [
+            -5.0,
+            0
+          ],
+          "type": "gas_in"
+        },
+        {
+          "id": "gas_out",
+          "offset_m": [
+            5.0,
+            0
+          ],
+          "type": "gas_out"
+        },
+        {
+          "id": "liquid_out",
+          "offset_m": [
+            0,
+            -2.5
+          ],
+          "type": "liquid_out"
+        }
+      ],
+      "pressure_drop_mpa": 0.035,
+      "safety_category": "hydrocarbon_treatment"
+    }
+  ],
+  "provenance": {
+    "classification": "synthetic benchmark assumption",
+    "note": "Deterministic development-case data; not vendor data or production engineering criteria."
+  },
+  "units": {
+    "annual_maintenance": "MBCU/year",
+    "capacity": "kg/s gas, or kg/s liquid for closed drains",
+    "capex": "MBCU",
+    "clearance": "m",
+    "dimensionless_efficiency_and_fraction": "1",
+    "flow": "kg/s",
+    "footprint_and_port_offsets": "m",
+    "free_liquid_loading": "kg liquid/kg gas",
+    "length": "m",
+    "liquid_rate": "kg/s",
+    "orientation": "degree",
+    "power_and_duty": "MW",
+    "pressure": "MPa",
+    "pressure_ratio": "1",
+    "temperature": "degC",
+    "temperature_coefficient": "K/MPa"
+  }
+}

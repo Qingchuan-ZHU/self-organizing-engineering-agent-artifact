@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+message: "Please cite this software artifact. Publication details are pending."
+license: Apache-2.0
+type: software
+title: "Self-Organizing Engineering Agent research artifact"
+version: "research-artifact-v0.1"
+abstract: >-
+  The software component is licensed under Apache-2.0. The UGS-SYNTH benchmark,
+  authored documentation, and experimental evidence use separate path-level
+  licensing as defined in LICENSE.md.
+authors:
+  - family-names: Zhu
+    given-names: Qingchuan
+preferred-citation:
+  type: generic
+  title: "Publication citation pending"
+  authors:
+    - family-names: Zhu
+      given-names: Qingchuan

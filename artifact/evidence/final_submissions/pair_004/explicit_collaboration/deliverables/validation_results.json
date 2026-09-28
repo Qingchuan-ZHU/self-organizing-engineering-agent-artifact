@@ -1,0 +1,271 @@
+{
+  "validator_self_check": [
+    {
+      "mutation": "mass balance perturbed on one well flowline",
+      "expectation": "must be detected",
+      "detected": true,
+      "evidence": [
+        "HDR-C: mass imbalance 1.000000 kg/s"
+      ]
+    },
+    {
+      "mutation": "two equipment footprints overlapped",
+      "expectation": "must be detected",
+      "detected": true,
+      "evidence": [
+        "footprints overlap: SEP-1 / SEP-2"
+      ]
+    },
+    {
+      "mutation": "delivery regulator moved inside the treatment separation distance",
+      "expectation": "must be detected",
+      "detected": true,
+      "evidence": [
+        "separation REG-WDR/HDR-F = 5.500 m < required 6.0 m"
+      ]
+    },
+    {
+      "mutation": "pipeline routed through FUTURE-EXPANSION (pipeline exclusion)",
+      "expectation": "must be detected",
+      "detected": true,
+      "evidence": [
+        "P02: segment 0 enters pipeline_exclusion FUTURE-EXPANSION"
+      ]
+    },
+    {
+      "mutation": "one pipeline laid along another on the same routing level",
+      "expectation": "must be detected",
+      "detected": true,
+      "evidence": [
+        "same-level overlap 64.000 m: P04 seg1 / P05 seg1 (ground)"
+      ]
+    },
+    {
+      "mutation": "outlet metering line undersized to DN150",
+      "expectation": "must be detected",
+      "detected": true,
+      "evidence": [
+        "P32: gas velocity 201.308 > 25.0 m/s"
+      ]
+    },
+    {
+      "mutation": "wet-service line given a dry-only pipe class",
+      "expectation": "must be detected",
+      "detected": true,
+      "evidence": [
+        "P11: wet gas but class CS-DRY-160 not wet compatible"
+      ]
+    },
+    {
+      "mutation": "compressor discharge pressure driven above the model limit",
+      "expectation": "must be detected",
+      "detected": true,
+      "evidence": [
+        "INJ-C2: ratio 2.4723 > max 2.40"
+      ]
+    },
+    {
+      "mutation": "dehydration outlet water raised above the 50 mg/Sm3 delivery limit",
+      "expectation": "must be detected",
+      "detected": true,
+      "evidence": [
+        "GRID-TIE: water 80.0000 > 50.0 mg/Sm3"
+      ]
+    },
+    {
+      "mutation": "aftercooler setpoint raised above the delivery temperature limit",
+      "expectation": "must be detected",
+      "detected": true,
+      "evidence": [
+        "WG-06: temperature 70.00 outside [-10.0, 60.0]"
+      ]
+    }
+  ],
+  "geometry_errors": [],
+  "geometry_rules": [
+    {
+      "rule": "equipment footprint inside the site boundary",
+      "status": "pass",
+      "detail": "21 instances checked against the site polygon"
+    },
+    {
+      "rule": "footprints outside equipment-exclusion interiors",
+      "status": "pass",
+      "detail": "3 no-build zones tested"
+    },
+    {
+      "rule": "no positive-area overlap between footprints",
+      "status": "pass",
+      "detail": "210 footprint pairs tested"
+    },
+    {
+      "rule": "minimum separation matrix satisfied for every equipment pair",
+      "status": "pass",
+      "detail": "closest pair DRN-1/DRN-2: 8.00 m against 4.0 m required"
+    },
+    {
+      "rule": "required maintenance envelopes inside site, clear of exclusions and footprints",
+      "status": "pass",
+      "detail": ""
+    },
+    {
+      "rule": "road width at least 4 m",
+      "status": "pass",
+      "detail": ""
+    },
+    {
+      "rule": "paved road geometry inside the site boundary",
+      "status": "pass",
+      "detail": ""
+    },
+    {
+      "rule": "paved road geometry outside road-exclusion interiors",
+      "status": "pass",
+      "detail": ""
+    },
+    {
+      "rule": "paved road geometry clear of equipment footprints",
+      "status": "pass",
+      "detail": ""
+    },
+    {
+      "rule": "road network connected and containing ROAD-ENTRANCE",
+      "status": "pass",
+      "detail": "4 paved parts in 1 component(s), centreline length 1406 m"
+    },
+    {
+      "rule": "road-access and crane-access buffers to required maintenance envelopes",
+      "status": "pass",
+      "detail": "INJ-C1 0.50 m, INJ-C2 0.50 m, INJ-C3 2.40 m, SEP-1 3.00 m, SEP-2 3.00 m, SEP-3 3.00 m"
+    },
+    {
+      "rule": "pipeline endpoints coincide with their port coordinates (1e-6 m)",
+      "status": "pass",
+      "detail": ""
+    },
+    {
+      "rule": "every route segment longer than the geometry tolerance",
+      "status": "pass",
+      "detail": "36 pipelines, 77 segments, 5424 m total"
+    },
+    {
+      "rule": "route segments within the site boundary",
+      "status": "pass",
+      "detail": "77 segments tested against the site polygon"
+    },
+    {
+      "rule": "route segments outside pipeline-exclusion interiors",
+      "status": "pass",
+      "detail": ""
+    },
+    {
+      "rule": "route segments do not cross equipment-footprint interiors",
+      "status": "pass",
+      "detail": ""
+    },
+    {
+      "rule": "declared corridors contain their segments and allow their levels",
+      "status": "pass",
+      "detail": "no segment declares a corridor in this design"
+    },
+    {
+      "rule": "no positive-length same-level route overlap (including self-overlap)",
+      "status": "pass",
+      "detail": ""
+    },
+    {
+      "rule": "port connection cardinality within published limits",
+      "status": "pass",
+      "detail": "69 connected ports tested"
+    },
+    {
+      "rule": "port-type compatibility of every physical connection",
+      "status": "pass",
+      "detail": ""
+    }
+  ],
+  "geometry_contingency": {
+    "description": "C40 in withdrawal service with one C60 unavailable in WDR-HIGH (no published N-1 requirement; informative)",
+    "c40_suction_mpa": 11.976222,
+    "c40_suction_limit_mpa": 12,
+    "retained_flow_kg_s": 84.0,
+    "grid_tie_pressure_mpa": 6.0,
+    "exceptions": []
+  },
+  "geometry_info": {
+    "road_length_m": 1406.0,
+    "maintenance_area_m2": {
+      "INJ-C1": 219.04000000000002,
+      "INJ-C2": 219.04000000000002,
+      "INJ-C3": 154.56,
+      "HDR-A": 52.0,
+      "HDR-B": 52.0,
+      "COOL": 93.23999999999998,
+      "MTR-INJ": 40.0,
+      "MTR-WDR": 40.0,
+      "REG-WDR": 48.0,
+      "HDR-F": 52.0,
+      "HDR-C": 52.0,
+      "HDR-E": 52.0,
+      "SEP-1": 64.0,
+      "DEHY-1": 76.0,
+      "SEP-2": 64.0,
+      "DEHY-2": 76.0,
+      "SEP-3": 64.0,
+      "DEHY-3": 76.0,
+      "DRN-1": 32.0,
+      "DRN-2": 32.0,
+      "DRN-3": 32.0
+    },
+    "access_clearances_m": {
+      "INJ-C1": 0.5,
+      "INJ-C2": 0.5,
+      "INJ-C3": 2.3999999999999773,
+      "SEP-1": 3.0,
+      "SEP-2": 3.0,
+      "SEP-3": 3.0
+    }
+  },
+  "scenario_violations": {
+    "INJ-LOW": [],
+    "INJ-MID": [],
+    "INJ-HIGH": [],
+    "WDR-HIGH": [],
+    "WDR-MID": [],
+    "WDR-LOW": []
+  },
+  "reliability_violations": {
+    "INJ-LOW|INJ-C1": [],
+    "INJ-LOW|INJ-C2": [],
+    "INJ-LOW|INJ-C3": [],
+    "INJ-MID|INJ-C1": [],
+    "INJ-MID|INJ-C2": [],
+    "INJ-MID|INJ-C3": [],
+    "INJ-HIGH|INJ-C1": [],
+    "INJ-HIGH|INJ-C2": [],
+    "INJ-HIGH|INJ-C3": [],
+    "WDR-LOW|INJ-C1": [],
+    "WDR-LOW|INJ-C2": [],
+    "WDR-LOW|INJ-C3": [],
+    "WDR-HIGH|SEP-1": [],
+    "WDR-HIGH|SEP-2": [],
+    "WDR-HIGH|SEP-3": [],
+    "WDR-HIGH|DEHY-1": [],
+    "WDR-HIGH|DEHY-2": [],
+    "WDR-HIGH|DEHY-3": [],
+    "WDR-MID|SEP-1": [],
+    "WDR-MID|SEP-2": [],
+    "WDR-MID|SEP-3": [],
+    "WDR-MID|DEHY-1": [],
+    "WDR-MID|DEHY-2": [],
+    "WDR-MID|DEHY-3": [],
+    "WDR-LOW|SEP-1": [],
+    "WDR-LOW|SEP-2": [],
+    "WDR-LOW|SEP-3": [],
+    "WDR-LOW|DEHY-1": [],
+    "WDR-LOW|DEHY-2": [],
+    "WDR-LOW|DEHY-3": []
+  },
+  "all_scenarios_clean": true,
+  "all_reliability_cases_clean": true
+}

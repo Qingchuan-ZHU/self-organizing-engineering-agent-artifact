@@ -1,0 +1,31 @@
+{
+  "files": [
+    {
+      "file": "cross_check.py",
+      "review_number": 1,
+      "run_id": "ugs_synth_explicit_collaboration_replication_001",
+      "snapshot_sha256": "8807fb0b160879007854b2c723e7b335a3a5177196f88a20d99219a5726c1615",
+      "source_path": "runs/ugs_synth_interleaved_review/ugs_synth_explicit_collaboration_replication_001/reviewer/sandbox/agent_view/review/cross_check.py",
+      "source_sha256": "ce07e6c4b9a2138c23610a09494fbe4e8ee4a0c6ec513a939b503b7db7ac71cd"
+    },
+    {
+      "file": "energy_delta.py",
+      "review_number": 1,
+      "run_id": "ugs_synth_explicit_collaboration_replication_001",
+      "snapshot_sha256": "8807fb0b160879007854b2c723e7b335a3a5177196f88a20d99219a5726c1615",
+      "source_path": "runs/ugs_synth_interleaved_review/ugs_synth_explicit_collaboration_replication_001/reviewer/sandbox/agent_view/review/energy_delta.py",
+      "source_sha256": "38adb072c7b23410a7eabef7423d598a525e01191c30c05a7b4bde78ad52e6b7"
+    },
+    {
+      "file": "n1_check.py",
+      "review_number": 1,
+      "run_id": "ugs_synth_explicit_collaboration_replication_001",
+      "snapshot_sha256": "8807fb0b160879007854b2c723e7b335a3a5177196f88a20d99219a5726c1615",
+      "source_path": "runs/ugs_synth_interleaved_review/ugs_synth_explicit_collaboration_replication_001/reviewer/sandbox/agent_view/review/n1_check.py",
+      "source_sha256": "4583947b83d679a701be53f0a809dc15431d40aa6cb028d06fa161b8f4194759"
+    }
+  ],
+  "review_number": 1,
+  "run_id": "ugs_synth_explicit_collaboration_replication_001",
+  "snapshot_sha256": "8807fb0b160879007854b2c723e7b335a3a5177196f88a20d99219a5726c1615"
+}

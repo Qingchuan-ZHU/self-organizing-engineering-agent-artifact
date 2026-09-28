@@ -1,0 +1,270 @@
+{
+  "summary": "The submission is mostly reconstructable and many normal-scenario balances and LCC arithmetic are internally coherent, but I found two confirmed geometry violations and unsupported N-1 evidence. I could not create scratch files because the sandbox was read-only, so independent checks were performed manually/transiently from the public brief and submitted artifacts only.",
+  "areas_checked": [
+    {
+      "area": "deliverable_completeness_reconstructability",
+      "coverage": "full",
+      "details": "Read the final delivery contract and all main submission artifacts. Equipment IDs/model IDs, ports, positions, orientations, pipeline waypoints/diameters/classes/levels, scenario flows/setpoints, quantities, LCC breakdown, assumptions, and limitations are present. N-1 outage cases are not reconstructable as scenario-level operating cases, and the stated reproduction path is inconsistent with the delivered tree."
+    },
+    {
+      "area": "physical_topology_and_port_semantics",
+      "coverage": "full",
+      "details": "Checked all pipeline endpoint types and connection counts by inspection against network_semantics.md and site external-interface limits. No ordinary-port overuse, illegal free junction, well-group overconnection, outfall overconnection, or GRID-TIE connection-count violation was found. One-way gas_out/gas_in equipment appears used in the allowed physical direction in the submitted normal active paths."
+    },
+    {
+      "area": "operating_scenarios",
+      "coverage": "sampled",
+      "details": "All six mandatory scenarios are present. I recomputed flow allocations, well-group limits, GRID-TIE metering capacity, and treatment quality for all six. Hydraulic pressure delivery was sampled rather than fully recomputed for every active pipe."
+    },
+    {
+      "area": "n_minus_1_reliability",
+      "coverage": "sampled",
+      "details": "Inspected the report, check_summary, scenarios JSON, and the submitted check_n_minus_one implementation. Capacity arithmetic was independently checked, but no full failed-unit hydraulic simulations were present in the final artifacts."
+    },
+    {
+      "area": "equipment_limits",
+      "coverage": "sampled",
+      "details": "Checked normal-operation compressor flows, ratios, pressures, discharge temperatures, power, treatment capacities, separator liquid rates, dehydrator inlet liquid/loading, meter/regulator/header capacities, and selected cooler duties. I did not recompute every equipment pressure at every node."
+    },
+    {
+      "area": "hydraulic_calculations",
+      "coverage": "sampled",
+      "details": "Manually recomputed representative gas-property and pressure-loss quantities for a highest-flow DN700 line, the highest-velocity/small-DN treatment line, and a critical withdrawal delivery-pressure margin. I did not recompute all pipes or independently prove all eight-update convergence outcomes."
+    },
+    {
+      "area": "gas_quality_and_temperature",
+      "coverage": "sampled",
+      "details": "Checked submitted delivered water/free-liquid/temperature values for all six scenarios and reviewed wet/dry class eligibility by process section. Compressor/cooler/regulator temperature changes were sampled."
+    },
+    {
+      "area": "liquid_drain",
+      "coverage": "full",
+      "details": "Checked all three separator liquid outlets, all three closed drains, all six liquid-drain pipes, outfall connection count, outfall total flow, closed-drain capacity, liquid pipe class, and separator liquid removal arithmetic. Definitive velocity compliance is limited by the missing public liquid density input."
+    },
+    {
+      "area": "geometry_layout_roads_maintenance",
+      "coverage": "sampled",
+      "details": "Checked site boundary/exclusion logic, road widths/connectivity, selected maintenance/crane access distances, and selected equipment placements. Found a road swept-geometry containment violation. I did not perform a full independent polygon sweep for every footprint/envelope pair."
+    },
+    {
+      "area": "pipeline_geometry",
+      "coverage": "sampled",
+      "details": "Checked endpoint matching for representative pipelines, site containment by waypoint inspection, and selected footprint crossings. Found a positive-length equipment-footprint interior crossing. Same-level overlaps and all exclusion crossings were not exhaustively recomputed."
+    },
+    {
+      "area": "lifecycle_cost_arithmetic",
+      "coverage": "sampled",
+      "details": "Recomputed PV factor, equipment CAPEX, annual maintenance, maintenance PV, scenario energy total, energy PV, road/foundation/maintenance-area/pipeline civil costs, total LCC, and sampled grouped piping CAPEX. Values match the submission within rounding."
+    },
+    {
+      "area": "lcc_objective",
+      "coverage": "sampled",
+      "details": "No global optimum evidence was provided or inferred. I looked for obvious dominated major equipment; no confirmed lower-cost feasible alternative was established. Header sizing may be worth optimization review, but I did not prove a feasible lower-LCC replacement with adjusted routing."
+    },
+    {
+      "area": "unsupported_assumptions",
+      "coverage": "sampled",
+      "details": "Identified reliance on an unpublished liquid density for drain velocity and unsupported N-1 simulation claims. The pressure-control philosophy is stated and broadly consistent with the scenario setpoints."
+    },
+    {
+      "area": "internal_consistency",
+      "coverage": "sampled",
+      "details": "Cross-checked report, JSON, source, and check_summary. The check_summary reports no geometry or N-1 issues, but the submitted checker excludes endpoint equipment from pipe-footprint checks and checks N-1 only by capacity arithmetic. README/report reproduction paths refer to project/run.py although the delivered tree has submission/run.py."
+    }
+  ],
+  "independent_calculations": [
+    {
+      "title": "Topology and Port Cardinality Review",
+      "public_inputs": [
+        "brief/network_semantics.md port compatibility and cardinality rules",
+        "brief/site.json external interface maximum_connections and maximum_flow_kg_s",
+        "brief/equipment_catalog/*.json port definitions"
+      ],
+      "submission_inputs": [
+        "submission/design/equipment_instances.json",
+        "submission/design/pipelines.json",
+        "submission/design/scenarios_operating.json"
+      ],
+      "method": "Manually classified every pipeline endpoint by port type, counted ordinary equipment-port uses, header branch uses, GRID-TIE connections, well-group connections, and liquid-outfall connections.",
+      "result": "No port-compatibility or cardinality violation found. GRID-TIE uses 2 of 2 connections; LIQUID-DRAIN-OUTFALL uses 3 of 8; each well group has one gas connection; header branch counts are below 14; ordinary equipment ports are singly connected.",
+      "scratch_files": []
+    },
+    {
+      "title": "Scenario Flow, Metering, and Treatment Balance",
+      "public_inputs": [
+        "brief/operating_scenarios.json required flows/hours/source quality",
+        "brief/project_requirements.json delivery limits and metering rule",
+        "brief/engineering_calculation_basis.md separator and dehydration rules"
+      ],
+      "submission_inputs": [
+        "submission/design/scenarios_operating.json",
+        "submission/design/equipment_instances.json"
+      ],
+      "method": "For all six scenarios, summed well allocations and active pipe splits; compared active meter capacity to scenario flow; recomputed separator removed liquid as gas_flow * 0.01 * 0.9995 and separator outlet free-liquid loading as 0.01 * (1 - 0.9995).",
+      "result": "All six allocations match required flow within tolerance. MTR120 capacity covers the maximum 120 kg/s in both injection and withdrawal paths. Withdrawal liquid removal matches: WDR-HIGH 1.1994 kg/s total, WDR-MID 0.9995 kg/s total, WDR-LOW 0.69965 kg/s total; delivered loading 5e-6 and water 35 mg/Sm3 satisfy delivery limits.",
+      "scratch_files": []
+    },
+    {
+      "title": "Hydraulic Sample Recomputations",
+      "public_inputs": [
+        "brief/engineering_calculation_basis.md gas property, Reynolds/friction, and fixed-point pressure-loss formulas",
+        "brief/gas_properties.json",
+        "brief/piping_catalog.json"
+      ],
+      "submission_inputs": [
+        "submission/design/pipelines.json",
+        "submission/design/scenarios_operating.json"
+      ],
+      "method": "Manually evaluated representative cases: PGRID-INJ in INJ-LOW as highest-flow inlet pipe; PSEP-DHY3 in WDR-LOW as highest-velocity/small-DN treatment pipe; WDR-MID regulator-to-grid delivery margin as a critical pressure-margin sample.",
+      "result": "PGRID-INJ at 120 kg/s, 6.5 MPa, 25 C gives Z about 0.9323, mu about 1.08e-5 Pa*s, rho about 51.2 kg/m3, velocity about 6.90 m/s, Re about 2.16e7, friction factor about 0.0113, and pressure loss about 0.0023 MPa, consistent with the submitted 6.8951 m/s. PSEP-DHY3 WDR-LOW gives velocity about 23.8 m/s and pressure loss about 0.085 MPa, below the 25 m/s gas limit. WDR-MID regulator outlet setpoint 6.029608 MPa is approximately consumed by two dry DN450 pipe losses plus 0.02 MPa meter drop, giving about 6.0 MPa at GRID-TIE.",
+      "scratch_files": []
+    },
+    {
+      "title": "Equipment Limit Samples",
+      "public_inputs": [
+        "brief/equipment_catalog/compressors.json",
+        "brief/equipment_catalog/separators.json",
+        "brief/equipment_catalog/dehydration.json",
+        "brief/equipment_catalog/thermal_equipment.json",
+        "brief/equipment_catalog/metering_regulation.json",
+        "brief/equipment_catalog/headers.json",
+        "brief/equipment_catalog/drains.json"
+      ],
+      "submission_inputs": [
+        "submission/design/scenarios_operating.json",
+        "submission/design/equipment_instances.json"
+      ],
+      "method": "Compared submitted normal scenario setpoints and flows with catalog capacities, pressure limits, pressure-ratio limits, minimum stable flows, temperature limits, and duty/power limits.",
+      "result": "Normal compressor checks are within catalog limits: C60 max submitted flow 60 kg/s, min active flow 35 kg/s, max ratio about 2.096 below 2.4, max discharge temperature about 94.4 C below 150 C, and power far below 32 MW. Separator/dehydrator trains are below 70 kg/s each, separator liquid is below 2.0 kg/s each, dehydrator feed free liquid is 5e-6 below 1e-4, and COOL120/COOL70, MTR120, REG120, HDR180, and DRN-S checked values are within sampled limits.",
+      "scratch_files": []
+    },
+    {
+      "title": "Liquid Drain Capacity and Velocity Under Submitted Assumption",
+      "public_inputs": [
+        "brief/engineering_calculation_basis.md liquid removal and closed-drain rules",
+        "brief/piping_catalog.json DN150 internal diameter and 3 m/s drain velocity limit",
+        "brief/equipment_catalog/drains.json DRN-S capacity"
+      ],
+      "submission_inputs": [
+        "submission/design/scenarios_operating.json",
+        "submission/design/pipelines.json",
+        "submission/report/design_report.md"
+      ],
+      "method": "Recomputed per-drain peak liquid flow and velocity using the submission's stated 1000 kg/m3 liquid-density assumption.",
+      "result": "Peak per-drain liquid flow is 0.3998 kg/s in WDR-HIGH, below DRN-S capacity 0.8 kg/s. DN150 area is about 0.0156 m2; with 1000 kg/m3, velocity is about 0.0256 m/s, matching the submission and below 3 m/s. Total outfall liquid flow 1.1994 kg/s is below 10 kg/s, with 3 of 8 outfall connections used. Because liquid density is not published, this is not a definitive public-basis velocity pass.",
+      "scratch_files": []
+    },
+    {
+      "title": "Geometry Samples",
+      "public_inputs": [
+        "brief/engineering_geometry_basis.md road swept-geometry and pipeline footprint rules",
+        "brief/site.json site boundary"
+      ],
+      "submission_inputs": [
+        "submission/design/layout_roads.json",
+        "submission/design/pipelines.json",
+        "submission/design/equipment_instances.json",
+        "submission/design/check_summary.json"
+      ],
+      "method": "Manually compared selected submitted centreline/waypoint coordinates to site boundary and equipment rectangles, using the submitted zero-degree orientations and rectangular footprints.",
+      "result": "Two violations were found: R-MAIN has width 6 m and starts at x=0, so its swept end projects to x=-3 outside the site; PGRID-INJ segment (690,292) to (648,292) passes through the MTR-INJ footprint interior x=648..652, y=291..293 for a positive length. check_summary.json nevertheless reports geometry_issues as empty.",
+      "scratch_files": []
+    },
+    {
+      "title": "Lifecycle Cost Arithmetic",
+      "public_inputs": [
+        "brief/economic_assumptions.json discount rate, project life, energy tariff, civil rates",
+        "brief/piping_catalog.json pipe cost multipliers and routing-level civil costs",
+        "brief/equipment_catalog/*.json capex and maintenance"
+      ],
+      "submission_inputs": [
+        "submission/design/quantities_lcc.json",
+        "submission/design/equipment_instances.json",
+        "submission/design/pipelines.json",
+        "submission/design/layout_roads.json",
+        "submission/design/scenarios_operating.json"
+      ],
+      "method": "Recomputed PVF, equipment CAPEX, annual maintenance and PV, scenario energy total and PV, road/foundation/maintenance/pipeline civil costs, and sampled grouped piping CAPEX from submitted lengths/classes/diameters.",
+      "result": "PVF = 9.818147. Equipment CAPEX sums to 30.05 MBCU; annual maintenance sums to 1.102 MBCU/y and PV to 10.8196 MBCU. Scenario energy sums to 40256.7215 MWh/y; annual energy cost is 4.830807 MBCU/y and PV is 47.4296 MBCU. Road, foundation, maintenance-area, and buried-pipeline civil components match 0.19605, 0.00328, 0.001662, and 0.016424 MBCU. Total LCC recomputes to about 90.28377 MBCU, matching the submission within rounding.",
+      "scratch_files": []
+    }
+  ],
+  "findings": [
+    {
+      "finding_id": "F-001",
+      "status": "confirmed_violation",
+      "severity": "medium",
+      "confidence": "high",
+      "public_basis": "brief/engineering_geometry_basis.md requires every physical pipeline segment to avoid equipment-footprint interiors; only boundary contact is permitted.",
+      "claim_or_requirement": "Pipeline routes must not cross an equipment-footprint interior.",
+      "submission_evidence": "submission/design/pipelines.json defines PGRID-INJ with waypoints (700,225), (690,292), (648,292) to MTR-INJ.gas_in. submission/design/equipment_instances.json defines MTR-INJ at (650,292), footprint 4 m x 2 m, gas_in at (648,292). submission/design/check_summary.json reports geometry_issues as empty.",
+      "independent_check": "With orientation 0, MTR-INJ footprint spans x=648..652 and y=291..293. The PGRID-INJ segment from (690,292) to (648,292) lies at y=292 and passes through x values 648 < x < 652 before ending at the gas_in boundary point.",
+      "result": "PGRID-INJ crosses the MTR-INJ equipment-footprint interior for a positive length of approximately 4 m.",
+      "why_it_matters": "The submitted pipeline geometry is not compliant with the public route-containment rule, and the bundled geometry checker missed it."
+    },
+    {
+      "finding_id": "F-002",
+      "status": "confirmed_violation",
+      "severity": "medium",
+      "confidence": "high",
+      "public_basis": "brief/engineering_geometry_basis.md states that road paved geometry is the centreline swept by half the width, including ends, and must remain within the site boundary. brief/site.json defines the site boundary starting at x=0.",
+      "claim_or_requirement": "Road paved geometry must remain within the site boundary.",
+      "submission_evidence": "submission/design/layout_roads.json defines R-MAIN with width_m 6.0 and centreline starting at (0,225). submission/design/check_summary.json reports geometry_issues as empty.",
+      "independent_check": "A 6 m road has a 3 m half-width. Sweeping the R-MAIN endpoint at (0,225) by 3 m includes points such as (-3,225), outside the site boundary x >= 0.",
+      "result": "R-MAIN paved end geometry extends outside the site by about 3 m at ROAD-ENTRANCE.",
+      "why_it_matters": "Road geometry is part of the mandatory layout/access deliverable; centerline-only containment is insufficient under the published road rule."
+    },
+    {
+      "finding_id": "F-003",
+      "status": "unsupported_claim",
+      "severity": "medium",
+      "confidence": "high",
+      "public_basis": "brief/project_requirements.json and brief/engineering_calculation_basis.md require retained deliverability after any one compressor outage for compression scenarios and after any one separator or dehydration outage for withdrawal scenarios, with delivery limits still applicable.",
+      "claim_or_requirement": "The report and check_summary claim N-1 reliability is satisfied with no N-1 issues.",
+      "submission_evidence": "submission/report/design_report.md states that with any one compressor, separator, or dehydration unit unavailable, at least 70% remains deliverable. submission/design/check_summary.json has n_minus_one_issues: []. submission/src/ugssynth/engine.py check_n_minus_one only subtracts the largest unit capacity from total installed capacity for compressors, separators, and dehydration units.",
+      "independent_check": "Capacity arithmetic supports only a necessary condition: compressor worst remaining capacity is 160 - 60 = 100 kg/s versus maximum retained-flow need 84 kg/s; treatment worst remaining capacity is 210 - 70 = 140 kg/s versus maximum retained-flow need 84 kg/s. No submitted outage scenario shows the failed unit removed from the active path, recomputed pipe hydraulics, compressor minimum stable flow, pressure delivery, temperature, water/free-liquid quality, or metering under each failed-unit case.",
+      "result": "The N-1 PASS is not supported by simulated outage evidence in the final artifacts; it is capacity-only evidence.",
+      "why_it_matters": "N-1 feasibility depends on active routing, pressure drops, compressor operating envelope, and delivery quality, not just nameplate capacity."
+    },
+    {
+      "finding_id": "F-004",
+      "status": "semantics_gap",
+      "severity": "low",
+      "confidence": "high",
+      "public_basis": "brief/engineering_calculation_basis.md sets a liquid-drain velocity limit and uses mass-flow units, but the public brief does not provide a liquid density for converting kg/s to m3/s.",
+      "claim_or_requirement": "Liquid drain velocity must be within the published limit.",
+      "submission_evidence": "submission/report/design_report.md states that liquid density is assumed 1000 kg/m3 because it is not published. submission/design/pipelines.json reports peak drain velocity 0.0256 m/s for the DN150 drain lines.",
+      "independent_check": "Using the submission's 1000 kg/m3 assumption, peak per-drain flow 0.3998 kg/s through DN150 ID 0.141 m gives about 0.0256 m/s, below 3 m/s. Without a public density, there is no unique public-basis velocity calculation.",
+      "result": "Drain velocity compliance cannot be definitively judged from the public brief alone; the submitted value is conditional on an unstated density assumption.",
+      "why_it_matters": "This affects whether liquid-drain velocity is a formally reproducible PASS, although capacity, class compatibility, and outfall flow are otherwise within limits."
+    },
+    {
+      "finding_id": "F-005",
+      "status": "unsupported_claim",
+      "severity": "low",
+      "confidence": "high",
+      "public_basis": "brief/final_delivery_contract.json requires final artifacts to be reconstructable and identify calculations clearly.",
+      "claim_or_requirement": "README.md and report/design_report.md claim reproduction via python project/run.py and describe a project/ source layout.",
+      "submission_evidence": "submission/README.md says to run python project/run.py and lists project/run.py, project/src, project/design, and project/report. The actual delivered tree contains submission/run.py, submission/src, submission/design, and submission/report, with no submission/project directory.",
+      "independent_check": "rg --files submission lists submission/run.py and submission/src/... but no project/run.py path.",
+      "result": "The documented reproduction command and source layout do not match the final delivered artifact tree.",
+      "why_it_matters": "This is a low-impact reconstructability inconsistency; the JSON deliverables are still readable, but the advertised reproduction path is not directly executable as written."
+    }
+  ],
+  "limitations": [
+    "The filesystem sandbox was read-only and rejected creating scratch files, so no evaluator-authored scratch scripts or intermediate files could be saved.",
+    "The command sandbox rejected transient scripting/calculator commands; independent numeric checks were therefore manual calculations from the public formulas and submitted JSON values.",
+    "Hydraulics were sampled, not exhaustively recomputed for every active pipe in every scenario or every N-1 outage case.",
+    "Geometry checks were sampled and targeted; I did not perform a complete independent computational polygon-overlap sweep for every pipeline, road, footprint, and maintenance envelope.",
+    "I did not run the submission's generator because it would regenerate files under submission/ and the protocol forbids modifying the frozen submission."
+  ],
+  "submission_alias": "submission_E",
+  "pass_id": "pass_02",
+  "evaluation_start_time_utc": "2026-09-25T06:28:39Z",
+  "evaluation_end_time_utc": "2026-09-25T06:42:20Z",
+  "evaluator_model": "gpt-5.5",
+  "reasoning_effort": "xhigh",
+  "codex_cli_version": "codex-cli-exec 0.130.0",
+  "process_exit_code": 0,
+  "replacement_attempts": 0
+}

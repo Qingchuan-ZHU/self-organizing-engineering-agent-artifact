@@ -1,0 +1,1886 @@
+{
+  "interfaces": [
+    {
+      "interface_id": "GRID-TIE",
+      "interface_type": "process",
+      "maximum_connections": 2,
+      "maximum_flow_kg_s": 160,
+      "point_m": [
+        700,
+        225
+      ],
+      "port_id": "gas",
+      "port_type": "gas_bidirectional"
+    },
+    {
+      "interface_id": "WG-01",
+      "interface_type": "well_group",
+      "maximum_flow_kg_s": 25,
+      "point_m": [
+        12,
+        45
+      ],
+      "port_id": "gas",
+      "port_type": "gas_bidirectional"
+    },
+    {
+      "interface_id": "WG-02",
+      "interface_type": "well_group",
+      "maximum_flow_kg_s": 25,
+      "point_m": [
+        12,
+        117
+      ],
+      "port_id": "gas",
+      "port_type": "gas_bidirectional"
+    },
+    {
+      "interface_id": "WG-03",
+      "interface_type": "well_group",
+      "maximum_flow_kg_s": 25,
+      "point_m": [
+        12,
+        189
+      ],
+      "port_id": "gas",
+      "port_type": "gas_bidirectional"
+    },
+    {
+      "interface_id": "WG-04",
+      "interface_type": "well_group",
+      "maximum_flow_kg_s": 25,
+      "point_m": [
+        12,
+        261
+      ],
+      "port_id": "gas",
+      "port_type": "gas_bidirectional"
+    },
+    {
+      "interface_id": "WG-05",
+      "interface_type": "well_group",
+      "maximum_flow_kg_s": 25,
+      "point_m": [
+        12,
+        333
+      ],
+      "port_id": "gas",
+      "port_type": "gas_bidirectional"
+    },
+    {
+      "interface_id": "WG-06",
+      "interface_type": "well_group",
+      "maximum_flow_kg_s": 25,
+      "point_m": [
+        12,
+        405
+      ],
+      "port_id": "gas",
+      "port_type": "gas_bidirectional"
+    },
+    {
+      "interface_id": "POWER-TIE",
+      "interface_type": "utility",
+      "point_m": [
+        660,
+        35
+      ],
+      "port_id": "power",
+      "port_type": "utility_in"
+    },
+    {
+      "interface_id": "FIREWATER-TIE",
+      "interface_type": "utility",
+      "point_m": [
+        620,
+        35
+      ],
+      "port_id": "firewater",
+      "port_type": "utility_in"
+    },
+    {
+      "interface_id": "INSTRUMENT-AIR-TIE",
+      "interface_type": "utility",
+      "point_m": [
+        580,
+        35
+      ],
+      "port_id": "air",
+      "port_type": "utility_in"
+    },
+    {
+      "interface_id": "ROAD-ENTRANCE",
+      "interface_type": "road",
+      "point_m": [
+        0,
+        225
+      ],
+      "port_id": "access",
+      "port_type": "road_access"
+    },
+    {
+      "interface_id": "LIQUID-DRAIN-OUTFALL",
+      "interface_type": "drain",
+      "maximum_connections": 8,
+      "maximum_flow_kg_s": 10.0,
+      "point_m": [
+        680,
+        120
+      ],
+      "port_id": "drain",
+      "port_type": "drain_in"
+    }
+  ],
+  "routing_corridors": [
+    {
+      "allowed_routing_levels": [
+        "rack_low",
+        "rack_high"
+      ],
+      "allows_co_routing": true,
+      "corridor_id": "RACK-EASEMENT-EAST",
+      "polygon_m": [
+        [
+          625,
+          80
+        ],
+        [
+          690,
+          80
+        ],
+        [
+          690,
+          370
+        ],
+        [
+          625,
+          370
+        ]
+      ]
+    },
+    {
+      "allowed_routing_levels": [
+        "buried"
+      ],
+      "allows_co_routing": true,
+      "corridor_id": "BURIED-EASEMENT-SOUTH",
+      "polygon_m": [
+        [
+          40,
+          15
+        ],
+        [
+          570,
+          15
+        ],
+        [
+          570,
+          28
+        ],
+        [
+          40,
+          28
+        ]
+      ]
+    }
+  ],
+  "no_build_zones": [
+    {
+      "equipment_exclusion": true,
+      "pipeline_exclusion": true,
+      "polygon_m": [
+        [
+          550,
+          320
+        ],
+        [
+          700,
+          320
+        ],
+        [
+          700,
+          450
+        ],
+        [
+          550,
+          450
+        ]
+      ],
+      "road_exclusion": true,
+      "zone_id": "FUTURE-EXPANSION"
+    },
+    {
+      "equipment_exclusion": true,
+      "pipeline_exclusion": true,
+      "polygon_m": [
+        [
+          300,
+          0
+        ],
+        [
+          320,
+          0
+        ],
+        [
+          320,
+          90
+        ],
+        [
+          300,
+          90
+        ]
+      ],
+      "road_exclusion": false,
+      "zone_id": "DRAINAGE-CHANNEL"
+    },
+    {
+      "equipment_exclusion": true,
+      "pipeline_exclusion": false,
+      "polygon_m": [
+        [
+          620,
+          0
+        ],
+        [
+          700,
+          0
+        ],
+        [
+          700,
+          75
+        ],
+        [
+          620,
+          75
+        ]
+      ],
+      "road_exclusion": true,
+      "zone_id": "GRID-FACILITY"
+    }
+  ],
+  "pipelines": [
+    {
+      "pipeline_id": "L1",
+      "from_port": "HDR-C.branch_09",
+      "to_port": "HDR-A.branch_04",
+      "service": "gas",
+      "nominal_diameter": "DN500",
+      "internal_diameter_m": 0.47,
+      "pipe_class": "CS-WET-160",
+      "roughness_m": 4.5e-05,
+      "total_length_m": 176.50142,
+      "segments": [
+        {
+          "level": "ground",
+          "corridor": null,
+          "points": [
+            [
+              342.0,
+              246.5
+            ],
+            [
+              342.0,
+              265.0
+            ]
+          ],
+          "length_m": 18.5
+        },
+        {
+          "level": "ground",
+          "corridor": null,
+          "points": [
+            [
+              342.0,
+              265.0
+            ],
+            [
+              320.0,
+              265.0
+            ]
+          ],
+          "length_m": 22.0
+        },
+        {
+          "level": "ground",
+          "corridor": null,
+          "points": [
+            [
+              320.0,
+              265.0
+            ],
+            [
+              320.0,
+              379.0
+            ]
+          ],
+          "length_m": 114.0
+        },
+        {
+          "level": "ground",
+          "corridor": null,
+          "points": [
+            [
+              320.0,
+              379.0
+            ],
+            [
+              342.0,
+              379.25
+            ]
+          ],
+          "length_m": 22.00142
+        }
+      ]
+    },
+    {
+      "pipeline_id": "L2",
+      "from_port": "HDR-B.branch_03",
+      "to_port": "HDR-E.branch_05",
+      "service": "gas",
+      "nominal_diameter": "DN500",
+      "internal_diameter_m": 0.47,
+      "pipe_class": "CS-WET-160",
+      "roughness_m": 4.5e-05,
+      "total_length_m": 200.5,
+      "segments": [
+        {
+          "level": "ground",
+          "corridor": null,
+          "points": [
+            [
+              471.5,
+              378.5
+            ],
+            [
+              471.5,
+              360.0
+            ]
+          ],
+          "length_m": 18.5
+        },
+        {
+          "level": "ground",
+          "corridor": null,
+          "points": [
+            [
+              471.5,
+              360.0
+            ],
+            [
+              470.0,
+              360.0
+            ]
+          ],
+          "length_m": 1.5
+        },
+        {
+          "level": "ground",
+          "corridor": null,
+          "points": [
+            [
+              470.0,
+              360.0
+            ],
+            [
+              470.0,
+              179.5
+            ]
+          ],
+          "length_m": 180.5
+        }
+      ]
+    },
+    {
+      "pipeline_id": "P01",
+      "from_port": "GRID-TIE.gas",
+      "to_port": "MTR-INJ.gas_in",
+      "service": "gas",
+      "nominal_diameter": "DN700",
+      "internal_diameter_m": 0.658,
+      "pipe_class": "CS-DRY-160",
+      "roughness_m": 1.5e-05,
+      "total_length_m": 133.0,
+      "segments": [
+        {
+          "level": "ground",
+          "corridor": null,
+          "points": [
+            [
+              700.0,
+              225.0
+            ],
+            [
+              660.0,
+              225.0
+            ]
+          ],
+          "length_m": 40.0
+        },
+        {
+          "level": "ground",
+          "corridor": null,
+          "points": [
+            [
+              660.0,
+              225.0
+            ],
+            [
+              660.0,
+              298.0
+            ]
+          ],
+          "length_m": 73.0
+        },
+        {
+          "level": "ground",
+          "corridor": null,
+          "points": [
+            [
+              660.0,
+              298.0
+            ],
+            [
+              640.0,
+              298.0
+            ]
+          ],
+          "length_m": 20.0
+        }
+      ]
+    },
+    {
+      "pipeline_id": "P02",
+      "from_port": "MTR-INJ.gas_out",
+      "to_port": "HDR-A.branch_03",
+      "service": "gas",
+      "nominal_diameter": "DN700",
+      "internal_diameter_m": 0.658,
+      "pipe_class": "CS-DRY-160",
+      "roughness_m": 1.5e-05,
+      "total_length_m": 370.0,
+      "segments": [
+        {
+          "level": "ground",
+          "corridor": null,
+          "points": [
+            [
+              640.0,
+              302.0
+            ],
+            [
+              640.0,
+              308.0
+            ]
+          ],
+          "length_m": 6.0
+        },
+        {
+          "level": "ground",
+          "corridor": null,
+          "points": [
+            [
+              640.0,
+              308.0
+            ],
+            [
+              346.5,
+              308.0
+            ]
+          ],
+          "length_m": 293.5
+        },
+        {
+          "level": "ground",
+          "corridor": null,
+          "points": [
+            [
+              346.5,
+              308.0
+            ],
+            [
+              346.5,
+              378.5
+            ]
+          ],
+          "length_m": 70.5
+        }
+      ]
+    },
+    {
+      "pipeline_id": "P03",
+      "from_port": "HDR-A.branch_09",
+      "to_port": "INJ-C1.suction",
+      "service": "gas",
+      "nominal_diameter": "DN500",
+      "internal_diameter_m": 0.47,
+      "pipe_class": "CS-WET-160",
+      "roughness_m": 4.5e-05,
+      "total_length_m": 62.0,
+      "segments": [
+        {
+          "level": "ground",
+          "corridor": null,
+          "points": [
+            [
+              347.0,
+              381.5
+            ],
+            [
+              347.0,
+              400.0
+            ]
+          ],
+          "length_m": 18.5
+        },
+        {
+          "level": "ground",
+          "corridor": null,
+          "points": [
+            [
+              347.0,
+              400.0
+            ],
+            [
+              390.5,
+              400.0
+            ]
+          ],
+          "length_m": 43.5
+        }
+      ]
+    },
+    {
+      "pipeline_id": "P04",
+      "from_port": "HDR-A.branch_07",
+      "to_port": "INJ-C2.suction",
+      "service": "gas",
+      "nominal_diameter": "DN500",
+      "internal_diameter_m": 0.47,
+      "pipe_class": "CS-WET-160",
+      "roughness_m": 4.5e-05,
+      "total_length_m": 70.5,
+      "segments": [
+        {
+          "level": "ground",
+          "corridor": null,
+          "points": [
+            [
+              343.5,
+              378.5
+            ],
+            [
+              343.5,
+              355.0
+            ]
+          ],
+          "length_m": 23.5
+        },
+        {
+          "level": "ground",
+          "corridor": null,
+          "points": [
+            [
+              343.5,
+              355.0
+            ],
+            [
+              390.5,
+              355.0
+            ]
+          ],
+          "length_m": 47.0
+        }
+      ]
+    },
+    {
+      "pipeline_id": "P05",
+      "from_port": "HDR-A.branch_10",
+      "to_port": "INJ-C3.suction",
+      "service": "gas",
+      "nominal_diameter": "DN300",
+      "internal_diameter_m": 0.282,
+      "pipe_class": "CS-WET-160",
+      "roughness_m": 4.5e-05,
+      "total_length_m": 110.0,
+      "segments": [
+        {
+          "level": "ground",
+          "corridor": null,
+          "points": [
+            [
+              348.0,
+              379.0
+            ],
+            [
+              360.0,
+              379.0
+            ]
+          ],
+          "length_m": 12.0
+        },
+        {
+          "level": "ground",
+          "corridor": null,
+          "points": [
+            [
+              360.0,
+              379.0
+            ],
+            [
+              360.0,
+              315.0
+            ]
+          ],
+          "length_m": 64.0
+        },
+        {
+          "level": "ground",
+          "corridor": null,
+          "points": [
+            [
+              360.0,
+              315.0
+            ],
+            [
+              394.0,
+              315.0
+            ]
+          ],
+          "length_m": 34.0
+        }
+      ]
+    },
+    {
+      "pipeline_id": "P06",
+      "from_port": "INJ-C1.discharge",
+      "to_port": "HDR-B.branch_08",
+      "service": "gas",
+      "nominal_diameter": "DN500",
+      "internal_diameter_m": 0.47,
+      "pipe_class": "CS-WET-160",
+      "roughness_m": 4.5e-05,
+      "total_length_m": 80.75,
+      "segments": [
+        {
+          "level": "ground",
+          "corridor": null,
+          "points": [
+            [
+              405.5,
+              400.0
+            ],
+            [
+              432.0,
+              400.0
+            ]
+          ],
+          "length_m": 26.5
+        },
+        {
+          "level": "ground",
+          "corridor": null,
+          "points": [
+            [
+              432.0,
+              400.0
+            ],
+            [
+              432.0,
+              380.75
+            ]
+          ],
+          "length_m": 19.25
+        },
+        {
+          "level": "ground",
+          "corridor": null,
+          "points": [
+            [
+              432.0,
+              380.75
+            ],
+            [
+              467.0,
+              380.75
+            ]
+          ],
+          "length_m": 35.0
+        }
+      ]
+    },
+    {
+      "pipeline_id": "P07",
+      "from_port": "INJ-C2.discharge",
+      "to_port": "HDR-B.branch_04",
+      "service": "gas",
+      "nominal_diameter": "DN500",
+      "internal_diameter_m": 0.47,
+      "pipe_class": "CS-WET-160",
+      "roughness_m": 4.5e-05,
+      "total_length_m": 85.75,
+      "segments": [
+        {
+          "level": "ground",
+          "corridor": null,
+          "points": [
+            [
+              405.5,
+              355.0
+            ],
+            [
+              430.0,
+              355.0
+            ]
+          ],
+          "length_m": 24.5
+        },
+        {
+          "level": "ground",
+          "corridor": null,
+          "points": [
+            [
+              430.0,
+              355.0
+            ],
+            [
+              430.0,
+              379.25
+            ]
+          ],
+          "length_m": 24.25
+        },
+        {
+          "level": "ground",
+          "corridor": null,
+          "points": [
+            [
+              430.0,
+              379.25
+            ],
+            [
+              467.0,
+              379.25
+            ]
+          ],
+          "length_m": 37.0
+        }
+      ]
+    },
+    {
+      "pipeline_id": "P08",
+      "from_port": "INJ-C3.discharge",
+      "to_port": "HDR-B.branch_07",
+      "service": "gas",
+      "nominal_diameter": "DN300",
+      "internal_diameter_m": 0.282,
+      "pipe_class": "CS-WET-160",
+      "roughness_m": 4.5e-05,
+      "total_length_m": 126.0,
+      "segments": [
+        {
+          "level": "ground",
+          "corridor": null,
+          "points": [
+            [
+              406.0,
+              315.0
+            ],
+            [
+              434.0,
+              315.0
+            ]
+          ],
+          "length_m": 28.0
+        },
+        {
+          "level": "ground",
+          "corridor": null,
+          "points": [
+            [
+              434.0,
+              315.0
+            ],
+            [
+              434.0,
+              378.5
+            ]
+          ],
+          "length_m": 63.5
+        },
+        {
+          "level": "ground",
+          "corridor": null,
+          "points": [
+            [
+              434.0,
+              378.5
+            ],
+            [
+              468.5,
+              378.5
+            ]
+          ],
+          "length_m": 34.5
+        }
+      ]
+    },
+    {
+      "pipeline_id": "P09",
+      "from_port": "HDR-B.branch_06",
+      "to_port": "COOL.gas_in",
+      "service": "gas",
+      "nominal_diameter": "DN600",
+      "internal_diameter_m": 0.564,
+      "pipe_class": "CS-DRY-160",
+      "roughness_m": 1.5e-05,
+      "total_length_m": 51.0,
+      "segments": [
+        {
+          "level": "ground",
+          "corridor": null,
+          "points": [
+            [
+              473.0,
+              380.0
+            ],
+            [
+              524.0,
+              380.0
+            ]
+          ],
+          "length_m": 51.0
+        }
+      ]
+    },
+    {
+      "pipeline_id": "P10",
+      "from_port": "COOL.gas_out",
+      "to_port": "HDR-C.branch_10",
+      "service": "gas",
+      "nominal_diameter": "DN600",
+      "internal_diameter_m": 0.564,
+      "pipe_class": "CS-DRY-160",
+      "roughness_m": 1.5e-05,
+      "total_length_m": 258.010162,
+      "segments": [
+        {
+          "level": "ground",
+          "corridor": null,
+          "points": [
+            [
+              536.0,
+              380.0
+            ],
+            [
+              548.0,
+              380.0
+            ]
+          ],
+          "length_m": 12.0
+        },
+        {
+          "level": "ground",
+          "corridor": null,
+          "points": [
+            [
+              548.0,
+              380.0
+            ],
+            [
+              343.0,
+              244.0
+            ]
+          ],
+          "length_m": 246.010162
+        }
+      ]
+    },
+    {
+      "pipeline_id": "P11",
+      "from_port": "HDR-C.branch_07",
+      "to_port": "WG-01.gas",
+      "service": "gas",
+      "nominal_diameter": "DN300",
+      "internal_diameter_m": 0.282,
+      "pipe_class": "CS-WET-160",
+      "roughness_m": 4.5e-05,
+      "total_length_m": 382.105352,
+      "segments": [
+        {
+          "level": "ground",
+          "corridor": null,
+          "points": [
+            [
+              338.5,
+              243.5
+            ],
+            [
+              12.0,
+              45.0
+            ]
+          ],
+          "length_m": 382.105352
+        }
+      ]
+    },
+    {
+      "pipeline_id": "P12",
+      "from_port": "HDR-C.branch_03",
+      "to_port": "WG-02.gas",
+      "service": "gas",
+      "nominal_diameter": "DN300",
+      "internal_diameter_m": 0.282,
+      "pipe_class": "CS-WET-160",
+      "roughness_m": 4.5e-05,
+      "total_length_m": 352.948296,
+      "segments": [
+        {
+          "level": "ground",
+          "corridor": null,
+          "points": [
+            [
+              341.5,
+              243.5
+            ],
+            [
+              12.0,
+              117.0
+            ]
+          ],
+          "length_m": 352.948296
+        }
+      ]
+    },
+    {
+      "pipeline_id": "P13",
+      "from_port": "HDR-C.branch_04",
+      "to_port": "WG-03.gas",
+      "service": "gas",
+      "nominal_diameter": "DN300",
+      "internal_diameter_m": 0.282,
+      "pipe_class": "CS-WET-160",
+      "roughness_m": 4.5e-05,
+      "total_length_m": 329.662801,
+      "segments": [
+        {
+          "level": "ground",
+          "corridor": null,
+          "points": [
+            [
+              337.0,
+              244.25
+            ],
+            [
+              12.0,
+              189.0
+            ]
+          ],
+          "length_m": 329.662801
+        }
+      ]
+    },
+    {
+      "pipeline_id": "P14",
+      "from_port": "HDR-C.branch_08",
+      "to_port": "WG-04.gas",
+      "service": "gas",
+      "nominal_diameter": "DN300",
+      "internal_diameter_m": 0.282,
+      "pipe_class": "CS-WET-160",
+      "roughness_m": 4.5e-05,
+      "total_length_m": 325.357592,
+      "segments": [
+        {
+          "level": "ground",
+          "corridor": null,
+          "points": [
+            [
+              337.0,
+              245.75
+            ],
+            [
+              12.0,
+              261.0
+            ]
+          ],
+          "length_m": 325.357592
+        }
+      ]
+    },
+    {
+      "pipeline_id": "P15",
+      "from_port": "HDR-C.branch_05",
+      "to_port": "WG-05.gas",
+      "service": "gas",
+      "nominal_diameter": "DN300",
+      "internal_diameter_m": 0.282,
+      "pipe_class": "CS-WET-160",
+      "roughness_m": 4.5e-05,
+      "total_length_m": 339.214165,
+      "segments": [
+        {
+          "level": "ground",
+          "corridor": null,
+          "points": [
+            [
+              340.0,
+              246.5
+            ],
+            [
+              12.0,
+              333.0
+            ]
+          ],
+          "length_m": 339.214165
+        }
+      ]
+    },
+    {
+      "pipeline_id": "P16",
+      "from_port": "HDR-C.branch_01",
+      "to_port": "WG-06.gas",
+      "service": "gas",
+      "nominal_diameter": "DN300",
+      "internal_diameter_m": 0.282,
+      "pipe_class": "CS-WET-160",
+      "roughness_m": 4.5e-05,
+      "total_length_m": 362.488965,
+      "segments": [
+        {
+          "level": "ground",
+          "corridor": null,
+          "points": [
+            [
+              338.0,
+              246.5
+            ],
+            [
+              12.0,
+              405.0
+            ]
+          ],
+          "length_m": 362.488965
+        }
+      ]
+    },
+    {
+      "pipeline_id": "P21",
+      "from_port": "HDR-E.branch_02",
+      "to_port": "SEP-1.gas_in",
+      "service": "gas",
+      "nominal_diameter": "DN300",
+      "internal_diameter_m": 0.282,
+      "pipe_class": "CS-WET-160",
+      "roughness_m": 4.5e-05,
+      "total_length_m": 72.18033,
+      "segments": [
+        {
+          "level": "ground",
+          "corridor": null,
+          "points": [
+            [
+              473.0,
+              179.0
+            ],
+            [
+              486.0,
+              250.0
+            ]
+          ],
+          "length_m": 72.18033
+        }
+      ]
+    },
+    {
+      "pipeline_id": "P22",
+      "from_port": "HDR-E.branch_06",
+      "to_port": "SEP-2.gas_in",
+      "service": "gas",
+      "nominal_diameter": "DN300",
+      "internal_diameter_m": 0.282,
+      "pipe_class": "CS-WET-160",
+      "roughness_m": 4.5e-05,
+      "total_length_m": 21.400935,
+      "segments": [
+        {
+          "level": "ground",
+          "corridor": null,
+          "points": [
+            [
+              473.0,
+              178.0
+            ],
+            [
+              486.0,
+              195.0
+            ]
+          ],
+          "length_m": 21.400935
+        }
+      ]
+    },
+    {
+      "pipeline_id": "P23",
+      "from_port": "HDR-E.branch_10",
+      "to_port": "SEP-3.gas_in",
+      "service": "gas",
+      "nominal_diameter": "DN300",
+      "internal_diameter_m": 0.282,
+      "pipe_class": "CS-WET-160",
+      "roughness_m": 4.5e-05,
+      "total_length_m": 39.217343,
+      "segments": [
+        {
+          "level": "ground",
+          "corridor": null,
+          "points": [
+            [
+              473.0,
+              177.0
+            ],
+            [
+              486.0,
+              140.0
+            ]
+          ],
+          "length_m": 39.217343
+        }
+      ]
+    },
+    {
+      "pipeline_id": "P24",
+      "from_port": "SEP-1.gas_out",
+      "to_port": "DEHY-1.gas_in",
+      "service": "gas",
+      "nominal_diameter": "DN300",
+      "internal_diameter_m": 0.282,
+      "pipe_class": "CS-WET-160",
+      "roughness_m": 4.5e-05,
+      "total_length_m": 56.0,
+      "segments": [
+        {
+          "level": "ground",
+          "corridor": null,
+          "points": [
+            [
+              494.0,
+              250.0
+            ],
+            [
+              550.0,
+              250.0
+            ]
+          ],
+          "length_m": 56.0
+        }
+      ]
+    },
+    {
+      "pipeline_id": "P25",
+      "from_port": "SEP-2.gas_out",
+      "to_port": "DEHY-2.gas_in",
+      "service": "gas",
+      "nominal_diameter": "DN300",
+      "internal_diameter_m": 0.282,
+      "pipe_class": "CS-WET-160",
+      "roughness_m": 4.5e-05,
+      "total_length_m": 56.0,
+      "segments": [
+        {
+          "level": "ground",
+          "corridor": null,
+          "points": [
+            [
+              494.0,
+              195.0
+            ],
+            [
+              550.0,
+              195.0
+            ]
+          ],
+          "length_m": 56.0
+        }
+      ]
+    },
+    {
+      "pipeline_id": "P26",
+      "from_port": "SEP-3.gas_out",
+      "to_port": "DEHY-3.gas_in",
+      "service": "gas",
+      "nominal_diameter": "DN300",
+      "internal_diameter_m": 0.282,
+      "pipe_class": "CS-WET-160",
+      "roughness_m": 4.5e-05,
+      "total_length_m": 56.0,
+      "segments": [
+        {
+          "level": "ground",
+          "corridor": null,
+          "points": [
+            [
+              494.0,
+              140.0
+            ],
+            [
+              550.0,
+              140.0
+            ]
+          ],
+          "length_m": 56.0
+        }
+      ]
+    },
+    {
+      "pipeline_id": "P27",
+      "from_port": "DEHY-1.gas_out",
+      "to_port": "HDR-F.branch_07",
+      "service": "gas",
+      "nominal_diameter": "DN300",
+      "internal_diameter_m": 0.282,
+      "pipe_class": "CS-WET-160",
+      "roughness_m": 4.5e-05,
+      "total_length_m": 105.0,
+      "segments": [
+        {
+          "level": "ground",
+          "corridor": null,
+          "points": [
+            [
+              560.0,
+              250.0
+            ],
+            [
+              575.0,
+              250.0
+            ]
+          ],
+          "length_m": 15.0
+        },
+        {
+          "level": "ground",
+          "corridor": null,
+          "points": [
+            [
+              575.0,
+              250.0
+            ],
+            [
+              575.0,
+              188.5
+            ]
+          ],
+          "length_m": 61.5
+        },
+        {
+          "level": "ground",
+          "corridor": null,
+          "points": [
+            [
+              575.0,
+              188.5
+            ],
+            [
+              603.5,
+              188.5
+            ]
+          ],
+          "length_m": 28.5
+        }
+      ]
+    },
+    {
+      "pipeline_id": "P28",
+      "from_port": "DEHY-2.gas_out",
+      "to_port": "HDR-F.branch_04",
+      "service": "gas",
+      "nominal_diameter": "DN300",
+      "internal_diameter_m": 0.282,
+      "pipe_class": "CS-WET-160",
+      "roughness_m": 4.5e-05,
+      "total_length_m": 47.75,
+      "segments": [
+        {
+          "level": "ground",
+          "corridor": null,
+          "points": [
+            [
+              560.0,
+              195.0
+            ],
+            [
+              568.0,
+              195.0
+            ]
+          ],
+          "length_m": 8.0
+        },
+        {
+          "level": "ground",
+          "corridor": null,
+          "points": [
+            [
+              568.0,
+              195.0
+            ],
+            [
+              568.0,
+              189.25
+            ]
+          ],
+          "length_m": 5.75
+        },
+        {
+          "level": "ground",
+          "corridor": null,
+          "points": [
+            [
+              568.0,
+              189.25
+            ],
+            [
+              602.0,
+              189.25
+            ]
+          ],
+          "length_m": 34.0
+        }
+      ]
+    },
+    {
+      "pipeline_id": "P29",
+      "from_port": "DEHY-3.gas_out",
+      "to_port": "HDR-F.branch_01",
+      "service": "gas",
+      "nominal_diameter": "DN300",
+      "internal_diameter_m": 0.282,
+      "pipe_class": "CS-WET-160",
+      "roughness_m": 4.5e-05,
+      "total_length_m": 94.5,
+      "segments": [
+        {
+          "level": "ground",
+          "corridor": null,
+          "points": [
+            [
+              560.0,
+              140.0
+            ],
+            [
+              580.0,
+              140.0
+            ]
+          ],
+          "length_m": 20.0
+        },
+        {
+          "level": "ground",
+          "corridor": null,
+          "points": [
+            [
+              580.0,
+              140.0
+            ],
+            [
+              580.0,
+              191.5
+            ]
+          ],
+          "length_m": 51.5
+        },
+        {
+          "level": "ground",
+          "corridor": null,
+          "points": [
+            [
+              580.0,
+              191.5
+            ],
+            [
+              603.0,
+              191.5
+            ]
+          ],
+          "length_m": 23.0
+        }
+      ]
+    },
+    {
+      "pipeline_id": "P30",
+      "from_port": "HDR-F.branch_06",
+      "to_port": "REG-WDR.gas_in",
+      "service": "gas",
+      "nominal_diameter": "DN500",
+      "internal_diameter_m": 0.47,
+      "pipe_class": "CS-WET-160",
+      "roughness_m": 4.5e-05,
+      "total_length_m": 34.5,
+      "segments": [
+        {
+          "level": "ground",
+          "corridor": null,
+          "points": [
+            [
+              608.0,
+              190.0
+            ],
+            [
+              620.0,
+              190.0
+            ]
+          ],
+          "length_m": 12.0
+        },
+        {
+          "level": "ground",
+          "corridor": null,
+          "points": [
+            [
+              620.0,
+              190.0
+            ],
+            [
+              620.0,
+              187.5
+            ]
+          ],
+          "length_m": 2.5
+        },
+        {
+          "level": "ground",
+          "corridor": null,
+          "points": [
+            [
+              620.0,
+              187.5
+            ],
+            [
+              640.0,
+              187.5
+            ]
+          ],
+          "length_m": 20.0
+        }
+      ]
+    },
+    {
+      "pipeline_id": "P31",
+      "from_port": "REG-WDR.gas_out",
+      "to_port": "MTR-WDR.gas_in",
+      "service": "gas",
+      "nominal_diameter": "DN500",
+      "internal_diameter_m": 0.47,
+      "pipe_class": "CS-WET-160",
+      "roughness_m": 4.5e-05,
+      "total_length_m": 50.5,
+      "segments": [
+        {
+          "level": "ground",
+          "corridor": null,
+          "points": [
+            [
+              640.0,
+              192.5
+            ],
+            [
+              640.0,
+              243.0
+            ]
+          ],
+          "length_m": 50.5
+        }
+      ]
+    },
+    {
+      "pipeline_id": "P32",
+      "from_port": "MTR-WDR.gas_out",
+      "to_port": "GRID-TIE.gas",
+      "service": "gas",
+      "nominal_diameter": "DN500",
+      "internal_diameter_m": 0.47,
+      "pipe_class": "CS-WET-160",
+      "roughness_m": 4.5e-05,
+      "total_length_m": 82.0,
+      "segments": [
+        {
+          "level": "ground",
+          "corridor": null,
+          "points": [
+            [
+              640.0,
+              247.0
+            ],
+            [
+              700.0,
+              247.0
+            ]
+          ],
+          "length_m": 60.0
+        },
+        {
+          "level": "ground",
+          "corridor": null,
+          "points": [
+            [
+              700.0,
+              247.0
+            ],
+            [
+              700.0,
+              225.0
+            ]
+          ],
+          "length_m": 22.0
+        }
+      ]
+    },
+    {
+      "pipeline_id": "P36",
+      "from_port": "SEP-1.liquid_out",
+      "to_port": "DRN-1.drain_in",
+      "service": "liquid_drain",
+      "nominal_diameter": "DN200",
+      "internal_diameter_m": 0.188,
+      "pipe_class": "CS-WET-100",
+      "roughness_m": 4.5e-05,
+      "total_length_m": 182.0,
+      "segments": [
+        {
+          "level": "ground",
+          "corridor": null,
+          "points": [
+            [
+              490.0,
+              248.0
+            ],
+            [
+              515.0,
+              248.0
+            ]
+          ],
+          "length_m": 25.0
+        },
+        {
+          "level": "ground",
+          "corridor": null,
+          "points": [
+            [
+              515.0,
+              248.0
+            ],
+            [
+              515.0,
+              115.0
+            ]
+          ],
+          "length_m": 133.0
+        },
+        {
+          "level": "ground",
+          "corridor": null,
+          "points": [
+            [
+              515.0,
+              115.0
+            ],
+            [
+              539.0,
+              115.0
+            ]
+          ],
+          "length_m": 24.0
+        }
+      ]
+    },
+    {
+      "pipeline_id": "P37",
+      "from_port": "SEP-2.liquid_out",
+      "to_port": "DRN-2.drain_in",
+      "service": "liquid_drain",
+      "nominal_diameter": "DN200",
+      "internal_diameter_m": 0.188,
+      "pipe_class": "CS-WET-100",
+      "roughness_m": 4.5e-05,
+      "total_length_m": 137.0,
+      "segments": [
+        {
+          "level": "ground",
+          "corridor": null,
+          "points": [
+            [
+              490.0,
+              193.0
+            ],
+            [
+              520.0,
+              193.0
+            ]
+          ],
+          "length_m": 30.0
+        },
+        {
+          "level": "ground",
+          "corridor": null,
+          "points": [
+            [
+              520.0,
+              193.0
+            ],
+            [
+              520.0,
+              105.0
+            ]
+          ],
+          "length_m": 88.0
+        },
+        {
+          "level": "ground",
+          "corridor": null,
+          "points": [
+            [
+              520.0,
+              105.0
+            ],
+            [
+              539.0,
+              105.0
+            ]
+          ],
+          "length_m": 19.0
+        }
+      ]
+    },
+    {
+      "pipeline_id": "P38",
+      "from_port": "SEP-3.liquid_out",
+      "to_port": "DRN-3.drain_in",
+      "service": "liquid_drain",
+      "nominal_diameter": "DN200",
+      "internal_diameter_m": 0.188,
+      "pipe_class": "CS-WET-100",
+      "roughness_m": 4.5e-05,
+      "total_length_m": 92.0,
+      "segments": [
+        {
+          "level": "ground",
+          "corridor": null,
+          "points": [
+            [
+              490.0,
+              138.0
+            ],
+            [
+              525.0,
+              138.0
+            ]
+          ],
+          "length_m": 35.0
+        },
+        {
+          "level": "ground",
+          "corridor": null,
+          "points": [
+            [
+              525.0,
+              138.0
+            ],
+            [
+              525.0,
+              95.0
+            ]
+          ],
+          "length_m": 43.0
+        },
+        {
+          "level": "ground",
+          "corridor": null,
+          "points": [
+            [
+              525.0,
+              95.0
+            ],
+            [
+              539.0,
+              95.0
+            ]
+          ],
+          "length_m": 14.0
+        }
+      ]
+    },
+    {
+      "pipeline_id": "P39",
+      "from_port": "DRN-1.drain_out",
+      "to_port": "LIQUID-DRAIN-OUTFALL.gas",
+      "service": "liquid_drain",
+      "nominal_diameter": "DN200",
+      "internal_diameter_m": 0.188,
+      "pipe_class": "CS-WET-100",
+      "roughness_m": 4.5e-05,
+      "total_length_m": 144.0,
+      "segments": [
+        {
+          "level": "ground",
+          "corridor": null,
+          "points": [
+            [
+              541.0,
+              115.0
+            ],
+            [
+              680.0,
+              115.0
+            ]
+          ],
+          "length_m": 139.0
+        },
+        {
+          "level": "ground",
+          "corridor": null,
+          "points": [
+            [
+              680.0,
+              115.0
+            ],
+            [
+              680.0,
+              120.0
+            ]
+          ],
+          "length_m": 5.0
+        }
+      ]
+    },
+    {
+      "pipeline_id": "P40",
+      "from_port": "DRN-2.drain_out",
+      "to_port": "LIQUID-DRAIN-OUTFALL.gas",
+      "service": "liquid_drain",
+      "nominal_diameter": "DN200",
+      "internal_diameter_m": 0.188,
+      "pipe_class": "CS-WET-100",
+      "roughness_m": 4.5e-05,
+      "total_length_m": 154.0,
+      "segments": [
+        {
+          "level": "ground",
+          "corridor": null,
+          "points": [
+            [
+              541.0,
+              105.0
+            ],
+            [
+              670.0,
+              105.0
+            ]
+          ],
+          "length_m": 129.0
+        },
+        {
+          "level": "ground",
+          "corridor": null,
+          "points": [
+            [
+              670.0,
+              105.0
+            ],
+            [
+              670.0,
+              120.0
+            ]
+          ],
+          "length_m": 15.0
+        },
+        {
+          "level": "ground",
+          "corridor": null,
+          "points": [
+            [
+              670.0,
+              120.0
+            ],
+            [
+              680.0,
+              120.0
+            ]
+          ],
+          "length_m": 10.0
+        }
+      ]
+    },
+    {
+      "pipeline_id": "P41",
+      "from_port": "DRN-3.drain_out",
+      "to_port": "LIQUID-DRAIN-OUTFALL.gas",
+      "service": "liquid_drain",
+      "nominal_diameter": "DN200",
+      "internal_diameter_m": 0.188,
+      "pipe_class": "CS-WET-100",
+      "roughness_m": 4.5e-05,
+      "total_length_m": 184.0,
+      "segments": [
+        {
+          "level": "ground",
+          "corridor": null,
+          "points": [
+            [
+              541.0,
+              95.0
+            ],
+            [
+              655.0,
+              95.0
+            ]
+          ],
+          "length_m": 114.0
+        },
+        {
+          "level": "ground",
+          "corridor": null,
+          "points": [
+            [
+              655.0,
+              95.0
+            ],
+            [
+              655.0,
+              130.0
+            ]
+          ],
+          "length_m": 35.0
+        },
+        {
+          "level": "ground",
+          "corridor": null,
+          "points": [
+            [
+              655.0,
+              130.0
+            ],
+            [
+              680.0,
+              130.0
+            ]
+          ],
+          "length_m": 25.0
+        },
+        {
+          "level": "ground",
+          "corridor": null,
+          "points": [
+            [
+              680.0,
+              130.0
+            ],
+            [
+              680.0,
+              120.0
+            ]
+          ],
+          "length_m": 10.0
+        }
+      ]
+    }
+  ]
+}

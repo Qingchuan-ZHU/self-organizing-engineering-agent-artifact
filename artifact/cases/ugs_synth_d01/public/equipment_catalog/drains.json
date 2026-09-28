@@ -1,0 +1,110 @@
+{
+  "models": [
+    {
+      "annual_maintenance_mbcu": 0.004,
+      "capacity_kg_s": 0.8,
+      "capex_mbcu": 0.08,
+      "category": "closed_drain",
+      "footprint_m": {
+        "length": 2,
+        "width": 2
+      },
+      "maintenance": {
+        "clearance_m": 2.0,
+        "crane_access_required": false,
+        "heavy_maintenance": false,
+        "road_access_required": false
+      },
+      "maximum_pressure_mpa": 1.0,
+      "model_id": "DRN-S",
+      "orientation_options_deg": [
+        0,
+        90
+      ],
+      "ports": [
+        {
+          "id": "drain_in",
+          "offset_m": [
+            -1.0,
+            0
+          ],
+          "type": "drain_in"
+        },
+        {
+          "id": "drain_out",
+          "offset_m": [
+            1.0,
+            0
+          ],
+          "type": "drain_out"
+        }
+      ],
+      "pressure_drop_mpa": 0.0,
+      "safety_category": "drain"
+    },
+    {
+      "annual_maintenance_mbcu": 0.007,
+      "capacity_kg_s": 2.0,
+      "capex_mbcu": 0.14,
+      "category": "closed_drain",
+      "footprint_m": {
+        "length": 3,
+        "width": 2
+      },
+      "maintenance": {
+        "clearance_m": 2.0,
+        "crane_access_required": false,
+        "heavy_maintenance": false,
+        "road_access_required": false
+      },
+      "maximum_pressure_mpa": 1.0,
+      "model_id": "DRN-L",
+      "orientation_options_deg": [
+        0,
+        90
+      ],
+      "ports": [
+        {
+          "id": "drain_in",
+          "offset_m": [
+            -1.5,
+            0
+          ],
+          "type": "drain_in"
+        },
+        {
+          "id": "drain_out",
+          "offset_m": [
+            1.5,
+            0
+          ],
+          "type": "drain_out"
+        }
+      ],
+      "pressure_drop_mpa": 0.0,
+      "safety_category": "drain"
+    }
+  ],
+  "provenance": {
+    "classification": "synthetic benchmark assumption",
+    "note": "Deterministic development-case data; not vendor data or production engineering criteria."
+  },
+  "units": {
+    "annual_maintenance": "MBCU/year",
+    "capacity": "kg/s gas, or kg/s liquid for closed drains",
+    "capex": "MBCU",
+    "clearance": "m",
+    "dimensionless_efficiency_and_fraction": "1",
+    "flow": "kg/s",
+    "footprint_and_port_offsets": "m",
+    "free_liquid_loading": "kg liquid/kg gas",
+    "length": "m",
+    "liquid_rate": "kg/s",
+    "orientation": "degree",
+    "power_and_duty": "MW",
+    "pressure": "MPa",
+    "pressure_ratio": "1",
+    "temperature": "degC",
+    "temperature_coefficient": "K/MPa"
+  }
+}

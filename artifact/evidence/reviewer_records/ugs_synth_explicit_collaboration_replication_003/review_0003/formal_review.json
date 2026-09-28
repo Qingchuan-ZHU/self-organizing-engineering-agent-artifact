@@ -1,0 +1,35 @@
+{
+  "findings": [
+    {
+      "claim_challenged": "design.json calls operating_path the complete operating paths; report section 3 gives HDR-WB to PL-PC-R to REG-1 to PL-PC-R2 to HDR-WC.",
+      "confidence": "high",
+      "evidence": "PL-PC-R2 (REG-1.gas_out to HDR-WC.branch_08, DN400, 84.5 m) is the only link between REG-1 and HDR-WC, yet it is in no scenario path or n-1 chain (regulator branch is PL-PC-R plus REG-1 only). Its loss is 0.0325 MPa at 120 kg/s; re-solving with it moves WDR-HIGH setpoint 6.1417 to 6.1740 with all 627 checks passing. With documented setpoints and the complete path, delivered is 6.0175 MPa (still above 6.0), so the stated 0.05 MPa margin is really 0.0175.",
+      "finding_id": "F-08-PL-PC-R2-missing-from-path",
+      "public_basis": "engineering_calculation_basis.md: pressure-loss length is the sum of the straight segment lengths in that physical pipeline.",
+      "severity": "medium",
+      "status": "confirmed_violation",
+      "why_it_matters": "The declared operating path is not the physical path, so reported setpoints and delivered pressures do not correspond to the system rebuilt from the connections table, and the margin is overstated."
+    },
+    {
+      "claim_challenged": "design_report section 9 and validation_report: drain line velocities are reported using the gas-density proxy and the liquid area covers velocity.",
+      "confidence": "medium",
+      "evidence": "The proxy (8.23 kg/m3 at 1 MPa, 20 degC) is applied only to the DN200 outfall lines PL-DA-2/DB-2/DC-2 (1.750 m/s). The DN150 separator-to-drum lines PL-DA-1/DB-1/DC-1 carry the same 0.3998 kg/s and give 3.111 m/s against the 3.0 m/s limit (3.267 m/s in the 2-train n-1 case); any physical liquid density would give about 0.05 m/s. PL-DA-1/DB-1/DC-1 and PL-PC-R2 are the four of 40 pipelines never hydraulically evaluated.",
+      "finding_id": "F-10-dn150-drain-velocity-uncovered",
+      "public_basis": "engineering_calculation_basis.md: liquid-drain pipelines must remain within the published liquid-drain velocity limit (3.0 m/s). No liquid density is published.",
+      "severity": "medium",
+      "status": "confirmed_violation",
+      "why_it_matters": "Either the stated method is over-conservative and applied selectively, or three liquid-drain lines breach the published velocity limit under the design's own method, outside the checked suite."
+    },
+    {
+      "claim_challenged": "README reproduction instruction for python3 ugs_validate.py and the report section 7 scenario table.",
+      "confidence": "high",
+      "evidence": "ugs_validate.main() sums every float in the energy dict, liquid rates included: printed WDR-HIGH 3.359 MW, WDR-MID 2.799 MW, WDR-LOW 7.308 MW against 2.160, 1.800 and 6.609 MW in design.json, README and report (difference equals the three separator liquid rates 0.3998/0.3332/0.2332 kg/s). LCC and check totals are correct.",
+      "finding_id": "F-09-validator-console-power-pollution",
+      "public_basis": "final_delivery_contract.json: quantities must carry units and be mutually consistent so results can be reproduced.",
+      "severity": "low",
+      "status": "confirmed_violation",
+      "why_it_matters": "Running the documented command shows scenario powers contradicting the deliverables by up to 1.2 MW and prevents energy cross-checking."
+    }
+  ],
+  "summary": "Review 3, snapshot e3c14acc. Independently re-verified. Metering OK: GRID-TIE has exactly 2 connections and the single MTR160 (160 kg/s, at or above the 120 kg/s max scenario flow and equal to the boundary limit) is in series with the only path in each direction, so all exchanged gas is metered. DRN-S OK (0.40-0.42 kg/s side stream vs 0.8 capacity). New capacity/pressure checks fire correctly and mask nothing. No regressions: 276 separations legal (min margin 2.0 m), no exclusion, footprint or same-level-overlap conflicts, pressure losses to 7e-9 MPa, max velocity 21.46 m/s, compressor power exact, delivery unchanged, all 29 n-1 outages pass, LCC components sum to 106.2756 vs 106.2757, deliverables rebuild byte-identically. Only optional headroom: DN400 on PL-IS-1/2 + PL-ID-1/2 gives 106.0686 with 0 failures. Prior F-01, F-03, F-05, F-06, F-07 closed; F-02 closed in substance; F-04 cosmetic only. Three new defects:"
+}

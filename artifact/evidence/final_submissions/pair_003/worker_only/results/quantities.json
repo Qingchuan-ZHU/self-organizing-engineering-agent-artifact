@@ -1,0 +1,117 @@
+{
+ "piping": [
+  {
+   "dn": "DN150",
+   "class": "CS-WET-100",
+   "level": "ground",
+   "service": "liquid_drain",
+   "count": 6,
+   "length_m": 1756.0
+  },
+  {
+   "dn": "DN200",
+   "class": "CS-WET-100",
+   "level": "ground",
+   "service": "gas",
+   "count": 1,
+   "length_m": 63.5
+  },
+  {
+   "dn": "DN200",
+   "class": "CS-WET-160",
+   "level": "ground",
+   "service": "gas",
+   "count": 1,
+   "length_m": 94.75
+  },
+  {
+   "dn": "DN250",
+   "class": "CS-WET-160",
+   "level": "ground",
+   "service": "gas",
+   "count": 9,
+   "length_m": 784.5
+  },
+  {
+   "dn": "DN300",
+   "class": "CS-WET-160",
+   "level": "ground",
+   "service": "gas",
+   "count": 8,
+   "length_m": 1093.0
+  },
+  {
+   "dn": "DN350",
+   "class": "CS-WET-160",
+   "level": "ground",
+   "service": "gas",
+   "count": 2,
+   "length_m": 430.5
+  },
+  {
+   "dn": "DN450",
+   "class": "CS-WET-160",
+   "level": "ground",
+   "service": "gas",
+   "count": 1,
+   "length_m": 47.5
+  },
+  {
+   "dn": "DN500",
+   "class": "CS-WET-100",
+   "level": "ground",
+   "service": "gas",
+   "count": 2,
+   "length_m": 168.5
+  },
+  {
+   "dn": "DN500",
+   "class": "CS-WET-160",
+   "level": "ground",
+   "service": "gas",
+   "count": 2,
+   "length_m": 154.25
+  },
+  {
+   "dn": "DN600",
+   "class": "CS-WET-100",
+   "level": "ground",
+   "service": "gas",
+   "count": 2,
+   "length_m": 90.0
+  },
+  {
+   "dn": "DN600",
+   "class": "CS-WET-160",
+   "level": "ground",
+   "service": "gas",
+   "count": 3,
+   "length_m": 682.0
+  },
+  {
+   "dn": "DN700",
+   "class": "CS-WET-100",
+   "level": "ground",
+   "service": "gas",
+   "count": 2,
+   "length_m": 237.0
+  }
+ ],
+ "total_pipe_length_m": 5601.5,
+ "equipment": {
+  "HDR180": 1,
+  "SEP70": 3,
+  "HDR120": 4,
+  "DEHY70": 3,
+  "C60": 2,
+  "C40": 1,
+  "COOL120": 1,
+  "REG120": 1,
+  "MTR120": 2,
+  "DRN-S": 3
+ },
+ "road_length_m": 876.5,
+ "site_area_m2": 315000.0,
+ "footprint_area_m2": 775.0,
+ "maintenance_area_m2": 1589.88
+}

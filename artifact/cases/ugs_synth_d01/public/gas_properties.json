@@ -1,0 +1,33 @@
+{
+  "compressibility_proxy": {
+    "formula": "0.90 + 0.08 * P_MPa / (P_MPa + 10) + 0.00015 * (T_K - 293.15)",
+    "maximum": 1.05,
+    "minimum": 0.85
+  },
+  "density_formula": "rho = P_Pa * molecular_weight / (Z * R_universal * T_K)",
+  "heat_capacity_cp_j_kg_k": 2450.0,
+  "model_boundary": "Deterministic engineering benchmark proxy; not production thermodynamic simulation.",
+  "molecular_weight_kg_mol": 0.0182,
+  "provenance": {
+    "classification": "synthetic benchmark assumption",
+    "note": "Deterministic development-case data; not vendor data or production engineering criteria."
+  },
+  "specific_heat_ratio": 1.3,
+  "units": {
+    "compressibility": "1",
+    "density": "kg/m3",
+    "heat_capacity": "J/(kg K)",
+    "heat_capacity_ratio": "1",
+    "molecular_weight": "kg/mol",
+    "pressure": "MPa in proxy correlations; Pa in density equation",
+    "temperature": "degC input; K in equations",
+    "universal_gas_constant": "J/(mol K)",
+    "viscosity": "Pa*s"
+  },
+  "viscosity_proxy": {
+    "formula": "1.05e-5 * (T_K / 293.15)^0.70 * (1 + 0.002 * P_MPa)",
+    "maximum": 2e-05,
+    "minimum": 7e-06,
+    "units": "Pa*s"
+  }
+}

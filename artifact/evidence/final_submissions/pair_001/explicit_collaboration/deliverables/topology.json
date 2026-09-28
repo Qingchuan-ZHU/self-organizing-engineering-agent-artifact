@@ -1,0 +1,649 @@
+{
+ "connections": [
+  {
+   "pipeline_id": "P01",
+   "source": {
+    "node": "GRID-TIE",
+    "port": "gas"
+   },
+   "destination": {
+    "node": "MTR-A",
+    "port": "gas_in"
+   },
+   "service": "gas",
+   "description": "injection feed from grid tie"
+  },
+  {
+   "pipeline_id": "P02",
+   "source": {
+    "node": "MTR-A",
+    "port": "gas_out"
+   },
+   "destination": {
+    "node": "H-SUC",
+    "port": "branch_05"
+   },
+   "service": "gas",
+   "description": "metered injection gas to station"
+  },
+  {
+   "pipeline_id": "P33",
+   "source": {
+    "node": "MTR-B",
+    "port": "gas_out"
+   },
+   "destination": {
+    "node": "GRID-TIE",
+    "port": "gas"
+   },
+   "service": "gas",
+   "description": "withdrawal gas to grid tie"
+  },
+  {
+   "pipeline_id": "P03",
+   "source": {
+    "node": "H-SUC",
+    "port": "branch_10"
+   },
+   "destination": {
+    "node": "CMP-A",
+    "port": "suction"
+   },
+   "service": "gas",
+   "description": "train A suction"
+  },
+  {
+   "pipeline_id": "P04",
+   "source": {
+    "node": "H-SUC",
+    "port": "branch_06"
+   },
+   "destination": {
+    "node": "CMP-B",
+    "port": "suction"
+   },
+   "service": "gas",
+   "description": "train B suction"
+  },
+  {
+   "pipeline_id": "P05",
+   "source": {
+    "node": "H-SUC",
+    "port": "branch_02"
+   },
+   "destination": {
+    "node": "CMP-C",
+    "port": "suction"
+   },
+   "service": "gas",
+   "description": "train C suction"
+  },
+  {
+   "pipeline_id": "P06",
+   "source": {
+    "node": "CMP-A",
+    "port": "discharge"
+   },
+   "destination": {
+    "node": "H-DIS",
+    "port": "branch_10"
+   },
+   "service": "gas",
+   "description": "train A discharge"
+  },
+  {
+   "pipeline_id": "P07",
+   "source": {
+    "node": "CMP-B",
+    "port": "discharge"
+   },
+   "destination": {
+    "node": "H-DIS",
+    "port": "branch_06"
+   },
+   "service": "gas",
+   "description": "train B discharge"
+  },
+  {
+   "pipeline_id": "P08",
+   "source": {
+    "node": "CMP-C",
+    "port": "discharge"
+   },
+   "destination": {
+    "node": "H-DIS",
+    "port": "branch_02"
+   },
+   "service": "gas",
+   "description": "train C discharge"
+  },
+  {
+   "pipeline_id": "P09",
+   "source": {
+    "node": "H-SUC",
+    "port": "branch_07"
+   },
+   "destination": {
+    "node": "H-DIS",
+    "port": "branch_07"
+   },
+   "service": "gas",
+   "description": "compressor bank bypass"
+  },
+  {
+   "pipeline_id": "P10",
+   "source": {
+    "node": "H-DIS",
+    "port": "branch_09"
+   },
+   "destination": {
+    "node": "COOL",
+    "port": "gas_in"
+   },
+   "service": "gas",
+   "description": "hot discharge gas to aftercooler"
+  },
+  {
+   "pipeline_id": "P11",
+   "source": {
+    "node": "COOL",
+    "port": "gas_out"
+   },
+   "destination": {
+    "node": "H-SITE",
+    "port": "branch_05"
+   },
+   "service": "gas",
+   "description": "cooled injection gas to station header"
+  },
+  {
+   "pipeline_id": "P12",
+   "source": {
+    "node": "H-SITE",
+    "port": "branch_04"
+   },
+   "destination": {
+    "node": "H-WELL",
+    "port": "branch_06"
+   },
+   "service": "gas",
+   "description": "main trunk header to well manifold"
+  },
+  {
+   "pipeline_id": "P13",
+   "source": {
+    "node": "H-WELL",
+    "port": "branch_03"
+   },
+   "destination": {
+    "node": "WG-01",
+    "port": "gas"
+   },
+   "service": "gas",
+   "description": "well group 01 branch"
+  },
+  {
+   "pipeline_id": "P14",
+   "source": {
+    "node": "H-WELL",
+    "port": "branch_07"
+   },
+   "destination": {
+    "node": "WG-02",
+    "port": "gas"
+   },
+   "service": "gas",
+   "description": "well group 02 branch"
+  },
+  {
+   "pipeline_id": "P15",
+   "source": {
+    "node": "H-WELL",
+    "port": "branch_01"
+   },
+   "destination": {
+    "node": "WG-03",
+    "port": "gas"
+   },
+   "service": "gas",
+   "description": "well group 03 branch"
+  },
+  {
+   "pipeline_id": "P16",
+   "source": {
+    "node": "H-WELL",
+    "port": "branch_05"
+   },
+   "destination": {
+    "node": "WG-04",
+    "port": "gas"
+   },
+   "service": "gas",
+   "description": "well group 04 branch"
+  },
+  {
+   "pipeline_id": "P17",
+   "source": {
+    "node": "H-WELL",
+    "port": "branch_09"
+   },
+   "destination": {
+    "node": "WG-05",
+    "port": "gas"
+   },
+   "service": "gas",
+   "description": "well group 05 branch"
+  },
+  {
+   "pipeline_id": "P18",
+   "source": {
+    "node": "H-WELL",
+    "port": "branch_04"
+   },
+   "destination": {
+    "node": "WG-06",
+    "port": "gas"
+   },
+   "service": "gas",
+   "description": "well group 06 branch"
+  },
+  {
+   "pipeline_id": "P19",
+   "source": {
+    "node": "H-SITE",
+    "port": "branch_10"
+   },
+   "destination": {
+    "node": "SEP-A",
+    "port": "gas_in"
+   },
+   "service": "gas",
+   "description": "train A feed"
+  },
+  {
+   "pipeline_id": "P20",
+   "source": {
+    "node": "H-SITE",
+    "port": "branch_06"
+   },
+   "destination": {
+    "node": "SEP-B",
+    "port": "gas_in"
+   },
+   "service": "gas",
+   "description": "train B feed"
+  },
+  {
+   "pipeline_id": "P21",
+   "source": {
+    "node": "H-SITE",
+    "port": "branch_02"
+   },
+   "destination": {
+    "node": "SEP-C",
+    "port": "gas_in"
+   },
+   "service": "gas",
+   "description": "train C feed"
+  },
+  {
+   "pipeline_id": "P22",
+   "source": {
+    "node": "SEP-A",
+    "port": "gas_out"
+   },
+   "destination": {
+    "node": "DEH-A",
+    "port": "gas_in"
+   },
+   "service": "gas",
+   "description": "train A separated gas to dehydrator"
+  },
+  {
+   "pipeline_id": "P23",
+   "source": {
+    "node": "SEP-B",
+    "port": "gas_out"
+   },
+   "destination": {
+    "node": "DEH-B",
+    "port": "gas_in"
+   },
+   "service": "gas",
+   "description": "train B separated gas to dehydrator"
+  },
+  {
+   "pipeline_id": "P24",
+   "source": {
+    "node": "SEP-C",
+    "port": "gas_out"
+   },
+   "destination": {
+    "node": "DEH-C",
+    "port": "gas_in"
+   },
+   "service": "gas",
+   "description": "train C separated gas to dehydrator"
+  },
+  {
+   "pipeline_id": "P28",
+   "source": {
+    "node": "DEH-A",
+    "port": "gas_out"
+   },
+   "destination": {
+    "node": "H-SUC",
+    "port": "branch_04"
+   },
+   "service": "gas",
+   "description": "train A dry gas"
+  },
+  {
+   "pipeline_id": "P29",
+   "source": {
+    "node": "DEH-B",
+    "port": "gas_out"
+   },
+   "destination": {
+    "node": "H-SUC",
+    "port": "branch_08"
+   },
+   "service": "gas",
+   "description": "train B dry gas"
+  },
+  {
+   "pipeline_id": "P30",
+   "source": {
+    "node": "DEH-C",
+    "port": "gas_out"
+   },
+   "destination": {
+    "node": "H-SUC",
+    "port": "branch_09"
+   },
+   "service": "gas",
+   "description": "train C dry gas"
+  },
+  {
+   "pipeline_id": "P31",
+   "source": {
+    "node": "H-DIS",
+    "port": "branch_05"
+   },
+   "destination": {
+    "node": "REG",
+    "port": "gas_in"
+   },
+   "service": "gas",
+   "description": "to grid pressure control"
+  },
+  {
+   "pipeline_id": "P32",
+   "source": {
+    "node": "REG",
+    "port": "gas_out"
+   },
+   "destination": {
+    "node": "MTR-B",
+    "port": "gas_in"
+   },
+   "service": "gas",
+   "description": "controlled gas to grid meter"
+  },
+  {
+   "pipeline_id": "P34",
+   "source": {
+    "node": "SEP-A",
+    "port": "liquid_out"
+   },
+   "destination": {
+    "node": "DRN-A",
+    "port": "drain_in"
+   },
+   "service": "liquid",
+   "description": "train A drain"
+  },
+  {
+   "pipeline_id": "P35",
+   "source": {
+    "node": "SEP-B",
+    "port": "liquid_out"
+   },
+   "destination": {
+    "node": "DRN-B",
+    "port": "drain_in"
+   },
+   "service": "liquid",
+   "description": "train B drain"
+  },
+  {
+   "pipeline_id": "P36",
+   "source": {
+    "node": "SEP-C",
+    "port": "liquid_out"
+   },
+   "destination": {
+    "node": "DRN-C",
+    "port": "drain_in"
+   },
+   "service": "liquid",
+   "description": "train C drain"
+  },
+  {
+   "pipeline_id": "P37",
+   "source": {
+    "node": "DRN-A",
+    "port": "drain_out"
+   },
+   "destination": {
+    "node": "LIQUID-DRAIN-OUTFALL",
+    "port": "drain"
+   },
+   "service": "liquid",
+   "description": "drain discharge line A"
+  },
+  {
+   "pipeline_id": "P38",
+   "source": {
+    "node": "DRN-B",
+    "port": "drain_out"
+   },
+   "destination": {
+    "node": "LIQUID-DRAIN-OUTFALL",
+    "port": "drain"
+   },
+   "service": "liquid",
+   "description": "drain discharge line B"
+  },
+  {
+   "pipeline_id": "P39",
+   "source": {
+    "node": "DRN-C",
+    "port": "drain_out"
+   },
+   "destination": {
+    "node": "LIQUID-DRAIN-OUTFALL",
+    "port": "drain"
+   },
+   "service": "liquid",
+   "description": "drain discharge line C"
+  }
+ ],
+ "interfaces": [
+  {
+   "interface_id": "FIREWATER-TIE",
+   "interface_type": "utility",
+   "point_m": [
+    620,
+    35
+   ],
+   "port_id": "firewater",
+   "port_type": "utility_in",
+   "maximum_connections": null,
+   "maximum_flow_kg_s": null,
+   "connected_pipelines": []
+  },
+  {
+   "interface_id": "GRID-TIE",
+   "interface_type": "process",
+   "point_m": [
+    700,
+    225
+   ],
+   "port_id": "gas",
+   "port_type": "gas_bidirectional",
+   "maximum_connections": 2,
+   "maximum_flow_kg_s": 160,
+   "connected_pipelines": [
+    "P01",
+    "P33"
+   ]
+  },
+  {
+   "interface_id": "INSTRUMENT-AIR-TIE",
+   "interface_type": "utility",
+   "point_m": [
+    580,
+    35
+   ],
+   "port_id": "air",
+   "port_type": "utility_in",
+   "maximum_connections": null,
+   "maximum_flow_kg_s": null,
+   "connected_pipelines": []
+  },
+  {
+   "interface_id": "LIQUID-DRAIN-OUTFALL",
+   "interface_type": "drain",
+   "point_m": [
+    680,
+    120
+   ],
+   "port_id": "drain",
+   "port_type": "drain_in",
+   "maximum_connections": 8,
+   "maximum_flow_kg_s": 10.0,
+   "connected_pipelines": [
+    "P37",
+    "P38",
+    "P39"
+   ]
+  },
+  {
+   "interface_id": "POWER-TIE",
+   "interface_type": "utility",
+   "point_m": [
+    660,
+    35
+   ],
+   "port_id": "power",
+   "port_type": "utility_in",
+   "maximum_connections": null,
+   "maximum_flow_kg_s": null,
+   "connected_pipelines": []
+  },
+  {
+   "interface_id": "ROAD-ENTRANCE",
+   "interface_type": "road",
+   "point_m": [
+    0,
+    225
+   ],
+   "port_id": "access",
+   "port_type": "road_access",
+   "maximum_connections": null,
+   "maximum_flow_kg_s": null,
+   "connected_pipelines": []
+  },
+  {
+   "interface_id": "WG-01",
+   "interface_type": "well_group",
+   "point_m": [
+    12,
+    45
+   ],
+   "port_id": "gas",
+   "port_type": "gas_bidirectional",
+   "maximum_connections": null,
+   "maximum_flow_kg_s": 25,
+   "connected_pipelines": [
+    "P13"
+   ]
+  },
+  {
+   "interface_id": "WG-02",
+   "interface_type": "well_group",
+   "point_m": [
+    12,
+    117
+   ],
+   "port_id": "gas",
+   "port_type": "gas_bidirectional",
+   "maximum_connections": null,
+   "maximum_flow_kg_s": 25,
+   "connected_pipelines": [
+    "P14"
+   ]
+  },
+  {
+   "interface_id": "WG-03",
+   "interface_type": "well_group",
+   "point_m": [
+    12,
+    189
+   ],
+   "port_id": "gas",
+   "port_type": "gas_bidirectional",
+   "maximum_connections": null,
+   "maximum_flow_kg_s": 25,
+   "connected_pipelines": [
+    "P15"
+   ]
+  },
+  {
+   "interface_id": "WG-04",
+   "interface_type": "well_group",
+   "point_m": [
+    12,
+    261
+   ],
+   "port_id": "gas",
+   "port_type": "gas_bidirectional",
+   "maximum_connections": null,
+   "maximum_flow_kg_s": 25,
+   "connected_pipelines": [
+    "P16"
+   ]
+  },
+  {
+   "interface_id": "WG-05",
+   "interface_type": "well_group",
+   "point_m": [
+    12,
+    333
+   ],
+   "port_id": "gas",
+   "port_type": "gas_bidirectional",
+   "maximum_connections": null,
+   "maximum_flow_kg_s": 25,
+   "connected_pipelines": [
+    "P17"
+   ]
+  },
+  {
+   "interface_id": "WG-06",
+   "interface_type": "well_group",
+   "point_m": [
+    12,
+    405
+   ],
+   "port_id": "gas",
+   "port_type": "gas_bidirectional",
+   "maximum_connections": null,
+   "maximum_flow_kg_s": 25,
+   "connected_pipelines": [
+    "P18"
+   ]
+  }
+ ]
+}

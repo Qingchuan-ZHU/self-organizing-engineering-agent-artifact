@@ -1,0 +1,72 @@
+{
+  "checked_at": "2026-09-24T22:58:26.590450Z",
+  "checks": {
+    "explicit_review_tool_added_only": true,
+    "formal_evaluator_connected": false,
+    "formal_state": "UGS_FORMAL_STATE=NOT READY",
+    "provider_environment": {
+      "credential_name": "DEEPSEEK_API_KEY",
+      "credential_value_persisted": false,
+      "environment_file_copied_to_run": false,
+      "provider_environment_file_present": true,
+      "repository_dotenv_ignored_by_git": true,
+      "repository_dotenv_tracked_by_git": false,
+      "selection": "explicit_path"
+    },
+    "provider_instances_independent": true,
+    "public_world_copied_from_frozen_source": true,
+    "public_world_sha256": "af4260bc8e15bb44364038b6eeea9a6a6942677ae8e5e610971689415fd0880e",
+    "review_workspace_empty_before_first_request": true,
+    "reviewer_container_isolation_probe": {
+      "docker_policy": {
+        "all_capabilities_dropped": true,
+        "cpu_limited": true,
+        "memory_limited": true,
+        "network_disabled": true,
+        "no_new_privileges": true,
+        "non_root_user": true,
+        "process_limited": true,
+        "root_read_only": true
+      },
+      "exit_code": 0,
+      "passed": true,
+      "review_mount_layout": true,
+      "status": "completed",
+      "stderr": "",
+      "stdout": "{\"brief_read_only\": true, \"brief_visible\": true, \"generic_python_only\": true, \"no_provider_key_in_container\": true, \"review_visible\": true, \"review_writable\": true, \"submission_read_only\": true, \"submission_visible\": true}\n",
+      "timeout": false
+    },
+    "reviewer_context_enabled": true,
+    "reviewer_provider_profile_valid": true,
+    "worker_container_isolation_probe": {
+      "docker_policy": {
+        "all_capabilities_dropped": true,
+        "cpu_limited": true,
+        "memory_limited": true,
+        "network_disabled": true,
+        "no_new_privileges": true,
+        "non_root_user": true,
+        "process_limited": true,
+        "root_read_only": true
+      },
+      "exit_code": 0,
+      "passed": true,
+      "review_mount_layout": false,
+      "status": "completed",
+      "stderr": "",
+      "stdout": "{\"brief_read_only\": true, \"brief_visible\": true, \"generic_python_only\": true, \"no_provider_key_in_container\": true, \"project_visible\": true, \"project_writable\": true}\n",
+      "timeout": false
+    },
+    "worker_only_baseline_tool_surface": null,
+    "worker_project_empty_before_first_request": true,
+    "worker_provider_profile_valid": true,
+    "worker_tool_names": [
+      "list_files",
+      "read_file",
+      "write_file",
+      "execute_python",
+      "finish_project",
+      "submit_for_review"
+    ]
+  }
+}

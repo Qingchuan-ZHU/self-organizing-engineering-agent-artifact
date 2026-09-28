@@ -1,0 +1,137 @@
+{
+  "findings": [
+    {
+      "claim_challenged": "DESIGN_REPORT §4.1: \"Compressors, separators, dryers, meters, coolers and regulators are one-way components, so the injection and withdrawal chains each contain their own machinery\", and §9's claim that equipment selection was \"solved as the cheapest compliant set\". Consequence: 2 x C60 are installed solely as withdrawal boost (CMP-WDR-01/02, 13.0 MBCU capex).",
+      "confidence": "medium",
+      "evidence": "One-way ports forbid running a machine backwards in the *same* path; they do not forbid feeding the same compressor suction from a second path. A compliant shared set = the existing 2 x C60 + 1 x C40 (capacity 160 kg/s) used for both services, with the suction header additionally fed from HDR-TRT-OUT-01 and the discharge header additionally feeding HDR-DLV-01 (both headers have spare 16 MPa branches: 14 available vs 4-6 used; every connection is port-compatible per the published table). N-1 holds in both services: injection 160-60 = 100 >= 84 kg/s; WDR-LOW 160-60 = 100 >= 49 kg/s; C60/C40 suction (4.36 MPa) and ratio (1.47) limits are met. This deletes CMP-WDR-01/02 (2 x 6.5 = 13.0 MBCU capex + 0.32 MBCU/a = 3.14 MBCU PV) plus the now-redundant P-123 bypass and P-124/125/126/127 (314.6 m of piping ~0.08 MBCU) and RD-04 (110 m, 0.017 MBCU), at the cost of ~160 m of new DN400 cross-connection piping (~0.05 MBCU), i.e. a net LCC reduction of roughly 16 MBCU (~15 % of 107.6). The submitted design already depends on unmodelled isolating valves (its own limitation 1), so the extra isolation this requires is not a new class of assumption. I did not find any published rule that prohibits it. (Counter-argument to weigh: if the grader's intended architecture is two direction-specific chains, sharing would be judged infeasible; the brief does not disambiguate.)",
+      "finding_id": "R1-shared-compression-lcc",
+      "lifecycle_status": "OPEN",
+      "public_basis": "brief/network_semantics.md defines only per-connection direction (gas_out -> gas_in/gas_bidirectional) and states \"Reverse station service may use a different physical path; only gas_bidirectional ports carry gas in either direction\" and \"The world imposes no acyclic-process-graph requirement\". Nothing requires separate machinery per service; project_requirements.json primary_objective is \"Among feasible designs, minimize benchmark lifecycle cost (LCC)\".",
+      "severity": "high",
+      "status": "unsupported_claim",
+      "why_it_matters": "The primary objective is minimum LCC and no other score is combined with it. If the shared-machinery reading is intended, the submitted LCC is ~15 % above achievable and the score impact is large; the report's stated reason for the duplication does not hold as written. Even if sharing is rejected, the sentence should be corrected to \"one-way ports prevent in-place reversal, not reuse along a different physical path\", since a grader may treat the current reasoning as an unexamined assumption."
+    },
+    {
+      "claim_challenged": "DESIGN_REPORT §9: \"equipment selection and count, solved as the cheapest compliant set subject to the N-1 rules and the equipment pressure/ratio limits\"; §4.1 defends choosing components rated \"strictly above the maximum scenario flow of 120 kg/s rather than exactly at it\".",
+      "confidence": "high",
+      "evidence": "Evaluated with the submission's own UgsCost/ugs_operate machinery (no other change): setting the header capacity to 120 kg/s (i.e. substituting 6 x HDR180 0.36 MBCU by 6 x HDR120 0.25 MBCU, still 16 MPa and still >= 10 branch ports vs the 10/5/5/4/6/4 used) raises annual energy by only 153.4 MWh/a (PV 0.181) while cutting capex by 0.660 and maintenance PV by 0.236 -> net -0.715 MBCU, with zero check failures including the checker's own \"through flow <= capacity\" test at exactly 120 kg/s. Similarly legal: 2 x MTR160 -> 2 x MTR120 (-0.160 capex - 0.079 maintenance PV, and lower meter dP), REG180 -> REG120 (-0.120 capex), 2 x COOL70 -> 1 x COOL120 (duty-based energy unchanged, -0.400 capex - 0.196 maintenance PV; the only effect of the single unit is to run at exactly its 120 kg/s rating, and cooler N-1 is not a published requirement). Total ~1.7 MBCU (1.6 % of LCC) that is legal under the published rules and passes the submission's own checker.",
+      "finding_id": "R2-at-rating-substitutions",
+      "lifecycle_status": "OPEN",
+      "public_basis": "engineering_calculation_basis.md numerical conventions: \"A value within the stated tolerance of a limit is treated as equal to that limit\" (mass flow 1e-5 kg/s). Only compressors (\"must not exceed its capacity\") and meters (\"Meter flow may not exceed its catalog capacity\") have explicit flow caps; header/cooler limits are duty, temperature, branch count and pressure rating. project_requirements.json primary_objective is minimum LCC.",
+      "severity": "medium",
+      "status": "unsupported_claim",
+      "why_it_matters": "The \"cheapest compliant set\" claim is established only for the N-1-driven machine counts, not for components that were deliberately sized with margin. Under an LCC-minimising objective this is a self-imposed ~1.6 % penalty; the report should either quantify the margin policy as a stated, costed choice or adopt the at-rating components (the published tolerance convention explicitly makes equality to a limit acceptable)."
+    },
+    {
+      "claim_challenged": "DESIGN_REPORT §1.1/§11.2 and all scenario plans deliver required_sink_pressure_mpa + 0.05 MPa (8.55/11.05/13.55 at the well groups, 6.05 at GRID-TIE).",
+      "confidence": "medium",
+      "evidence": "The minimum reading is well supported (an upper-bound reading would make the compression N-1 selector vacuous). But delivering exactly the requirement satisfies every plausible reading, whereas +0.05 fails under an exact or upper-bound reading (`abs(p - required) <= tol` or `p <= required + tol`) by a factor of 5000 over tolerance. The margin also costs energy: at the pump/compressor ratio in question the extra 0.05 MPa is ~0.16 % of the compression work (~51 MWh/a, ~0.06 MBCU PV).",
+      "finding_id": "R3-delivery-pressure-margin",
+      "lifecycle_status": "OPEN",
+      "public_basis": "operating_scenarios.json field is named required_sink_pressure_mpa with the comment \"its delivery-pressure limit\"; reliability_requirements.compression_n_minus_one.scenario_selector is \"required_sink_pressure_mpa > source_pressure_mpa\" (which only makes sense if the value is a minimum); the tolerance table treats a value within 1e-5 MPa of a limit as equal to it, so 0.05 MPa is not \"within tolerance\".",
+      "severity": "medium",
+      "status": "unsupported_claim",
+      "why_it_matters": "This is the one design choice that can flip a whole scenario from pass to fail depending on how a grader reads one word (\"limit\"). Setting the setpoints to deliver exactly the required pressure is a strictly dominant choice (it passes under minimum, exact and upper-bound readings) and slightly cheaper; the margin only hedges against the grader recomputing the march with different arithmetic, and the published basis is deterministic. Low cost to remove, non-trivial tail risk to keep."
+    },
+    {
+      "claim_challenged": "DESIGN_REPORT §10: \"The checks cover ... drain capacity and the delivery limits ...\"; README: \"python tools/build.py evaluates every published rule\"; verification.md: \"7379 rule checks ... every value recomputed from the brief data\".",
+      "confidence": "high",
+      "evidence": "In checks.csv (7379 rows, 0 failures) there is no check of closed-drain (DRN-S, 0.8 kg/s / 1 MPa) capacity or pressure, no check of the combined outfall flow against 10 kg/s, and no check of the GRID-TIE interface flow against 160 kg/s; the only outfall rows are three endpoint-existence checks and one connection-cardinality check (3 of 8). ugs_operate.py even computes `total_removed = sum(m.sep_liquid[...])` at line 470 and never uses it. The design is nevertheless compliant by inspection: worst-case drain flow 0.5997 kg/s <= 0.8 (60 kg/s x 0.01 x 0.9995 in the WDR-HIGH separator-outage case), combined outfall 1.1994 <= 10 kg/s, 3 <= 8 connections, GRID-TIE 120 <= 160 kg/s.",
+      "finding_id": "R4-verification-coverage-gap",
+      "lifecycle_status": "OPEN",
+      "public_basis": "engineering_calculation_basis.md: \"Closed-drain flow may not exceed its model capacity or maximum pressure. The liquid-drain outfall's published connection and flow limits apply to the combined liquid discharge\"; site.json LIQUID-DRAIN-OUTFALL maximum_flow_kg_s = 10.0, maximum_connections = 8; site.json GRID-TIE maximum_flow_kg_s = 160.",
+      "severity": "medium",
+      "status": "unsupported_claim",
+      "why_it_matters": "The self-verification claim is stronger than the checks actually performed. The gap is currently harmless but it is exactly the class of liquid/outfall rule a grader will test, and an unevaluated limit is an unchecked assumption if the design is ever re-tuned (e.g. if fewer drains or a different liquid loading were considered)."
+    },
+    {
+      "claim_challenged": "README.md: \"The current design passes all 7 286 checks with LCC = 107.598 MBCU\".",
+      "confidence": "high",
+      "evidence": "deliverables/checks.csv contains 7379 data rows + header, verification.md and DESIGN_REPORT §10 both state 7379, and a fresh `python tools/build.py` prints \"PASS: 7379 checks, 0 failed\". README is the only artifact quoting 7286.",
+      "finding_id": "R5-readme-check-count",
+      "lifecycle_status": "OPEN",
+      "public_basis": "final_delivery_contract.json reconstructability: artifacts must be mutually consistent enough for an independent reviewer to reconstruct and recalculate.",
+      "severity": "low",
+      "status": "observation",
+      "why_it_matters": "Small but concrete internal inconsistency between deliverables; a reviewer spot-checking the headline claim finds two different numbers."
+    },
+    {
+      "claim_challenged": "README/DESIGN_REPORT §5 present deliverables/layout.svg as the site layout drawing with equipment tags and boundary interfaces.",
+      "confidence": "high",
+      "evidence": "layout.svg wraps all content in <g transform=\"translate(21.43,21.43) scale(1,-1) translate(0,-450.0)\">. The 3 zone labels carry the counter-flip `transform=\"scale(1,-1) translate(0,-2y)\"`, but all 37 equipment/interface labels (25 tags + 12 interface names, e.g. <text x=\"30.0\" y=\"225.0\" ...>WH-01</text>) do not, so they are drawn mirrored (upside-down) in the flipped frame. The drawing also has no legend for the four level colours used for pipeline segments (ground/buried/rack_low/rack_high).",
+      "finding_id": "R6-svg-mirrored-labels",
+      "lifecycle_status": "OPEN",
+      "public_basis": "final_delivery_contract.json deliverables: \"Site layout, safety provisions, and maintenance access\"; engineering_geometry_basis.md coordinates are interpreted in the site coordinate system.",
+      "severity": "low",
+      "status": "observation",
+      "why_it_matters": "The layout is a required deliverable; its labels are illegible as rendered, which weakens an otherwise complete drawing. Trivial to fix (same counter-flip used for the zone labels, plus a small legend)."
+    },
+    {
+      "claim_challenged": "DESIGN_REPORT §5: \"The tightest boundary-to-boundary separations in the layout are:\" followed by a six-row table (margins +3.000, +14.111, +14.111, +16.593, +16.593, +16.593).",
+      "confidence": "high",
+      "evidence": "My own recomputation of all 300 pairs agrees with every number in the table, but the six smallest margins also include HDR-INJ-DIS-01/COOL-INJ-02 (d = 21.593 m, +16.593) and MTR-INJ-01/HDR-INJ-SUC-01 (d = 21.593 m, +16.593); the list omits two pairs that tie with rows already shown, while the next margin below (+19.000 at HDR-INJ-OUT-01/REG-WDR-01) is correctly excluded.",
+      "finding_id": "R7-tightest-separation-table",
+      "lifecycle_status": "OPEN",
+      "public_basis": "engineering_geometry_basis.md: separation is the shortest boundary-to-boundary distance between rotated footprints; safety_requirements.json matrix.",
+      "severity": "low",
+      "status": "observation",
+      "why_it_matters": "The table is a completeness/consistency defect in the layout narrative rather than a design error; it slightly overstates that the tightest separations have been fully enumerated."
+    },
+    {
+      "claim_challenged": "DESIGN_REPORT §6: \"Diameters were optimised against the LCC\" / §9 \"(ii) pipe diameters, solved by coordinate descent on each pipeline's diameter against the full LCC (piping + civil + energy present value) using tools/optimize.py\".",
+      "confidence": "high",
+      "evidence": "Re-evaluating the design with the submission's own machinery, single-pipe changes still reduce its own reported LCC: P-103 DN400 -> DN300 gives 107.5849 (-0.0131), P-120 -> DN300 (-0.0032), P-117 -> DN300 (-0.0021), P-133/P-134 -> DN250 (-0.0027 each), all with 0 check failures (P-103 carries only 10 kg/s normally, 27 kg/s in the INJ-LOW C40-outage case, ~8.6 m/s at DN300). All other perturbations I tried increased the LCC (e.g. P-113 DN700 +0.0416, P-101 DN600 +0.0152), so the design is near a local optimum; a coordinate-descent run should not have missed a single-pipe improvement of this size.",
+      "finding_id": "R8-diameter-optimiser-residual",
+      "lifecycle_status": "OPEN",
+      "public_basis": "primary_objective: minimize LCC; engineering_calculation_basis.md piping CAPEX, civil and energy PV rules.",
+      "severity": "low",
+      "status": "observation",
+      "why_it_matters": "The residual (~0.02 MBCU total, 0.02 % of LCC) is immaterial to the score, but it indicates the reported diameter set is not exactly the optimum of the stated optimiser, so the LCC-optimality wording is slightly stronger than the search actually delivered."
+    },
+    {
+      "claim_challenged": "DESIGN_REPORT §4 table column \"duty in the design\" (e.g. CMP-INJ-01 \"max 55.00 kg/s\", CMP-INJ-03 \"max 10.00 kg/s\", COOL-INJ-01 \"max 60.00 kg/s\", SEP-WDR-01 \"max 40.00 kg/s\").",
+      "confidence": "medium",
+      "evidence": "The quoted maxima are normal-operation values only: in the documented outage cases CMP-INJ-01 runs at 57.00 kg/s, CMP-INJ-03 at 27.00 kg/s, COOL-INJ-01 at 42.00 kg/s and SEP-WDR-01/DEHY-WDR-01 at 60.00 kg/s (table 7.1 and design.json unit_states). Table 7.1 and §7.3 do state the outage flows, so nothing is hidden, but the §4 column heading does not say it excludes outage cases.",
+      "finding_id": "R9-duty-column-scope",
+      "lifecycle_status": "OPEN",
+      "public_basis": "final_delivery_contract.json: \"Equipment selection and stated capacities\"; reliability_requirements requires the outage plans to be documented operating states.",
+      "severity": "low",
+      "status": "observation",
+      "why_it_matters": "A reviewer checking \"stated capacities\" against the highest documented operating point would see a mismatch with §4; clarifying the column scope removes an apparent contradiction between the equipment table and the operating plan."
+    },
+    {
+      "claim_challenged": "Implicit claim that the boundary flow limits are verified (DESIGN_REPORT §1.1 lists \"GRID-TIE limit 160 kg/s\" and the well-group limits among the requirements used).",
+      "confidence": "high",
+      "evidence": "checks.csv contains 12 per-scenario well-group checks (60/6 = 20.000 <= 25 kg/s) but no check of the GRID-TIE boundary flow limit; the 160 kg/s figure appears only as meter capacity (160 >= 120) and as the interface connection cardinality (2 of 2). Compliant by inspection (max boundary flow is 120 kg/s).",
+      "finding_id": "R10-interface-flow-not-checked",
+      "lifecycle_status": "OPEN",
+      "public_basis": "project_requirements.json well_group_limits.maximum_flow_per_interface_kg_s = 25 (and minimum_flow_kg_s = 0); site.json GRID-TIE maximum_flow_kg_s = 160.",
+      "severity": "low",
+      "status": "observation",
+      "why_it_matters": "Minor coverage gap of the same family as R4; harmless for this design but part of the \"every published rule\" claim."
+    },
+    {
+      "claim_challenged": "DESIGN_REPORT §11.1: scenario routing depends on \"isolating valves (outside the catalogued scope)\", in particular that WH-01 is manifolded between the injection and withdrawal chains and that the boost loop is bypassed in WDR-HIGH/MID.",
+      "confidence": "medium",
+      "evidence": "In the installed network there is a fully direction-compatible path from the well manifold back to GRID-TIE (WH-01 branch (gas_bidirectional) -> SEP gas_in/gas_out -> DEHY gas_in/gas_out -> HDR-TRT-OUT-01 -> P-123 -> HDR-DLV-01 -> REG gas_in/gas_out -> MTR-WDR-01 gas_in/gas_out -> GRID-TIE), and a symmetric path from HDR-TRT-OUT-01/treated gas into the boost suction loop. During injection the well side sits at ~8.56 MPa against 6.5 MPa at GRID-TIE, so the declared plans are only realisable with physical isolation that the catalogue does not model. The report discloses this as a limitation and the published basis does define per-scenario declared paths, so it is not a rule violation, but it is the assumption everything else rests on.",
+      "finding_id": "R11-unvalved-bypass-paths",
+      "lifecycle_status": "OPEN",
+      "public_basis": "network_semantics.md: ports are one-way by type, \"The world imposes no acyclic-process-graph requirement\", and a seasonal scenario cannot treat a gas_out as bidirectional.",
+      "severity": "low",
+      "status": "observation",
+      "why_it_matters": "Worth stating explicitly as the design's single most load-bearing assumption (and it is also what makes the shared-compression option in R1 no more heroic than the submitted architecture), so that a grader who models the network without valves sees the assumption was declared rather than overlooked."
+    },
+    {
+      "claim_challenged": "Worker questions 2, 3 and 6: (2) two anti-parallel meters, (3) 2 x C60 + 1 x C40 and 2 x C60 as cheapest compliant sets, (6) LCC arithmetic vs the published basis.",
+      "confidence": "high",
+      "evidence": "Meters: both services exchange gas at the same boundary in opposite directions and MTR ports are one-way (gas_in/gas_out), so two meters are necessary; each is rated 160 >= 120 kg/s so the 1.0 fraction is met in every scenario (MTR120 at exactly 120 kg/s is also legal, see R2). Compressor sets: independent enumeration over all C40/C60/C60H/C80 multisets of size 2-4, enforcing capacity, N-1 (sum - largest >= 0.7 x flow), ratio limits and the design's own load-sharing policy, with capex + maintenance PV + energy PV, gives C40+C60+C60 lowest (59.169) followed by C40+C60+C80 (60.935) and C60+C60+C60 (61.388) - the report's rejection of 2 x C80 + 1 x C40 is correct. Same enumeration for WDR-LOW gives 2 x C60 (13.0) as the cheapest set meeting 70 kg/s normal and 49 kg/s after one unit is out. LCC: every component (equipment capex 43.430, piping 1.915244 including per-segment level multipliers, civil 0.276035, energy PV 47.887613 from 40 645.5 MWh/a, maintenance PV 14.089042 at PVF 9.818147) and the total 107.597933 reconcile exactly with the published basis. Separator/dehydration counts are forced: 12 MPa withdrawal rules out the 10 MPa-rated SEP40/SEP120/DEHY40/DEHY120, and 2 x SEP70/2 x DEHY70 cannot retain 84 kg/s with one unit out, so 3 + 3 is the minimum; one closed drain per separator is forced by drain_in cardinality 1.",
+      "finding_id": "R12-worker-questions-verified",
+      "lifecycle_status": "OPEN",
+      "public_basis": "project_requirements.json grid_tie_metering_requirement (minimum_active_meter_capacity_fraction_of_scenario_flow = 1.0), reliability_requirements.compression_n_minus_one, engineering_calculation_basis.md LCC section, economic_assumptions.json, piping_catalog.json.",
+      "severity": "low",
+      "status": "observation",
+      "why_it_matters": "Records the parts of the submission that survive adversarial re-derivation, so the Worker can focus changes on R1-R4 rather than revisiting settled choices."
+    }
+  ],
+  "summary": "I re-derived the submission from the public brief with my own independent code (geometry/separation/route/road rules, the published hydraulic fixed-point march, equipment limits, delivery limits, quantities and the full LCC) and also re-ran the Worker's own toolchain.\n\nIndependently reproduced / confirmed: LCC = 107.5979 MBCU (equipment 43.430, piping 1.915244, civil 0.276035, energy PV 47.887613 for 40 645.5 MWh/a over the 6 normal scenarios only, maintenance PV 14.089042 with PVF 9.818147) — every component matches to <1e-6, including per-segment piping cost with per-level multipliers and the maintenance-envelope area rule (union of clearance + removal envelopes = 2130.72 m2). I rebuilt the scenario march with my own implementation of the published formulas from the declared setpoints/flows and reproduced every declared node pressure, delivery temperature and per-scenario energy (0 mismatches over all 35 plans). `tools/build.py --brief brief --out …` reruns to PASS/7379 checks/0 failures and regenerates design.json, verification.md, checks.csv and layout.svg byte-identically; crosscheck.py also passes. Geometry: all footprints in-site, clear of exclusion zones, no overlaps; every pair of the separation matrix satisfied (tightest margin +3.000 m at HDR-INJ-SUC-01/CMP-INJ-01, d=13.000 m vs 10 m); routine+removal envelopes in-site and clear; roads ≥4 m, outside road-exclusion zones, clear of footprints, connected to ROAD-ENTRANCE; road/crane buffers met (0.0/1.9/3.0 m); 0 same-level positive-length overlaps; no segment enters a pipeline-exclusion interior or a footprint interior (only zero-area boundary contact at ports). Hydraulics/limits: no gas velocity, pipe-class rating/temperature/wet-dry, compressor ratio/temperature/power/min-stable-flow, header, separator/dehydration, drain-velocity, metering or delivery-limit violation found; N-1 fractions 0.700 for INJ-LOW/MID/HIGH and WDR-LOW (compressors) and 1.000 for withdrawal treatment cases.\n\nI found no confirmed violation of a published rule. The material issues are on the primary objective (LCC) and on claim/coverage accuracy: (1) the report's §4.1 justification that one-way ports force separate injection and withdrawal machinery is a non sequitur, and a shared-compression configuration appears feasible under the brief's own semantics (and under the design's own unmodelled-valve assumption), worth ~16 MBCU (~15 % of LCC); (2) ~1.7 MBCU of legal at-rating substitutions exist (headers HDR120, meters MTR120, REG120, one COOL120) because components were deliberately sized \"strictly above\" the 120 kg/s flow; (3) the +0.05 MPa delivery margin is only safe under a minimum-pressure reading; (4) the verification claims cover drain capacity/outfall limits that no check in checks.csv actually evaluates; (5) README quotes 7286 checks vs 7379 in the artifacts; (6) 37 of 40 text labels in layout.svg are drawn without the counter-flip transform and therefore render mirrored. The Worker's answers to questions 2, 3 and 6 are supported: two anti-parallel one-way meters are necessary and sufficient; an independent enumeration over all catalogued compressor sets (capex + maintenance PV + energy PV, N-1 and ratio limits enforced) confirms 2×C60+1×C40 and 2×C60 are the cheapest compliant injection and boost sets; LCC arithmetic matches the published basis exactly."
+}

@@ -1,0 +1,188 @@
+{
+  "snapshot": {
+    "file_count": 16,
+    "files": {
+      "DESIGN_REPORT.md": {
+        "kind": "file",
+        "sha256": "1292ca6daa7b713b7d3e5ce14c4a3acf33604927249a51e1d80e871538c65f44",
+        "size_bytes": 43271
+      },
+      "README.md": {
+        "kind": "file",
+        "sha256": "6ab2b3df161ad31784ba88b22efe9960bbb9ca4aa97a4d2720eb939a5533805c",
+        "size_bytes": 2818
+      },
+      "deliverables/": {
+        "kind": "directory"
+      },
+      "deliverables/checks.csv": {
+        "kind": "file",
+        "sha256": "f950653260e3df46c2ca69d84f2419dad72ff4d0d1b395cf29f6180ba318faa0",
+        "size_bytes": 592652
+      },
+      "deliverables/design.json": {
+        "kind": "file",
+        "sha256": "d7dabd174d18b6928edbd73e7a829f032e5369ab34237fb06b2293ee4287adee",
+        "size_bytes": 270339
+      },
+      "deliverables/diameters.json": {
+        "kind": "file",
+        "sha256": "8a2af2e4891cba6bd1ded364031e925ad556bfcfa7d9684e813a95f02224bba7",
+        "size_bytes": 842
+      },
+      "deliverables/layout.svg": {
+        "kind": "file",
+        "sha256": "ae0b37f6c8885312690d75f66db02f8c83b2fdd6fa8f255fb853a883cdf6fd5f",
+        "size_bytes": 18530
+      },
+      "deliverables/verification.md": {
+        "kind": "file",
+        "sha256": "2ef264dcdd21c1ce1b7da78e26a5ec428e89afd9af6df0e1e7f5a82a0620be7c",
+        "size_bytes": 30565
+      },
+      "tools/": {
+        "kind": "directory"
+      },
+      "tools/build.py": {
+        "kind": "file",
+        "sha256": "74fc016f8d027248bde7d9f4556ef3dd90070cf2da39d12a7a157ef3935daecb",
+        "size_bytes": 14672
+      },
+      "tools/crosscheck.py": {
+        "kind": "file",
+        "sha256": "84def78b8eafecdaead70b559a97695869ccc350071ecc44410435aea31df067",
+        "size_bytes": 10372
+      },
+      "tools/make_report.py": {
+        "kind": "file",
+        "sha256": "6e75f20f077ef8f1b4c15a72b8bdde67d0ae061ef9f0c1f33659e84ab5b14fda",
+        "size_bytes": 35180
+      },
+      "tools/optimize.py": {
+        "kind": "file",
+        "sha256": "fdfd25dee4aa27410245887c432ad1843681a4b9c66d9aa0ef60f6fc25236401",
+        "size_bytes": 4993
+      },
+      "tools/ugs_basis.py": {
+        "kind": "file",
+        "sha256": "78e16ef8695a116a0ca3727e520f4a49040399f32bd5b9ecf9e29e3b59dbfab1",
+        "size_bytes": 19040
+      },
+      "tools/ugs_check.py": {
+        "kind": "file",
+        "sha256": "7c9671a1c6a0d9582a592a42b0cc88ca5591d1959f92485018cf74fa027489fd",
+        "size_bytes": 18785
+      },
+      "tools/ugs_cost.py": {
+        "kind": "file",
+        "sha256": "fca00a52530e82d1c5c7a1ef1c87085657707610e15b3d874d5d25995a2fff6a",
+        "size_bytes": 6945
+      },
+      "tools/ugs_design.py": {
+        "kind": "file",
+        "sha256": "d061b11c8864c8a3024b6e3a08e95c2a826a49cfc82d8f53a3d1ebaefda86bf8",
+        "size_bytes": 15860
+      },
+      "tools/ugs_operate.py": {
+        "kind": "file",
+        "sha256": "b059b8f5ae8822d0d5420ea9e01b567772c1ea73d0eb0e6ea6cba5999476d497",
+        "size_bytes": 27353
+      }
+    },
+    "total_file_bytes": 1112217
+  },
+  "snapshot_sha256": "6b4a6d030cc8000d03cc52cdb4ae0fc0c4776306d99c453c45dd5c46923a55a9",
+  "source_project": {
+    "file_count": 16,
+    "files": {
+      "DESIGN_REPORT.md": {
+        "kind": "file",
+        "sha256": "1292ca6daa7b713b7d3e5ce14c4a3acf33604927249a51e1d80e871538c65f44",
+        "size_bytes": 43271
+      },
+      "README.md": {
+        "kind": "file",
+        "sha256": "6ab2b3df161ad31784ba88b22efe9960bbb9ca4aa97a4d2720eb939a5533805c",
+        "size_bytes": 2818
+      },
+      "deliverables/": {
+        "kind": "directory"
+      },
+      "deliverables/checks.csv": {
+        "kind": "file",
+        "sha256": "f950653260e3df46c2ca69d84f2419dad72ff4d0d1b395cf29f6180ba318faa0",
+        "size_bytes": 592652
+      },
+      "deliverables/design.json": {
+        "kind": "file",
+        "sha256": "d7dabd174d18b6928edbd73e7a829f032e5369ab34237fb06b2293ee4287adee",
+        "size_bytes": 270339
+      },
+      "deliverables/diameters.json": {
+        "kind": "file",
+        "sha256": "8a2af2e4891cba6bd1ded364031e925ad556bfcfa7d9684e813a95f02224bba7",
+        "size_bytes": 842
+      },
+      "deliverables/layout.svg": {
+        "kind": "file",
+        "sha256": "ae0b37f6c8885312690d75f66db02f8c83b2fdd6fa8f255fb853a883cdf6fd5f",
+        "size_bytes": 18530
+      },
+      "deliverables/verification.md": {
+        "kind": "file",
+        "sha256": "2ef264dcdd21c1ce1b7da78e26a5ec428e89afd9af6df0e1e7f5a82a0620be7c",
+        "size_bytes": 30565
+      },
+      "tools/": {
+        "kind": "directory"
+      },
+      "tools/build.py": {
+        "kind": "file",
+        "sha256": "74fc016f8d027248bde7d9f4556ef3dd90070cf2da39d12a7a157ef3935daecb",
+        "size_bytes": 14672
+      },
+      "tools/crosscheck.py": {
+        "kind": "file",
+        "sha256": "84def78b8eafecdaead70b559a97695869ccc350071ecc44410435aea31df067",
+        "size_bytes": 10372
+      },
+      "tools/make_report.py": {
+        "kind": "file",
+        "sha256": "6e75f20f077ef8f1b4c15a72b8bdde67d0ae061ef9f0c1f33659e84ab5b14fda",
+        "size_bytes": 35180
+      },
+      "tools/optimize.py": {
+        "kind": "file",
+        "sha256": "fdfd25dee4aa27410245887c432ad1843681a4b9c66d9aa0ef60f6fc25236401",
+        "size_bytes": 4993
+      },
+      "tools/ugs_basis.py": {
+        "kind": "file",
+        "sha256": "78e16ef8695a116a0ca3727e520f4a49040399f32bd5b9ecf9e29e3b59dbfab1",
+        "size_bytes": 19040
+      },
+      "tools/ugs_check.py": {
+        "kind": "file",
+        "sha256": "7c9671a1c6a0d9582a592a42b0cc88ca5591d1959f92485018cf74fa027489fd",
+        "size_bytes": 18785
+      },
+      "tools/ugs_cost.py": {
+        "kind": "file",
+        "sha256": "fca00a52530e82d1c5c7a1ef1c87085657707610e15b3d874d5d25995a2fff6a",
+        "size_bytes": 6945
+      },
+      "tools/ugs_design.py": {
+        "kind": "file",
+        "sha256": "d061b11c8864c8a3024b6e3a08e95c2a826a49cfc82d8f53a3d1ebaefda86bf8",
+        "size_bytes": 15860
+      },
+      "tools/ugs_operate.py": {
+        "kind": "file",
+        "sha256": "b059b8f5ae8822d0d5420ea9e01b567772c1ea73d0eb0e6ea6cba5999476d497",
+        "size_bytes": 27353
+      }
+    },
+    "total_file_bytes": 1112217
+  },
+  "symlink_policy": "internal symlinks materialized as read-only content; links leaving project/ rejected"
+}

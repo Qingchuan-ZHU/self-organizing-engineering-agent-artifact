@@ -1,0 +1,50 @@
+[
+  {
+    "excluded_from_core_package_reason": "The frozen manifest embeds provider outcome assistant_message values; the public summary retains counts and metadata while raw messages remain supplementary evidence.",
+    "run_id": "ugs_synth_explicit_collaboration_replication_001",
+    "source_path": "runs/ugs_synth_interleaved_review/ugs_synth_explicit_collaboration_replication_001/run_manifest.json",
+    "source_sha256": "0233e1ed77c1f66f8cecbca166d964523ffb74a04d8c11b3978819a3da66f442"
+  },
+  {
+    "excluded_from_core_package_reason": "The frozen manifest embeds provider outcome assistant_message values; the public summary retains counts and metadata while raw messages remain supplementary evidence.",
+    "run_id": "ugs_synth_explicit_collaboration_replication_002",
+    "source_path": "runs/ugs_synth_interleaved_review/ugs_synth_explicit_collaboration_replication_002/run_manifest.json",
+    "source_sha256": "790b679fe2a7a055ce4d0c80759dbef2662062c4c99167b22288bea314f404c8"
+  },
+  {
+    "excluded_from_core_package_reason": "The frozen manifest embeds provider outcome assistant_message values; the public summary retains counts and metadata while raw messages remain supplementary evidence.",
+    "run_id": "ugs_synth_explicit_collaboration_replication_003",
+    "source_path": "runs/ugs_synth_interleaved_review/ugs_synth_explicit_collaboration_replication_003/run_manifest.json",
+    "source_sha256": "71bf601340dd17ad4ac94d98ffec4cd82efcf68f7bbb0e949cd068fe5ade6d1d"
+  },
+  {
+    "excluded_from_core_package_reason": "The frozen manifest embeds provider outcome assistant_message values; the public summary retains counts and metadata while raw messages remain supplementary evidence.",
+    "run_id": "ugs_synth_explicit_collaboration_replication_004",
+    "source_path": "runs/ugs_synth_interleaved_review/ugs_synth_explicit_collaboration_replication_004/run_manifest.json",
+    "source_sha256": "c4bd942c2c81e7b1793914d4dccc71360b12f4a0ea257f8be8181700e4f88ee3"
+  },
+  {
+    "excluded_from_core_package_reason": "The frozen manifest embeds provider outcome assistant_message values; the public summary retains counts and metadata while raw messages remain supplementary evidence.",
+    "run_id": "ugs_synth_worker_only_replication_001",
+    "source_path": "runs/ugs_synth_interleaved_review/ugs_synth_worker_only_replication_001/run_manifest.json",
+    "source_sha256": "0d8b9bdaf1f4dcca549213609c9f47c14f711de84cb5638d6a548dd290fab5d7"
+  },
+  {
+    "excluded_from_core_package_reason": "The frozen manifest embeds provider outcome assistant_message values; the public summary retains counts and metadata while raw messages remain supplementary evidence.",
+    "run_id": "ugs_synth_worker_only_replication_002",
+    "source_path": "runs/ugs_synth_interleaved_review/ugs_synth_worker_only_replication_002/run_manifest.json",
+    "source_sha256": "121b16e33db2785a3b727aad0fc5b57a4f103217e354e1ed2e04901e11025032"
+  },
+  {
+    "excluded_from_core_package_reason": "The frozen manifest embeds provider outcome assistant_message values; the public summary retains counts and metadata while raw messages remain supplementary evidence.",
+    "run_id": "ugs_synth_worker_only_replication_003",
+    "source_path": "runs/ugs_synth_interleaved_review/ugs_synth_worker_only_replication_003/run_manifest.json",
+    "source_sha256": "00ffc367b84b0400c9a53c04321cccfd0636459f4154fdfd07142eab91f11c51"
+  },
+  {
+    "excluded_from_core_package_reason": "The frozen manifest embeds provider outcome assistant_message values; the public summary retains counts and metadata while raw messages remain supplementary evidence.",
+    "run_id": "ugs_synth_worker_only_replication_004",
+    "source_path": "runs/ugs_synth_interleaved_review/ugs_synth_worker_only_replication_004/run_manifest.json",
+    "source_sha256": "6f3218fc15fc27c51b9ebe66eefa761c8ed28e2c1de86816afa4692b553cca07"
+  }
+]

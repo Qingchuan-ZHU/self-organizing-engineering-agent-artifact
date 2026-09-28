@@ -1,0 +1,347 @@
+{
+  "models": [
+    {
+      "annual_maintenance_mbcu": 0.008,
+      "capacity_kg_s": 60,
+      "capex_mbcu": 0.16,
+      "category": "header",
+      "footprint_m": {
+        "length": 6,
+        "width": 3
+      },
+      "maintenance": {
+        "clearance_m": 2.0,
+        "crane_access_required": false,
+        "heavy_maintenance": false,
+        "road_access_required": false
+      },
+      "maximum_branch_connections": 6,
+      "maximum_pressure_mpa": 10,
+      "model_id": "HDR60",
+      "orientation_options_deg": [
+        0,
+        90
+      ],
+      "ports": [
+        {
+          "id": "branch_01",
+          "offset_m": [
+            -1.5,
+            1.5
+          ],
+          "type": "gas_bidirectional"
+        },
+        {
+          "id": "branch_02",
+          "offset_m": [
+            3.0,
+            0.75
+          ],
+          "type": "gas_bidirectional"
+        },
+        {
+          "id": "branch_03",
+          "offset_m": [
+            0.0,
+            -1.5
+          ],
+          "type": "gas_bidirectional"
+        },
+        {
+          "id": "branch_04",
+          "offset_m": [
+            -3.0,
+            0.0
+          ],
+          "type": "gas_bidirectional"
+        },
+        {
+          "id": "branch_05",
+          "offset_m": [
+            1.5,
+            1.5
+          ],
+          "type": "gas_bidirectional"
+        },
+        {
+          "id": "branch_06",
+          "offset_m": [
+            3.0,
+            -0.75
+          ],
+          "type": "gas_bidirectional"
+        }
+      ],
+      "pressure_drop_at_capacity_mpa": 0.01,
+      "safety_category": "hydrocarbon_treatment"
+    },
+    {
+      "annual_maintenance_mbcu": 0.012,
+      "capacity_kg_s": 120,
+      "capex_mbcu": 0.25,
+      "category": "header",
+      "footprint_m": {
+        "length": 6,
+        "width": 3
+      },
+      "maintenance": {
+        "clearance_m": 2.0,
+        "crane_access_required": false,
+        "heavy_maintenance": false,
+        "road_access_required": false
+      },
+      "maximum_branch_connections": 10,
+      "maximum_pressure_mpa": 16,
+      "model_id": "HDR120",
+      "orientation_options_deg": [
+        0,
+        90
+      ],
+      "ports": [
+        {
+          "id": "branch_01",
+          "offset_m": [
+            -2.0,
+            1.5
+          ],
+          "type": "gas_bidirectional"
+        },
+        {
+          "id": "branch_02",
+          "offset_m": [
+            3.0,
+            1.0
+          ],
+          "type": "gas_bidirectional"
+        },
+        {
+          "id": "branch_03",
+          "offset_m": [
+            1.5,
+            -1.5
+          ],
+          "type": "gas_bidirectional"
+        },
+        {
+          "id": "branch_04",
+          "offset_m": [
+            -3.0,
+            -0.75
+          ],
+          "type": "gas_bidirectional"
+        },
+        {
+          "id": "branch_05",
+          "offset_m": [
+            0.0,
+            1.5
+          ],
+          "type": "gas_bidirectional"
+        },
+        {
+          "id": "branch_06",
+          "offset_m": [
+            3.0,
+            0.0
+          ],
+          "type": "gas_bidirectional"
+        },
+        {
+          "id": "branch_07",
+          "offset_m": [
+            -1.5,
+            -1.5
+          ],
+          "type": "gas_bidirectional"
+        },
+        {
+          "id": "branch_08",
+          "offset_m": [
+            -3.0,
+            0.75
+          ],
+          "type": "gas_bidirectional"
+        },
+        {
+          "id": "branch_09",
+          "offset_m": [
+            2.0,
+            1.5
+          ],
+          "type": "gas_bidirectional"
+        },
+        {
+          "id": "branch_10",
+          "offset_m": [
+            3.0,
+            -1.0
+          ],
+          "type": "gas_bidirectional"
+        }
+      ],
+      "pressure_drop_at_capacity_mpa": 0.01,
+      "safety_category": "hydrocarbon_treatment"
+    },
+    {
+      "annual_maintenance_mbcu": 0.016,
+      "capacity_kg_s": 180,
+      "capex_mbcu": 0.36,
+      "category": "header",
+      "footprint_m": {
+        "length": 6,
+        "width": 3
+      },
+      "maintenance": {
+        "clearance_m": 2.0,
+        "crane_access_required": false,
+        "heavy_maintenance": false,
+        "road_access_required": false
+      },
+      "maximum_branch_connections": 14,
+      "maximum_pressure_mpa": 16,
+      "model_id": "HDR180",
+      "orientation_options_deg": [
+        0,
+        90
+      ],
+      "ports": [
+        {
+          "id": "branch_01",
+          "offset_m": [
+            -2.25,
+            1.5
+          ],
+          "type": "gas_bidirectional"
+        },
+        {
+          "id": "branch_02",
+          "offset_m": [
+            3.0,
+            1.125
+          ],
+          "type": "gas_bidirectional"
+        },
+        {
+          "id": "branch_03",
+          "offset_m": [
+            2.0,
+            -1.5
+          ],
+          "type": "gas_bidirectional"
+        },
+        {
+          "id": "branch_04",
+          "offset_m": [
+            -3.0,
+            -1.0
+          ],
+          "type": "gas_bidirectional"
+        },
+        {
+          "id": "branch_05",
+          "offset_m": [
+            -0.75,
+            1.5
+          ],
+          "type": "gas_bidirectional"
+        },
+        {
+          "id": "branch_06",
+          "offset_m": [
+            3.0,
+            0.375
+          ],
+          "type": "gas_bidirectional"
+        },
+        {
+          "id": "branch_07",
+          "offset_m": [
+            0.0,
+            -1.5
+          ],
+          "type": "gas_bidirectional"
+        },
+        {
+          "id": "branch_08",
+          "offset_m": [
+            -3.0,
+            0.0
+          ],
+          "type": "gas_bidirectional"
+        },
+        {
+          "id": "branch_09",
+          "offset_m": [
+            0.75,
+            1.5
+          ],
+          "type": "gas_bidirectional"
+        },
+        {
+          "id": "branch_10",
+          "offset_m": [
+            3.0,
+            -0.375
+          ],
+          "type": "gas_bidirectional"
+        },
+        {
+          "id": "branch_11",
+          "offset_m": [
+            -2.0,
+            -1.5
+          ],
+          "type": "gas_bidirectional"
+        },
+        {
+          "id": "branch_12",
+          "offset_m": [
+            -3.0,
+            1.0
+          ],
+          "type": "gas_bidirectional"
+        },
+        {
+          "id": "branch_13",
+          "offset_m": [
+            2.25,
+            1.5
+          ],
+          "type": "gas_bidirectional"
+        },
+        {
+          "id": "branch_14",
+          "offset_m": [
+            3.0,
+            -1.125
+          ],
+          "type": "gas_bidirectional"
+        }
+      ],
+      "pressure_drop_at_capacity_mpa": 0.01,
+      "safety_category": "hydrocarbon_treatment"
+    }
+  ],
+  "provenance": {
+    "classification": "synthetic benchmark assumption",
+    "note": "Deterministic development-case data; not vendor data or production engineering criteria."
+  },
+  "units": {
+    "annual_maintenance": "MBCU/year",
+    "capacity": "kg/s gas, or kg/s liquid for closed drains",
+    "capex": "MBCU",
+    "clearance": "m",
+    "dimensionless_efficiency_and_fraction": "1",
+    "flow": "kg/s",
+    "footprint_and_port_offsets": "m",
+    "free_liquid_loading": "kg liquid/kg gas",
+    "length": "m",
+    "liquid_rate": "kg/s",
+    "orientation": "degree",
+    "power_and_duty": "MW",
+    "pressure": "MPa",
+    "pressure_ratio": "1",
+    "temperature": "degC",
+    "temperature_coefficient": "K/MPa"
+  }
+}

@@ -1,0 +1,2899 @@
+{
+ "checks": [
+  {
+   "name": "geometry/layout (footprints, separations, envelopes, pipes, roads)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "INJ-LOW: velocity G-TIE-IN = 6.90 <= 25.0",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "INJ-LOW: class rating G-TIE-IN (CS-WET-100) >= 6.50",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "INJ-LOW: conv G-TIE-IN",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "INJ-LOW: velocity G-IN-1 = 6.93 <= 25.0",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "INJ-LOW: class rating G-IN-1 (CS-WET-100) >= 6.47",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "INJ-LOW: conv G-IN-1",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "INJ-LOW: velocity G-C1S = 4.72 <= 25.0",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "INJ-LOW: class rating G-C1S (CS-WET-100) >= 6.46",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "INJ-LOW: conv G-C1S",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "INJ-LOW: velocity G-C1D = 6.85 <= 25.0",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "INJ-LOW: class rating G-C1D (CS-WET-160) >= 8.71",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "INJ-LOW: conv G-C1D",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "INJ-LOW: velocity G-C2S = 4.72 <= 25.0",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "INJ-LOW: class rating G-C2S (CS-WET-100) >= 6.46",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "INJ-LOW: conv G-C2S",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "INJ-LOW: velocity G-C2D = 6.85 <= 25.0",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "INJ-LOW: class rating G-C2D (CS-WET-160) >= 8.71",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "INJ-LOW: conv G-C2D",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "INJ-LOW: velocity G-CD-CL = 7.72 <= 25.0",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "INJ-LOW: class rating G-CD-CL (CS-WET-160) >= 8.69",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "INJ-LOW: conv G-CD-CL",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "INJ-LOW: velocity G-CL-W = 7.60 <= 25.0",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "INJ-LOW: class rating G-CL-W (CS-WET-160) >= 8.63",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "INJ-LOW: conv G-CL-W",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "INJ-LOW: velocity G-W-1 = 7.32 <= 25.0",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "INJ-LOW: class rating G-W-1 (CS-WET-160) >= 8.60",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "INJ-LOW: conv G-W-1",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "INJ-LOW: velocity G-W-2 = 7.32 <= 25.0",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "INJ-LOW: class rating G-W-2 (CS-WET-160) >= 8.61",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "INJ-LOW: conv G-W-2",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "INJ-LOW: velocity G-W-3 = 7.32 <= 25.0",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "INJ-LOW: class rating G-W-3 (CS-WET-160) >= 8.61",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "INJ-LOW: conv G-W-3",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "INJ-LOW: velocity G-W-4 = 7.32 <= 25.0",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "INJ-LOW: class rating G-W-4 (CS-WET-160) >= 8.61",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "INJ-LOW: conv G-W-4",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "INJ-LOW: velocity G-W-5 = 7.32 <= 25.0",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "INJ-LOW: class rating G-W-5 (CS-WET-160) >= 8.60",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "INJ-LOW: conv G-W-5",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "INJ-LOW: velocity G-W-6 = 7.32 <= 25.0",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "INJ-LOW: class rating G-W-6 (CS-WET-160) >= 8.60",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "INJ-LOW: conv G-W-6",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "INJ-MID: velocity G-TIE-IN = 5.75 <= 25.0",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "INJ-MID: class rating G-TIE-IN (CS-WET-100) >= 6.50",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "INJ-MID: conv G-TIE-IN",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "INJ-MID: velocity G-IN-1 = 5.77 <= 25.0",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "INJ-MID: class rating G-IN-1 (CS-WET-100) >= 6.47",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "INJ-MID: conv G-IN-1",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "INJ-MID: velocity G-C1S = 3.93 <= 25.0",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "INJ-MID: class rating G-C1S (CS-WET-100) >= 6.46",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "INJ-MID: conv G-C1S",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "INJ-MID: velocity G-C1D = 4.82 <= 25.0",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "INJ-MID: class rating G-C1D (CS-WET-160) >= 11.18",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "INJ-MID: conv G-C1D",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "INJ-MID: velocity G-C2S = 3.93 <= 25.0",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "INJ-MID: class rating G-C2S (CS-WET-100) >= 6.46",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "INJ-MID: conv G-C2S",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "INJ-MID: velocity G-C2D = 4.82 <= 25.0",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "INJ-MID: class rating G-C2D (CS-WET-160) >= 11.18",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "INJ-MID: conv G-C2D",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "INJ-MID: velocity G-CD-CL = 5.42 <= 25.0",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "INJ-MID: class rating G-CD-CL (CS-WET-160) >= 11.17",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "INJ-MID: conv G-CD-CL",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "INJ-MID: velocity G-CL-W = 4.95 <= 25.0",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "INJ-MID: class rating G-CL-W (CS-WET-160) >= 11.12",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "INJ-MID: conv G-CL-W",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "INJ-MID: velocity G-W-1 = 4.76 <= 25.0",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "INJ-MID: class rating G-W-1 (CS-WET-160) >= 11.10",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "INJ-MID: conv G-W-1",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "INJ-MID: velocity G-W-2 = 4.76 <= 25.0",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "INJ-MID: class rating G-W-2 (CS-WET-160) >= 11.10",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "INJ-MID: conv G-W-2",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "INJ-MID: velocity G-W-3 = 4.76 <= 25.0",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "INJ-MID: class rating G-W-3 (CS-WET-160) >= 11.10",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "INJ-MID: conv G-W-3",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "INJ-MID: velocity G-W-4 = 4.76 <= 25.0",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "INJ-MID: class rating G-W-4 (CS-WET-160) >= 11.10",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "INJ-MID: conv G-W-4",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "INJ-MID: velocity G-W-5 = 4.76 <= 25.0",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "INJ-MID: class rating G-W-5 (CS-WET-160) >= 11.10",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "INJ-MID: conv G-W-5",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "INJ-MID: velocity G-W-6 = 4.76 <= 25.0",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "INJ-MID: class rating G-W-6 (CS-WET-160) >= 11.10",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "INJ-MID: conv G-W-6",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "INJ-HIGH: velocity G-TIE-IN = 4.31 <= 25.0",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "INJ-HIGH: class rating G-TIE-IN (CS-WET-100) >= 6.50",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "INJ-HIGH: conv G-TIE-IN",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "INJ-HIGH: velocity G-IN-1 = 4.33 <= 25.0",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "INJ-HIGH: class rating G-IN-1 (CS-WET-100) >= 6.47",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "INJ-HIGH: conv G-IN-1",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "INJ-HIGH: velocity G-C1S = 2.95 <= 25.0",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "INJ-HIGH: class rating G-C1S (CS-WET-100) >= 6.47",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "INJ-HIGH: conv G-C1S",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "INJ-HIGH: velocity G-C1D = 3.15 <= 25.0",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "INJ-HIGH: class rating G-C1D (CS-WET-160) >= 13.66",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "INJ-HIGH: conv G-C1D",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "INJ-HIGH: velocity G-C2S = 2.95 <= 25.0",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "INJ-HIGH: class rating G-C2S (CS-WET-100) >= 6.47",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "INJ-HIGH: conv G-C2S",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "INJ-HIGH: velocity G-C2D = 3.15 <= 25.0",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "INJ-HIGH: class rating G-C2D (CS-WET-160) >= 13.66",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "INJ-HIGH: conv G-C2D",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "INJ-HIGH: velocity G-CD-CL = 3.54 <= 25.0",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "INJ-HIGH: class rating G-CD-CL (CS-WET-160) >= 13.65",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "INJ-HIGH: conv G-CD-CL",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "INJ-HIGH: velocity G-CL-W = 3.04 <= 25.0",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "INJ-HIGH: class rating G-CL-W (CS-WET-160) >= 13.61",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "INJ-HIGH: conv G-CL-W",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "INJ-HIGH: velocity G-W-1 = 2.92 <= 25.0",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "INJ-HIGH: class rating G-W-1 (CS-WET-160) >= 13.60",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "INJ-HIGH: conv G-W-1",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "INJ-HIGH: velocity G-W-2 = 2.92 <= 25.0",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "INJ-HIGH: class rating G-W-2 (CS-WET-160) >= 13.60",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "INJ-HIGH: conv G-W-2",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "INJ-HIGH: velocity G-W-3 = 2.92 <= 25.0",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "INJ-HIGH: class rating G-W-3 (CS-WET-160) >= 13.60",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "INJ-HIGH: conv G-W-3",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "INJ-HIGH: velocity G-W-4 = 2.92 <= 25.0",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "INJ-HIGH: class rating G-W-4 (CS-WET-160) >= 13.60",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "INJ-HIGH: conv G-W-4",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "INJ-HIGH: velocity G-W-5 = 2.92 <= 25.0",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "INJ-HIGH: class rating G-W-5 (CS-WET-160) >= 13.60",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "INJ-HIGH: conv G-W-5",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "INJ-HIGH: velocity G-W-6 = 2.92 <= 25.0",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "INJ-HIGH: class rating G-W-6 (CS-WET-160) >= 13.60",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "INJ-HIGH: conv G-W-6",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-HIGH: velocity G-W-1 = 4.86 <= 25.0",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-HIGH: class rating G-W-1 (CS-WET-160) >= 11.98",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-HIGH: conv G-W-1",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-HIGH: velocity G-W-2 = 4.86 <= 25.0",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-HIGH: class rating G-W-2 (CS-WET-160) >= 11.99",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-HIGH: conv G-W-2",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-HIGH: velocity G-W-3 = 4.86 <= 25.0",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-HIGH: class rating G-W-3 (CS-WET-160) >= 11.99",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-HIGH: conv G-W-3",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-HIGH: velocity G-W-4 = 4.86 <= 25.0",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-HIGH: class rating G-W-4 (CS-WET-160) >= 11.99",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-HIGH: conv G-W-4",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-HIGH: velocity G-W-5 = 4.86 <= 25.0",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-HIGH: class rating G-W-5 (CS-WET-160) >= 11.99",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-HIGH: conv G-W-5",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-HIGH: velocity G-W-6 = 4.86 <= 25.0",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-HIGH: class rating G-W-6 (CS-WET-160) >= 11.99",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-HIGH: conv G-W-6",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-HIGH: velocity G-W-REG = 5.07 <= 25.0",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-HIGH: class rating G-W-REG (CS-WET-160) >= 11.97",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-HIGH: conv G-W-REG",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-HIGH: velocity G-REG-R = 9.00 <= 25.0",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-HIGH: class rating G-REG-R (CS-WET-100) >= 6.50",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-HIGH: conv G-REG-R",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-HIGH: velocity G-R-S1 = 10.15 <= 25.0",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-HIGH: class rating G-R-S1 (CS-WET-100) >= 6.48",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-HIGH: conv G-R-S1",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-HIGH: velocity G-S1-D1 = 10.22 <= 25.0",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-HIGH: class rating G-S1-D1 (CS-WET-100) >= 6.44",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-HIGH: conv G-S1-D1",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-HIGH: velocity G-D1-T = 10.39 <= 25.0",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-HIGH: class rating G-D1-T (CS-WET-100) >= 6.33",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-HIGH: conv G-D1-T",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-HIGH: velocity G-R-S2 = 10.15 <= 25.0",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-HIGH: class rating G-R-S2 (CS-WET-100) >= 6.48",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-HIGH: conv G-R-S2",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-HIGH: velocity G-S2-D2 = 10.22 <= 25.0",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-HIGH: class rating G-S2-D2 (CS-WET-100) >= 6.44",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-HIGH: conv G-S2-D2",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-HIGH: velocity G-D2-T = 10.39 <= 25.0",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-HIGH: class rating G-D2-T (CS-WET-100) >= 6.33",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-HIGH: conv G-D2-T",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-HIGH: velocity G-T-M = 20.86 <= 25.0",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-HIGH: class rating G-T-M (CS-WET-100) >= 6.30",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-HIGH: conv G-T-M",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-HIGH: velocity G-M-TO = 13.40 <= 25.0",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-HIGH: class rating G-M-TO (CS-WET-100) >= 6.28",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-HIGH: conv G-M-TO",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-HIGH: velocity G-TO-TIE = 13.47 <= 25.0",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-HIGH: class rating G-TO-TIE (CS-WET-100) >= 6.24",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-HIGH: conv G-TO-TIE",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-MID: velocity G-W-1 = 6.02 <= 25.0",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-MID: class rating G-W-1 (CS-WET-160) >= 7.98",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-MID: conv G-W-1",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-MID: velocity G-W-2 = 6.02 <= 25.0",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-MID: class rating G-W-2 (CS-WET-160) >= 7.99",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-MID: conv G-W-2",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-MID: velocity G-W-3 = 6.02 <= 25.0",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-MID: class rating G-W-3 (CS-WET-160) >= 7.99",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-MID: conv G-W-3",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-MID: velocity G-W-4 = 6.02 <= 25.0",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-MID: class rating G-W-4 (CS-WET-160) >= 7.99",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-MID: conv G-W-4",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-MID: velocity G-W-5 = 6.02 <= 25.0",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-MID: class rating G-W-5 (CS-WET-160) >= 7.99",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-MID: conv G-W-5",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-MID: velocity G-W-6 = 6.02 <= 25.0",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-MID: class rating G-W-6 (CS-WET-160) >= 7.98",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-MID: conv G-W-6",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-MID: velocity G-W-REG = 6.29 <= 25.0",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-MID: class rating G-W-REG (CS-WET-160) >= 7.98",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-MID: conv G-W-REG",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-MID: velocity G-REG-R = 7.63 <= 25.0",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-MID: class rating G-REG-R (CS-WET-100) >= 6.50",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-MID: conv G-REG-R",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-MID: velocity G-R-S1 = 8.60 <= 25.0",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-MID: class rating G-R-S1 (CS-WET-100) >= 6.49",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-MID: conv G-R-S1",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-MID: velocity G-S1-D1 = 8.66 <= 25.0",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-MID: class rating G-S1-D1 (CS-WET-100) >= 6.45",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-MID: conv G-S1-D1",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-MID: velocity G-D1-T = 8.80 <= 25.0",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-MID: class rating G-D1-T (CS-WET-100) >= 6.34",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-MID: conv G-D1-T",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-MID: velocity G-R-S2 = 8.60 <= 25.0",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-MID: class rating G-R-S2 (CS-WET-100) >= 6.49",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-MID: conv G-R-S2",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-MID: velocity G-S2-D2 = 8.66 <= 25.0",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-MID: class rating G-S2-D2 (CS-WET-100) >= 6.45",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-MID: conv G-S2-D2",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-MID: velocity G-D2-T = 8.80 <= 25.0",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-MID: class rating G-D2-T (CS-WET-100) >= 6.34",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-MID: conv G-D2-T",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-MID: velocity G-T-M = 17.64 <= 25.0",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-MID: class rating G-T-M (CS-WET-100) >= 6.32",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-MID: conv G-T-M",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-MID: velocity G-M-TO = 11.32 <= 25.0",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-MID: class rating G-M-TO (CS-WET-100) >= 6.30",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-MID: conv G-M-TO",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-MID: velocity G-TO-TIE = 11.38 <= 25.0",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-MID: class rating G-TO-TIE (CS-WET-100) >= 6.27",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-MID: conv G-TO-TIE",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-LOW: velocity G-W-1 = 7.41 <= 25.0",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-LOW: class rating G-W-1 (CS-WET-160) >= 4.49",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-LOW: conv G-W-1",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-LOW: velocity G-W-2 = 7.41 <= 25.0",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-LOW: class rating G-W-2 (CS-WET-160) >= 4.49",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-LOW: conv G-W-2",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-LOW: velocity G-W-3 = 7.41 <= 25.0",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-LOW: class rating G-W-3 (CS-WET-160) >= 4.49",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-LOW: conv G-W-3",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-LOW: velocity G-W-4 = 7.41 <= 25.0",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-LOW: class rating G-W-4 (CS-WET-160) >= 4.49",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-LOW: conv G-W-4",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-LOW: velocity G-W-5 = 7.41 <= 25.0",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-LOW: class rating G-W-5 (CS-WET-160) >= 4.49",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-LOW: conv G-W-5",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-LOW: velocity G-W-6 = 7.41 <= 25.0",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-LOW: class rating G-W-6 (CS-WET-160) >= 4.49",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-LOW: conv G-W-6",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-LOW: velocity G-W-REG = 7.74 <= 25.0",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-LOW: class rating G-W-REG (CS-WET-160) >= 4.48",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-LOW: conv G-W-REG",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-LOW: velocity G-REG-R = 7.74 <= 25.0",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-LOW: class rating G-REG-R (CS-WET-100) >= 4.48",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-LOW: conv G-REG-R",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-LOW: velocity G-R-S1 = 8.72 <= 25.0",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-LOW: class rating G-R-S1 (CS-WET-100) >= 4.47",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-LOW: conv G-R-S1",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-LOW: velocity G-S1-D1 = 8.80 <= 25.0",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-LOW: class rating G-S1-D1 (CS-WET-100) >= 4.43",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-LOW: conv G-S1-D1",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-LOW: velocity G-D1-T = 9.01 <= 25.0",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-LOW: class rating G-D1-T (CS-WET-100) >= 4.33",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-LOW: conv G-D1-T",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-LOW: velocity G-R-S2 = 8.72 <= 25.0",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-LOW: class rating G-R-S2 (CS-WET-100) >= 4.47",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-LOW: conv G-R-S2",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-LOW: velocity G-S2-D2 = 8.80 <= 25.0",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-LOW: class rating G-S2-D2 (CS-WET-100) >= 4.43",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-LOW: conv G-S2-D2",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-LOW: velocity G-D2-T = 9.01 <= 25.0",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-LOW: class rating G-D2-T (CS-WET-100) >= 4.33",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-LOW: conv G-D2-T",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-LOW: velocity G-T-CS = 8.02 <= 25.0",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-LOW: class rating G-T-CS (CS-WET-100) >= 4.32",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-LOW: conv G-T-CS",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-LOW: velocity G-C1S = 4.01 <= 25.0",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-LOW: class rating G-C1S (CS-WET-100) >= 4.32",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-LOW: conv G-C1S",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-LOW: velocity G-C1D = 5.55 <= 25.0",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-LOW: class rating G-C1D (CS-WET-160) >= 6.25",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-LOW: conv G-C1D",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-LOW: velocity G-C2S = 4.01 <= 25.0",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-LOW: class rating G-C2S (CS-WET-100) >= 4.32",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-LOW: conv G-C2S",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-LOW: velocity G-C2D = 5.55 <= 25.0",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-LOW: class rating G-C2D (CS-WET-160) >= 6.25",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-LOW: conv G-C2D",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-LOW: velocity G-CD-M = 9.00 <= 25.0",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-LOW: class rating G-CD-M (CS-WET-100) >= 6.24",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-LOW: conv G-CD-M",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-LOW: velocity G-M-TO = 9.02 <= 25.0",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-LOW: class rating G-M-TO (CS-WET-100) >= 6.23",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-LOW: conv G-M-TO",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-LOW: velocity G-TO-TIE = 9.06 <= 25.0",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-LOW: class rating G-TO-TIE (CS-WET-100) >= 6.20",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-LOW: conv G-TO-TIE",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "INJ-LOW: delivered pressure 8.6000 >= 8.5",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "INJ-LOW: delivery temperature 45.00 in [-10,60]",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "INJ-LOW: source water 40 <= 50 (dry, no dehydration required)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "INJ-LOW: delivered free liquid 0.0 <= 1e-4",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "INJ-LOW: C-1 flow 60.0 in [15,60]",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "INJ-LOW: C-1 ratio 1.350 <= 2.4",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "INJ-LOW: C-1 Pd 8.714 <= 16",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "INJ-LOW: C-1 Ps 6.456 <= 14",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "INJ-LOW: C-1 Ts 25.0 <= 65.0",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "INJ-LOW: C-1 Tout 51.7 <= 150.0",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "INJ-LOW: C-1 power 4.09 <= 32.0",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "INJ-LOW: C-2 flow 60.0 in [15,60]",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "INJ-LOW: C-2 ratio 1.350 <= 2.4",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "INJ-LOW: C-2 Pd 8.714 <= 16",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "INJ-LOW: C-2 Ps 6.456 <= 14",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "INJ-LOW: C-2 Ts 25.0 <= 65.0",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "INJ-LOW: C-2 Tout 51.7 <= 150.0",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "INJ-LOW: C-2 power 4.09 <= 32.0",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "INJ-LOW: cooler outlet 45.00 >= 35.0",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "INJ-LOW: cooler duty 1.96 <= 32.0",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "INJ-LOW: cooler capacity 120 <= 120",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "INJ-LOW: injection meter MTR-I capacity 160 >= 120",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "INJ-MID: delivered pressure 11.1000 >= 11.0",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "INJ-MID: delivery temperature 45.00 in [-10,60]",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "INJ-MID: source water 40 <= 50 (dry, no dehydration required)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "INJ-MID: delivered free liquid 0.0 <= 1e-4",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "INJ-MID: C-1 flow 50.0 in [15,60]",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "INJ-MID: C-1 ratio 1.730 <= 2.4",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "INJ-MID: C-1 Pd 11.181 <= 16",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "INJ-MID: C-1 Ps 6.461 <= 14",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "INJ-MID: C-1 Ts 25.0 <= 65.0",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "INJ-MID: C-1 Tout 75.3 <= 150.0",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "INJ-MID: C-1 power 6.42 <= 32.0",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "INJ-MID: C-2 flow 50.0 in [15,60]",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "INJ-MID: C-2 ratio 1.730 <= 2.4",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "INJ-MID: C-2 Pd 11.181 <= 16",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "INJ-MID: C-2 Ps 6.461 <= 14",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "INJ-MID: C-2 Ts 25.0 <= 65.0",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "INJ-MID: C-2 Tout 75.3 <= 150.0",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "INJ-MID: C-2 power 6.42 <= 32.0",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "INJ-MID: cooler outlet 45.00 >= 35.0",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "INJ-MID: cooler duty 7.41 <= 32.0",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "INJ-MID: cooler capacity 100 <= 120",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "INJ-MID: injection meter MTR-I capacity 160 >= 100",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "INJ-HIGH: delivered pressure 13.6000 >= 13.5",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "INJ-HIGH: delivery temperature 45.00 in [-10,60]",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "INJ-HIGH: source water 40 <= 50 (dry, no dehydration required)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "INJ-HIGH: delivered free liquid 0.0 <= 1e-4",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "INJ-HIGH: C-1 flow 37.5 in [15,60]",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "INJ-HIGH: C-1 ratio 2.112 <= 2.4",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "INJ-HIGH: C-1 Pd 13.658 <= 16",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "INJ-HIGH: C-1 Ps 6.467 <= 14",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "INJ-HIGH: C-1 Ts 25.0 <= 65.0",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "INJ-HIGH: C-1 Tout 95.2 <= 150.0",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "INJ-HIGH: C-1 power 6.72 <= 32.0",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "INJ-HIGH: C-2 flow 37.5 in [15,60]",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "INJ-HIGH: C-2 ratio 2.112 <= 2.4",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "INJ-HIGH: C-2 Pd 13.658 <= 16",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "INJ-HIGH: C-2 Ps 6.467 <= 14",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "INJ-HIGH: C-2 Ts 25.0 <= 65.0",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "INJ-HIGH: C-2 Tout 95.2 <= 150.0",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "INJ-HIGH: C-2 power 6.72 <= 32.0",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "INJ-HIGH: cooler outlet 45.00 >= 35.0",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "INJ-HIGH: cooler duty 9.22 <= 32.0",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "INJ-HIGH: cooler capacity 75 <= 120",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "INJ-HIGH: injection meter MTR-I capacity 160 >= 75",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-HIGH: delivered pressure 6.2450 >= 6.0",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-HIGH: delivery temperature 13.43 in [-10,60]",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-HIGH: separator feed liquid 0.01 <= 0.05",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-HIGH: SEP-1 gas 60.0 <= cap 120",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-HIGH: SEP-1 liquid 0.5997 <= 2.0",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-HIGH: SEP-1 inlet P 6.45 <= 10",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-HIGH: DEH-1 feed liquid 5.00e-06 <= 0.0001",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-HIGH: DEH-1 outlet water 35 <= 50",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-HIGH: DEH-1 inlet P 6.34 <= 10",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-HIGH: DEH-1 gas 60.0 <= cap 120",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-HIGH: SEP-2 gas 60.0 <= cap 120",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-HIGH: SEP-2 liquid 0.5997 <= 2.0",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-HIGH: SEP-2 inlet P 6.44 <= 10",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-HIGH: DEH-2 feed liquid 5.00e-06 <= 0.0001",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-HIGH: DEH-2 outlet water 35 <= 50",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-HIGH: DEH-2 inlet P 6.34 <= 10",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-HIGH: DEH-2 gas 60.0 <= cap 120",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-HIGH: REG-W inlet <= 16",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-HIGH: REG-W flow 120 <= cap 180",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-HIGH: DRN-1 liquid 0.5997 <= cap 2.0",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-HIGH: DRN-1 pressure <= 1.0 MPa",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-HIGH: DRN-2 liquid 0.5997 <= cap 2.0",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-HIGH: DRN-2 pressure <= 1.0 MPa",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-HIGH: outfall liquid 1.1994 <= 10.0",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-HIGH: withdrawal meter MTR-O capacity 160 >= 120",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-MID: delivered pressure 6.2732 >= 6.0",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-MID: delivery temperature 18.23 in [-10,60]",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-MID: separator feed liquid 0.01 <= 0.05",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-MID: SEP-1 gas 50.0 <= cap 120",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-MID: SEP-1 liquid 0.4998 <= 2.0",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-MID: SEP-1 inlet P 6.45 <= 10",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-MID: DEH-1 feed liquid 5.00e-06 <= 0.0001",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-MID: DEH-1 outlet water 35 <= 50",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-MID: DEH-1 inlet P 6.35 <= 10",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-MID: DEH-1 gas 50.0 <= cap 120",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-MID: SEP-2 gas 50.0 <= cap 120",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-MID: SEP-2 liquid 0.4998 <= 2.0",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-MID: SEP-2 inlet P 6.45 <= 10",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-MID: DEH-2 feed liquid 5.00e-06 <= 0.0001",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-MID: DEH-2 outlet water 35 <= 50",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-MID: DEH-2 inlet P 6.35 <= 10",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-MID: DEH-2 gas 50.0 <= cap 120",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-MID: REG-W inlet <= 16",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-MID: REG-W flow 100 <= cap 180",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-MID: DRN-1 liquid 0.4998 <= cap 2.0",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-MID: DRN-1 pressure <= 1.0 MPa",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-MID: DRN-2 liquid 0.4998 <= cap 2.0",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-MID: DRN-2 pressure <= 1.0 MPa",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-MID: outfall liquid 0.9995 <= 10.0",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-MID: withdrawal meter MTR-O capacity 160 >= 100",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-LOW: delivered pressure 6.2000 >= 6.0",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-LOW: delivery temperature 52.70 in [-10,60]",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-LOW: separator feed liquid 0.01 <= 0.05",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-LOW: SEP-1 gas 35.0 <= cap 120",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-LOW: SEP-1 liquid 0.3498 <= 2.0",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-LOW: SEP-1 inlet P 4.44 <= 10",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-LOW: DEH-1 feed liquid 5.00e-06 <= 0.0001",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-LOW: DEH-1 outlet water 35 <= 50",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-LOW: DEH-1 inlet P 4.33 <= 10",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-LOW: DEH-1 gas 35.0 <= cap 120",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-LOW: SEP-2 gas 35.0 <= cap 120",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-LOW: SEP-2 liquid 0.3498 <= 2.0",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-LOW: SEP-2 inlet P 4.44 <= 10",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-LOW: DEH-2 feed liquid 5.00e-06 <= 0.0001",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-LOW: DEH-2 outlet water 35 <= 50",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-LOW: DEH-2 inlet P 4.33 <= 10",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-LOW: DEH-2 gas 35.0 <= cap 120",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-LOW: REG-W inlet <= 16",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-LOW: REG-W flow 70 <= cap 180",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-LOW: DRN-1 liquid 0.3498 <= cap 2.0",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-LOW: DRN-1 pressure <= 1.0 MPa",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-LOW: DRN-2 liquid 0.3498 <= cap 2.0",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-LOW: DRN-2 pressure <= 1.0 MPa",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-LOW: outfall liquid 0.6997 <= 10.0",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-LOW: C-1 flow 35.0 in [15,60]",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-LOW: C-1 ratio 1.449 <= 2.4",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-LOW: C-2 flow 35.0 in [15,60]",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-LOW: C-2 ratio 1.449 <= 2.4",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-LOW: boost Tout 52.73 <= 60",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-LOW: withdrawal meter MTR-O capacity 160 >= 70",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-HIGH: liquid velocity L-S1 = 0.055 <= 3.0",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-HIGH: liquid velocity L-S2 = 0.055 <= 3.0",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-HIGH: liquid velocity L-D1-O = 0.110 <= 3.0",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-HIGH: liquid velocity L-D2-O = 0.110 <= 3.0",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-MID: liquid velocity L-S1 = 0.046 <= 3.0",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-MID: liquid velocity L-S2 = 0.046 <= 3.0",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-MID: liquid velocity L-D1-O = 0.091 <= 3.0",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-MID: liquid velocity L-D2-O = 0.091 <= 3.0",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-LOW: liquid velocity L-S1 = 0.032 <= 3.0",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-LOW: liquid velocity L-S2 = 0.032 <= 3.0",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-LOW: liquid velocity L-D1-O = 0.064 <= 3.0",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-LOW: liquid velocity L-D2-O = 0.064 <= 3.0",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "INJ-LOW: per-well flow 20.00 <= 25",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "INJ-MID: per-well flow 16.67 <= 25",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "INJ-HIGH: per-well flow 12.50 <= 25",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-HIGH: per-well flow 20.00 <= 25",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-MID: per-well flow 16.67 <= 25",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-LOW: per-well flow 11.67 <= 25",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "GRID-TIE flow <= 160",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "header HDR-CS branches used 5 <= 10",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "INJ-LOW: header HDR-CS flow 120 <= cap 120",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "INJ-MID: header HDR-CS flow 100 <= cap 120",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "INJ-HIGH: header HDR-CS flow 75 <= cap 120",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-LOW: header HDR-CS flow 70 <= cap 120",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "header HDR-CD branches used 5 <= 10",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "INJ-LOW: header HDR-CD flow 120 <= cap 120",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "INJ-MID: header HDR-CD flow 100 <= cap 120",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "INJ-HIGH: header HDR-CD flow 75 <= cap 120",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-LOW: header HDR-CD flow 70 <= cap 120",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "header HDR-W branches used 8 <= 10",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "INJ-LOW: header HDR-W flow 120 <= cap 120",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "INJ-MID: header HDR-W flow 100 <= cap 120",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "INJ-HIGH: header HDR-W flow 75 <= cap 120",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-HIGH: header HDR-W flow 120 <= cap 120",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-MID: header HDR-W flow 100 <= cap 120",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-LOW: header HDR-W flow 70 <= cap 120",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "header HDR-R branches used 3 <= 10",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-HIGH: header HDR-R flow 120 <= cap 120",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-MID: header HDR-R flow 100 <= cap 120",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-LOW: header HDR-R flow 70 <= cap 120",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "header HDR-T branches used 4 <= 10",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-HIGH: header HDR-T flow 120 <= cap 120",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-MID: header HDR-T flow 100 <= cap 120",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-LOW: header HDR-T flow 70 <= cap 120",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "header HDR-M branches used 3 <= 10",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-HIGH: header HDR-M flow 120 <= cap 120",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-MID: header HDR-M flow 100 <= cap 120",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "WDR-LOW: header HDR-M flow 70 <= cap 120",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "interface cardinality GRID-TIE.gas = 2 <= 2",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "port cardinality MTR-I.gas_in = 1 <= 1",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "port cardinality MTR-I.gas_out = 1 <= 1",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "port cardinality HDR-CS.branch_03 = 1 <= 1",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "port cardinality HDR-CS.branch_04 = 1 <= 1",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "port cardinality C-1.suction = 1 <= 1",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "port cardinality HDR-CS.branch_05 = 1 <= 1",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "port cardinality C-2.suction = 1 <= 1",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "port cardinality HDR-CS.branch_02 = 1 <= 1",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "port cardinality C-3.suction = 1 <= 1",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "port cardinality C-1.discharge = 1 <= 1",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "port cardinality HDR-CD.branch_08 = 1 <= 1",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "port cardinality C-2.discharge = 1 <= 1",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "port cardinality HDR-CD.branch_07 = 1 <= 1",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "port cardinality C-3.discharge = 1 <= 1",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "port cardinality HDR-CD.branch_10 = 1 <= 1",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "port cardinality HDR-CD.branch_04 = 1 <= 1",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "port cardinality COOL.gas_in = 1 <= 1",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "port cardinality COOL.gas_out = 1 <= 1",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "port cardinality HDR-W.branch_02 = 1 <= 1",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "port cardinality HDR-W.branch_01 = 1 <= 1",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "interface cardinality WG-01.gas = 1 <= 1",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "port cardinality HDR-W.branch_04 = 1 <= 1",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "interface cardinality WG-02.gas = 1 <= 1",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "port cardinality HDR-W.branch_05 = 1 <= 1",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "interface cardinality WG-03.gas = 1 <= 1",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "port cardinality HDR-W.branch_07 = 1 <= 1",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "interface cardinality WG-04.gas = 1 <= 1",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "port cardinality HDR-W.branch_03 = 1 <= 1",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "interface cardinality WG-05.gas = 1 <= 1",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "port cardinality HDR-W.branch_08 = 1 <= 1",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "interface cardinality WG-06.gas = 1 <= 1",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "port cardinality HDR-W.branch_06 = 1 <= 1",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "port cardinality REG-W.gas_in = 1 <= 1",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "port cardinality REG-W.gas_out = 1 <= 1",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "port cardinality HDR-R.branch_01 = 1 <= 1",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "port cardinality HDR-R.branch_02 = 1 <= 1",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "port cardinality SEP-1.gas_in = 1 <= 1",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "port cardinality HDR-R.branch_03 = 1 <= 1",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "port cardinality SEP-2.gas_in = 1 <= 1",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "port cardinality SEP-1.gas_out = 1 <= 1",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "port cardinality DEH-1.gas_in = 1 <= 1",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "port cardinality SEP-2.gas_out = 1 <= 1",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "port cardinality DEH-2.gas_in = 1 <= 1",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "port cardinality DEH-1.gas_out = 1 <= 1",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "port cardinality HDR-T.branch_01 = 1 <= 1",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "port cardinality DEH-2.gas_out = 1 <= 1",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "port cardinality HDR-T.branch_02 = 1 <= 1",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "port cardinality HDR-T.branch_03 = 1 <= 1",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "port cardinality HDR-M.branch_01 = 1 <= 1",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "port cardinality HDR-M.branch_03 = 1 <= 1",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "port cardinality MTR-O.gas_in = 1 <= 1",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "port cardinality MTR-O.gas_out = 1 <= 1",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "port cardinality HDR-T.branch_04 = 1 <= 1",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "port cardinality HDR-CS.branch_07 = 1 <= 1",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "port cardinality HDR-CD.branch_01 = 1 <= 1",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "port cardinality HDR-M.branch_02 = 1 <= 1",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "port cardinality SEP-1.liquid_out = 1 <= 1",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "port cardinality DRN-1.drain_in = 1 <= 1",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "port cardinality SEP-2.liquid_out = 1 <= 1",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "port cardinality DRN-2.drain_in = 1 <= 1",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "port cardinality DRN-1.drain_out = 1 <= 1",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "interface cardinality LIQUID-DRAIN-OUTFALL.drain = 2 <= 8",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "port cardinality DRN-2.drain_out = 1 <= 1",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "n-1 compressor INJ-LOW (lose C-1) retained cap 100 >= 84.0",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "n-1 compressor INJ-LOW (lose C-2) retained cap 100 >= 84.0",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "n-1 compressor INJ-LOW (lose C-3) retained cap 120 >= 84.0",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "n-1 compressor INJ-MID (lose C-1) retained cap 100 >= 70.0",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "n-1 compressor INJ-MID (lose C-2) retained cap 100 >= 70.0",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "n-1 compressor INJ-MID (lose C-3) retained cap 120 >= 70.0",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "n-1 compressor INJ-HIGH (lose C-1) retained cap 100 >= 52.5",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "n-1 compressor INJ-HIGH (lose C-2) retained cap 100 >= 52.5",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "n-1 compressor INJ-HIGH (lose C-3) retained cap 120 >= 52.5",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "n-1 withdrawal-treatment WDR-HIGH (lose SEP-1) retained train cap 120 >= 84.0",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "n-1 withdrawal-treatment WDR-HIGH (lose SEP-2) retained train cap 120 >= 84.0",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "n-1 withdrawal-treatment WDR-HIGH (lose DEH-1) retained train cap 120 >= 84.0",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "n-1 withdrawal-treatment WDR-HIGH (lose DEH-2) retained train cap 120 >= 84.0",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "n-1 withdrawal-treatment WDR-MID (lose SEP-1) retained train cap 120 >= 70.0",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "n-1 withdrawal-treatment WDR-MID (lose SEP-2) retained train cap 120 >= 70.0",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "n-1 withdrawal-treatment WDR-MID (lose DEH-1) retained train cap 120 >= 70.0",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "n-1 withdrawal-treatment WDR-MID (lose DEH-2) retained train cap 120 >= 70.0",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "n-1 boost WDR-LOW (lose C-1) retained cap 100 >= 49.0",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "n-1 boost WDR-LOW (lose C-2) retained cap 100 >= 49.0",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "n-1 boost WDR-LOW (lose C-3) retained cap 120 >= 49.0",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "n-1 withdrawal-treatment WDR-LOW (lose SEP-1) retained train cap 120 >= 49.0",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "n-1 withdrawal-treatment WDR-LOW (lose SEP-2) retained train cap 120 >= 49.0",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "n-1 withdrawal-treatment WDR-LOW (lose DEH-1) retained train cap 120 >= 49.0",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "n-1 withdrawal-treatment WDR-LOW (lose DEH-2) retained train cap 120 >= 49.0",
+   "ok": true,
+   "detail": ""
+  }
+ ],
+ "LCC": {
+  "total": 90.14689322428904,
+  "equipment_capex": 29.22,
+  "piping_capex": 1.8104194481879357,
+  "civil_capex": 0.35725676,
+  "energy_pv": 48.37161705901976,
+  "maintenance_pv": 10.387599957081353,
+  "annual_energy_mwh": 41056.30034840628,
+  "PVF": 9.818147407449294
+ }
+}

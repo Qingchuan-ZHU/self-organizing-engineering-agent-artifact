@@ -1,0 +1,401 @@
+{
+ "case_id": "UGS-SYNTH-D01",
+ "geometry_errors": [],
+ "operating_case_errors": [],
+ "lcc_mbcu": 91.17407993641945,
+ "annual_energy_mwh": 40832.64438428327,
+ "equipment_count": 20,
+ "pipeline_count": 36,
+ "n1_cases": [
+  {
+   "case": "INJ-LOW-N1-CMP-A",
+   "scenario": "INJ-LOW",
+   "outage": [
+    "compressor",
+    0
+   ],
+   "flow_kg_s": 120,
+   "retained_fraction": 1.0,
+   "required_fraction": 0.7,
+   "feasible": true,
+   "violations": []
+  },
+  {
+   "case": "INJ-LOW-N1-CMP-B",
+   "scenario": "INJ-LOW",
+   "outage": [
+    "compressor",
+    1
+   ],
+   "flow_kg_s": 120,
+   "retained_fraction": 1.0,
+   "required_fraction": 0.7,
+   "feasible": true,
+   "violations": []
+  },
+  {
+   "case": "INJ-LOW-N1-CMP-C",
+   "scenario": "INJ-LOW",
+   "outage": [
+    "compressor",
+    2
+   ],
+   "flow_kg_s": 120,
+   "retained_fraction": 1.0,
+   "required_fraction": 0.7,
+   "feasible": true,
+   "violations": []
+  },
+  {
+   "case": "INJ-MID-N1-CMP-A",
+   "scenario": "INJ-MID",
+   "outage": [
+    "compressor",
+    0
+   ],
+   "flow_kg_s": 100,
+   "retained_fraction": 1.0,
+   "required_fraction": 0.7,
+   "feasible": true,
+   "violations": []
+  },
+  {
+   "case": "INJ-MID-N1-CMP-B",
+   "scenario": "INJ-MID",
+   "outage": [
+    "compressor",
+    1
+   ],
+   "flow_kg_s": 100,
+   "retained_fraction": 1.0,
+   "required_fraction": 0.7,
+   "feasible": true,
+   "violations": []
+  },
+  {
+   "case": "INJ-MID-N1-CMP-C",
+   "scenario": "INJ-MID",
+   "outage": [
+    "compressor",
+    2
+   ],
+   "flow_kg_s": 100,
+   "retained_fraction": 1.0,
+   "required_fraction": 0.7,
+   "feasible": true,
+   "violations": []
+  },
+  {
+   "case": "INJ-HIGH-N1-CMP-A",
+   "scenario": "INJ-HIGH",
+   "outage": [
+    "compressor",
+    0
+   ],
+   "flow_kg_s": 75,
+   "retained_fraction": 1.0,
+   "required_fraction": 0.7,
+   "feasible": true,
+   "violations": []
+  },
+  {
+   "case": "INJ-HIGH-N1-CMP-B",
+   "scenario": "INJ-HIGH",
+   "outage": [
+    "compressor",
+    1
+   ],
+   "flow_kg_s": 75,
+   "retained_fraction": 1.0,
+   "required_fraction": 0.7,
+   "feasible": true,
+   "violations": []
+  },
+  {
+   "case": "INJ-HIGH-N1-CMP-C",
+   "scenario": "INJ-HIGH",
+   "outage": [
+    "compressor",
+    2
+   ],
+   "flow_kg_s": 75,
+   "retained_fraction": 1.0,
+   "required_fraction": 0.7,
+   "feasible": true,
+   "violations": []
+  },
+  {
+   "case": "WDR-HIGH-N1-SEP-A",
+   "scenario": "WDR-HIGH",
+   "outage": [
+    "separator",
+    0
+   ],
+   "flow_kg_s": 120,
+   "retained_fraction": 1.0,
+   "required_fraction": 0.7,
+   "feasible": true,
+   "violations": []
+  },
+  {
+   "case": "WDR-HIGH-N1-SEP-B",
+   "scenario": "WDR-HIGH",
+   "outage": [
+    "separator",
+    1
+   ],
+   "flow_kg_s": 120,
+   "retained_fraction": 1.0,
+   "required_fraction": 0.7,
+   "feasible": true,
+   "violations": []
+  },
+  {
+   "case": "WDR-HIGH-N1-SEP-C",
+   "scenario": "WDR-HIGH",
+   "outage": [
+    "separator",
+    2
+   ],
+   "flow_kg_s": 120,
+   "retained_fraction": 1.0,
+   "required_fraction": 0.7,
+   "feasible": true,
+   "violations": []
+  },
+  {
+   "case": "WDR-HIGH-N1-DEH-A",
+   "scenario": "WDR-HIGH",
+   "outage": [
+    "dehydration",
+    0
+   ],
+   "flow_kg_s": 120,
+   "retained_fraction": 1.0,
+   "required_fraction": 0.7,
+   "feasible": true,
+   "violations": []
+  },
+  {
+   "case": "WDR-HIGH-N1-DEH-B",
+   "scenario": "WDR-HIGH",
+   "outage": [
+    "dehydration",
+    1
+   ],
+   "flow_kg_s": 120,
+   "retained_fraction": 1.0,
+   "required_fraction": 0.7,
+   "feasible": true,
+   "violations": []
+  },
+  {
+   "case": "WDR-HIGH-N1-DEH-C",
+   "scenario": "WDR-HIGH",
+   "outage": [
+    "dehydration",
+    2
+   ],
+   "flow_kg_s": 120,
+   "retained_fraction": 1.0,
+   "required_fraction": 0.7,
+   "feasible": true,
+   "violations": []
+  },
+  {
+   "case": "WDR-MID-N1-SEP-A",
+   "scenario": "WDR-MID",
+   "outage": [
+    "separator",
+    0
+   ],
+   "flow_kg_s": 100,
+   "retained_fraction": 1.0,
+   "required_fraction": 0.7,
+   "feasible": true,
+   "violations": []
+  },
+  {
+   "case": "WDR-MID-N1-SEP-B",
+   "scenario": "WDR-MID",
+   "outage": [
+    "separator",
+    1
+   ],
+   "flow_kg_s": 100,
+   "retained_fraction": 1.0,
+   "required_fraction": 0.7,
+   "feasible": true,
+   "violations": []
+  },
+  {
+   "case": "WDR-MID-N1-SEP-C",
+   "scenario": "WDR-MID",
+   "outage": [
+    "separator",
+    2
+   ],
+   "flow_kg_s": 100,
+   "retained_fraction": 1.0,
+   "required_fraction": 0.7,
+   "feasible": true,
+   "violations": []
+  },
+  {
+   "case": "WDR-MID-N1-DEH-A",
+   "scenario": "WDR-MID",
+   "outage": [
+    "dehydration",
+    0
+   ],
+   "flow_kg_s": 100,
+   "retained_fraction": 1.0,
+   "required_fraction": 0.7,
+   "feasible": true,
+   "violations": []
+  },
+  {
+   "case": "WDR-MID-N1-DEH-B",
+   "scenario": "WDR-MID",
+   "outage": [
+    "dehydration",
+    1
+   ],
+   "flow_kg_s": 100,
+   "retained_fraction": 1.0,
+   "required_fraction": 0.7,
+   "feasible": true,
+   "violations": []
+  },
+  {
+   "case": "WDR-MID-N1-DEH-C",
+   "scenario": "WDR-MID",
+   "outage": [
+    "dehydration",
+    2
+   ],
+   "flow_kg_s": 100,
+   "retained_fraction": 1.0,
+   "required_fraction": 0.7,
+   "feasible": true,
+   "violations": []
+  },
+  {
+   "case": "WDR-LOW-N1-CMP-A",
+   "scenario": "WDR-LOW",
+   "outage": [
+    "compressor",
+    0
+   ],
+   "flow_kg_s": 70,
+   "retained_fraction": 1.0,
+   "required_fraction": 0.7,
+   "feasible": true,
+   "violations": []
+  },
+  {
+   "case": "WDR-LOW-N1-CMP-B",
+   "scenario": "WDR-LOW",
+   "outage": [
+    "compressor",
+    1
+   ],
+   "flow_kg_s": 70,
+   "retained_fraction": 1.0,
+   "required_fraction": 0.7,
+   "feasible": true,
+   "violations": []
+  },
+  {
+   "case": "WDR-LOW-N1-CMP-C",
+   "scenario": "WDR-LOW",
+   "outage": [
+    "compressor",
+    2
+   ],
+   "flow_kg_s": 70,
+   "retained_fraction": 1.0,
+   "required_fraction": 0.7,
+   "feasible": true,
+   "violations": []
+  },
+  {
+   "case": "WDR-LOW-N1-SEP-A",
+   "scenario": "WDR-LOW",
+   "outage": [
+    "separator",
+    0
+   ],
+   "flow_kg_s": 70,
+   "retained_fraction": 1.0,
+   "required_fraction": 0.7,
+   "feasible": true,
+   "violations": []
+  },
+  {
+   "case": "WDR-LOW-N1-SEP-B",
+   "scenario": "WDR-LOW",
+   "outage": [
+    "separator",
+    1
+   ],
+   "flow_kg_s": 70,
+   "retained_fraction": 1.0,
+   "required_fraction": 0.7,
+   "feasible": true,
+   "violations": []
+  },
+  {
+   "case": "WDR-LOW-N1-SEP-C",
+   "scenario": "WDR-LOW",
+   "outage": [
+    "separator",
+    2
+   ],
+   "flow_kg_s": 70,
+   "retained_fraction": 1.0,
+   "required_fraction": 0.7,
+   "feasible": true,
+   "violations": []
+  },
+  {
+   "case": "WDR-LOW-N1-DEH-A",
+   "scenario": "WDR-LOW",
+   "outage": [
+    "dehydration",
+    0
+   ],
+   "flow_kg_s": 70,
+   "retained_fraction": 1.0,
+   "required_fraction": 0.7,
+   "feasible": true,
+   "violations": []
+  },
+  {
+   "case": "WDR-LOW-N1-DEH-B",
+   "scenario": "WDR-LOW",
+   "outage": [
+    "dehydration",
+    1
+   ],
+   "flow_kg_s": 70,
+   "retained_fraction": 1.0,
+   "required_fraction": 0.7,
+   "feasible": true,
+   "violations": []
+  },
+  {
+   "case": "WDR-LOW-N1-DEH-C",
+   "scenario": "WDR-LOW",
+   "outage": [
+    "dehydration",
+    2
+   ],
+   "flow_kg_s": 70,
+   "retained_fraction": 1.0,
+   "required_fraction": 0.7,
+   "feasible": true,
+   "violations": []
+  }
+ ]
+}

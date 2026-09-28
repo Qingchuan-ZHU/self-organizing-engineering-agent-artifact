@@ -1,0 +1,118 @@
+{
+  "schema_version": 1,
+  "reveal_time_utc": "2026-09-28T02:41:23Z",
+  "git_head": "fe9f6985701c7946ee70e70f71b6637e967339ed",
+  "mapping_source": "controller/blind_mapping.json",
+  "mapping_file_sha256": "429e3479f0697a30300f5c2a0d995950051da8bc28bf0ebc1610c32b7e1ba985",
+  "pre_reveal_integrity_file_sha256": "7fdcb748fb422e804e902608b52d2edceec7dcf54483fcc1144a5112413a452a",
+  "blind_evaluator_outputs_frozen_before_reveal": true,
+  "frozen_review_count": 13,
+  "assignments": {
+    "submission_A": {
+      "original_run_id": "ugs_synth_explicit_collaboration_replication_001",
+      "condition": "explicit_collaboration",
+      "pair_number": "001",
+      "frozen_pass_count": 1,
+      "source_project_sha256": "fd9df8d87380b527323f7b2a1cc878d1b10143e9cdb04e35c262883b72a0ede2",
+      "project_file_count": 23
+    },
+    "submission_B": {
+      "original_run_id": "ugs_synth_worker_only_replication_002",
+      "condition": "worker_only",
+      "pair_number": "002",
+      "frozen_pass_count": 1,
+      "source_project_sha256": "f96bf0a65379e87733a32956c2ae061af3a4728d46ece19255f36b7b03b2586e",
+      "project_file_count": 17
+    },
+    "submission_C": {
+      "original_run_id": "ugs_synth_worker_only_replication_004",
+      "condition": "worker_only",
+      "pair_number": "004",
+      "frozen_pass_count": 1,
+      "source_project_sha256": "461cf1a2b79a2b8ee08738b663fb4bb9a3f3e683e3d4142fb167df17aad45dca",
+      "project_file_count": 22
+    },
+    "submission_D": {
+      "original_run_id": "ugs_synth_explicit_collaboration_replication_002",
+      "condition": "explicit_collaboration",
+      "pair_number": "002",
+      "frozen_pass_count": 2,
+      "source_project_sha256": "36e50b47aa1493df985e2e07d02398aabe394d3468b7c766f12438f222a0c9fa",
+      "project_file_count": 16
+    },
+    "submission_E": {
+      "original_run_id": "ugs_synth_worker_only_replication_001",
+      "condition": "worker_only",
+      "pair_number": "001",
+      "frozen_pass_count": 2,
+      "source_project_sha256": "05d3872786f70421b6803d53351347882f522b5e5cddc47f3ea5f7ccda186fab",
+      "project_file_count": 16
+    },
+    "submission_F": {
+      "original_run_id": "ugs_synth_worker_only_replication_003",
+      "condition": "worker_only",
+      "pair_number": "003",
+      "frozen_pass_count": 2,
+      "source_project_sha256": "e5cabe1f209ed6f614cc45b540547d76fe11c67145d2dba11e5316eefde19cc3",
+      "project_file_count": 16
+    },
+    "submission_G": {
+      "original_run_id": "ugs_synth_explicit_collaboration_replication_004",
+      "condition": "explicit_collaboration",
+      "pair_number": "004",
+      "frozen_pass_count": 2,
+      "source_project_sha256": "54e981f3b8c768c43d7ebddc91db46f3a85f5f9b9136e809c82d375cc52b7495",
+      "project_file_count": 23
+    },
+    "submission_H": {
+      "original_run_id": "ugs_synth_explicit_collaboration_replication_003",
+      "condition": "explicit_collaboration",
+      "pair_number": "003",
+      "frozen_pass_count": 2,
+      "source_project_sha256": "68c395699f0d8b3d376fbea0a6532500efb2ef11ac4c550aa28821adec2b1bd0",
+      "project_file_count": 10
+    }
+  },
+  "run_to_condition": {
+    "ugs_synth_explicit_collaboration_replication_001": {
+      "condition": "explicit_collaboration",
+      "pair_number": "001",
+      "submission_alias": "submission_A"
+    },
+    "ugs_synth_worker_only_replication_002": {
+      "condition": "worker_only",
+      "pair_number": "002",
+      "submission_alias": "submission_B"
+    },
+    "ugs_synth_worker_only_replication_004": {
+      "condition": "worker_only",
+      "pair_number": "004",
+      "submission_alias": "submission_C"
+    },
+    "ugs_synth_explicit_collaboration_replication_002": {
+      "condition": "explicit_collaboration",
+      "pair_number": "002",
+      "submission_alias": "submission_D"
+    },
+    "ugs_synth_worker_only_replication_001": {
+      "condition": "worker_only",
+      "pair_number": "001",
+      "submission_alias": "submission_E"
+    },
+    "ugs_synth_worker_only_replication_003": {
+      "condition": "worker_only",
+      "pair_number": "003",
+      "submission_alias": "submission_F"
+    },
+    "ugs_synth_explicit_collaboration_replication_004": {
+      "condition": "explicit_collaboration",
+      "pair_number": "004",
+      "submission_alias": "submission_G"
+    },
+    "ugs_synth_explicit_collaboration_replication_003": {
+      "condition": "explicit_collaboration",
+      "pair_number": "003",
+      "submission_alias": "submission_H"
+    }
+  }
+}

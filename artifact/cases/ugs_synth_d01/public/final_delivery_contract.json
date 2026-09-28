@@ -1,0 +1,28 @@
+{
+  "deliverables": [
+    "Design report with design basis, assumptions, results, and known limitations.",
+    "System architecture and process connections.",
+    "Equipment selection and stated capacities.",
+    "Operating philosophy and plans for the published scenarios.",
+    "Site layout, safety provisions, and maintenance access.",
+    "Piping and other network definition.",
+    "Quantities and lifecycle-cost basis."
+  ],
+  "format": "Choose clear file formats and project organization. State units and identify assumptions and calculations.",
+  "minimum_reconstruction_content": [
+    "Equipment instances and catalog model IDs.",
+    "Physical process topology and boundary interfaces.",
+    "Equipment positions and orientations.",
+    "Pipeline paths, diameters, pipe classes, and installation levels.",
+    "Scenario-specific operating paths, flows, and setpoints.",
+    "Quantities.",
+    "Lifecycle-cost calculation basis, component breakdown, and result.",
+    "Assumptions and known limitations."
+  ],
+  "provenance": {
+    "classification": "synthetic benchmark assumption",
+    "note": "Deterministic development-case data; not vendor data or production engineering criteria."
+  },
+  "purpose": "Communicate a complete engineering design for the stated project requirements and operating scenarios.",
+  "reconstructability": "Final artifacts must define the proposed physical system and every required operating scenario with enough precision for an independent reviewer to reconstruct and recalculate the design without relying on unstated assumptions."
+}

@@ -1,0 +1,26 @@
+{
+  "civil": {
+    "foundation_mbcu_per_m2": 4e-06,
+    "maintenance_area_mbcu_per_m2": 1e-06,
+    "road_mbcu_per_m": 0.00015
+  },
+  "discount_rate": 0.08,
+  "energy_tariff_mbcu_per_mwh": 0.00012,
+  "project_life_years": 20,
+  "provenance": {
+    "classification": "synthetic benchmark assumption",
+    "note": "Deterministic development-case data; not vendor data or production engineering criteria."
+  },
+  "units": {
+    "annual_cost": "MBCU/year",
+    "area": "m2",
+    "area_cost_rate": "MBCU/m2",
+    "cost": "MBCU",
+    "discount_rate": "1",
+    "energy": "MWh",
+    "energy_tariff": "MBCU/MWh",
+    "linear_cost_rate": "MBCU/m",
+    "project_life": "year",
+    "time": "year"
+  }
+}

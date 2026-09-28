@@ -1,0 +1,804 @@
+[
+  {
+    "completion_status": "agent_completed_without_evaluation",
+    "condition": "explicit_collaboration",
+    "end_time_utc": "2026-09-24T17:44:43.756744Z",
+    "finish_requested": true,
+    "formal_state": "UGS_FORMAL_STATE=NOT READY",
+    "hidden_evaluator_connected": false,
+    "pair_number": "001",
+    "reviewer": {
+      "cost_estimate": {
+        "available": true,
+        "captured_date": "2026-09-24",
+        "estimate_only_not_provider_invoice": true,
+        "estimated_cost_usd": 0.858639,
+        "peak_priced_response_count": 0,
+        "possible_duplicate_provider_execution_cost_not_included": true,
+        "priced_response_count": 74,
+        "source": "https://api-docs.deepseek.com/quick_start/pricing/"
+      },
+      "enabled": true,
+      "findings_count_as_recorded_in_run_manifest": 0,
+      "frozen_review_records": [
+        {
+          "finding_count_in_formal_review_file": 8,
+          "formal_review_path": "evidence/reviewer_records/ugs_synth_explicit_collaboration_replication_001/review_0001/formal_review.json",
+          "formal_review_sha256": "aa00a89cb1eff5f03f58b8f0d990f60d0f2a6752026d6e4c49d10b382c0aa5b2",
+          "review_number": 1,
+          "snapshot_file_count": null,
+          "snapshot_manifest_path": "evidence/reviewer_records/ugs_synth_explicit_collaboration_replication_001/review_0001/snapshot_manifest.json",
+          "snapshot_manifest_sha256": "04f0e15db2100bec3e1c83511e006edcf3f6b9b67d780fdbf73f207f30e245c0",
+          "snapshot_sha256": "8807fb0b160879007854b2c723e7b335a3a5177196f88a20d99219a5726c1615",
+          "snapshot_timestamp_utc": null,
+          "source_file_count": null,
+          "termination_reason": "reviewer_completed"
+        },
+        {
+          "finding_count_in_formal_review_file": 12,
+          "formal_review_path": "evidence/reviewer_records/ugs_synth_explicit_collaboration_replication_001/review_0002/formal_review.json",
+          "formal_review_sha256": "f8f7d350dbde60d2da45864ed420417d13bbf045bb4a3057fc6d0d9d925d7372",
+          "review_number": 2,
+          "snapshot_file_count": null,
+          "snapshot_manifest_path": "evidence/reviewer_records/ugs_synth_explicit_collaboration_replication_001/review_0002/snapshot_manifest.json",
+          "snapshot_manifest_sha256": "724d99b7cf36538705d77904c3e55a7b1f400ba19f91250c8cc66cfc4724d4b8",
+          "snapshot_sha256": "892010c5cb49e56989e97af6e00909fb2e40f95b1d780bc2afa80a81d3bc77e8",
+          "snapshot_timestamp_utc": null,
+          "source_file_count": null,
+          "termination_reason": "reviewer_completed"
+        }
+      ],
+      "model_responses": 74,
+      "review_count": 2,
+      "review_requests": [
+        {
+          "model_responses": 42,
+          "review_number": 1,
+          "snapshot_sha256": "8807fb0b160879007854b2c723e7b335a3a5177196f88a20d99219a5726c1615",
+          "termination_reason": "reviewer_completed",
+          "timestamp_utc": "2026-09-24T17:31:04.039181Z",
+          "tool_calls": 63
+        },
+        {
+          "model_responses": 32,
+          "review_number": 2,
+          "snapshot_sha256": "892010c5cb49e56989e97af6e00909fb2e40f95b1d780bc2afa80a81d3bc77e8",
+          "termination_reason": "reviewer_completed",
+          "timestamp_utc": "2026-09-24T17:43:20.732324Z",
+          "tool_calls": 37
+        }
+      ],
+      "token_usage": {
+        "cached_input_tokens": 17523840,
+        "completion_tokens": 150387,
+        "prompt_cache_hit_tokens": 17523840,
+        "prompt_cache_miss_tokens": 265679,
+        "prompt_tokens": 17789519,
+        "reasoning_tokens": 88062,
+        "total_tokens": 17939906
+      },
+      "tool_calls": 100
+    },
+    "run_id": "ugs_synth_explicit_collaboration_replication_001",
+    "runtime_duration_sec": 2641.976,
+    "source_freeze_sha256": "e3276f43b95666e4007682e5b8e140ddfb1f42b1278b39b21293af854123ab8d",
+    "source_project_file_count": 23,
+    "source_project_sha256": "fd9df8d87380b527323f7b2a1cc878d1b10143e9cdb04e35c262883b72a0ede2",
+    "source_run_manifest_path": "runs/ugs_synth_interleaved_review/ugs_synth_explicit_collaboration_replication_001/run_manifest.json",
+    "source_run_manifest_sha256": "0233e1ed77c1f66f8cecbca166d964523ffb74a04d8c11b3978819a3da66f442",
+    "start_time_utc": "2026-09-24T17:00:41.780728Z",
+    "submission_alias": "submission_A",
+    "termination_reason": "agent_completed",
+    "worker": {
+      "cost_estimate": {
+        "available": true,
+        "captured_date": "2026-09-24",
+        "estimate_only_not_provider_invoice": true,
+        "estimated_cost_usd": 1.339308,
+        "peak_priced_response_count": 0,
+        "possible_duplicate_provider_execution_cost_not_included": true,
+        "priced_response_count": 128,
+        "source": "https://api-docs.deepseek.com/quick_start/pricing/"
+      },
+      "finish_requested": true,
+      "model_responses": 128,
+      "python_executions": 90,
+      "token_usage": {
+        "cached_input_tokens": 31786496,
+        "completion_tokens": 281107,
+        "prompt_cache_hit_tokens": 31786496,
+        "prompt_cache_miss_tokens": 126383,
+        "prompt_tokens": 31912879,
+        "reasoning_tokens": 197992,
+        "total_tokens": 32193986
+      },
+      "tool_calls": 134,
+      "write_calls": 17
+    }
+  },
+  {
+    "completion_status": "agent_completed_without_evaluation",
+    "condition": "explicit_collaboration",
+    "end_time_utc": "2026-09-25T00:10:36.313508Z",
+    "finish_requested": true,
+    "formal_state": "UGS_FORMAL_STATE=NOT READY",
+    "hidden_evaluator_connected": false,
+    "pair_number": "002",
+    "reviewer": {
+      "cost_estimate": {
+        "available": true,
+        "captured_date": "2026-09-24",
+        "estimate_only_not_provider_invoice": true,
+        "estimated_cost_usd": 0.967158,
+        "peak_priced_response_count": 0,
+        "possible_duplicate_provider_execution_cost_not_included": true,
+        "priced_response_count": 91,
+        "source": "https://api-docs.deepseek.com/quick_start/pricing/"
+      },
+      "enabled": true,
+      "findings_count_as_recorded_in_run_manifest": 0,
+      "frozen_review_records": [
+        {
+          "finding_count_in_formal_review_file": 12,
+          "formal_review_path": "evidence/reviewer_records/ugs_synth_explicit_collaboration_replication_002/review_0001/formal_review.json",
+          "formal_review_sha256": "8c86b3328f0dfe90db76642eae6aabc7aa6ee431f3317f22d65fa0d1c8af06da",
+          "review_number": 1,
+          "snapshot_file_count": null,
+          "snapshot_manifest_path": "evidence/reviewer_records/ugs_synth_explicit_collaboration_replication_002/review_0001/snapshot_manifest.json",
+          "snapshot_manifest_sha256": "ad104d1aa3ff0837d24a98e5084191be183dbb87e6add08d2bb8d3a3d31ce908",
+          "snapshot_sha256": "6b4a6d030cc8000d03cc52cdb4ae0fc0c4776306d99c453c45dd5c46923a55a9",
+          "snapshot_timestamp_utc": null,
+          "source_file_count": null,
+          "termination_reason": "reviewer_completed"
+        },
+        {
+          "finding_count_in_formal_review_file": 8,
+          "formal_review_path": "evidence/reviewer_records/ugs_synth_explicit_collaboration_replication_002/review_0002/formal_review.json",
+          "formal_review_sha256": "b542041450301db07793fd59e82da4910a2da96d8987291bbc7e47072a998b76",
+          "review_number": 2,
+          "snapshot_file_count": null,
+          "snapshot_manifest_path": "evidence/reviewer_records/ugs_synth_explicit_collaboration_replication_002/review_0002/snapshot_manifest.json",
+          "snapshot_manifest_sha256": "bc8895d939b82cb6c93926e1336c1af32344a43a41564ef16f663dd4723cc35a",
+          "snapshot_sha256": "ea7c31b3309f05bb575ea8ed912f9ab47f9e8aeb8dabed76444f1bc057b32408",
+          "snapshot_timestamp_utc": null,
+          "source_file_count": null,
+          "termination_reason": "reviewer_completed"
+        }
+      ],
+      "model_responses": 91,
+      "review_count": 2,
+      "review_requests": [
+        {
+          "model_responses": 54,
+          "review_number": 1,
+          "snapshot_sha256": "6b4a6d030cc8000d03cc52cdb4ae0fc0c4776306d99c453c45dd5c46923a55a9",
+          "termination_reason": "reviewer_completed",
+          "timestamp_utc": "2026-09-24T23:45:40.978184Z",
+          "tool_calls": 70
+        },
+        {
+          "model_responses": 37,
+          "review_number": 2,
+          "snapshot_sha256": "ea7c31b3309f05bb575ea8ed912f9ab47f9e8aeb8dabed76444f1bc057b32408",
+          "termination_reason": "reviewer_completed",
+          "timestamp_utc": "2026-09-25T00:06:03.577244Z",
+          "tool_calls": 37
+        }
+      ],
+      "token_usage": {
+        "cached_input_tokens": 20218496,
+        "completion_tokens": 183507,
+        "prompt_cache_hit_tokens": 20218496,
+        "prompt_cache_miss_tokens": 240920,
+        "prompt_tokens": 20459416,
+        "reasoning_tokens": 120902,
+        "total_tokens": 20642923
+      },
+      "tool_calls": 107
+    },
+    "run_id": "ugs_synth_explicit_collaboration_replication_002",
+    "runtime_duration_sec": 4329.723,
+    "source_freeze_sha256": "0436ae16f08ab4cb8cc1a5055d7f6b858e456a9402c9ab19000fb4ad4f5bac57",
+    "source_project_file_count": 16,
+    "source_project_sha256": "36e50b47aa1493df985e2e07d02398aabe394d3468b7c766f12438f222a0c9fa",
+    "source_run_manifest_path": "runs/ugs_synth_interleaved_review/ugs_synth_explicit_collaboration_replication_002/run_manifest.json",
+    "source_run_manifest_sha256": "790b679fe2a7a055ce4d0c80759dbef2662062c4c99167b22288bea314f404c8",
+    "start_time_utc": "2026-09-24T22:58:26.590450Z",
+    "submission_alias": "submission_D",
+    "termination_reason": "agent_completed",
+    "worker": {
+      "cost_estimate": {
+        "available": true,
+        "captured_date": "2026-09-24",
+        "estimate_only_not_provider_invoice": true,
+        "estimated_cost_usd": 2.262125,
+        "peak_priced_response_count": 0,
+        "possible_duplicate_provider_execution_cost_not_included": true,
+        "priced_response_count": 182,
+        "source": "https://api-docs.deepseek.com/quick_start/pricing/"
+      },
+      "finish_requested": true,
+      "model_responses": 182,
+      "python_executions": 136,
+      "token_usage": {
+        "cached_input_tokens": 62047232,
+        "completion_tokens": 406712,
+        "prompt_cache_hit_tokens": 62047232,
+        "prompt_cache_miss_tokens": 139085,
+        "prompt_tokens": 62186317,
+        "reasoning_tokens": 283842,
+        "total_tokens": 62593029
+      },
+      "tool_calls": 182,
+      "write_calls": 15
+    }
+  },
+  {
+    "completion_status": "agent_completed_without_evaluation",
+    "condition": "explicit_collaboration",
+    "end_time_utc": "2026-09-25T01:52:04.304984Z",
+    "finish_requested": true,
+    "formal_state": "UGS_FORMAL_STATE=NOT READY",
+    "hidden_evaluator_connected": false,
+    "pair_number": "003",
+    "reviewer": {
+      "cost_estimate": {
+        "available": true,
+        "captured_date": "2026-09-24",
+        "estimate_only_not_provider_invoice": true,
+        "estimated_cost_usd": 1.992118,
+        "peak_priced_response_count": 101,
+        "possible_duplicate_provider_execution_cost_not_included": true,
+        "priced_response_count": 101,
+        "source": "https://api-docs.deepseek.com/quick_start/pricing/"
+      },
+      "enabled": true,
+      "findings_count_as_recorded_in_run_manifest": 0,
+      "frozen_review_records": [
+        {
+          "finding_count_in_formal_review_file": 7,
+          "formal_review_path": "evidence/reviewer_records/ugs_synth_explicit_collaboration_replication_003/review_0001/formal_review.json",
+          "formal_review_sha256": "bdc6575078d3bc45091e38972ff0cb5a61aa0f1f7598c4a8b1528171ece8ee82",
+          "review_number": 1,
+          "snapshot_file_count": null,
+          "snapshot_manifest_path": "evidence/reviewer_records/ugs_synth_explicit_collaboration_replication_003/review_0001/snapshot_manifest.json",
+          "snapshot_manifest_sha256": "aac712efce7b70cc51478d5013c83596d0dadb2e56ce3cbe76a673bf9dba059a",
+          "snapshot_sha256": "972ed033a82539f1bd542dfd0c09b248634d1ff60106e9f1066624d44e921046",
+          "snapshot_timestamp_utc": null,
+          "source_file_count": null,
+          "termination_reason": "reviewer_completed"
+        },
+        {
+          "finding_count_in_formal_review_file": 1,
+          "formal_review_path": "evidence/reviewer_records/ugs_synth_explicit_collaboration_replication_003/review_0002/formal_review.json",
+          "formal_review_sha256": "0d823d26caf6c8557536be8f62e22ad93ca30e198582d611a88e9d42fc832250",
+          "review_number": 2,
+          "snapshot_file_count": null,
+          "snapshot_manifest_path": "evidence/reviewer_records/ugs_synth_explicit_collaboration_replication_003/review_0002/snapshot_manifest.json",
+          "snapshot_manifest_sha256": "6d5ee2b9fe72c6ae5fdcb9774fe35bce368b4ff26490915278680d0be90c8b7e",
+          "snapshot_sha256": "e3c14acc5e726b866e8989fe6106cc391960f97851548f303248265a7bcd25a6",
+          "snapshot_timestamp_utc": null,
+          "source_file_count": null,
+          "termination_reason": "reviewer_completed"
+        },
+        {
+          "finding_count_in_formal_review_file": 3,
+          "formal_review_path": "evidence/reviewer_records/ugs_synth_explicit_collaboration_replication_003/review_0003/formal_review.json",
+          "formal_review_sha256": "42f60bbf41a31f45c11f72382ba310466cd1beaf94d94813dd3e9d476d860c9e",
+          "review_number": 3,
+          "snapshot_file_count": null,
+          "snapshot_manifest_path": "evidence/reviewer_records/ugs_synth_explicit_collaboration_replication_003/review_0003/snapshot_manifest.json",
+          "snapshot_manifest_sha256": "6d5ee2b9fe72c6ae5fdcb9774fe35bce368b4ff26490915278680d0be90c8b7e",
+          "snapshot_sha256": "e3c14acc5e726b866e8989fe6106cc391960f97851548f303248265a7bcd25a6",
+          "snapshot_timestamp_utc": null,
+          "source_file_count": null,
+          "termination_reason": "reviewer_completed"
+        },
+        {
+          "finding_count_in_formal_review_file": 3,
+          "formal_review_path": "evidence/reviewer_records/ugs_synth_explicit_collaboration_replication_003/review_0004/formal_review.json",
+          "formal_review_sha256": "c0821cf6009a3aaca93bc2362ec6574400d900fd047ccb59981b4ca575247a48",
+          "review_number": 4,
+          "snapshot_file_count": null,
+          "snapshot_manifest_path": "evidence/reviewer_records/ugs_synth_explicit_collaboration_replication_003/review_0004/snapshot_manifest.json",
+          "snapshot_manifest_sha256": "60671cf9356e0fa8791ebdad6feb74e7286ca0998a0a126549d31d5725397376",
+          "snapshot_sha256": "977488b9d62e53e4fc54e42015997dbd70d355b83db5c96294fb7b892a4ab582",
+          "snapshot_timestamp_utc": null,
+          "source_file_count": null,
+          "termination_reason": "reviewer_completed"
+        }
+      ],
+      "model_responses": 101,
+      "review_count": 4,
+      "review_requests": [
+        {
+          "model_responses": 47,
+          "review_number": 1,
+          "snapshot_sha256": "972ed033a82539f1bd542dfd0c09b248634d1ff60106e9f1066624d44e921046",
+          "termination_reason": "reviewer_completed",
+          "timestamp_utc": "2026-09-25T01:34:41.274036Z",
+          "tool_calls": 60
+        },
+        {
+          "model_responses": 26,
+          "review_number": 2,
+          "snapshot_sha256": "e3c14acc5e726b866e8989fe6106cc391960f97851548f303248265a7bcd25a6",
+          "termination_reason": "reviewer_completed",
+          "timestamp_utc": "2026-09-25T01:44:22.017145Z",
+          "tool_calls": 27
+        },
+        {
+          "model_responses": 4,
+          "review_number": 3,
+          "snapshot_sha256": "e3c14acc5e726b866e8989fe6106cc391960f97851548f303248265a7bcd25a6",
+          "termination_reason": "reviewer_completed",
+          "timestamp_utc": "2026-09-25T01:45:36.438707Z",
+          "tool_calls": 4
+        },
+        {
+          "model_responses": 24,
+          "review_number": 4,
+          "snapshot_sha256": "977488b9d62e53e4fc54e42015997dbd70d355b83db5c96294fb7b892a4ab582",
+          "termination_reason": "reviewer_completed",
+          "timestamp_utc": "2026-09-25T01:51:28.022565Z",
+          "tool_calls": 24
+        }
+      ],
+      "token_usage": {
+        "cached_input_tokens": 21037952,
+        "completion_tokens": 212312,
+        "prompt_cache_hit_tokens": 21037952,
+        "prompt_cache_miss_tokens": 170979,
+        "prompt_tokens": 21208931,
+        "reasoning_tokens": 137876,
+        "total_tokens": 21421243
+      },
+      "tool_calls": 115
+    },
+    "run_id": "ugs_synth_explicit_collaboration_replication_003",
+    "runtime_duration_sec": 3172.012,
+    "source_freeze_sha256": "6da1cbe853594633fea68c67e89efee3579746dae3f44b097505fb633611b63d",
+    "source_project_file_count": 10,
+    "source_project_sha256": "68c395699f0d8b3d376fbea0a6532500efb2ef11ac4c550aa28821adec2b1bd0",
+    "source_run_manifest_path": "runs/ugs_synth_interleaved_review/ugs_synth_explicit_collaboration_replication_003/run_manifest.json",
+    "source_run_manifest_sha256": "71bf601340dd17ad4ac94d98ffec4cd82efcf68f7bbb0e949cd068fe5ade6d1d",
+    "start_time_utc": "2026-09-25T00:59:12.292957Z",
+    "submission_alias": "submission_H",
+    "termination_reason": "agent_completed",
+    "worker": {
+      "cost_estimate": {
+        "available": true,
+        "captured_date": "2026-09-24",
+        "estimate_only_not_provider_invoice": true,
+        "estimated_cost_usd": 2.244274,
+        "peak_priced_response_count": 76,
+        "possible_duplicate_provider_execution_cost_not_included": true,
+        "priced_response_count": 88,
+        "source": "https://api-docs.deepseek.com/quick_start/pricing/"
+      },
+      "finish_requested": true,
+      "model_responses": 88,
+      "python_executions": 50,
+      "token_usage": {
+        "cached_input_tokens": 21503104,
+        "completion_tokens": 308739,
+        "prompt_cache_hit_tokens": 21503104,
+        "prompt_cache_miss_tokens": 74666,
+        "prompt_tokens": 21577770,
+        "reasoning_tokens": 225327,
+        "total_tokens": 21886509
+      },
+      "tool_calls": 89,
+      "write_calls": 7
+    }
+  },
+  {
+    "completion_status": "agent_completed_without_evaluation",
+    "condition": "explicit_collaboration",
+    "end_time_utc": "2026-09-25T04:02:52.291538Z",
+    "finish_requested": true,
+    "formal_state": "UGS_FORMAL_STATE=NOT READY",
+    "hidden_evaluator_connected": false,
+    "pair_number": "004",
+    "reviewer": {
+      "cost_estimate": {
+        "available": true,
+        "captured_date": "2026-09-24",
+        "estimate_only_not_provider_invoice": true,
+        "estimated_cost_usd": 1.576589,
+        "peak_priced_response_count": 83,
+        "possible_duplicate_provider_execution_cost_not_included": true,
+        "priced_response_count": 83,
+        "source": "https://api-docs.deepseek.com/quick_start/pricing/"
+      },
+      "enabled": true,
+      "findings_count_as_recorded_in_run_manifest": 0,
+      "frozen_review_records": [
+        {
+          "finding_count_in_formal_review_file": 9,
+          "formal_review_path": "evidence/reviewer_records/ugs_synth_explicit_collaboration_replication_004/review_0001/formal_review.json",
+          "formal_review_sha256": "d66d0af45172936f0cd178f1ffbf1f55c606c71a809e2ca09da53ec5c78834e8",
+          "review_number": 1,
+          "snapshot_file_count": null,
+          "snapshot_manifest_path": "evidence/reviewer_records/ugs_synth_explicit_collaboration_replication_004/review_0001/snapshot_manifest.json",
+          "snapshot_manifest_sha256": "7544bcd72dbda48d9eac8ae8f6a2d8ea3a956581e960f2885363c1be01bbd386",
+          "snapshot_sha256": "612ea24ebf761bf9c28707f96c16ff6dc937ebfbc5e3002dc76f6247cdeaf1cd",
+          "snapshot_timestamp_utc": null,
+          "source_file_count": null,
+          "termination_reason": "reviewer_completed"
+        },
+        {
+          "finding_count_in_formal_review_file": 6,
+          "formal_review_path": "evidence/reviewer_records/ugs_synth_explicit_collaboration_replication_004/review_0002/formal_review.json",
+          "formal_review_sha256": "ce8214b5cb7fef25327f4f14727aebcd678c6f2bfa4c7901ab6ba4d8190531cc",
+          "review_number": 2,
+          "snapshot_file_count": null,
+          "snapshot_manifest_path": "evidence/reviewer_records/ugs_synth_explicit_collaboration_replication_004/review_0002/snapshot_manifest.json",
+          "snapshot_manifest_sha256": "7479ec7a7deedeec596fc45467c692a934cd4001899b6660fd6a7c680ba411ac",
+          "snapshot_sha256": "1ac672d749aa42c7516239eb45d567b9cfc60eb44d5cc84f800b861c83fc9b80",
+          "snapshot_timestamp_utc": null,
+          "source_file_count": null,
+          "termination_reason": "reviewer_completed"
+        }
+      ],
+      "model_responses": 83,
+      "review_count": 2,
+      "review_requests": [
+        {
+          "model_responses": 51,
+          "review_number": 1,
+          "snapshot_sha256": "612ea24ebf761bf9c28707f96c16ff6dc937ebfbc5e3002dc76f6247cdeaf1cd",
+          "termination_reason": "reviewer_completed",
+          "timestamp_utc": "2026-09-25T03:19:21.468272Z",
+          "tool_calls": 67
+        },
+        {
+          "model_responses": 32,
+          "review_number": 2,
+          "snapshot_sha256": "1ac672d749aa42c7516239eb45d567b9cfc60eb44d5cc84f800b861c83fc9b80",
+          "termination_reason": "reviewer_completed",
+          "timestamp_utc": "2026-09-25T03:53:23.115003Z",
+          "tool_calls": 33
+        }
+      ],
+      "token_usage": {
+        "cached_input_tokens": 14747264,
+        "completion_tokens": 176991,
+        "prompt_cache_hit_tokens": 14747264,
+        "prompt_cache_miss_tokens": 171837,
+        "prompt_tokens": 14919101,
+        "reasoning_tokens": 134217,
+        "total_tokens": 15096092
+      },
+      "tool_calls": 100
+    },
+    "run_id": "ugs_synth_explicit_collaboration_replication_004",
+    "runtime_duration_sec": 5395.98,
+    "source_freeze_sha256": "17e1701e4c054d8b633fc473291dd8b196d21eb1ae388e06a2c27e07bf51247d",
+    "source_project_file_count": 23,
+    "source_project_sha256": "54e981f3b8c768c43d7ebddc91db46f3a85f5f9b9136e809c82d375cc52b7495",
+    "source_run_manifest_path": "runs/ugs_synth_interleaved_review/ugs_synth_explicit_collaboration_replication_004/run_manifest.json",
+    "source_run_manifest_sha256": "c4bd942c2c81e7b1793914d4dccc71360b12f4a0ea257f8be8181700e4f88ee3",
+    "start_time_utc": "2026-09-25T02:32:56.311302Z",
+    "submission_alias": "submission_G",
+    "termination_reason": "agent_completed",
+    "worker": {
+      "cost_estimate": {
+        "available": true,
+        "captured_date": "2026-09-24",
+        "estimate_only_not_provider_invoice": true,
+        "estimated_cost_usd": 3.508227,
+        "peak_priced_response_count": 137,
+        "possible_duplicate_provider_execution_cost_not_included": true,
+        "priced_response_count": 144,
+        "source": "https://api-docs.deepseek.com/quick_start/pricing/"
+      },
+      "finish_requested": true,
+      "model_responses": 144,
+      "python_executions": 100,
+      "token_usage": {
+        "cached_input_tokens": 43249536,
+        "completion_tokens": 392488,
+        "prompt_cache_hit_tokens": 43249536,
+        "prompt_cache_miss_tokens": 101431,
+        "prompt_tokens": 43350967,
+        "reasoning_tokens": 252348,
+        "total_tokens": 43743455
+      },
+      "tool_calls": 145,
+      "write_calls": 15
+    }
+  },
+  {
+    "completion_status": "agent_completed_without_evaluation",
+    "condition": "worker_only",
+    "end_time_utc": "2026-09-24T16:58:47.010244Z",
+    "finish_requested": true,
+    "formal_state": "UGS_FORMAL_STATE=NOT READY",
+    "hidden_evaluator_connected": false,
+    "pair_number": "001",
+    "reviewer": {
+      "cost_estimate": {
+        "available": false,
+        "captured_date": "2026-09-24",
+        "estimate_only_not_provider_invoice": true,
+        "estimated_cost_usd": null,
+        "peak_priced_response_count": 0,
+        "possible_duplicate_provider_execution_cost_not_included": true,
+        "priced_response_count": 0,
+        "source": "https://api-docs.deepseek.com/quick_start/pricing/"
+      },
+      "enabled": false,
+      "findings_count_as_recorded_in_run_manifest": 0,
+      "frozen_review_records": [],
+      "model_responses": 0,
+      "review_count": 0,
+      "review_requests": [],
+      "token_usage": {
+        "cached_input_tokens": 0,
+        "completion_tokens": 0,
+        "prompt_cache_hit_tokens": 0,
+        "prompt_cache_miss_tokens": 0,
+        "prompt_tokens": 0,
+        "reasoning_tokens": 0,
+        "total_tokens": 0
+      },
+      "tool_calls": 0
+    },
+    "run_id": "ugs_synth_worker_only_replication_001",
+    "runtime_duration_sec": 1258.531,
+    "source_freeze_sha256": "eee841af73e38eaaf8d458a8e03c26b10f6202ed4d1a48ace1f3a30750753408",
+    "source_project_file_count": 16,
+    "source_project_sha256": "05d3872786f70421b6803d53351347882f522b5e5cddc47f3ea5f7ccda186fab",
+    "source_run_manifest_path": "runs/ugs_synth_interleaved_review/ugs_synth_worker_only_replication_001/run_manifest.json",
+    "source_run_manifest_sha256": "0d8b9bdaf1f4dcca549213609c9f47c14f711de84cb5638d6a548dd290fab5d7",
+    "start_time_utc": "2026-09-24T16:37:48.479171Z",
+    "submission_alias": "submission_E",
+    "termination_reason": "agent_completed",
+    "worker": {
+      "cost_estimate": {
+        "available": true,
+        "captured_date": "2026-09-24",
+        "estimate_only_not_provider_invoice": true,
+        "estimated_cost_usd": 0.766658,
+        "peak_priced_response_count": 0,
+        "possible_duplicate_provider_execution_cost_not_included": true,
+        "priced_response_count": 93,
+        "source": "https://api-docs.deepseek.com/quick_start/pricing/"
+      },
+      "finish_requested": true,
+      "model_responses": 93,
+      "python_executions": 63,
+      "token_usage": {
+        "cached_input_tokens": 14676480,
+        "completion_tokens": 198871,
+        "prompt_cache_hit_tokens": 14676480,
+        "prompt_cache_miss_tokens": 75774,
+        "prompt_tokens": 14752254,
+        "reasoning_tokens": 133412,
+        "total_tokens": 14951125
+      },
+      "tool_calls": 107,
+      "write_calls": 13
+    }
+  },
+  {
+    "completion_status": "agent_completed_without_evaluation",
+    "condition": "worker_only",
+    "end_time_utc": "2026-09-24T22:55:41.873627Z",
+    "finish_requested": true,
+    "formal_state": "UGS_FORMAL_STATE=NOT READY",
+    "hidden_evaluator_connected": false,
+    "pair_number": "002",
+    "reviewer": {
+      "cost_estimate": {
+        "available": false,
+        "captured_date": "2026-09-24",
+        "estimate_only_not_provider_invoice": true,
+        "estimated_cost_usd": null,
+        "peak_priced_response_count": 0,
+        "possible_duplicate_provider_execution_cost_not_included": true,
+        "priced_response_count": 0,
+        "source": "https://api-docs.deepseek.com/quick_start/pricing/"
+      },
+      "enabled": false,
+      "findings_count_as_recorded_in_run_manifest": 0,
+      "frozen_review_records": [],
+      "model_responses": 0,
+      "review_count": 0,
+      "review_requests": [],
+      "token_usage": {
+        "cached_input_tokens": 0,
+        "completion_tokens": 0,
+        "prompt_cache_hit_tokens": 0,
+        "prompt_cache_miss_tokens": 0,
+        "prompt_tokens": 0,
+        "reasoning_tokens": 0,
+        "total_tokens": 0
+      },
+      "tool_calls": 0
+    },
+    "run_id": "ugs_synth_worker_only_replication_002",
+    "runtime_duration_sec": 1595.884,
+    "source_freeze_sha256": "d16ad269f26fc0448c2cae154314081049d756780b55d73ae53a18b1357183c4",
+    "source_project_file_count": 17,
+    "source_project_sha256": "f96bf0a65379e87733a32956c2ae061af3a4728d46ece19255f36b7b03b2586e",
+    "source_run_manifest_path": "runs/ugs_synth_interleaved_review/ugs_synth_worker_only_replication_002/run_manifest.json",
+    "source_run_manifest_sha256": "121b16e33db2785a3b727aad0fc5b57a4f103217e354e1ed2e04901e11025032",
+    "start_time_utc": "2026-09-24T22:29:05.989253Z",
+    "submission_alias": "submission_B",
+    "termination_reason": "agent_completed",
+    "worker": {
+      "cost_estimate": {
+        "available": true,
+        "captured_date": "2026-09-24",
+        "estimate_only_not_provider_invoice": true,
+        "estimated_cost_usd": 0.942805,
+        "peak_priced_response_count": 0,
+        "possible_duplicate_provider_execution_cost_not_included": true,
+        "priced_response_count": 90,
+        "source": "https://api-docs.deepseek.com/quick_start/pricing/"
+      },
+      "finish_requested": true,
+      "model_responses": 90,
+      "python_executions": 46,
+      "token_usage": {
+        "cached_input_tokens": 17566592,
+        "completion_tokens": 256886,
+        "prompt_cache_hit_tokens": 17566592,
+        "prompt_cache_miss_tokens": 72282,
+        "prompt_tokens": 17638874,
+        "reasoning_tokens": 183266,
+        "total_tokens": 17895760
+      },
+      "tool_calls": 96,
+      "write_calls": 23
+    }
+  },
+  {
+    "completion_status": "terminated_without_finish_project",
+    "condition": "worker_only",
+    "end_time_utc": "2026-09-25T00:58:07.984532Z",
+    "finish_requested": false,
+    "formal_state": "UGS_FORMAL_STATE=NOT READY",
+    "hidden_evaluator_connected": false,
+    "pair_number": "003",
+    "reviewer": {
+      "cost_estimate": {
+        "available": false,
+        "captured_date": "2026-09-24",
+        "estimate_only_not_provider_invoice": true,
+        "estimated_cost_usd": null,
+        "peak_priced_response_count": 0,
+        "possible_duplicate_provider_execution_cost_not_included": true,
+        "priced_response_count": 0,
+        "source": "https://api-docs.deepseek.com/quick_start/pricing/"
+      },
+      "enabled": false,
+      "findings_count_as_recorded_in_run_manifest": 0,
+      "frozen_review_records": [],
+      "model_responses": 0,
+      "review_count": 0,
+      "review_requests": [],
+      "token_usage": {
+        "cached_input_tokens": 0,
+        "completion_tokens": 0,
+        "prompt_cache_hit_tokens": 0,
+        "prompt_cache_miss_tokens": 0,
+        "prompt_tokens": 0,
+        "reasoning_tokens": 0,
+        "total_tokens": 0
+      },
+      "tool_calls": 0
+    },
+    "run_id": "ugs_synth_worker_only_replication_003",
+    "runtime_duration_sec": 2407.805,
+    "source_freeze_sha256": "cd67b485d7de40f1a916ac6d659d97954b70ff4f118705c360a41702be366a09",
+    "source_project_file_count": 16,
+    "source_project_sha256": "e5cabe1f209ed6f614cc45b540547d76fe11c67145d2dba11e5316eefde19cc3",
+    "source_run_manifest_path": "runs/ugs_synth_interleaved_review/ugs_synth_worker_only_replication_003/run_manifest.json",
+    "source_run_manifest_sha256": "00ffc367b84b0400c9a53c04321cccfd0636459f4154fdfd07142eab91f11c51",
+    "start_time_utc": "2026-09-25T00:18:00.179899Z",
+    "submission_alias": "submission_F",
+    "termination_reason": "assistant_stopped_without_finish_project",
+    "worker": {
+      "cost_estimate": {
+        "available": true,
+        "captured_date": "2026-09-24",
+        "estimate_only_not_provider_invoice": true,
+        "estimated_cost_usd": 1.133172,
+        "peak_priced_response_count": 0,
+        "possible_duplicate_provider_execution_cost_not_included": true,
+        "priced_response_count": 111,
+        "source": "https://api-docs.deepseek.com/quick_start/pricing/"
+      },
+      "finish_requested": false,
+      "model_responses": 111,
+      "python_executions": 80,
+      "token_usage": {
+        "cached_input_tokens": 24719488,
+        "completion_tokens": 261685,
+        "prompt_cache_hit_tokens": 24719488,
+        "prompt_cache_miss_tokens": 107889,
+        "prompt_tokens": 24827377,
+        "reasoning_tokens": 174727,
+        "total_tokens": 25089062
+      },
+      "tool_calls": 118,
+      "write_calls": 14
+    }
+  },
+  {
+    "completion_status": "agent_completed_without_evaluation",
+    "condition": "worker_only",
+    "end_time_utc": "2026-09-25T02:31:31.179115Z",
+    "finish_requested": true,
+    "formal_state": "UGS_FORMAL_STATE=NOT READY",
+    "hidden_evaluator_connected": false,
+    "pair_number": "004",
+    "reviewer": {
+      "cost_estimate": {
+        "available": false,
+        "captured_date": "2026-09-24",
+        "estimate_only_not_provider_invoice": true,
+        "estimated_cost_usd": null,
+        "peak_priced_response_count": 0,
+        "possible_duplicate_provider_execution_cost_not_included": true,
+        "priced_response_count": 0,
+        "source": "https://api-docs.deepseek.com/quick_start/pricing/"
+      },
+      "enabled": false,
+      "findings_count_as_recorded_in_run_manifest": 0,
+      "frozen_review_records": [],
+      "model_responses": 0,
+      "review_count": 0,
+      "review_requests": [],
+      "token_usage": {
+        "cached_input_tokens": 0,
+        "completion_tokens": 0,
+        "prompt_cache_hit_tokens": 0,
+        "prompt_cache_miss_tokens": 0,
+        "prompt_tokens": 0,
+        "reasoning_tokens": 0,
+        "total_tokens": 0
+      },
+      "tool_calls": 0
+    },
+    "run_id": "ugs_synth_worker_only_replication_004",
+    "runtime_duration_sec": 1529.705,
+    "source_freeze_sha256": "2fdc4474df581f86ec51caff08f5ba658f41a1b0e39acb99968ce01469eb7019",
+    "source_project_file_count": 22,
+    "source_project_sha256": "461cf1a2b79a2b8ee08738b663fb4bb9a3f3e683e3d4142fb167df17aad45dca",
+    "source_run_manifest_path": "runs/ugs_synth_interleaved_review/ugs_synth_worker_only_replication_004/run_manifest.json",
+    "source_run_manifest_sha256": "6f3218fc15fc27c51b9ebe66eefa761c8ed28e2c1de86816afa4692b553cca07",
+    "start_time_utc": "2026-09-25T02:06:01.473663Z",
+    "submission_alias": "submission_C",
+    "termination_reason": "agent_completed",
+    "worker": {
+      "cost_estimate": {
+        "available": true,
+        "captured_date": "2026-09-24",
+        "estimate_only_not_provider_invoice": true,
+        "estimated_cost_usd": 1.461307,
+        "peak_priced_response_count": 85,
+        "possible_duplicate_provider_execution_cost_not_included": true,
+        "priced_response_count": 85,
+        "source": "https://api-docs.deepseek.com/quick_start/pricing/"
+      },
+      "finish_requested": true,
+      "model_responses": 85,
+      "python_executions": 43,
+      "token_usage": {
+        "cached_input_tokens": 13536896,
+        "completion_tokens": 197618,
+        "prompt_cache_hit_tokens": 13536896,
+        "prompt_cache_miss_tokens": 62967,
+        "prompt_tokens": 13599863,
+        "reasoning_tokens": 134911,
+        "total_tokens": 13797481
+      },
+      "tool_calls": 98,
+      "write_calls": 27
+    }
+  }
+]

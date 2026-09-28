@@ -1,0 +1,258 @@
+{
+  "snapshot": {
+    "file_count": 23,
+    "files": {
+      "README.md": {
+        "kind": "file",
+        "sha256": "adeccf0c42ae094f73fa6d113d704d2d9f460e95d8cce0c1ee9a24b58d5cbe72",
+        "size_bytes": 4180
+      },
+      "deliverables/": {
+        "kind": "directory"
+      },
+      "deliverables/case_summary.json": {
+        "kind": "file",
+        "sha256": "968eeace71c77c21ba705831099c2bb0d8890724ecfde0e742bc3f5a2236d926",
+        "size_bytes": 2585
+      },
+      "deliverables/design_report.md": {
+        "kind": "file",
+        "sha256": "3a3dbf63942edd27c31137ebd464a1f7e3e513c737117ccb28d9248dbdcad9d1",
+        "size_bytes": 42567
+      },
+      "deliverables/equipment.json": {
+        "kind": "file",
+        "sha256": "4e61564f251f8925416b3f3036fbf51c4758e4b365e2b12114086f4a8ed6f6f7",
+        "size_bytes": 39109
+      },
+      "deliverables/lifecycle_cost.json": {
+        "kind": "file",
+        "sha256": "0000f8cc41b0971b03e50c13cd045cacda4b17186322ddb9054e35e241a2278a",
+        "size_bytes": 3907
+      },
+      "deliverables/operating_plan.json": {
+        "kind": "file",
+        "sha256": "1180567c3e0e4e48f26f1941325645793b60899721629d8e9efed492738da611",
+        "size_bytes": 272195
+      },
+      "deliverables/pipelines.json": {
+        "kind": "file",
+        "sha256": "b914694e45616a3f7f39b4711fb3e07f8169cf007b5550bf99613b47cd201fcd",
+        "size_bytes": 53281
+      },
+      "deliverables/quantities.json": {
+        "kind": "file",
+        "sha256": "dc4eaa0ed8a623596e799b0c17341d0e57468db6777b1534c761c2151b8cea69",
+        "size_bytes": 4580
+      },
+      "deliverables/site_and_roads.json": {
+        "kind": "file",
+        "sha256": "788d4c5fd086c1b0745692f8608dfd517a5dcef9cdb9dfcbe9cf34c8d7ec13cf",
+        "size_bytes": 2796
+      },
+      "deliverables/topology.json": {
+        "kind": "file",
+        "sha256": "bb23a616e6f6c6b65a18a782bab8b43102324bcbd0e4b1c271dd194a93e3548e",
+        "size_bytes": 11680
+      },
+      "deliverables/verification.json": {
+        "kind": "file",
+        "sha256": "0efa115fe88ec291d56b7d487044716e0149438db097763dddbbd74e16014e05",
+        "size_bytes": 5217
+      },
+      "model/": {
+        "kind": "directory"
+      },
+      "model/analysis.py": {
+        "kind": "file",
+        "sha256": "a2b4ac9d554eb3935e2b2a4fd83e44a01f685c583c10f859e49a7a2403baede4",
+        "size_bytes": 9066
+      },
+      "model/build_deliverables.py": {
+        "kind": "file",
+        "sha256": "7c5a9006a0795e1d7c12db06b052fc4ddca3073b359e680de163e254be32c904",
+        "size_bytes": 22851
+      },
+      "model/build_report.py": {
+        "kind": "file",
+        "sha256": "fa69583432b70692832594516d493d01234964422f5036b24fc8d912ba061ee2",
+        "size_bytes": 33154
+      },
+      "model/catalog.py": {
+        "kind": "file",
+        "sha256": "21cc9e77b6cec17ea132b3ec6d07b1ce290504a87e7ed0e4af350aa68a3b5098",
+        "size_bytes": 1556
+      },
+      "model/checks.py": {
+        "kind": "file",
+        "sha256": "10e545f66c6e12e7ea94dc73496eb4a7b59814192f51f9b8b13b4ce5ed00b4ab",
+        "size_bytes": 20387
+      },
+      "model/design.py": {
+        "kind": "file",
+        "sha256": "5e3a22fba1b083055e3a94f1ba6cfdb6354333c9e041095281407bdd6190fc6e",
+        "size_bytes": 10637
+      },
+      "model/geometry.py": {
+        "kind": "file",
+        "sha256": "92d7ba55cf9e95d0081e4f5d4b720021cbe351c926923ae65b5d9fea912f214f",
+        "size_bytes": 9042
+      },
+      "model/process.py": {
+        "kind": "file",
+        "sha256": "c3c265660adfa154c4b31a0eff5b10616fd0cd1e5f44b59f5dd4b3f7e6beabd4",
+        "size_bytes": 2555
+      },
+      "model/quantities.py": {
+        "kind": "file",
+        "sha256": "70db2db1b8e1d24d4e739e0c01935bc99fb001cb1c275df6246be125e50e5a0f",
+        "size_bytes": 3924
+      },
+      "model/run_case.py": {
+        "kind": "file",
+        "sha256": "94bff9771ef7323061b9e6170a09b3ddbb6eda4f46953a4f96b90df2ce6435b5",
+        "size_bytes": 3930
+      },
+      "model/scenarios.py": {
+        "kind": "file",
+        "sha256": "03302de9c476a391fa824b655fa01d497d65554a6242925028ab9ce7aace5425",
+        "size_bytes": 10578
+      },
+      "model/sweep.py": {
+        "kind": "file",
+        "sha256": "745388a578abac043aa074eb36617645f106e1d7a911543f43b30812d250a6a0",
+        "size_bytes": 2560
+      }
+    },
+    "total_file_bytes": 572337
+  },
+  "snapshot_sha256": "892010c5cb49e56989e97af6e00909fb2e40f95b1d780bc2afa80a81d3bc77e8",
+  "source_project": {
+    "file_count": 23,
+    "files": {
+      "README.md": {
+        "kind": "file",
+        "sha256": "adeccf0c42ae094f73fa6d113d704d2d9f460e95d8cce0c1ee9a24b58d5cbe72",
+        "size_bytes": 4180
+      },
+      "deliverables/": {
+        "kind": "directory"
+      },
+      "deliverables/case_summary.json": {
+        "kind": "file",
+        "sha256": "968eeace71c77c21ba705831099c2bb0d8890724ecfde0e742bc3f5a2236d926",
+        "size_bytes": 2585
+      },
+      "deliverables/design_report.md": {
+        "kind": "file",
+        "sha256": "3a3dbf63942edd27c31137ebd464a1f7e3e513c737117ccb28d9248dbdcad9d1",
+        "size_bytes": 42567
+      },
+      "deliverables/equipment.json": {
+        "kind": "file",
+        "sha256": "4e61564f251f8925416b3f3036fbf51c4758e4b365e2b12114086f4a8ed6f6f7",
+        "size_bytes": 39109
+      },
+      "deliverables/lifecycle_cost.json": {
+        "kind": "file",
+        "sha256": "0000f8cc41b0971b03e50c13cd045cacda4b17186322ddb9054e35e241a2278a",
+        "size_bytes": 3907
+      },
+      "deliverables/operating_plan.json": {
+        "kind": "file",
+        "sha256": "1180567c3e0e4e48f26f1941325645793b60899721629d8e9efed492738da611",
+        "size_bytes": 272195
+      },
+      "deliverables/pipelines.json": {
+        "kind": "file",
+        "sha256": "b914694e45616a3f7f39b4711fb3e07f8169cf007b5550bf99613b47cd201fcd",
+        "size_bytes": 53281
+      },
+      "deliverables/quantities.json": {
+        "kind": "file",
+        "sha256": "dc4eaa0ed8a623596e799b0c17341d0e57468db6777b1534c761c2151b8cea69",
+        "size_bytes": 4580
+      },
+      "deliverables/site_and_roads.json": {
+        "kind": "file",
+        "sha256": "788d4c5fd086c1b0745692f8608dfd517a5dcef9cdb9dfcbe9cf34c8d7ec13cf",
+        "size_bytes": 2796
+      },
+      "deliverables/topology.json": {
+        "kind": "file",
+        "sha256": "bb23a616e6f6c6b65a18a782bab8b43102324bcbd0e4b1c271dd194a93e3548e",
+        "size_bytes": 11680
+      },
+      "deliverables/verification.json": {
+        "kind": "file",
+        "sha256": "0efa115fe88ec291d56b7d487044716e0149438db097763dddbbd74e16014e05",
+        "size_bytes": 5217
+      },
+      "model/": {
+        "kind": "directory"
+      },
+      "model/analysis.py": {
+        "kind": "file",
+        "sha256": "a2b4ac9d554eb3935e2b2a4fd83e44a01f685c583c10f859e49a7a2403baede4",
+        "size_bytes": 9066
+      },
+      "model/build_deliverables.py": {
+        "kind": "file",
+        "sha256": "7c5a9006a0795e1d7c12db06b052fc4ddca3073b359e680de163e254be32c904",
+        "size_bytes": 22851
+      },
+      "model/build_report.py": {
+        "kind": "file",
+        "sha256": "fa69583432b70692832594516d493d01234964422f5036b24fc8d912ba061ee2",
+        "size_bytes": 33154
+      },
+      "model/catalog.py": {
+        "kind": "file",
+        "sha256": "21cc9e77b6cec17ea132b3ec6d07b1ce290504a87e7ed0e4af350aa68a3b5098",
+        "size_bytes": 1556
+      },
+      "model/checks.py": {
+        "kind": "file",
+        "sha256": "10e545f66c6e12e7ea94dc73496eb4a7b59814192f51f9b8b13b4ce5ed00b4ab",
+        "size_bytes": 20387
+      },
+      "model/design.py": {
+        "kind": "file",
+        "sha256": "5e3a22fba1b083055e3a94f1ba6cfdb6354333c9e041095281407bdd6190fc6e",
+        "size_bytes": 10637
+      },
+      "model/geometry.py": {
+        "kind": "file",
+        "sha256": "92d7ba55cf9e95d0081e4f5d4b720021cbe351c926923ae65b5d9fea912f214f",
+        "size_bytes": 9042
+      },
+      "model/process.py": {
+        "kind": "file",
+        "sha256": "c3c265660adfa154c4b31a0eff5b10616fd0cd1e5f44b59f5dd4b3f7e6beabd4",
+        "size_bytes": 2555
+      },
+      "model/quantities.py": {
+        "kind": "file",
+        "sha256": "70db2db1b8e1d24d4e739e0c01935bc99fb001cb1c275df6246be125e50e5a0f",
+        "size_bytes": 3924
+      },
+      "model/run_case.py": {
+        "kind": "file",
+        "sha256": "94bff9771ef7323061b9e6170a09b3ddbb6eda4f46953a4f96b90df2ce6435b5",
+        "size_bytes": 3930
+      },
+      "model/scenarios.py": {
+        "kind": "file",
+        "sha256": "03302de9c476a391fa824b655fa01d497d65554a6242925028ab9ce7aace5425",
+        "size_bytes": 10578
+      },
+      "model/sweep.py": {
+        "kind": "file",
+        "sha256": "745388a578abac043aa074eb36617645f106e1d7a911543f43b30812d250a6a0",
+        "size_bytes": 2560
+      }
+    },
+    "total_file_bytes": 572337
+  },
+  "symlink_policy": "internal symlinks materialized as read-only content; links leaving project/ rejected"
+}

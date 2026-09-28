@@ -1,0 +1,246 @@
+{
+  "models": [
+    {
+      "annual_maintenance_mbcu": 0.12,
+      "capacity_kg_s": 40,
+      "capex_mbcu": 4.6,
+      "category": "compressor",
+      "driver_efficiency": 0.96,
+      "efficiency_proxy": 0.76,
+      "footprint_m": {
+        "length": 12,
+        "width": 7
+      },
+      "maintenance": {
+        "clearance_m": 2.4,
+        "crane_access_required": true,
+        "heavy_maintenance": true,
+        "removal_envelope_m": [
+          9.6,
+          5.6
+        ],
+        "road_access_required": true,
+        "side": "east"
+      },
+      "maximum_discharge_pressure_mpa": 16,
+      "maximum_discharge_temperature_c": 150.0,
+      "maximum_power_mw": 20.0,
+      "maximum_pressure_ratio": 2.4,
+      "maximum_suction_pressure_mpa": 12,
+      "maximum_suction_temperature_c": 65.0,
+      "minimum_stable_flow_kg_s": 10,
+      "model_id": "C40",
+      "orientation_options_deg": [
+        0,
+        90
+      ],
+      "ports": [
+        {
+          "id": "suction",
+          "offset_m": [
+            -6.0,
+            0
+          ],
+          "type": "gas_in"
+        },
+        {
+          "id": "discharge",
+          "offset_m": [
+            6.0,
+            0
+          ],
+          "type": "gas_out"
+        }
+      ],
+      "pressure_drop_mpa": 0.0,
+      "safety_category": "compressor"
+    },
+    {
+      "annual_maintenance_mbcu": 0.16,
+      "capacity_kg_s": 60,
+      "capex_mbcu": 6.5,
+      "category": "compressor",
+      "driver_efficiency": 0.96,
+      "efficiency_proxy": 0.8,
+      "footprint_m": {
+        "length": 15,
+        "width": 8
+      },
+      "maintenance": {
+        "clearance_m": 2.8,
+        "crane_access_required": true,
+        "heavy_maintenance": true,
+        "removal_envelope_m": [
+          12.0,
+          6.4
+        ],
+        "road_access_required": true,
+        "side": "east"
+      },
+      "maximum_discharge_pressure_mpa": 16,
+      "maximum_discharge_temperature_c": 150.0,
+      "maximum_power_mw": 32.0,
+      "maximum_pressure_ratio": 2.4,
+      "maximum_suction_pressure_mpa": 14,
+      "maximum_suction_temperature_c": 65.0,
+      "minimum_stable_flow_kg_s": 15,
+      "model_id": "C60",
+      "orientation_options_deg": [
+        0,
+        90
+      ],
+      "ports": [
+        {
+          "id": "suction",
+          "offset_m": [
+            -7.5,
+            0
+          ],
+          "type": "gas_in"
+        },
+        {
+          "id": "discharge",
+          "offset_m": [
+            7.5,
+            0
+          ],
+          "type": "gas_out"
+        }
+      ],
+      "pressure_drop_mpa": 0.0,
+      "safety_category": "compressor"
+    },
+    {
+      "annual_maintenance_mbcu": 0.21,
+      "capacity_kg_s": 80,
+      "capex_mbcu": 8.8,
+      "category": "compressor",
+      "driver_efficiency": 0.96,
+      "efficiency_proxy": 0.83,
+      "footprint_m": {
+        "length": 17,
+        "width": 9
+      },
+      "maintenance": {
+        "clearance_m": 3.1,
+        "crane_access_required": true,
+        "heavy_maintenance": true,
+        "removal_envelope_m": [
+          13.6,
+          7.2
+        ],
+        "road_access_required": true,
+        "side": "east"
+      },
+      "maximum_discharge_pressure_mpa": 16,
+      "maximum_discharge_temperature_c": 150.0,
+      "maximum_power_mw": 32.0,
+      "maximum_pressure_ratio": 2.2,
+      "maximum_suction_pressure_mpa": 16,
+      "maximum_suction_temperature_c": 65.0,
+      "minimum_stable_flow_kg_s": 20,
+      "model_id": "C80",
+      "orientation_options_deg": [
+        0,
+        90
+      ],
+      "ports": [
+        {
+          "id": "suction",
+          "offset_m": [
+            -8.5,
+            0
+          ],
+          "type": "gas_in"
+        },
+        {
+          "id": "discharge",
+          "offset_m": [
+            8.5,
+            0
+          ],
+          "type": "gas_out"
+        }
+      ],
+      "pressure_drop_mpa": 0.0,
+      "safety_category": "compressor"
+    },
+    {
+      "annual_maintenance_mbcu": 0.18,
+      "capacity_kg_s": 60,
+      "capex_mbcu": 7.8,
+      "category": "compressor",
+      "driver_efficiency": 0.96,
+      "efficiency_proxy": 0.78,
+      "footprint_m": {
+        "length": 15,
+        "width": 8
+      },
+      "maintenance": {
+        "clearance_m": 2.8,
+        "crane_access_required": true,
+        "heavy_maintenance": true,
+        "removal_envelope_m": [
+          12.0,
+          6.4
+        ],
+        "road_access_required": true,
+        "side": "east"
+      },
+      "maximum_discharge_pressure_mpa": 16,
+      "maximum_discharge_temperature_c": 150.0,
+      "maximum_power_mw": 32.0,
+      "maximum_pressure_ratio": 3.2,
+      "maximum_suction_pressure_mpa": 10,
+      "maximum_suction_temperature_c": 65.0,
+      "minimum_stable_flow_kg_s": 15,
+      "model_id": "C60H",
+      "orientation_options_deg": [
+        0,
+        90
+      ],
+      "ports": [
+        {
+          "id": "suction",
+          "offset_m": [
+            -7.5,
+            0
+          ],
+          "type": "gas_in"
+        },
+        {
+          "id": "discharge",
+          "offset_m": [
+            7.5,
+            0
+          ],
+          "type": "gas_out"
+        }
+      ],
+      "pressure_drop_mpa": 0.0,
+      "safety_category": "compressor"
+    }
+  ],
+  "provenance": {
+    "classification": "synthetic benchmark assumption",
+    "note": "Deterministic development-case data; not vendor data or production engineering criteria."
+  },
+  "units": {
+    "annual_maintenance": "MBCU/year",
+    "capacity": "kg/s gas, or kg/s liquid for closed drains",
+    "capex": "MBCU",
+    "clearance": "m",
+    "dimensionless_efficiency_and_fraction": "1",
+    "flow": "kg/s",
+    "footprint_and_port_offsets": "m",
+    "free_liquid_loading": "kg liquid/kg gas",
+    "length": "m",
+    "liquid_rate": "kg/s",
+    "orientation": "degree",
+    "power_and_duty": "MW",
+    "pressure": "MPa",
+    "pressure_ratio": "1",
+    "temperature": "degC",
+    "temperature_coefficient": "K/MPa"
+  }
+}

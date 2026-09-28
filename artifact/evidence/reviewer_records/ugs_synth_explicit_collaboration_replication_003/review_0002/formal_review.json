@@ -1,0 +1,15 @@
+{
+  "findings": [
+    {
+      "claim_challenged": "test",
+      "confidence": "high",
+      "evidence": "test",
+      "finding_id": "T-1",
+      "public_basis": "test",
+      "severity": "low",
+      "status": "observation",
+      "why_it_matters": "test"
+    }
+  ],
+  "summary": "Test submission: minimal payload to check tool acceptance."
+}

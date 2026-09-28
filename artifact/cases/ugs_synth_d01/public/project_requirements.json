@@ -1,0 +1,94 @@
+{
+  "excluded_scope": [
+    "reservoir model",
+    "well completion",
+    "full electrical system",
+    "full control system",
+    "full firewater synthesis",
+    "structural design",
+    "detailed buildings",
+    "complete civil design",
+    "full process safety study",
+    "regulatory or code compliance",
+    "vendor procurement"
+  ],
+  "gas_delivery_requirements": {
+    "maximum_free_liquid_mass_fraction": 0.0001,
+    "maximum_water_content_mg_sm3": 50,
+    "temperature_limits_c": [
+      -10,
+      60
+    ]
+  },
+  "grid_tie_metering_requirement": {
+    "all_exchanged_gas_must_be_metered": true,
+    "interface_id": "GRID-TIE",
+    "mandatory": true,
+    "minimum_active_meter_capacity_fraction_of_scenario_flow": 1.0
+  },
+  "operating_hours_per_year": 5000,
+  "primary_objective": "Among feasible designs, minimize benchmark lifecycle cost (LCC).",
+  "provenance": {
+    "classification": "synthetic benchmark assumption",
+    "note": "Deterministic development-case data; not vendor data or production engineering criteria."
+  },
+  "reliability_requirements": {
+    "compression_n_minus_one": {
+      "failed_equipment_category": "compressor",
+      "minimum_retained_flow_fraction": 0.7,
+      "one_unit_unavailable_at_a_time": true,
+      "scenario_selector": "required_sink_pressure_mpa > source_pressure_mpa"
+    },
+    "delivery_requirements_remain_applicable_after_outage": true,
+    "withdrawal_treatment_n_minus_one": {
+      "failed_equipment_categories": [
+        "separator",
+        "dehydration"
+      ],
+      "minimum_retained_flow_fraction": 0.7,
+      "one_unit_unavailable_at_a_time": true,
+      "scenario_service": "withdrawal"
+    }
+  },
+  "scope": [
+    "process architecture",
+    "equipment selection and count",
+    "train architecture",
+    "process topology",
+    "operating philosophy",
+    "pipe sizing and class",
+    "layout",
+    "routing",
+    "maintenance access",
+    "roads and access"
+  ],
+  "units": {
+    "annual_hours": "h/year",
+    "dimensionless": "1",
+    "flow": "kg/s",
+    "free_liquid_loading": "kg liquid/kg gas",
+    "pressure": "MPa",
+    "temperature": "degC",
+    "water_content": "mg/Sm3"
+  },
+  "utility_boundaries": [
+    "electric power",
+    "instrument air",
+    "firewater",
+    "road entrance"
+  ],
+  "utility_service_basis": {
+    "availability_and_capacity_assumed_sufficient_unless_explicitly_limited": true,
+    "catalogued_equipment_energy_is_included_in_lcc": true,
+    "distribution_network_design_in_scope": false,
+    "externally_available_abstract_services": [
+      "electric power",
+      "instrument air",
+      "firewater"
+    ]
+  },
+  "well_group_limits": {
+    "maximum_flow_per_interface_kg_s": 25,
+    "minimum_flow_kg_s": 0
+  }
+}

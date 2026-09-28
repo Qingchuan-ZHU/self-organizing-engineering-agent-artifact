@@ -1,0 +1,1032 @@
+[
+  {
+    "id": "PGRID-INJ",
+    "from": "GRID-TIE.gas",
+    "to": "MTR-INJ.gas_in",
+    "waypoints_m": [
+      [
+        700.0,
+        225.0
+      ],
+      [
+        690.0,
+        292.0
+      ],
+      [
+        648.0,
+        292.0
+      ]
+    ],
+    "length_m": 109.742158,
+    "installation_level": "ground",
+    "nominal_diameter": "DN700",
+    "internal_diameter_m": 0.658,
+    "pipe_class": "CS-WET-160",
+    "corridor": null,
+    "class_multiplier": 1.18,
+    "level_multiplier": 1.0,
+    "installed_cost_mbcu_per_m": 0.00066,
+    "civil_cost_mbcu_per_m": 0.0,
+    "max_velocity_m_s": 6.8951,
+    "max_pressure_mpa": 6.5
+  },
+  {
+    "id": "PINJ-X",
+    "from": "MTR-INJ.gas_out",
+    "to": "X.branch_01",
+    "waypoints_m": [
+      [
+        652.0,
+        292.0
+      ],
+      [
+        437.75,
+        226.5
+      ]
+    ],
+    "length_m": 224.038641,
+    "installation_level": "ground",
+    "nominal_diameter": "DN700",
+    "internal_diameter_m": 0.658,
+    "pipe_class": "CS-WET-160",
+    "corridor": null,
+    "class_multiplier": 1.18,
+    "level_multiplier": 1.0,
+    "installed_cost_mbcu_per_m": 0.00066,
+    "civil_cost_mbcu_per_m": 0.0,
+    "max_velocity_m_s": 6.9196,
+    "max_pressure_mpa": 6.4791
+  },
+  {
+    "id": "PWH-WP",
+    "from": "WH.branch_07",
+    "to": "WP.branch_01",
+    "waypoints_m": [
+      [
+        180.0,
+        223.5
+      ],
+      [
+        317.75,
+        226.5
+      ]
+    ],
+    "length_m": 137.782664,
+    "installation_level": "ground",
+    "nominal_diameter": "DN700",
+    "internal_diameter_m": 0.658,
+    "pipe_class": "CS-WET-160",
+    "corridor": null,
+    "class_multiplier": 1.18,
+    "level_multiplier": 1.0,
+    "installed_cost_mbcu_per_m": 0.00066,
+    "civil_cost_mbcu_per_m": 0.0,
+    "max_velocity_m_s": 5.8106,
+    "max_pressure_mpa": 14.46
+  },
+  {
+    "id": "PWP-CLR",
+    "from": "WP.branch_02",
+    "to": "CLR1.gas_out",
+    "waypoints_m": [
+      [
+        323.0,
+        226.125
+      ],
+      [
+        626.0,
+        300.0
+      ]
+    ],
+    "length_m": 311.875802,
+    "installation_level": "ground",
+    "nominal_diameter": "DN600",
+    "internal_diameter_m": 0.564,
+    "pipe_class": "CS-DRY-160",
+    "corridor": null,
+    "class_multiplier": 1.15,
+    "level_multiplier": 1.0,
+    "installed_cost_mbcu_per_m": 0.000545,
+    "civil_cost_mbcu_per_m": 0.0,
+    "max_velocity_m_s": 7.8991,
+    "max_pressure_mpa": 14.4642
+  },
+  {
+    "id": "PWG1",
+    "from": "WG-01.gas",
+    "to": "WH.branch_01",
+    "waypoints_m": [
+      [
+        12.0,
+        45.0
+      ],
+      [
+        177.75,
+        226.5
+      ]
+    ],
+    "length_m": 245.795265,
+    "installation_level": "ground",
+    "nominal_diameter": "DN200",
+    "internal_diameter_m": 0.188,
+    "pipe_class": "CS-WET-160",
+    "corridor": null,
+    "class_multiplier": 1.18,
+    "level_multiplier": 1.0,
+    "installed_cost_mbcu_per_m": 0.000125,
+    "civil_cost_mbcu_per_m": 0.0,
+    "max_velocity_m_s": 11.9258,
+    "max_pressure_mpa": 14.4577
+  },
+  {
+    "id": "PWG2",
+    "from": "WG-02.gas",
+    "to": "WH.branch_02",
+    "waypoints_m": [
+      [
+        12.0,
+        117.0
+      ],
+      [
+        183.0,
+        226.125
+      ]
+    ],
+    "length_m": 202.852818,
+    "installation_level": "ground",
+    "nominal_diameter": "DN200",
+    "internal_diameter_m": 0.188,
+    "pipe_class": "CS-WET-160",
+    "corridor": null,
+    "class_multiplier": 1.18,
+    "level_multiplier": 1.0,
+    "installed_cost_mbcu_per_m": 0.000125,
+    "civil_cost_mbcu_per_m": 0.0,
+    "max_velocity_m_s": 11.9161,
+    "max_pressure_mpa": 14.4577
+  },
+  {
+    "id": "PWG3",
+    "from": "WG-03.gas",
+    "to": "WH.branch_03",
+    "waypoints_m": [
+      [
+        12.0,
+        189.0
+      ],
+      [
+        182.0,
+        223.5
+      ]
+    ],
+    "length_m": 173.465414,
+    "installation_level": "ground",
+    "nominal_diameter": "DN200",
+    "internal_diameter_m": 0.188,
+    "pipe_class": "CS-WET-160",
+    "corridor": null,
+    "class_multiplier": 1.18,
+    "level_multiplier": 1.0,
+    "installed_cost_mbcu_per_m": 0.000125,
+    "civil_cost_mbcu_per_m": 0.0,
+    "max_velocity_m_s": 11.9095,
+    "max_pressure_mpa": 14.4577
+  },
+  {
+    "id": "PWG4",
+    "from": "WG-04.gas",
+    "to": "WH.branch_04",
+    "waypoints_m": [
+      [
+        12.0,
+        261.0
+      ],
+      [
+        177.0,
+        224.0
+      ]
+    ],
+    "length_m": 169.097605,
+    "installation_level": "ground",
+    "nominal_diameter": "DN200",
+    "internal_diameter_m": 0.188,
+    "pipe_class": "CS-WET-160",
+    "corridor": null,
+    "class_multiplier": 1.18,
+    "level_multiplier": 1.0,
+    "installed_cost_mbcu_per_m": 0.000125,
+    "civil_cost_mbcu_per_m": 0.0,
+    "max_velocity_m_s": 11.9085,
+    "max_pressure_mpa": 14.4577
+  },
+  {
+    "id": "PWG5",
+    "from": "WG-05.gas",
+    "to": "WH.branch_05",
+    "waypoints_m": [
+      [
+        12.0,
+        333.0
+      ],
+      [
+        179.25,
+        226.5
+      ]
+    ],
+    "length_m": 198.279632,
+    "installation_level": "ground",
+    "nominal_diameter": "DN200",
+    "internal_diameter_m": 0.188,
+    "pipe_class": "CS-WET-160",
+    "corridor": null,
+    "class_multiplier": 1.18,
+    "level_multiplier": 1.0,
+    "installed_cost_mbcu_per_m": 0.000125,
+    "civil_cost_mbcu_per_m": 0.0,
+    "max_velocity_m_s": 11.9151,
+    "max_pressure_mpa": 14.4577
+  },
+  {
+    "id": "PWG6",
+    "from": "WG-06.gas",
+    "to": "WH.branch_06",
+    "waypoints_m": [
+      [
+        12.0,
+        405.0
+      ],
+      [
+        183.0,
+        225.375
+      ]
+    ],
+    "length_m": 248.004316,
+    "installation_level": "ground",
+    "nominal_diameter": "DN200",
+    "internal_diameter_m": 0.188,
+    "pipe_class": "CS-WET-160",
+    "corridor": null,
+    "class_multiplier": 1.18,
+    "level_multiplier": 1.0,
+    "installed_cost_mbcu_per_m": 0.000125,
+    "civil_cost_mbcu_per_m": 0.0,
+    "max_velocity_m_s": 11.9263,
+    "max_pressure_mpa": 14.4577
+  },
+  {
+    "id": "PWP-SEP1",
+    "from": "WP.branch_03",
+    "to": "SEP1.gas_in",
+    "waypoints_m": [
+      [
+        322.0,
+        223.5
+      ],
+      [
+        426.0,
+        110.0
+      ]
+    ],
+    "length_m": 153.942359,
+    "installation_level": "ground",
+    "nominal_diameter": "DN350",
+    "internal_diameter_m": 0.329,
+    "pipe_class": "CS-WET-160",
+    "corridor": null,
+    "class_multiplier": 1.18,
+    "level_multiplier": 1.0,
+    "installed_cost_mbcu_per_m": 0.00026,
+    "civil_cost_mbcu_per_m": 0.0,
+    "max_velocity_m_s": 7.6445,
+    "max_pressure_mpa": 11.9377
+  },
+  {
+    "id": "PSEP-DHY1",
+    "from": "SEP1.gas_out",
+    "to": "DHY1.gas_in",
+    "waypoints_m": [
+      [
+        434.0,
+        110.0
+      ],
+      [
+        545.0,
+        110.0
+      ]
+    ],
+    "length_m": 111.0,
+    "installation_level": "ground",
+    "nominal_diameter": "DN200",
+    "internal_diameter_m": 0.188,
+    "pipe_class": "CS-WET-160",
+    "corridor": null,
+    "class_multiplier": 1.18,
+    "level_multiplier": 1.0,
+    "installed_cost_mbcu_per_m": 0.000125,
+    "civil_cost_mbcu_per_m": 0.0,
+    "max_velocity_m_s": 23.8083,
+    "max_pressure_mpa": 11.9006
+  },
+  {
+    "id": "PDHY-X1",
+    "from": "DHY1.gas_out",
+    "to": "X.branch_02",
+    "waypoints_m": [
+      [
+        555.0,
+        110.0
+      ],
+      [
+        443.0,
+        226.125
+      ]
+    ],
+    "length_m": 161.335104,
+    "installation_level": "ground",
+    "nominal_diameter": "DN250",
+    "internal_diameter_m": 0.235,
+    "pipe_class": "CS-DRY-160",
+    "corridor": null,
+    "class_multiplier": 1.15,
+    "level_multiplier": 1.0,
+    "installed_cost_mbcu_per_m": 0.000165,
+    "civil_cost_mbcu_per_m": 0.0,
+    "max_velocity_m_s": 15.7277,
+    "max_pressure_mpa": 11.7272
+  },
+  {
+    "id": "PWP-SEP2",
+    "from": "WP.branch_04",
+    "to": "SEP2.gas_in",
+    "waypoints_m": [
+      [
+        317.0,
+        224.0
+      ],
+      [
+        426.0,
+        135.0
+      ]
+    ],
+    "length_m": 140.719579,
+    "installation_level": "ground",
+    "nominal_diameter": "DN350",
+    "internal_diameter_m": 0.329,
+    "pipe_class": "CS-WET-160",
+    "corridor": null,
+    "class_multiplier": 1.18,
+    "level_multiplier": 1.0,
+    "installed_cost_mbcu_per_m": 0.00026,
+    "civil_cost_mbcu_per_m": 0.0,
+    "max_velocity_m_s": 7.644,
+    "max_pressure_mpa": 11.9377
+  },
+  {
+    "id": "PSEP-DHY2",
+    "from": "SEP2.gas_out",
+    "to": "DHY2.gas_in",
+    "waypoints_m": [
+      [
+        434.0,
+        135.0
+      ],
+      [
+        545.0,
+        135.0
+      ]
+    ],
+    "length_m": 111.0,
+    "installation_level": "ground",
+    "nominal_diameter": "DN200",
+    "internal_diameter_m": 0.188,
+    "pipe_class": "CS-WET-160",
+    "corridor": null,
+    "class_multiplier": 1.18,
+    "level_multiplier": 1.0,
+    "installed_cost_mbcu_per_m": 0.000125,
+    "civil_cost_mbcu_per_m": 0.0,
+    "max_velocity_m_s": 23.8054,
+    "max_pressure_mpa": 11.9012
+  },
+  {
+    "id": "PDHY-X2",
+    "from": "DHY2.gas_out",
+    "to": "X.branch_03",
+    "waypoints_m": [
+      [
+        555.0,
+        135.0
+      ],
+      [
+        442.0,
+        223.5
+      ]
+    ],
+    "length_m": 143.531355,
+    "installation_level": "ground",
+    "nominal_diameter": "DN250",
+    "internal_diameter_m": 0.235,
+    "pipe_class": "CS-DRY-160",
+    "corridor": null,
+    "class_multiplier": 1.15,
+    "level_multiplier": 1.0,
+    "installed_cost_mbcu_per_m": 0.000165,
+    "civil_cost_mbcu_per_m": 0.0,
+    "max_velocity_m_s": 15.719,
+    "max_pressure_mpa": 11.7278
+  },
+  {
+    "id": "PWP-SEP3",
+    "from": "WP.branch_05",
+    "to": "SEP3.gas_in",
+    "waypoints_m": [
+      [
+        319.25,
+        226.5
+      ],
+      [
+        426.0,
+        160.0
+      ]
+    ],
+    "length_m": 125.768885,
+    "installation_level": "ground",
+    "nominal_diameter": "DN300",
+    "internal_diameter_m": 0.282,
+    "pipe_class": "CS-WET-160",
+    "corridor": null,
+    "class_multiplier": 1.18,
+    "level_multiplier": 1.0,
+    "installed_cost_mbcu_per_m": 0.00021,
+    "civil_cost_mbcu_per_m": 0.0,
+    "max_velocity_m_s": 10.4109,
+    "max_pressure_mpa": 11.9377
+  },
+  {
+    "id": "PSEP-DHY3",
+    "from": "SEP3.gas_out",
+    "to": "DHY3.gas_in",
+    "waypoints_m": [
+      [
+        434.0,
+        160.0
+      ],
+      [
+        545.0,
+        160.0
+      ]
+    ],
+    "length_m": 111.0,
+    "installation_level": "ground",
+    "nominal_diameter": "DN200",
+    "internal_diameter_m": 0.188,
+    "pipe_class": "CS-WET-160",
+    "corridor": null,
+    "class_multiplier": 1.18,
+    "level_multiplier": 1.0,
+    "installed_cost_mbcu_per_m": 0.000125,
+    "civil_cost_mbcu_per_m": 0.0,
+    "max_velocity_m_s": 23.8363,
+    "max_pressure_mpa": 11.8949
+  },
+  {
+    "id": "PDHY-X3",
+    "from": "DHY3.gas_out",
+    "to": "X.branch_04",
+    "waypoints_m": [
+      [
+        555.0,
+        160.0
+      ],
+      [
+        437.0,
+        224.0
+      ]
+    ],
+    "length_m": 134.238594,
+    "installation_level": "ground",
+    "nominal_diameter": "DN250",
+    "internal_diameter_m": 0.235,
+    "pipe_class": "CS-DRY-160",
+    "corridor": null,
+    "class_multiplier": 1.15,
+    "level_multiplier": 1.0,
+    "installed_cost_mbcu_per_m": 0.000165,
+    "civil_cost_mbcu_per_m": 0.0,
+    "max_velocity_m_s": 15.7369,
+    "max_pressure_mpa": 11.7214
+  },
+  {
+    "id": "PX-CMP1",
+    "from": "X.branch_06",
+    "to": "CMP1.suction",
+    "waypoints_m": [
+      [
+        443.0,
+        225.375
+      ],
+      [
+        292.5,
+        345.0
+      ]
+    ],
+    "length_m": 192.250853,
+    "installation_level": "ground",
+    "nominal_diameter": "DN500",
+    "internal_diameter_m": 0.47,
+    "pipe_class": "CS-DRY-160",
+    "corridor": null,
+    "class_multiplier": 1.15,
+    "level_multiplier": 1.0,
+    "installed_cost_mbcu_per_m": 0.00044,
+    "civil_cost_mbcu_per_m": 0.0,
+    "max_velocity_m_s": 6.7907,
+    "max_pressure_mpa": 6.4755
+  },
+  {
+    "id": "PCMP-DH1",
+    "from": "CMP1.discharge",
+    "to": "DH.branch_01",
+    "waypoints_m": [
+      [
+        307.5,
+        345.0
+      ],
+      [
+        557.75,
+        226.5
+      ]
+    ],
+    "length_m": 276.888628,
+    "installation_level": "ground",
+    "nominal_diameter": "DN450",
+    "internal_diameter_m": 0.423,
+    "pipe_class": "CS-DRY-160",
+    "corridor": null,
+    "class_multiplier": 1.15,
+    "level_multiplier": 1.0,
+    "installed_cost_mbcu_per_m": 0.000375,
+    "civil_cost_mbcu_per_m": 0.0,
+    "max_velocity_m_s": 7.9849,
+    "max_pressure_mpa": 13.8647
+  },
+  {
+    "id": "PX-CMP2",
+    "from": "X.branch_07",
+    "to": "CMP2.suction",
+    "waypoints_m": [
+      [
+        440.0,
+        223.5
+      ],
+      [
+        377.5,
+        345.0
+      ]
+    ],
+    "length_m": 136.632719,
+    "installation_level": "ground",
+    "nominal_diameter": "DN500",
+    "internal_diameter_m": 0.47,
+    "pipe_class": "CS-DRY-160",
+    "corridor": null,
+    "class_multiplier": 1.15,
+    "level_multiplier": 1.0,
+    "installed_cost_mbcu_per_m": 0.00044,
+    "civil_cost_mbcu_per_m": 0.0,
+    "max_velocity_m_s": 6.7899,
+    "max_pressure_mpa": 6.4755
+  },
+  {
+    "id": "PCMP-DH2",
+    "from": "CMP2.discharge",
+    "to": "DH.branch_02",
+    "waypoints_m": [
+      [
+        392.5,
+        345.0
+      ],
+      [
+        563.0,
+        226.125
+      ]
+    ],
+    "length_m": 207.849743,
+    "installation_level": "ground",
+    "nominal_diameter": "DN450",
+    "internal_diameter_m": 0.423,
+    "pipe_class": "CS-DRY-160",
+    "corridor": null,
+    "class_multiplier": 1.15,
+    "level_multiplier": 1.0,
+    "installed_cost_mbcu_per_m": 0.000375,
+    "civil_cost_mbcu_per_m": 0.0,
+    "max_velocity_m_s": 7.9861,
+    "max_pressure_mpa": 13.8647
+  },
+  {
+    "id": "PX-CMP3",
+    "from": "X.branch_08",
+    "to": "CMP3.suction",
+    "waypoints_m": [
+      [
+        437.0,
+        225.0
+      ],
+      [
+        452.0,
+        345.0
+      ]
+    ],
+    "length_m": 120.933866,
+    "installation_level": "ground",
+    "nominal_diameter": "DN250",
+    "internal_diameter_m": 0.235,
+    "pipe_class": "CS-DRY-160",
+    "corridor": null,
+    "class_multiplier": 1.15,
+    "level_multiplier": 1.0,
+    "installed_cost_mbcu_per_m": 0.000165,
+    "civil_cost_mbcu_per_m": 0.0,
+    "max_velocity_m_s": 0.0,
+    "max_pressure_mpa": 0.0
+  },
+  {
+    "id": "PCMP-DH3",
+    "from": "CMP3.discharge",
+    "to": "DH.branch_03",
+    "waypoints_m": [
+      [
+        464.0,
+        345.0
+      ],
+      [
+        562.0,
+        223.5
+      ]
+    ],
+    "length_m": 156.096925,
+    "installation_level": "ground",
+    "nominal_diameter": "DN200",
+    "internal_diameter_m": 0.188,
+    "pipe_class": "CS-DRY-160",
+    "corridor": null,
+    "class_multiplier": 1.15,
+    "level_multiplier": 1.0,
+    "installed_cost_mbcu_per_m": 0.000125,
+    "civil_cost_mbcu_per_m": 0.0,
+    "max_velocity_m_s": 0.0,
+    "max_pressure_mpa": 0.0
+  },
+  {
+    "id": "PX-Y",
+    "from": "X.branch_05",
+    "to": "Y.branch_02",
+    "waypoints_m": [
+      [
+        439.25,
+        226.5
+      ],
+      [
+        603.0,
+        191.125
+      ]
+    ],
+    "length_m": 167.52747,
+    "installation_level": "ground",
+    "nominal_diameter": "DN350",
+    "internal_diameter_m": 0.329,
+    "pipe_class": "CS-DRY-160",
+    "corridor": null,
+    "class_multiplier": 1.15,
+    "level_multiplier": 1.0,
+    "installed_cost_mbcu_per_m": 0.00026,
+    "civil_cost_mbcu_per_m": 0.0,
+    "max_velocity_m_s": 19.2381,
+    "max_pressure_mpa": 11.6875
+  },
+  {
+    "id": "PDH-CLR",
+    "from": "DH.branch_04",
+    "to": "CLR1.gas_in",
+    "waypoints_m": [
+      [
+        557.0,
+        224.0
+      ],
+      [
+        614.0,
+        300.0
+      ]
+    ],
+    "length_m": 95.0,
+    "installation_level": "ground",
+    "nominal_diameter": "DN600",
+    "internal_diameter_m": 0.564,
+    "pipe_class": "CS-DRY-160",
+    "corridor": null,
+    "class_multiplier": 1.15,
+    "level_multiplier": 1.0,
+    "installed_cost_mbcu_per_m": 0.000545,
+    "civil_cost_mbcu_per_m": 0.0,
+    "max_velocity_m_s": 9.0037,
+    "max_pressure_mpa": 14.5
+  },
+  {
+    "id": "PDH-CLR2",
+    "from": "DH.branch_05",
+    "to": "CLR2.gas_in",
+    "waypoints_m": [
+      [
+        559.25,
+        226.5
+      ],
+      [
+        595.5,
+        120.0
+      ]
+    ],
+    "length_m": 112.500278,
+    "installation_level": "ground",
+    "nominal_diameter": "DN450",
+    "internal_diameter_m": 0.423,
+    "pipe_class": "CS-DRY-160",
+    "corridor": null,
+    "class_multiplier": 1.15,
+    "level_multiplier": 1.0,
+    "installed_cost_mbcu_per_m": 0.000375,
+    "civil_cost_mbcu_per_m": 0.0,
+    "max_velocity_m_s": 11.6898,
+    "max_pressure_mpa": 6.6253
+  },
+  {
+    "id": "PCLR2-Y",
+    "from": "CLR2.gas_out",
+    "to": "Y.branch_01",
+    "waypoints_m": [
+      [
+        604.5,
+        120.0
+      ],
+      [
+        597.75,
+        191.5
+      ]
+    ],
+    "length_m": 71.817912,
+    "installation_level": "ground",
+    "nominal_diameter": "DN450",
+    "internal_diameter_m": 0.423,
+    "pipe_class": "CS-DRY-160",
+    "corridor": null,
+    "class_multiplier": 1.15,
+    "level_multiplier": 1.0,
+    "installed_cost_mbcu_per_m": 0.000375,
+    "civil_cost_mbcu_per_m": 0.0,
+    "max_velocity_m_s": 11.4855,
+    "max_pressure_mpa": 6.5831
+  },
+  {
+    "id": "PY-REG",
+    "from": "Y.branch_03",
+    "to": "REG1.gas_in",
+    "waypoints_m": [
+      [
+        602.0,
+        188.5
+      ],
+      [
+        647.5,
+        165.0
+      ]
+    ],
+    "length_m": 51.210351,
+    "installation_level": "ground",
+    "nominal_diameter": "DN450",
+    "internal_diameter_m": 0.423,
+    "pipe_class": "CS-DRY-160",
+    "corridor": null,
+    "class_multiplier": 1.15,
+    "level_multiplier": 1.0,
+    "installed_cost_mbcu_per_m": 0.000375,
+    "civil_cost_mbcu_per_m": 0.0,
+    "max_velocity_m_s": 11.6992,
+    "max_pressure_mpa": 11.6254
+  },
+  {
+    "id": "PREG-MTR",
+    "from": "REG1.gas_out",
+    "to": "MTR-WDR.gas_in",
+    "waypoints_m": [
+      [
+        652.5,
+        165.0
+      ],
+      [
+        666.0,
+        170.0
+      ]
+    ],
+    "length_m": 14.39618,
+    "installation_level": "ground",
+    "nominal_diameter": "DN450",
+    "internal_diameter_m": 0.423,
+    "pipe_class": "CS-DRY-160",
+    "corridor": null,
+    "class_multiplier": 1.15,
+    "level_multiplier": 1.0,
+    "installed_cost_mbcu_per_m": 0.000375,
+    "civil_cost_mbcu_per_m": 0.0,
+    "max_velocity_m_s": 17.6343,
+    "max_pressure_mpa": 6.5
+  },
+  {
+    "id": "PMTR-GRID",
+    "from": "MTR-WDR.gas_out",
+    "to": "GRID-TIE.gas",
+    "waypoints_m": [
+      [
+        670.0,
+        170.0
+      ],
+      [
+        700.0,
+        225.0
+      ]
+    ],
+    "length_m": 62.64982,
+    "installation_level": "ground",
+    "nominal_diameter": "DN450",
+    "internal_diameter_m": 0.423,
+    "pipe_class": "CS-DRY-160",
+    "corridor": null,
+    "class_multiplier": 1.15,
+    "level_multiplier": 1.0,
+    "installed_cost_mbcu_per_m": 0.000375,
+    "civil_cost_mbcu_per_m": 0.0,
+    "max_velocity_m_s": 17.7119,
+    "max_pressure_mpa": 6.4792
+  },
+  {
+    "id": "PSEP-DRN1",
+    "from": "SEP1.liquid_out",
+    "to": "DRN1.drain_in",
+    "waypoints_m": [
+      [
+        430.0,
+        108.0
+      ],
+      [
+        429.0,
+        62.0
+      ]
+    ],
+    "length_m": 46.010868,
+    "installation_level": "buried",
+    "nominal_diameter": "DN150",
+    "internal_diameter_m": 0.141,
+    "pipe_class": "CS-WET-100",
+    "corridor": null,
+    "class_multiplier": 1.0,
+    "level_multiplier": 1.25,
+    "installed_cost_mbcu_per_m": 9e-05,
+    "civil_cost_mbcu_per_m": 1.8e-05,
+    "max_velocity_m_s": 0.0256,
+    "max_pressure_mpa": 0.0
+  },
+  {
+    "id": "PDRN-OUT1",
+    "from": "DRN1.drain_out",
+    "to": "LIQUID-DRAIN-OUTFALL.drain",
+    "waypoints_m": [
+      [
+        431.0,
+        62.0
+      ],
+      [
+        680.0,
+        120.0
+      ]
+    ],
+    "length_m": 255.665797,
+    "installation_level": "buried",
+    "nominal_diameter": "DN150",
+    "internal_diameter_m": 0.141,
+    "pipe_class": "CS-WET-100",
+    "corridor": null,
+    "class_multiplier": 1.0,
+    "level_multiplier": 1.25,
+    "installed_cost_mbcu_per_m": 9e-05,
+    "civil_cost_mbcu_per_m": 1.8e-05,
+    "max_velocity_m_s": 0.0256,
+    "max_pressure_mpa": 0.0
+  },
+  {
+    "id": "PSEP-DRN2",
+    "from": "SEP2.liquid_out",
+    "to": "DRN2.drain_in",
+    "waypoints_m": [
+      [
+        430.0,
+        133.0
+      ],
+      [
+        461.0,
+        62.0
+      ]
+    ],
+    "length_m": 77.472576,
+    "installation_level": "buried",
+    "nominal_diameter": "DN150",
+    "internal_diameter_m": 0.141,
+    "pipe_class": "CS-WET-100",
+    "corridor": null,
+    "class_multiplier": 1.0,
+    "level_multiplier": 1.25,
+    "installed_cost_mbcu_per_m": 9e-05,
+    "civil_cost_mbcu_per_m": 1.8e-05,
+    "max_velocity_m_s": 0.0256,
+    "max_pressure_mpa": 0.0
+  },
+  {
+    "id": "PDRN-OUT2",
+    "from": "DRN2.drain_out",
+    "to": "LIQUID-DRAIN-OUTFALL.drain",
+    "waypoints_m": [
+      [
+        463.0,
+        62.0
+      ],
+      [
+        680.0,
+        120.0
+      ]
+    ],
+    "length_m": 224.617453,
+    "installation_level": "buried",
+    "nominal_diameter": "DN150",
+    "internal_diameter_m": 0.141,
+    "pipe_class": "CS-WET-100",
+    "corridor": null,
+    "class_multiplier": 1.0,
+    "level_multiplier": 1.25,
+    "installed_cost_mbcu_per_m": 9e-05,
+    "civil_cost_mbcu_per_m": 1.8e-05,
+    "max_velocity_m_s": 0.0256,
+    "max_pressure_mpa": 0.0
+  },
+  {
+    "id": "PSEP-DRN3",
+    "from": "SEP3.liquid_out",
+    "to": "DRN3.drain_in",
+    "waypoints_m": [
+      [
+        430.0,
+        158.0
+      ],
+      [
+        493.0,
+        62.0
+      ]
+    ],
+    "length_m": 114.825955,
+    "installation_level": "buried",
+    "nominal_diameter": "DN150",
+    "internal_diameter_m": 0.141,
+    "pipe_class": "CS-WET-100",
+    "corridor": null,
+    "class_multiplier": 1.0,
+    "level_multiplier": 1.25,
+    "installed_cost_mbcu_per_m": 9e-05,
+    "civil_cost_mbcu_per_m": 1.8e-05,
+    "max_velocity_m_s": 0.0256,
+    "max_pressure_mpa": 0.0
+  },
+  {
+    "id": "PDRN-OUT3",
+    "from": "DRN3.drain_out",
+    "to": "LIQUID-DRAIN-OUTFALL.drain",
+    "waypoints_m": [
+      [
+        495.0,
+        62.0
+      ],
+      [
+        680.0,
+        120.0
+      ]
+    ],
+    "length_m": 193.878828,
+    "installation_level": "buried",
+    "nominal_diameter": "DN150",
+    "internal_diameter_m": 0.141,
+    "pipe_class": "CS-WET-100",
+    "corridor": null,
+    "class_multiplier": 1.0,
+    "level_multiplier": 1.25,
+    "installed_cost_mbcu_per_m": 9e-05,
+    "civil_cost_mbcu_per_m": 1.8e-05,
+    "max_velocity_m_s": 0.0256,
+    "max_pressure_mpa": 0.0
+  }
+]

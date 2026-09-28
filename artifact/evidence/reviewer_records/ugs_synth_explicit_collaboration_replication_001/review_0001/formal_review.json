@@ -1,0 +1,93 @@
+{
+  "findings": [
+    {
+      "claim_challenged": "All injection element states, compressor discharge setpoints, the stated 0.05 MPa delivery margin, the annual energy and the 91.2981 MBCU LCC follow the published calculation basis.",
+      "confidence": "high",
+      "evidence": "submission/model/scenarios.py eval_equip(): the `cooler` branch sets only t_out/duty/electric_mw and never applies m[\"pressure_drop_mpa\"]; no rule check exists in checks.py or analysis.py for the cooler loss. Artifacts: in operating_plan.json the INJ-* \"COOL\" equipment records show p_in == p_out == 8.586528596800681 / 11.071173801551556 / 13.560430982989539, and the design report §4.1 tables print the cooler with dP \"-\". My independent recomputation (published formulas, same path): with the published setpoint 8.6023 MPa but the catalogued 0.035 MPa loss applied, the six INJ-LOW well-group pressures are 8.5155/8.5183/8.5155/8.5177/8.5149/8.5182 (margin +0.015, not +0.05); to keep +0.05 the discharge must be 8.6373/11.1159/13.6005, adding 242.8 MWh/y and (×0.00012×9.818147) 0.286 MBCU, i.e. LCC ≈ 91.584 instead of 91.2981.",
+      "finding_id": "F1-aftercooler-pressure-drop-omitted",
+      "lifecycle_status": "OPEN",
+      "public_basis": "engineering_calculation_basis.md: \"For equipment with `pressure_drop_mpa`, the value is the fixed pressure loss across the equipment.\" thermal_equipment.json COOL120: \"pressure_drop_mpa\": 0.035 (also COOL40/COOL70).",
+      "severity": "medium",
+      "status": "confirmed_violation",
+      "why_it_matters": "The submitted injection pressure profiles (P11, H-SITE, P12, H-WELL, P13-P18), the three compressor discharge setpoints, the stated 0.05 MPa margin, the annual energy and the headline LCC are not reproducible from the published rules. The design still satisfies the sink-pressure requirement (margin +0.015), so this is a calculation-consistency defect that must be corrected in the model, the deliverable JSON and the report rather than a feasibility failure."
+    },
+    {
+      "claim_challenged": "Report §4.2 and case_summary.json: \"WDR-HIGH/MID/LOW-N1-dehydration ... delivered flow 120/100/70, retained 1.000, feasible yes, violations 0\" — i.e. withdrawal treatment n-1 is demonstrated after loss of one dehydration unit.",
+      "confidence": "high",
+      "evidence": "scenarios.py withdrawal_plan(): `pre` is built only from active_sep, and `per_deh` (flow/len(active_deh)) is computed but never used; build_plan() passes only kw[\"active_deh\"] for a dehydration outage, leaving active_sep = (0,1,2). Artifact proof: in operating_plan.json contingency_cases, every dehydration case still contains SEP-A/B/C and DEH-A/B/C in its operating_path at full per-lane flows (WDR-HIGH 3×40.0, WDR-MID 3×33.33, WDR-LOW 3×23.33 kg/s), whereas the separator cases correctly contain only two lanes (3×40 → 2×60 etc.).",
+      "finding_id": "F2-dehydration-n1-case-not-modelled",
+      "lifecycle_status": "OPEN",
+      "public_basis": "project_requirements.json reliability_requirements.withdrawal_treatment_n_minus_one: failed_equipment_categories [separator, dehydration], one unit unavailable at a time, minimum_retained_flow_fraction 0.7; engineering_calculation_basis.md: \"withdrawal_treatment_n_minus_one applies to each withdrawal scenario after any one separator or dehydration unit is unavailable.\"",
+      "severity": "medium",
+      "status": "confirmed_violation",
+      "why_it_matters": "The three dehydration contingency cases are not the cases the brief requires, so the recorded \"0 violations / 100 % retained\" is not evidence for the published requirement. My independent run of the correctly modelled case (one whole train out, 60 kg/s per remaining separator and dehydrator, 120/100/70 kg/s total) found no limit violations (SEP70/DEHY70 capacities 70 kg/s, P20 14.6 m/s), so the design does appear compliant — but the case must be re-run and its element states re-recorded before the claim can stand."
+    },
+    {
+      "claim_challenged": "Report §8: \"Automated checks were run over 6 mandatory scenarios and 10 contingency cases ... Total reported violations: 0. Machine-readable evidence is in verification.json, case_summary.json and the per-case element states in operating_plan.json. Every rule group PASS.\"",
+      "confidence": "high",
+      "evidence": "verification.json = {\"geometry_and_rule_checks\": {\"errors\": [], \"warnings\": []}, \"operating_case_checks\": [], \"cases_checked\": [...]} — empty lists, no per-rule PASS records and no record of which rules were evaluated. The ten contingency_cases entries in operating_plan.json contain only case_id/scenario/outage/flow/sinks/violations/operating_path — no element_states, so no pressures, temperatures, velocities or equipment utilisations exist for any n-1 case, although the report's §6 max-velocity column (e.g. P20 22.36 m/s, which comes from the WDR-LOW 2-train case) and §8 table quote n-1 results.",
+      "finding_id": "F3-verification-artifacts-thin",
+      "lifecycle_status": "OPEN",
+      "public_basis": "final_delivery_contract.json: reconstructability — \"enough precision for an independent reviewer to reconstruct and recalculate the design without relying on unstated assumptions\"; purpose includes scenario-specific operating paths, flows and setpoints.",
+      "severity": "medium",
+      "status": "unsupported_claim",
+      "why_it_matters": "The n-1 compliance claims (velocity, capacity, delivery limits) cannot be reconstructed from the deliverables alone; a reviewer must re-run the model. Combined with F2 this means two of the seventeen reported rule groups rest on evidence that is either absent or wrong."
+    },
+    {
+      "claim_challenged": "Report §1.4: \"Where a pipeline crosses a road, the crossing length is installed at buried level in the model\"; §6: \"drain pipelines and road crossings are buried\"; §2: compressor discharge \"reaches ~97-105 degC\".",
+      "confidence": "high",
+      "evidence": "pipelines.json assigns every gas line a single level \"ground\" (P01-P33) and only drain lines \"buried\". My own segment/road intersection test finds 12 gas segments crossing paved road areas at grade: P02, P06, P07, P08, P09, P11 (crossing both RD-CRANE and RD-SEP), P16, P17, P18, P22, P23, P24 — so no road-crossing length is buried and no buried-level cost is charged for them. Separately, the model's own maximum compressor discharge temperature is 94.43 degC (INJ-HIGH; 94.75 degC with the corrected cooler loss), not \"97-105 degC\".",
+      "finding_id": "F4-report-statements-not-in-artifacts",
+      "lifecycle_status": "OPEN",
+      "public_basis": "engineering_geometry_basis.md pipeline routes: each segment has one installation level, level changes occur at shared endpoints; piping_catalog.json routing_levels gives buried civil_cost 1.8e-5 MBCU/m and installed multiplier 1.25.",
+      "severity": "low",
+      "status": "unsupported_claim",
+      "why_it_matters": "Two statements in the design narrative are contradicted by the submitted data; a reviewer reproducing the model gets different route levels and a slightly different LCC basis than the report describes. Neither point breaches a published rule, but they damage the reconstructability of the design intent."
+    },
+    {
+      "claim_challenged": "Report §8: \"Velocity limits (gas 25 m/s, liquid 3 m/s) in every case | PASS\" and §1.4 \"Liquid velocity in drain lines is far below the 3 m/s limit ... (0.03-0.4 m/s at 800-1000 kg/m3)\".",
+      "confidence": "high",
+      "evidence": "The drain pipelines P34-P39 appear in no operating_path in operating_plan.json, the pipe evaluator is gas-based (eval_pipe uses gas density via the published gas properties), and the report's own §6 table lists \"Max velocity 0.00\" for P34-P39. The stated 0.03-0.4 m/s band corresponds to roughly 0.7-9 kg/s of liquid, whereas the actual maximum side stream is 0.60 kg/s in DN200 (≈0.02-0.03 m/s at 800-1000 kg/m3).",
+      "finding_id": "F5-liquid-drain-velocity-never-computed",
+      "lifecycle_status": "OPEN",
+      "public_basis": "engineering_calculation_basis.md: \"Liquid-drain pipelines require a class marked liquid_drain_compatible and must remain within the published liquid-drain velocity limit\"; piping_catalog.json maximum_liquid_drain_velocity_m_s = 3.0.",
+      "severity": "low",
+      "status": "unsupported_claim",
+      "why_it_matters": "A published limit is reported as verified although no velocity is computed anywhere; the true margin is enormous, so this is a claim-quality issue rather than a design risk, but the PASS row should be replaced by an explicit assumption-based estimate."
+    },
+    {
+      "claim_challenged": "Report §1.3/§2/README: pipe diameters \"were selected by minimising the benchmark lifecycle cost\" and the equipment selection rationale implies the 91.2981 MBCU result is the LCC-optimal feasible design.",
+      "confidence": "medium",
+      "evidence": "sweep.py performs coordinate descent on pipeline DN only; equipment model choice is manual. The four headers are HDR180 (capex 0.36, maintenance 0.016/y; total 1.44 + 0.157 PV). HDR120 has the same footprint (6×3), the same 16 MPa rating/clearance, 10 branch ports (the largest demand is H-SUC with 8) and capacity 120 kg/s = the maximum header flow in any case, with dp@capacity 0.01 MPa instead of 0.00444. Simulating that swap (setpoints re-solved) raises annual energy by 154.8 MWh/y (0.182 MBCU PV) and cuts capex+maintenance PV by 0.597 MBCU, i.e. net LCC ≈ -0.42 MBCU (-0.45 %). Separately, required_sink_pressure_mpa is only a lower bound (it is the compression-selector threshold), so REG120 + P31 + P32 (0.42 capex + ~0.18 maintenance PV) is a disclosed design choice rather than a published requirement.",
+      "finding_id": "F6-lcc-minimality-not-evidenced-for-equipment",
+      "lifecycle_status": "OPEN",
+      "public_basis": "project_requirements.json primary_objective: \"Among feasible designs, minimize benchmark lifecycle cost (LCC)\"; economic_assumptions.json + piping_catalog.json rates; engineering_calculation_basis.md \"Equipment CAPEX is the sum of capex_mbcu for every installed equipment instance\" and maintenance PVF = 9.818147.",
+      "severity": "medium",
+      "status": "suspected_risk",
+      "why_it_matters": "The project's primary objective is LCC minimisation, and the selection logic is spelled out only for the compressor bank (where I confirm 3×C60 is sound and 3×C80 / 4×C40 are worse). An unjustified ~0.4-0.6 MBCU of capital/maintenance over-specification should either be justified or re-optimised; because the alternative has not been fully engineered (routes and DNs would need re-optimisation) I flag it as a risk, not a confirmed violation."
+    },
+    {
+      "claim_challenged": "Worker focus item 4: are the valve line-ups and the active element set unambiguously reconstructable in each scenario?",
+      "confidence": "medium",
+      "evidence": "The active set is defined only by the operating_path lists; no isolation/line-up statement exists anywhere in the deliverables. Functionally necessary isolations that a reviewer must infer: the treatment-train branches (P19-P24 with SEP/DEH, from H-SITE at 8.57 MPa into H-SUC at 6.46 MPa) during injection, otherwise gas recycles to the suction header; the H-DIS→P31→REG→MTR-B→P33 path during injection (physically permitted by the port table, only the null grid setpoint signals it is shut); the cooler branch P10/P11 during withdrawal; the bypass P09 during injection and WDR-LOW. I could still recompute every recorded number from the paths alone, so the plan is not ambiguous enough to block reconstruction.",
+      "finding_id": "F7-valve-line-up-implicit",
+      "lifecycle_status": "OPEN",
+      "public_basis": "final_delivery_contract.json minimum_reconstruction_content: \"Scenario-specific operating paths, flows, and setpoints\"; network_semantics.md: a physical loop is not disallowed, so unlisted parallel branches are not forbidden by geometry alone.",
+      "severity": "low",
+      "status": "observation",
+      "why_it_matters": "An explicit isolation list per scenario would remove any doubt and costs nothing; the omission is a documentation gap rather than a rule breach."
+    },
+    {
+      "claim_challenged": "Worker focus item 5: the judgement that same-level plan-view pipe crossings are permissible.",
+      "confidence": "high",
+      "evidence": "My own check confirms no positive-length same-level overlap anywhere (including each pipeline with itself, and no corridor is declared by any segment). There are 23 same-level point crossings between different pipelines, e.g. P02/P32 at (600.0, 240.0), P02/P04 (460.0, 140.0), P07/P10 (545.75, 152.0), P08/P32 (585.0, 205.0), P11 crossing RD-CRANE and RD-SEP at grade; plus buried drain crossings. Each has zero shared length, so the published prohibition is not engaged, and the report discloses that local elevation changes would be required in detailed design (uncosted).",
+      "finding_id": "F8-same-level-plan-crossings",
+      "lifecycle_status": "OPEN",
+      "public_basis": "engineering_geometry_basis.md: \"Different-level plan projections may cross\"; \"Positive-length overlap between same-level pipeline segments is not allowed unless both segments explicitly use the same public corridor and that corridor allows co-routing\"; overlap threshold 1e-6 m.",
+      "severity": "low",
+      "status": "observation",
+      "why_it_matters": "The judgement is sound under the published rules and is disclosed; no action needed beyond keeping the disclosure, though the uncosted elevation changes are a small residual LCC uncertainty."
+    }
+  ],
+  "summary": "Independent review of the UGS-SYNTH-D01 snapshot (20 equipment instances, 36 pipelines, 6 scenarios + 10 n-1 cases, headline LCC 91.2981 MBCU).\n\nWhat I reproduced independently (own code, brief data only, no reuse of submission/model):\n- Geometry/layout/topology: 0 errors of my own. Footprints inside site/outside equipment-exclusion/among themselves; full safety-separation matrix (tightest margin 5.0 m, DRN-A/B/C–SEP-A/B/C at 13.0 vs 8 required); maintenance envelopes (site/zones/other footprints); road width/site/road-exclusion/footprint clearance/connectivity and ROAD-ENTRANCE on the paved network; road access 2.5–3.0 m (limits 7.0/4.5); pipeline endpoints matching ports, segments within site, no pipeline-exclusion entry, no footprint-interior crossing, no positive-length same-level overlap (including self-overlap); port cardinality/type compatibility and interface connection limits. Positions, orientations, routes and lengths recomputed from the four-decimal published coordinates.\n- Quantities and LCC: equipment CAPEX 30.93, piping CAPEX 1.8474, civil 0.1694 (roads 906 m, foundations 793 m2, maintenance 1602.36 m2 — matches the submitted per-instance envelope areas within 0.01 m2), energy PV 47.6397, maintenance PV 10.7116, total 91.2981 — every component is exactly reproducible from the published rates; pipeline length 5858.528 m.\n- Process: I re-implemented the published gas-property proxies, Swamee-Jain/Darcy fixed-point pressure loss, header ΔP formula, compressor temperature/power relations, separator/dehydrator/regulator/cooler models and the published mixing/splitting conventions, and walked the six operating paths. Discharge pressures (8.6023/11.0809/13.5655), all element pressures/velocities, sink pressures/temperatures/quality and all three liquids side streams reproduce the submission to ≤1e-4; compressor power reproduces exactly. Against the published limits I find no violation in the six mandatory scenarios.\n\nPrincipal problems found:\n1. The aftercooler's catalogued fixed pressure loss (COOL120 pressure_drop_mpa = 0.035 MPa) is never applied — a direct departure from \"For equipment with pressure_drop_mpa, the value is the fixed pressure loss across the equipment\". All injection pressures downstream of the cooler are therefore understated by 0.035 MPa; the advertised \"0.05 MPa delivery margin\" is really +0.015 (8.5149 MPa), and if the margin is preserved the discharge pressures must be 0.035 MPa higher, adding 242.8 MWh/y and ~0.286 MBCU (LCC ≈ 91.584). The design still meets the sink-pressure limit, so this is a correctness/consistency defect, not an infeasibility.\n2. The three withdrawal \"dehydration n-1\" cases do not remove a dehydration unit at all: withdrawal_plan() ignores its active_deh argument, and all three recorded cases still list all three separators and all three dehydrators. The submitted \"100 % retained, 0 violations\" evidence for the published dehydration-outage requirement is therefore invalid. My independent run of the correctly modelled case (one train out, 60 kg/s per remaining unit) shows no limit violations, so the design appears compliant — but the case must be re-run and re-recorded.\n3. Verification artefacts are much thinner than the report claims: verification.json holds only empty error lists (no per-rule records), and the n-1 cases in operating_plan.json carry no element states, so no pressure/temperature/velocity/capacity evidence exists for them, even though the report's §6 velocity column and §8 PASS table include n-1 results.\n4. The LCC-minimality claim is only evidenced for pipe diameters and compressors; header model selection is not justified, and a like-for-like swap to 4×HDR120 (same footprint/rating, 10 branch ports, capacity 120 kg/s = maximum header flow) is worth roughly 0.4 MBCU net. The regulator is also a judgment call, since the published sink pressure is a lower limit.\n\nEverything else I checked (delivery limits at all sinks, metering capacity, well-group limits, capacities/ratios/powers/duties, class pressure/temperature/wet-dry eligibility, quantities, positions/orientations, scenario paths and flows, disclosed same-level plan crossings) is consistent with the published rules within the stated tolerances."
+}

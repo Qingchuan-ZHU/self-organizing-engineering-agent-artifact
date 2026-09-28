@@ -1,0 +1,4993 @@
+{
+ "case": {
+  "benchmark_family": "UGS-SYNTH",
+  "case_id": "UGS-SYNTH-D01",
+  "case_version": "1.1.0-development",
+  "provenance": {
+   "classification": "synthetic benchmark assumption",
+   "note": "Deterministic development-case data; not vendor data or production engineering criteria."
+  }
+ },
+ "design_basis": {
+  "T_aftercooler_c": 58.0,
+  "operation": {
+   "injection": "grid tie -> active meter -> grid-side header -> 2 x C60 (parallel, balanced) -> discharge header -> aftercooler -> well-side header -> 6 well lines",
+   "withdrawal_high_mid": "6 well lines -> well-side header -> 3 x SEP70 -> 3 x DEHY70 -> treated header -> REG120 -> active meter -> grid tie",
+   "withdrawal_low": "6 well lines -> well-side header -> 3 x SEP70 -> 3 x DEHY70 -> treated header -> 2 x C60 boosters -> active meter -> grid tie"
+  },
+  "velocities": {
+   "max_gas_m_s": 25.0,
+   "max_liquid_drain_m_s": 3.0
+  },
+  "liquid_density_assumption_kg_m3": 1000.0
+ },
+ "equipment_instances": [
+  {
+   "id": "MTR-INJ",
+   "model_id": "MTR120",
+   "category": "meter",
+   "safety_category": "metering",
+   "x": 615,
+   "y": 240,
+   "orientation_deg": 0,
+   "footprint_m": {
+    "length": 4,
+    "width": 2
+   },
+   "footprint_extent": [
+    613.0,
+    239.0,
+    617.0,
+    241.0
+   ],
+   "capacity_kg_s": 120,
+   "capex_mbcu": 0.3,
+   "annual_maintenance_mbcu": 0.016,
+   "ports": {
+    "gas_in": {
+     "type": "gas_in",
+     "x": 613.0,
+     "y": 240
+    },
+    "gas_out": {
+     "type": "gas_out",
+     "x": 617.0,
+     "y": 240
+    }
+   },
+   "heavy_maintenance": false
+  },
+  {
+   "id": "MTR-WDR",
+   "model_id": "MTR120",
+   "category": "meter",
+   "safety_category": "metering",
+   "x": 615,
+   "y": 210,
+   "orientation_deg": 0,
+   "footprint_m": {
+    "length": 4,
+    "width": 2
+   },
+   "footprint_extent": [
+    613.0,
+    209.0,
+    617.0,
+    211.0
+   ],
+   "capacity_kg_s": 120,
+   "capex_mbcu": 0.3,
+   "annual_maintenance_mbcu": 0.016,
+   "ports": {
+    "gas_in": {
+     "type": "gas_in",
+     "x": 613.0,
+     "y": 210
+    },
+    "gas_out": {
+     "type": "gas_out",
+     "x": 617.0,
+     "y": 210
+    }
+   },
+   "heavy_maintenance": false
+  },
+  {
+   "id": "H-GS",
+   "model_id": "HDR120",
+   "category": "header",
+   "safety_category": "hydrocarbon_treatment",
+   "x": 560,
+   "y": 200,
+   "orientation_deg": 0,
+   "footprint_m": {
+    "length": 6,
+    "width": 3
+   },
+   "footprint_extent": [
+    557.0,
+    198.5,
+    563.0,
+    201.5
+   ],
+   "capacity_kg_s": 120,
+   "capex_mbcu": 0.25,
+   "annual_maintenance_mbcu": 0.012,
+   "ports": {
+    "branch_01": {
+     "type": "gas_bidirectional",
+     "x": 558.0,
+     "y": 201.5
+    },
+    "branch_02": {
+     "type": "gas_bidirectional",
+     "x": 563.0,
+     "y": 201.0
+    },
+    "branch_03": {
+     "type": "gas_bidirectional",
+     "x": 561.5,
+     "y": 198.5
+    },
+    "branch_04": {
+     "type": "gas_bidirectional",
+     "x": 557.0,
+     "y": 199.25
+    },
+    "branch_05": {
+     "type": "gas_bidirectional",
+     "x": 560.0,
+     "y": 201.5
+    },
+    "branch_06": {
+     "type": "gas_bidirectional",
+     "x": 563.0,
+     "y": 200.0
+    },
+    "branch_07": {
+     "type": "gas_bidirectional",
+     "x": 558.5,
+     "y": 198.5
+    },
+    "branch_08": {
+     "type": "gas_bidirectional",
+     "x": 557.0,
+     "y": 200.75
+    },
+    "branch_09": {
+     "type": "gas_bidirectional",
+     "x": 562.0,
+     "y": 201.5
+    },
+    "branch_10": {
+     "type": "gas_bidirectional",
+     "x": 563.0,
+     "y": 199.0
+    }
+   },
+   "heavy_maintenance": false
+  },
+  {
+   "id": "H-CH",
+   "model_id": "HDR120",
+   "category": "header",
+   "safety_category": "hydrocarbon_treatment",
+   "x": 455,
+   "y": 200,
+   "orientation_deg": 0,
+   "footprint_m": {
+    "length": 6,
+    "width": 3
+   },
+   "footprint_extent": [
+    452.0,
+    198.5,
+    458.0,
+    201.5
+   ],
+   "capacity_kg_s": 120,
+   "capex_mbcu": 0.25,
+   "annual_maintenance_mbcu": 0.012,
+   "ports": {
+    "branch_01": {
+     "type": "gas_bidirectional",
+     "x": 453.0,
+     "y": 201.5
+    },
+    "branch_02": {
+     "type": "gas_bidirectional",
+     "x": 458.0,
+     "y": 201.0
+    },
+    "branch_03": {
+     "type": "gas_bidirectional",
+     "x": 456.5,
+     "y": 198.5
+    },
+    "branch_04": {
+     "type": "gas_bidirectional",
+     "x": 452.0,
+     "y": 199.25
+    },
+    "branch_05": {
+     "type": "gas_bidirectional",
+     "x": 455.0,
+     "y": 201.5
+    },
+    "branch_06": {
+     "type": "gas_bidirectional",
+     "x": 458.0,
+     "y": 200.0
+    },
+    "branch_07": {
+     "type": "gas_bidirectional",
+     "x": 453.5,
+     "y": 198.5
+    },
+    "branch_08": {
+     "type": "gas_bidirectional",
+     "x": 452.0,
+     "y": 200.75
+    },
+    "branch_09": {
+     "type": "gas_bidirectional",
+     "x": 457.0,
+     "y": 201.5
+    },
+    "branch_10": {
+     "type": "gas_bidirectional",
+     "x": 458.0,
+     "y": 199.0
+    }
+   },
+   "heavy_maintenance": false
+  },
+  {
+   "id": "H-WS",
+   "model_id": "HDR120",
+   "category": "header",
+   "safety_category": "hydrocarbon_treatment",
+   "x": 350,
+   "y": 200,
+   "orientation_deg": 0,
+   "footprint_m": {
+    "length": 6,
+    "width": 3
+   },
+   "footprint_extent": [
+    347.0,
+    198.5,
+    353.0,
+    201.5
+   ],
+   "capacity_kg_s": 120,
+   "capex_mbcu": 0.25,
+   "annual_maintenance_mbcu": 0.012,
+   "ports": {
+    "branch_01": {
+     "type": "gas_bidirectional",
+     "x": 348.0,
+     "y": 201.5
+    },
+    "branch_02": {
+     "type": "gas_bidirectional",
+     "x": 353.0,
+     "y": 201.0
+    },
+    "branch_03": {
+     "type": "gas_bidirectional",
+     "x": 351.5,
+     "y": 198.5
+    },
+    "branch_04": {
+     "type": "gas_bidirectional",
+     "x": 347.0,
+     "y": 199.25
+    },
+    "branch_05": {
+     "type": "gas_bidirectional",
+     "x": 350.0,
+     "y": 201.5
+    },
+    "branch_06": {
+     "type": "gas_bidirectional",
+     "x": 353.0,
+     "y": 200.0
+    },
+    "branch_07": {
+     "type": "gas_bidirectional",
+     "x": 348.5,
+     "y": 198.5
+    },
+    "branch_08": {
+     "type": "gas_bidirectional",
+     "x": 347.0,
+     "y": 200.75
+    },
+    "branch_09": {
+     "type": "gas_bidirectional",
+     "x": 352.0,
+     "y": 201.5
+    },
+    "branch_10": {
+     "type": "gas_bidirectional",
+     "x": 353.0,
+     "y": 199.0
+    }
+   },
+   "heavy_maintenance": false
+  },
+  {
+   "id": "H-TS",
+   "model_id": "HDR120",
+   "category": "header",
+   "safety_category": "hydrocarbon_treatment",
+   "x": 460,
+   "y": 262,
+   "orientation_deg": 0,
+   "footprint_m": {
+    "length": 6,
+    "width": 3
+   },
+   "footprint_extent": [
+    457.0,
+    260.5,
+    463.0,
+    263.5
+   ],
+   "capacity_kg_s": 120,
+   "capex_mbcu": 0.25,
+   "annual_maintenance_mbcu": 0.012,
+   "ports": {
+    "branch_01": {
+     "type": "gas_bidirectional",
+     "x": 458.0,
+     "y": 263.5
+    },
+    "branch_02": {
+     "type": "gas_bidirectional",
+     "x": 463.0,
+     "y": 263.0
+    },
+    "branch_03": {
+     "type": "gas_bidirectional",
+     "x": 461.5,
+     "y": 260.5
+    },
+    "branch_04": {
+     "type": "gas_bidirectional",
+     "x": 457.0,
+     "y": 261.25
+    },
+    "branch_05": {
+     "type": "gas_bidirectional",
+     "x": 460.0,
+     "y": 263.5
+    },
+    "branch_06": {
+     "type": "gas_bidirectional",
+     "x": 463.0,
+     "y": 262.0
+    },
+    "branch_07": {
+     "type": "gas_bidirectional",
+     "x": 458.5,
+     "y": 260.5
+    },
+    "branch_08": {
+     "type": "gas_bidirectional",
+     "x": 457.0,
+     "y": 262.75
+    },
+    "branch_09": {
+     "type": "gas_bidirectional",
+     "x": 462.0,
+     "y": 263.5
+    },
+    "branch_10": {
+     "type": "gas_bidirectional",
+     "x": 463.0,
+     "y": 261.0
+    }
+   },
+   "heavy_maintenance": false
+  },
+  {
+   "id": "COOL-1",
+   "model_id": "COOL120",
+   "category": "cooler",
+   "safety_category": "hydrocarbon_treatment",
+   "x": 485,
+   "y": 240,
+   "orientation_deg": 0,
+   "footprint_m": {
+    "length": 12,
+    "width": 6
+   },
+   "footprint_extent": [
+    479.0,
+    237.0,
+    491.0,
+    243.0
+   ],
+   "capacity_kg_s": 120,
+   "capex_mbcu": 0.92,
+   "annual_maintenance_mbcu": 0.05,
+   "ports": {
+    "gas_in": {
+     "type": "gas_in",
+     "x": 479.0,
+     "y": 240
+    },
+    "gas_out": {
+     "type": "gas_out",
+     "x": 491.0,
+     "y": 240
+    }
+   },
+   "heavy_maintenance": false
+  },
+  {
+   "id": "C-I1",
+   "model_id": "C60",
+   "category": "compressor",
+   "safety_category": "compressor",
+   "x": 360,
+   "y": 140,
+   "orientation_deg": 0,
+   "footprint_m": {
+    "length": 15,
+    "width": 8
+   },
+   "footprint_extent": [
+    352.5,
+    136.0,
+    367.5,
+    144.0
+   ],
+   "capacity_kg_s": 60,
+   "capex_mbcu": 6.5,
+   "annual_maintenance_mbcu": 0.16,
+   "ports": {
+    "suction": {
+     "type": "gas_in",
+     "x": 352.5,
+     "y": 140
+    },
+    "discharge": {
+     "type": "gas_out",
+     "x": 367.5,
+     "y": 140
+    }
+   },
+   "heavy_maintenance": true
+  },
+  {
+   "id": "C-I2",
+   "model_id": "C60",
+   "category": "compressor",
+   "safety_category": "compressor",
+   "x": 390,
+   "y": 140,
+   "orientation_deg": 0,
+   "footprint_m": {
+    "length": 15,
+    "width": 8
+   },
+   "footprint_extent": [
+    382.5,
+    136.0,
+    397.5,
+    144.0
+   ],
+   "capacity_kg_s": 60,
+   "capex_mbcu": 6.5,
+   "annual_maintenance_mbcu": 0.16,
+   "ports": {
+    "suction": {
+     "type": "gas_in",
+     "x": 382.5,
+     "y": 140
+    },
+    "discharge": {
+     "type": "gas_out",
+     "x": 397.5,
+     "y": 140
+    }
+   },
+   "heavy_maintenance": true
+  },
+  {
+   "id": "C-I3",
+   "model_id": "C40",
+   "category": "compressor",
+   "safety_category": "compressor",
+   "x": 420,
+   "y": 140,
+   "orientation_deg": 0,
+   "footprint_m": {
+    "length": 12,
+    "width": 7
+   },
+   "footprint_extent": [
+    414.0,
+    136.5,
+    426.0,
+    143.5
+   ],
+   "capacity_kg_s": 40,
+   "capex_mbcu": 4.6,
+   "annual_maintenance_mbcu": 0.12,
+   "ports": {
+    "suction": {
+     "type": "gas_in",
+     "x": 414.0,
+     "y": 140
+    },
+    "discharge": {
+     "type": "gas_out",
+     "x": 426.0,
+     "y": 140
+    }
+   },
+   "heavy_maintenance": true
+  },
+  {
+   "id": "C-W1",
+   "model_id": "C60",
+   "category": "compressor",
+   "safety_category": "compressor",
+   "x": 515,
+   "y": 140,
+   "orientation_deg": 0,
+   "footprint_m": {
+    "length": 15,
+    "width": 8
+   },
+   "footprint_extent": [
+    507.5,
+    136.0,
+    522.5,
+    144.0
+   ],
+   "capacity_kg_s": 60,
+   "capex_mbcu": 6.5,
+   "annual_maintenance_mbcu": 0.16,
+   "ports": {
+    "suction": {
+     "type": "gas_in",
+     "x": 507.5,
+     "y": 140
+    },
+    "discharge": {
+     "type": "gas_out",
+     "x": 522.5,
+     "y": 140
+    }
+   },
+   "heavy_maintenance": true
+  },
+  {
+   "id": "C-W2",
+   "model_id": "C60",
+   "category": "compressor",
+   "safety_category": "compressor",
+   "x": 550,
+   "y": 140,
+   "orientation_deg": 0,
+   "footprint_m": {
+    "length": 15,
+    "width": 8
+   },
+   "footprint_extent": [
+    542.5,
+    136.0,
+    557.5,
+    144.0
+   ],
+   "capacity_kg_s": 60,
+   "capex_mbcu": 6.5,
+   "annual_maintenance_mbcu": 0.16,
+   "ports": {
+    "suction": {
+     "type": "gas_in",
+     "x": 542.5,
+     "y": 140
+    },
+    "discharge": {
+     "type": "gas_out",
+     "x": 557.5,
+     "y": 140
+    }
+   },
+   "heavy_maintenance": true
+  },
+  {
+   "id": "SEP-1",
+   "model_id": "SEP70",
+   "category": "separator",
+   "safety_category": "hydrocarbon_treatment",
+   "x": 368,
+   "y": 292,
+   "orientation_deg": 0,
+   "footprint_m": {
+    "length": 8,
+    "width": 4
+   },
+   "footprint_extent": [
+    364.0,
+    290.0,
+    372.0,
+    294.0
+   ],
+   "capacity_kg_s": 70,
+   "capex_mbcu": 0.78,
+   "annual_maintenance_mbcu": 0.05,
+   "ports": {
+    "gas_in": {
+     "type": "gas_in",
+     "x": 364.0,
+     "y": 292
+    },
+    "gas_out": {
+     "type": "gas_out",
+     "x": 372.0,
+     "y": 292
+    },
+    "liquid_out": {
+     "type": "liquid_out",
+     "x": 368,
+     "y": 290.0
+    }
+   },
+   "heavy_maintenance": false
+  },
+  {
+   "id": "SEP-2",
+   "model_id": "SEP70",
+   "category": "separator",
+   "safety_category": "hydrocarbon_treatment",
+   "x": 452,
+   "y": 292,
+   "orientation_deg": 0,
+   "footprint_m": {
+    "length": 8,
+    "width": 4
+   },
+   "footprint_extent": [
+    448.0,
+    290.0,
+    456.0,
+    294.0
+   ],
+   "capacity_kg_s": 70,
+   "capex_mbcu": 0.78,
+   "annual_maintenance_mbcu": 0.05,
+   "ports": {
+    "gas_in": {
+     "type": "gas_in",
+     "x": 448.0,
+     "y": 292
+    },
+    "gas_out": {
+     "type": "gas_out",
+     "x": 456.0,
+     "y": 292
+    },
+    "liquid_out": {
+     "type": "liquid_out",
+     "x": 452,
+     "y": 290.0
+    }
+   },
+   "heavy_maintenance": false
+  },
+  {
+   "id": "SEP-3",
+   "model_id": "SEP70",
+   "category": "separator",
+   "safety_category": "hydrocarbon_treatment",
+   "x": 535,
+   "y": 292,
+   "orientation_deg": 0,
+   "footprint_m": {
+    "length": 8,
+    "width": 4
+   },
+   "footprint_extent": [
+    531.0,
+    290.0,
+    539.0,
+    294.0
+   ],
+   "capacity_kg_s": 70,
+   "capex_mbcu": 0.78,
+   "annual_maintenance_mbcu": 0.05,
+   "ports": {
+    "gas_in": {
+     "type": "gas_in",
+     "x": 531.0,
+     "y": 292
+    },
+    "gas_out": {
+     "type": "gas_out",
+     "x": 539.0,
+     "y": 292
+    },
+    "liquid_out": {
+     "type": "liquid_out",
+     "x": 535,
+     "y": 290.0
+    }
+   },
+   "heavy_maintenance": false
+  },
+  {
+   "id": "DEH-1",
+   "model_id": "DEHY70",
+   "category": "dehydration",
+   "safety_category": "hydrocarbon_treatment",
+   "x": 400,
+   "y": 292,
+   "orientation_deg": 0,
+   "footprint_m": {
+    "length": 10,
+    "width": 5
+   },
+   "footprint_extent": [
+    395.0,
+    289.5,
+    405.0,
+    294.5
+   ],
+   "capacity_kg_s": 70,
+   "capex_mbcu": 1.85,
+   "annual_maintenance_mbcu": 0.095,
+   "ports": {
+    "gas_in": {
+     "type": "gas_in",
+     "x": 395.0,
+     "y": 292
+    },
+    "gas_out": {
+     "type": "gas_out",
+     "x": 405.0,
+     "y": 292
+    }
+   },
+   "heavy_maintenance": false
+  },
+  {
+   "id": "DEH-2",
+   "model_id": "DEHY70",
+   "category": "dehydration",
+   "safety_category": "hydrocarbon_treatment",
+   "x": 485,
+   "y": 292,
+   "orientation_deg": 0,
+   "footprint_m": {
+    "length": 10,
+    "width": 5
+   },
+   "footprint_extent": [
+    480.0,
+    289.5,
+    490.0,
+    294.5
+   ],
+   "capacity_kg_s": 70,
+   "capex_mbcu": 1.85,
+   "annual_maintenance_mbcu": 0.095,
+   "ports": {
+    "gas_in": {
+     "type": "gas_in",
+     "x": 480.0,
+     "y": 292
+    },
+    "gas_out": {
+     "type": "gas_out",
+     "x": 490.0,
+     "y": 292
+    }
+   },
+   "heavy_maintenance": false
+  },
+  {
+   "id": "DEH-3",
+   "model_id": "DEHY70",
+   "category": "dehydration",
+   "safety_category": "hydrocarbon_treatment",
+   "x": 568,
+   "y": 292,
+   "orientation_deg": 0,
+   "footprint_m": {
+    "length": 10,
+    "width": 5
+   },
+   "footprint_extent": [
+    563.0,
+    289.5,
+    573.0,
+    294.5
+   ],
+   "capacity_kg_s": 70,
+   "capex_mbcu": 1.85,
+   "annual_maintenance_mbcu": 0.095,
+   "ports": {
+    "gas_in": {
+     "type": "gas_in",
+     "x": 563.0,
+     "y": 292
+    },
+    "gas_out": {
+     "type": "gas_out",
+     "x": 573.0,
+     "y": 292
+    }
+   },
+   "heavy_maintenance": false
+  },
+  {
+   "id": "REG-1",
+   "model_id": "REG120",
+   "category": "regulator",
+   "safety_category": "pressure_control",
+   "x": 605,
+   "y": 180,
+   "orientation_deg": 0,
+   "footprint_m": {
+    "length": 5,
+    "width": 3
+   },
+   "footprint_extent": [
+    602.5,
+    178.5,
+    607.5,
+    181.5
+   ],
+   "capacity_kg_s": 120,
+   "capex_mbcu": 0.34,
+   "annual_maintenance_mbcu": 0.018,
+   "ports": {
+    "gas_in": {
+     "type": "gas_in",
+     "x": 602.5,
+     "y": 180
+    },
+    "gas_out": {
+     "type": "gas_out",
+     "x": 607.5,
+     "y": 180
+    }
+   },
+   "heavy_maintenance": false
+  },
+  {
+   "id": "DRN-1",
+   "model_id": "DRN-S",
+   "category": "closed_drain",
+   "safety_category": "drain",
+   "x": 595,
+   "y": 140,
+   "orientation_deg": 0,
+   "footprint_m": {
+    "length": 2,
+    "width": 2
+   },
+   "footprint_extent": [
+    594.0,
+    139.0,
+    596.0,
+    141.0
+   ],
+   "capacity_kg_s": 0.8,
+   "capex_mbcu": 0.08,
+   "annual_maintenance_mbcu": 0.004,
+   "ports": {
+    "drain_in": {
+     "type": "drain_in",
+     "x": 594.0,
+     "y": 140
+    },
+    "drain_out": {
+     "type": "drain_out",
+     "x": 596.0,
+     "y": 140
+    }
+   },
+   "heavy_maintenance": false
+  },
+  {
+   "id": "DRN-2",
+   "model_id": "DRN-S",
+   "category": "closed_drain",
+   "safety_category": "drain",
+   "x": 595,
+   "y": 155,
+   "orientation_deg": 0,
+   "footprint_m": {
+    "length": 2,
+    "width": 2
+   },
+   "footprint_extent": [
+    594.0,
+    154.0,
+    596.0,
+    156.0
+   ],
+   "capacity_kg_s": 0.8,
+   "capex_mbcu": 0.08,
+   "annual_maintenance_mbcu": 0.004,
+   "ports": {
+    "drain_in": {
+     "type": "drain_in",
+     "x": 594.0,
+     "y": 155
+    },
+    "drain_out": {
+     "type": "drain_out",
+     "x": 596.0,
+     "y": 155
+    }
+   },
+   "heavy_maintenance": false
+  },
+  {
+   "id": "DRN-3",
+   "model_id": "DRN-S",
+   "category": "closed_drain",
+   "safety_category": "drain",
+   "x": 595,
+   "y": 170,
+   "orientation_deg": 0,
+   "footprint_m": {
+    "length": 2,
+    "width": 2
+   },
+   "footprint_extent": [
+    594.0,
+    169.0,
+    596.0,
+    171.0
+   ],
+   "capacity_kg_s": 0.8,
+   "capex_mbcu": 0.08,
+   "annual_maintenance_mbcu": 0.004,
+   "ports": {
+    "drain_in": {
+     "type": "drain_in",
+     "x": 594.0,
+     "y": 170
+    },
+    "drain_out": {
+     "type": "drain_out",
+     "x": 596.0,
+     "y": 170
+    }
+   },
+   "heavy_maintenance": false
+  }
+ ],
+ "external_interfaces": [
+  {
+   "interface_id": "GRID-TIE",
+   "interface_type": "process",
+   "maximum_connections": 2,
+   "maximum_flow_kg_s": 160,
+   "point_m": [
+    700,
+    225
+   ],
+   "port_id": "gas",
+   "port_type": "gas_bidirectional"
+  },
+  {
+   "interface_id": "WG-01",
+   "interface_type": "well_group",
+   "maximum_flow_kg_s": 25,
+   "point_m": [
+    12,
+    45
+   ],
+   "port_id": "gas",
+   "port_type": "gas_bidirectional"
+  },
+  {
+   "interface_id": "WG-02",
+   "interface_type": "well_group",
+   "maximum_flow_kg_s": 25,
+   "point_m": [
+    12,
+    117
+   ],
+   "port_id": "gas",
+   "port_type": "gas_bidirectional"
+  },
+  {
+   "interface_id": "WG-03",
+   "interface_type": "well_group",
+   "maximum_flow_kg_s": 25,
+   "point_m": [
+    12,
+    189
+   ],
+   "port_id": "gas",
+   "port_type": "gas_bidirectional"
+  },
+  {
+   "interface_id": "WG-04",
+   "interface_type": "well_group",
+   "maximum_flow_kg_s": 25,
+   "point_m": [
+    12,
+    261
+   ],
+   "port_id": "gas",
+   "port_type": "gas_bidirectional"
+  },
+  {
+   "interface_id": "WG-05",
+   "interface_type": "well_group",
+   "maximum_flow_kg_s": 25,
+   "point_m": [
+    12,
+    333
+   ],
+   "port_id": "gas",
+   "port_type": "gas_bidirectional"
+  },
+  {
+   "interface_id": "WG-06",
+   "interface_type": "well_group",
+   "maximum_flow_kg_s": 25,
+   "point_m": [
+    12,
+    405
+   ],
+   "port_id": "gas",
+   "port_type": "gas_bidirectional"
+  },
+  {
+   "interface_id": "POWER-TIE",
+   "interface_type": "utility",
+   "point_m": [
+    660,
+    35
+   ],
+   "port_id": "power",
+   "port_type": "utility_in"
+  },
+  {
+   "interface_id": "FIREWATER-TIE",
+   "interface_type": "utility",
+   "point_m": [
+    620,
+    35
+   ],
+   "port_id": "firewater",
+   "port_type": "utility_in"
+  },
+  {
+   "interface_id": "INSTRUMENT-AIR-TIE",
+   "interface_type": "utility",
+   "point_m": [
+    580,
+    35
+   ],
+   "port_id": "air",
+   "port_type": "utility_in"
+  },
+  {
+   "interface_id": "ROAD-ENTRANCE",
+   "interface_type": "road",
+   "point_m": [
+    0,
+    225
+   ],
+   "port_id": "access",
+   "port_type": "road_access"
+  },
+  {
+   "interface_id": "LIQUID-DRAIN-OUTFALL",
+   "interface_type": "drain",
+   "maximum_connections": 8,
+   "maximum_flow_kg_s": 10.0,
+   "point_m": [
+    680,
+    120
+   ],
+   "port_id": "drain",
+   "port_type": "drain_in"
+  }
+ ],
+ "roads": [
+  {
+   "id": "RD-MAIN",
+   "centreline": [
+    [
+     3,
+     225
+    ],
+    [
+     597,
+     225
+    ]
+   ],
+   "width_m": 6.0
+  },
+  {
+   "id": "RD-WEST",
+   "centreline": [
+    [
+     341,
+     130
+    ],
+    [
+     341,
+     302
+    ]
+   ],
+   "width_m": 6.0
+  },
+  {
+   "id": "RD-EAST",
+   "centreline": [
+    [
+     470,
+     225
+    ],
+    [
+     470,
+     302
+    ]
+   ],
+   "width_m": 6.0
+  },
+  {
+   "id": "RD-NORTH",
+   "centreline": [
+    [
+     335,
+     302
+    ],
+    [
+     585,
+     302
+    ]
+   ],
+   "width_m": 6.0
+  },
+  {
+   "id": "RD-SOUTH",
+   "centreline": [
+    [
+     335,
+     130
+    ],
+    [
+     585,
+     130
+    ]
+   ],
+   "width_m": 6.0
+  }
+ ],
+ "header_port_assignments": {
+  "H-GS": {
+   "branch_02": "N-MTRINJ-GS",
+   "branch_10": "N-GS-MTRWDR",
+   "branch_06": "N-REG-GS",
+   "branch_04": "N-GS-CI1",
+   "branch_07": "N-GS-CI2",
+   "branch_08": "N-GS-CI3",
+   "branch_05": "N-CW1-GS",
+   "branch_09": "N-CW2-GS"
+  },
+  "H-CH": {
+   "branch_04": "N-CI1-CH",
+   "branch_08": "N-CI2-CH",
+   "branch_01": "N-CI3-CH",
+   "branch_02": "N-CH-COOL"
+  },
+  "H-WS": {
+   "branch_06": "N-COOL-WS",
+   "branch_04": "N-WS-WG1",
+   "branch_01": "N-WS-WG2",
+   "branch_05": "N-WS-WG3",
+   "branch_08": "N-WS-WG4",
+   "branch_07": "N-WS-WG5",
+   "branch_09": "N-WS-WG6",
+   "branch_02": "N-WS-SEP1",
+   "branch_10": "N-WS-SEP2",
+   "branch_03": "N-WS-SEP3"
+  },
+  "H-TS": {
+   "branch_04": "N-DEH1-TS",
+   "branch_01": "N-DEH2-TS",
+   "branch_02": "N-DEH3-TS",
+   "branch_06": "N-TS-REG",
+   "branch_03": "N-TS-CW1",
+   "branch_10": "N-TS-CW2"
+  }
+ },
+ "pipelines": [
+  {
+   "id": "N-MTRINJ-GRID",
+   "service": "gas",
+   "a": [
+    613.0,
+    240
+   ],
+   "b": [
+    700,
+    225
+   ],
+   "nominal_diameter": "DN700",
+   "class_id": "CS-WET-100",
+   "level": "ground",
+   "length_m": 102.0,
+   "segments": [
+    [
+     613.0,
+     240.0
+    ],
+    [
+     613.0,
+     225.0
+    ],
+    [
+     700.0,
+     225.0
+    ]
+   ]
+  },
+  {
+   "id": "N-MTRINJ-GS",
+   "service": "gas",
+   "a": [
+    617.0,
+    240
+   ],
+   "b": [
+    563.0,
+    201.0
+   ],
+   "nominal_diameter": "DN700",
+   "class_id": "CS-WET-100",
+   "level": "ground",
+   "length_m": 93.0,
+   "segments": [
+    [
+     617.0,
+     240.0
+    ],
+    [
+     617.0,
+     239.0
+    ],
+    [
+     563.0,
+     239.0
+    ],
+    [
+     563.0,
+     201.0
+    ]
+   ]
+  },
+  {
+   "id": "N-GS-MTRWDR",
+   "service": "gas",
+   "a": [
+    563.0,
+    199.0
+   ],
+   "b": [
+    613.0,
+    210
+   ],
+   "nominal_diameter": "DN500",
+   "class_id": "CS-WET-100",
+   "level": "ground",
+   "length_m": 61.0,
+   "segments": [
+    [
+     563.0,
+     199.0
+    ],
+    [
+     563.0,
+     201.0
+    ],
+    [
+     563.25,
+     201.0
+    ],
+    [
+     563.25,
+     210.0
+    ],
+    [
+     613.0,
+     210.0
+    ]
+   ]
+  },
+  {
+   "id": "N-MTRWDR-GRID",
+   "service": "gas",
+   "a": [
+    617.0,
+    210
+   ],
+   "b": [
+    700,
+    225
+   ],
+   "nominal_diameter": "DN500",
+   "class_id": "CS-WET-100",
+   "level": "ground",
+   "length_m": 98.0,
+   "segments": [
+    [
+     617.0,
+     210.0
+    ],
+    [
+     617.0,
+     224.75
+    ],
+    [
+     700.0,
+     224.75
+    ],
+    [
+     700.0,
+     225.0
+    ]
+   ]
+  },
+  {
+   "id": "N-GS-CI1",
+   "service": "gas",
+   "a": [
+    557.0,
+    199.25
+   ],
+   "b": [
+    352.5,
+    140
+   ],
+   "nominal_diameter": "DN500",
+   "class_id": "CS-WET-100",
+   "level": "ground",
+   "length_m": 263.75,
+   "segments": [
+    [
+     557.0,
+     199.25
+    ],
+    [
+     458.0,
+     199.25
+    ],
+    [
+     458.0,
+     198.5
+    ],
+    [
+     352.5,
+     198.5
+    ],
+    [
+     352.5,
+     140.0
+    ]
+   ]
+  },
+  {
+   "id": "N-GS-CI2",
+   "service": "gas",
+   "a": [
+    558.5,
+    198.5
+   ],
+   "b": [
+    382.5,
+    140
+   ],
+   "nominal_diameter": "DN500",
+   "class_id": "CS-WET-100",
+   "level": "ground",
+   "length_m": 234.5,
+   "segments": [
+    [
+     558.5,
+     198.5
+    ],
+    [
+     458.0,
+     198.5
+    ],
+    [
+     458.0,
+     198.25
+    ],
+    [
+     382.5,
+     198.25
+    ],
+    [
+     382.5,
+     140.0
+    ]
+   ]
+  },
+  {
+   "id": "N-GS-CI3",
+   "service": "gas",
+   "a": [
+    557.0,
+    200.75
+   ],
+   "b": [
+    414.0,
+    140
+   ],
+   "nominal_diameter": "DN150",
+   "class_id": "CS-WET-100",
+   "level": "ground",
+   "length_m": 203.75,
+   "segments": [
+    [
+     557.0,
+     200.75
+    ],
+    [
+     458.25,
+     200.75
+    ],
+    [
+     458.25,
+     198.25
+    ],
+    [
+     458.0,
+     198.25
+    ],
+    [
+     458.0,
+     198.0
+    ],
+    [
+     414.0,
+     198.0
+    ],
+    [
+     414.0,
+     140.0
+    ]
+   ]
+  },
+  {
+   "id": "N-CI1-CH",
+   "service": "gas",
+   "a": [
+    367.5,
+    140
+   ],
+   "b": [
+    452.0,
+    199.25
+   ],
+   "nominal_diameter": "DN450",
+   "class_id": "CS-DRY-160",
+   "level": "ground",
+   "length_m": 143.75,
+   "segments": [
+    [
+     367.5,
+     140.0
+    ],
+    [
+     367.5,
+     199.25
+    ],
+    [
+     452.0,
+     199.25
+    ]
+   ]
+  },
+  {
+   "id": "N-CI2-CH",
+   "service": "gas",
+   "a": [
+    397.5,
+    140
+   ],
+   "b": [
+    452.0,
+    200.75
+   ],
+   "nominal_diameter": "DN450",
+   "class_id": "CS-DRY-160",
+   "level": "ground",
+   "length_m": 115.25,
+   "segments": [
+    [
+     397.5,
+     140.0
+    ],
+    [
+     397.5,
+     200.75
+    ],
+    [
+     452.0,
+     200.75
+    ]
+   ]
+  },
+  {
+   "id": "N-CI3-CH",
+   "service": "gas",
+   "a": [
+    426.0,
+    140
+   ],
+   "b": [
+    453.0,
+    201.5
+   ],
+   "nominal_diameter": "DN150",
+   "class_id": "CS-DRY-160",
+   "level": "ground",
+   "length_m": 88.5,
+   "segments": [
+    [
+     426.0,
+     140.0
+    ],
+    [
+     426.0,
+     201.5
+    ],
+    [
+     453.0,
+     201.5
+    ]
+   ]
+  },
+  {
+   "id": "N-CH-COOL",
+   "service": "gas",
+   "a": [
+    458.0,
+    201.0
+   ],
+   "b": [
+    479.0,
+    240
+   ],
+   "nominal_diameter": "DN600",
+   "class_id": "CS-DRY-160",
+   "level": "ground",
+   "length_m": 60.0,
+   "segments": [
+    [
+     458.0,
+     201.0
+    ],
+    [
+     458.0,
+     240.0
+    ],
+    [
+     479.0,
+     240.0
+    ]
+   ]
+  },
+  {
+   "id": "N-COOL-WS",
+   "service": "gas",
+   "a": [
+    491.0,
+    240
+   ],
+   "b": [
+    353.0,
+    200.0
+   ],
+   "nominal_diameter": "DN600",
+   "class_id": "CS-DRY-160",
+   "level": "ground",
+   "length_m": 178.0,
+   "segments": [
+    [
+     491.0,
+     240.0
+    ],
+    [
+     491.0,
+     237.0
+    ],
+    [
+     353.0,
+     237.0
+    ],
+    [
+     353.0,
+     200.0
+    ]
+   ]
+  },
+  {
+   "id": "N-WS-WG1",
+   "service": "gas",
+   "a": [
+    347.0,
+    199.25
+   ],
+   "b": [
+    12,
+    45
+   ],
+   "nominal_diameter": "DN300",
+   "class_id": "CS-WET-160",
+   "level": "ground",
+   "length_m": 489.25,
+   "segments": [
+    [
+     347.0,
+     199.25
+    ],
+    [
+     12.0,
+     199.25
+    ],
+    [
+     12.0,
+     45.0
+    ]
+   ]
+  },
+  {
+   "id": "N-WS-WG2",
+   "service": "gas",
+   "a": [
+    348.0,
+    201.5
+   ],
+   "b": [
+    12,
+    117
+   ],
+   "nominal_diameter": "DN300",
+   "class_id": "CS-WET-160",
+   "level": "ground",
+   "length_m": 420.5,
+   "segments": [
+    [
+     348.0,
+     201.5
+    ],
+    [
+     12.25,
+     201.5
+    ],
+    [
+     12.25,
+     117.0
+    ],
+    [
+     12.0,
+     117.0
+    ]
+   ]
+  },
+  {
+   "id": "N-WS-WG3",
+   "service": "gas",
+   "a": [
+    350.0,
+    201.5
+   ],
+   "b": [
+    12,
+    189
+   ],
+   "nominal_diameter": "DN300",
+   "class_id": "CS-WET-160",
+   "level": "ground",
+   "length_m": 351.0,
+   "segments": [
+    [
+     350.0,
+     201.5
+    ],
+    [
+     348.0,
+     201.5
+    ],
+    [
+     348.0,
+     201.75
+    ],
+    [
+     12.5,
+     201.75
+    ],
+    [
+     12.5,
+     189.0
+    ],
+    [
+     12.0,
+     189.0
+    ]
+   ]
+  },
+  {
+   "id": "N-WS-WG4",
+   "service": "gas",
+   "a": [
+    347.0,
+    200.75
+   ],
+   "b": [
+    12,
+    261
+   ],
+   "nominal_diameter": "DN300",
+   "class_id": "CS-WET-160",
+   "level": "ground",
+   "length_m": 395.25,
+   "segments": [
+    [
+     347.0,
+     200.75
+    ],
+    [
+     12.0,
+     200.75
+    ],
+    [
+     12.0,
+     261.0
+    ]
+   ]
+  },
+  {
+   "id": "N-WS-WG5",
+   "service": "gas",
+   "a": [
+    348.5,
+    198.5
+   ],
+   "b": [
+    12,
+    333
+   ],
+   "nominal_diameter": "DN300",
+   "class_id": "CS-WET-160",
+   "level": "ground",
+   "length_m": 471.0,
+   "segments": [
+    [
+     348.5,
+     198.5
+    ],
+    [
+     12.75,
+     198.5
+    ],
+    [
+     12.75,
+     202.0
+    ],
+    [
+     12.25,
+     202.0
+    ],
+    [
+     12.25,
+     261.0
+    ],
+    [
+     12.0,
+     261.0
+    ],
+    [
+     12.0,
+     333.0
+    ]
+   ]
+  },
+  {
+   "id": "N-WS-WG6",
+   "service": "gas",
+   "a": [
+    352.0,
+    201.5
+   ],
+   "b": [
+    12,
+    405
+   ],
+   "nominal_diameter": "DN300",
+   "class_id": "CS-WET-160",
+   "level": "ground",
+   "length_m": 543.5,
+   "segments": [
+    [
+     352.0,
+     201.5
+    ],
+    [
+     350.0,
+     201.5
+    ],
+    [
+     350.0,
+     201.75
+    ],
+    [
+     348.0,
+     201.75
+    ],
+    [
+     348.0,
+     202.0
+    ],
+    [
+     12.75,
+     202.0
+    ],
+    [
+     12.75,
+     202.25
+    ],
+    [
+     12.5,
+     202.25
+    ],
+    [
+     12.5,
+     261.0
+    ],
+    [
+     12.25,
+     261.0
+    ],
+    [
+     12.25,
+     333.0
+    ],
+    [
+     12.0,
+     333.0
+    ],
+    [
+     12.0,
+     405.0
+    ]
+   ]
+  },
+  {
+   "id": "N-WS-SEP1",
+   "service": "gas",
+   "a": [
+    353.0,
+    201.0
+   ],
+   "b": [
+    364.0,
+    292
+   ],
+   "nominal_diameter": "DN300",
+   "class_id": "CS-WET-160",
+   "level": "ground",
+   "length_m": 102.0,
+   "segments": [
+    [
+     353.0,
+     201.0
+    ],
+    [
+     353.25,
+     201.0
+    ],
+    [
+     353.25,
+     292.0
+    ],
+    [
+     364.0,
+     292.0
+    ]
+   ]
+  },
+  {
+   "id": "N-WS-SEP2",
+   "service": "gas",
+   "a": [
+    353.0,
+    199.0
+   ],
+   "b": [
+    448.0,
+    292
+   ],
+   "nominal_diameter": "DN350",
+   "class_id": "CS-WET-160",
+   "level": "ground",
+   "length_m": 188.0,
+   "segments": [
+    [
+     353.0,
+     199.0
+    ],
+    [
+     353.0,
+     200.0
+    ],
+    [
+     353.25,
+     200.0
+    ],
+    [
+     353.25,
+     201.0
+    ],
+    [
+     353.5,
+     201.0
+    ],
+    [
+     353.5,
+     289.5
+    ],
+    [
+     405.0,
+     289.5
+    ],
+    [
+     405.0,
+     292.0
+    ],
+    [
+     448.0,
+     292.0
+    ]
+   ]
+  },
+  {
+   "id": "N-WS-SEP3",
+   "service": "gas",
+   "a": [
+    351.5,
+    198.5
+   ],
+   "b": [
+    531.0,
+    292
+   ],
+   "nominal_diameter": "DN350",
+   "class_id": "CS-WET-160",
+   "level": "ground",
+   "length_m": 273.5,
+   "segments": [
+    [
+     351.5,
+     198.5
+    ],
+    [
+     352.25,
+     198.5
+    ],
+    [
+     352.25,
+     198.25
+    ],
+    [
+     353.0,
+     198.25
+    ],
+    [
+     353.0,
+     199.0
+    ],
+    [
+     353.25,
+     199.0
+    ],
+    [
+     353.25,
+     200.0
+    ],
+    [
+     353.5,
+     200.0
+    ],
+    [
+     353.5,
+     201.0
+    ],
+    [
+     353.75,
+     201.0
+    ],
+    [
+     353.75,
+     289.25
+    ],
+    [
+     405.0,
+     289.25
+    ],
+    [
+     405.0,
+     289.5
+    ],
+    [
+     490.0,
+     289.5
+    ],
+    [
+     490.0,
+     292.0
+    ],
+    [
+     531.0,
+     292.0
+    ]
+   ]
+  },
+  {
+   "id": "N-SEP1-DEH1",
+   "service": "gas",
+   "a": [
+    372.0,
+    292
+   ],
+   "b": [
+    395.0,
+    292
+   ],
+   "nominal_diameter": "DN300",
+   "class_id": "CS-WET-160",
+   "level": "ground",
+   "length_m": 23.0,
+   "segments": [
+    [
+     372.0,
+     292.0
+    ],
+    [
+     395.0,
+     292.0
+    ]
+   ]
+  },
+  {
+   "id": "N-SEP2-DEH2",
+   "service": "gas",
+   "a": [
+    456.0,
+    292
+   ],
+   "b": [
+    480.0,
+    292
+   ],
+   "nominal_diameter": "DN250",
+   "class_id": "CS-WET-160",
+   "level": "ground",
+   "length_m": 24.0,
+   "segments": [
+    [
+     456.0,
+     292.0
+    ],
+    [
+     480.0,
+     292.0
+    ]
+   ]
+  },
+  {
+   "id": "N-SEP3-DEH3",
+   "service": "gas",
+   "a": [
+    539.0,
+    292
+   ],
+   "b": [
+    563.0,
+    292
+   ],
+   "nominal_diameter": "DN300",
+   "class_id": "CS-WET-160",
+   "level": "ground",
+   "length_m": 24.0,
+   "segments": [
+    [
+     539.0,
+     292.0
+    ],
+    [
+     563.0,
+     292.0
+    ]
+   ]
+  },
+  {
+   "id": "N-DEH1-TS",
+   "service": "gas",
+   "a": [
+    405.0,
+    292
+   ],
+   "b": [
+    457.0,
+    261.25
+   ],
+   "nominal_diameter": "DN300",
+   "class_id": "CS-DRY-160",
+   "level": "ground",
+   "length_m": 83.25,
+   "segments": [
+    [
+     405.0,
+     292.0
+    ],
+    [
+     405.0,
+     292.25
+    ],
+    [
+     405.25,
+     292.25
+    ],
+    [
+     405.25,
+     261.25
+    ],
+    [
+     457.0,
+     261.25
+    ]
+   ]
+  },
+  {
+   "id": "N-DEH2-TS",
+   "service": "gas",
+   "a": [
+    490.0,
+    292
+   ],
+   "b": [
+    458.0,
+    263.5
+   ],
+   "nominal_diameter": "DN300",
+   "class_id": "CS-DRY-160",
+   "level": "ground",
+   "length_m": 61.5,
+   "segments": [
+    [
+     490.0,
+     292.0
+    ],
+    [
+     490.0,
+     292.25
+    ],
+    [
+     490.25,
+     292.25
+    ],
+    [
+     490.25,
+     289.5
+    ],
+    [
+     490.0,
+     289.5
+    ],
+    [
+     490.0,
+     289.25
+    ],
+    [
+     458.0,
+     289.25
+    ],
+    [
+     458.0,
+     263.5
+    ]
+   ]
+  },
+  {
+   "id": "N-DEH3-TS",
+   "service": "gas",
+   "a": [
+    573.0,
+    292
+   ],
+   "b": [
+    463.0,
+    263.0
+   ],
+   "nominal_diameter": "DN350",
+   "class_id": "CS-DRY-160",
+   "level": "ground",
+   "length_m": 139.0,
+   "segments": [
+    [
+     573.0,
+     292.0
+    ],
+    [
+     573.0,
+     289.5
+    ],
+    [
+     490.25,
+     289.5
+    ],
+    [
+     490.25,
+     289.25
+    ],
+    [
+     490.0,
+     289.25
+    ],
+    [
+     490.0,
+     289.0
+    ],
+    [
+     463.0,
+     289.0
+    ],
+    [
+     463.0,
+     263.0
+    ]
+   ]
+  },
+  {
+   "id": "N-TS-REG",
+   "service": "gas",
+   "a": [
+    463.0,
+    262.0
+   ],
+   "b": [
+    602.5,
+    180
+   ],
+   "nominal_diameter": "DN350",
+   "class_id": "CS-DRY-160",
+   "level": "ground",
+   "length_m": 221.5,
+   "segments": [
+    [
+     463.0,
+     262.0
+    ],
+    [
+     463.0,
+     180.0
+    ],
+    [
+     602.5,
+     180.0
+    ]
+   ]
+  },
+  {
+   "id": "N-REG-GS",
+   "service": "gas",
+   "a": [
+    607.5,
+    180
+   ],
+   "b": [
+    563.0,
+    200.0
+   ],
+   "nominal_diameter": "DN400",
+   "class_id": "CS-WET-100",
+   "level": "ground",
+   "length_m": 64.5,
+   "segments": [
+    [
+     607.5,
+     180.0
+    ],
+    [
+     607.5,
+     181.5
+    ],
+    [
+     563.25,
+     181.5
+    ],
+    [
+     563.25,
+     200.0
+    ],
+    [
+     563.0,
+     200.0
+    ]
+   ]
+  },
+  {
+   "id": "N-TS-CW1",
+   "service": "gas",
+   "a": [
+    461.5,
+    260.5
+   ],
+   "b": [
+    507.5,
+    140
+   ],
+   "nominal_diameter": "DN400",
+   "class_id": "CS-DRY-160",
+   "level": "ground",
+   "length_m": 166.5,
+   "segments": [
+    [
+     461.5,
+     260.5
+    ],
+    [
+     461.5,
+     140.0
+    ],
+    [
+     507.5,
+     140.0
+    ]
+   ]
+  },
+  {
+   "id": "N-TS-CW2",
+   "service": "gas",
+   "a": [
+    463.0,
+    261.0
+   ],
+   "b": [
+    542.5,
+    140
+   ],
+   "nominal_diameter": "DN400",
+   "class_id": "CS-DRY-160",
+   "level": "ground",
+   "length_m": 200.5,
+   "segments": [
+    [
+     463.0,
+     261.0
+    ],
+    [
+     463.25,
+     261.0
+    ],
+    [
+     463.25,
+     144.0
+    ],
+    [
+     522.5,
+     144.0
+    ],
+    [
+     522.5,
+     140.0
+    ],
+    [
+     542.5,
+     140.0
+    ]
+   ]
+  },
+  {
+   "id": "N-CW1-GS",
+   "service": "gas",
+   "a": [
+    522.5,
+    140
+   ],
+   "b": [
+    560.0,
+    201.5
+   ],
+   "nominal_diameter": "DN400",
+   "class_id": "CS-WET-100",
+   "level": "ground",
+   "length_m": 99.5,
+   "segments": [
+    [
+     522.5,
+     140.0
+    ],
+    [
+     522.5,
+     139.75
+    ],
+    [
+     522.75,
+     139.75
+    ],
+    [
+     522.75,
+     201.5
+    ],
+    [
+     560.0,
+     201.5
+    ]
+   ]
+  },
+  {
+   "id": "N-CW2-GS",
+   "service": "gas",
+   "a": [
+    557.5,
+    140
+   ],
+   "b": [
+    562.0,
+    201.5
+   ],
+   "nominal_diameter": "DN250",
+   "class_id": "CS-WET-100",
+   "level": "ground",
+   "length_m": 67.5,
+   "segments": [
+    [
+     557.5,
+     140.0
+    ],
+    [
+     557.5,
+     198.25
+    ],
+    [
+     557.0,
+     198.25
+    ],
+    [
+     557.0,
+     201.75
+    ],
+    [
+     560.0,
+     201.75
+    ],
+    [
+     560.0,
+     201.5
+    ],
+    [
+     562.0,
+     201.5
+    ]
+   ]
+  },
+  {
+   "id": "N-SEP1-DRN1",
+   "service": "liquid",
+   "a": [
+    368,
+    290.0
+   ],
+   "b": [
+    594.0,
+    140
+   ],
+   "nominal_diameter": "DN150",
+   "class_id": "CS-WET-100",
+   "level": "ground",
+   "length_m": 376.0,
+   "segments": [
+    [
+     368.0,
+     290.0
+    ],
+    [
+     368.0,
+     144.25
+    ],
+    [
+     522.5,
+     144.25
+    ],
+    [
+     522.5,
+     144.0
+    ],
+    [
+     557.75,
+     144.0
+    ],
+    [
+     557.75,
+     140.0
+    ],
+    [
+     594.0,
+     140.0
+    ]
+   ]
+  },
+  {
+   "id": "N-SEP2-DRN2",
+   "service": "liquid",
+   "a": [
+    452,
+    290.0
+   ],
+   "b": [
+    594.0,
+    155
+   ],
+   "nominal_diameter": "DN150",
+   "class_id": "CS-WET-100",
+   "level": "ground",
+   "length_m": 277.0,
+   "segments": [
+    [
+     452.0,
+     290.0
+    ],
+    [
+     452.0,
+     155.0
+    ],
+    [
+     594.0,
+     155.0
+    ]
+   ]
+  },
+  {
+   "id": "N-SEP3-DRN3",
+   "service": "liquid",
+   "a": [
+    535,
+    290.0
+   ],
+   "b": [
+    594.0,
+    170
+   ],
+   "nominal_diameter": "DN150",
+   "class_id": "CS-WET-100",
+   "level": "ground",
+   "length_m": 179.0,
+   "segments": [
+    [
+     535.0,
+     290.0
+    ],
+    [
+     535.0,
+     170.0
+    ],
+    [
+     594.0,
+     170.0
+    ]
+   ]
+  },
+  {
+   "id": "N-DRN1-OUT",
+   "service": "liquid",
+   "a": [
+    596.0,
+    140
+   ],
+   "b": [
+    680,
+    120
+   ],
+   "nominal_diameter": "DN150",
+   "class_id": "CS-WET-100",
+   "level": "ground",
+   "length_m": 104.0,
+   "segments": [
+    [
+     596.0,
+     140.0
+    ],
+    [
+     596.0,
+     120.0
+    ],
+    [
+     680.0,
+     120.0
+    ]
+   ]
+  },
+  {
+   "id": "N-DRN2-OUT",
+   "service": "liquid",
+   "a": [
+    596.0,
+    155
+   ],
+   "b": [
+    680,
+    120
+   ],
+   "nominal_diameter": "DN150",
+   "class_id": "CS-WET-100",
+   "level": "ground",
+   "length_m": 119.0,
+   "segments": [
+    [
+     596.0,
+     155.0
+    ],
+    [
+     596.0,
+     140.0
+    ],
+    [
+     596.25,
+     140.0
+    ],
+    [
+     596.25,
+     120.25
+    ],
+    [
+     680.0,
+     120.25
+    ],
+    [
+     680.0,
+     120.0
+    ]
+   ]
+  },
+  {
+   "id": "N-DRN3-OUT",
+   "service": "liquid",
+   "a": [
+    596.0,
+    170
+   ],
+   "b": [
+    680,
+    120
+   ],
+   "nominal_diameter": "DN150",
+   "class_id": "CS-WET-100",
+   "level": "ground",
+   "length_m": 134.5,
+   "segments": [
+    [
+     596.0,
+     170.0
+    ],
+    [
+     596.0,
+     155.0
+    ],
+    [
+     596.25,
+     155.0
+    ],
+    [
+     596.25,
+     140.0
+    ],
+    [
+     596.5,
+     140.0
+    ],
+    [
+     596.5,
+     120.5
+    ],
+    [
+     679.75,
+     120.5
+    ],
+    [
+     679.75,
+     119.75
+    ],
+    [
+     680.0,
+     119.75
+    ],
+    [
+     680.0,
+     120.0
+    ]
+   ]
+  }
+ ],
+ "scenario_results": [
+  {
+   "id": "INJ-LOW",
+   "service": "injection",
+   "required_total_flow_kg_s": 120,
+   "source_interface": "GRID-TIE",
+   "sink_interfaces": [
+    "WG-01",
+    "WG-02",
+    "WG-03",
+    "WG-04",
+    "WG-05",
+    "WG-06"
+   ],
+   "source_pressure_mpa": 6.5,
+   "source_temperature_c": 25,
+   "required_sink_pressure_mpa": 8.5,
+   "annual_hours": 900,
+   "equipment_power_mw": 7.7285,
+   "well_group_allocation_kg_s": {
+    "WG-01": 20.0,
+    "WG-02": 20.0,
+    "WG-03": 20.0,
+    "WG-04": 20.0,
+    "WG-05": 20.0,
+    "WG-06": 20.0
+   },
+   "compressor_state": {
+    "C-I1": {
+     "suction_mpa": 6.458,
+     "discharge_mpa": 8.579,
+     "ratio": 1.3285,
+     "outlet_c": 50.25,
+     "flow_kg_s": 60.0
+    },
+    "C-I2": {
+     "suction_mpa": 6.459,
+     "discharge_mpa": 8.578,
+     "ratio": 1.3282,
+     "outlet_c": 50.22,
+     "flow_kg_s": 60.0
+    }
+   },
+   "P_GS_mpa": 6.476,
+   "P_CH_mpa": 8.574,
+   "cooler_outlet_c": 50.24,
+   "well_pressures_mpa": {
+    "WG-01": 8.502,
+    "WG-02": 8.505,
+    "WG-03": 8.508,
+    "WG-04": 8.506,
+    "WG-05": 8.503,
+    "WG-06": 8.5
+   }
+  },
+  {
+   "id": "INJ-MID",
+   "service": "injection",
+   "required_total_flow_kg_s": 100,
+   "source_interface": "GRID-TIE",
+   "sink_interfaces": [
+    "WG-01",
+    "WG-02",
+    "WG-03",
+    "WG-04",
+    "WG-05",
+    "WG-06"
+   ],
+   "source_pressure_mpa": 6.5,
+   "source_temperature_c": 25,
+   "required_sink_pressure_mpa": 11.0,
+   "annual_hours": 1300,
+   "equipment_power_mw": 12.6873,
+   "well_group_allocation_kg_s": {
+    "WG-01": 16.6667,
+    "WG-02": 16.6667,
+    "WG-03": 16.6667,
+    "WG-04": 16.6667,
+    "WG-05": 16.6667,
+    "WG-06": 16.6667
+   },
+   "compressor_state": {
+    "C-I1": {
+     "suction_mpa": 6.465,
+     "discharge_mpa": 11.061,
+     "ratio": 1.711,
+     "outlet_c": 74.18,
+     "flow_kg_s": 50.0
+    },
+    "C-I2": {
+     "suction_mpa": 6.465,
+     "discharge_mpa": 11.061,
+     "ratio": 1.7108,
+     "outlet_c": 74.16,
+     "flow_kg_s": 50.0
+    }
+   },
+   "P_GS_mpa": 6.477,
+   "P_CH_mpa": 11.058,
+   "cooler_outlet_c": 58.0,
+   "well_pressures_mpa": {
+    "WG-01": 11.001,
+    "WG-02": 11.003,
+    "WG-03": 11.004,
+    "WG-04": 11.003,
+    "WG-05": 11.002,
+    "WG-06": 11.0
+   }
+  },
+  {
+   "id": "INJ-HIGH",
+   "service": "injection",
+   "required_total_flow_kg_s": 75,
+   "source_interface": "GRID-TIE",
+   "sink_interfaces": [
+    "WG-01",
+    "WG-02",
+    "WG-03",
+    "WG-04",
+    "WG-05",
+    "WG-06"
+   ],
+   "source_pressure_mpa": 6.5,
+   "source_temperature_c": 25,
+   "required_sink_pressure_mpa": 13.5,
+   "annual_hours": 600,
+   "equipment_power_mw": 13.4939,
+   "well_group_allocation_kg_s": {
+    "WG-01": 12.5,
+    "WG-02": 12.5,
+    "WG-03": 12.5,
+    "WG-04": 12.5,
+    "WG-05": 12.5,
+    "WG-06": 12.5
+   },
+   "compressor_state": {
+    "C-I1": {
+     "suction_mpa": 6.471,
+     "discharge_mpa": 13.548,
+     "ratio": 2.0935,
+     "outlet_c": 94.28,
+     "flow_kg_s": 37.5
+    },
+    "C-I2": {
+     "suction_mpa": 6.472,
+     "discharge_mpa": 13.548,
+     "ratio": 2.0934,
+     "outlet_c": 94.28,
+     "flow_kg_s": 37.5
+    }
+   },
+   "P_GS_mpa": 6.478,
+   "P_CH_mpa": 13.546,
+   "cooler_outlet_c": 58.0,
+   "well_pressures_mpa": {
+    "WG-01": 13.501,
+    "WG-02": 13.501,
+    "WG-03": 13.502,
+    "WG-04": 13.502,
+    "WG-05": 13.501,
+    "WG-06": 13.5
+   }
+  },
+  {
+   "id": "WDR-HIGH",
+   "service": "withdrawal",
+   "required_total_flow_kg_s": 120,
+   "source_interface": "well_groups",
+   "sink_interfaces": [
+    "GRID-TIE"
+   ],
+   "source_pressure_mpa": 12.0,
+   "source_temperature_c": 20,
+   "required_sink_pressure_mpa": 6.0,
+   "annual_hours": 500,
+   "equipment_power_mw": 2.16,
+   "well_group_allocation_kg_s": {
+    "WG-01": 20.0,
+    "WG-02": 20.0,
+    "WG-03": 20.0,
+    "WG-04": 20.0,
+    "WG-05": 20.0,
+    "WG-06": 20.0
+   },
+   "P_WS_mpa": 11.986,
+   "P_TS_mpa": 11.846,
+   "regulator": {
+    "inlet_mpa": 11.761,
+    "outlet_mpa": 6.075,
+    "outlet_c": 13.18
+   },
+   "delivered_water_mg_sm3": 35.0,
+   "delivered_free_liquid_fraction": 5e-06,
+   "P_grid_tie_mpa": 6.0
+  },
+  {
+   "id": "WDR-MID",
+   "service": "withdrawal",
+   "required_total_flow_kg_s": 100,
+   "source_interface": "well_groups",
+   "sink_interfaces": [
+    "GRID-TIE"
+   ],
+   "source_pressure_mpa": 8.0,
+   "source_temperature_c": 20,
+   "required_sink_pressure_mpa": 6.0,
+   "annual_hours": 900,
+   "equipment_power_mw": 1.8,
+   "well_group_allocation_kg_s": {
+    "WG-01": 16.6667,
+    "WG-02": 16.6667,
+    "WG-03": 16.6667,
+    "WG-04": 16.6667,
+    "WG-05": 16.6667,
+    "WG-06": 16.6667
+   },
+   "P_WS_mpa": 7.986,
+   "P_TS_mpa": 7.848,
+   "regulator": {
+    "inlet_mpa": 7.762,
+    "outlet_mpa": 6.059,
+    "outlet_c": 17.96
+   },
+   "delivered_water_mg_sm3": 35.0,
+   "delivered_free_liquid_fraction": 5e-06,
+   "P_grid_tie_mpa": 6.0
+  },
+  {
+   "id": "WDR-LOW",
+   "service": "withdrawal",
+   "required_total_flow_kg_s": 70,
+   "source_interface": "well_groups",
+   "sink_interfaces": [
+    "GRID-TIE"
+   ],
+   "source_pressure_mpa": 4.5,
+   "source_temperature_c": 20,
+   "required_sink_pressure_mpa": 6.0,
+   "annual_hours": 800,
+   "equipment_power_mw": 6.415,
+   "well_group_allocation_kg_s": {
+    "WG-01": 11.6667,
+    "WG-02": 11.6667,
+    "WG-03": 11.6667,
+    "WG-04": 11.6667,
+    "WG-05": 11.6667,
+    "WG-06": 11.6667
+   },
+   "P_WS_mpa": 4.488,
+   "P_TS_mpa": 4.356,
+   "boosters": [
+    {
+     "id": "C-W1",
+     "suction_mpa": 4.346,
+     "discharge_mpa": 6.035,
+     "ratio": 1.3886,
+     "power_mw": 2.576,
+     "flow_kg_s": 35.0
+    },
+    {
+     "id": "C-W2",
+     "suction_mpa": 4.345,
+     "discharge_mpa": 6.035,
+     "ratio": 1.3891,
+     "power_mw": 2.579,
+     "flow_kg_s": 35.0
+    }
+   ],
+   "booster_outlet_c": 48.87,
+   "delivered_water_mg_sm3": 35.0,
+   "delivered_free_liquid_fraction": 5e-06,
+   "P_grid_tie_mpa": 6.0
+  }
+ ],
+ "n_minus_one": {
+  "injection": [
+   {
+    "scenario": "INJ-LOW",
+    "ok": true,
+    "lost": "C-I1",
+    "retained_flow": 84.0,
+    "P_CH": 8.555,
+    "compressors": {
+     "C-I2": {
+      "ratio": 1.323,
+      "flow": 50.4,
+      "outlet_c": 49.9
+     },
+     "C-I3": {
+      "ratio": 1.644,
+      "flow": 33.6,
+      "outlet_c": 72.7
+     }
+    },
+    "well_min_mpa": 8.5,
+    "cooler_duty_mw": 0.205,
+    "msgs": []
+   },
+   {
+    "scenario": "INJ-LOW",
+    "ok": true,
+    "lost": "C-I2",
+    "retained_flow": 84.0,
+    "P_CH": 8.555,
+    "compressors": {
+     "C-I1": {
+      "ratio": 1.323,
+      "flow": 50.4,
+      "outlet_c": 49.9
+     },
+     "C-I3": {
+      "ratio": 1.644,
+      "flow": 33.6,
+      "outlet_c": 72.7
+     }
+    },
+    "well_min_mpa": 8.5,
+    "cooler_duty_mw": 0.207,
+    "msgs": []
+   },
+   {
+    "scenario": "INJ-LOW",
+    "ok": true,
+    "lost": "C-I3",
+    "retained_flow": 84.0,
+    "P_CH": 8.554,
+    "compressors": {
+     "C-I1": {
+      "ratio": 1.323,
+      "flow": 42.0,
+      "outlet_c": 49.8
+     },
+     "C-I2": {
+      "ratio": 1.323,
+      "flow": 42.0,
+      "outlet_c": 49.8
+     }
+    },
+    "well_min_mpa": 8.5,
+    "cooler_duty_mw": 0.0,
+    "msgs": []
+   },
+   {
+    "scenario": "INJ-MID",
+    "ok": true,
+    "lost": "C-I1",
+    "retained_flow": 70.0,
+    "P_CH": 11.046,
+    "compressors": {
+     "C-I2": {
+      "ratio": 1.707,
+      "flow": 42.0,
+      "outlet_c": 74.0
+     },
+     "C-I3": {
+      "ratio": 1.954,
+      "flow": 28.0,
+      "outlet_c": 90.6
+     }
+    },
+    "well_min_mpa": 11.0,
+    "cooler_duty_mw": 3.876,
+    "msgs": []
+   },
+   {
+    "scenario": "INJ-MID",
+    "ok": true,
+    "lost": "C-I2",
+    "retained_flow": 70.0,
+    "P_CH": 11.046,
+    "compressors": {
+     "C-I1": {
+      "ratio": 1.707,
+      "flow": 42.0,
+      "outlet_c": 74.0
+     },
+     "C-I3": {
+      "ratio": 1.954,
+      "flow": 28.0,
+      "outlet_c": 90.6
+     }
+    },
+    "well_min_mpa": 11.0,
+    "cooler_duty_mw": 3.877,
+    "msgs": []
+   },
+   {
+    "scenario": "INJ-MID",
+    "ok": true,
+    "lost": "C-I3",
+    "retained_flow": 70.0,
+    "P_CH": 11.046,
+    "compressors": {
+     "C-I1": {
+      "ratio": 1.707,
+      "flow": 35.0,
+      "outlet_c": 73.9
+     },
+     "C-I2": {
+      "ratio": 1.707,
+      "flow": 35.0,
+      "outlet_c": 73.9
+     }
+    },
+    "well_min_mpa": 11.0,
+    "cooler_duty_mw": 2.734,
+    "msgs": []
+   },
+   {
+    "scenario": "INJ-HIGH",
+    "ok": true,
+    "lost": "C-I1",
+    "retained_flow": 52.5,
+    "P_CH": 13.541,
+    "compressors": {
+     "C-I2": {
+      "ratio": 2.091,
+      "flow": 31.5,
+      "outlet_c": 94.2
+     },
+     "C-I3": {
+      "ratio": 2.242,
+      "flow": 21.0,
+      "outlet_c": 105.4
+     }
+    },
+    "well_min_mpa": 13.5,
+    "cooler_duty_mw": 5.229,
+    "msgs": []
+   },
+   {
+    "scenario": "INJ-HIGH",
+    "ok": true,
+    "lost": "C-I2",
+    "retained_flow": 52.5,
+    "P_CH": 13.541,
+    "compressors": {
+     "C-I1": {
+      "ratio": 2.091,
+      "flow": 31.5,
+      "outlet_c": 94.2
+     },
+     "C-I3": {
+      "ratio": 2.242,
+      "flow": 21.0,
+      "outlet_c": 105.4
+     }
+    },
+    "well_min_mpa": 13.5,
+    "cooler_duty_mw": 5.229,
+    "msgs": []
+   },
+   {
+    "scenario": "INJ-HIGH",
+    "ok": true,
+    "lost": "C-I3",
+    "retained_flow": 52.5,
+    "P_CH": 13.541,
+    "compressors": {
+     "C-I1": {
+      "ratio": 2.091,
+      "flow": 26.25,
+      "outlet_c": 94.2
+     },
+     "C-I2": {
+      "ratio": 2.091,
+      "flow": 26.25,
+      "outlet_c": 94.2
+     }
+    },
+    "well_min_mpa": 13.5,
+    "cooler_duty_mw": 4.651,
+    "msgs": []
+   }
+  ],
+  "withdrawal_treatment": [
+   {
+    "scenario": "WDR-HIGH",
+    "ok": true,
+    "retained_flow": 84.0,
+    "per_train_kg_s": 42.0,
+    "separator_liquid_kg_s": 0.42,
+    "msgs": []
+   },
+   {
+    "scenario": "WDR-MID",
+    "ok": true,
+    "retained_flow": 70.0,
+    "per_train_kg_s": 35.0,
+    "separator_liquid_kg_s": 0.35,
+    "msgs": []
+   },
+   {
+    "scenario": "WDR-LOW",
+    "ok": true,
+    "retained_flow": 49.0,
+    "per_train_kg_s": 24.5,
+    "separator_liquid_kg_s": 0.245,
+    "msgs": []
+   }
+  ],
+  "withdrawal_compression": [
+   {
+    "scenario": "WDR-LOW",
+    "ok": true,
+    "lost": "C-W2",
+    "retained_flow": 49.0,
+    "ratio": 1.389
+   }
+  ]
+ },
+ "checks": [
+  {
+   "ok": true,
+   "tag": "meter",
+   "scenario": "INJ-LOW",
+   "message": "meter flow 120 > cap"
+  },
+  {
+   "ok": true,
+   "tag": "header",
+   "scenario": "INJ-LOW",
+   "message": "H-GS flow 120 > cap"
+  },
+  {
+   "ok": true,
+   "tag": "header",
+   "scenario": "INJ-LOW",
+   "message": "H-CH flow 120 > cap"
+  },
+  {
+   "ok": true,
+   "tag": "header",
+   "scenario": "INJ-LOW",
+   "message": "H-WS flow 120 > cap"
+  },
+  {
+   "ok": true,
+   "tag": "comp-ratio",
+   "scenario": "INJ-LOW",
+   "message": "C-I1 r=1.328"
+  },
+  {
+   "ok": true,
+   "tag": "comp-tout",
+   "scenario": "INJ-LOW",
+   "message": "C-I1 Tout=50.2"
+  },
+  {
+   "ok": true,
+   "tag": "comp-psuct",
+   "scenario": "INJ-LOW",
+   "message": "C-I1 Psuct=6.46"
+  },
+  {
+   "ok": true,
+   "tag": "comp-pdis",
+   "scenario": "INJ-LOW",
+   "message": "C-I1 Pdis=8.58"
+  },
+  {
+   "ok": true,
+   "tag": "comp-flow",
+   "scenario": "INJ-LOW",
+   "message": "C-I1 q=60.00"
+  },
+  {
+   "ok": true,
+   "tag": "comp-power",
+   "scenario": "INJ-LOW",
+   "message": "C-I1 W=3.87"
+  },
+  {
+   "ok": true,
+   "tag": "comp-ratio",
+   "scenario": "INJ-LOW",
+   "message": "C-I2 r=1.328"
+  },
+  {
+   "ok": true,
+   "tag": "comp-tout",
+   "scenario": "INJ-LOW",
+   "message": "C-I2 Tout=50.2"
+  },
+  {
+   "ok": true,
+   "tag": "comp-psuct",
+   "scenario": "INJ-LOW",
+   "message": "C-I2 Psuct=6.46"
+  },
+  {
+   "ok": true,
+   "tag": "comp-pdis",
+   "scenario": "INJ-LOW",
+   "message": "C-I2 Pdis=8.58"
+  },
+  {
+   "ok": true,
+   "tag": "comp-flow",
+   "scenario": "INJ-LOW",
+   "message": "C-I2 q=60.00"
+  },
+  {
+   "ok": true,
+   "tag": "comp-power",
+   "scenario": "INJ-LOW",
+   "message": "C-I2 W=3.86"
+  },
+  {
+   "ok": true,
+   "tag": "cooler-duty",
+   "scenario": "INJ-LOW",
+   "message": "duty=0.00"
+  },
+  {
+   "ok": true,
+   "tag": "cooler-tout",
+   "scenario": "INJ-LOW",
+   "message": "Tout=50.2"
+  },
+  {
+   "ok": true,
+   "tag": "injection-delivery",
+   "scenario": "INJ-LOW",
+   "message": "well P=8.500 < 8.5"
+  },
+  {
+   "ok": true,
+   "tag": "delivery-temp",
+   "scenario": "INJ-LOW",
+   "message": "T=50.24"
+  },
+  {
+   "ok": true,
+   "tag": "velocity",
+   "scenario": "INJ-LOW",
+   "message": "N-WS-WG1 v=5.23"
+  },
+  {
+   "ok": true,
+   "tag": "velocity",
+   "scenario": "INJ-LOW",
+   "message": "N-WS-WG2 v=5.23"
+  },
+  {
+   "ok": true,
+   "tag": "velocity",
+   "scenario": "INJ-LOW",
+   "message": "N-WS-WG3 v=5.23"
+  },
+  {
+   "ok": true,
+   "tag": "velocity",
+   "scenario": "INJ-LOW",
+   "message": "N-WS-WG4 v=5.23"
+  },
+  {
+   "ok": true,
+   "tag": "velocity",
+   "scenario": "INJ-LOW",
+   "message": "N-WS-WG5 v=5.23"
+  },
+  {
+   "ok": true,
+   "tag": "velocity",
+   "scenario": "INJ-LOW",
+   "message": "N-WS-WG6 v=5.23"
+  },
+  {
+   "ok": true,
+   "tag": "velocity",
+   "scenario": "INJ-LOW",
+   "message": "N-MTRINJ-GRID v=4.76"
+  },
+  {
+   "ok": true,
+   "tag": "velocity",
+   "scenario": "INJ-LOW",
+   "message": "N-MTRINJ-GS v=4.76"
+  },
+  {
+   "ok": true,
+   "tag": "velocity",
+   "scenario": "INJ-LOW",
+   "message": "N-GS-CI1 v=4.67"
+  },
+  {
+   "ok": true,
+   "tag": "velocity",
+   "scenario": "INJ-LOW",
+   "message": "N-GS-CI2 v=4.67"
+  },
+  {
+   "ok": true,
+   "tag": "velocity",
+   "scenario": "INJ-LOW",
+   "message": "N-CI1-CH v=5.76"
+  },
+  {
+   "ok": true,
+   "tag": "velocity",
+   "scenario": "INJ-LOW",
+   "message": "N-CI2-CH v=5.76"
+  },
+  {
+   "ok": true,
+   "tag": "velocity",
+   "scenario": "INJ-LOW",
+   "message": "N-CH-COOL v=6.48"
+  },
+  {
+   "ok": true,
+   "tag": "velocity",
+   "scenario": "INJ-LOW",
+   "message": "N-COOL-WS v=6.48"
+  },
+  {
+   "ok": true,
+   "tag": "meter",
+   "scenario": "INJ-MID",
+   "message": "meter flow 100 > cap"
+  },
+  {
+   "ok": true,
+   "tag": "header",
+   "scenario": "INJ-MID",
+   "message": "H-GS flow 100 > cap"
+  },
+  {
+   "ok": true,
+   "tag": "header",
+   "scenario": "INJ-MID",
+   "message": "H-CH flow 100 > cap"
+  },
+  {
+   "ok": true,
+   "tag": "header",
+   "scenario": "INJ-MID",
+   "message": "H-WS flow 100 > cap"
+  },
+  {
+   "ok": true,
+   "tag": "comp-ratio",
+   "scenario": "INJ-MID",
+   "message": "C-I1 r=1.711"
+  },
+  {
+   "ok": true,
+   "tag": "comp-tout",
+   "scenario": "INJ-MID",
+   "message": "C-I1 Tout=74.2"
+  },
+  {
+   "ok": true,
+   "tag": "comp-psuct",
+   "scenario": "INJ-MID",
+   "message": "C-I1 Psuct=6.46"
+  },
+  {
+   "ok": true,
+   "tag": "comp-pdis",
+   "scenario": "INJ-MID",
+   "message": "C-I1 Pdis=11.06"
+  },
+  {
+   "ok": true,
+   "tag": "comp-flow",
+   "scenario": "INJ-MID",
+   "message": "C-I1 q=50.00"
+  },
+  {
+   "ok": true,
+   "tag": "comp-power",
+   "scenario": "INJ-MID",
+   "message": "C-I1 W=6.28"
+  },
+  {
+   "ok": true,
+   "tag": "comp-ratio",
+   "scenario": "INJ-MID",
+   "message": "C-I2 r=1.711"
+  },
+  {
+   "ok": true,
+   "tag": "comp-tout",
+   "scenario": "INJ-MID",
+   "message": "C-I2 Tout=74.2"
+  },
+  {
+   "ok": true,
+   "tag": "comp-psuct",
+   "scenario": "INJ-MID",
+   "message": "C-I2 Psuct=6.47"
+  },
+  {
+   "ok": true,
+   "tag": "comp-pdis",
+   "scenario": "INJ-MID",
+   "message": "C-I2 Pdis=11.06"
+  },
+  {
+   "ok": true,
+   "tag": "comp-flow",
+   "scenario": "INJ-MID",
+   "message": "C-I2 q=50.00"
+  },
+  {
+   "ok": true,
+   "tag": "comp-power",
+   "scenario": "INJ-MID",
+   "message": "C-I2 W=6.27"
+  },
+  {
+   "ok": true,
+   "tag": "cooler-duty",
+   "scenario": "INJ-MID",
+   "message": "duty=3.96"
+  },
+  {
+   "ok": true,
+   "tag": "cooler-tout",
+   "scenario": "INJ-MID",
+   "message": "Tout=58.0"
+  },
+  {
+   "ok": true,
+   "tag": "injection-delivery",
+   "scenario": "INJ-MID",
+   "message": "well P=11.000 < 11.0"
+  },
+  {
+   "ok": true,
+   "tag": "delivery-temp",
+   "scenario": "INJ-MID",
+   "message": "T=58.00"
+  },
+  {
+   "ok": true,
+   "tag": "velocity",
+   "scenario": "INJ-MID",
+   "message": "N-WS-WG1 v=3.48"
+  },
+  {
+   "ok": true,
+   "tag": "velocity",
+   "scenario": "INJ-MID",
+   "message": "N-WS-WG2 v=3.48"
+  },
+  {
+   "ok": true,
+   "tag": "velocity",
+   "scenario": "INJ-MID",
+   "message": "N-WS-WG3 v=3.48"
+  },
+  {
+   "ok": true,
+   "tag": "velocity",
+   "scenario": "INJ-MID",
+   "message": "N-WS-WG4 v=3.48"
+  },
+  {
+   "ok": true,
+   "tag": "velocity",
+   "scenario": "INJ-MID",
+   "message": "N-WS-WG5 v=3.48"
+  },
+  {
+   "ok": true,
+   "tag": "velocity",
+   "scenario": "INJ-MID",
+   "message": "N-WS-WG6 v=3.48"
+  },
+  {
+   "ok": true,
+   "tag": "velocity",
+   "scenario": "INJ-MID",
+   "message": "N-MTRINJ-GRID v=3.97"
+  },
+  {
+   "ok": true,
+   "tag": "velocity",
+   "scenario": "INJ-MID",
+   "message": "N-MTRINJ-GS v=3.97"
+  },
+  {
+   "ok": true,
+   "tag": "velocity",
+   "scenario": "INJ-MID",
+   "message": "N-GS-CI1 v=3.89"
+  },
+  {
+   "ok": true,
+   "tag": "velocity",
+   "scenario": "INJ-MID",
+   "message": "N-GS-CI2 v=3.89"
+  },
+  {
+   "ok": true,
+   "tag": "velocity",
+   "scenario": "INJ-MID",
+   "message": "N-CI1-CH v=4.80"
+  },
+  {
+   "ok": true,
+   "tag": "velocity",
+   "scenario": "INJ-MID",
+   "message": "N-CI2-CH v=4.80"
+  },
+  {
+   "ok": true,
+   "tag": "velocity",
+   "scenario": "INJ-MID",
+   "message": "N-CH-COOL v=5.40"
+  },
+  {
+   "ok": true,
+   "tag": "velocity",
+   "scenario": "INJ-MID",
+   "message": "N-COOL-WS v=5.40"
+  },
+  {
+   "ok": true,
+   "tag": "meter",
+   "scenario": "INJ-HIGH",
+   "message": "meter flow 75 > cap"
+  },
+  {
+   "ok": true,
+   "tag": "header",
+   "scenario": "INJ-HIGH",
+   "message": "H-GS flow 75 > cap"
+  },
+  {
+   "ok": true,
+   "tag": "header",
+   "scenario": "INJ-HIGH",
+   "message": "H-CH flow 75 > cap"
+  },
+  {
+   "ok": true,
+   "tag": "header",
+   "scenario": "INJ-HIGH",
+   "message": "H-WS flow 75 > cap"
+  },
+  {
+   "ok": true,
+   "tag": "comp-ratio",
+   "scenario": "INJ-HIGH",
+   "message": "C-I1 r=2.094"
+  },
+  {
+   "ok": true,
+   "tag": "comp-tout",
+   "scenario": "INJ-HIGH",
+   "message": "C-I1 Tout=94.3"
+  },
+  {
+   "ok": true,
+   "tag": "comp-psuct",
+   "scenario": "INJ-HIGH",
+   "message": "C-I1 Psuct=6.47"
+  },
+  {
+   "ok": true,
+   "tag": "comp-pdis",
+   "scenario": "INJ-HIGH",
+   "message": "C-I1 Pdis=13.55"
+  },
+  {
+   "ok": true,
+   "tag": "comp-flow",
+   "scenario": "INJ-HIGH",
+   "message": "C-I1 q=37.50"
+  },
+  {
+   "ok": true,
+   "tag": "comp-power",
+   "scenario": "INJ-HIGH",
+   "message": "C-I1 W=6.63"
+  },
+  {
+   "ok": true,
+   "tag": "comp-ratio",
+   "scenario": "INJ-HIGH",
+   "message": "C-I2 r=2.093"
+  },
+  {
+   "ok": true,
+   "tag": "comp-tout",
+   "scenario": "INJ-HIGH",
+   "message": "C-I2 Tout=94.3"
+  },
+  {
+   "ok": true,
+   "tag": "comp-psuct",
+   "scenario": "INJ-HIGH",
+   "message": "C-I2 Psuct=6.47"
+  },
+  {
+   "ok": true,
+   "tag": "comp-pdis",
+   "scenario": "INJ-HIGH",
+   "message": "C-I2 Pdis=13.55"
+  },
+  {
+   "ok": true,
+   "tag": "comp-flow",
+   "scenario": "INJ-HIGH",
+   "message": "C-I2 q=37.50"
+  },
+  {
+   "ok": true,
+   "tag": "comp-power",
+   "scenario": "INJ-HIGH",
+   "message": "C-I2 W=6.63"
+  },
+  {
+   "ok": true,
+   "tag": "cooler-duty",
+   "scenario": "INJ-HIGH",
+   "message": "duty=6.67"
+  },
+  {
+   "ok": true,
+   "tag": "cooler-tout",
+   "scenario": "INJ-HIGH",
+   "message": "Tout=58.0"
+  },
+  {
+   "ok": true,
+   "tag": "injection-delivery",
+   "scenario": "INJ-HIGH",
+   "message": "well P=13.500 < 13.5"
+  },
+  {
+   "ok": true,
+   "tag": "delivery-temp",
+   "scenario": "INJ-HIGH",
+   "message": "T=58.00"
+  },
+  {
+   "ok": true,
+   "tag": "velocity",
+   "scenario": "INJ-HIGH",
+   "message": "N-WS-WG1 v=2.13"
+  },
+  {
+   "ok": true,
+   "tag": "velocity",
+   "scenario": "INJ-HIGH",
+   "message": "N-WS-WG2 v=2.13"
+  },
+  {
+   "ok": true,
+   "tag": "velocity",
+   "scenario": "INJ-HIGH",
+   "message": "N-WS-WG3 v=2.13"
+  },
+  {
+   "ok": true,
+   "tag": "velocity",
+   "scenario": "INJ-HIGH",
+   "message": "N-WS-WG4 v=2.13"
+  },
+  {
+   "ok": true,
+   "tag": "velocity",
+   "scenario": "INJ-HIGH",
+   "message": "N-WS-WG5 v=2.13"
+  },
+  {
+   "ok": true,
+   "tag": "velocity",
+   "scenario": "INJ-HIGH",
+   "message": "N-WS-WG6 v=2.13"
+  },
+  {
+   "ok": true,
+   "tag": "velocity",
+   "scenario": "INJ-HIGH",
+   "message": "N-MTRINJ-GRID v=2.98"
+  },
+  {
+   "ok": true,
+   "tag": "velocity",
+   "scenario": "INJ-HIGH",
+   "message": "N-MTRINJ-GS v=2.98"
+  },
+  {
+   "ok": true,
+   "tag": "velocity",
+   "scenario": "INJ-HIGH",
+   "message": "N-GS-CI1 v=2.92"
+  },
+  {
+   "ok": true,
+   "tag": "velocity",
+   "scenario": "INJ-HIGH",
+   "message": "N-GS-CI2 v=2.92"
+  },
+  {
+   "ok": true,
+   "tag": "velocity",
+   "scenario": "INJ-HIGH",
+   "message": "N-CI1-CH v=3.60"
+  },
+  {
+   "ok": true,
+   "tag": "velocity",
+   "scenario": "INJ-HIGH",
+   "message": "N-CI2-CH v=3.60"
+  },
+  {
+   "ok": true,
+   "tag": "velocity",
+   "scenario": "INJ-HIGH",
+   "message": "N-CH-COOL v=4.05"
+  },
+  {
+   "ok": true,
+   "tag": "velocity",
+   "scenario": "INJ-HIGH",
+   "message": "N-COOL-WS v=4.05"
+  },
+  {
+   "ok": true,
+   "tag": "sep-feed",
+   "scenario": "WDR-HIGH",
+   "message": "sep feed fl=0.01"
+  },
+  {
+   "ok": true,
+   "tag": "sep-liquid",
+   "scenario": "WDR-HIGH",
+   "message": "sep liq=0.400"
+  },
+  {
+   "ok": true,
+   "tag": "dehy-feed",
+   "scenario": "WDR-HIGH",
+   "message": "dehy feed fl=5.00e-06"
+  },
+  {
+   "ok": true,
+   "tag": "dehy-water",
+   "scenario": "WDR-HIGH",
+   "message": "dehy water"
+  },
+  {
+   "ok": true,
+   "tag": "delivery-fl",
+   "scenario": "WDR-HIGH",
+   "message": "delivered fl=5.00e-06"
+  },
+  {
+   "ok": true,
+   "tag": "header",
+   "scenario": "WDR-HIGH",
+   "message": "H-WS flow 120"
+  },
+  {
+   "ok": true,
+   "tag": "header",
+   "scenario": "WDR-HIGH",
+   "message": "H-TS flow 120"
+  },
+  {
+   "ok": true,
+   "tag": "header",
+   "scenario": "WDR-HIGH",
+   "message": "H-GS flow 120"
+  },
+  {
+   "ok": true,
+   "tag": "meter",
+   "scenario": "WDR-HIGH",
+   "message": "meter flow"
+  },
+  {
+   "ok": true,
+   "tag": "reg-pin",
+   "scenario": "WDR-HIGH",
+   "message": "Pin=11.76"
+  },
+  {
+   "ok": true,
+   "tag": "reg-dp",
+   "scenario": "WDR-HIGH",
+   "message": "no dP"
+  },
+  {
+   "ok": true,
+   "tag": "reg-flow",
+   "scenario": "WDR-HIGH",
+   "message": "reg flow"
+  },
+  {
+   "ok": true,
+   "tag": "delivery-temp",
+   "scenario": "WDR-HIGH",
+   "message": "T=13.18"
+  },
+  {
+   "ok": true,
+   "tag": "delivery-pressure",
+   "scenario": "WDR-HIGH",
+   "message": "Pgrid=6.000"
+  },
+  {
+   "ok": true,
+   "tag": "velocity",
+   "scenario": "WDR-HIGH",
+   "message": "N-WS-WG1 v=3.37"
+  },
+  {
+   "ok": true,
+   "tag": "velocity",
+   "scenario": "WDR-HIGH",
+   "message": "N-WS-WG2 v=3.37"
+  },
+  {
+   "ok": true,
+   "tag": "velocity",
+   "scenario": "WDR-HIGH",
+   "message": "N-WS-WG3 v=3.37"
+  },
+  {
+   "ok": true,
+   "tag": "velocity",
+   "scenario": "WDR-HIGH",
+   "message": "N-WS-WG4 v=3.37"
+  },
+  {
+   "ok": true,
+   "tag": "velocity",
+   "scenario": "WDR-HIGH",
+   "message": "N-WS-WG5 v=3.37"
+  },
+  {
+   "ok": true,
+   "tag": "velocity",
+   "scenario": "WDR-HIGH",
+   "message": "N-WS-WG6 v=3.37"
+  },
+  {
+   "ok": true,
+   "tag": "velocity",
+   "scenario": "WDR-HIGH",
+   "message": "N-WS-SEP1 v=6.76"
+  },
+  {
+   "ok": true,
+   "tag": "velocity",
+   "scenario": "WDR-HIGH",
+   "message": "N-WS-SEP2 v=4.97"
+  },
+  {
+   "ok": true,
+   "tag": "velocity",
+   "scenario": "WDR-HIGH",
+   "message": "N-WS-SEP3 v=4.97"
+  },
+  {
+   "ok": true,
+   "tag": "velocity",
+   "scenario": "WDR-HIGH",
+   "message": "N-DEH1-TS v=6.83"
+  },
+  {
+   "ok": true,
+   "tag": "velocity",
+   "scenario": "WDR-HIGH",
+   "message": "N-DEH2-TS v=6.83"
+  },
+  {
+   "ok": true,
+   "tag": "velocity",
+   "scenario": "WDR-HIGH",
+   "message": "N-DEH3-TS v=5.02"
+  },
+  {
+   "ok": true,
+   "tag": "velocity",
+   "scenario": "WDR-HIGH",
+   "message": "N-TS-REG v=15.11"
+  },
+  {
+   "ok": true,
+   "tag": "velocity",
+   "scenario": "WDR-HIGH",
+   "message": "N-REG-GS v=21.67"
+  },
+  {
+   "ok": true,
+   "tag": "velocity",
+   "scenario": "WDR-HIGH",
+   "message": "N-GS-MTRWDR v=13.85"
+  },
+  {
+   "ok": true,
+   "tag": "velocity",
+   "scenario": "WDR-HIGH",
+   "message": "N-MTRWDR-GRID v=13.85"
+  },
+  {
+   "ok": true,
+   "tag": "liq-velocity",
+   "scenario": "WDR-HIGH",
+   "message": "N-SEP1-DRN1 v=0.03"
+  },
+  {
+   "ok": true,
+   "tag": "liq-velocity",
+   "scenario": "WDR-HIGH",
+   "message": "N-DRN1-OUT v=0.03"
+  },
+  {
+   "ok": true,
+   "tag": "sep-feed",
+   "scenario": "WDR-MID",
+   "message": "sep feed fl=0.01"
+  },
+  {
+   "ok": true,
+   "tag": "sep-liquid",
+   "scenario": "WDR-MID",
+   "message": "sep liq=0.333"
+  },
+  {
+   "ok": true,
+   "tag": "dehy-feed",
+   "scenario": "WDR-MID",
+   "message": "dehy feed fl=5.00e-06"
+  },
+  {
+   "ok": true,
+   "tag": "dehy-water",
+   "scenario": "WDR-MID",
+   "message": "dehy water"
+  },
+  {
+   "ok": true,
+   "tag": "delivery-fl",
+   "scenario": "WDR-MID",
+   "message": "delivered fl=5.00e-06"
+  },
+  {
+   "ok": true,
+   "tag": "header",
+   "scenario": "WDR-MID",
+   "message": "H-WS flow 100"
+  },
+  {
+   "ok": true,
+   "tag": "header",
+   "scenario": "WDR-MID",
+   "message": "H-TS flow 100"
+  },
+  {
+   "ok": true,
+   "tag": "header",
+   "scenario": "WDR-MID",
+   "message": "H-GS flow 100"
+  },
+  {
+   "ok": true,
+   "tag": "meter",
+   "scenario": "WDR-MID",
+   "message": "meter flow"
+  },
+  {
+   "ok": true,
+   "tag": "reg-pin",
+   "scenario": "WDR-MID",
+   "message": "Pin=7.76"
+  },
+  {
+   "ok": true,
+   "tag": "reg-dp",
+   "scenario": "WDR-MID",
+   "message": "no dP"
+  },
+  {
+   "ok": true,
+   "tag": "reg-flow",
+   "scenario": "WDR-MID",
+   "message": "reg flow"
+  },
+  {
+   "ok": true,
+   "tag": "delivery-temp",
+   "scenario": "WDR-MID",
+   "message": "T=17.96"
+  },
+  {
+   "ok": true,
+   "tag": "delivery-pressure",
+   "scenario": "WDR-MID",
+   "message": "Pgrid=6.000"
+  },
+  {
+   "ok": true,
+   "tag": "velocity",
+   "scenario": "WDR-MID",
+   "message": "N-WS-WG1 v=4.18"
+  },
+  {
+   "ok": true,
+   "tag": "velocity",
+   "scenario": "WDR-MID",
+   "message": "N-WS-WG2 v=4.18"
+  },
+  {
+   "ok": true,
+   "tag": "velocity",
+   "scenario": "WDR-MID",
+   "message": "N-WS-WG3 v=4.18"
+  },
+  {
+   "ok": true,
+   "tag": "velocity",
+   "scenario": "WDR-MID",
+   "message": "N-WS-WG4 v=4.18"
+  },
+  {
+   "ok": true,
+   "tag": "velocity",
+   "scenario": "WDR-MID",
+   "message": "N-WS-WG5 v=4.18"
+  },
+  {
+   "ok": true,
+   "tag": "velocity",
+   "scenario": "WDR-MID",
+   "message": "N-WS-WG6 v=4.18"
+  },
+  {
+   "ok": true,
+   "tag": "velocity",
+   "scenario": "WDR-MID",
+   "message": "N-WS-SEP1 v=8.39"
+  },
+  {
+   "ok": true,
+   "tag": "velocity",
+   "scenario": "WDR-MID",
+   "message": "N-WS-SEP2 v=6.16"
+  },
+  {
+   "ok": true,
+   "tag": "velocity",
+   "scenario": "WDR-MID",
+   "message": "N-WS-SEP3 v=6.16"
+  },
+  {
+   "ok": true,
+   "tag": "velocity",
+   "scenario": "WDR-MID",
+   "message": "N-DEH1-TS v=8.51"
+  },
+  {
+   "ok": true,
+   "tag": "velocity",
+   "scenario": "WDR-MID",
+   "message": "N-DEH2-TS v=8.51"
+  },
+  {
+   "ok": true,
+   "tag": "velocity",
+   "scenario": "WDR-MID",
+   "message": "N-DEH3-TS v=6.26"
+  },
+  {
+   "ok": true,
+   "tag": "velocity",
+   "scenario": "WDR-MID",
+   "message": "N-TS-REG v=18.88"
+  },
+  {
+   "ok": true,
+   "tag": "velocity",
+   "scenario": "WDR-MID",
+   "message": "N-REG-GS v=18.41"
+  },
+  {
+   "ok": true,
+   "tag": "velocity",
+   "scenario": "WDR-MID",
+   "message": "N-GS-MTRWDR v=11.77"
+  },
+  {
+   "ok": true,
+   "tag": "velocity",
+   "scenario": "WDR-MID",
+   "message": "N-MTRWDR-GRID v=11.77"
+  },
+  {
+   "ok": true,
+   "tag": "liq-velocity",
+   "scenario": "WDR-MID",
+   "message": "N-SEP1-DRN1 v=0.02"
+  },
+  {
+   "ok": true,
+   "tag": "liq-velocity",
+   "scenario": "WDR-MID",
+   "message": "N-DRN1-OUT v=0.02"
+  },
+  {
+   "ok": true,
+   "tag": "sep-feed",
+   "scenario": "WDR-LOW",
+   "message": "sep feed fl=0.01"
+  },
+  {
+   "ok": true,
+   "tag": "sep-liquid",
+   "scenario": "WDR-LOW",
+   "message": "sep liq=0.233"
+  },
+  {
+   "ok": true,
+   "tag": "dehy-feed",
+   "scenario": "WDR-LOW",
+   "message": "dehy feed fl=5.00e-06"
+  },
+  {
+   "ok": true,
+   "tag": "dehy-water",
+   "scenario": "WDR-LOW",
+   "message": "dehy water"
+  },
+  {
+   "ok": true,
+   "tag": "delivery-fl",
+   "scenario": "WDR-LOW",
+   "message": "delivered fl=5.00e-06"
+  },
+  {
+   "ok": true,
+   "tag": "header",
+   "scenario": "WDR-LOW",
+   "message": "H-WS flow 70"
+  },
+  {
+   "ok": true,
+   "tag": "header",
+   "scenario": "WDR-LOW",
+   "message": "H-TS flow 70"
+  },
+  {
+   "ok": true,
+   "tag": "header",
+   "scenario": "WDR-LOW",
+   "message": "H-GS flow 70"
+  },
+  {
+   "ok": true,
+   "tag": "meter",
+   "scenario": "WDR-LOW",
+   "message": "meter flow"
+  },
+  {
+   "ok": true,
+   "tag": "comp-ratio",
+   "scenario": "WDR-LOW",
+   "message": "C-W1 r=1.389"
+  },
+  {
+   "ok": true,
+   "tag": "comp-psuct",
+   "scenario": "WDR-LOW",
+   "message": "C-W1 Psuct=4.35"
+  },
+  {
+   "ok": true,
+   "tag": "comp-pdis",
+   "scenario": "WDR-LOW",
+   "message": "C-W1 Pd=6.03"
+  },
+  {
+   "ok": true,
+   "tag": "comp-flow",
+   "scenario": "WDR-LOW",
+   "message": "C-W1 q=35.0"
+  },
+  {
+   "ok": true,
+   "tag": "comp-power",
+   "scenario": "WDR-LOW",
+   "message": "C-W1 W=2.58"
+  },
+  {
+   "ok": true,
+   "tag": "comp-ratio",
+   "scenario": "WDR-LOW",
+   "message": "C-W2 r=1.389"
+  },
+  {
+   "ok": true,
+   "tag": "comp-psuct",
+   "scenario": "WDR-LOW",
+   "message": "C-W2 Psuct=4.34"
+  },
+  {
+   "ok": true,
+   "tag": "comp-pdis",
+   "scenario": "WDR-LOW",
+   "message": "C-W2 Pd=6.03"
+  },
+  {
+   "ok": true,
+   "tag": "comp-flow",
+   "scenario": "WDR-LOW",
+   "message": "C-W2 q=35.0"
+  },
+  {
+   "ok": true,
+   "tag": "comp-power",
+   "scenario": "WDR-LOW",
+   "message": "C-W2 W=2.58"
+  },
+  {
+   "ok": true,
+   "tag": "delivery-temp",
+   "scenario": "WDR-LOW",
+   "message": "T=48.87"
+  },
+  {
+   "ok": true,
+   "tag": "delivery-pressure",
+   "scenario": "WDR-LOW",
+   "message": "Pgrid=6.000"
+  },
+  {
+   "ok": true,
+   "tag": "velocity",
+   "scenario": "WDR-LOW",
+   "message": "N-WS-WG1 v=5.15"
+  },
+  {
+   "ok": true,
+   "tag": "velocity",
+   "scenario": "WDR-LOW",
+   "message": "N-WS-WG2 v=5.15"
+  },
+  {
+   "ok": true,
+   "tag": "velocity",
+   "scenario": "WDR-LOW",
+   "message": "N-WS-WG3 v=5.15"
+  },
+  {
+   "ok": true,
+   "tag": "velocity",
+   "scenario": "WDR-LOW",
+   "message": "N-WS-WG4 v=5.15"
+  },
+  {
+   "ok": true,
+   "tag": "velocity",
+   "scenario": "WDR-LOW",
+   "message": "N-WS-WG5 v=5.15"
+  },
+  {
+   "ok": true,
+   "tag": "velocity",
+   "scenario": "WDR-LOW",
+   "message": "N-WS-WG6 v=5.15"
+  },
+  {
+   "ok": true,
+   "tag": "velocity",
+   "scenario": "WDR-LOW",
+   "message": "N-WS-SEP1 v=10.33"
+  },
+  {
+   "ok": true,
+   "tag": "velocity",
+   "scenario": "WDR-LOW",
+   "message": "N-WS-SEP2 v=7.59"
+  },
+  {
+   "ok": true,
+   "tag": "velocity",
+   "scenario": "WDR-LOW",
+   "message": "N-WS-SEP3 v=7.59"
+  },
+  {
+   "ok": true,
+   "tag": "velocity",
+   "scenario": "WDR-LOW",
+   "message": "N-DEH1-TS v=10.61"
+  },
+  {
+   "ok": true,
+   "tag": "velocity",
+   "scenario": "WDR-LOW",
+   "message": "N-DEH2-TS v=10.61"
+  },
+  {
+   "ok": true,
+   "tag": "velocity",
+   "scenario": "WDR-LOW",
+   "message": "N-DEH3-TS v=7.80"
+  },
+  {
+   "ok": true,
+   "tag": "velocity",
+   "scenario": "WDR-LOW",
+   "message": "N-TS-CW1 v=8.97"
+  },
+  {
+   "ok": true,
+   "tag": "velocity",
+   "scenario": "WDR-LOW",
+   "message": "N-TS-CW2 v=8.97"
+  },
+  {
+   "ok": true,
+   "tag": "velocity",
+   "scenario": "WDR-LOW",
+   "message": "N-CW1-GS v=7.18"
+  },
+  {
+   "ok": true,
+   "tag": "velocity",
+   "scenario": "WDR-LOW",
+   "message": "N-CW2-GS v=18.43"
+  },
+  {
+   "ok": true,
+   "tag": "liq-velocity",
+   "scenario": "WDR-LOW",
+   "message": "N-SEP1-DRN1 v=0.01"
+  },
+  {
+   "ok": true,
+   "tag": "liq-velocity",
+   "scenario": "WDR-LOW",
+   "message": "N-DRN1-OUT v=0.01"
+  }
+ ],
+ "quantities": {
+  "equipment_count": {
+   "MTR120": 2,
+   "HDR120": 4,
+   "COOL120": 1,
+   "C60": 4,
+   "C40": 1,
+   "SEP70": 3,
+   "DEHY70": 3,
+   "REG120": 1,
+   "DRN-S": 3
+  },
+  "total_pipe_length_m": 7239.75,
+  "pipe_length_by_dn": {
+   "DN150": 1481.75,
+   "DN250": 91.5,
+   "DN300": 2964.25,
+   "DN350": 822.0,
+   "DN400": 531.0,
+   "DN450": 259.0,
+   "DN500": 657.25,
+   "DN600": 238.0,
+   "DN700": 195.0
+  },
+  "road_length_m": 1343.0,
+  "footprint_area_m2": 997.0,
+  "maintenance_area_m2": 1975.96
+ },
+ "lcc": {
+  "equipment_capex": 41.59,
+  "equipment": [
+   {
+    "id": "MTR-INJ",
+    "model": "MTR120",
+    "capex": 0.3,
+    "maint": 0.016
+   },
+   {
+    "id": "MTR-WDR",
+    "model": "MTR120",
+    "capex": 0.3,
+    "maint": 0.016
+   },
+   {
+    "id": "H-GS",
+    "model": "HDR120",
+    "capex": 0.25,
+    "maint": 0.012
+   },
+   {
+    "id": "H-CH",
+    "model": "HDR120",
+    "capex": 0.25,
+    "maint": 0.012
+   },
+   {
+    "id": "H-WS",
+    "model": "HDR120",
+    "capex": 0.25,
+    "maint": 0.012
+   },
+   {
+    "id": "H-TS",
+    "model": "HDR120",
+    "capex": 0.25,
+    "maint": 0.012
+   },
+   {
+    "id": "COOL-1",
+    "model": "COOL120",
+    "capex": 0.92,
+    "maint": 0.05
+   },
+   {
+    "id": "C-I1",
+    "model": "C60",
+    "capex": 6.5,
+    "maint": 0.16
+   },
+   {
+    "id": "C-I2",
+    "model": "C60",
+    "capex": 6.5,
+    "maint": 0.16
+   },
+   {
+    "id": "C-I3",
+    "model": "C40",
+    "capex": 4.6,
+    "maint": 0.12
+   },
+   {
+    "id": "C-W1",
+    "model": "C60",
+    "capex": 6.5,
+    "maint": 0.16
+   },
+   {
+    "id": "C-W2",
+    "model": "C60",
+    "capex": 6.5,
+    "maint": 0.16
+   },
+   {
+    "id": "SEP-1",
+    "model": "SEP70",
+    "capex": 0.78,
+    "maint": 0.05
+   },
+   {
+    "id": "SEP-2",
+    "model": "SEP70",
+    "capex": 0.78,
+    "maint": 0.05
+   },
+   {
+    "id": "SEP-3",
+    "model": "SEP70",
+    "capex": 0.78,
+    "maint": 0.05
+   },
+   {
+    "id": "DEH-1",
+    "model": "DEHY70",
+    "capex": 1.85,
+    "maint": 0.095
+   },
+   {
+    "id": "DEH-2",
+    "model": "DEHY70",
+    "capex": 1.85,
+    "maint": 0.095
+   },
+   {
+    "id": "DEH-3",
+    "model": "DEHY70",
+    "capex": 1.85,
+    "maint": 0.095
+   },
+   {
+    "id": "REG-1",
+    "model": "REG120",
+    "capex": 0.34,
+    "maint": 0.018
+   },
+   {
+    "id": "DRN-1",
+    "model": "DRN-S",
+    "capex": 0.08,
+    "maint": 0.004
+   },
+   {
+    "id": "DRN-2",
+    "model": "DRN-S",
+    "capex": 0.08,
+    "maint": 0.004
+   },
+   {
+    "id": "DRN-3",
+    "model": "DRN-S",
+    "capex": 0.08,
+    "maint": 0.004
+   }
+  ],
+  "piping_capex": 1.9967254749999999,
+  "pipelines": [
+   {
+    "net": "N-MTRINJ-GRID",
+    "dn": "DN700",
+    "cls": "CS-WET-100",
+    "level": "ground",
+    "length": 102.0,
+    "cost": 0.06732
+   },
+   {
+    "net": "N-MTRINJ-GS",
+    "dn": "DN700",
+    "cls": "CS-WET-100",
+    "level": "ground",
+    "length": 93.0,
+    "cost": 0.06138
+   },
+   {
+    "net": "N-GS-MTRWDR",
+    "dn": "DN500",
+    "cls": "CS-WET-100",
+    "level": "ground",
+    "length": 61.0,
+    "cost": 0.02684
+   },
+   {
+    "net": "N-MTRWDR-GRID",
+    "dn": "DN500",
+    "cls": "CS-WET-100",
+    "level": "ground",
+    "length": 98.0,
+    "cost": 0.04312
+   },
+   {
+    "net": "N-GS-CI1",
+    "dn": "DN500",
+    "cls": "CS-WET-100",
+    "level": "ground",
+    "length": 263.75,
+    "cost": 0.11605
+   },
+   {
+    "net": "N-GS-CI2",
+    "dn": "DN500",
+    "cls": "CS-WET-100",
+    "level": "ground",
+    "length": 234.5,
+    "cost": 0.10318
+   },
+   {
+    "net": "N-GS-CI3",
+    "dn": "DN150",
+    "cls": "CS-WET-100",
+    "level": "ground",
+    "length": 203.75,
+    "cost": 0.018337
+   },
+   {
+    "net": "N-CI1-CH",
+    "dn": "DN450",
+    "cls": "CS-DRY-160",
+    "level": "ground",
+    "length": 143.75,
+    "cost": 0.061992
+   },
+   {
+    "net": "N-CI2-CH",
+    "dn": "DN450",
+    "cls": "CS-DRY-160",
+    "level": "ground",
+    "length": 115.25,
+    "cost": 0.049702
+   },
+   {
+    "net": "N-CI3-CH",
+    "dn": "DN150",
+    "cls": "CS-DRY-160",
+    "level": "ground",
+    "length": 88.5,
+    "cost": 0.00916
+   },
+   {
+    "net": "N-CH-COOL",
+    "dn": "DN600",
+    "cls": "CS-DRY-160",
+    "level": "ground",
+    "length": 60.0,
+    "cost": 0.037605
+   },
+   {
+    "net": "N-COOL-WS",
+    "dn": "DN600",
+    "cls": "CS-DRY-160",
+    "level": "ground",
+    "length": 178.0,
+    "cost": 0.111561
+   },
+   {
+    "net": "N-WS-WG1",
+    "dn": "DN300",
+    "cls": "CS-WET-160",
+    "level": "ground",
+    "length": 489.25,
+    "cost": 0.121236
+   },
+   {
+    "net": "N-WS-WG2",
+    "dn": "DN300",
+    "cls": "CS-WET-160",
+    "level": "ground",
+    "length": 420.5,
+    "cost": 0.1042
+   },
+   {
+    "net": "N-WS-WG3",
+    "dn": "DN300",
+    "cls": "CS-WET-160",
+    "level": "ground",
+    "length": 351.0,
+    "cost": 0.086978
+   },
+   {
+    "net": "N-WS-WG4",
+    "dn": "DN300",
+    "cls": "CS-WET-160",
+    "level": "ground",
+    "length": 395.25,
+    "cost": 0.097943
+   },
+   {
+    "net": "N-WS-WG5",
+    "dn": "DN300",
+    "cls": "CS-WET-160",
+    "level": "ground",
+    "length": 471.0,
+    "cost": 0.116714
+   },
+   {
+    "net": "N-WS-WG6",
+    "dn": "DN300",
+    "cls": "CS-WET-160",
+    "level": "ground",
+    "length": 543.5,
+    "cost": 0.134679
+   },
+   {
+    "net": "N-WS-SEP1",
+    "dn": "DN300",
+    "cls": "CS-WET-160",
+    "level": "ground",
+    "length": 102.0,
+    "cost": 0.025276
+   },
+   {
+    "net": "N-WS-SEP2",
+    "dn": "DN350",
+    "cls": "CS-WET-160",
+    "level": "ground",
+    "length": 188.0,
+    "cost": 0.057678
+   },
+   {
+    "net": "N-WS-SEP3",
+    "dn": "DN350",
+    "cls": "CS-WET-160",
+    "level": "ground",
+    "length": 273.5,
+    "cost": 0.08391
+   },
+   {
+    "net": "N-SEP1-DEH1",
+    "dn": "DN300",
+    "cls": "CS-WET-160",
+    "level": "ground",
+    "length": 23.0,
+    "cost": 0.005699
+   },
+   {
+    "net": "N-SEP2-DEH2",
+    "dn": "DN250",
+    "cls": "CS-WET-160",
+    "level": "ground",
+    "length": 24.0,
+    "cost": 0.004673
+   },
+   {
+    "net": "N-SEP3-DEH3",
+    "dn": "DN300",
+    "cls": "CS-WET-160",
+    "level": "ground",
+    "length": 24.0,
+    "cost": 0.005947
+   },
+   {
+    "net": "N-DEH1-TS",
+    "dn": "DN300",
+    "cls": "CS-DRY-160",
+    "level": "ground",
+    "length": 83.25,
+    "cost": 0.020105
+   },
+   {
+    "net": "N-DEH2-TS",
+    "dn": "DN300",
+    "cls": "CS-DRY-160",
+    "level": "ground",
+    "length": 61.5,
+    "cost": 0.014852
+   },
+   {
+    "net": "N-DEH3-TS",
+    "dn": "DN350",
+    "cls": "CS-DRY-160",
+    "level": "ground",
+    "length": 139.0,
+    "cost": 0.041561
+   },
+   {
+    "net": "N-TS-REG",
+    "dn": "DN350",
+    "cls": "CS-DRY-160",
+    "level": "ground",
+    "length": 221.5,
+    "cost": 0.066228
+   },
+   {
+    "net": "N-REG-GS",
+    "dn": "DN400",
+    "cls": "CS-WET-100",
+    "level": "ground",
+    "length": 64.5,
+    "cost": 0.020318
+   },
+   {
+    "net": "N-TS-CW1",
+    "dn": "DN400",
+    "cls": "CS-DRY-160",
+    "level": "ground",
+    "length": 166.5,
+    "cost": 0.060315
+   },
+   {
+    "net": "N-TS-CW2",
+    "dn": "DN400",
+    "cls": "CS-DRY-160",
+    "level": "ground",
+    "length": 200.5,
+    "cost": 0.072631
+   },
+   {
+    "net": "N-CW1-GS",
+    "dn": "DN400",
+    "cls": "CS-WET-100",
+    "level": "ground",
+    "length": 99.5,
+    "cost": 0.031343
+   },
+   {
+    "net": "N-CW2-GS",
+    "dn": "DN250",
+    "cls": "CS-WET-100",
+    "level": "ground",
+    "length": 67.5,
+    "cost": 0.011137
+   },
+   {
+    "net": "N-SEP1-DRN1",
+    "dn": "DN150",
+    "cls": "CS-WET-100",
+    "level": "ground",
+    "length": 376.0,
+    "cost": 0.03384
+   },
+   {
+    "net": "N-SEP2-DRN2",
+    "dn": "DN150",
+    "cls": "CS-WET-100",
+    "level": "ground",
+    "length": 277.0,
+    "cost": 0.02493
+   },
+   {
+    "net": "N-SEP3-DRN3",
+    "dn": "DN150",
+    "cls": "CS-WET-100",
+    "level": "ground",
+    "length": 179.0,
+    "cost": 0.01611
+   },
+   {
+    "net": "N-DRN1-OUT",
+    "dn": "DN150",
+    "cls": "CS-WET-100",
+    "level": "ground",
+    "length": 104.0,
+    "cost": 0.00936
+   },
+   {
+    "net": "N-DRN2-OUT",
+    "dn": "DN150",
+    "cls": "CS-WET-100",
+    "level": "ground",
+    "length": 119.0,
+    "cost": 0.01071
+   },
+   {
+    "net": "N-DRN3-OUT",
+    "dn": "DN150",
+    "cls": "CS-WET-100",
+    "level": "ground",
+    "length": 134.5,
+    "cost": 0.012105
+   }
+  ],
+  "civil": {
+   "road_length_m": 1343.0,
+   "road_cost": 0.20145,
+   "footprint_area_m2": 997.0,
+   "foundation_cost": 0.003988,
+   "maintenance_area_m2": 1975.9600000000007,
+   "maintenance_cost": 0.0019759600000000006,
+   "pipeline_civil": 0.0,
+   "total": 0.20741395999999998
+  },
+  "energy": {
+   "per_scenario_mwh": {
+    "INJ-LOW": 6955.7,
+    "INJ-MID": 16493.5,
+    "INJ-HIGH": 8096.3,
+    "WDR-HIGH": 1080.0,
+    "WDR-MID": 1620.0,
+    "WDR-LOW": 5132.0
+   },
+   "annual_mwh": 39377.5,
+   "annual_cost": 4.725303358208687,
+   "pvf": 9.818147407449294,
+   "present_value": 46.39372491580806
+  },
+  "maintenance": {
+   "annual": 1.355,
+   "pvf": 9.818147407449294,
+   "present_value": 13.303589737093793
+  },
+  "lcc_mbcu": 103.49145408790184,
+  "breakdown": {
+   "equipment_capex": 41.59,
+   "piping_capex": 1.9967254749999999,
+   "civil": 0.20741395999999998,
+   "energy_pv": 46.39372491580806,
+   "maintenance_pv": 13.303589737093793
+  }
+ },
+ "assumptions_and_limitations": [
+  "All values follow the synthetic v1.1 deterministic basis; they are not vendor or production data.",
+  "Liquid-drain velocity uses an assumed liquid density of 1000 kg/m3 (the basis provides only a gas density law).",
+  "Inactive branches are treated as isolated by valves per the published operating philosophy; a scenario only carries flow on its active path.",
+  "Compressor bank: 2 x C60 in normal service with one C40 spare provides compression N-1 for injection; 2 x C60 boosters provide N-1 for WDR-LOW.",
+  "Pipe bores were selected to minimise lifecycle cost subject to the 25 m/s (gas) and 3 m/s (liquid) velocity limits.",
+  "No elevation, minor losses, or heat transfer between equipment are modelled (per basis)."
+ ]
+}
