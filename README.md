@@ -1,62 +1,56 @@
-# Self-Organizing Engineering Agent — Research Artifact
+# Persistent Workspaces and Autonomous Review for Long-Horizon Agents: A Trajectory-Based Behavioral Study
 
-This repository publishes the frozen research artifact for the
-Self-Organizing Engineering Agent project and the manuscript:
+**中文题目：** 面向长期任务智能体的持久工作区与自主审查：一项轨迹行为研究
 
-**Agents for Long-Horizon Tasks: Persistent Workspaces and Autonomous Review**
+This repository contains a **frozen research artifact** for a trajectory-based
+behavioral study using the synthetic UGS-SYNTH-D01 long-horizon task. It
+examines how an acting Worker invokes an independent Reviewer and how the
+Worker responds to review results over an evolving, persistent project
+workspace.
 
-## Manuscript analysis scope
+## Study at a glance
 
-The manuscript's primary behavioral analysis focuses on the four frozen
-`explicit_collaboration` long-horizon trajectories. In those runs, the Worker
-had access to an independent Reviewer and autonomously decided whether and when
-to request review and how to respond to returned findings.
+- The primary behavioral analysis covers four `explicit_collaboration`
+  trajectories. The Worker controls whether and when to request a review.
+- The analysis focuses on review-invocation timing and observable post-review
+  workspace and trajectory responses.
+- Four `worker_only` runs are an auxiliary paired baseline for descriptive
+  context.
+- Pair 003 includes a same-state review resubmission that served as
+  review-output recovery. It is not treated as an independent repeated-review
+  experiment or direct evidence of Reviewer nondeterminism.
+- The study does not claim a Reviewer causal effect, statistical superiority,
+  that Reviewer use reduces all final violations, or that model outputs are
+  engineering ground truth.
 
-The frozen study also contains four matched `worker_only` runs. They are
-retained as auxiliary paired baselines and as part of the complete experimental
-record, but they are not the primary object of the manuscript's behavioral
-analysis. The manuscript does not use the four pairs to claim a causal treatment
-effect, statistical superiority, or that model-based review constitutes
-engineering ground truth.
+## What is included
 
-See [MANUSCRIPT_SCOPE.md](MANUSCRIPT_SCOPE.md) for the full interpretation
-boundary.
+[`artifact/`](artifact/README.md) contains the frozen benchmark, eight final
+Worker submissions, ten formal Reviewer session records, thirteen frozen blind
+post-hoc reviews, provenance and limitations, and deterministic analysis tools.
+The four Explicit-collaboration runs contain 2, 2, 4, and 2 formal Reviewer
+sessions. The frozen run-manifest aggregate bug and the authoritative
+finding-record totals (20, 20, 14, and 15) are documented without changing the
+original records.
 
-## Frozen publication artifact
+The `artifact/` directory is frozen evidence. This repository-level manuscript
+framing does not revise its evidence, labels, or results.
+`UGS_FORMAL_STATE=NOT READY` remains in effect; this artifact is not a
+production engineering package.
 
-The canonical frozen package is under:
+## Start here
 
-`artifact/`
+- [Manuscript scope and research questions](MANUSCRIPT_SCOPE.md)
+- [Artifact overview](artifact/README.md)
+- [Reproducibility instructions](artifact/REPRODUCIBILITY.md)
+- [Known issues and evidence limits](artifact/KNOWN_ISSUES.md)
+- [Release-readiness report](RELEASE_READINESS_REPORT.md)
+- [Publication source and provenance](PUBLICATION_SOURCE.md)
+- [Path-level license scope](artifact/LICENSE.md)
+- [Artifact citation metadata](artifact/CITATION.cff); publication citation
+  details remain pending.
 
-It contains all eight frozen runs, eight final submissions, ten interactive
-Worker–Reviewer sessions, blind post-hoc evaluation, reproducibility material,
-and evidence limitations.
-
-The files under `artifact/` are intentionally left unchanged by repository-level
-manuscript-framing updates so that `artifact/RELEASE_MANIFEST.json` and its
-integrity checks remain valid.
-
-Publication-ready source baseline:
-
-`04eb16d796b553e606abf82393cf130fbe7220d3`
-
-UGS-SYNTH-D01 public-world SHA-256:
-
-`af4260bc8e15bb44364038b6eeea9a6a6942677ae8e5e610971689415fd0880e`
-
-Artifact release status:
-
-**PUBLICATION READY**
-
-See:
-
-- `MANUSCRIPT_SCOPE.md`
-- `artifact/README.md`
-- `artifact/REPRODUCIBILITY.md`
-- `artifact/LICENSE.md`
-- `artifact/CITATION.cff`
-- `RELEASE_READINESS_REPORT.md`
-
-This repository is a research artifact, not a production engineering package.
-Interactive Reviewer and blind-evaluator findings are model-generated evidence,
-not formal engineering ground truth. `UGS_FORMAL_STATE=NOT READY`.
+For integrity and privacy checks, follow the commands in
+[`artifact/REPRODUCIBILITY.md`](artifact/REPRODUCIBILITY.md) from the
+`artifact/` directory. These checks use the frozen package and do not require
+a model API call.
